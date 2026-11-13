@@ -99,7 +99,8 @@ def save_taxonomy(tax: Taxonomy, directory: Path = TAXONOMY_DIR) -> None:
     directory.mkdir(parents=True, exist_ok=True)
     classes = [{**asdict(c), "synonyms": list(c.synonyms)} for c in tax.classes.values()]
     doc = {"version": tax.version, "classes": classes}
-    (directory / "classes.yaml").write_text(yaml.safe_dump(doc, sort_keys=False, allow_unicode=True))
+    head = "# Built offline by `mise run taxonomy:build`; format: src/camoreasoning/taxonomy.py\n"
+    (directory / "classes.yaml").write_text(head + yaml.safe_dump(doc, sort_keys=False, allow_unicode=True))
     lines = (json.dumps(asdict(lb), ensure_ascii=False) for lb in tax.labels)
     (directory / "node_labels.jsonl").write_text("".join(f"{x}\n" for x in lines), encoding="utf-8")
 
