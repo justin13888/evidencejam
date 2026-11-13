@@ -1,0 +1,11 @@
+/* WCAG 2.2 AA: >= 4.5:1 contrast, visible focus, no colour-only meaning, reflows at 320px. */
+:root { color-scheme: light dark; --fg: #1a1a1a; --bg: #ffffff; --muted: #4a4a4a; --line: #767676; --link: #0b57d0; }
+@media (prefers-color-scheme: dark) { :root { --fg: #f2f2f2; --bg: #121212; --muted: #c8c8c8; --line: #8a8a8a; --link: #8ab4f8; } }
+body { font: 1rem/1.5 system-ui, sans-serif; color: var(--fg); background: var(--bg); max-width: 60rem; margin: 0 auto; padding: 1rem; }
+a { color: var(--link); } a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+.skip { position: absolute; left: -999px; } .skip:focus { left: 1rem; top: 1rem; background: var(--bg); padding: .5rem; }
+table { border-collapse: collapse; width: 100%; } caption { text-align: left; font-weight: 600; padding: .5rem 0; }
+th, td { border: 1px solid var(--line); padding: .4rem .5rem; text-align: left; vertical-align: top; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: .25rem 1rem; } dt { font-weight: 600; }
+.muted, footer { color: var(--muted); } blockquote { margin: 0; border-left: 3px solid var(--line); padding-left: .75rem; }
+.wrap { overflow-x: auto; }

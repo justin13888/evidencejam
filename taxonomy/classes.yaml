@@ -1,0 +1,3 @@
+# Built offline by `mise run taxonomy:build`; format: src/camoreasoning/taxonomy.py
+version: "0"
+classes: []
