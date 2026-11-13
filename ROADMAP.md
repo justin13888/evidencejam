@@ -125,7 +125,7 @@ Every item lists the buckets it moves.
 ## Phase 3 — Product and proof (Sun AM)
 
 - [ ] **15. Write the answer text.** ★ 3/5 · B · `renderer`
-  - **Why:** judges check faithfulness. Use one hedge source (the certainty), name null studies, count studies, and never claim causation from association.
+  - **Why:** judges check faithfulness. Use one hedge source (the certainty), name null studies, count studies, and never claim causation from association. Follow the organizer's [rendering guide](https://github.com/timalamenciak/causalmosaic/blob/main/docs/camo-rendering-targets.md). It is referenced, not vendored. Where it conflicts with `schema/`, the schema wins.
   - **Done when:** 20 sampled answers are reviewed against their cited edges with zero overclaims.
   - **Points:** J40.
 - [ ] **16. Build evidence pages.** ★ 3/5 · D · `extras`
