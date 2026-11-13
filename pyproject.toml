@@ -1,0 +1,36 @@
+[project]
+name = "camoreasoning"
+version = "0.1.0"
+description = "Evidence Jam 2026 Lane 2: answer intervention-outcome questions from a CAMO causal graph."
+requires-python = ">=3.10"
+license = "MIT"
+dynamic = ["dependencies"]
+
+[project.scripts]
+camoreasoning = "camoreasoning.cli:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+src = ["src", "tests"]
+extend-exclude = ["*.md"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+ignore = ["B905", "SIM905"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "-q"
+markers = ["robust: judging-scenario robustness (fault injection, fuzz, scale)"]

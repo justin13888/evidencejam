@@ -1,0 +1,68 @@
+# Dev tooling. Not needed to run the pipeline (./run.sh works with plain python3 + pip, or uv).
+[tools]
+python = "3.12"
+hk = "2.11.1"
+pkl = "0.33.0"
+
+[env]
+_.python.venv = { path = ".venv", create = true }
+
+[tasks.setup]
+description = "Install dev deps (editable) and git hooks"
+run = [
+  "if command -v uv >/dev/null; then uv pip install -q -e . -r requirements-dev.txt; else python -m pip install -q -e . -r requirements-dev.txt; fi",
+  "hk install",
+]
+
+[tasks.lint]
+run = ["ruff check .", "ruff format --check ."]
+
+[tasks.test]
+description = "Fast contract + unit tests"
+run = "pytest -m 'not robust'"
+
+[tasks.robust]
+description = "Judging-scenario robustness: fake LLM fault modes, fuzzed inputs, timing"
+run = "pytest -m robust"
+
+[tasks.run]
+run = "./run.sh questions.yaml outputs/answers.json"
+
+[tasks.validate]
+depends = ["run"]
+run = "python -m camoreasoning validate outputs/answers.json --questions questions.yaml"
+
+[tasks.ask]
+usage = 'arg "<question>"'
+run = './ask.sh "$usage_question"'
+
+[tasks.eval]
+description = "Score the pipeline on experiments/devsets (accuracy, calibration, calls/question)"
+run = "python -m camoreasoning eval"
+
+[tasks.profile]
+description = "Profile the CAMO graph -> experiments/results/graph_profile.json"
+run = "python -m camoreasoning profile"
+
+[tasks."taxonomy:build"]
+description = "Offline: build taxonomy/classes.yaml + taxonomy/node_labels.jsonl"
+run = "python -m camoreasoning taxonomy"
+
+[tasks."devset:build"]
+description = "Offline: generate dev questions and gold labels into experiments/devsets/"
+run = "python -m camoreasoning devset"
+
+[tasks.check]
+description = "Gate for every change"
+depends = ["lint", "test", "validate"]
+
+[tasks.ci]
+depends = ["check", "robust", "eval"]
+
+[tasks.clean-run]
+description = "Fresh clone of HEAD -> ./run.sh -> validate"
+run = "scripts/clean_run.sh"
+
+[tasks.judge-sim]
+description = "Clean run inside an ARM64 python:3.10 container, then offline with a dead LLM"
+run = "scripts/judge_sim.sh"

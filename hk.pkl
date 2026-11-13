@@ -1,0 +1,27 @@
+// Git hooks. Install with `mise run setup` (runs `hk install`).
+amends "package://github.com/jdx/hk/releases/download/v2.11.1/hk@2.11.1#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v2.11.1/hk@2.11.1#/Builtins.pkl"
+
+local linters = new Mapping<String, Step> {
+    ["ruff"] = Builtins.ruff
+    ["ruff_format"] = Builtins.ruff_format
+    ["trailing_whitespace"] = (Builtins.trailing_whitespace) { exclude = List("causal_graph.*", "schema/**", "CHALLENGE.md", "questions.yaml") }
+    ["check_merge_conflict"] = Builtins.check_merge_conflict
+    ["detect_private_key"] = Builtins.detect_private_key
+}
+
+// Conventional commits: <type>(<scope>): <summary>. `exp` = experiment, `data` = committed artifacts.
+local commitTypes = "feat,fix,perf,refactor,test,docs,chore,build,ci,revert,style,exp,data"
+
+hooks {
+    ["pre-commit"] { fix = true; stash = "git"; steps = linters }
+    ["commit-msg"] {
+        steps {
+            ["conventional-commit"] {
+                check = "hk util check-conventional-commit --allowed-types \(commitTypes) {{commit_msg_file}}"
+            }
+        }
+    }
+    ["check"] { steps = linters }
+    ["fix"] { fix = true; steps = linters }
+}
