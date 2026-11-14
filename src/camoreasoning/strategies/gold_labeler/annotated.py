@@ -15,6 +15,13 @@ from camoreasoning.contracts import DevQuestion, GoldItem
 from camoreasoning.registry import register
 
 
+def _source(by: str | None) -> str:
+    """Review rows keep their reviewer's provenance: an LLM auditor (`reviewer` = "llm:<model>") stays llm:."""
+    if not by:
+        return "llm:annotate"
+    return by if by.startswith("llm:") else f"human:{by}"
+
+
 @register("gold_labeler", "annotated")
 class AnnotatedGold(GoldLabeler):
     def label(self, items: Sequence[DevQuestion], ctx: Context) -> list[GoldItem]:
@@ -30,7 +37,7 @@ class AnnotatedGold(GoldLabeler):
                 id=it.id, question=it.question, status=r["status"], direction=r.get("direction"),
                 certainty=r.get("certainty"), edge_ids=tuple(x["id"] for x in edges),
                 tags=tuple(dict.fromkeys((*it.tags, tag))), split=it.split,
-                source=f"human:{r['by']}" if r.get("by") else "llm:annotate",
+                source=_source(r.get("by")),
                 edge_effects=tuple((x["id"], x["effect"]) for x in edges),
             ))  # fmt: skip
         return out
