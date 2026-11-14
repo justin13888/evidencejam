@@ -191,6 +191,7 @@ flowchart LR
   - **Done when:** at least 85% direction accuracy on dev answerable items, and the thresholds are tuned on dev only.
     - Agents iterate with `camoreasoning eval --split dev`. Plain `mise run eval` also scores holdout, so it is run once at the end and reported, never looped on.
   - **Points:** D17.
+  - **Progress (Sat Nov 14, #32):** `interpreter/sentence` + `aggregator/studies` merged, not default. All 39 `prevents`/`disrupts` edges are pinned to their sentences: the flip matches 29/30 sign-settled, the schema product 1. The 130 nulls with an `unchanged` subject stay nulls. A tied single study gives `mixed`. Across 704 class pairs, 48 verdicts change vs baseline (`experiments/results/direction_compare.json`). **Pending:** the ≥85% dev check and the default flip once gold lands.
 - [ ] **7. Build the trap suite.** ★ 5/5 · B · `interpreter`, `aggregator`, `tests`
   - **Why:** the hidden set includes questions "written to catch common misreadings".
   - **Done when:** each trap has at least 3 tagged dev items, and `eval` reports accuracy per tag at or above the overall accuracy. The traps:
@@ -203,10 +204,12 @@ flowchart LR
     - moderators and mediators
     - near-miss classes
   - **Points:** D17 (explicitly "not fooled by trap questions").
+  - **Progress (Sat Nov 14):** `tests/strategies/test_traps.py` runs the full engine on real edges per trap. The map is in `experiments/traps/README.md`. The D1 wording test is xfail until #15. **Pending:** ≥3 `trap:<key>` dev items per tag from #9 for per-tag accuracy.
 - [ ] **8. Decide no_evidence and write searched_for.** ★ 5/5 · B · `aggregator`, `renderer`
   - **Why:** about 1/3 of hidden questions have no evidence, and a confident wrong "answered" costs both D17 and C14.
   - **Done when:** `no_evidence` precision and recall are both at least 0.9 on dev, and `searched_for` names the classes, attributes and relation searched, plus any reverse edges found.
   - **Points:** C14, D17.
+  - **Progress (Sat Nov 14, #33):** no_evidence comes from `aggregator/studies`, iff no included vote (D3). `renderer/searched` names classes, node counts, outcome attributes, relation, unusable edges by reason and reversed ids. It says when no search ran. **Pending:** precision/recall ≥ 0.9 on dev (needs gold + linker #5).
 - [ ] **9. Build the gold dev set.** ★ 5/5 · C · `devset_builder`
   - **Why:** the hidden set is scored at judging time and `questions.yaml` has no answers. Without labels we tune on vibes.
   - **Done when:**
@@ -225,6 +228,7 @@ flowchart LR
   - **Why:** certainty is part of D17. The graph has no `high` grades, so the grade has to be derived from edge grades, study count, agreement and design (randomized vs observational).
   - **Done when:** the rule is written in the strategy docstring and scores at least 75% certainty accuracy on dev.
   - **Points:** D17.
+  - **Progress (Sat Nov 14, #31):** `grader/rubric` implements D4: the median grade, one level lower if mixed or all associational, never high. `OBSERVATIONAL_SINGLE_STUDY_DROP` is off and reads `evidential_basis.evidence_types`, since `study_design` is unpopulated. **Pending:** ≥75% on dev.
 - [ ] **12. Calibrate confidence.** ★ 4/5 · C · `calibrator`
   - **Why:** 14 points reward confidence that matches how often we're right.
   - **Done when:**
@@ -236,6 +240,7 @@ flowchart LR
   - **Why:** scripts check that the cited edges "are the edges that bear on the question", and judges open them.
   - **Done when:** precision comes first. On dev, edge precision is at least 0.9 and recall at least 0.7.
   - **Points:** P9, J40.
+  - **Progress (Sat Nov 14, #30):** `citer/precise` cites every included edge, round-robin by study, cap 60 (the max included set is 55; baseline's 25 truncates 3% of pairs). Filtering to the winning direction was tried and dropped: fixture recall fell 1.0 → 0.71 with no precision gain. **Pending:** precision ≥ 0.9 / recall ≥ 0.7 on dev.
 - [ ] **14. Cut energy without losing accuracy.** ★ 4/5 · D · `linker`, `llm.py` usage
   - **Why:** E12 is ranked against teams. Only runtime tokens count, so push work offline.
   - **Done when:**
