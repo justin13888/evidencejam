@@ -1,9 +1,11 @@
 # Gold labels (ROADMAP item 10)
 
-The gold labels for the 178 dev questions in `experiments/devsets/generated.yaml` come from the
-`annotate` `gold` task. A labeller reads the candidate edges' `original_sentence` text and applies the
-rubric in `experiments/annotate/gold/PROMPT.md` (decisions D2 to D4). It never sees `taxonomy/`, node
-labels or pipeline code. A separate auditor session then audits 40 items, stratified by trap tag. The
+The gold labels for the 178 questions (142 dev, 36 holdout) in `experiments/devsets/generated.yaml`
+come from the `annotate` `gold` task. A labeller reads the candidate edges' `original_sentence` text and
+applies the rubric in `experiments/annotate/gold/PROMPT.md` (decisions D2 to D4). Its input chunks
+(`in/*.jsonl`) hold only the question, the candidate edges and their sentences, with no taxonomy content.
+It is told not to open `taxonomy/`, node labels or pipeline code; that is an instruction, since agent file
+reads were not logged. A separate auditor session then audits 40 items, stratified by trap tag. The
 procedure is in `AUDIT.md`.
 
 ## Round 1: labeller A (rejected)
@@ -48,8 +50,8 @@ procedure is in `AUDIT.md`.
 
 ## Reproduce
 
-From `review.csv` and `audit/`, this chain rebuilds `human.jsonl`, `merged.jsonl` and
-`experiments/devsets/gold_annotated.yaml` byte for byte:
+From `audit/` and the labeller outputs, this chain rebuilds `review.csv`, `human.jsonl`, `merged.jsonl`
+and `experiments/devsets/gold_annotated.yaml` byte for byte:
 
 ```sh
 export PYTHONPATH=src

@@ -48,7 +48,7 @@ def main() -> None:
                 else:
                     row[f"human_{k}"] = "null" if val is None else spec.fmt(val)
     with open(path, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=fields)
+        w = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")  # LF, as committed
         w.writeheader()
         w.writerows(rows)
     print(json.dumps({"rows": len(rows), "audited": done, "ok_n": sum(v["ok"] == "n" for v in verdicts.values())}))
