@@ -1,0 +1,42 @@
+{
+  "model": "Qwen3.8-27B",
+  "ok": true,
+  "reply": "OK",
+  "thinking_leaked": false,
+  "latency_s": 0.204,
+  "usage_reported": true,
+  "completion_tokens": 2,
+  "thinking_switch_accepted": true,
+  "json_schema": true,
+  "prefix_cache": {
+    "first": {
+      "purpose": "probe",
+      "prompt": 2618,
+      "completion": 2,
+      "s": 5.667,
+      "usage_reported": true
+    },
+    "second": {
+      "purpose": "probe",
+      "prompt": 2618,
+      "completion": 2,
+      "s": 5.532,
+      "usage_reported": true
+    }
+  },
+  "meter": {
+    "max_calls": 10,
+    "calls": 3,
+    "prompt_tokens": 5263,
+    "completion_tokens": 6,
+    "cache_hits": 0,
+    "failures": 0,
+    "questions": 0,
+    "wall_s": 11.747,
+    "cpu_s": 0.032,
+    "est_wh": 0.26642,
+    "est_wh_per_question": 0.266418,
+    "calls_per_question": 3.0,
+    "tokens_per_question": 5269.0
+  }
+}

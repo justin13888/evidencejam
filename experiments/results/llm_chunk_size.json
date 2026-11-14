@@ -1,0 +1,146 @@
+{
+  "model": "Qwen3.8-27B",
+  "n_items": 50,
+  "rows": [
+    {
+      "chunk": 1,
+      "items": 5,
+      "calls": 5,
+      "failures": 0,
+      "error": null,
+      "missing": 0,
+      "accuracy": 0.6,
+      "prompt_tokens_per_item": 386.4,
+      "completion_tokens_per_item": 17.0,
+      "seconds_per_call": [
+        3.779,
+        5.434,
+        5.334,
+        4.585,
+        0.823
+      ],
+      "seconds_per_item": 3.991,
+      "usage_reported": true
+    },
+    {
+      "chunk": 5,
+      "items": 50,
+      "calls": 10,
+      "failures": 0,
+      "error": null,
+      "missing": 0,
+      "accuracy": 0.52,
+      "prompt_tokens_per_item": 96.9,
+      "completion_tokens_per_item": 23.5,
+      "seconds_per_call": [
+        4.407,
+        23.918,
+        25.248,
+        4.479,
+        4.605,
+        4.456,
+        4.796,
+        29.24,
+        4.94,
+        24.866
+      ],
+      "seconds_per_item": 2.619,
+      "usage_reported": true
+    },
+    {
+      "chunk": 10,
+      "items": 50,
+      "calls": 5,
+      "failures": 0,
+      "error": null,
+      "missing": 0,
+      "accuracy": 0.52,
+      "prompt_tokens_per_item": 60.6,
+      "completion_tokens_per_item": 22.4,
+      "seconds_per_call": [
+        53.218,
+        7.875,
+        8.767,
+        9.133,
+        9.514
+      ],
+      "seconds_per_item": 1.77,
+      "usage_reported": true
+    },
+    {
+      "chunk": 25,
+      "items": 50,
+      "calls": 2,
+      "failures": 0,
+      "error": null,
+      "missing": 0,
+      "accuracy": 0.52,
+      "prompt_tokens_per_item": 38.9,
+      "completion_tokens_per_item": 19.1,
+      "seconds_per_call": [
+        17.944,
+        100.258
+      ],
+      "seconds_per_item": 2.364,
+      "usage_reported": true
+    },
+    {
+      "chunk": 50,
+      "items": 50,
+      "calls": 1,
+      "failures": 0,
+      "error": null,
+      "missing": 0,
+      "accuracy": 0.58,
+      "prompt_tokens_per_item": 31.6,
+      "completion_tokens_per_item": 16.6,
+      "seconds_per_call": [
+        32.003
+      ],
+      "seconds_per_item": 0.64,
+      "usage_reported": true
+    }
+  ],
+  "examples": [
+    {
+      "id": "q0",
+      "q": "What effect does peat extraction have on stem diameter?",
+      "gold": [
+        "peat_extraction",
+        "tree_growth"
+      ]
+    },
+    {
+      "id": "q1",
+      "q": "What effect does container stock have on lichen?",
+      "gold": [
+        "planting_stock_traits",
+        "moss_bryophyte"
+      ]
+    },
+    {
+      "id": "q2",
+      "q": "What effect does soil inocul have on humidity?",
+      "gold": [
+        "soil_inoculation",
+        "soil_temperature"
+      ]
+    },
+    {
+      "id": "q3",
+      "q": "What effect does selection harvest have on revegetation success?",
+      "gold": [
+        "partial_harvest",
+        "plant_cover_total"
+      ]
+    },
+    {
+      "id": "q4",
+      "q": "What effect does assisted restoration have on moss?",
+      "gold": [
+        "restoration_general",
+        "moss_bryophyte"
+      ]
+    }
+  ]
+}
