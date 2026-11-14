@@ -8,6 +8,7 @@ import contextlib
 import io
 import json
 import os
+import re
 import socket
 import subprocess
 import sys
@@ -31,7 +32,8 @@ ASK_STRATEGIES = {"parser": "freeform", "linker": "assisted"}  # what ./ask.sh s
 ANSWERED_Q = "Does mulching lead to more invasive plants?"
 # Known gaps in llm.py (frozen, other owner); strict xfails so they flip to failures once fixed.
 MALFORMED_URL_BUG = "llm.py lets urllib's ValueError escape for a scheme-less BRINE_URL instead of LLMError"
-HUNG_ENDPOINT_GAP = "llm.py retries a timed-out request once after 2 s: 8 + 2 + 8 s at ask.sh's timeout"
+# ask.sh's default LLM timeout; llm.py retries a timed-out call once after 2 s, so a hung endpoint costs 2t + 2 s.
+ASK_TIMEOUT = re.search(r"LLM_TIMEOUT:-(\d+(?:\.\d+)?)", (ROOT / "ask.sh").read_text()).group(1)
 
 
 @pytest.fixture(autouse=True)
@@ -39,7 +41,7 @@ def ask_env(monkeypatch, tmp_path):
     """No endpoint unless a test sets one; ask.sh's timeout and strategies; pages under tmp_path."""
     for k in ("BRINE_URL", "BRINE_MODEL", "BRINE_API_KEY", "CAMOREASONING_TAXONOMY_DIR", "CAMOREASONING_LLM_CACHE"):
         monkeypatch.delenv(k, raising=False)
-    monkeypatch.setenv("CAMOREASONING_LLM_TIMEOUT", "8")
+    monkeypatch.setenv("CAMOREASONING_LLM_TIMEOUT", ASK_TIMEOUT)
     for stage, name in ASK_STRATEGIES.items():
         monkeypatch.setenv(f"CAMOREASONING_STRATEGY_{stage.upper()}", name)
     monkeypatch.setattr(pipeline.ask_frame, "__defaults__", (None, tmp_path / "outputs"))
@@ -236,7 +238,6 @@ def test_assisted_linker_uses_at_most_one_call_per_question(monkeypatch):
 
 
 @pytest.mark.robust
-@pytest.mark.xfail(strict=True, reason=HUNG_ENDPOINT_GAP)
 def test_hung_llm_still_answers_within_10s(monkeypatch):
     srv = socket.socket()
     srv.bind(("127.0.0.1", 0))

@@ -50,7 +50,7 @@ def lexical_link(question: str, ctx) -> dict:
 def live_link(question: str, env: dict[str, str]) -> dict:
     """link_via and classes under ask.sh's settings: a second, in-process parse+link (the --json entry
     does not carry the frame). Costs one more LLM call for questions the linker is unsure about."""
-    settings = load_settings({**env, "CAMOREASONING_LLM_TIMEOUT": "8", "CAMOREASONING_STRATEGY_LINKER": "assisted"})
+    settings = load_settings({**env, "CAMOREASONING_LLM_TIMEOUT": "3", "CAMOREASONING_STRATEGY_LINKER": "assisted"})
     _, f = ask_frame(question, settings)
     return {
         "via": f.via,

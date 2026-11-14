@@ -3,6 +3,6 @@
 set -euo pipefail
 . "$(dirname "${BASH_SOURCE[0]}")/scripts/env.sh"
 # One live question: short LLM timeout (lexical fallback on failure) and the batched LLM linker fallback.
-export CAMOREASONING_LLM_TIMEOUT="${CAMOREASONING_LLM_TIMEOUT:-8}"
+export CAMOREASONING_LLM_TIMEOUT="${CAMOREASONING_LLM_TIMEOUT:-3}"
 export CAMOREASONING_STRATEGY_LINKER="${CAMOREASONING_STRATEGY_LINKER:-assisted}"
 exec "$PY" -m camoreasoning ask "$@"
