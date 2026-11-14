@@ -236,6 +236,7 @@ flowchart LR
     - No confidence goes above 0.95.
     - The parameters are committed under `experiments/`, and a reliability table is in the extras.
   - **Points:** C14.
+  - **Progress (Sat Nov 14):** `calibrator/binned` is built, not default. Each cell (status × certainty, or × `link_via` for no_evidence, × n_docs bucket 0/1/2–3/4+) uses its dev accuracy, shrunk toward its status, then toward global, with prior strength M = 4. Answered rows also get an isotonic (PAV) correction over `agreement`, fitted on what the cells miss and only with ≥ 20 answered rows. Output is clipped to [0.05, 0.95]. `fit()` writes the cell table, PAV blocks and an in-sample reliability table (10 bins, ECE, Brier). Missing or corrupt params fall back to the baseline constants with one stderr warning. `experiments/calibration/write_reliability.py` renders `reliability.md` from `binned.json`. The tests use synthetic cells: estimates land within ±0.05 of truth, held-out ECE is 0.015, and two fits give byte-identical output. An end-to-end `calibrate` on the fixture shows holdout ids never reach `fit`. **Pending:** `mise run calibrate` with `CAMOREASONING_STRATEGY_CALIBRATOR=binned` once gold lands; holdout ECE ≤ 0.05; then default flip at the audit.
 - [ ] **13. Select cited edges.** ★ 4/5 · B · `citer`
   - **Why:** scripts check that the cited edges "are the edges that bear on the question", and judges open them.
   - **Done when:** precision comes first. On dev, edge precision is at least 0.9 and recall at least 0.7.
