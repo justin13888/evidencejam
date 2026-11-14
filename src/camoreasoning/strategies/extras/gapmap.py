@@ -18,6 +18,7 @@ from collections import defaultdict
 from collections.abc import Sequence
 from html import escape
 from pathlib import Path
+from statistics import median
 
 from camoreasoning.components import Context
 from camoreasoning.contracts import Answer, Trace
@@ -30,6 +31,10 @@ DENSEST = 15  # cells listed under "Where the graph is densest"
 
 def question_for(cause: str, outcome: str) -> str:
     return f"What effect does {cause} have on {outcome}?"
+
+
+def studies(n: int) -> str:
+    return f"{n} study" if n == 1 else f"{n} studies"
 
 
 def cell_id(cause_id: str, outcome_id: str) -> str:
@@ -92,14 +97,15 @@ class GapMapExtras(HtmlExtras):
             for o in outcomes:
                 n = counts.get((c.id, o.id), 0)
                 where = f"{escape(c.label)} on {escape(o.label)}"
-                text = f'{n}<span class="vh"> studies: {where}</span>' if n else f'gap<span class="vh">: {where}</span>'
+                unit = "study" if n == 1 else "studies"
+                text = f'{n}<span class="vh"> {unit}: {where}</span>' if n else f'gap<span class="vh">: {where}</span>'
                 link = f'<a href="gapcells.html#{cell_id(c.id, o.id)}">{text}</a>'
                 tds.append(f'<td class="d{band(n, cuts)}">{link}</td>')
             rows.append(f'<tr><th scope="row">{escape(c.label)}</th>{"".join(tds)}</tr>')
         dense = sorted((x for x in cells if x[2]), key=lambda x: -x[2])[:DENSEST]
         dense_li = "".join(
             f'<li><a href="gapcells.html#{cell_id(c.id, o.id)}">{escape(c.label)} on {escape(o.label)}</a>: '
-            f"{n} studies</li>"
+            f"{studies(n)}</li>"
             for c, o, n in dense
         )
         empty_rows = [c.label for c in causes if not any(counts.get((c.id, o.id)) for o in outcomes)]
@@ -113,8 +119,9 @@ class GapMapExtras(HtmlExtras):
             "darkest.</p>"
             f"<ul><li>{len(causes)} interventions and conditions × {len(outcomes)} outcomes = {len(cells)} cells"
             f"</li><li>{len(filled)} cells have evidence; {len(cells) - len(filled)} are gaps "
-            f"({(len(cells) - len(filled)) / len(cells):.0%})</li>"
-            f"<li>Studies per non-empty cell: median {cuts[1]}, most {max(filled, default=0)}</li>"
+            f"({(len(cells) - len(filled)) / max(1, len(cells)):.0%})</li>"
+            f"<li>Studies per non-empty cell: median {median(filled) if filled else 0:g}, "
+            f"most {max(filled, default=0)}</li>"
             + (f"<li>No evidence for any outcome: {escape(', '.join(empty_rows))}</li>" if empty_rows else "")
             + "</ul>"
             f"<h2>Where the graph is densest</h2><ol>{dense_li}</ol>"
@@ -142,8 +149,7 @@ class GapMapExtras(HtmlExtras):
             items = []
             for o in outcomes:
                 n = counts.get((c.id, o.id), 0)
-                unit = "study" if n == 1 else "studies"
-                found = f"{n} {unit}" if n else "<strong>gap</strong>, no claim in the graph"
+                found = studies(n) if n else "<strong>gap</strong>, no claim in the graph"
                 runs = "".join(
                     f'<li><a href="{_slug(a.id)}.html">{escape(a.id)}</a>: {escape(t.question.text)} '
                     f"({escape(a.status.replace('_', ' '))})</li>"
