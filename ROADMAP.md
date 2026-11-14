@@ -118,10 +118,16 @@ flowchart LR
     - **Fragmentation:** 4,801 of 4,820 raw cause→outcome pairs rest on one document, so item 3 must merge hard.
     - **Open for item 6:** all 39 `prevents`/`disrupts` edges double-negate ("prevents decreased Y"), so the schema sign product reads the opposite of the sentence.
     - **For items 6 and 8:** the 121 `unchanged` objects are untagged nulls.
-- [ ] **2. Profile the instrumentation.** ★ 4/5 · D · `llm.py` usage
+- [x] **2. Profile the instrumentation.** ★ 4/5 · D · `llm.py` usage
   - **Why:** E12 is estimated from tokens on the endpoint. We need to know whether thinking-off really works, whether usage is reported, and how latency behaves.
   - **Done when:** a smoke call through `ctx.llm` records prompt and completion tokens in `footprint.json`. Completion tokens are small, so no hidden reasoning. The batch chunk size is chosen, and the baseline tokens per question are written down here.
   - **Points:** E12, R8.
+  - **Done:** the probe is in `experiments/results/endpoint_probe.json` and the chunk sweep in `experiments/results/llm_chunk_size.json` (`experiments/llm_profile/chunk_size.py`).
+    - **Usage and thinking:** the endpoint reports real prompt and completion tokens. Thinking-off holds: an "OK" reply costs 2 completion tokens and has no `<think>`. JSON-schema `response_format` works.
+    - **Cost is the prompt:** 0.2 s for a short prompt, about 5.6 s for 2.6k prompt tokens. There is no prefix cache, so a repeated prompt costs the same every time.
+    - **Chunk size:** put every fallback question in one call. Over 50 synthetic template questions, tokens per question fall from 403 (1 per call) to 49 (50 per call), and accuracy does not drop. `tokens_per_item=32` is enough, since 17–24 were used.
+    - **Baseline:** 0 tokens per question for the default pipeline, since the lexical linker makes no calls. About 49 tokens per question if every question used the batched LLM fallback.
+    - **For items 5, 14 and 18:** latency varies on the server side, from 4 s to 100 s for similar calls, so `ask` needs a short timeout with a lexical fallback. With only the class-id list, the LLM links both sides right 52–60% of the time, so lexical matching must stay primary.
 
 ## Phase 2 — Core engine (Sat)
 
