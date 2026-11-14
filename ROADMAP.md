@@ -267,7 +267,7 @@ flowchart LR
   - **Why:** it turns "no evidence" into a visible, useful product and shows where the graph is dense or empty.
   - **Done when:** the cause × outcome grid shows study counts, empty cells are labelled "gap", and each cell links to example questions.
   - **Points:** J40, and shows C14 behaviour.
-- [ ] **18. Handle judges' own questions with the ask CLI.** ★ 4/5 · A · `parser`, `linker`
+- [x] **18. Handle judges' own questions with the ask CLI.** ★ 4/5 · A · `parser`, `linker`
   - **Why:** each judge asks one real question of their own.
   - **Done when:** free-form wording links through the LLM fallback, it never crashes, it answers in under 10 s, and it is tested on 20 off-template questions.
   - **Points:** J40.
