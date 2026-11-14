@@ -1,0 +1,40 @@
+{"id": "Q0001", "cause": "winter road clearance", "outcome": "surface elevation"}
+{"id": "Q0002", "cause": "native hay application", "outcome": "litter cover"}
+{"id": "Q0003", "cause": "time period", "outcome": "fruiting potential"}
+{"id": "Q0004", "cause": "zooplankton reintroduction", "outcome": "chlorophyll concentration"}
+{"id": "Q0005", "cause": "deer presence", "outcome": "adult tree density"}
+{"id": "Q0006", "cause": "artificial nesting structures", "outcome": "accumulated heat units"}
+{"id": "Q0007", "cause": "mulch application", "outcome": "native shrub and tree seedling density"}
+{"id": "Q0008", "cause": "amphibian abundance", "outcome": "fish biomass"}
+{"id": "Q0009", "cause": "site location", "outcome": "nestling survival"}
+{"id": "Q0010", "cause": "mulch application", "outcome": "standing crop"}
+{"id": "Q0011", "cause": "water level minimum", "outcome": "wetland plant assemblage"}
+{"id": "Q0012", "cause": "vegetation removal", "outcome": "turbulent kinetic energy"}
+{"id": "Q0013", "cause": "water table position", "outcome": "vegetation composition"}
+{"id": "Q0014", "cause": "water level", "outcome": "suspended solids concentration"}
+{"id": "Q0015", "cause": "tree cover removal", "outcome": "tree cover"}
+{"id": "Q0016", "cause": "conifer seedling establishment", "outcome": "organic matter thickness"}
+{"id": "Q0017", "cause": "invasive fish removal", "outcome": "amphibian colonization"}
+{"id": "Q0018", "cause": "sulphate concentration", "outcome": "alkalinity"}
+{"id": "Q0019", "cause": "forest floor and soil removal", "outcome": "fungal species richness"}
+{"id": "Q0020", "cause": "water velocity", "outcome": "sediment infilling"}
+{"id": "Q0021", "cause": "seeding method", "outcome": "native species cover"}
+{"id": "Q0022", "cause": "plot type", "outcome": "vegetation cover"}
+{"id": "Q0023", "cause": "water chemistry and fish", "outcome": "zooplankton composition"}
+{"id": "Q0024", "cause": "bird nest survival", "outcome": "time period"}
+{"id": "Q0025", "cause": "breeding timing", "outcome": "nest parasitism"}
+{"id": "Q0026", "cause": "sediment depth", "outcome": "volatile solids concentration"}
+{"id": "Q0027", "cause": "restoration status", "outcome": "microbial biomass"}
+{"id": "Q0028", "cause": "habitat restoration status", "outcome": "bird fledgling number"}
+{"id": "Q0029", "cause": "position within harvest strip", "outcome": "vascular plant cover"}
+{"id": "Q0030", "cause": "passive restoration", "outcome": "understorey plant composition"}
+{"id": "Q0031", "cause": "harvest method", "outcome": "conifer height structure"}
+{"id": "Q0032", "cause": "zooplankton presence", "outcome": "lake acidification"}
+{"id": "Q0033", "cause": "proximity to linear disturbances", "outcome": "large mammal movement"}
+{"id": "Q0034", "cause": "deciduous tree cover", "outcome": "conifer volume growth"}
+{"id": "Q0035", "cause": "salmonid abundance", "outcome": "fish abundance"}
+{"id": "Q0036", "cause": "reclaimed mine land", "outcome": "bird fledging success"}
+{"id": "Q0037", "cause": "geographic distance", "outcome": "seed production"}
+{"id": "Q0038", "cause": "tree planting density", "outcome": "soil temperature"}
+{"id": "Q0039", "cause": "old growth status", "outcome": "spring flowering plant proportion"}
+{"id": "Q0040", "cause": "egg-to-predator ratio", "outcome": "lake location"}

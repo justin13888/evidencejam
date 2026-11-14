@@ -1,0 +1,40 @@
+{"id": "Q0041", "cause": "release technique", "outcome": "predation mortality"}
+{"id": "Q0042", "cause": "slow release fertilizer application", "outcome": "plant leaf area"}
+{"id": "Q0043", "cause": "biosolids application", "outcome": "forb frequency"}
+{"id": "Q0044", "cause": "herbicide disturbance treatment", "outcome": "grass reproductive effort"}
+{"id": "Q0045", "cause": "brood parasitism", "outcome": "nest survival"}
+{"id": "Q0046", "cause": "river regulation", "outcome": "flow conditions"}
+{"id": "Q0047", "cause": "combined mowing, burning and herbicide", "outcome": "native graminoid cover"}
+{"id": "Q0048", "cause": "beaver lodge activity", "outcome": "burn frequency"}
+{"id": "Q0049", "cause": "vegetation suppression", "outcome": "planted tree cover"}
+{"id": "Q0050", "cause": "insect defoliation", "outcome": "forest floor carbon to nitrogen ratio"}
+{"id": "Q0051", "cause": "disturbed area presence", "outcome": "large mammal avoidance"}
+{"id": "Q0052", "cause": "undisturbed stands", "outcome": "exotic plant presence"}
+{"id": "Q0053", "cause": "mulching", "outcome": "non-native plant shoot density"}
+{"id": "Q0054", "cause": "moisture retention cover layer", "outcome": "water metal concentration"}
+{"id": "Q0055", "cause": "edge habitat presence", "outcome": "large mammal habitat selection"}
+{"id": "Q0056", "cause": "tree height growth", "outcome": "tree planting"}
+{"id": "Q0057", "cause": "herbicide application", "outcome": "soil moisture"}
+{"id": "Q0058", "cause": "season", "outcome": "bee abundance"}
+{"id": "Q0059", "cause": "winter road clearance", "outcome": "bryophyte cover"}
+{"id": "Q0060", "cause": "causeway breaching", "outcome": "fish presence"}
+{"id": "Q0061", "cause": "cutting treatment", "outcome": "conifer seedling survival"}
+{"id": "Q0062", "cause": "season", "outcome": "bee abundance"}
+{"id": "Q0063", "cause": "habitat type", "outcome": "bryophyte species richness"}
+{"id": "Q0064", "cause": "conifer recruit abundance", "outcome": "fire history"}
+{"id": "Q0065", "cause": "fertilization", "outcome": "seedling diameter"}
+{"id": "Q0066", "cause": "water pH", "outcome": "dissolved organic carbon concentration"}
+{"id": "Q0067", "cause": "habitat variable weighting", "outcome": "fish habitat suitability"}
+{"id": "Q0068", "cause": "eelgrass cover", "outcome": "fish density"}
+{"id": "Q0069", "cause": "water table depth", "outcome": "litter decomposition rate"}
+{"id": "Q0070", "cause": "water alkalinity", "outcome": "zooplankton abundance"}
+{"id": "Q0071", "cause": "time since restoration", "outcome": "insect catch per unit effort"}
+{"id": "Q0072", "cause": "tree height and diameter", "outcome": "site preparation"}
+{"id": "Q0073", "cause": "slash cover", "outcome": "tree sucker density"}
+{"id": "Q0074", "cause": "time since clearcutting", "outcome": "tree species presence"}
+{"id": "Q0075", "cause": "catchment identity", "outcome": "leaf litter mass loss"}
+{"id": "Q0076", "cause": "culvert retrofitting", "outcome": "fish passage"}
+{"id": "Q0077", "cause": "time since protection", "outcome": "fish family richness"}
+{"id": "Q0078", "cause": "stream velocity", "outcome": "fish habitat preference"}
+{"id": "Q0079", "cause": "wetland habitat presence", "outcome": "vascular plant species richness"}
+{"id": "Q0080", "cause": "plant cover", "outcome": "seed mix application"}
