@@ -1,4 +1,4 @@
-"""precise citer: direction filter, twin dedupe, ordering, cap, fallback. Real edge ids from the graph."""
+"""precise citer: every included edge, round-robin by study, strongest grade first. Real edge ids."""
 
 from __future__ import annotations
 
@@ -13,20 +13,18 @@ from camoreasoning.strategies.citer.precise import CAP
 
 @pytest.fixture(scope="module")
 def edges(graph):
-    """twins: 3+ edges sharing (document, original_sentence), graph order. singles: one-edge sentences in
-    other documents, each from a distinct document."""
+    """twins: 3+ edges sharing (document, original_sentence). singles: one edge each from distinct documents."""
     by: dict[tuple, list[str]] = defaultdict(list)
     for eid, e in graph.edges.items():
         if e.get("original_sentence"):
             by[(e["source_document"], e["original_sentence"])].append(eid)
     twins = next(v for v in by.values() if len(v) >= 3)
-    tdoc = graph.edges[twins[0]]["source_document"]
-    singles, docs = [], {tdoc}
+    docs, singles = {graph.edges[twins[0]]["source_document"]}, []
     for (doc, _), ids in by.items():
         if len(ids) == 1 and doc not in docs:
             singles.append(ids[0])
             docs.add(doc)
-        if len(singles) == 40:
+        if len(singles) == CAP + 5:
             break
     return twins, singles
 
@@ -45,119 +43,61 @@ def check(ids, verdict):
     assert bool(ids) == (verdict.status == "answered")
 
 
-def test_registered_and_no_llm(make_ctx, graph, edges):
-    ctx = make_ctx()
-    _, s = edges
-    v = Verdict("answered", "increase", (vote(graph, s[0], 1),))
-    assert cite(v, ctx) == [s[0]] and ctx.llm.meter.calls == 0
-
-
 def test_no_evidence_is_empty(make_ctx, graph, edges):
     _, s = edges
-    v = Verdict("no_evidence", None, (vote(graph, s[0], 1, included=False),))
-    assert cite(v, make_ctx()) == []
-    assert cite(Verdict("no_evidence", None, ()), make_ctx()) == []
+    assert cite(Verdict("no_evidence", None, (vote(graph, s[0], 1, included=False),)), make_ctx()) == []
 
 
-@pytest.mark.parametrize("direction,effect", [("increase", 1), ("decrease", -1), ("no_effect", 0)])
-def test_direction_filter(make_ctx, graph, edges, direction, effect):
+@pytest.mark.parametrize("direction", ["increase", "decrease", "no_effect", "mixed", "unclear"])
+def test_cites_dissenting_and_null_votes(make_ctx, graph, edges, direction):
+    """The answer rests on every included study, including the ones that disagree."""
     _, s = edges
-    votes = (vote(graph, s[0], 1), vote(graph, s[1], -1), vote(graph, s[2], 0), vote(graph, s[3], None),
-             vote(graph, s[4], effect, included=False))  # fmt: skip
-    v = Verdict("answered", direction, votes)
+    v = Verdict("answered", direction, (vote(graph, s[0], 1), vote(graph, s[1], -1), vote(graph, s[2], 0)))
     ids = cite(v, make_ctx())
-    assert ids == [s[[1, -1, 0].index(effect)]]
     check(ids, v)
+    assert set(ids) == set(s[:3])
 
 
-@pytest.mark.parametrize("direction", ["mixed", "unclear"])
-def test_mixed_keeps_both_signs(make_ctx, graph, edges, direction):
+def test_twins_all_cited(make_ctx, graph, edges):
+    t, _ = edges
+    v = Verdict("answered", "increase", tuple(vote(graph, e, 1) for e in t))
+    assert cite(v, make_ctx()) == list(t)
+
+
+def test_never_cites_non_included_and_no_duplicates(make_ctx, graph, edges):
     _, s = edges
-    votes = (vote(graph, s[0], 1), vote(graph, s[1], -1), vote(graph, s[2], 0), vote(graph, s[3], None),
-             vote(graph, s[4], 1, included=False))  # fmt: skip
-    v = Verdict("answered", direction, votes)
-    ids = cite(v, make_ctx())
-    assert ids == s[:3]
-    check(ids, v)
-
-
-def test_twins_same_effect_collapse_to_first_in_graph_order(make_ctx, graph, edges):
-    t, s = edges
-    # votes listed in reverse graph order: the earliest graph edge still wins
-    votes = (vote(graph, t[2], 1), vote(graph, t[1], 1), vote(graph, t[0], 1), vote(graph, s[0], 1))
+    votes = (vote(graph, s[0], 1), vote(graph, s[0], 1), vote(graph, s[1], None, included=False))
     v = Verdict("answered", "increase", votes)
     ids = cite(v, make_ctx())
-    assert t[0] in ids and t[1] not in ids and t[2] not in ids and s[0] in ids
     check(ids, v)
+    assert ids == [s[0]]
 
 
-def test_twins_different_effect_both_kept(make_ctx, graph, edges):
-    t, _ = edges
-    votes = (vote(graph, t[0], 1), vote(graph, t[1], -1), vote(graph, t[2], 1))
-    v = Verdict("answered", "mixed", votes)
-    ids = cite(v, make_ctx())
-    assert ids == [t[0], t[1]]
-    check(ids, v)
-
-
-def test_twin_excluded_by_direction_does_not_block_sibling(make_ctx, graph, edges):
-    t, _ = edges
-    votes = (vote(graph, t[0], 0), vote(graph, t[1], 1))
-    assert cite(Verdict("answered", "increase", votes), make_ctx()) == [t[1]]
-
-
-def test_order_doc_then_grade_then_vote_order(make_ctx, graph, edges):
+def test_round_robin_across_studies_strongest_first(make_ctx, graph, edges):
     t, s = edges
-    votes = (
-        vote(graph, s[0], 1, grade="very_low"),
-        vote(graph, s[1], 1, grade="low"),
-        vote(graph, s[0], 1),  # duplicate vote for the same edge
-    )
-    # same-doc ordering: use twins with different effects so all stay, under "mixed"
-    tv = (
-        vote(graph, t[0], 1, grade="very_low"),
-        vote(graph, t[1], -1, grade="moderate"),
-        vote(graph, t[2], 0, grade="low"),
-    )
-    v = Verdict("answered", "mixed", votes[:2] + tv + votes[2:])
-    ids = cite(v, make_ctx())
-    assert ids == [s[0], s[1], t[1], t[2], t[0]]
-    check(ids, v)
+    # study A (twins): low, moderate, very_low; study B: one edge. Expect A's moderate, B, A's low, A's very_low.
+    votes = (vote(graph, t[0], 1, grade="low"), vote(graph, t[1], 1, grade="moderate"),
+             vote(graph, s[0], 1, grade="low"), vote(graph, t[2], 1, grade="very_low"))  # fmt: skip
+    assert cite(Verdict("answered", "increase", votes), make_ctx()) == [t[1], s[0], t[0], t[2]]
 
 
 def test_same_grade_keeps_vote_order(make_ctx, graph, edges):
     t, _ = edges
-    tv = (vote(graph, t[2], 0, grade="low"), vote(graph, t[0], 1, grade="low"), vote(graph, t[1], -1, grade="low"))
-    assert cite(Verdict("answered", "mixed", tv), make_ctx()) == [t[2], t[0], t[1]]
+    votes = (vote(graph, t[2], 1, grade="low"), vote(graph, t[0], 1, grade="low"))
+    assert cite(Verdict("answered", "increase", votes), make_ctx()) == [t[2], t[0]]
 
 
-def test_cap(make_ctx, graph, edges):
+def test_cap_keeps_one_edge_per_study_first(make_ctx, graph, edges):
     _, s = edges
+    assert len(s) > CAP
     v = Verdict("answered", "increase", tuple(vote(graph, e, 1) for e in s))
     ids = cite(v, make_ctx())
+    check(ids, v)
     assert ids == s[:CAP]
-    check(ids, v)
 
 
-def test_fallback_when_filter_leaves_nothing(make_ctx, graph, edges):
+def test_no_llm_calls(make_ctx, graph, edges):
+    ctx = make_ctx()
     _, s = edges
-    votes = (
-        vote(graph, s[0], -1),
-        vote(graph, s[1], None),
-        vote(graph, s[0], -1),
-        vote(graph, s[2], 1, included=False),
-    )
-    v = Verdict("answered", "increase", votes)
-    ids = cite(v, make_ctx())
-    assert ids == [s[0], s[1]]
-    check(ids, v)
-
-
-def test_never_cites_non_included(make_ctx, graph, edges):
-    t, s = edges
-    votes = tuple(vote(graph, e, 1, included=False) for e in (*t, *s[:5])) + (vote(graph, s[5], 1),)
-    for d in ("increase", "mixed", "unclear", "decrease"):
-        v = Verdict("answered", d, votes)
-        ids = cite(v, make_ctx())
-        assert ids == [s[5]]
-        check(ids, v)
+    cite(Verdict("answered", "increase", (vote(graph, s[0], 1),)), ctx)
+    assert ctx.llm.meter.calls == 0
