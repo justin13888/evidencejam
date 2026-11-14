@@ -2,7 +2,7 @@
 per run with CAMOREASONING_STRATEGY_<STAGE>=<name>. tests/contracts verifies every registered strategy."""
 
 DEFAULTS: dict[str, str] = {
-    "parser": "baseline",
+    "parser": "freeform",
     "linker": "baseline",
     "retriever": "baseline",
     "interpreter": "baseline",

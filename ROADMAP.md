@@ -269,6 +269,7 @@ flowchart LR
   - **Why:** each judge asks one real question of their own.
   - **Done when:** free-form wording links through the LLM fallback, it never crashes, it answers in under 10 s, and it is tested on 20 off-template questions.
   - **Points:** J40.
+  - **Progress (Sat Nov 14):** `parser/freeform` is the default: template questions parse exactly as in baseline (178/178 dev, `run.sh` snapshots identical, 0 calls), and 16 more shapes cover the 20 questions in `experiments/ask/offtemplate.yaml`. `ask` prints a card (`--json` keeps the old entry), refuses with exit 2 and nearest classes when a side links to nothing, and lets stage bugs raise; the batch run keeps its fallback. `ask.sh` selects `linker/assisted` with an 8 s timeout. Live (`experiments/ask/results.json`): 23/25 answer or refuse in about 0.5 s with 0 calls; the 2 that need the LLM take 1–19 s, because the endpoint is either about 1 s or past the timeout, and `llm.py` retries once (2 × 8 + 2 s). **Pending:** under 10 s needs a 3 s ask timeout (measured ≤ 8.7 s) or no retry in `ask`; `llm.py` raises `ValueError`, not `LLMError`, for a scheme-less `BRINE_URL`.
 - [ ] **19. Audit accessibility.** ★ 3/5 · D · `product/`, `extras`
   - **Why:** W3C criteria are judged.
   - **Done when:** WCAG 2.2 AA is checked by hand and with a checker, covering contrast, headings, table headers, `lang`, keyboard use, no colour-only meaning, and reflow at 320 px.
