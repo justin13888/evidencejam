@@ -1,4 +1,4 @@
-"""One vote per document (majority within doc), then >=75% agreement across documents."""
+"""One vote per document (majority within doc), then >=2/3 of documents agree (decision D2), else mixed."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from camoreasoning.components import Aggregator, Context
 from camoreasoning.contracts import Candidates, EdgeVote, Verdict
 from camoreasoning.registry import register
 
-AGREE = 0.75
+AGREE = 2 / 3  # decision D2 (ROADMAP "Decisions"); matches the gold rubric
 NAMES = {1: "increase", -1: "decrease", 0: "no_effect"}
 
 

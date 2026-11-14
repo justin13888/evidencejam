@@ -57,8 +57,11 @@ class LLM:
         url = (self.settings.llm_url or "").rstrip("/")
         return url if url.endswith("/chat/completions") else url + "/chat/completions"
 
-    def chat(self, system: str, user: str, *, max_tokens: int = 256, purpose: str = "") -> str:
-        """One metered completion. Raises LLMError on any failure (never other exceptions)."""
+    def chat(
+        self, system: str, user: str, *, max_tokens: int = 256, purpose: str = "", extra: dict | None = None
+    ) -> str:
+        """One metered completion. Raises LLMError on any failure (never other exceptions).
+        `extra` adds request fields (e.g. response_format) and is part of the cache key."""
         if not self.available:
             raise LLMError("LLM not configured (BRINE_URL/BRINE_MODEL)")
         body = {
@@ -66,6 +69,7 @@ class LLM:
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": user + NO_THINK}],
             "temperature": 0,
             "max_tokens": max_tokens,
+            **(extra or {}),
         }
         key = hashlib.sha256(json.dumps(body, sort_keys=True).encode()).hexdigest()
         cache = CACHE_DIR / "llm" / f"{key}.json"
@@ -115,11 +119,14 @@ class LLM:
         except (KeyError, IndexError, TypeError):
             raise _Retry(f"unexpected response shape: {str(data)[:120]}", retry=False) from None
         usage = data.get("usage") or {}
+        cached = (usage.get("prompt_tokens_details") or {}).get("cached_tokens")
         self.meter.record(
             purpose,
             int(usage.get("prompt_tokens") or len(json.dumps(body)) // 4),
             int(usage.get("completion_tokens") or len(content) // 4),
             time.perf_counter() - t0,
+            usage_reported=bool(usage.get("prompt_tokens")),
+            **({"cached_tokens": cached} if cached is not None else {}),
         )
         return content
 
@@ -160,3 +167,42 @@ class _Retry(Exception):
         super().__init__(msg)
         self.retry = retry
         self.drop_extras = drop_extras
+
+
+def probe(settings: Settings) -> dict:
+    """Endpoint facts the energy plan depends on (ROADMAP #2). Never raises; writes nothing itself."""
+    import dataclasses
+
+    if not settings.llm_configured:
+        return {"ok": False, "note": "BRINE_URL/BRINE_MODEL not set; nothing probed"}
+    s = dataclasses.replace(settings, llm_cache=False, max_calls=10)
+    out: dict[str, Any] = {"model": s.llm_model}
+    llm = LLM(s)
+    try:
+        reply = llm.chat("Reply with exactly: OK", "ping", max_tokens=16, purpose="probe")
+        last = llm.meter.log[-1]
+        out.update(ok=True, reply=reply[:60], thinking_leaked="<think" in reply, latency_s=last["s"],
+                   usage_reported=last.get("usage_reported"), completion_tokens=last["completion"],
+                   thinking_switch_accepted=bool(llm._extras))  # fmt: skip
+    except LLMError as e:
+        return {**out, "ok": False, "error": str(e)}
+    schema = {"type": "json_schema", "json_schema": {"name": "probe", "schema": {
+        "type": "object", "properties": {"label": {"type": "string", "enum": ["alpha", "beta"]}},
+        "required": ["label"], "additionalProperties": False}}}  # fmt: skip
+    try:
+        r = LLM(s).chat("Pick a label.", "Choose beta.", max_tokens=32, purpose="probe",
+                        extra={"response_format": schema})  # fmt: skip
+        out["json_schema"] = extract_json(r).get("label") in ("alpha", "beta")
+    except (LLMError, AttributeError) as e:
+        out["json_schema"] = f"unsupported ({e})"
+    prefix = "You label items. " + " ".join(f"Rule {i}: be exact." for i in range(300))
+    timings = []
+    for i in range(2):
+        try:
+            llm.chat(prefix, f"item {i}", max_tokens=8, purpose="probe")
+            timings.append(llm.meter.log[-1])
+        except LLMError as e:
+            timings.append({"error": str(e)})
+    out["prefix_cache"] = {"first": timings[0], "second": timings[1]}
+    out["meter"] = {k: v for k, v in llm.meter.summary().items() if k != "log"}
+    return out

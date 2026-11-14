@@ -33,6 +33,8 @@ mise run eval    # accuracy, calibration and LLM calls per question on experimen
 
 Without mise: `pip install -e . -r requirements-dev.txt && pytest`.
 
+Offline tooling: `python -m camoreasoning annotate …` is the bulk labelling harness (strictly validated JSONL chunks that a strong model fills, plus a CSV round trip for human review). `calibrate` fits the calibrator on gold dev items, and `probe` checks the LLM endpoint. Who owns what, the locked decisions and the self-check targets are in [ROADMAP.md](ROADMAP.md).
+
 To extend it, add a strategy in `src/camoreasoning/strategies/<stage>/<name>.py` and register it with `@register(stage, name)`. The contract tests in `tests/contracts/` pick it up automatically. The stage interfaces are in `src/camoreasoning/components.py`, and the work plan is in [ROADMAP.md](ROADMAP.md).
 
 Commits follow Conventional Commits (`feat(linker): ...`), and hk enforces this.

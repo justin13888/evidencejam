@@ -1,9 +1,11 @@
-"""Command line: run | ask | validate | eval | profile | taxonomy | devset. See README."""
+"""Command line: run | ask | validate | eval | calibrate | profile | probe | taxonomy | devset | annotate."""
 
 from __future__ import annotations
 
 import argparse
+import dataclasses
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -33,9 +35,25 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--repeat", type=int, default=1)
     e.add_argument("--save", metavar="NAME", help="also write experiments/results/NAME.json")
     e.add_argument("files", nargs="*", type=Path)
+    c = sub.add_parser("calibrate", help="fit the calibrator on the gold dev split -> experiments/calibration/")
+    c.add_argument("files", nargs="*", type=Path)
     sub.add_parser("profile", help="graph profile -> experiments/results/graph_profile.json")
-    sub.add_parser("taxonomy", help="offline: build classes + node labels into taxonomy/")
-    sub.add_parser("devset", help="offline: generate dev questions + gold labels into experiments/devsets/")
+    sub.add_parser("probe", help="endpoint smoke test: usage, thinking-off, JSON schema, prefix cache, latency")
+    t = sub.add_parser("taxonomy", help="offline: build classes + node labels into taxonomy/")
+    t.add_argument("--labels-only", action="store_true", help="keep classes.yaml, re-run only the node labeller")
+    d = sub.add_parser("devset", help="offline: generate dev questions + gold labels into experiments/devsets/")
+    d.add_argument("--build-only", action="store_true", help="only write generated.yaml")
+    d.add_argument("--gold-only", action="store_true", help="only label the existing generated.yaml")
+    an = sub.add_parser("annotate", help="offline bulk labelling harness (see camoreasoning/annotate.py)")
+    an.add_argument("action", choices=["export", "check", "merge", "run", "review-export", "review-import"])
+    an.add_argument("task", help="node_labels | questions | gold")
+    an.add_argument("--chunk", help="export: items per chunk (default 40); check: only this chunk number")
+    an.add_argument("-n", type=int, help="export: number of items (sample); review-export: rows")
+    an.add_argument("--seed", type=int, default=0)
+    an.add_argument("--workers", type=int, default=4, help="run: parallel chunks")
+    an.add_argument("--redo", action="store_true", help="run: also redo chunks that fail check")
+    an.add_argument("--stratify", help="review-export: spread the sample over this field's values")
+    an.add_argument("--file", type=Path, help="review CSV path (default experiments/annotate/<task>/review.csv)")
     sub.add_parser("strategies", help="list registered strategies per stage")
     args = ap.parse_args(argv)
     settings = load_settings(strategies=_strategies(args.strategy))
@@ -61,14 +79,25 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(res, indent=2))
         return 1 if res["errors"] else 0
     if args.cmd == "eval":
-        from camoreasoning.evaluate import run_eval, save_result
+        from camoreasoning.evaluate import run_eval, save_result, scorecard
 
         res = run_eval(settings, args.split, args.repeat, args.files or None)
         path = save_result(res, args.save)
-        print(json.dumps({k: v for k, v in res.items() if k != "calibration"} | {
-            "brier": res.get("calibration", {}).get("brier"), "ece": res.get("calibration", {}).get("ece"),
-            "saved": str(path)}, indent=2))  # fmt: skip
+        print(json.dumps(scorecard(res) | {"saved": str(path)} if res.get("n") else res, indent=2))
         return 0
+    if args.cmd == "calibrate":
+        from camoreasoning.evaluate import run_calibrate
+
+        print(json.dumps(run_calibrate(settings, "dev", args.files or None), indent=2))
+        return 0
+    if args.cmd == "probe":
+        from camoreasoning.llm import probe
+
+        res = probe(settings)
+        RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+        (RESULTS_DIR / "endpoint_probe.json").write_text(json.dumps(res, indent=2))
+        print(json.dumps(res, indent=2))
+        return 0 if res.get("ok") else 1
     if args.cmd == "profile":
         from camoreasoning.graph import load_graph
         from camoreasoning.profile import profile_graph
@@ -89,10 +118,16 @@ def main(argv: list[str] | None = None) -> int:
     from camoreasoning.pipeline import make_context
     from camoreasoning.taxonomy import Taxonomy, save_taxonomy, validate_taxonomy
 
+    settings = offline_settings(settings)
     ctx = make_context(settings)
     get = lambda st: registry.get(st, overrides=settings.strategies)  # noqa: E731
+    if args.cmd == "annotate":
+        return annotate_cmd(args, ctx)
     if args.cmd == "taxonomy":
-        tax = get("taxonomy_builder").build(ctx)
+        if args.labels_only:
+            tax = Taxonomy(dict(ctx.taxonomy.classes), version=ctx.taxonomy.version)
+        else:
+            tax = get("taxonomy_builder").build(ctx)
         tax = Taxonomy(tax.classes, tuple(get("node_labeler").label(tax, ctx)), tax.version)
         if errs := validate_taxonomy(tax, set(ctx.graph.nodes)):
             print("\n".join(errs[:20]), file=sys.stderr)
@@ -105,12 +140,66 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "devset":
         from camoreasoning.evaluate import save_devset
 
-        items = get("devset_builder").build(ctx.taxonomy, ctx)
-        save_devset(DEVSETS_DIR / "generated.yaml", items)
-        labeler = get("gold_labeler")
-        gold = labeler.label(items, ctx)
-        if gold:
-            save_devset(DEVSETS_DIR / f"gold_{labeler.name}.yaml", gold)
+        gen = DEVSETS_DIR / "generated.yaml"
+        if args.gold_only:
+            items = load_generated(gen)
+        else:
+            items = get("devset_builder").build(ctx.taxonomy, ctx)
+            save_devset(gen, items)
+        gold = []
+        if not args.build_only:
+            labeler = get("gold_labeler")
+            gold = labeler.label(items, ctx)
+            if gold:
+                save_devset(DEVSETS_DIR / f"gold_{labeler.name}.yaml", gold)
         print(json.dumps({"questions": len(items), "labelled": len(gold)}))
         return 0
     return 2
+
+
+def offline_settings(settings):
+    """Offline commands get a large call budget, the request cache, and ANNOTATE_* endpoint overrides."""
+    env = os.environ
+    return dataclasses.replace(
+        settings,
+        max_calls=settings.offline_max_calls,
+        llm_cache=True,
+        llm_url=env.get("ANNOTATE_URL") or settings.llm_url,
+        llm_model=env.get("ANNOTATE_MODEL") or settings.llm_model,
+        llm_key=env.get("ANNOTATE_KEY") or settings.llm_key,
+    )
+
+
+def load_generated(path: Path):
+    import yaml
+
+    from camoreasoning.contracts import DevQuestion
+
+    if not path.exists():
+        raise SystemExit(f"{path} missing: run `camoreasoning devset --build-only` first")
+    rows = (yaml.safe_load(path.read_text(encoding="utf-8")) or {}).get("items") or []
+    fields = set(DevQuestion.__dataclass_fields__)
+    return [DevQuestion(**{k: (tuple(v) if k == "tags" else v) for k, v in r.items() if k in fields}) for r in rows]
+
+
+def annotate_cmd(args, ctx) -> int:
+    from camoreasoning import annotate as A
+
+    if args.task not in A.TASKS:
+        print(f"unknown task {args.task}; have {sorted(A.TASKS)}", file=sys.stderr)
+        return 2
+    review = args.file or (A.task_dir(args.task) / "review.csv")
+    if args.action == "export":
+        res = A.export(args.task, ctx, int(args.chunk or 40), args.n, args.seed)
+    elif args.action == "check":
+        res = A.check(args.task, args.chunk)
+    elif args.action == "merge":
+        res = A.merge(args.task)
+    elif args.action == "run":
+        res = A.run(args.task, ctx.llm, args.workers, args.redo)
+    elif args.action == "review-export":
+        res = A.review_export(args.task, review, args.n or 60, args.stratify, args.seed)
+    else:
+        res = A.review_import(args.task, review)
+    print(json.dumps(res, indent=2, ensure_ascii=False))
+    return 1 if res.get("redo") or res.get("errors") else 0

@@ -52,6 +52,28 @@ run = "python -m camoreasoning taxonomy"
 description = "Offline: generate dev questions and gold labels into experiments/devsets/"
 run = "python -m camoreasoning devset"
 
+[tasks."run:fixture"]
+description = "Run on the test fixture taxonomy (real answered traces + pages before taxonomy v1 exists)"
+env = { CAMOREASONING_TAXONOMY_DIR = "tests/fixtures/taxonomy" }
+run = "./run.sh tests/fixtures/devset/questions.yaml outputs/answers.json"
+
+[tasks."eval:fixture"]
+description = "Smoke the eval/oracle/scorecard code paths on the fixture devset (never tune on it)"
+env = { CAMOREASONING_TAXONOMY_DIR = "tests/fixtures/taxonomy" }
+run = "python -m camoreasoning eval tests/fixtures/devset/gold_fixture.yaml"
+
+[tasks.calibrate]
+description = "Fit the selected calibrator on gold dev items -> experiments/calibration/<name>.json"
+run = "python -m camoreasoning calibrate"
+
+[tasks.probe]
+description = "Endpoint facts: usage reporting, thinking-off, JSON schema, prefix cache, latency"
+run = "python -m camoreasoning probe"
+
+[tasks.annotate]
+description = "Labelling harness: mise run annotate <export|check|merge|run|review-export|review-import> <task> [flags]"
+run = "python -m camoreasoning annotate"
+
 [tasks.check]
 description = "Gate for every change"
 depends = ["lint", "test", "validate"]

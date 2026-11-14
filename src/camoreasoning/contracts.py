@@ -183,3 +183,7 @@ class GoldItem:
     tags: tuple[str, ...] = ()
     split: Literal["dev", "holdout"] = "dev"
     source: str = ""  # "llm:<model>", "human:<initials>"
+    # Per relevant edge, its effect on the question's outcome as the gold labeller read it from the
+    # sentence: +1 increase, -1 decrease, 0 null/no change, None no usable sign. Feeds oracle eval
+    # (aggregator/grader/citer without linker/labels) and interpreter accuracy. ids are a subset of edge_ids.
+    edge_effects: tuple[tuple[str, int | None], ...] = ()

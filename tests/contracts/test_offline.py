@@ -56,6 +56,8 @@ def test_gold_labeler(name, make_ctx, taxonomy):
         assert g.direction is None or g.direction in DIRECTIONS
         assert g.certainty is None or g.certainty in ANSWER_CERTAINTY
         assert all(e in ctx.graph.edges for e in g.edge_ids)
+        assert {e for e, _ in g.edge_effects} <= set(g.edge_ids)
+        assert all(x in (-1, 0, 1, None) for _, x in g.edge_effects)
 
 
 @pytest.mark.parametrize("name", registry.names("gold_labeler"))

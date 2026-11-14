@@ -1,0 +1,188 @@
+# SMOKE FIXTURE ONLY: labels copied from the baseline pipeline (circular). Exercises eval code paths; never tune on it.
+items:
+- id: FX-fire-richness
+  question: What effect does prescribed fire have on plant species richness?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - empty
+  split: holdout
+  source: fixture:pipeline
+  edge_effects: []
+- id: FX-fire-survival
+  question: What effect does prescribed fire have on seedling survival?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - empty
+  split: dev
+  source: fixture:pipeline
+  edge_effects: []
+- id: FX-fire-biomass
+  question: What effect does prescribed fire have on biomass?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - empty
+  split: dev
+  source: fixture:pipeline
+  edge_effects: []
+- id: FX-mulch-richness
+  question: What effect does mulch & surface cover have on plant species richness?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_77889fe5ed24
+  - camo:edge_7fb05181b298
+  - camo:edge_e17c4fcfb678
+  - camo:edge_4f33eab5d8b0
+  - camo:edge_163ce3fc4f35
+  tags:
+  - answerable
+  split: dev
+  source: fixture:pipeline
+  edge_effects:
+  - - camo:edge_77889fe5ed24
+    - 0
+  - - camo:edge_7fb05181b298
+    - -1
+  - - camo:edge_e17c4fcfb678
+    - 1
+  - - camo:edge_4f33eab5d8b0
+    - 0
+  - - camo:edge_163ce3fc4f35
+    - 0
+- id: FX-mulch-survival
+  question: What effect does mulch & surface cover have on seedling survival?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_360ed1abec3b
+  - camo:edge_3177c2c787ef
+  - camo:edge_5b0b83fdbd53
+  tags:
+  - answerable
+  split: dev
+  source: fixture:pipeline
+  edge_effects:
+  - - camo:edge_360ed1abec3b
+    - 1
+  - - camo:edge_3177c2c787ef
+    - 1
+  - - camo:edge_5b0b83fdbd53
+    - 1
+- id: FX-mulch-biomass
+  question: What effect does mulch & surface cover have on biomass?
+  status: answered
+  direction: mixed
+  certainty: moderate
+  edge_ids:
+  - camo:edge_61bd440fd3b0
+  - camo:edge_8eb1df917874
+  - camo:edge_8333bc5f527e
+  - camo:edge_e16a8107a3b9
+  tags:
+  - answerable
+  split: holdout
+  source: fixture:pipeline
+  edge_effects:
+  - - camo:edge_61bd440fd3b0
+    - -1
+  - - camo:edge_8eb1df917874
+    - 1
+  - - camo:edge_8333bc5f527e
+    - 1
+  - - camo:edge_e16a8107a3b9
+    - 0
+- id: FX-fertilization-richness
+  question: What effect does fertilization have on plant species richness?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_0c6b65fd09fd
+  - camo:edge_b86c111cc90c
+  - camo:edge_77889fe5ed24
+  - camo:edge_0e278c3f0493
+  - camo:edge_55fdefc8270e
+  tags:
+  - answerable
+  split: dev
+  source: fixture:pipeline
+  edge_effects:
+  - - camo:edge_0c6b65fd09fd
+    - 0
+  - - camo:edge_b86c111cc90c
+    - 0
+  - - camo:edge_77889fe5ed24
+    - 0
+  - - camo:edge_0e278c3f0493
+    - -1
+  - - camo:edge_55fdefc8270e
+    - -1
+- id: FX-fertilization-survival
+  question: What effect does fertilization have on seedling survival?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_34f2129de4f8
+  - camo:edge_328fc34e258c
+  - camo:edge_796198d71504
+  - camo:edge_6d227013474c
+  tags:
+  - answerable
+  split: dev
+  source: fixture:pipeline
+  edge_effects:
+  - - camo:edge_34f2129de4f8
+    - 0
+  - - camo:edge_328fc34e258c
+    - -1
+  - - camo:edge_796198d71504
+    - 0
+  - - camo:edge_6d227013474c
+    - 0
+- id: FX-fertilization-biomass
+  question: What effect does fertilization have on biomass?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_4b5a90a48179
+  - camo:edge_a17bba572e9b
+  - camo:edge_8d09b599854f
+  - camo:edge_4de9efbfec5c
+  - camo:edge_ddfed005df71
+  - camo:edge_6cc2e113d5e8
+  - camo:edge_7ab0be2fbee4
+  - camo:edge_f8b4ee96d021
+  tags:
+  - answerable
+  split: dev
+  source: fixture:pipeline
+  edge_effects:
+  - - camo:edge_4b5a90a48179
+    - 1
+  - - camo:edge_a17bba572e9b
+    - 0
+  - - camo:edge_8d09b599854f
+    - 1
+  - - camo:edge_4de9efbfec5c
+    - 1
+  - - camo:edge_ddfed005df71
+    - 1
+  - - camo:edge_6cc2e113d5e8
+    - 1
+  - - camo:edge_7ab0be2fbee4
+    - 1
+  - - camo:edge_f8b4ee96d021
+    - 0

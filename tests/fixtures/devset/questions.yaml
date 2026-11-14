@@ -1,0 +1,19 @@
+questions:
+- id: FX-fire-richness
+  question: What effect does prescribed fire have on plant species richness?
+- id: FX-fire-survival
+  question: What effect does prescribed fire have on seedling survival?
+- id: FX-fire-biomass
+  question: What effect does prescribed fire have on biomass?
+- id: FX-mulch-richness
+  question: What effect does mulch & surface cover have on plant species richness?
+- id: FX-mulch-survival
+  question: What effect does mulch & surface cover have on seedling survival?
+- id: FX-mulch-biomass
+  question: What effect does mulch & surface cover have on biomass?
+- id: FX-fertilization-richness
+  question: What effect does fertilization have on plant species richness?
+- id: FX-fertilization-survival
+  question: What effect does fertilization have on seedling survival?
+- id: FX-fertilization-biomass
+  question: What effect does fertilization have on biomass?

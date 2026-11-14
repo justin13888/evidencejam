@@ -126,6 +126,12 @@ class Calibrator(Stage):
     @abstractmethod
     def confidence(self, features: Features, ctx: Context) -> float: ...
 
+    def fit(self, rows: Sequence[tuple[Features, bool]], ctx: Context) -> dict | None:
+        """Optional: learn params from (features, was_correct) on the dev split. Return a JSON-serialisable
+        dict; `camoreasoning calibrate` writes it to experiments/calibration/<name>.json for
+        `confidence` to load. None = nothing to fit."""
+        return None
+
 
 class Citer(Stage):
     """edge_ids to cite: a subset of the included votes' edges, non-empty iff answered."""

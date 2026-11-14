@@ -14,6 +14,8 @@ TAXONOMY_DIR = ROOT / "taxonomy"
 EXPERIMENTS_DIR = ROOT / "experiments"
 DEVSETS_DIR = EXPERIMENTS_DIR / "devsets"
 RESULTS_DIR = EXPERIMENTS_DIR / "results"
+CALIBRATION_DIR = EXPERIMENTS_DIR / "calibration"
+ANNOTATE_DIR = EXPERIMENTS_DIR / "annotate"
 PRODUCT_DIR = ROOT / "product"
 OUTPUTS_DIR = ROOT / "outputs"
 CACHE_DIR = ROOT / ".cache"
@@ -36,11 +38,20 @@ class Settings:
     max_calls: int = 8  # hard per-run budget; the judged run should need <= 1
     llm_timeout: float = 120.0
     llm_cache: bool = False  # dev only: replay identical requests from .cache/llm
+    taxonomy_dir: Path | None = None  # dev only: run on another taxonomy (e.g. tests/fixtures/taxonomy)
+    offline_max_calls: int = 5000  # budget for offline commands (taxonomy, devset, annotate run)
     strategies: Mapping[str, str] = field(default_factory=dict)  # stage -> strategy name overrides
 
     @property
     def llm_configured(self) -> bool:
         return bool(self.llm_url and self.llm_model)
+
+
+def _path(value: str | None) -> Path | None:
+    if not value:
+        return None
+    p = Path(value)
+    return p if p.is_absolute() else ROOT / p
 
 
 def load_settings(env: Mapping[str, str] | None = None, **overrides) -> Settings:
@@ -56,6 +67,8 @@ def load_settings(env: Mapping[str, str] | None = None, **overrides) -> Settings
         max_calls=int(env.get("CAMOREASONING_MAX_CALLS") or Settings.max_calls),
         llm_timeout=float(env.get("CAMOREASONING_LLM_TIMEOUT") or Settings.llm_timeout),
         llm_cache=env.get("CAMOREASONING_LLM_CACHE") == "1",
+        taxonomy_dir=_path(env.get("CAMOREASONING_TAXONOMY_DIR")),
+        offline_max_calls=int(env.get("CAMOREASONING_OFFLINE_MAX_CALLS") or Settings.offline_max_calls),
         strategies=strategies,
     )
     if overrides:

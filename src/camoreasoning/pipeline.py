@@ -11,7 +11,7 @@ from pathlib import Path
 from camoreasoning import registry
 from camoreasoning.answers import load_questions, write_answers
 from camoreasoning.components import Context
-from camoreasoning.config import OUTPUTS_DIR, RUNTIME_STAGES, Settings, load_settings
+from camoreasoning.config import OUTPUTS_DIR, RUNTIME_STAGES, TAXONOMY_DIR, Settings, load_settings
 from camoreasoning.contracts import Answer, Features, Frame, ParsedQuestion, Question, Side, Trace
 from camoreasoning.graph import Graph, load_graph
 from camoreasoning.llm import LLM
@@ -31,7 +31,7 @@ def make_context(
     meter = meter or Meter(max_calls=settings.max_calls)
     return Context(
         graph=graph or load_graph(),
-        taxonomy=taxonomy if taxonomy is not None else load_taxonomy(),
+        taxonomy=taxonomy if taxonomy is not None else load_taxonomy(settings.taxonomy_dir or TAXONOMY_DIR),
         llm=LLM(settings, meter),
         settings=settings,
         out_dir=Path(out_dir),

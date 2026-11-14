@@ -23,6 +23,39 @@ Every item lists the buckets it moves.
 - **Streams:** A = taxonomy and linking, B = reasoning engine, C = eval and calibration, D = energy, product and release.
 - **`stage`:** the component in `components.py` that the item lives in. Work is a new strategy for that stage.
 
+## Decisions (locked Fri Nov 13; Justin overrides only at the Sat 22:00 audit)
+
+- **D1 Associational edges count.** `associated_with` and `correlated_with` are 45% of edges. They vote, signed through the qualifiers, and are tagged associational. The grader may cap their certainty. Answer text says "is associated with" when every included edge is associational, never "causes".
+- **D2 Direction rubric.** One vote per study. A direction (increase, decrease or no_effect) wins if at least 2/3 of studies give it, otherwise `mixed`. Nulls and `unchanged` outcomes are `no_effect` votes. `unclear` means no study gives a usable sign. The baseline aggregator uses 2/3.
+- **D3 no_evidence.** It applies when no included vote exists: only reversed edges, only non-directional predicates (moderates, mediates, precedes, regulates), or an `unchanged` cause. `searched_for` names the classes searched and any reversed edges.
+- **D4 Gold certainty.** The median `certainty_grade` of the relevant edges, one level lower if `mixed` or if every edge is associational. Never `high`, because the graph has none.
+- **D5 Gold is independent.** Dev questions are written by a model from graph seeds (edges and random node pairs), not from our taxonomy. Gold finds candidate edges with its own lexical prefilter and reads the sentences. It never uses `node_labels`, the taxonomy or engine code. Any strong model works. Expect a Claude Code session with the `labeler` agent.
+- **D6 Runtime energy.** 0 LLM calls for template questions, and at most one batched call for the rest. Offline LLM use is unlimited.
+
+## Owners and Saturday deliverables (done by Sat 18:00)
+
+| Owner | Stream (items) | Starts from (all committed now) | Delivers | Self-check (targets) |
+|---|---|---|---|---|
+| Justin | A: taxonomy, node labels (1, 3, 4) | graph, `mise run profile`, `annotate` task `node_labels` | `taxonomy/classes.yaml` + `node_labels.jsonl` v1 | `annotate review-*` agreement ≥ 0.90 on 100 labels; ≥ 80% of edges with both ends labelled (`taxonomy` prints it); scorecard **A** `retrieval_recall` ≥ 0.8 once gold lands |
+| #2 | B: linker fallback, interpreter, aggregator, no_evidence, grader, citer, calibrator `fit`, ask (5–8, 11–14, 18) | fixture taxonomy (`CAMOREASONING_TAXONOMY_DIR=tests/fixtures/taxonomy`), contract tests, `eval:fixture` | strategies under `strategies/<stage>/`, `calibrate` working | scorecard **B**: oracle direction ≥ 0.85, certainty ≥ 0.75, edge precision ≥ 0.9, recall ≥ 0.7, `interpreter_effect_accuracy` ≥ 0.9; **D** `calls_per_question` ≤ 0.04; ask under 10 s |
+| #4 | C: dev questions, gold, audit (9, 10, 20), renderer wording (15), README (21) | `annotate` tasks `questions` → `gold`, `.claude/agents/labeler.md` | `experiments/devsets/gold_annotated.yaml`: ≥ 120 items, about 1/3 empty, trap-tagged, about 20% holdout | `annotate check` clean; review agreement ≥ 0.85 on 40 items; every trap tag ≥ 3 items (`by_tag`) |
+| #3 | D: evidence pages, gap map, accessibility (16, 17, 19), node-label audit for A | `mise run run:fixture` (real answered traces) | `extras` strategy and `product/` | contract `test_extras` green; WCAG checklist in item 19 ticked; label audit CSV returned to Justin |
+
+**Flat dependencies.** No stream waits on another to start or to finish its code. Two data drops land around Sat 12:00: taxonomy v1 from A and gold v1 from C. When they land, owners re-run `mise run eval` and tune. At Sat 22:00 Justin flips `strategies/__init__.py` defaults on eval evidence, runs `mise run calibrate`, checks holdout, then runs `mise run judge-sim`.
+
+**How to work.**
+- Branch `<name>/<stream>`. Touch only your own stage folders and artifacts. `strategies/__init__.py` defaults are Justin's.
+- Gate: `mise run check`. Self-evaluate with `mise run eval` (gold) or `mise run eval:fixture` (smoke). The output is a per-stream scorecard.
+- Bulk labelling, for any task (`cr` = `python -m camoreasoning`, inside the mise venv):
+  1. `cr annotate export <task> [-n N --chunk 40]`
+  2. Edit `experiments/annotate/<task>/PROMPT.md`. It is yours.
+  3. In Claude Code: "Use the labeler agent on task `<task>`, chunks 0001–00NN, 4 in parallel." Or use the endpoint: `cr annotate run <task> --workers 4`.
+  4. `cr annotate check <task>` until clean, then `cr annotate merge <task>`.
+  5. For human audit: `cr annotate review-export <task> -n 40 [--stratify direction]`. Fill `ok` and `human_*` in a spreadsheet, then run `cr annotate review-import <task>` and `merge` again. Human rows win.
+- Pipelines:
+  - **Gold:** `cr annotate … questions` → `cr -s devset_builder=annotated devset --build-only` → `cr annotate … gold` → `cr -s gold_labeler=annotated devset --gold-only`.
+  - **Labels:** `cr annotate … node_labels` → `cr -s node_labeler=annotated taxonomy --labels-only`.
+
 ## Phase 0 — Foundation (done)
 
 - [x] **0. Frozen contracts, tooling and baselines.** ★ 5/5 · all
@@ -36,9 +69,9 @@ Every item lists the buckets it moves.
   - **Why:** the taxonomy, sign rules and traps must fit this graph, not CAMO in general. Every edge is graded moderate, low or very_low, never high. There are no assessment edges. 5,067 of 6,814 nodes appear in only one edge. 661 of 1,906 signed edges flip sign under naive reading. There are 1,093 null findings and 203 `unchanged` nodes.
   - **Done when:** `mise run profile` output is reviewed. Cause and outcome vocabulary is dumped. A trap inventory with counts goes in `experiments/`, including twin edges from one sentence and `associated_with` with qualifiers.
   - **Points:** feeds D17 and C14.
-- [ ] **2. Profile the instrumentation.** ★ 4/5 · D · `llm.py` usage
+- [ ] **2. Profile the instrumentation.** ★ 4/5 · D · `llm.py` usage · tooling ready: `mise run probe`
   - **Why:** E12 is estimated from tokens on the endpoint. We need to know whether thinking-off really works, whether usage is reported, and how latency behaves.
-  - **Done when:** a smoke call through `ctx.llm` records prompt and completion tokens in `footprint.json`. Completion tokens are small, so no hidden reasoning. The batch chunk size is chosen, and the baseline tokens per question are written down here.
+  - **Done when:** `mise run probe` with BRINE_* set writes `experiments/results/endpoint_probe.json`, and a smoke call through `ctx.llm` records prompt and completion tokens in `footprint.json`. Completion tokens are small, so no hidden reasoning. The batch chunk size is chosen, and the baseline tokens per question are written down here.
   - **Points:** E12, R8.
 
 ## Phase 2 — Core engine (Sat)
