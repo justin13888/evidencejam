@@ -28,7 +28,8 @@ def counts(verdict: Verdict) -> str:
     parts = [f"{c[1]} report an increase" if c[1] else "", f"{c[-1]} a decrease" if c[-1] else "",
              f"{c[0]} no effect" if c[0] else "", f"{c[None]} are internally mixed" if c[None] else ""]  # fmt: skip
     n_docs = len(verdict.doc_effects)
-    return f"Across {_plural(n_docs, 'study')}: " + ", ".join(p for p in parts if p) + "." if n_docs else ""
+    studies = f"{n_docs} {'study' if n_docs == 1 else 'studies'}"
+    return f"Across {studies}: " + ", ".join(p for p in parts if p) + "." if n_docs else ""
 
 
 @register("renderer", "baseline")

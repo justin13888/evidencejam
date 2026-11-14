@@ -1,0 +1,120 @@
+# Off-template questions a judge might type into ./ask.sh (ROADMAP item 18).
+# Concepts come from taxonomy/classes.yaml labels/synonyms and graph node names (causal_graph.json).
+#
+# cause / outcome: the spans the `freeform` parser must return (compared case-insensitively).
+# classes: the class ids a correct link would pick, judged by hand from the class descriptions
+#   (null where more than one class is defensible). Linking is the linker's job; these are recorded
+#   for experiments/ask/results.json and tests check only the parse.
+# unclear: vague questions; `ask` must refuse with a clarification message and exit 2.
+items:
+  - id: OT-01
+    question: Does mulching lead to more invasive plants?
+    cause: mulching
+    outcome: invasive plants
+    classes: {cause: mulch_surface_cover, outcome: invasive_abundance}
+  - id: OT-02
+    question: Is native plant cover affected by grazing?
+    cause: grazing
+    outcome: native plant cover
+    classes: {cause: grazing_browsing, outcome: native_abundance}
+  - id: OT-03
+    question: What happens to the water table after rewetting?
+    cause: rewetting
+    outcome: water table
+    classes: {cause: peatland_rewetting, outcome: water_table_level}
+  - id: OT-04
+    question: What is the impact of herbicide application on native species?
+    cause: herbicide application
+    outcome: native species
+    classes: {cause: herbicide_application, outcome: native_abundance}
+  - id: OT-05
+    question: Does scarification help seedling survival?
+    cause: scarification
+    outcome: seedling survival
+    classes: {cause: site_preparation, outcome: tree_seedling_survival}
+  - id: OT-06
+    question: In restored peatlands, does moss layer transfer increase methane emissions?
+    cause: moss layer transfer
+    outcome: methane emissions
+    classes: {cause: moss_layer_transfer, outcome: methane_emissions}
+  - id: OT-07
+    question: Are salmon affected by stocking?
+    cause: stocking
+    outcome: salmon
+    classes: {cause: species_reintroduction, outcome: fish_abundance}
+  - id: OT-08
+    question: What's the relationship between peatland rewetting and methane emissions?
+    cause: peatland rewetting
+    outcome: methane emissions
+    classes: {cause: peatland_rewetting, outcome: methane_emissions}
+  - id: OT-09
+    question: How does clearcut harvesting affect bird abundance in boreal forests?
+    cause: clearcut harvesting
+    outcome: bird abundance
+    classes: {cause: clearcut_harvest, outcome: bird_abundance}
+  - id: OT-10
+    question: Does fertilization harm tree growth?
+    cause: fertilization
+    outcome: tree growth
+    classes: {cause: fertilization, outcome: tree_growth}
+  - id: OT-11
+    question: Influence of prescribed fire on species richness
+    cause: prescribed fire
+    outcome: species richness
+    classes: {cause: prescribed_burning, outcome: plant_richness}
+  - id: OT-12
+    question: What happens to soil moisture when we add mulch?
+    cause: mulch
+    outcome: soil moisture
+    classes: {cause: mulch_surface_cover, outcome: soil_moisture_water}
+  - id: OT-13
+    question: Does seeding result in higher plant cover?
+    cause: seeding
+    outcome: plant cover
+    classes: {cause: seeding_sowing, outcome: plant_cover_total}
+  - id: OT-14
+    question: How do amphibians respond to wetland creation?
+    cause: wetland creation
+    outcome: amphibians
+    classes: {cause: wetland_creation, outcome: amphibian_reptile}
+  - id: OT-15
+    question: Can you tell me whether biochar improves soil carbon?
+    cause: biochar
+    outcome: soil carbon
+    classes: {cause: organic_soil_amendment, outcome: soil_organic_carbon}
+  - id: OT-16
+    question: Is germination influenced by canopy closure?
+    cause: canopy closure
+    outcome: germination
+    classes: {cause: canopy_light, outcome: seed_germination_emergence}
+  - id: OT-17
+    question: Does wildfire increase or decrease soil erosion over time?
+    cause: wildfire
+    outcome: soil erosion
+    classes: {cause: wildfire, outcome: soil_erosion}
+  - id: OT-18
+    question: Is there evidence that fencing reduces deer browsing damage?
+    cause: fencing
+    outcome: deer browsing damage
+    classes: {cause: tree_protection, outcome: predation_herbivory_damage}
+  - id: OT-19
+    question: “Does” nitrogen   addition change foliar nitrogen in the field?
+    cause: nitrogen addition
+    outcome: foliar nitrogen
+    classes: {cause: fertilization, outcome: foliar_nutrients}
+  - id: OT-20
+    question: dredging and water quality
+    cause: dredging
+    outcome: water quality
+    classes: {cause: sediment_removal, outcome: water_chemistry}
+unclear:
+  - id: UC-01
+    question: What about birds?
+  - id: UC-02
+    question: Is restoration good?
+  - id: UC-03
+    question: Does it work?
+  - id: UC-04
+    question: What controls natural conifer regeneration?
+  - id: UC-05  # parses, but the cause names nothing in the taxonomy or graph
+    question: Does yodelling increase bird abundance?

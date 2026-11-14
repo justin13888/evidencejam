@@ -204,7 +204,7 @@ flowchart LR
     - moderators and mediators
     - near-miss classes
   - **Points:** D17 (explicitly "not fooled by trap questions").
-  - **Progress (Sat Nov 14):** `tests/strategies/test_traps.py` runs the full engine on real edges per trap. The map is in `experiments/traps/README.md`. The D1 wording test is xfail until #15. **Pending:** ≥3 `trap:<key>` dev items per tag from #9 for per-tag accuracy.
+  - **Progress (Sat Nov 14):** `tests/strategies/test_traps.py` runs the full engine on real edges per trap. The map is in `experiments/traps/README.md`. The D1 wording test passes with `renderer/faithful` (#15). **Pending:** ≥3 `trap:<key>` dev items per tag from #9 for per-tag accuracy.
 - [ ] **8. Decide no_evidence and write searched_for.** ★ 5/5 · B · `aggregator`, `renderer`
   - **Why:** about 1/3 of hidden questions have no evidence, and a confident wrong "answered" costs both D17 and C14.
   - **Done when:** `no_evidence` precision and recall are both at least 0.9 on dev, and `searched_for` names the classes, attributes and relation searched, plus any reverse edges found.
@@ -243,6 +243,7 @@ flowchart LR
     - No confidence goes above 0.95.
     - The parameters are committed under `experiments/`, and a reliability table is in the extras.
   - **Points:** C14.
+  - **Progress (Sat Nov 14):** `calibrator/binned` is built, not default. Each cell (status × certainty, or × `link_via` for no_evidence, × n_docs bucket 0/1/2–3/4+) uses its dev accuracy, shrunk toward its status, then toward global, with prior strength M = 4. Answered rows also get an isotonic (PAV) correction over `agreement`, fitted on what the cells miss and only with ≥ 20 answered rows. Output is clipped to [0.05, 0.95]. `fit()` writes the cell table, PAV blocks and an in-sample reliability table (10 bins, ECE, Brier). Missing or corrupt params fall back to the baseline constants with one stderr warning. `experiments/calibration/write_reliability.py` renders `reliability.md` from `binned.json`. The tests use synthetic cells: estimates land within ±0.05 of truth, held-out ECE is 0.015, and two fits give byte-identical output. An end-to-end `calibrate` on the fixture shows holdout ids never reach `fit`. **Pending:** `mise run calibrate` with `CAMOREASONING_STRATEGY_CALIBRATOR=binned` once gold lands; holdout ECE ≤ 0.05; then default flip at the audit.
 - [ ] **13. Select cited edges.** ★ 4/5 · B · `citer`
   - **Why:** scripts check that the cited edges "are the edges that bear on the question", and judges open them.
   - **Done when:** precision comes first. On dev, edge precision is at least 0.9 and recall at least 0.7.
@@ -263,6 +264,7 @@ flowchart LR
   - **Why:** judges check faithfulness. Use one hedge source (the certainty), name null studies, count studies, and never claim causation from association. Follow the organizer's [rendering guide](https://github.com/timalamenciak/causalmosaic/blob/main/docs/camo-rendering-targets.md). It is referenced, not vendored. Where it conflicts with `schema/`, the schema wins.
   - **Done when:** 20 sampled answers are reviewed against their cited edges with zero overclaims.
   - **Points:** J40.
+  - **Progress (Sat Nov 14):** `renderer/faithful` is now the default. It writes one verdict sentence whose only hedge is the certainty (schema modifier or very-low template, also stated in words), then the per-study vote breakdown cited as "Surname Year", up to 3 names and then "+N more". Under D1, all-associational evidence reads "is associated with" and never uses a causal verb. A null reads "no detectable effect" and takes the modifier. "Studies disagree" is used only when studies differ in sign. An overclaim sweep over every class pair under two engines is a test. `experiments/renderer/review_20.md` (seeded, stratified) went through 3 rounds with fresh reviewers. Renderer wording overclaims ended at 0, after fixing the hedge on nulls and the "conflicting results" wording. **Pending:** 12/20 answers still overclaim end to end, all from retrieval or edge signs (#4/#5/#6/#10). 3 of them are pinned as strict xfails.
 - [ ] **16. Build evidence pages.** ★ 3/5 · D · `extras`
   - **Why:** judges open what `extras` lists.
   - **Done when:** each page shows the answer card (direction, certainty and confidence kept separate), a vote table per study with quotes, DOIs and comparators, the sign trace, and excluded and reversed edges.
@@ -273,10 +275,11 @@ flowchart LR
   - **Done when:** the cause × outcome grid shows study counts, empty cells are labelled "gap", and each cell links to example questions.
   - **Points:** J40, and shows C14 behaviour.
   - **Done (Sat Nov 14):** the `gapmap` extras strategy is not the default yet. `gapmap.html` is a 41 × 43 grid: 692 cells have evidence and 61% are gaps. It also lists the densest cells and the causes with no evidence. Every cell links to `gapcells.html`, which gives a template example question and the run's questions with their status. On the dev questions, no gap-cell question came back answered. Accessibility: link contrast is at least 4.6:1 on every shade, there are screen-reader labels per cell, and the page reflows at 320 px.
-- [ ] **18. Handle judges' own questions with the ask CLI.** ★ 4/5 · A · `parser`, `linker`
+- [x] **18. Handle judges' own questions with the ask CLI.** ★ 4/5 · A · `parser`, `linker`
   - **Why:** each judge asks one real question of their own.
   - **Done when:** free-form wording links through the LLM fallback, it never crashes, it answers in under 10 s, and it is tested on 20 off-template questions.
   - **Points:** J40.
+  - **Progress (Sat Nov 14):** `parser/freeform` is the default: template questions parse exactly as in baseline (178/178 dev, `run.sh` snapshots identical, 0 calls), and 16 more shapes cover the 20 questions in `experiments/ask/offtemplate.yaml`. `ask` prints a card (`--json` keeps the old entry), refuses with exit 2 and nearest classes when a side links to nothing, and lets stage bugs raise; the batch run keeps its fallback. `ask.sh` selects `linker/assisted` with a 3 s timeout (worst case with `llm.py`'s one retry: 3 + 2 + 3 = 8 s; a hung endpoint is tested under 10 s). Live (`experiments/ask/results.json`): 23/25 answer or refuse in about 0.5 s with 0 calls; the 2 that need the LLM take 1–19 s, because the endpoint is either about 1 s or past the timeout, and `llm.py` retries once (2 × 8 + 2 s). At 8 s the 2 LLM questions took 1–19 s (2 × 8 + 2 s); at 3 s all runs measured ≤ 8.7 s. **Pending:** `llm.py` raises `ValueError`, not `LLMError`, for a scheme-less `BRINE_URL`.
 - [ ] **19. Audit accessibility.** ★ 3/5 · D · `product/`, `extras`
   - **Why:** W3C criteria are judged.
   - **Done when:** WCAG 2.2 AA is checked by hand and with a checker, covering contrast, headings, table headers, `lang`, keyboard use, no colour-only meaning, and reflow at 320 px.

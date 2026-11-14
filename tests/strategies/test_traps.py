@@ -1,7 +1,7 @@
 """Item 7: the trap suite. One end-to-end engine run per trap on real graph edges.
 
 Chain: retriever `baseline` -> interpreter `sentence` -> aggregator `studies` -> grader `rubric` ->
-citer `precise` -> renderer `searched`. The linker is bypassed: each question is a Frame naming the
+citer `precise` -> renderer `faithful`. The linker is bypassed: each question is a Frame naming the
 graph nodes directly, with the polarity a node label would give (the node's qualifier sign). Expected
 answers come from the quoted `original_sentence`. Trap keys match experiments/results/trap_inventory.json
 and the `trap:<key>` tags dev items should carry (experiments/traps/README.md).
@@ -9,6 +9,7 @@ and the `trap:<key>` tags dev items should carry (experiments/traps/README.md).
 
 from __future__ import annotations
 
+import re
 from collections import defaultdict
 from dataclasses import dataclass
 
@@ -20,7 +21,7 @@ from camoreasoning.signs import qualifier_sign
 from camoreasoning.taxonomy import load_taxonomy
 
 ENGINE = {"retriever": "baseline", "interpreter": "sentence", "aggregator": "studies", "grader": "rubric",
-          "citer": "precise", "renderer": "searched"}  # fmt: skip
+          "citer": "precise", "renderer": "faithful"}  # fmt: skip
 
 
 @dataclass
@@ -74,7 +75,8 @@ def test_null_is_not_decrease(graph, ctx):
     """'k was lower, but not significantly different than at fen sites': no_effect, not decrease."""
     r = ask(graph, ctx, *ends(graph, "camo:edge_20171069c1db"))
     assert (r.verdict.status, r.verdict.direction) == ("answered", "no_effect")
-    assert r.edge_ids == ["camo:edge_20171069c1db"] and "no detectable effect" in r.text
+    assert r.edge_ids == ["camo:edge_20171069c1db"] and "no detectable" in r.text  # "effect" or, D1, "association"
+    assert not re.search(r"\b(decreases?|lower|negative)\b", r.text)
 
 
 def test_associational_is_not_causal(graph, ctx):
@@ -87,10 +89,12 @@ def test_associational_is_not_causal(graph, ctx):
     assert r.certainty == grades[max(0, grades.index(edge_grade) - 1)]  # D4: one level lower
 
 
-@pytest.mark.xfail(reason="D1 wording ('is associated with') belongs to the renderer, item 15", strict=False)
 def test_associational_answer_text_never_says_causes(graph, ctx):
+    """D1: every included vote is associational, so the text says "associated with", never a causal verb."""
     r = ask(graph, ctx, *ends(graph, "camo:edge_9ab77deefcdf"))
     assert "associated with" in r.text
+    body = r.text.replace("cause", "X").replace("outcome", "Y")  # the frame's span texts are literally these
+    assert not re.search(r"\b(causes?|increases?|decreases?|leads? to|reduces?|raises?|improves?|effects?)\b", body)
 
 
 def test_negative_subject_qualifier(graph, ctx):
