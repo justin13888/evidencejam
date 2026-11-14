@@ -10,7 +10,7 @@ DEFAULTS: dict[str, str] = {
     "grader": "baseline",
     "calibrator": "baseline",
     "citer": "baseline",
-    "renderer": "baseline",
+    "renderer": "faithful",
     "extras": "baseline",
     "taxonomy_builder": "baseline",
     "node_labeler": "baseline",
