@@ -204,7 +204,7 @@ flowchart LR
     - moderators and mediators
     - near-miss classes
   - **Points:** D17 (explicitly "not fooled by trap questions").
-  - **Progress (Sat Nov 14):** `tests/strategies/test_traps.py` runs the full engine on real edges per trap. The map is in `experiments/traps/README.md`. The D1 wording test is xfail until #15. **Pending:** ≥3 `trap:<key>` dev items per tag from #9 for per-tag accuracy.
+  - **Progress (Sat Nov 14):** `tests/strategies/test_traps.py` runs the full engine on real edges per trap. The map is in `experiments/traps/README.md`. The D1 wording test passes with `renderer/faithful` (#15). **Pending:** ≥3 `trap:<key>` dev items per tag from #9 for per-tag accuracy.
 - [ ] **8. Decide no_evidence and write searched_for.** ★ 5/5 · B · `aggregator`, `renderer`
   - **Why:** about 1/3 of hidden questions have no evidence, and a confident wrong "answered" costs both D17 and C14.
   - **Done when:** `no_evidence` precision and recall are both at least 0.9 on dev, and `searched_for` names the classes, attributes and relation searched, plus any reverse edges found.
@@ -257,6 +257,7 @@ flowchart LR
   - **Why:** judges check faithfulness. Use one hedge source (the certainty), name null studies, count studies, and never claim causation from association. Follow the organizer's [rendering guide](https://github.com/timalamenciak/causalmosaic/blob/main/docs/camo-rendering-targets.md). It is referenced, not vendored. Where it conflicts with `schema/`, the schema wins.
   - **Done when:** 20 sampled answers are reviewed against their cited edges with zero overclaims.
   - **Points:** J40.
+  - **Progress (Sat Nov 14):** `renderer/faithful` is now the default. It writes one verdict sentence whose only hedge is the certainty (schema modifier or very-low template, also stated in words), then the per-study vote breakdown cited as "Surname Year", up to 3 names and then "+N more". Under D1, all-associational evidence reads "is associated with" and never uses a causal verb. A null reads "no detectable effect" and takes the modifier. "Studies disagree" is used only when studies differ in sign. An overclaim sweep over every class pair under two engines is a test. `experiments/renderer/review_20.md` (seeded, stratified) went through 3 rounds with fresh reviewers. Renderer wording overclaims ended at 0, after fixing the hedge on nulls and the "conflicting results" wording. **Pending:** 12/20 answers still overclaim end to end, all from retrieval or edge signs (#4/#5/#6/#10). 3 of them are pinned as strict xfails.
 - [ ] **16. Build evidence pages.** ★ 3/5 · D · `extras`
   - **Why:** judges open what `extras` lists.
   - **Done when:** each page shows the answer card (direction, certainty and confidence kept separate), a vote table per study with quotes, DOIs and comparators, the sign trace, and excluded and reversed edges.
