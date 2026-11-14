@@ -5,7 +5,7 @@
     CAMOREASONING_STRATEGY_CALIBRATOR=binned mise run calibrate
     python experiments/calibration/write_reliability.py [binned.json] [reliability.md]
 
-The table is in-sample (dev rows the calibrator was fitted on); holdout ECE comes from `mise run eval`.
+The table is in-sample (dev rows the calibrator was fitted on); holdout ECE comes from `mise run eval:holdout`.
 """
 
 from __future__ import annotations

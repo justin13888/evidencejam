@@ -28,7 +28,7 @@ To ask a single question:
 ```sh
 mise run setup   # deps + git hooks
 mise run check   # lint, tests, run, validate: the gate for every change
-mise run eval    # accuracy, calibration and LLM calls per question on experiments/devsets
+mise run eval    # accuracy, calibration and LLM calls per question on the dev split of experiments/devsets
 ```
 
 Without mise: `pip install -e . -r requirements-dev.txt && pytest`.
