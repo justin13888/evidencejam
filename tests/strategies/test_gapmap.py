@@ -194,3 +194,23 @@ def test_empty_taxonomy_falls_back(make_ctx):
     paths = get("extras", "gapmap").write_run([], [], ctx)
     assert [p.rsplit("/", 1)[-1] for p in paths] == ["index.html", "gapmap.html"]
     assert "Available once taxonomy/classes.yaml is built" in (ctx.out_dir / "gapmap.html").read_text(encoding="utf-8")
+
+
+def test_ask_leaves_a_batch_runs_pages_alone(tmp_path):
+    """`ask` (ask.sh) writes under outputs/ask/, so the judged run's index, gap map and pages survive it."""
+    import inspect
+
+    from camoreasoning.config import OUTPUTS_DIR, Settings
+    from camoreasoning.pipeline import ASK_DIR, ask, ask_frame, run_file
+
+    assert ASK_DIR == OUTPUTS_DIR / "ask"
+    assert inspect.signature(ask_frame).parameters["out_dir"].default == ASK_DIR  # the CLI path uses this default
+    assert inspect.signature(ask).parameters["out_dir"].default == ASK_DIR
+    out = tmp_path / "outputs"
+    run_file(ROOT / "questions.yaml", out / "answers.json", Settings())
+    before = {p: p.read_bytes() for p in out.rglob("*") if p.is_file()}
+    assert {"index.html", "gapmap.html", "gapcells.html"} <= {p.name for p in before}
+    ask("What effect does mulch have on invasive species abundance?", Settings(), out_dir=out / "ask")
+    after = {p: p.read_bytes() for p in out.rglob("*") if p.is_file() and (out / "ask") not in p.parents}
+    assert after == before
+    assert {"ASK.html", "index.html", "gapmap.html", "gapcells.html"} <= {p.name for p in (out / "ask").iterdir()}

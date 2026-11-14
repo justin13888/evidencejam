@@ -8,7 +8,7 @@ Evidence Jam 2026, Lane 2. It answers "what does this intervention do to this ou
 ./run.sh questions.yaml answers.json
 ```
 
-Needs `python3` >= 3.10. The first run creates `.venv` from the pinned `requirements.txt`, using uv if it's installed. The LLM is read from `BRINE_URL`, `BRINE_MODEL` and `BRINE_API_KEY`, or from `.env` (see `.env.example`). Besides `answers.json`, it writes one evidence page per question, an index, a gap map and `footprint.json` to `outputs/`.
+Needs `python3` >= 3.10. The first run creates `.venv` from the pinned `requirements.txt`, using uv if it's installed. The LLM is read from `BRINE_URL`, `BRINE_MODEL` and `BRINE_API_KEY`, or from `.env` (see `.env.example`). Besides `answers.json`, it writes one evidence page per question, an index, a gap map and `footprint.json` to `outputs/`. `ask.sh` writes its own page, index and gap map to `outputs/ask/`, so it never overwrites a run's pages.
 
 To ask a single question:
 
