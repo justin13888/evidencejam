@@ -1,0 +1,605 @@
+{
+  "pairs_with_edges": 704,
+  "changed": 48,
+  "transitions": {
+    "unclear -> mixed": 37,
+    "increase -> mixed": 5,
+    "increase -> decrease": 4,
+    "mixed -> decrease": 2
+  },
+  "distribution": {
+    "baseline": {
+      "increase": 280,
+      "mixed": 198,
+      "decrease": 101,
+      "no_effect": 74,
+      "unclear": 37,
+      "no_evidence": 14
+    },
+    "sentence+studies": {
+      "increase": 271,
+      "mixed": 238,
+      "decrease": 107,
+      "no_effect": 74,
+      "no_evidence": 14
+    }
+  },
+  "changes": [
+    {
+      "pair": "mulch_surface_cover->foliar_nutrients",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "seeding_sowing->reproduction_flowering",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "mixed"
+      ],
+      "sentence+studies": [
+        "answered",
+        "decrease"
+      ]
+    },
+    {
+      "pair": "seeding_sowing->soil_erosion",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "tree_planting->mammal_abundance",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "organic_soil_amendment->plant_physiology",
+      "n_forward": 1,
+      "baseline": [
+        "answered",
+        "increase"
+      ],
+      "sentence+studies": [
+        "answered",
+        "decrease"
+      ]
+    },
+    {
+      "pair": "herbicide_application->water_chemistry",
+      "n_forward": 5,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "prescribed_burning->soil_microbial",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "grazing_browsing->plant_cover_total",
+      "n_forward": 3,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "grazing_browsing->soil_organic_carbon",
+      "n_forward": 5,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "partial_harvest->water_table_level",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "partial_harvest->water_chemistry",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "harvest_general->population_size_trend",
+      "n_forward": 4,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "harvest_general->functional_recovery",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "woody_debris_retention->invasive_abundance",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "woody_debris_retention->community_composition",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "woody_debris_retention->reproduction_flowering",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "woody_debris_retention->mammal_abundance",
+      "n_forward": 4,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "site_preparation->native_abundance",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "site_preparation->moss_bryophyte",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "site_preparation->reproductive_success",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "tree_protection->plant_richness",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "tree_protection->predation_herbivory_damage",
+      "n_forward": 1,
+      "baseline": [
+        "answered",
+        "increase"
+      ],
+      "sentence+studies": [
+        "answered",
+        "decrease"
+      ]
+    },
+    {
+      "pair": "tree_protection->population_size_trend",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "peatland_rewetting->native_abundance",
+      "n_forward": 3,
+      "baseline": [
+        "answered",
+        "increase"
+      ],
+      "sentence+studies": [
+        "answered",
+        "decrease"
+      ]
+    },
+    {
+      "pair": "peatland_rewetting->plant_cover_total",
+      "n_forward": 9,
+      "baseline": [
+        "answered",
+        "mixed"
+      ],
+      "sentence+studies": [
+        "answered",
+        "decrease"
+      ]
+    },
+    {
+      "pair": "peatland_rewetting->tree_species_composition",
+      "n_forward": 1,
+      "baseline": [
+        "answered",
+        "increase"
+      ],
+      "sentence+studies": [
+        "answered",
+        "decrease"
+      ]
+    },
+    {
+      "pair": "peat_extraction->plant_cover_total",
+      "n_forward": 9,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "peat_extraction->tree_seedling_survival",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "engineered_structures->soil_erosion",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "increase"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "sediment_removal->soil_organic_carbon",
+      "n_forward": 3,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "sediment_removal->animal_condition",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "species_reintroduction->invasive_abundance",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "species_reintroduction->mammal_abundance",
+      "n_forward": 4,
+      "baseline": [
+        "answered",
+        "increase"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "restoration_general->soil_moisture_water",
+      "n_forward": 4,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "contaminant_exposure->reproductive_success",
+      "n_forward": 8,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "invasive_presence->biomass_productivity",
+      "n_forward": 3,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "canopy_light->natural_regeneration",
+      "n_forward": 3,
+      "baseline": [
+        "answered",
+        "increase"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "canopy_light->biomass_productivity",
+      "n_forward": 4,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "canopy_light->reproduction_flowering",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "increase"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "site_conditions->amphibian_reptile",
+      "n_forward": 4,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "site_conditions->functional_traits",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "time_since_disturbance->plant_physiology",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "time_since_disturbance->carbon_flux",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "water_table_level->natural_regeneration",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "water_table_level->soil_physical",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "water_table_level->carbon_flux",
+      "n_forward": 5,
+      "baseline": [
+        "answered",
+        "increase"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "soil_temperature->soil_physical",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    },
+    {
+      "pair": "soil_temperature->reproductive_success",
+      "n_forward": 2,
+      "baseline": [
+        "answered",
+        "unclear"
+      ],
+      "sentence+studies": [
+        "answered",
+        "mixed"
+      ]
+    }
+  ]
+}
