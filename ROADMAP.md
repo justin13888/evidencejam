@@ -23,6 +23,84 @@ Every item lists the buckets it moves.
 - **Streams:** A = taxonomy and linking, B = reasoning engine, C = eval and calibration, D = energy, product and release.
 - **`stage`:** the component in `components.py` that the item lives in. Work is a new strategy for that stage.
 
+### Dependency tree
+
+`A --> B` means B needs A's output first. Numbers are the items below. Item 0 is done and feeds everything, so it is omitted.
+
+```mermaid
+flowchart LR
+  1[1 Profile graph] --> 3[3 Taxonomy]
+  1 --> 7[7 Trap suite]
+  2[2 Profile LLM] --> 5
+  2 --> 14[14 Cut energy]
+  3 --> 4[4 Node labels]
+  3 --> 5[5 Linker]
+  3 --> 9[9 Gold dev set]
+  3 --> 17[17 Gap map]
+  4 --> 6[6 Direction]
+  4 --> 13[13 Citer]
+  4 --> 17
+  5 --> 6
+  5 --> 14
+  5 --> 18[18 Ask CLI]
+  6 --> 7
+  6 --> 8[8 no_evidence]
+  6 --> 11[11 Certainty]
+  9 --> 10[10 Gold labeller]
+  10 --> 6
+  10 --> 7
+  10 --> 8
+  10 --> 11
+  10 --> 12[12 Calibration]
+  6 --> 12
+  8 --> 12
+  11 --> 12
+  6 --> 15[15 Answer text]
+  8 --> 15
+  11 --> 15
+  13 --> 16[16 Evidence pages]
+  15 --> 16
+  12 --> 16
+  3 --> 17
+  16 --> 19[19 Accessibility]
+  17 --> 19
+  20[20 Limits page] --> 19
+  10 --> 20
+  12 --> 20
+  7 --> 20
+  12 --> 21[21 README]
+  14 --> 21
+  14 --> 22[22 Clean-checkout run]
+  15 --> 22
+  16 --> 22
+  18 --> 22
+  22 --> 23[23 Freeze and submit]
+  19 --> 23
+  21 --> 23
+  5 -.-> 24[24 Embeddings]
+  6 -.-> 26[26 Multi-hop]
+```
+
+**Critical path:** 1 → 3 → 4 → 5 → 6 → 8 → 12 → 16 → 22 → 23. Anything slipping on it moves the submission.
+
+**Layers (what can run in parallel):**
+
+| Layer | Items | Needs |
+|---|---|---|
+| L0 | 1, 2 | nothing |
+| L1 | 3 | 1 |
+| L2 | 4, 5, 9 | 3 (5 also uses 2) |
+| L3 | 10, 6, 17, 18 | 9 for 10; 4 and 5 for 6; 3 and 4 for 17; 5 for 18 |
+| L4 | 7, 8, 11, 13, 14 | 6 (13 needs 4; 14 needs 5 and 2) |
+| L5 | 12, 15 | 6, 8, 11 and 10 |
+| L6 | 16, 20, 21 | 12, 13, 15 for 16; 7, 10, 12 for 20; 12, 14 for 21 |
+| L7 | 19, 22 | pages built (16, 17, 20); 22 needs 14, 15, 16, 18 |
+| L8 | 23 | 19, 21, 22 |
+
+**Notes:**
+- 10 (the independent gold labeller) is also an input to tuning 6, 7, 8, 11 and 12. Items 4, 5 and 9 can start as soon as 3 lands, and 9 can run in parallel with 4.
+- 14 and 22 must re-run after any change that alters accuracy, so treat them as gates rather than one-off steps.
+
 ## Phase 0 — Foundation (done)
 
 - [x] **0. Frozen contracts, tooling and baselines.** ★ 5/5 · all
