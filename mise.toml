@@ -37,8 +37,12 @@ usage = 'arg "<question>"'
 run = './ask.sh "$usage_question"'
 
 [tasks.eval]
-description = "Score the pipeline on experiments/devsets (accuracy, calibration, calls/question)"
-run = "python -m camoreasoning eval"
+description = "Score the pipeline on the dev split of experiments/devsets (accuracy, calibration, calls/question)"
+run = "python -m camoreasoning eval --split dev"
+
+[tasks."eval:holdout"]
+description = "Score on the holdout split only. Run once at the audit and report; never tune on it"
+run = "python -m camoreasoning eval --split holdout"
 
 [tasks.profile]
 description = "Profile the CAMO graph -> experiments/results/graph_profile.json"

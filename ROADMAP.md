@@ -119,7 +119,7 @@ flowchart LR
 | #4 | C: dev questions, gold, audit (9, 10, 20), renderer wording (15), README (21) | `annotate` tasks `questions` → `gold`, `.claude/agents/labeler.md` | `experiments/devsets/gold_annotated.yaml`: ≥ 120 items, about 1/3 empty, trap-tagged, about 20% holdout | `annotate check` clean; review agreement ≥ 0.85 on 40 items; every trap tag ≥ 3 items (`by_tag`) |
 | #3 | D: evidence pages, gap map, accessibility (16, 17, 19), node-label audit for A | `mise run run:fixture` (real answered traces) | `extras` strategy and `product/` | contract `test_extras` green; WCAG checklist in item 19 ticked; label audit CSV returned to Justin |
 
-**Flat dependencies.** No stream waits on another to start or to finish its code. Two data drops land around Sat 12:00: taxonomy v1 from A and gold v1 from C. When they land, owners re-run `mise run eval` and tune. At Sat 22:00 Justin flips `strategies/__init__.py` defaults on eval evidence, runs `mise run calibrate`, checks holdout, then runs `mise run judge-sim`.
+**Flat dependencies.** No stream waits on another to start or to finish its code. Two data drops land around Sat 12:00: taxonomy v1 from A and gold v1 from C. When they land, owners re-run `mise run eval` and tune. At Sat 22:00 Justin flips `strategies/__init__.py` defaults on eval evidence, runs `mise run calibrate`, checks holdout (`mise run eval:holdout`), then runs `mise run judge-sim`.
 
 **How to work.**
 - Branch `<name>/<stream>`. Touch only your own stage folders and artifacts. `strategies/__init__.py` defaults are Justin's.
@@ -189,7 +189,7 @@ flowchart LR
 - [ ] **6. Aggregate direction.** ★ 5/5 · B · `interpreter`, `aggregator`
   - **Why:** direction is the biggest share of D17. It needs schema sign composition, one vote per study, nulls counted as findings, and "mixed" when studies disagree.
   - **Done when:** at least 85% direction accuracy on dev answerable items, and the thresholds are tuned on dev only.
-    - Agents iterate with `camoreasoning eval --split dev`. Plain `mise run eval` also scores holdout, so it is run once at the end and reported, never looped on.
+    - Agents iterate with `mise run eval` (dev split only). `mise run eval:holdout` scores the holdout; it is run once at the end and reported, never looped on.
   - **Points:** D17.
   - **Progress (Sat Nov 14, #32):** `interpreter/sentence` + `aggregator/studies` merged, not default. All 39 `prevents`/`disrupts` edges are pinned to their sentences: the flip matches 29/30 sign-settled, the schema product 1. The 130 nulls with an `unchanged` subject stay nulls. A tied single study gives `mixed`. Across 704 class pairs, 48 verdicts change vs baseline (`experiments/results/direction_compare.json`). **Pending:** the ≥85% dev check and the default flip once gold lands.
 - [ ] **7. Build the trap suite.** ★ 5/5 · B · `interpreter`, `aggregator`, `tests`
@@ -217,13 +217,20 @@ flowchart LR
     - About 20% are held out and never tuned on.
     - Built by agents via `camoreasoning annotate` (no human step). Paraphrases come from a different model or prompt than the linker's, and the holdout split is fixed by a seeded hash of item id before any tuning.
   - **Points:** enables D17, C14, P9 (everything measurable).
-- [ ] **10. Keep the gold labeller independent.** ★ 5/5 · C · `gold_labeler`
+- [x] **10. Keep the gold labeller independent.** ★ 5/5 · C · `gold_labeler`
   - **Why:** gold made by our own sign code makes the eval circular. The gold labeller is an LLM reading `original_sentence` text, audited by a second, stronger LLM (human audit dropped by choice; some correctness loss accepted).
   - **Done when:**
     - The import guard test passes.
     - At least 40 items, stratified by trap tag, are audited by a fresh LLM session through `annotate review-export` / `review-import` with `reviewer` = `llm:<model>`. The auditor writes its own label from the context column before reading the `model_*` columns, then sets `ok`. Agreement is at least 85%. Its corrections win at merge. Labeller and auditor read only `original_sentence` and the rubric, never `taxonomy/`, `*.meta.jsonl` or pipeline code.
     - Disagreements become trap tests.
   - **Points:** the D17 and C14 numbers become trustworthy.
+  - **Done (Sat Nov 14):** `experiments/devsets/gold_annotated.yaml` has 178 labelled items: 99 answered and 79 no_evidence. The record is in `experiments/gold/README.md`, and the procedure in `experiments/gold/AUDIT.md`. Running the chain in that README again rebuilds the labels byte for byte.
+    - **Round 1 (rejected):** `annotate run gold` labels agreed with a blind audit on only 19 of 40 items (0.475). Certainty differed in 19 of the 21 misses, and unsigned evidence was called no_evidence.
+    - **Round 2:** `PROMPT.md` now spells out D2–D4 where the locked text is silent: how a study votes, the median of an even number of grades, which edges don't vote, and that certainty is computed. `labeler` agents labelled all 178 items.
+    - **Audit:** a new blind audit of 40 items, covering all 8 trap tags, agreed on 37 (**0.925**). Its 3 corrections win at merge, and they became `tests/strategies/test_gold_disagreements.py`. One of them (a categorical outcome given a sign) is a strict xfail on the engine.
+    - **Decision (override of "stronger LLM"):** the auditor is not a stronger model than the labeller, because none was available. Accepted on purpose at the PR #37 review; agreement above was measured under that setup.
+    - **First eval of the default pipeline (`mise run eval`, dev, n = 142):** accuracy 0.47, ECE 0.128, 0 calls per question, no_evidence recall 0.97, retrieval recall 0.07. Oracle direction is 0.76 and oracle certainty 0.54. `mise run eval` now scores dev only; `mise run eval:holdout` scores the 36 holdout items.
+    - **For the rubric owner:** D3's "unchanged cause" rule, read literally, turns 3 exact-match questions into no_evidence.
 - [ ] **11. Grade certainty.** ★ 4/5 · B · `grader`
   - **Why:** certainty is part of D17. The graph has no `high` grades, so the grade has to be derived from edge grades, study count, agreement and design (randomized vs observational).
   - **Done when:** the rule is written in the strategy docstring and scores at least 75% certainty accuracy on dev.
@@ -263,10 +270,11 @@ flowchart LR
   - **Done when:** each page shows the answer card (direction, certainty and confidence kept separate), a vote table per study with quotes, DOIs and comparators, the sign trace, and excluded and reversed edges.
     - Built against the `Trace` contract using whatever the current default strategies produce, so it does not wait on 12, 13 or 15. Pages improve as those items land. A test renders pages for the practice questions and checks every listed section is present.
   - **Points:** J40.
-- [ ] **17. Build the gap map.** ★ 3/5 · D · `extras`
+- [x] **17. Build the gap map.** ★ 3/5 · D · `extras`
   - **Why:** it turns "no evidence" into a visible, useful product and shows where the graph is dense or empty.
   - **Done when:** the cause × outcome grid shows study counts, empty cells are labelled "gap", and each cell links to example questions.
   - **Points:** J40, and shows C14 behaviour.
+  - **Done (Sat Nov 14):** the `gapmap` extras strategy is the default (`strategies/__init__.py`). `gapmap.html` is a 41 × 43 grid: 692 of 1,763 cells have evidence, so 61% are gaps. It also lists the densest cells and the causes with no evidence. Every cell links to `gapcells.html`, which gives a template example question and the run's questions with their status. On the 178 devset questions, the default linker links 26 to at least one class pair; 9 of them are listed under gap cells (13 listings), and all 9 came back no_evidence. A question with several linked classes is listed under every pair, so this is an observation, not a guarantee; the page does not promise it. Accessibility: link contrast is at least 4.6:1 on every shade, in light and dark (computed), there are screen-reader labels per cell, and the page reflows at 320 px. Shading bands are fixed (1, 2, 3–5, 6+ studies) and stated on the page. `tests/strategies/test_gapmap.py` recomputes counts from the graph and checks shading, escaping, the summary, `both`-kind classes, every link, per-pair listings and single-pair gap questions on the fixture. `ask` writes to `outputs/ask/` (`pipeline.ASK_DIR`): before, each `ask` replaced a judged run's `index.html` and `gapcells.html` with a one-question version, and a test now checks that every batch-run file stays byte-identical across an `ask`.
 - [x] **18. Handle judges' own questions with the ask CLI.** ★ 4/5 · A · `parser`, `linker`
   - **Why:** each judge asks one real question of their own.
   - **Done when:** free-form wording links through the LLM fallback, it never crashes, it answers in under 10 s, and it is tested on 20 off-template questions.

@@ -1,0 +1,20 @@
+{"id": "D-Q0157", "ok": "y", "comment": "Both no_evidence: no texture cause or velocity outcome."}
+{"id": "D-Q0123", "ok": "y", "comment": "Both no_evidence."}
+{"id": "D-Q0148", "ok": "y", "comment": "Both no_evidence: edges target plant richness, not weedy abundance."}
+{"id": "D-Q0151", "ok": "y", "comment": "Both no_evidence: no bird density outcome."}
+{"id": "D-Q0089", "ok": "n", "comment": "Model no_evidence; I took e1 (liming -> higher chl-a, increase/low). Sentence credits onset of lake fertilization, so a human should decide whether e1 counts."}
+{"id": "D-Q0033", "ok": "n", "comment": "Direction differs: model mixed by signing step direction (closer +1 / further -1); I sign only movement rate (e4, e11 +1) -> increase. Certainty matches."}
+{"id": "D-Q0037", "ok": "y", "comment": "Match: mixed/low, e1 +1, e2 -1."}
+{"id": "D-Q0074", "ok": "n", "comment": "Model increase, I have no_effect. Model counts presence-at-20-yr as +1 and includes understory (e2,e6,e7), cover (e57,e58) and richness (e8,e11) edges. Tree presence: e9 absent, e24 stocking unchanged -> 0."}
+{"id": "D-Q0069", "ok": "n", "comment": "Certainty differs: model low (adds e4 water table range), I have moderate (e2 mod, e3 low, e1 mod moderator). Direction no_effect matches, no opposite edges."}
+{"id": "D-Q0066", "ok": "n", "comment": "Model no_evidence; e1 (pH moderates pore-water DOC, overall decrease not significant) is relevant with null sign -> answered/unclear/very_low."}
+{"id": "D-Q0067", "ok": "n", "comment": "Model no_evidence; e1 (velocity weight mediates Lake Sturgeon HSI) is relevant with null sign -> answered/unclear/very_low."}
+{"id": "D-Q0063", "ok": "n", "comment": "Model decrease/low via e6 (indicator-species count, not richness) -1 and e10 +1; even its own two studies split 1:1, which is mixed. I exclude e6 -> increase/very_low (all associational)."}
+{"id": "D-Q0002", "ok": "n", "comment": "Same study gives e2 +1 (more litter) and e1 0 (similar in year 2); I call the split mixed/low, model chose increase/moderate."}
+{"id": "D-Q0107", "ok": "n", "comment": "Same edges (e1 0, e2 +1, one study), but model says no_effect/low; I call the split mixed/very_low."}
+{"id": "D-Q0103", "ok": "n", "comment": "Certainty differs: e1 alone is grade moderate, non-associational -> moderate; model says low. Direction no_effect matches."}
+{"id": "D-Q0073", "ok": "y", "comment": "Match: no_effect/moderate, e1 0."}
+{"id": "D-Q0012", "ok": "y", "comment": "Model no_evidence; on reflection model is right: e1 object attribute is TKE variation, not TKE, and the cause is the spatial end of the array, not a removal. My increase label was too generous."}
+{"id": "D-Q0014", "ok": "y", "comment": "Match: decrease/very_low, e1 -1."}
+{"id": "D-Q0087", "ok": "y", "comment": "Match: decrease/moderate, e2 -1."}
+{"id": "D-Q0016", "ok": "y", "comment": "Both no_evidence: OM-thickness edges are reversed."}

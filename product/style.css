@@ -9,3 +9,12 @@ th, td { border: 1px solid var(--line); padding: .4rem .5rem; text-align: left; 
 dl { display: grid; grid-template-columns: max-content 1fr; gap: .25rem 1rem; } dt { font-weight: 600; }
 .muted, footer { color: var(--muted); } blockquote { margin: 0; border-left: 3px solid var(--line); padding-left: .75rem; }
 .wrap { overflow-x: auto; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* Gap map: shading repeats the printed count (never colour alone); text keeps >= 4.5:1 on every band. */
+:root { --d1: #f3f7fe; --d2: #e6effc; --d3: #dae6fa; --d4: #ccdcf7; }
+@media (prefers-color-scheme: dark) { :root { --d1: #172131; --d2: #1c2a40; --d3: #22334e; --d4: #283d5d; } }
+.gapmap td, .gapmap th { padding: .2rem .3rem; font-size: .85rem; white-space: nowrap; }
+.gapmap td { position: relative; } /* keeps the .vh spans inside the scrolling .wrap */
+.gapmap thead th { vertical-align: bottom; } .gapmap thead th span { writing-mode: vertical-rl; transform: rotate(180deg); }
+.gapmap td.d0 a { color: var(--muted); } .d1 { background: var(--d1); } .d2 { background: var(--d2); }
+.d3 { background: var(--d3); } .d4 { background: var(--d4); font-weight: 600; }

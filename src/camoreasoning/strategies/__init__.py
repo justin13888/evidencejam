@@ -11,7 +11,7 @@ DEFAULTS: dict[str, str] = {
     "calibrator": "baseline",
     "citer": "baseline",
     "renderer": "faithful",
-    "extras": "baseline",
+    "extras": "gapmap",
     "taxonomy_builder": "baseline",
     "node_labeler": "baseline",
     "devset_builder": "baseline",

@@ -20,6 +20,10 @@ from camoreasoning.meter import Meter
 from camoreasoning.taxonomy import Taxonomy, load_taxonomy
 from camoreasoning.text import tokens
 
+# `ask` writes its pages here, never into a batch run's OUTPUTS_DIR: its write_run would otherwise replace the
+# run's index.html, gapmap.html and gapcells.html with a one-question version.
+ASK_DIR = OUTPUTS_DIR / "ask"
+
 
 def make_context(
     settings: Settings | None = None,
@@ -165,7 +169,7 @@ def run_file(questions_path: Path, answers_path: Path, settings: Settings | None
     return {"answers": len(answers), "path": str(answers_path), **summary}
 
 
-def ask_frame(text: str, settings: Settings | None = None, out_dir: Path = OUTPUTS_DIR) -> tuple[Pipeline, Frame]:
+def ask_frame(text: str, settings: Settings | None = None, out_dir: Path = ASK_DIR) -> tuple[Pipeline, Frame]:
     """Strict single-question path, step 1: parse and link. Unlike `Pipeline.run` (scored batch runs,
     which must always write a parseable entry), stage exceptions propagate so bugs are loud. Only an
     LLMError from the linker falls back to the baseline linker, as the ClassLinker contract documents."""
@@ -191,7 +195,7 @@ def ask_answer(p: Pipeline, frame: Frame) -> tuple[dict, Trace]:
     return {**answer.to_json(), "footprint": footprint}, trace
 
 
-def ask(text: str, settings: Settings | None = None, out_dir: Path = OUTPUTS_DIR) -> dict:
+def ask(text: str, settings: Settings | None = None, out_dir: Path = ASK_DIR) -> dict:
     """One free-form question (judges' live question). Returns the answers.json entry plus footprint."""
     return ask_answer(*ask_frame(text, settings, out_dir))[0]
 
