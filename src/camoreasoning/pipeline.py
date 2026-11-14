@@ -3,6 +3,7 @@ fault isolation, and answers.json always written with one entry per question id.
 
 from __future__ import annotations
 
+import difflib
 import json
 import traceback
 from collections.abc import Sequence
@@ -14,9 +15,10 @@ from camoreasoning.components import Context
 from camoreasoning.config import OUTPUTS_DIR, RUNTIME_STAGES, TAXONOMY_DIR, Settings, load_settings
 from camoreasoning.contracts import Answer, Features, Frame, ParsedQuestion, Question, Side, Trace
 from camoreasoning.graph import Graph, load_graph
-from camoreasoning.llm import LLM
+from camoreasoning.llm import LLM, LLMError
 from camoreasoning.meter import Meter
 from camoreasoning.taxonomy import Taxonomy, load_taxonomy
+from camoreasoning.text import tokens
 
 
 def make_context(
@@ -163,11 +165,82 @@ def run_file(questions_path: Path, answers_path: Path, settings: Settings | None
     return {"answers": len(answers), "path": str(answers_path), **summary}
 
 
-def ask(text: str, settings: Settings | None = None, out_dir: Path = OUTPUTS_DIR) -> dict:
-    """One free-form question (judges' live question). Returns the answers.json entry."""
+def ask_frame(text: str, settings: Settings | None = None, out_dir: Path = OUTPUTS_DIR) -> tuple[Pipeline, Frame]:
+    """Strict single-question path, step 1: parse and link. Unlike `Pipeline.run` (scored batch runs,
+    which must always write a parseable entry), stage exceptions propagate so bugs are loud. Only an
+    LLMError from the linker falls back to the baseline linker, as the ClassLinker contract documents."""
     ctx = make_context(settings, out_dir=out_dir)
-    answers, _ = Pipeline(ctx).run([Question(id="ASK", text=" ".join(text.split()))])
-    return {**answers[0].to_json(), "footprint": {k: v for k, v in ctx.llm.meter.summary().items() if k != "log"}}
+    p = Pipeline(ctx)
+    ctx.llm.meter.questions += 1
+    parsed = p.s["parser"].parse(Question(id="ASK", text=" ".join(text.split())), ctx)
+    try:
+        frames = p.s["linker"].link([parsed], ctx)
+    except LLMError:
+        frames = registry.get("linker", "baseline").link([parsed], ctx)
+    if len(frames) != 1:
+        raise RuntimeError(f"linker {p.s['linker'].name} returned {len(frames)} frames for 1 question")
+    return p, frames[0]
+
+
+def ask_answer(p: Pipeline, frame: Frame) -> tuple[dict, Trace]:
+    """Strict single-question path, step 2: answer a linked frame (exceptions propagate)."""
+    answer, trace = p.answer_one(frame)
+    answer.extras = p.s["extras"].write_question(answer, trace, p.ctx)
+    p.s["extras"].write_run([answer], [trace], p.ctx)
+    footprint = {k: v for k, v in p.ctx.llm.meter.summary().items() if k != "log"}
+    return {**answer.to_json(), "footprint": footprint}, trace
+
+
+def ask(text: str, settings: Settings | None = None, out_dir: Path = OUTPUTS_DIR) -> dict:
+    """One free-form question (judges' live question). Returns the answers.json entry plus footprint."""
+    return ask_answer(*ask_frame(text, settings, out_dir))[0]
+
+
+def side_labels(side: Side, ctx: Context) -> list[str]:
+    """Readable names of what a side linked to: class labels, else graph node names."""
+    tax, g = ctx.taxonomy.classes, ctx.graph.nodes
+    out = [tax[r.id].label if r.id in tax else r.id for r in side.classes]
+    return out + [str(g.get(r.id, {}).get("name") or r.id) for r in side.nodes]
+
+
+def nearest_classes(text: str, kind: str, ctx: Context, n: int = 3) -> list[str]:
+    """0-call suggestions: class labels of `kind` closest to `text` by difflib over labels and synonyms."""
+    query = " ".join(tokens(text))
+    if not query:
+        return []
+    words = query.split()
+
+    def score(c) -> float:
+        best = 0.0
+        for phrase in (c.label, *c.synonyms):
+            ph = " ".join(tokens(phrase.replace("*", "")))
+            if not ph:
+                continue
+            whole = difflib.SequenceMatcher(None, query, ph).ratio()
+            per_word = sum(bool(difflib.get_close_matches(w, ph.split(), 1, 0.8)) for w in words) / len(words)
+            best = max(best, 0.5 * whole + 0.5 * per_word)
+        return best
+
+    ranked = sorted(((score(c), c.label) for c in ctx.taxonomy.of_kind(kind)), key=lambda x: (-x[0], x[1]))
+    return [label for s, label in ranked[:n] if s > 0]
+
+
+def unclear(frame: Frame, ctx: Context) -> dict | None:
+    """None if both sides linked to something; else what was read per side and nearest class labels.
+    A side with no span is matched against the whole question for suggestions."""
+    sides = {"cause": frame.cause, "outcome": frame.outcome}
+    if not any(side.empty for side in sides.values()):
+        return None
+    out = {}
+    for kind, side in sides.items():
+        linked = side_labels(side, ctx)
+        probe = side.text or frame.parsed.question.text
+        out[kind] = {
+            "text": side.text,
+            "linked": linked,
+            "suggestions": [] if linked else nearest_classes(probe, kind, ctx),
+        }
+    return out
 
 
 def dumps(obj) -> str:
