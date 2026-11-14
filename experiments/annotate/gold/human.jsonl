@@ -1,3 +1,3 @@
-{"id": "D-Q0095", "by": "llm:claude-opus-5-5", "status": "answered", "direction": "unclear", "certainty": "very_low", "edges": [{"ref": "e1", "effect": null}, {"ref": "e2", "effect": null}]}
-{"id": "D-Q0003", "by": "llm:claude-opus-5-5", "status": "answered", "direction": "mixed", "certainty": "low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e2", "effect": -1}]}
-{"id": "D-Q0005", "by": "llm:claude-opus-5-5", "status": "answered", "direction": "mixed", "certainty": "very_low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e4", "effect": -1}]}
+{"id": "D-Q0095", "by": "llm:auditor", "status": "answered", "direction": "unclear", "certainty": "very_low", "edges": [{"ref": "e1", "effect": null}, {"ref": "e2", "effect": null}]}
+{"id": "D-Q0003", "by": "llm:auditor", "status": "answered", "direction": "mixed", "certainty": "low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e2", "effect": -1}]}
+{"id": "D-Q0005", "by": "llm:auditor", "status": "answered", "direction": "mixed", "certainty": "very_low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e4", "effect": -1}]}

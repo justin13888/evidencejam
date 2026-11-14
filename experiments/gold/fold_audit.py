@@ -1,6 +1,6 @@
 """Fold the auditors' files into experiments/annotate/gold/review.csv so `annotate review-import gold` reads them.
 
-    PYTHONPATH=src python experiments/gold/fold_audit.py --reviewer llm:claude-opus-5-5
+    PYTHONPATH=src python experiments/gold/fold_audit.py --reviewer llm:auditor
 
 Reads experiments/gold/audit/part*_blind.jsonl (the auditor's own label, written before it saw the
 model's) and part*_verdicts.jsonl (ok y/n after comparing). For ok = n rows, the human_* columns get the
@@ -25,7 +25,7 @@ def read(pattern: str) -> dict[str, dict]:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--reviewer", required=True, help='e.g. "llm:claude-opus-5-5"')
+    ap.add_argument("--reviewer", required=True, help='e.g. "llm:auditor"')
     args = ap.parse_args()
     t, path = A.TASKS["gold"], A.task_dir("gold") / "review.csv"
     blind, verdicts = read("part*_blind.jsonl"), read("part*_verdicts.jsonl")

@@ -45,7 +45,7 @@ items:
   - trap:null
   - answerable
   split: dev
-  source: llm:claude-opus-5-5
+  source: llm:auditor
   edge_effects:
   - - camo:edge_15a7f5a2b502
     - 0
@@ -79,7 +79,7 @@ items:
   - trap:twin
   - answerable
   split: dev
-  source: llm:claude-opus-5-5
+  source: llm:auditor
   edge_effects:
   - - camo:edge_f4cb3c80e187
     - 0
@@ -1790,7 +1790,7 @@ items:
   - trap:associational
   - answerable
   split: holdout
-  source: llm:claude-opus-5-5
+  source: llm:auditor
   edge_effects:
   - - camo:edge_6bdb3d555a6b
     - null
