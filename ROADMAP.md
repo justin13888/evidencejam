@@ -58,9 +58,9 @@ flowchart LR
   6 --> 15[15 Answer text]
   8 --> 15
   11 --> 15
-  13 --> 16[16 Evidence pages]
-  15 --> 16
-  12 --> 16
+  13 -.-> 16[16 Evidence pages]
+  15 -.-> 16
+  12 -.-> 16
   3 --> 17
   16 --> 19[19 Accessibility]
   17 --> 19
@@ -189,6 +189,7 @@ flowchart LR
 - [ ] **6. Aggregate direction.** ★ 5/5 · B · `interpreter`, `aggregator`
   - **Why:** direction is the biggest share of D17. It needs schema sign composition, one vote per study, nulls counted as findings, and "mixed" when studies disagree.
   - **Done when:** at least 85% direction accuracy on dev answerable items, and the thresholds are tuned on dev only.
+    - Agents iterate with `camoreasoning eval --split dev`. Plain `mise run eval` also scores holdout, so it is run once at the end and reported, never looped on.
   - **Points:** D17.
 - [ ] **7. Build the trap suite.** ★ 5/5 · B · `interpreter`, `aggregator`, `tests`
   - **Why:** the hidden set includes questions "written to catch common misreadings".
@@ -211,12 +212,13 @@ flowchart LR
   - **Done when:**
     - At least 90 items in the hidden template, about 1/3 empty, trap-tagged, with paraphrased class names.
     - About 20% are held out and never tuned on.
+    - Built by agents via `camoreasoning annotate` (no human step). Paraphrases come from a different model or prompt than the linker's, and the holdout split is fixed by a seeded hash of item id before any tuning.
   - **Points:** enables D17, C14, P9 (everything measurable).
 - [ ] **10. Keep the gold labeller independent.** ★ 5/5 · C · `gold_labeler`
-  - **Why:** gold made by our own sign code makes the eval circular. The gold labeller is an LLM reading `original_sentence` text, plus a human audit.
+  - **Why:** gold made by our own sign code makes the eval circular. The gold labeller is an LLM reading `original_sentence` text, audited by a second, stronger LLM (human audit dropped by choice; some correctness loss accepted).
   - **Done when:**
     - The import guard test passes.
-    - At least 40 items are human-audited, with at least 85% LLM–human agreement.
+    - At least 40 items, stratified by trap tag, are audited by a fresh LLM session through `annotate review-export` / `review-import` with `reviewer` = `llm:<model>`. The auditor writes its own label from the context column before reading the `model_*` columns, then sets `ok`. Agreement is at least 85%. Its corrections win at merge. Labeller and auditor read only `original_sentence` and the rubric, never `taxonomy/`, `*.meta.jsonl` or pipeline code.
     - Disagreements become trap tests.
   - **Points:** the D17 and C14 numbers become trustworthy.
 - [ ] **11. Grade certainty.** ★ 4/5 · B · `grader`
@@ -252,6 +254,7 @@ flowchart LR
 - [ ] **16. Build evidence pages.** ★ 3/5 · D · `extras`
   - **Why:** judges open what `extras` lists.
   - **Done when:** each page shows the answer card (direction, certainty and confidence kept separate), a vote table per study with quotes, DOIs and comparators, the sign trace, and excluded and reversed edges.
+    - Built against the `Trace` contract using whatever the current default strategies produce, so it does not wait on 12, 13 or 15. Pages improve as those items land. A test renders pages for the practice questions and checks every listed section is present.
   - **Points:** J40.
 - [ ] **17. Build the gap map.** ★ 3/5 · D · `extras`
   - **Why:** it turns "no evidence" into a visible, useful product and shows where the graph is dense or empty.
