@@ -1,0 +1,20 @@
+{"id": "D-Q0143", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0144", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0145", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0146", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0147", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0148", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0149", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0150", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0151", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "Candidates mention bird-dispersed plants under old growth, not bird density; no relevant edge."}
+{"id": "D-Q0152", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0153", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0154", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0155", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0156", "status": "answered", "direction": "mixed", "certainty": "low", "edges": [{"ref": "e16", "effect": 1}, {"ref": "e17", "effect": null}, {"ref": "e22", "effect": null}, {"ref": "e23", "effect": null}, {"ref": "e18", "effect": -1}, {"ref": "e21", "effect": null}], "note": "Time since reclamation treated as time since restoration; e17/e22/e23/e21 sentences give significance but no direction, so null. Excluded composition/ordination edges (e1,e2,e5,e6,e8), time-since-harvest/abandonment edges (e4,e19,e20) and generic time edges (e59,e60)."}
+{"id": "D-Q0157", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0158", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0159", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0160", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0161", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0162", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "Cause 'site presence' is too vague to match any candidate subject; candidates look incomplete."}

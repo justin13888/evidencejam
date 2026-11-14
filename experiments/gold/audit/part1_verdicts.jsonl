@@ -1,0 +1,20 @@
+{"id": "D-Q0178", "ok": "y", "comment": "Both no_evidence: reclamation method vs ecosystem respiration is neither harvest method nor soil basal respiration."}
+{"id": "D-Q0167", "ok": "y", "comment": "Both no_evidence: no candidates."}
+{"id": "D-Q0164", "ok": "y", "comment": "Both no_evidence: only native amphibian colonization edges."}
+{"id": "D-Q0171", "ok": "y", "comment": "Both no_evidence: no container-type or tissue-K edge."}
+{"id": "D-Q0038", "ok": "y", "comment": "Exact match: e1-e3 -1, decrease, very_low."}
+{"id": "D-Q0081", "ok": "y", "comment": "Status/direction/certainty match; model e6=0 vs my null is not an opposite sign."}
+{"id": "D-Q0037", "ok": "y", "comment": "Exact match: e1 +1, e2 -1 same-study tie, mixed, low."}
+{"id": "D-Q0095", "ok": "n", "comment": "Model scores e2 +1 and direction increase; flowering phenology is categorical (ephemeral vs fall), so no usable sign: I have unclear/very_low."}
+{"id": "D-Q0067", "ok": "y", "comment": "Both no_evidence: only relevant edge is mediates."}
+{"id": "D-Q0064", "ok": "y", "comment": "Both no_evidence: edges reversed (fire history -> recruits)."}
+{"id": "D-Q0061", "ok": "y", "comment": "I had mixed/low by counting e9 -1 and e29 +1 (patch-cut vs strip-cut); on reflection that is one cut-vs-cut contrast with no signed cut-vs-uncut effect and unverified conifer species, so the model's increase/moderate from manual cutting (e17,e18,e19) is the better label."}
+{"id": "D-Q0065", "ok": "y", "comment": "Exact match: 3 studies all +1, increase, moderate."}
+{"id": "D-Q0093", "ok": "y", "comment": "Exact match: e1 +1, e2 0 tie, mixed, low."}
+{"id": "D-Q0003", "ok": "n", "comment": "Model drops e2 (mayapple share of sexual plants fruiting fell 73%->18%) as another outcome; it measures fruiting potential, so the study ties 0 vs -1: mixed/low, not no_effect/moderate."}
+{"id": "D-Q0004", "ok": "y", "comment": "Exact match: e1 0, no_effect, moderate."}
+{"id": "D-Q0005", "ok": "n", "comment": "Model drops e4 (exclosures had more large >20 cm DBH trees, i.e. deer presence -1); with e1 0 the same study ties: mixed/very_low, not no_effect/low."}
+{"id": "D-Q0016", "ok": "y", "comment": "Both no_evidence: edges reversed."}
+{"id": "D-Q0018", "ok": "y", "comment": "Exact match: e1 null, e2-e4 -1, decrease, low."}
+{"id": "D-Q0020", "ok": "y", "comment": "Exact match: decrease, very_low."}
+{"id": "D-Q0102", "ok": "y", "comment": "Exact match: decrease, very_low."}

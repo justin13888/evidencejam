@@ -1,0 +1,18 @@
+{"id": "D-Q0163", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "Restoration edges report stem density/numbers, not stem diameter growth; shading edges are not restoration."}
+{"id": "D-Q0164", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0165", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0166", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0167", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0168", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "No edge has metal concentration in crustacean tissue as outcome; e2 is crustacean zooplankton richness."}
+{"id": "D-Q0169", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0170", "status": "answered", "direction": "decrease", "certainty": "very_low", "edges": [{"ref": "e4", "effect": -1}], "note": "e4 cause is the abandoned (vs restored/natural) peatland treatment; text does not explicitly call it a ground cover treatment, included as the only treatment-type edge on saprophage richness."}
+{"id": "D-Q0171", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0172", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0173", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0174", "status": "answered", "direction": "decrease", "certainty": "low", "edges": [{"ref": "e1", "effect": -1}], "note": "Outcome is abundance of weedy plants, taken as an instance of plant taxon frequency."}
+{"id": "D-Q0175", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0176", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0177", "status": "answered", "direction": "increase", "certainty": "moderate", "edges": [{"ref": "e1", "effect": null}, {"ref": "e2", "effect": 1}, {"ref": "e3", "effect": 1}, {"ref": "e4", "effect": 1}, {"ref": "e5", "effect": 1}, {"ref": "e6", "effect": 1}, {"ref": "e18", "effect": 0}, {"ref": "e32", "effect": 1}, {"ref": "e34", "effect": 1}, {"ref": "e35", "effect": 1}, {"ref": "e36", "effect": null}, {"ref": "e37", "effect": 0}, {"ref": "e39", "effect": 1}, {"ref": "e40", "effect": 1}], "note": "Excluded e12 (no-suppression control), e11 (harvest treatment, species unknown), e28/e30/e33 (cutting/release, species wd:Q469151 not identifiable as planted conifer), e31 (balsam fir seedlings not stated as planted; including it would make direction mixed, certainty low). e36 sentence gives significance without direction."}
+{"id": "D-Q0178", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0179", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "e19 epilithon biomass edge has engineered stream structures as cause, not site preparation."}
+{"id": "D-Q0180", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}

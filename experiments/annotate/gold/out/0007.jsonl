@@ -1,0 +1,20 @@
+{"id": "D-Q0123", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0124", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "e3/e4 (shaded vs open habitat -> fewer emerged/surviving seedlings) concern seedlings of wd:Q5122070, whose identity as a willow-family (Salicaceae) species is not stated in the text; other seedling edges are black spruce/balsam fir. Left out."}
+{"id": "D-Q0125", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0126", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0127", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "e1/e2 compare fish presence (invasive non-native fish vs vacant sites) on herpetofauna wetland richness, not genetic origin of fish, and herpetofauna are not stated to be vulnerable species; e3/e4 are genic diversity/allelic richness, not species richness."}
+{"id": "D-Q0128", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0129", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "Near misses from study 10.1111/j.1526-100X.1995.tb00096.x: e7/e26/e27 show nitrogen decreasing density of native (not specifically grass) seedlings; density is not survival. If accepted as proxies they would vote -1."}
+{"id": "D-Q0130", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "Soil mixing edges (MSM, forest floor mixing) are on black spruce (conifer) only; hardwood seedling size edges (apsoil study) concern soil inoculation, not soil mixing."}
+{"id": "D-Q0131", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0132", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0133", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "Mulch edges report root-to-shoot ratio, survivorship, establishment or biomass, not seedling height:diameter ratio; none are straw mulch."}
+{"id": "D-Q0134", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "No edge measures large tree abundance; e41 (direct placement vs stockpiling of cover soil -> tree cover) is the closest but neither side matches."}
+{"id": "D-Q0135", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0136", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "CRF edges (study 10.1016/j.foreco.2015.10.024) report growth and nutrient outcomes, not emergence; e12 is generic fertilization -> deciduous seedling establishment."}
+{"id": "D-Q0137", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "e3 (slash cover -> lower vegetation cover) concerns vegetation cover, not bare ground cover."}
+{"id": "D-Q0138", "status": "answered", "direction": "no_effect", "certainty": "moderate", "edges": [{"ref": "e37", "effect": 0}], "note": "e30/e33/e36 (study 10.1111/j.1526-100X.2007.00209.x: disturbance treatments reduced cover of dominant grasses Poa and Dactylis) excluded because the text does not state these grasses are non-native; if counted as non-native they would vote -1 and direction would become mixed (certainty low)."}
+{"id": "D-Q0139", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "e1/e2 run organic matter -> macroinvertebrate abundance (reversed) and concern stream particulate organic matter, not soil."}
+{"id": "D-Q0140", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0141", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0142", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}

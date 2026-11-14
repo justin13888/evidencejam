@@ -217,13 +217,20 @@ flowchart LR
     - About 20% are held out and never tuned on.
     - Built by agents via `camoreasoning annotate` (no human step). Paraphrases come from a different model or prompt than the linker's, and the holdout split is fixed by a seeded hash of item id before any tuning.
   - **Points:** enables D17, C14, P9 (everything measurable).
-- [ ] **10. Keep the gold labeller independent.** ★ 5/5 · C · `gold_labeler`
+- [x] **10. Keep the gold labeller independent.** ★ 5/5 · C · `gold_labeler`
   - **Why:** gold made by our own sign code makes the eval circular. The gold labeller is an LLM reading `original_sentence` text, audited by a second, stronger LLM (human audit dropped by choice; some correctness loss accepted).
   - **Done when:**
     - The import guard test passes.
     - At least 40 items, stratified by trap tag, are audited by a fresh LLM session through `annotate review-export` / `review-import` with `reviewer` = `llm:<model>`. The auditor writes its own label from the context column before reading the `model_*` columns, then sets `ok`. Agreement is at least 85%. Its corrections win at merge. Labeller and auditor read only `original_sentence` and the rubric, never `taxonomy/`, `*.meta.jsonl` or pipeline code.
     - Disagreements become trap tests.
   - **Points:** the D17 and C14 numbers become trustworthy.
+  - **Done (Sat Nov 14):** `experiments/devsets/gold_annotated.yaml` has 178 labelled items: 99 answered and 79 no_evidence. The record is in `experiments/gold/README.md`, and the procedure in `experiments/gold/AUDIT.md`.
+    - **Round 1 (rejected):** BRINE-model labels agreed with a blind Opus audit on only 0.475 of items. The model defaulted certainty to `low` and called unsigned evidence no_evidence.
+    - **Round 2:** `PROMPT.md` now spells out D2–D4: how a study votes, the median of an even number of grades, which edges don't vote, and that certainty is computed. Opus `labeler` agents labelled 138 items and Sonnet 40, after safeguards stopped two Opus chunks.
+    - **Audit:** a fresh blind Opus audit of 40 items, stratified by trap tag, agreed on **0.925**. Its 3 corrections win at merge, and they became `tests/strategies/test_gold_disagreements.py`. One of them (a categorical outcome given a sign) is a strict xfail on the engine.
+    - **Caveat:** the auditor is the same model family as the labeller, not a stronger one.
+    - **First eval of the default pipeline (dev, n = 142):** accuracy 0.47, no_evidence recall 0.97, retrieval recall 0.07. Oracle direction is 0.76 and oracle certainty 0.54.
+    - **For the rubric owner:** D3's "unchanged cause" rule, read literally, turns 3 exact-match questions into no_evidence.
 - [ ] **11. Grade certainty.** ★ 4/5 · B · `grader`
   - **Why:** certainty is part of D17. The graph has no `high` grades, so the grade has to be derived from edge grades, study count, agreement and design (randomized vs observational).
   - **Done when:** the rule is written in the strategy docstring and scores at least 75% certainty accuracy on dev.
@@ -261,10 +268,11 @@ flowchart LR
   - **Done when:** each page shows the answer card (direction, certainty and confidence kept separate), a vote table per study with quotes, DOIs and comparators, the sign trace, and excluded and reversed edges.
     - Built against the `Trace` contract using whatever the current default strategies produce, so it does not wait on 12, 13 or 15. Pages improve as those items land. A test renders pages for the practice questions and checks every listed section is present.
   - **Points:** J40.
-- [ ] **17. Build the gap map.** ★ 3/5 · D · `extras`
+- [x] **17. Build the gap map.** ★ 3/5 · D · `extras`
   - **Why:** it turns "no evidence" into a visible, useful product and shows where the graph is dense or empty.
   - **Done when:** the cause × outcome grid shows study counts, empty cells are labelled "gap", and each cell links to example questions.
   - **Points:** J40, and shows C14 behaviour.
+  - **Done (Sat Nov 14):** the `gapmap` extras strategy is not the default yet. `gapmap.html` is a 41 × 43 grid: 692 cells have evidence and 61% are gaps. It also lists the densest cells and the causes with no evidence. Every cell links to `gapcells.html`, which gives a template example question and the run's questions with their status. On the dev questions, no gap-cell question came back answered. Accessibility: link contrast is at least 4.6:1 on every shade, there are screen-reader labels per cell, and the page reflows at 320 px.
 - [ ] **18. Handle judges' own questions with the ask CLI.** ★ 4/5 · A · `parser`, `linker`
   - **Why:** each judge asks one real question of their own.
   - **Done when:** free-form wording links through the LLM fallback, it never crashes, it answers in under 10 s, and it is tested on 20 off-template questions.

@@ -1,0 +1,20 @@
+{"id": "D-Q0008", "ok": "y", "comment": "Agree no_evidence: all edges coho -> amphibians (reversed)."}
+{"id": "D-Q0072", "ok": "y", "comment": "Agree no_evidence: edges run site preparation -> tree size (reversed)."}
+{"id": "D-Q0032", "ok": "y", "comment": "Agree no_evidence: edges run acidification -> zooplankton (reversed)."}
+{"id": "D-Q0096", "ok": "y", "comment": "Agree no_evidence: edges run water type -> plant performance (reversed)."}
+{"id": "D-Q0046", "ok": "n", "comment": "Certainty: model low, should be moderate (its only edge e2 is moderate, direct_causal, not mixed). Direction decrease agrees."}
+{"id": "D-Q0047", "ok": "n", "comment": "Certainty: model low, should be moderate (sole edge e1 MBG -> native graminoids is moderate, causes). Direction/edges agree."}
+{"id": "D-Q0059", "ok": "y", "comment": "Agree decrease/low via e1."}
+{"id": "D-Q0045", "ok": "y", "comment": "Agree decrease/very_low via e1,e2."}
+{"id": "D-Q0106", "ok": "n", "comment": "Certainty: model low, should be moderate (all relevant edges moderate, causes, not mixed). Direction increase agrees; model e32 (non-native density) irrelevant but 0."}
+{"id": "D-Q0058", "ok": "n", "comment": "Status: model no_evidence, but e3/e4/e6/e7 are season -> bee family abundance (unsigned) and e8 moderator: should be answered/unclear/very_low."}
+{"id": "D-Q0077", "ok": "y", "comment": "Agree increase/low via e1; model also counts e2 (reference, unprotected sites), which is not time since protection, but outcome unchanged."}
+{"id": "D-Q0052", "ok": "y", "comment": "Agree decrease/very_low via e1."}
+{"id": "D-Q0092", "ok": "n", "comment": "Certainty: model mixed/low, but mixed requires one level lower; median of its own edges is low -> very_low. Model also adds restoration-vs-reference and mine-land edges (e6,e13-e15) that are site type, not location."}
+{"id": "D-Q0026", "ok": "n", "comment": "Status: model no_evidence, but e1 (sediment depth -> TVS differences) is relevant with no sign: should be answered/unclear/very_low."}
+{"id": "D-Q0027", "ok": "n", "comment": "Certainty: model low, but all relevant edges low and associated_with -> very_low. Also e4 (reference vs restored PLFA) is not a restoration effect and its +1 sign is doubtful; direction increase agrees."}
+{"id": "D-Q0023", "ok": "n", "comment": "Direction: model increase with every RDA variance-explained edge signed +1; these give no sign -> unclear (certainty very_low as all language=associational)."}
+{"id": "D-Q0119", "ok": "n", "comment": "Certainty: model low, mine moderate. Model adds e2 (all tree seedlings, a superset of deciduous) dragging median down; debatable, but strict instance rule keeps e1 only -> moderate."}
+{"id": "D-Q0075", "ok": "n", "comment": "Certainty: model mixed/low, but mixed requires one level lower from low -> very_low. Direction and edges agree."}
+{"id": "D-Q0078", "ok": "y", "comment": "Agree increase/low via e1."}
+{"id": "D-Q0105", "ok": "n", "comment": "Certainty: model low, should be moderate (every edge moderate, direct causal, direction not mixed). Direction/edges agree."}

@@ -1,0 +1,20 @@
+{"id": "D-Q0001", "status": "answered", "direction": "no_effect", "certainty": "low", "edges": [{"ref": "e1", "effect": 0}]}
+{"id": "D-Q0002", "status": "answered", "direction": "mixed", "certainty": "low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e2", "effect": 1}], "note": "Only native-hay edges used; same study gives 0 and +1, so internally mixed."}
+{"id": "D-Q0003", "status": "answered", "direction": "no_effect", "certainty": "moderate", "edges": [{"ref": "e1", "effect": 0}], "note": "e2 excluded: different outcome entity (proportion of fruiting plants, other species)."}
+{"id": "D-Q0004", "status": "answered", "direction": "no_effect", "certainty": "moderate", "edges": [{"ref": "e1", "effect": 0}]}
+{"id": "D-Q0005", "status": "answered", "direction": "no_effect", "certainty": "low", "edges": [{"ref": "e1", "effect": 0}], "note": "Only adult-tree edge; sapling and exclosure edges are other outcomes."}
+{"id": "D-Q0006", "status": "answered", "direction": "no_effect", "certainty": "moderate", "edges": [{"ref": "e1", "effect": 0}]}
+{"id": "D-Q0007", "status": "answered", "direction": "no_effect", "certainty": "moderate", "edges": [{"ref": "e1", "effect": null}, {"ref": "e3", "effect": 0}, {"ref": "e4", "effect": 0}], "note": "e1 sentence does not support an increase for native seedlings, so null."}
+{"id": "D-Q0008", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "All edges run coho/fish biomass to amphibians, i.e. reversed."}
+{"id": "D-Q0009", "status": "answered", "direction": "no_effect", "certainty": "very_low", "edges": [{"ref": "e1", "effect": 0}], "note": "Assumes nestling fate approximates survival; other edges are size or other outcomes."}
+{"id": "D-Q0010", "status": "answered", "direction": "no_effect", "certainty": "low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e2", "effect": 0}]}
+{"id": "D-Q0011", "status": "answered", "direction": "unclear", "certainty": "very_low", "edges": [{"ref": "e5", "effect": null}, {"ref": "e6", "effect": null}], "note": "Assemblage-group associations carry no usable sign."}
+{"id": "D-Q0012", "status": "answered", "direction": "increase", "certainty": "very_low", "edges": [{"ref": "e1", "effect": 1}], "note": "Outcome is variation of TKE; only candidate."}
+{"id": "D-Q0013", "status": "answered", "direction": "unclear", "certainty": "low", "edges": [{"ref": "e1", "effect": null}], "note": "e4 (vegetation structure) left out as a different outcome."}
+{"id": "D-Q0014", "status": "answered", "direction": "decrease", "certainty": "very_low", "edges": [{"ref": "e1", "effect": -1}], "note": "Lower water level goes with higher TSS."}
+{"id": "D-Q0015", "status": "answered", "direction": "decrease", "certainty": "very_low", "edges": [{"ref": "e1", "effect": -1}], "note": "Near-tautological edge; only candidate."}
+{"id": "D-Q0016", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "Edges run organic matter thickness to seedling establishment (reversed) or are unrelated."}
+{"id": "D-Q0017", "status": "answered", "direction": "increase", "certainty": "very_low", "edges": [{"ref": "e1", "effect": 1}]}
+{"id": "D-Q0018", "status": "answered", "direction": "decrease", "certainty": "low", "edges": [{"ref": "e1", "effect": null}, {"ref": "e2", "effect": -1}, {"ref": "e3", "effect": -1}, {"ref": "e4", "effect": -1}], "note": "Sulphate decrease raises alkalinity; e1 gives no sign."}
+{"id": "D-Q0019", "status": "answered", "direction": "decrease", "certainty": "very_low", "edges": [{"ref": "e1", "effect": -1}], "note": "Species loss read as lower richness."}
+{"id": "D-Q0020", "status": "answered", "direction": "decrease", "certainty": "very_low", "edges": [{"ref": "e1", "effect": -1}, {"ref": "e2", "effect": -1}]}
