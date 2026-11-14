@@ -14,6 +14,7 @@
 from __future__ import annotations
 
 import re
+from concurrent.futures import ThreadPoolExecutor
 
 from camoreasoning.components import Context, NodeLabeler
 from camoreasoning.llm import LLMError
@@ -33,8 +34,11 @@ GENERIC = {"population_size_trend", "restoration_general", "harvest_general", "t
 ANIMAL = {"bird_abundance", "reproductive_success", "mammal_abundance", "fish_abundance", "amphibian_reptile",
           "insect_invertebrate", "animal_condition", "wildlife_mortality", "soil_fauna", "soil_microbial"}  # fmt: skip
 PLANT_ONLY = {"biomass_productivity", "tree_growth", "tree_seedling_survival", "stand_structure",
-              "foliar_nutrients", "plant_cover_total"}  # fmt: skip
+              "foliar_nutrients", "plant_cover_total", "seed_germination_emergence", "natural_regeneration",
+              "reproduction_flowering"}  # fmt: skip
+NUTRIENT = {"foliar_nutrients", "soil_nutrients", "soil_organic_carbon"}
 CONCENTRATION = re.compile(r"\b(concentrations?|residues?|bioaccumulation)\b")
+GENETIC = re.compile(r"\b(genetic|allele|alleles|heterozygosity|haplotype|genotype)")
 INVERTED = {  # class -> name pattern meaning the opposite end of the class concept
     "tree_seedling_survival": re.compile(r"\bmortality\b"),
     "wildlife_mortality": re.compile(r"\bmortality\b"),
@@ -43,13 +47,19 @@ INVERTED = {  # class -> name pattern meaning the opposite end of the class conc
 EXCLUSION_CLASSES = {"grazing_browsing"}  # "deer exclusion" = grazing absent even if qualifier says occurred
 MAX_PER_NODE = 2
 CHUNK = 40
+WORKERS = 6  # concurrent chunks (offline only); Meter.reserve is locked, so the budget holds across threads
 
 SYSTEM = (
     "You label nodes of an ecology evidence graph with classes. Each input line is JSON: "
     '{"id","t":name,"a":measured attribute,"k":entity type}. Reply with one JSON object '
-    '{"<id>": ["class_id", ...]} using only class ids from the list below, at most 2 per node, '
-    "[] when none fits. Keep near-misses apart: native vs non-native, survival vs growth, cover vs richness, "
-    "plant vs animal. Classes:\n"
+    '{"<id>": ["class_id", ...]} using only class ids from the list below, at most 2 per node. '
+    "Many nodes fit no class: answer [] unless a class clearly names what the node is or measures; never "
+    "pick a general class (restoration_general, site_conditions, population_size_trend) as a guess. "
+    "Keep near-misses apart: native vs non-native, survival vs growth, cover vs richness, plant vs animal. "
+    "Use native_abundance or invasive_abundance only when the node says native/non-native/invasive/exotic or "
+    "names a species widely known as invasive in Canada; for cover of any other named species use "
+    "plant_cover_total. "
+    "Classes:\n"
 )
 
 
@@ -85,15 +95,25 @@ def polarity(node: dict, class_id: str) -> int:
         sign = -sign
     if sign == 1 and q is None and NEGATIVE_CUE.search(name):
         return -1  # no qualifier, but the name itself says removed / absent / reduced
-    if sign == 1 and class_id in EXCLUSION_CLASSES and re.search(r"\bexclu", name):
+    if sign == 1 and class_id in EXCLUSION_CLASSES and re.search(r"\bexcl[ou]", name):
         return -1
     return sign
 
 
-def _prefer(found: list[tuple[str, int]], text: str) -> list[tuple[str, int]]:
+def _prefer(found: list[tuple[str, int]], text: str, cause_only: set[str], intervention: bool) -> list[tuple[str, int]]:
     ids = {c for c, _ in found}
+    if GENETIC.search(text):  # allele / heterozygosity diversity is not species diversity or composition
+        found = [f for f in found if f[0] not in {"diversity_indices", "community_composition"} | GENERIC]
     if CONCENTRATION.search(text) and "water_chemistry" in ids:
-        found = [f for f in found if f[0] not in ANIMAL | PLANT_ONLY | GENERIC]
+        if ids & NUTRIENT:  # leaf N or soil N concentration is a nutrient pool, not water chemistry
+            found = [f for f in found if f[0] != "water_chemistry"]
+        else:
+            found = [f for f in found if f[0] not in ANIMAL | PLANT_ONLY | GENERIC]
+    if not intervention and any(c not in cause_only for c, _ in found):
+        found = [f for f in found if f[0] not in cause_only]  # "survival of transplants" is an outcome
+    if "natural_regeneration" in ids:
+        found = [f for f in found if f[0] != "stand_structure"]
+    ids = {c for c, _ in found}
     if ids & ANIMAL:
         found = [f for f in found if f[0] not in PLANT_ONLY]
     if any(c not in GENERIC for c, _ in found):
@@ -108,17 +128,19 @@ def lexical(taxonomy: Taxonomy, nodes: dict[str, dict]) -> dict[str, list[tuple[
     """node_id -> [(class_id, matched phrase length)] best first."""
     phrases = compile_phrases(taxonomy)
     cause_ok = {c.id for c in taxonomy.of_kind("cause")}
+    cause_only = {c.id for c in taxonomy.classes.values() if c.kind == "cause"}
     hits: dict[str, list[tuple[str, int]]] = {}
     for nid, n in nodes.items():
         text = node_text(n)
+        intervention = n.get("entity_type") == "management_intervention"
         found = []
         for cid, pats in phrases.items():
-            if n.get("entity_type") == "management_intervention" and cid not in cause_ok:
+            if intervention and cid not in cause_ok:
                 continue
             best = max((len(p) for p, rx in pats if rx.search(text)), default=0)
             if best:
                 found.append((cid, best))
-        found = _prefer(found, text)
+        found = _prefer(found, text, cause_only, intervention)
         if found:
             hits[nid] = found[:MAX_PER_NODE]
     return hits
@@ -142,25 +164,31 @@ class CuratedLabeler(NodeLabeler):
         return out
 
     def _llm(self, taxonomy: Taxonomy, ctx: Context, node_ids: list[str]) -> list[NodeLabel]:
+        """Chunks go out concurrently; each chunk uses short ids ("0".."39") so the reply is mostly class ids."""
         system = SYSTEM + "\n".join(f"{c.id}: {c.label} [{c.kind}]" for c in taxonomy.classes.values())
-        items = [
-            {
-                "id": nid,
-                "t": ctx.graph.nodes[nid].get("name"),
-                "a": ctx.graph.nodes[nid].get("measured_attribute"),
-                "k": ctx.graph.nodes[nid].get("entity_type"),
-            }
-            for nid in node_ids
-        ]
-        try:
-            reply = ctx.llm.batch_json(system, items, chunk=CHUNK, tokens_per_item=24, purpose="node_labeler")
-        except LLMError:
-            return []
+        chunks = [node_ids[i : i + CHUNK] for i in range(0, len(node_ids), CHUNK)]
+
+        def ask(part: list[str]) -> dict[str, list]:
+            items = []
+            for i, nid in enumerate(part):
+                n = ctx.graph.nodes[nid]
+                attr = str(n.get("measured_attribute") or "")
+                items.append({"id": str(i), "t": n.get("name"), "a": None if CURIE.match(attr) else attr or None,
+                              "k": n.get("entity_type")})  # fmt: skip
+            try:
+                reply = ctx.llm.batch_json(system, items, chunk=len(items), tokens_per_item=12, purpose="node_labeler")
+            except LLMError:
+                return {}
+            return {part[int(k)]: v for k, v in reply.items() if k.isdigit() and int(k) < len(part)}
+
+        with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+            replies = list(pool.map(ask, chunks))
         out = []
-        for nid, cids in reply.items():
-            if nid not in ctx.graph.nodes or not isinstance(cids, list):
-                continue
-            for cid in cids[:MAX_PER_NODE]:
-                if isinstance(cid, str) and cid in taxonomy.classes:
-                    out.append(NodeLabel(nid, cid, polarity(ctx.graph.nodes[nid], cid), 0.6, "llm"))
+        for reply in replies:
+            for nid, cids in reply.items():
+                if not isinstance(cids, list):
+                    continue
+                for cid in cids[:MAX_PER_NODE]:  # generic classes from the LLM were mostly guesses in the audit
+                    if isinstance(cid, str) and cid in taxonomy.classes and cid not in GENERIC:
+                        out.append(NodeLabel(nid, cid, polarity(ctx.graph.nodes[nid], cid), 0.6, "llm"))
         return out

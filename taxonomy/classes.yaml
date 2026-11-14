@@ -126,6 +126,10 @@ classes:
   kind: cause
   label: prescribed burning
   synonyms:
+  - burning
+  - burn
+  - slash burn*
+  - slashburn*
   - prescribed fire
   - prescribed burn*
   - controlled burn*
@@ -137,6 +141,10 @@ classes:
   kind: cause
   label: wildfire & fire regime
   synonyms:
+  - fire
+  - fires
+  - repeated fire*
+  - reburn*
   - wildfire
   - fire severity
   - fire interval
@@ -361,7 +369,6 @@ classes:
   label: restoration (general / unspecified)
   synonyms:
   - restoration
-  - restored
   - restoration treatment
   - assisted restoration
   - active restoration
@@ -635,6 +642,9 @@ classes:
   kind: outcome
   label: community composition & similarity
   synonyms:
+  - aquatic communit*
+  - community
+  - communities
   - community composition
   - species composition
   - composition
@@ -652,6 +662,8 @@ classes:
   kind: outcome
   label: seedling & tree survival
   synonyms:
+  - establish*
+  - persist*
   - survival
   - seedling survival
   - tree survival
@@ -670,6 +682,9 @@ classes:
   synonyms:
   - height
   - height growth
+  - root length
+  - shoot length
+  - root growth
   - diameter growth
   - growth
   - growth rate
@@ -702,6 +717,8 @@ classes:
   kind: outcome
   label: natural regeneration & recruitment
   synonyms:
+  - self-seed*
+  - self-sow*
   - regeneration
   - natural regeneration
   - recruitment
@@ -791,6 +808,7 @@ classes:
   kind: both
   label: soil moisture & water content
   synonyms:
+  - soil water potential
   - soil moisture
   - volumetric water
   - water content
@@ -837,6 +855,8 @@ classes:
   kind: outcome
   label: soil nutrients & fertility
   synonyms:
+  - mineralizable
+  - mineral nitrogen
   - total nitrogen
   - forest floor nitrogen
   - soil nitrogen
@@ -912,6 +932,8 @@ classes:
   kind: outcome
   label: soil microbes, fungi & mycorrhizae
   synonyms:
+  - microbial communit*
+  - microbial ind*
   - microbial
   - microbe*
   - fungal
@@ -1018,6 +1040,8 @@ classes:
   kind: outcome
   label: breeding & reproductive success
   synonyms:
+  - nest survival
+  - daily nest survival
   - fledging
   - hatching success
   - nest success
@@ -1059,6 +1083,7 @@ classes:
   label: fish abundance, growth & survival
   synonyms:
   - fish
+  - fry
   - salmon
   - trout
   - atlantic salmon
@@ -1133,6 +1158,8 @@ classes:
   kind: outcome
   label: animal condition, growth & health
   synonyms:
+  - sub-lethal
+  - sublethal
   - body length
   - body weight
   - body condition
@@ -1141,13 +1168,15 @@ classes:
   - condition factor
   - vitellogenin
   - intersex
-  - growth rate of
   - lipid
   description: Animal physiology and condition.
 - id: wildlife_mortality
   kind: outcome
   label: animal survival & mortality
   synonyms:
+  - lethal
+  - lethality
+  - death
   - fish survival
   - animal survival
   - adult survival
@@ -1162,6 +1191,8 @@ classes:
   kind: outcome
   label: population size & trend
   synonyms:
+  - wildlife
+  - wildlife abundance
   - population size
   - population growth
   - population trend
