@@ -1,0 +1,1528 @@
+{
+ "linker": "baseline",
+ "report": {
+  "label": {
+   "n": 400,
+   "both_exact": 0.978,
+   "cause": {
+    "exact": 1.0
+   },
+   "outcome": {
+    "exact": 0.978,
+    "tied": 0.022
+   }
+  },
+  "synonym": {
+   "n": 400,
+   "both_exact": 0.835,
+   "cause": {
+    "exact": 0.927,
+    "tied": 0.072
+   },
+   "outcome": {
+    "exact": 0.9,
+    "tied": 0.1
+   }
+  },
+  "paraphrase": {
+   "n": 400,
+   "both_exact": 0.978,
+   "cause": {
+    "exact": 1.0
+   },
+   "outcome": {
+    "exact": 0.978,
+    "tied": 0.022
+   }
+  }
+ },
+ "misses": [
+  {
+   "set": "label",
+   "q": "What effect does prescribed burning have on species richness?",
+   "gold": [
+    "prescribed_burning",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "prescribed_burning"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "label",
+   "q": "What effect does time since disturbance / stand age have on species richness?",
+   "gold": [
+    "time_since_disturbance",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "time_since_disturbance"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "label",
+   "q": "What effect does wetland creation & marsh restoration have on species richness?",
+   "gold": [
+    "wetland_creation",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "wetland_creation"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "label",
+   "q": "What effect does organic & soil amendments have on species richness?",
+   "gold": [
+    "organic_soil_amendment",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "organic_soil_amendment"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "label",
+   "q": "What effect does seed supply & propagule pressure have on species richness?",
+   "gold": [
+    "seed_supply",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "seed_supply"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "label",
+   "q": "What effect does soil moisture & water content have on species richness?",
+   "gold": [
+    "soil_moisture_water",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "soil_moisture_water"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "label",
+   "q": "What effect does forest harvesting (general) have on species richness?",
+   "gold": [
+    "harvest_general",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "harvest_general"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "label",
+   "q": "What effect does competing vegetation have on species richness?",
+   "gold": [
+    "competing_vegetation",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "competing_vegetation"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "label",
+   "q": "What effect does peat extraction have on species richness?",
+   "gold": [
+    "peat_extraction",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "peat_extraction"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does slashburn have on species richness?",
+   "gold": [
+    "prescribed_burning",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "prescribed_burning"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does fires have on population growth?",
+   "gold": [
+    "wildfire",
+    "population_size_trend"
+   ],
+   "got": [
+    [
+     "wildfire",
+     "prescribed_burning"
+    ],
+    [
+     "population_size_trend"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does riparian retention have on fish survival?",
+   "gold": [
+    "woody_debris_retention",
+    "wildlife_mortality"
+   ],
+   "got": [
+    [
+     "woody_debris_retention"
+    ],
+    [
+     "wildlife_mortality",
+     "fish_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does temperature have on water level?",
+   "gold": [
+    "soil_temperature",
+    "water_table_level"
+   ],
+   "got": [
+    [
+     "soil_temperature",
+     "climate_warming"
+    ],
+    [
+     "water_table_level"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does competition have on buckthorn?",
+   "gold": [
+    "competing_vegetation",
+    "invasive_abundance"
+   ],
+   "got": [
+    [
+     "mechanical_release_control",
+     "competing_vegetation"
+    ],
+    [
+     "invasive_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does topsoil have on n2o?",
+   "gold": [
+    "organic_soil_amendment",
+    "methane_emissions"
+   ],
+   "got": [
+    [
+     "sediment_removal",
+     "organic_soil_amendment"
+    ],
+    [
+     "methane_emissions"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does shading have on seed density?",
+   "gold": [
+    "canopy_light",
+    "seed_germination_emergence"
+   ],
+   "got": [
+    [
+     "canopy_light"
+    ],
+    [
+     "seed_germination_emergence",
+     "natural_regeneration",
+     "functional_traits"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does food supplementation have on composition?",
+   "gold": [
+    "species_reintroduction",
+    "community_composition"
+   ],
+   "got": [
+    [
+     "species_reintroduction"
+    ],
+    [
+     "tree_species_composition",
+     "community_composition"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does removal of invasive have on juvenile survival?",
+   "gold": [
+    "invasive_removal",
+    "wildlife_mortality"
+   ],
+   "got": [
+    [
+     "invasive_removal"
+    ],
+    [
+     "wildlife_mortality",
+     "reproductive_success",
+     "fish_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does light availability have on shoot length?",
+   "gold": [
+    "soil_temperature",
+    "tree_growth"
+   ],
+   "got": [
+    [
+     "soil_temperature",
+     "canopy_light"
+    ],
+    [
+     "tree_growth"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does water table have on water potential?",
+   "gold": [
+    "water_table_level",
+    "plant_physiology"
+   ],
+   "got": [
+    [
+     "water_table_level",
+     "peatland_rewetting"
+    ],
+    [
+     "soil_moisture_water",
+     "plant_physiology"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does light availability have on seed yield?",
+   "gold": [
+    "canopy_light",
+    "reproduction_flowering"
+   ],
+   "got": [
+    [
+     "soil_temperature",
+     "canopy_light"
+    ],
+    [
+     "reproduction_flowering"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does water table have on density?",
+   "gold": [
+    "water_table_level",
+    "population_size_trend"
+   ],
+   "got": [
+    [
+     "water_table_level",
+     "peatland_rewetting"
+    ],
+    [
+     "stand_structure",
+     "soil_physical",
+     "seed_germination_emergence",
+     "population_size_trend",
+     "plant_richness",
+     "natural_regeneration",
+     "mammal_abundance",
+     "functional_traits",
+     "fish_abundance",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does precipitation change have on water potential?",
+   "gold": [
+    "climate_warming",
+    "plant_physiology"
+   ],
+   "got": [
+    [
+     "climate_warming"
+    ],
+    [
+     "soil_moisture_water",
+     "plant_physiology"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does outplant have on native species?",
+   "gold": [
+    "tree_planting",
+    "native_abundance"
+   ],
+   "got": [
+    [
+     "tree_planting"
+    ],
+    [
+     "native_abundance",
+     "invasive_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does hydroseeding have on fish survival?",
+   "gold": [
+    "seeding_sowing",
+    "wildlife_mortality"
+   ],
+   "got": [
+    [
+     "seeding_sowing"
+    ],
+    [
+     "wildlife_mortality",
+     "fish_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does water table have on pine?",
+   "gold": [
+    "water_table_level",
+    "tree_species_composition"
+   ],
+   "got": [
+    [
+     "water_table_level",
+     "peatland_rewetting"
+    ],
+    [
+     "tree_species_composition"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does disturbance have on introduced plant?",
+   "gold": [
+    "tourism_recreation",
+    "invasive_abundance"
+   ],
+   "got": [
+    [
+     "tourism_recreation",
+     "time_since_disturbance"
+    ],
+    [
+     "invasive_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does manure have on species richness?",
+   "gold": [
+    "organic_soil_amendment",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "organic_soil_amendment"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does disturbance have on n2o?",
+   "gold": [
+    "tourism_recreation",
+    "methane_emissions"
+   ],
+   "got": [
+    [
+     "tourism_recreation",
+     "time_since_disturbance"
+    ],
+    [
+     "methane_emissions"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does seed dispersal have on richness?",
+   "gold": [
+    "seed_supply",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "seed_supply"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does seedbed have on vole?",
+   "gold": [
+    "site_conditions",
+    "mammal_abundance"
+   ],
+   "got": [
+    [
+     "site_conditions",
+     "mulch_surface_cover"
+    ],
+    [
+     "mammal_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does runoff have on richness?",
+   "gold": [
+    "soil_moisture_water",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "soil_moisture_water"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does harvest have on communities?",
+   "gold": [
+    "harvest_general",
+    "community_composition"
+   ],
+   "got": [
+    [
+     "peat_extraction",
+     "partial_harvest",
+     "harvest_general"
+    ],
+    [
+     "community_composition"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does neighbor have on fruit production?",
+   "gold": [
+    "competing_vegetation",
+    "reproduction_flowering"
+   ],
+   "got": [
+    [
+     "mechanical_release_control",
+     "competing_vegetation"
+    ],
+    [
+     "reproduction_flowering"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does clear-cut have on biomass?",
+   "gold": [
+    "clearcut_harvest",
+    "biomass_productivity"
+   ],
+   "got": [
+    [
+     "clearcut_harvest"
+    ],
+    [
+     "soil_microbial",
+     "fish_abundance",
+     "biomass_productivity"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does release method have on tissue nutrient?",
+   "gold": [
+    "species_reintroduction",
+    "foliar_nutrients"
+   ],
+   "got": [
+    [
+     "species_reintroduction"
+    ],
+    [
+     "water_chemistry",
+     "foliar_nutrients"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does fishway have on plant cover?",
+   "gold": [
+    "engineered_structures",
+    "plant_cover_total"
+   ],
+   "got": [
+    [
+     "engineered_structures"
+    ],
+    [
+     "plant_cover_total",
+     "native_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does competition have on potassium?",
+   "gold": [
+    "competing_vegetation",
+    "soil_nutrients"
+   ],
+   "got": [
+    [
+     "mechanical_release_control",
+     "competing_vegetation"
+    ],
+    [
+     "soil_nutrients"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does water table have on soil respiration?",
+   "gold": [
+    "water_table_level",
+    "carbon_flux"
+   ],
+   "got": [
+    [
+     "water_table_level",
+     "peatland_rewetting"
+    ],
+    [
+     "carbon_flux"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does herbivory have on tissue nutrient?",
+   "gold": [
+    "grazing_browsing",
+    "foliar_nutrients"
+   ],
+   "got": [
+    [
+     "grazing_browsing"
+    ],
+    [
+     "water_chemistry",
+     "foliar_nutrients"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does post-harvest have on plant diversity?",
+   "gold": [
+    "harvest_general",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "harvest_general"
+    ],
+    [
+     "plant_richness",
+     "functional_traits"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does nitrogen deposition have on soil p?",
+   "gold": [
+    "elevated_co2",
+    "soil_nutrients"
+   ],
+   "got": [
+    [
+     "elevated_co2"
+    ],
+    [
+     "soil_temperature",
+     "soil_physical",
+     "soil_ph_chemistry",
+     "soil_organic_carbon",
+     "soil_nutrients",
+     "soil_moisture_water",
+     "soil_microbial",
+     "soil_fauna",
+     "soil_erosion",
+     "carbon_flux",
+     "bare_ground"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does slashburn have on fish?",
+   "gold": [
+    "prescribed_burning",
+    "fish_abundance"
+   ],
+   "got": [
+    [
+     "prescribed_burning"
+    ],
+    [
+     "wildlife_mortality",
+     "fish_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does neighbor have on sublethal?",
+   "gold": [
+    "competing_vegetation",
+    "animal_condition"
+   ],
+   "got": [
+    [
+     "mechanical_release_control",
+     "competing_vegetation"
+    ],
+    [
+     "animal_condition"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does biochar have on foliar p?",
+   "gold": [
+    "organic_soil_amendment",
+    "foliar_nutrients"
+   ],
+   "got": [
+    [
+     "organic_soil_amendment"
+    ],
+    [
+     "foliar_nutrients",
+     "biomass_productivity"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does plowing have on soil carbon?",
+   "gold": [
+    "site_preparation",
+    "soil_organic_carbon"
+   ],
+   "got": [
+    [
+     "site_preparation"
+    ],
+    [
+     "soil_organic_carbon",
+     "carbon_flux"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does captive rear have on population?",
+   "gold": [
+    "species_reintroduction",
+    "population_size_trend"
+   ],
+   "got": [
+    [
+     "species_reintroduction"
+    ],
+    [
+     "wildlife_mortality",
+     "population_size_trend"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does competing vegetation have on plant diversity?",
+   "gold": [
+    "competing_vegetation",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "competing_vegetation"
+    ],
+    [
+     "plant_richness",
+     "functional_traits"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does site type have on soil n?",
+   "gold": [
+    "site_conditions",
+    "soil_nutrients"
+   ],
+   "got": [
+    [
+     "site_conditions"
+    ],
+    [
+     "soil_temperature",
+     "soil_physical",
+     "soil_ph_chemistry",
+     "soil_organic_carbon",
+     "soil_nutrients",
+     "soil_moisture_water",
+     "soil_microbial",
+     "soil_fauna",
+     "soil_erosion",
+     "carbon_flux",
+     "bare_ground"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does inoculation have on seed emergence?",
+   "gold": [
+    "soil_inoculation",
+    "seed_germination_emergence"
+   ],
+   "got": [
+    [
+     "soil_inoculation",
+     "planting_stock_traits"
+    ],
+    [
+     "seed_germination_emergence"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does passive restoration have on density?",
+   "gold": [
+    "restoration_general",
+    "population_size_trend"
+   ],
+   "got": [
+    [
+     "restoration_general"
+    ],
+    [
+     "stand_structure",
+     "soil_physical",
+     "seed_germination_emergence",
+     "population_size_trend",
+     "plant_richness",
+     "natural_regeneration",
+     "mammal_abundance",
+     "functional_traits",
+     "fish_abundance",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does planting have on germination?",
+   "gold": [
+    "tree_planting",
+    "seed_germination_emergence"
+   ],
+   "got": [
+    [
+     "tree_planting",
+     "planting_stock_traits"
+    ],
+    [
+     "seed_germination_emergence"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does slash burn have on tissue nutrient?",
+   "gold": [
+    "prescribed_burning",
+    "foliar_nutrients"
+   ],
+   "got": [
+    [
+     "prescribed_burning"
+    ],
+    [
+     "water_chemistry",
+     "foliar_nutrients"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does weed competition have on species diversity?",
+   "gold": [
+    "competing_vegetation",
+    "diversity_indices"
+   ],
+   "got": [
+    [
+     "competing_vegetation"
+    ],
+    [
+     "plant_richness",
+     "diversity_indices"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does vegetation competition have on condition factor?",
+   "gold": [
+    "competing_vegetation",
+    "animal_condition"
+   ],
+   "got": [
+    [
+     "mechanical_release_control",
+     "competing_vegetation"
+    ],
+    [
+     "animal_condition"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does water table have on stocking?",
+   "gold": [
+    "water_table_level",
+    "stand_structure"
+   ],
+   "got": [
+    [
+     "water_table_level",
+     "peatland_rewetting"
+    ],
+    [
+     "stand_structure"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does seedbed have on root mass?",
+   "gold": [
+    "site_conditions",
+    "biomass_productivity"
+   ],
+   "got": [
+    [
+     "site_conditions",
+     "mulch_surface_cover"
+    ],
+    [
+     "biomass_productivity"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does inoculation have on seedling survival?",
+   "gold": [
+    "soil_inoculation",
+    "tree_seedling_survival"
+   ],
+   "got": [
+    [
+     "soil_inoculation",
+     "planting_stock_traits"
+    ],
+    [
+     "tree_seedling_survival"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does air temperature have on native plant?",
+   "gold": [
+    "soil_temperature",
+    "native_abundance"
+   ],
+   "got": [
+    [
+     "soil_temperature"
+    ],
+    [
+     "native_abundance",
+     "invasive_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does sediment removal have on species composition?",
+   "gold": [
+    "sediment_removal",
+    "community_composition"
+   ],
+   "got": [
+    [
+     "sediment_removal"
+    ],
+    [
+     "tree_species_composition",
+     "community_composition"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does years since have on population?",
+   "gold": [
+    "time_since_disturbance",
+    "population_size_trend"
+   ],
+   "got": [
+    [
+     "time_since_disturbance"
+    ],
+    [
+     "wildlife_mortality",
+     "population_size_trend"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does presence of invasive have on height?",
+   "gold": [
+    "invasive_presence",
+    "tree_growth"
+   ],
+   "got": [
+    [
+     "invasive_presence"
+    ],
+    [
+     "tree_growth",
+     "stand_structure"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does elevated co2 have on tissue?",
+   "gold": [
+    "elevated_co2",
+    "water_chemistry"
+   ],
+   "got": [
+    [
+     "elevated_co2"
+    ],
+    [
+     "water_chemistry",
+     "foliar_nutrients"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does reburn have on species diversity?",
+   "gold": [
+    "wildfire",
+    "diversity_indices"
+   ],
+   "got": [
+    [
+     "wildfire"
+    ],
+    [
+     "plant_richness",
+     "diversity_indices"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does light availability have on fungi?",
+   "gold": [
+    "soil_temperature",
+    "soil_microbial"
+   ],
+   "got": [
+    [
+     "soil_temperature",
+     "canopy_light"
+    ],
+    [
+     "soil_microbial"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does soil removal have on concentrations?",
+   "gold": [
+    "sediment_removal",
+    "water_chemistry"
+   ],
+   "got": [
+    [
+     "site_preparation",
+     "sediment_removal"
+    ],
+    [
+     "water_chemistry",
+     "foliar_nutrients"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does logging have on moisture content?",
+   "gold": [
+    "harvest_general",
+    "soil_moisture_water"
+   ],
+   "got": [
+    [
+     "partial_harvest",
+     "harvest_general",
+     "clearcut_harvest"
+    ],
+    [
+     "soil_moisture_water"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does inoculation have on fecundity?",
+   "gold": [
+    "soil_inoculation",
+    "reproduction_flowering"
+   ],
+   "got": [
+    [
+     "soil_inoculation",
+     "planting_stock_traits"
+    ],
+    [
+     "reproduction_flowering"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does plantation forest have on species diversity?",
+   "gold": [
+    "land_use",
+    "diversity_indices"
+   ],
+   "got": [
+    [
+     "land_use"
+    ],
+    [
+     "plant_richness",
+     "diversity_indices"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does fertili have on caddisfl?",
+   "gold": [
+    "fertilization",
+    "insect_invertebrate"
+   ],
+   "got": [
+    [
+     "planting_stock_traits",
+     "fertilization"
+    ],
+    [
+     "insect_invertebrate"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does competition have on collembola?",
+   "gold": [
+    "competing_vegetation",
+    "soil_fauna"
+   ],
+   "got": [
+    [
+     "mechanical_release_control",
+     "competing_vegetation"
+    ],
+    [
+     "soil_fauna"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does hydrological restoration have on native plant?",
+   "gold": [
+    "peatland_rewetting",
+    "native_abundance"
+   ],
+   "got": [
+    [
+     "peatland_rewetting"
+    ],
+    [
+     "native_abundance",
+     "invasive_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does geotextile have on water potential?",
+   "gold": [
+    "mulch_surface_cover",
+    "plant_physiology"
+   ],
+   "got": [
+    [
+     "mulch_surface_cover"
+    ],
+    [
+     "soil_moisture_water",
+     "plant_physiology"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does seedling size class have on soil p?",
+   "gold": [
+    "planting_stock_traits",
+    "soil_nutrients"
+   ],
+   "got": [
+    [
+     "planting_stock_traits"
+    ],
+    [
+     "soil_temperature",
+     "soil_physical",
+     "soil_ph_chemistry",
+     "soil_organic_carbon",
+     "soil_nutrients",
+     "soil_moisture_water",
+     "soil_microbial",
+     "soil_fauna",
+     "soil_erosion",
+     "carbon_flux",
+     "bare_ground"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does nursery fertili have on density?",
+   "gold": [
+    "planting_stock_traits",
+    "population_size_trend"
+   ],
+   "got": [
+    [
+     "planting_stock_traits"
+    ],
+    [
+     "stand_structure",
+     "soil_physical",
+     "seed_germination_emergence",
+     "population_size_trend",
+     "plant_richness",
+     "natural_regeneration",
+     "mammal_abundance",
+     "functional_traits",
+     "fish_abundance",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "paraphrase",
+   "q": "How does prescribed burning affect species richness?",
+   "gold": [
+    "prescribed_burning",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "prescribed_burning"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "paraphrase",
+   "q": "How does time since disturbance / stand age affect species richness?",
+   "gold": [
+    "time_since_disturbance",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "time_since_disturbance"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "paraphrase",
+   "q": "How does wetland creation & marsh restoration affect species richness?",
+   "gold": [
+    "wetland_creation",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "wetland_creation"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "paraphrase",
+   "q": "How does organic & soil amendments affect species richness?",
+   "gold": [
+    "organic_soil_amendment",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "organic_soil_amendment"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "paraphrase",
+   "q": "How does seed supply & propagule pressure affect species richness?",
+   "gold": [
+    "seed_supply",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "seed_supply"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "paraphrase",
+   "q": "How does soil moisture & water content affect species richness?",
+   "gold": [
+    "soil_moisture_water",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "soil_moisture_water"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "paraphrase",
+   "q": "How does forest harvesting (general) affect species richness?",
+   "gold": [
+    "harvest_general",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "harvest_general"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "paraphrase",
+   "q": "How does competing vegetation affect species richness?",
+   "gold": [
+    "competing_vegetation",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "competing_vegetation"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "paraphrase",
+   "q": "How does peat extraction affect species richness?",
+   "gold": [
+    "peat_extraction",
+    "plant_richness"
+   ],
+   "got": [
+    [
+     "peat_extraction"
+    ],
+    [
+     "plant_richness",
+     "bird_abundance"
+    ]
+   ]
+  }
+ ]
+}

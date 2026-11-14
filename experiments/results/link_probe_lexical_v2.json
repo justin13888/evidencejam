@@ -1,0 +1,157 @@
+{
+ "linker": "lexical_v2",
+ "report": {
+  "label": {
+   "n": 400,
+   "both_exact": 1.0,
+   "cause": {
+    "exact": 1.0
+   },
+   "outcome": {
+    "exact": 1.0
+   }
+  },
+  "synonym": {
+   "n": 400,
+   "both_exact": 0.983,
+   "cause": {
+    "exact": 0.983,
+    "tied": 0.018
+   },
+   "outcome": {
+    "exact": 1.0
+   }
+  },
+  "paraphrase": {
+   "n": 400,
+   "both_exact": 1.0,
+   "cause": {
+    "exact": 1.0
+   },
+   "outcome": {
+    "exact": 1.0
+   }
+  }
+ },
+ "misses": [
+  {
+   "set": "synonym",
+   "q": "What effect does hydroseeding have on ghg?",
+   "gold": [
+    "seeding_sowing",
+    "methane_emissions"
+   ],
+   "got": [
+    [
+     "mulch_surface_cover",
+     "seeding_sowing"
+    ],
+    [
+     "methane_emissions"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does hydroseeding have on non-native?",
+   "gold": [
+    "seeding_sowing",
+    "invasive_abundance"
+   ],
+   "got": [
+    [
+     "mulch_surface_cover",
+     "seeding_sowing"
+    ],
+    [
+     "invasive_abundance"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does light availability have on shoot length?",
+   "gold": [
+    "soil_temperature",
+    "tree_growth"
+   ],
+   "got": [
+    [
+     "canopy_light",
+     "soil_temperature"
+    ],
+    [
+     "tree_growth"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does light availability have on seed yield?",
+   "gold": [
+    "canopy_light",
+    "reproduction_flowering"
+   ],
+   "got": [
+    [
+     "canopy_light",
+     "soil_temperature"
+    ],
+    [
+     "reproduction_flowering"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does hydroseeding have on fish survival?",
+   "gold": [
+    "seeding_sowing",
+    "wildlife_mortality"
+   ],
+   "got": [
+    [
+     "mulch_surface_cover",
+     "seeding_sowing"
+    ],
+    [
+     "wildlife_mortality"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does hydroseeding have on evaporation?",
+   "gold": [
+    "seeding_sowing",
+    "soil_moisture_water"
+   ],
+   "got": [
+    [
+     "mulch_surface_cover",
+     "seeding_sowing"
+    ],
+    [
+     "soil_moisture_water"
+    ]
+   ]
+  },
+  {
+   "set": "synonym",
+   "q": "What effect does light availability have on fungi?",
+   "gold": [
+    "soil_temperature",
+    "soil_microbial"
+   ],
+   "got": [
+    [
+     "canopy_light",
+     "soil_temperature"
+    ],
+    [
+     "soil_microbial"
+    ]
+   ]
+  }
+ ]
+}
