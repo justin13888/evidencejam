@@ -5,10 +5,11 @@ each sorted by how many studies they have. A cell shows the number of studies (s
 at least one claim from a node labelled with the row class to a node labelled with the column class,
 or "gap" when there is none. Every cell, gaps included, links to its entry in `gapcells.html`. That
 entry gives a template question for the cell (what a user would ask, and what `ask.sh` takes) and
-links to every question in this run that was linked to that cell, with the status it got. A question
-in a gap cell should come back `no_evidence`, so the map also shows the C14 behaviour.
+links to every question in this run that was linked to that cell, with the status it got. A question is
+listed under every (cause class, outcome class) pair it linked to, so the listings show the C14 behaviour
+(questions on a gap pair come back `no_evidence`) without the page promising it.
 
-Shading only repeats the number in the cell, so no meaning depends on colour alone.
+Shading only repeats the number in the cell (bands in `BANDS`), so no meaning depends on colour alone.
 Static HTML, no script.
 """
 
@@ -27,6 +28,7 @@ from camoreasoning.strategies.extras.baseline import HtmlExtras, _page, _rel, _s
 
 MEMO = "extras.gapmap.run"
 DENSEST = 15  # cells listed under "Where the graph is densest"
+BANDS = (1, 2, 3, 6)  # lowest study count of shades 1-4; fixed so the legend can state them
 
 
 def question_for(cause: str, outcome: str) -> str:
@@ -51,18 +53,9 @@ def study_counts(ctx: Context) -> dict[tuple[str, str], int]:
     return {k: len(v) for k, v in docs.items()}
 
 
-def band(n: int, cuts: tuple[int, ...]) -> int:
-    """Shade 0 (gap) to 4 (densest quarter of non-empty cells)."""
-    if not n:
-        return 0
-    return 1 + sum(n > c for c in cuts)
-
-
-def quartiles(values: list[int]) -> tuple[int, ...]:
-    v = sorted(values)
-    if not v:
-        return (0, 0, 0)
-    return tuple(v[min(len(v) - 1, len(v) * q // 4)] for q in (1, 2, 3))
+def band(n: int) -> int:
+    """Shade 0 (gap), then 1 for 1 study, 2 for 2, 3 for 3 to 5, 4 for 6 or more."""
+    return sum(n >= lo for lo in BANDS)
 
 
 @register("extras", "gapmap")
@@ -89,7 +82,6 @@ class GapMapExtras(HtmlExtras):
         causes, outcomes = self._axes(ctx, counts)
         cells = [(c, o, counts.get((c.id, o.id), 0)) for c in causes for o in outcomes]
         filled = [n for _, _, n in cells if n]
-        cuts = quartiles(filled)
         head = "".join(f'<th scope="col"><span>{escape(o.label)}</span></th>' for o in outcomes)
         rows = []
         for c in causes:
@@ -100,7 +92,7 @@ class GapMapExtras(HtmlExtras):
                 unit = "study" if n == 1 else "studies"
                 text = f'{n}<span class="vh"> {unit}: {where}</span>' if n else f'gap<span class="vh">: {where}</span>'
                 link = f'<a href="gapcells.html#{cell_id(c.id, o.id)}">{text}</a>'
-                tds.append(f'<td class="d{band(n, cuts)}">{link}</td>')
+                tds.append(f'<td class="d{band(n)}">{link}</td>')
             rows.append(f'<tr><th scope="row">{escape(c.label)}</th>{"".join(tds)}</tr>')
         dense = sorted((x for x in cells if x[2]), key=lambda x: -x[2])[:DENSEST]
         dense_li = "".join(
@@ -113,10 +105,9 @@ class GapMapExtras(HtmlExtras):
             "<h1>Evidence gap map</h1>"
             "<p>Rows are interventions and conditions; columns are outcomes. Each cell counts the studies with "
             "at least one claim from the row to the column. <strong>gap</strong> means the graph has no such "
-            "claim, so a question about that pair is answered <em>no evidence</em>. Every cell links to an "
+            "claim. Every cell links to an "
             'example question and to the questions in this run that asked about it (<a href="gapcells.html">'
-            "all cells</a>). Darker shading repeats the count: the densest quarter of non-empty cells is "
-            "darkest.</p>"
+            "all cells</a>). Darker shading repeats the count: 1 study, 2, 3 to 5, and 6 or more.</p>"
             f"<ul><li>{len(causes)} interventions and conditions × {len(outcomes)} outcomes = {len(cells)} cells"
             f"</li><li>{len(filled)} cells have evidence; {len(cells) - len(filled)} are gaps "
             f"({(len(cells) - len(filled)) / max(1, len(cells)):.0%})</li>"
