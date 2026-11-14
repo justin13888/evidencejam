@@ -1,0 +1,40 @@
+{"id": "Q0001", "seed_edge": "camo:edge_b89355ff7d36", "hint_tags": ["trap:null"]}
+{"id": "Q0002", "seed_edge": "camo:edge_c84f7fea92b0", "hint_tags": ["trap:null", "trap:twin"]}
+{"id": "Q0003", "seed_edge": "camo:edge_15a7f5a2b502", "hint_tags": ["trap:null"]}
+{"id": "Q0004", "seed_edge": "camo:edge_7926225dc43d", "hint_tags": ["trap:null"]}
+{"id": "Q0005", "seed_edge": "camo:edge_f4cb3c80e187", "hint_tags": ["trap:null", "trap:twin"]}
+{"id": "Q0006", "seed_edge": "camo:edge_e7edb4cc5c62", "hint_tags": ["trap:null"]}
+{"id": "Q0007", "seed_edge": "camo:edge_c28b15ab9969", "hint_tags": ["trap:null"]}
+{"id": "Q0008", "seed_edge": "camo:edge_93a44ab31517", "hint_tags": ["trap:null", "trap:twin", "trap:reversed"]}
+{"id": "Q0009", "seed_edge": "camo:edge_e34c727f80be", "hint_tags": ["trap:null", "trap:associational"]}
+{"id": "Q0010", "seed_edge": "camo:edge_a90c99c6037b", "hint_tags": ["trap:null"]}
+{"id": "Q0011", "seed_edge": "camo:edge_646311c9ffe5", "hint_tags": ["trap:removed_subject", "trap:associational", "trap:twin"]}
+{"id": "Q0012", "seed_edge": "camo:edge_e03fb29ab25c", "hint_tags": ["trap:removed_subject", "trap:associational"]}
+{"id": "Q0013", "seed_edge": "camo:edge_3bc46b01c1b8", "hint_tags": ["trap:removed_subject", "trap:unchanged", "trap:associational"]}
+{"id": "Q0014", "seed_edge": "camo:edge_77a276de1d11", "hint_tags": ["trap:removed_subject", "trap:associational"]}
+{"id": "Q0015", "seed_edge": "camo:edge_2aafb4574233", "hint_tags": ["trap:removed_subject", "trap:associational"]}
+{"id": "Q0016", "seed_edge": "camo:edge_6e2f988b4a10", "hint_tags": ["trap:removed_subject", "trap:sign_flip", "trap:reversed"]}
+{"id": "Q0017", "seed_edge": "camo:edge_eea9e2034298", "hint_tags": ["trap:removed_subject", "trap:sign_flip"]}
+{"id": "Q0018", "seed_edge": "camo:edge_3fb0b55b2420", "hint_tags": ["trap:removed_subject", "trap:associational", "trap:twin"]}
+{"id": "Q0019", "seed_edge": "camo:edge_89a4624c7ddd", "hint_tags": ["trap:removed_subject", "trap:associational"]}
+{"id": "Q0020", "seed_edge": "camo:edge_2b8f40aaf119", "hint_tags": ["trap:removed_subject", "trap:sign_flip"]}
+{"id": "Q0021", "seed_edge": "camo:edge_1d642419fa78", "hint_tags": ["trap:unchanged", "trap:associational"]}
+{"id": "Q0022", "seed_edge": "camo:edge_9d920a5ac0d8", "hint_tags": ["trap:null", "trap:unchanged"]}
+{"id": "Q0023", "seed_edge": "camo:edge_e6b8eedc3a5c", "hint_tags": ["trap:unchanged"]}
+{"id": "Q0024", "seed_edge": "camo:edge_2f55c72c6255", "hint_tags": ["trap:null", "trap:unchanged", "trap:reversed"]}
+{"id": "Q0025", "seed_edge": "camo:edge_a7f9c1040c5b", "hint_tags": ["trap:null", "trap:unchanged"]}
+{"id": "Q0026", "seed_edge": "camo:edge_d2fc9dcb7a37", "hint_tags": ["trap:unchanged", "trap:associational"]}
+{"id": "Q0027", "seed_edge": "camo:edge_971cc4eba053", "hint_tags": ["trap:unchanged", "trap:associational"]}
+{"id": "Q0028", "seed_edge": "camo:edge_654a9ba69d36", "hint_tags": ["trap:null", "trap:unchanged"]}
+{"id": "Q0029", "seed_edge": "camo:edge_e9217864759e", "hint_tags": ["trap:unchanged", "trap:associational"]}
+{"id": "Q0030", "seed_edge": "camo:edge_d8a1d45471a4", "hint_tags": ["trap:unchanged", "trap:associational"]}
+{"id": "Q0031", "seed_edge": "camo:edge_db94e870bdd7", "hint_tags": ["trap:associational", "trap:twin"]}
+{"id": "Q0032", "seed_edge": "camo:edge_6fae07b2b30e", "hint_tags": ["trap:associational", "trap:twin", "trap:reversed"]}
+{"id": "Q0033", "seed_edge": "camo:edge_1b61a1f07612", "hint_tags": ["trap:associational"]}
+{"id": "Q0034", "seed_edge": "camo:edge_e6141e8e854c", "hint_tags": ["trap:associational"]}
+{"id": "Q0035", "seed_edge": "camo:edge_05da1da4f5dd", "hint_tags": ["trap:associational", "trap:twin"]}
+{"id": "Q0036", "seed_edge": "camo:edge_2897c7463129", "hint_tags": ["trap:associational"]}
+{"id": "Q0037", "seed_edge": "camo:edge_a78b3241e654", "hint_tags": ["trap:associational"]}
+{"id": "Q0038", "seed_edge": "camo:edge_00278aac9f80", "hint_tags": ["trap:associational"]}
+{"id": "Q0039", "seed_edge": "camo:edge_ff915813de2e", "hint_tags": ["trap:associational"]}
+{"id": "Q0040", "seed_edge": "camo:edge_d1a97215ae42", "hint_tags": ["trap:associational", "trap:reversed"]}

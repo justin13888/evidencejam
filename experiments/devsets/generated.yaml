@@ -1,0 +1,2073 @@
+items:
+- id: D-Q0001
+  question: What effect does winter road clearance have on surface elevation?
+  tags:
+  - trap:null
+  split: holdout
+  meta:
+    seed_edge: camo:edge_b89355ff7d36
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0002
+  question: What effect does native hay application have on litter cover?
+  tags:
+  - trap:null
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_c84f7fea92b0
+    hint_tags:
+    - trap:null
+    - trap:twin
+  status: null
+- id: D-Q0003
+  question: What effect does time period have on fruiting potential?
+  tags:
+  - trap:null
+  split: dev
+  meta:
+    seed_edge: camo:edge_15a7f5a2b502
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0004
+  question: What effect does zooplankton reintroduction have on chlorophyll concentration?
+  tags:
+  - trap:null
+  split: dev
+  meta:
+    seed_edge: camo:edge_7926225dc43d
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0005
+  question: What effect does deer presence have on adult tree density?
+  tags:
+  - trap:null
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_f4cb3c80e187
+    hint_tags:
+    - trap:null
+    - trap:twin
+  status: null
+- id: D-Q0006
+  question: What effect does artificial nesting structures have on accumulated heat
+    units?
+  tags:
+  - trap:null
+  split: dev
+  meta:
+    seed_edge: camo:edge_e7edb4cc5c62
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0007
+  question: What effect does mulch application have on native shrub and tree seedling
+    density?
+  tags:
+  - trap:null
+  split: holdout
+  meta:
+    seed_edge: camo:edge_c28b15ab9969
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0008
+  question: What effect does amphibian abundance have on fish biomass?
+  tags:
+  - trap:null
+  - trap:twin
+  - trap:reversed
+  split: dev
+  meta:
+    seed_edge: camo:edge_93a44ab31517
+    hint_tags:
+    - trap:null
+    - trap:twin
+    - trap:reversed
+  status: null
+- id: D-Q0009
+  question: What effect does site location have on nestling survival?
+  tags:
+  - trap:null
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_e34c727f80be
+    hint_tags:
+    - trap:null
+    - trap:associational
+  status: null
+- id: D-Q0010
+  question: What effect does mulch application have on standing crop?
+  tags:
+  - trap:null
+  split: dev
+  meta:
+    seed_edge: camo:edge_a90c99c6037b
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0011
+  question: What effect does water level minimum have on wetland plant assemblage?
+  tags:
+  - trap:removed_subject
+  - trap:associational
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_646311c9ffe5
+    hint_tags:
+    - trap:removed_subject
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0012
+  question: What effect does vegetation removal have on turbulent kinetic energy?
+  tags:
+  - trap:removed_subject
+  - trap:associational
+  split: holdout
+  meta:
+    seed_edge: camo:edge_e03fb29ab25c
+    hint_tags:
+    - trap:removed_subject
+    - trap:associational
+  status: null
+- id: D-Q0013
+  question: What effect does water table position have on vegetation composition?
+  tags:
+  - trap:removed_subject
+  - trap:unchanged
+  - trap:associational
+  split: holdout
+  meta:
+    seed_edge: camo:edge_3bc46b01c1b8
+    hint_tags:
+    - trap:removed_subject
+    - trap:unchanged
+    - trap:associational
+  status: null
+- id: D-Q0014
+  question: What effect does water level have on suspended solids concentration?
+  tags:
+  - trap:removed_subject
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_77a276de1d11
+    hint_tags:
+    - trap:removed_subject
+    - trap:associational
+  status: null
+- id: D-Q0015
+  question: What effect does tree cover removal have on tree cover?
+  tags:
+  - trap:removed_subject
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_2aafb4574233
+    hint_tags:
+    - trap:removed_subject
+    - trap:associational
+  status: null
+- id: D-Q0016
+  question: What effect does conifer seedling establishment have on organic matter
+    thickness?
+  tags:
+  - trap:removed_subject
+  - trap:sign_flip
+  - trap:reversed
+  split: dev
+  meta:
+    seed_edge: camo:edge_6e2f988b4a10
+    hint_tags:
+    - trap:removed_subject
+    - trap:sign_flip
+    - trap:reversed
+  status: null
+- id: D-Q0017
+  question: What effect does invasive fish removal have on amphibian colonization?
+  tags:
+  - trap:removed_subject
+  - trap:sign_flip
+  split: dev
+  meta:
+    seed_edge: camo:edge_eea9e2034298
+    hint_tags:
+    - trap:removed_subject
+    - trap:sign_flip
+  status: null
+- id: D-Q0018
+  question: What effect does sulphate concentration have on alkalinity?
+  tags:
+  - trap:removed_subject
+  - trap:associational
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_3fb0b55b2420
+    hint_tags:
+    - trap:removed_subject
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0019
+  question: What effect does forest floor and soil removal have on fungal species
+    richness?
+  tags:
+  - trap:removed_subject
+  - trap:associational
+  split: holdout
+  meta:
+    seed_edge: camo:edge_89a4624c7ddd
+    hint_tags:
+    - trap:removed_subject
+    - trap:associational
+  status: null
+- id: D-Q0020
+  question: What effect does water velocity have on sediment infilling?
+  tags:
+  - trap:removed_subject
+  - trap:sign_flip
+  split: dev
+  meta:
+    seed_edge: camo:edge_2b8f40aaf119
+    hint_tags:
+    - trap:removed_subject
+    - trap:sign_flip
+  status: null
+- id: D-Q0021
+  question: What effect does seeding method have on native species cover?
+  tags:
+  - trap:unchanged
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_1d642419fa78
+    hint_tags:
+    - trap:unchanged
+    - trap:associational
+  status: null
+- id: D-Q0022
+  question: What effect does plot type have on vegetation cover?
+  tags:
+  - trap:null
+  - trap:unchanged
+  split: dev
+  meta:
+    seed_edge: camo:edge_9d920a5ac0d8
+    hint_tags:
+    - trap:null
+    - trap:unchanged
+  status: null
+- id: D-Q0023
+  question: What effect does water chemistry and fish have on zooplankton composition?
+  tags:
+  - trap:unchanged
+  split: dev
+  meta:
+    seed_edge: camo:edge_e6b8eedc3a5c
+    hint_tags:
+    - trap:unchanged
+  status: null
+- id: D-Q0024
+  question: What effect does bird nest survival have on time period?
+  tags:
+  - trap:null
+  - trap:unchanged
+  - trap:reversed
+  split: dev
+  meta:
+    seed_edge: camo:edge_2f55c72c6255
+    hint_tags:
+    - trap:null
+    - trap:unchanged
+    - trap:reversed
+  status: null
+- id: D-Q0025
+  question: What effect does breeding timing have on nest parasitism?
+  tags:
+  - trap:null
+  - trap:unchanged
+  split: dev
+  meta:
+    seed_edge: camo:edge_a7f9c1040c5b
+    hint_tags:
+    - trap:null
+    - trap:unchanged
+  status: null
+- id: D-Q0026
+  question: What effect does sediment depth have on volatile solids concentration?
+  tags:
+  - trap:unchanged
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_d2fc9dcb7a37
+    hint_tags:
+    - trap:unchanged
+    - trap:associational
+  status: null
+- id: D-Q0027
+  question: What effect does restoration status have on microbial biomass?
+  tags:
+  - trap:unchanged
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_971cc4eba053
+    hint_tags:
+    - trap:unchanged
+    - trap:associational
+  status: null
+- id: D-Q0028
+  question: What effect does habitat restoration status have on bird fledgling number?
+  tags:
+  - trap:null
+  - trap:unchanged
+  split: dev
+  meta:
+    seed_edge: camo:edge_654a9ba69d36
+    hint_tags:
+    - trap:null
+    - trap:unchanged
+  status: null
+- id: D-Q0029
+  question: What effect does position within harvest strip have on vascular plant
+    cover?
+  tags:
+  - trap:unchanged
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_e9217864759e
+    hint_tags:
+    - trap:unchanged
+    - trap:associational
+  status: null
+- id: D-Q0030
+  question: What effect does passive restoration have on understorey plant composition?
+  tags:
+  - trap:unchanged
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_d8a1d45471a4
+    hint_tags:
+    - trap:unchanged
+    - trap:associational
+  status: null
+- id: D-Q0031
+  question: What effect does harvest method have on conifer height structure?
+  tags:
+  - trap:associational
+  - trap:twin
+  split: holdout
+  meta:
+    seed_edge: camo:edge_db94e870bdd7
+    hint_tags:
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0032
+  question: What effect does zooplankton presence have on lake acidification?
+  tags:
+  - trap:associational
+  - trap:twin
+  - trap:reversed
+  split: dev
+  meta:
+    seed_edge: camo:edge_6fae07b2b30e
+    hint_tags:
+    - trap:associational
+    - trap:twin
+    - trap:reversed
+  status: null
+- id: D-Q0033
+  question: What effect does proximity to linear disturbances have on large mammal
+    movement?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_1b61a1f07612
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0034
+  question: What effect does deciduous tree cover have on conifer volume growth?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_e6141e8e854c
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0035
+  question: What effect does salmonid abundance have on fish abundance?
+  tags:
+  - trap:associational
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_05da1da4f5dd
+    hint_tags:
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0036
+  question: What effect does reclaimed mine land have on bird fledging success?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_2897c7463129
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0037
+  question: What effect does geographic distance have on seed production?
+  tags:
+  - trap:associational
+  split: holdout
+  meta:
+    seed_edge: camo:edge_a78b3241e654
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0038
+  question: What effect does tree planting density have on soil temperature?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_00278aac9f80
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0039
+  question: What effect does old growth status have on spring flowering plant proportion?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_ff915813de2e
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0040
+  question: What effect does egg-to-predator ratio have on lake location?
+  tags:
+  - trap:associational
+  - trap:reversed
+  split: dev
+  meta:
+    seed_edge: camo:edge_d1a97215ae42
+    hint_tags:
+    - trap:associational
+    - trap:reversed
+  status: null
+- id: D-Q0041
+  question: What effect does release technique have on predation mortality?
+  tags:
+  - trap:sign_flip
+  split: holdout
+  meta:
+    seed_edge: camo:edge_8118bbb7c131
+    hint_tags:
+    - trap:sign_flip
+  status: null
+- id: D-Q0042
+  question: What effect does slow release fertilizer application have on plant leaf
+    area?
+  tags:
+  - trap:sign_flip
+  split: dev
+  meta:
+    seed_edge: camo:edge_64dcb8ea730c
+    hint_tags:
+    - trap:sign_flip
+  status: null
+- id: D-Q0043
+  question: What effect does biosolids application have on forb frequency?
+  tags:
+  - trap:sign_flip
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_7f5d2b4385c1
+    hint_tags:
+    - trap:sign_flip
+    - trap:twin
+  status: null
+- id: D-Q0044
+  question: What effect does herbicide disturbance treatment have on grass reproductive
+    effort?
+  tags:
+  - trap:sign_flip
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_19f8f07f5d10
+    hint_tags:
+    - trap:sign_flip
+    - trap:twin
+  status: null
+- id: D-Q0045
+  question: What effect does brood parasitism have on nest survival?
+  tags:
+  - trap:sign_flip
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_4ea2870e74f1
+    hint_tags:
+    - trap:sign_flip
+    - trap:twin
+  status: null
+- id: D-Q0046
+  question: What effect does river regulation have on flow conditions?
+  tags:
+  - trap:sign_flip
+  split: dev
+  meta:
+    seed_edge: camo:edge_df45f5c2eb06
+    hint_tags:
+    - trap:sign_flip
+  status: null
+- id: D-Q0047
+  question: What effect does combined mowing, burning and herbicide have on native
+    graminoid cover?
+  tags:
+  - trap:sign_flip
+  split: dev
+  meta:
+    seed_edge: camo:edge_5d2d2e187ed3
+    hint_tags:
+    - trap:sign_flip
+  status: null
+- id: D-Q0048
+  question: What effect does beaver lodge activity have on burn frequency?
+  tags:
+  - trap:sign_flip
+  - trap:reversed
+  split: dev
+  meta:
+    seed_edge: camo:edge_6367c8e10858
+    hint_tags:
+    - trap:sign_flip
+    - trap:reversed
+  status: null
+- id: D-Q0049
+  question: What effect does vegetation suppression have on planted tree cover?
+  tags:
+  - trap:sign_flip
+  split: dev
+  meta:
+    seed_edge: camo:edge_3be4a8e85175
+    hint_tags:
+    - trap:sign_flip
+  status: null
+- id: D-Q0050
+  question: What effect does insect defoliation have on forest floor carbon to nitrogen
+    ratio?
+  tags:
+  - trap:sign_flip
+  split: holdout
+  meta:
+    seed_edge: camo:edge_d8ec6d9d57fb
+    hint_tags:
+    - trap:sign_flip
+  status: null
+- id: D-Q0051
+  question: What effect does disturbed area presence have on large mammal avoidance?
+  tags:
+  - trap:associational
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_89b49d403051
+    hint_tags:
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0052
+  question: What effect does undisturbed stands have on exotic plant presence?
+  tags:
+  - trap:associational
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_1c1c3e0945d0
+    hint_tags:
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0053
+  question: What effect does mulching have on non-native plant shoot density?
+  tags:
+  - trap:sign_flip
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_18ac0bfc5067
+    hint_tags:
+    - trap:sign_flip
+    - trap:twin
+  status: null
+- id: D-Q0054
+  question: What effect does moisture retention cover layer have on water metal concentration?
+  tags:
+  - trap:sign_flip
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_633a47be3f8f
+    hint_tags:
+    - trap:sign_flip
+    - trap:twin
+  status: null
+- id: D-Q0055
+  question: What effect does edge habitat presence have on large mammal habitat selection?
+  tags:
+  - trap:associational
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_99cc6159344e
+    hint_tags:
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0056
+  question: What effect does tree height growth have on tree planting?
+  tags:
+  - trap:null
+  - trap:associational
+  - trap:twin
+  - trap:reversed
+  split: dev
+  meta:
+    seed_edge: camo:edge_9577f358fa11
+    hint_tags:
+    - trap:null
+    - trap:associational
+    - trap:twin
+    - trap:reversed
+  status: null
+- id: D-Q0057
+  question: What effect does herbicide application have on soil moisture?
+  tags:
+  - trap:null
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_20c301f54615
+    hint_tags:
+    - trap:null
+    - trap:twin
+  status: null
+- id: D-Q0058
+  question: What effect does season have on bee abundance?
+  tags:
+  - trap:associational
+  - trap:twin
+  split: holdout
+  meta:
+    seed_edge: camo:edge_5f364a43dd01
+    hint_tags:
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0059
+  question: What effect does winter road clearance have on bryophyte cover?
+  tags:
+  - trap:sign_flip
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_a6be7cb832a8
+    hint_tags:
+    - trap:sign_flip
+    - trap:twin
+  status: null
+- id: D-Q0060
+  question: What effect does causeway breaching have on fish presence?
+  tags:
+  - trap:associational
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_5b4fb534d1e2
+    hint_tags:
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0061
+  question: What effect does cutting treatment have on conifer seedling survival?
+  tags:
+  - trap:unchanged
+  - trap:moderator
+  split: dev
+  meta:
+    seed_edge: camo:edge_e636715ffe44
+    hint_tags:
+    - trap:unchanged
+    - trap:moderator
+  status: null
+- id: D-Q0063
+  question: What effect does habitat type have on bryophyte species richness?
+  tags:
+  - trap:moderator
+  split: dev
+  meta:
+    seed_edge: camo:edge_b8b3d2ceea0c
+    hint_tags:
+    - trap:moderator
+  status: null
+- id: D-Q0064
+  question: What effect does conifer recruit abundance have on fire history?
+  tags:
+  - trap:moderator
+  - trap:reversed
+  split: holdout
+  meta:
+    seed_edge: camo:edge_5b6a779495b4
+    hint_tags:
+    - trap:moderator
+    - trap:reversed
+  status: null
+- id: D-Q0065
+  question: What effect does fertilization have on seedling diameter?
+  tags:
+  - trap:twin
+  - trap:moderator
+  split: dev
+  meta:
+    seed_edge: camo:edge_ee5aa30bcc2d
+    hint_tags:
+    - trap:twin
+    - trap:moderator
+  status: null
+- id: D-Q0066
+  question: What effect does water pH have on dissolved organic carbon concentration?
+  tags:
+  - trap:moderator
+  split: holdout
+  meta:
+    seed_edge: camo:edge_49d54e0e3b20
+    hint_tags:
+    - trap:moderator
+  status: null
+- id: D-Q0067
+  question: What effect does habitat variable weighting have on fish habitat suitability?
+  tags:
+  - trap:moderator
+  split: dev
+  meta:
+    seed_edge: camo:edge_c06d529dc25e
+    hint_tags:
+    - trap:moderator
+  status: null
+- id: D-Q0068
+  question: What effect does eelgrass cover have on fish density?
+  tags:
+  - trap:unchanged
+  - trap:moderator
+  split: dev
+  meta:
+    seed_edge: camo:edge_cf77265884fa
+    hint_tags:
+    - trap:unchanged
+    - trap:moderator
+  status: null
+- id: D-Q0069
+  question: What effect does water table depth have on litter decomposition rate?
+  tags:
+  - trap:moderator
+  split: dev
+  meta:
+    seed_edge: camo:edge_590717722fb3
+    hint_tags:
+    - trap:moderator
+  status: null
+- id: D-Q0070
+  question: What effect does water alkalinity have on zooplankton abundance?
+  tags:
+  - trap:moderator
+  split: holdout
+  meta:
+    seed_edge: camo:edge_9e0060fc3984
+    hint_tags:
+    - trap:moderator
+  status: null
+- id: D-Q0071
+  question: What effect does time since restoration have on insect catch per unit
+    effort?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_22e511358877
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0072
+  question: What effect does tree height and diameter have on site preparation?
+  tags:
+  - trap:null
+  - trap:reversed
+  split: holdout
+  meta:
+    seed_edge: camo:edge_e3e6277c475a
+    hint_tags:
+    - trap:null
+    - trap:reversed
+  status: null
+- id: D-Q0073
+  question: What effect does slash cover have on tree sucker density?
+  tags:
+  - trap:null
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_94f88fca4845
+    hint_tags:
+    - trap:null
+    - trap:twin
+  status: null
+- id: D-Q0074
+  question: What effect does time since clearcutting have on tree species presence?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_7a877f3238d1
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0075
+  question: What effect does catchment identity have on leaf litter mass loss?
+  tags: []
+  split: dev
+  meta:
+    seed_edge: camo:edge_dd016daecd18
+    hint_tags: []
+  status: null
+- id: D-Q0076
+  question: What effect does culvert retrofitting have on fish passage?
+  tags:
+  - trap:twin
+  split: holdout
+  meta:
+    seed_edge: camo:edge_5e44a980e430
+    hint_tags:
+    - trap:twin
+  status: null
+- id: D-Q0077
+  question: What effect does time since protection have on fish family richness?
+  tags:
+  - trap:associational
+  - trap:twin
+  split: holdout
+  meta:
+    seed_edge: camo:edge_70db37179680
+    hint_tags:
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0078
+  question: What effect does stream velocity have on fish habitat preference?
+  tags: []
+  split: dev
+  meta:
+    seed_edge: camo:edge_484a6d2de0db
+    hint_tags: []
+  status: null
+- id: D-Q0079
+  question: What effect does wetland habitat presence have on vascular plant species
+    richness?
+  tags:
+  - trap:null
+  split: holdout
+  meta:
+    seed_edge: camo:edge_4a4bf9b4a7cd
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0080
+  question: What effect does plant cover have on seed mix application?
+  tags:
+  - trap:sign_flip
+  - trap:twin
+  - trap:reversed
+  split: dev
+  meta:
+    seed_edge: camo:edge_496e65f6f633
+    hint_tags:
+    - trap:sign_flip
+    - trap:twin
+    - trap:reversed
+  status: null
+- id: D-Q0081
+  question: What effect does site remediation have on metal concentrations in animal
+    tissue?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_0cf612813eb0
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0082
+  question: What effect does peat thickness have on aquatic plant assemblage presence?
+  tags:
+  - trap:removed_subject
+  - trap:associational
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_eafee255ae91
+    hint_tags:
+    - trap:removed_subject
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0083
+  question: What effect does peat mining have on forest bird density?
+  tags:
+  - trap:null
+  - trap:twin
+  split: holdout
+  meta:
+    seed_edge: camo:edge_fba720f12943
+    hint_tags:
+    - trap:null
+    - trap:twin
+  status: null
+- id: D-Q0084
+  question: What effect does site preparation have on plant vigor?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_655490c88d6f
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0085
+  question: What effect does organic matter input have on macroinvertebrate diversity?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_b806d1e7ea02
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0086
+  question: What effect does microbial biomass have on soil respiration rate?
+  tags:
+  - trap:associational
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_1b6d0728d25d
+    hint_tags:
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0087
+  question: What effect does fish farm closure have on sediment organic matter concentration?
+  tags:
+  - trap:removed_subject
+  split: dev
+  meta:
+    seed_edge: camo:edge_224465823a2d
+    hint_tags:
+    - trap:removed_subject
+  status: null
+- id: D-Q0088
+  question: What effect does seed mortality have on herbicide treatment?
+  tags:
+  - trap:null
+  - trap:reversed
+  split: dev
+  meta:
+    seed_edge: camo:edge_333556712ba2
+    hint_tags:
+    - trap:null
+    - trap:reversed
+  status: null
+- id: D-Q0089
+  question: What effect does liming have on algal biomass?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_3b4060e75715
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0090
+  question: What effect does release location have on animal dispersal direction?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_0ed39fda34ff
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0091
+  question: What effect does soil texture have on soil microbial community structure?
+  tags:
+  - trap:unchanged
+  - trap:associational
+  split: holdout
+  meta:
+    seed_edge: camo:edge_1ec29fd5ff5e
+    hint_tags:
+    - trap:unchanged
+    - trap:associational
+  status: null
+- id: D-Q0092
+  question: What effect does site location have on bird nest success?
+  tags:
+  - trap:null
+  - trap:unchanged
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_d0f3a672cdd3
+    hint_tags:
+    - trap:null
+    - trap:unchanged
+    - trap:twin
+  status: null
+- id: D-Q0093
+  question: What effect does soft release have on captive-reared bird survival?
+  tags:
+  - trap:null
+  split: dev
+  meta:
+    seed_edge: camo:edge_9714cb48111b
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0094
+  question: What effect does metal concentration have on zooplankton community composition?
+  tags:
+  - trap:null
+  split: dev
+  meta:
+    seed_edge: camo:edge_ca6c93fee36e
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0095
+  question: What effect does vulnerability ranking have on flowering phenology?
+  tags:
+  - trap:associational
+  split: holdout
+  meta:
+    seed_edge: camo:edge_6bdb3d555a6b
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0096
+  question: What effect does plant photosynthetic performance have on water type?
+  tags:
+  - trap:twin
+  - trap:reversed
+  split: dev
+  meta:
+    seed_edge: camo:edge_c990902f5fc0
+    hint_tags:
+    - trap:twin
+    - trap:reversed
+  status: null
+- id: D-Q0097
+  question: What effect does time since disturbance have on bee species richness?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_5b8e29127aa9
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0098
+  question: What effect does peatland edge location have on water pH?
+  tags:
+  - trap:associational
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_5395961a6efd
+    hint_tags:
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0099
+  question: What effect does breeding timing have on bird fledging success?
+  tags:
+  - trap:null
+  split: dev
+  meta:
+    seed_edge: camo:edge_e16514a4b63e
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0101
+  question: What effect does invasive fish abundance have on native fish abundance?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_de3a25c2b355
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0102
+  question: What effect does vertical cover have on browsing incidence?
+  tags:
+  - trap:removed_subject
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_6bb93191e24b
+    hint_tags:
+    - trap:removed_subject
+    - trap:associational
+  status: null
+- id: D-Q0103
+  question: What effect does treatment type have on hydrocarbon degradation rate?
+  tags:
+  - trap:null
+  split: dev
+  meta:
+    seed_edge: camo:edge_ad2ba30c1e86
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0104
+  question: What effect does conifer leaf mass have on coversoil?
+  tags:
+  - trap:twin
+  - trap:reversed
+  split: holdout
+  meta:
+    seed_edge: camo:edge_be0d4d8473b0
+    hint_tags:
+    - trap:twin
+    - trap:reversed
+  status: null
+- id: D-Q0105
+  question: What effect does liming have on soil chemistry?
+  tags: []
+  split: dev
+  meta:
+    seed_edge: camo:edge_fcb8f0a9ee5a
+    hint_tags: []
+  status: null
+- id: D-Q0106
+  question: What effect does ash addition have on graminoid seedling emergence?
+  tags:
+  - trap:twin
+  split: holdout
+  meta:
+    seed_edge: camo:edge_f6988276e625
+    hint_tags:
+    - trap:twin
+  status: null
+- id: D-Q0107
+  question: What effect does treatment site type have on small mammal survival?
+  tags:
+  - trap:null
+  split: dev
+  meta:
+    seed_edge: camo:edge_8ab4784632f7
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0108
+  question: What effect does forest floor mixing have on conifer seedling biomass?
+  tags:
+  - trap:null
+  split: dev
+  meta:
+    seed_edge: camo:edge_1f5f5f368bf6
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0109
+  question: What effect does prescribed fire have on soil nutrient availability?
+  tags:
+  - trap:twin
+  split: holdout
+  meta:
+    seed_edge: camo:edge_7d740818d86c
+    hint_tags:
+    - trap:twin
+  status: null
+- id: D-Q0110
+  question: What effect does seedling age have on ectomycorrhizal fungal community
+    composition?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_2d54f5d7e7ce
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0111
+  question: What effect does organic matter biomass have on macroinvertebrate abundance?
+  tags:
+  - trap:associational
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_bbf6b0c9753f
+    hint_tags:
+    - trap:associational
+    - trap:twin
+  status: null
+- id: D-Q0112
+  question: What effect does invertebrate biomass have on invasive crayfish introduction?
+  tags:
+  - trap:sign_flip
+  - trap:reversed
+  split: holdout
+  meta:
+    seed_edge: camo:edge_e05a5f62c6b3
+    hint_tags:
+    - trap:sign_flip
+    - trap:reversed
+  status: null
+- id: D-Q0113
+  question: What effect does acidic deposition have on lake water pH?
+  tags:
+  - trap:removed_subject
+  - trap:unchanged
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_f26649081735
+    hint_tags:
+    - trap:removed_subject
+    - trap:unchanged
+    - trap:associational
+  status: null
+- id: D-Q0114
+  question: What effect does invasive crayfish presence have on benthic algae abundance?
+  tags:
+  - trap:sign_flip
+  split: dev
+  meta:
+    seed_edge: camo:edge_82348270580f
+    hint_tags:
+    - trap:sign_flip
+  status: null
+- id: D-Q0115
+  question: What effect does herbicide application have on native grass cover?
+  tags:
+  - trap:null
+  split: holdout
+  meta:
+    seed_edge: camo:edge_4a7ab802a6f0
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0116
+  question: What effect does fertilization have on soil nutrient supply rate?
+  tags:
+  - trap:null
+  split: dev
+  meta:
+    seed_edge: camo:edge_5e8400c03987
+    hint_tags:
+    - trap:null
+  status: null
+- id: D-Q0117
+  question: What effect does seedling height have on browsing incidence?
+  tags:
+  - trap:associational
+  split: dev
+  meta:
+    seed_edge: camo:edge_063e5f6eeea2
+    hint_tags:
+    - trap:associational
+  status: null
+- id: D-Q0118
+  question: What effect does seeding have on forb cover?
+  tags:
+  - trap:null
+  - trap:twin
+  split: dev
+  meta:
+    seed_edge: camo:edge_69f3ef635991
+    hint_tags:
+    - trap:null
+    - trap:twin
+  status: null
+- id: D-Q0119
+  question: What effect does surface roughness have on deciduous seedling establishment?
+  tags: []
+  split: dev
+  meta:
+    seed_edge: camo:edge_2e11d901ae72
+    hint_tags: []
+  status: null
+- id: D-Q0120
+  question: What effect does bird hatching success have on food supplementation?
+  tags:
+  - trap:null
+  - trap:reversed
+  split: holdout
+  meta:
+    seed_edge: camo:edge_557cd380f1a4
+    hint_tags:
+    - trap:null
+    - trap:reversed
+  status: null
+- id: D-Q0121
+  question: What effect does initial starch concentration have on root and stem carbohydrate
+    concentration?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_a195aaf6a354
+    - camo:node_51185c135d71
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0122
+  question: What effect does water permanency have on habitat stabilization?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_8f9fc3eb203c
+    - camo:node_cad491aab293
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0123
+  question: What effect does growing season flow have on ground beetle community composition?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_189828ea6bde
+    - camo:node_3131fb086876_variable
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0124
+  question: What effect does habitat type have on willow family seedling mortality?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_3e4da24975be
+    - camo:node_6894cf068fd9_variable
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0125
+  question: What effect does reclamation age have on tree water potential?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_12166be070f8
+    - camo:node_fcf66f9da2fe
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0126
+  question: What effect does logging have on conifer seedling browse damage?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_ff2ba1402627
+    - camo:node_23efc3c3b9da_variable
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0127
+  question: What effect does genetic origin of fish have on species richness of vulnerable
+    species?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_0adf7bdc4b20
+    - camo:node_3b67ebc40ac6
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0128
+  question: What effect does sod transplantation have on fish rearing habitat area?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_4ee0c27204f8
+    - camo:node_39915e54b0cb
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0129
+  question: What effect does nitrogen addition have on native grass seedling survival?
+  tags:
+  - pair
+  split: holdout
+  meta:
+    pair:
+    - camo:node_a982a26439c8
+    - camo:node_2ceb55080fd6_variable
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0130
+  question: What effect does soil mixing have on hardwood seedling size?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_a0e8f970d352
+    - camo:node_381d1dacb6f2
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0131
+  question: What effect does moss dominance have on foliar tannin concentration?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_0ecccb58dd37
+    - camo:node_0a29299daba1
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0132
+  question: What effect does tree shoot to root ratio have on herb diversity?
+  tags:
+  - pair
+  split: holdout
+  meta:
+    pair:
+    - camo:node_5290c96078b6
+    - camo:node_58058351ade5
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0133
+  question: What effect does straw mulch addition have on seedling height to diameter
+    ratio?
+  tags:
+  - pair
+  split: holdout
+  meta:
+    pair:
+    - camo:node_34a09c90e881
+    - camo:node_e4bed9cfd297
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0134
+  question: What effect does donor soil application have on large tree abundance?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_57d995bf40b7
+    - camo:node_1df2f816e1ff
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0135
+  question: What effect does incubation temperature have on total plant cover?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_093ec5adbf4f
+    - camo:node_ca5d480d8166_variable
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0136
+  question: What effect does controlled-release fertilizer application have on seedling
+    emergence rate?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_29dac4d7170b
+    - camo:node_7a88d7f543db
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0137
+  question: What effect does slash cover have on bare ground cover?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_1c6d30ea8106
+    - camo:node_696b3e419e18
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0138
+  question: What effect does site disturbance have on non-native grass cover?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_1e0b10d53217
+    - camo:node_8ebb3e0eb906
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0139
+  question: What effect does depositional invertebrate abundance have on soil organic
+    matter concentration?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_9803b6af5864
+    - camo:node_cf5a29e8d675
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0140
+  question: What effect does prescribed burning have on large tree abundance?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_4c1031429be2
+    - camo:node_1df2f816e1ff
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0141
+  question: What effect does brood parasite egg removal have on aspen sucker height?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_d8c3f5aac3f1
+    - camo:node_de1474ff19a4_variable
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0142
+  question: What effect does time since restoration have on ectomycorrhizal formation?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_0f92aeaf5183
+    - camo:node_317ed8f8e2cd
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0143
+  question: What effect does nitrogen addition have on water temperature?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_a982a26439c8
+    - camo:node_5e15c5aaf7a9_variable
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0144
+  question: What effect does microbial biomass nitrogen have on native species evenness?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_6e349b70d8cc
+    - camo:node_a9baed3f41e1
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0145
+  question: What effect does old growth forest have on benthic invertebrate biomass?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_c9a1755d8001
+    - camo:node_508b58830dbf
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0146
+  question: What effect does pollution source remediation have on conifer tree stem
+    diameter?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_55daa8927668
+    - camo:node_1c4fb4ebdba5
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0147
+  question: What effect does wild versus hatchery-reared origin have on fish presence?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_429bfa0d6f79
+    - camo:node_4d1c3dac16fb
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0148
+  question: What effect does environmental conditions have on weedy plant abundance?
+  tags:
+  - pair
+  split: holdout
+  meta:
+    pair:
+    - camo:node_9521e67644e7
+    - camo:node_fa97436d97fd
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0149
+  question: What effect does hunting have on riparian bird abundance?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_69e9768a159c
+    - camo:node_38bbadffba29
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0150
+  question: What effect does peat depth have on allele frequencies?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_fd25d542b06f
+    - camo:node_d26a8f50cccd
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0151
+  question: What effect does old growth forest have on forest bird density?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_49f89cce0d19
+    - camo:node_06459627f081_variable
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0152
+  question: What effect does hatchery-reared fish have on soil hydraulic conductivity?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_caf5e883be0d
+    - camo:node_c32a0030ceeb
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0153
+  question: What effect does terrain position have on forest bird density?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_f250020c31f2
+    - camo:node_f14de88247ed
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0154
+  question: What effect does shrub cover have on plant species richness?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_878428291b62
+    - camo:node_a931f743114d
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0155
+  question: What effect does soil nitrate concentration have on moss cover?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_a8bb5efdbbdc
+    - camo:node_76824da807e4
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0156
+  question: What effect does time since restoration have on understory plant cover?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_409b225684d3
+    - camo:node_060c3b8f9c50
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0157
+  question: What effect does soil texture have on water velocity?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_c48dc7777ff4
+    - camo:node_2692daf6da0d
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0158
+  question: What effect does invasive fish removal have on soil ammonium concentration?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_910daf1c6208
+    - camo:node_159cd177f36d
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0159
+  question: What effect does pyrogenic carbon addition have on stem density?
+  tags:
+  - pair
+  split: holdout
+  meta:
+    pair:
+    - camo:node_e8dc63eed66e
+    - camo:node_8481350aace0
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0160
+  question: What effect does tree foliage growth have on tree dominance?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_39556407c308
+    - camo:node_71cf074183d2
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0161
+  question: What effect does season have on soil bulk density?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_cef1c82bb87d
+    - camo:node_a6c5fb9e6346
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0162
+  question: What effect does site presence have on tree growth?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_7cb235bdf02c
+    - camo:node_aa34b87736fc_variable
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0163
+  question: What effect does habitat restoration have on seedling stem diameter growth?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_fb21fe3bae3a
+    - camo:node_3f3d39ed6221_variable
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0164
+  question: What effect does pond construction or enhancement have on invasive fish
+    presence?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_86e4a040432b
+    - camo:node_b8a749c41291
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0165
+  question: What effect does fish size have on soil available nitrogen?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_b2a4bd077f55
+    - camo:node_277b7de6a889
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0166
+  question: What effect does regulation changes have on herb cover?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_005d6bfe0742
+    - camo:node_5b0a12c54b0b
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0167
+  question: What effect does season have on salmon escapement?
+  tags:
+  - pair
+  split: holdout
+  meta:
+    pair:
+    - camo:node_901807c61fa4
+    - camo:node_4c764ebfceae
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0168
+  question: What effect does water trace metal and ion concentration have on metal
+    concentration in crustacean tissue?
+  tags:
+  - pair
+  split: holdout
+  meta:
+    pair:
+    - camo:node_65264072fd49
+    - camo:node_6a6d74bc8c59
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0169
+  question: What effect does timing of breeding have on forb diversity?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_c0813d9ada46
+    - camo:node_b46c56a88e1a
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0170
+  question: What effect does ground cover treatment type have on saprophage species
+    richness?
+  tags:
+  - pair
+  split: holdout
+  meta:
+    pair:
+    - camo:node_f20b7d817b6a
+    - camo:node_c50869b63868
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0171
+  question: What effect does container type for forb transplants have on plant tissue
+    potassium concentration?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_0cd75f7ee8ec
+    - camo:node_bf983a0983fe
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0172
+  question: What effect does primary productivity have on benthic invertebrate diversity?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_f1f4c1907d0c
+    - camo:node_c6dd6c87ce5e
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0173
+  question: What effect does straw amendment have on forest floor extractable phosphorus?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_12c2f141b97d
+    - camo:node_4f23be6cedd0
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0174
+  question: What effect does liming have on plant taxon frequency?
+  tags:
+  - pair
+  split: holdout
+  meta:
+    pair:
+    - camo:node_bfb130fb4782
+    - camo:node_1ee5ce966caa
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0175
+  question: What effect does graminoid cover have on soil exchangeable calcium and
+    magnesium?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_6d5dd9e710a8
+    - camo:node_4b2754503894
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0176
+  question: What effect does substrate application have on streamflow?
+  tags:
+  - pair
+  split: holdout
+  meta:
+    pair:
+    - camo:node_c04c92d83c52
+    - camo:node_f9be9bd1a060_variable
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0177
+  question: What effect does restoration treatments have on planted conifer stem diameter?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_d13536d962b5
+    - camo:node_0002711e0792
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0178
+  question: What effect does harvest method have on soil basal respiration?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_0f8b72fa7fe4
+    - camo:node_eb4def0ed410
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0179
+  question: What effect does site preparation have on algal biomass?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_8d1143f48c44
+    - camo:node_94115f9c8e80
+    hint_tags:
+    - pair
+  status: null
+- id: D-Q0180
+  question: What effect does lead residues in small mammals have on water content
+    stability?
+  tags:
+  - pair
+  split: dev
+  meta:
+    pair:
+    - camo:node_c7ac32b46a68
+    - camo:node_17cff732d568
+    hint_tags:
+    - pair
+  status: null

@@ -1,0 +1,180 @@
+{"id": "Q0001", "cause": "winter road clearance", "outcome": "surface elevation", "_meta": {"seed_edge": "camo:edge_b89355ff7d36", "hint_tags": ["trap:null"]}}
+{"id": "Q0002", "cause": "native hay application", "outcome": "litter cover", "_meta": {"seed_edge": "camo:edge_c84f7fea92b0", "hint_tags": ["trap:null", "trap:twin"]}}
+{"id": "Q0003", "cause": "time period", "outcome": "fruiting potential", "_meta": {"seed_edge": "camo:edge_15a7f5a2b502", "hint_tags": ["trap:null"]}}
+{"id": "Q0004", "cause": "zooplankton reintroduction", "outcome": "chlorophyll concentration", "_meta": {"seed_edge": "camo:edge_7926225dc43d", "hint_tags": ["trap:null"]}}
+{"id": "Q0005", "cause": "deer presence", "outcome": "adult tree density", "_meta": {"seed_edge": "camo:edge_f4cb3c80e187", "hint_tags": ["trap:null", "trap:twin"]}}
+{"id": "Q0006", "cause": "artificial nesting structures", "outcome": "accumulated heat units", "_meta": {"seed_edge": "camo:edge_e7edb4cc5c62", "hint_tags": ["trap:null"]}}
+{"id": "Q0007", "cause": "mulch application", "outcome": "native shrub and tree seedling density", "_meta": {"seed_edge": "camo:edge_c28b15ab9969", "hint_tags": ["trap:null"]}}
+{"id": "Q0008", "cause": "amphibian abundance", "outcome": "fish biomass", "_meta": {"seed_edge": "camo:edge_93a44ab31517", "hint_tags": ["trap:null", "trap:twin", "trap:reversed"]}}
+{"id": "Q0009", "cause": "site location", "outcome": "nestling survival", "_meta": {"seed_edge": "camo:edge_e34c727f80be", "hint_tags": ["trap:null", "trap:associational"]}}
+{"id": "Q0010", "cause": "mulch application", "outcome": "standing crop", "_meta": {"seed_edge": "camo:edge_a90c99c6037b", "hint_tags": ["trap:null"]}}
+{"id": "Q0011", "cause": "water level minimum", "outcome": "wetland plant assemblage", "_meta": {"seed_edge": "camo:edge_646311c9ffe5", "hint_tags": ["trap:removed_subject", "trap:associational", "trap:twin"]}}
+{"id": "Q0012", "cause": "vegetation removal", "outcome": "turbulent kinetic energy", "_meta": {"seed_edge": "camo:edge_e03fb29ab25c", "hint_tags": ["trap:removed_subject", "trap:associational"]}}
+{"id": "Q0013", "cause": "water table position", "outcome": "vegetation composition", "_meta": {"seed_edge": "camo:edge_3bc46b01c1b8", "hint_tags": ["trap:removed_subject", "trap:unchanged", "trap:associational"]}}
+{"id": "Q0014", "cause": "water level", "outcome": "suspended solids concentration", "_meta": {"seed_edge": "camo:edge_77a276de1d11", "hint_tags": ["trap:removed_subject", "trap:associational"]}}
+{"id": "Q0015", "cause": "tree cover removal", "outcome": "tree cover", "_meta": {"seed_edge": "camo:edge_2aafb4574233", "hint_tags": ["trap:removed_subject", "trap:associational"]}}
+{"id": "Q0016", "cause": "conifer seedling establishment", "outcome": "organic matter thickness", "_meta": {"seed_edge": "camo:edge_6e2f988b4a10", "hint_tags": ["trap:removed_subject", "trap:sign_flip", "trap:reversed"]}}
+{"id": "Q0017", "cause": "invasive fish removal", "outcome": "amphibian colonization", "_meta": {"seed_edge": "camo:edge_eea9e2034298", "hint_tags": ["trap:removed_subject", "trap:sign_flip"]}}
+{"id": "Q0018", "cause": "sulphate concentration", "outcome": "alkalinity", "_meta": {"seed_edge": "camo:edge_3fb0b55b2420", "hint_tags": ["trap:removed_subject", "trap:associational", "trap:twin"]}}
+{"id": "Q0019", "cause": "forest floor and soil removal", "outcome": "fungal species richness", "_meta": {"seed_edge": "camo:edge_89a4624c7ddd", "hint_tags": ["trap:removed_subject", "trap:associational"]}}
+{"id": "Q0020", "cause": "water velocity", "outcome": "sediment infilling", "_meta": {"seed_edge": "camo:edge_2b8f40aaf119", "hint_tags": ["trap:removed_subject", "trap:sign_flip"]}}
+{"id": "Q0021", "cause": "seeding method", "outcome": "native species cover", "_meta": {"seed_edge": "camo:edge_1d642419fa78", "hint_tags": ["trap:unchanged", "trap:associational"]}}
+{"id": "Q0022", "cause": "plot type", "outcome": "vegetation cover", "_meta": {"seed_edge": "camo:edge_9d920a5ac0d8", "hint_tags": ["trap:null", "trap:unchanged"]}}
+{"id": "Q0023", "cause": "water chemistry and fish", "outcome": "zooplankton composition", "_meta": {"seed_edge": "camo:edge_e6b8eedc3a5c", "hint_tags": ["trap:unchanged"]}}
+{"id": "Q0024", "cause": "bird nest survival", "outcome": "time period", "_meta": {"seed_edge": "camo:edge_2f55c72c6255", "hint_tags": ["trap:null", "trap:unchanged", "trap:reversed"]}}
+{"id": "Q0025", "cause": "breeding timing", "outcome": "nest parasitism", "_meta": {"seed_edge": "camo:edge_a7f9c1040c5b", "hint_tags": ["trap:null", "trap:unchanged"]}}
+{"id": "Q0026", "cause": "sediment depth", "outcome": "volatile solids concentration", "_meta": {"seed_edge": "camo:edge_d2fc9dcb7a37", "hint_tags": ["trap:unchanged", "trap:associational"]}}
+{"id": "Q0027", "cause": "restoration status", "outcome": "microbial biomass", "_meta": {"seed_edge": "camo:edge_971cc4eba053", "hint_tags": ["trap:unchanged", "trap:associational"]}}
+{"id": "Q0028", "cause": "habitat restoration status", "outcome": "bird fledgling number", "_meta": {"seed_edge": "camo:edge_654a9ba69d36", "hint_tags": ["trap:null", "trap:unchanged"]}}
+{"id": "Q0029", "cause": "position within harvest strip", "outcome": "vascular plant cover", "_meta": {"seed_edge": "camo:edge_e9217864759e", "hint_tags": ["trap:unchanged", "trap:associational"]}}
+{"id": "Q0030", "cause": "passive restoration", "outcome": "understorey plant composition", "_meta": {"seed_edge": "camo:edge_d8a1d45471a4", "hint_tags": ["trap:unchanged", "trap:associational"]}}
+{"id": "Q0031", "cause": "harvest method", "outcome": "conifer height structure", "_meta": {"seed_edge": "camo:edge_db94e870bdd7", "hint_tags": ["trap:associational", "trap:twin"]}}
+{"id": "Q0032", "cause": "zooplankton presence", "outcome": "lake acidification", "_meta": {"seed_edge": "camo:edge_6fae07b2b30e", "hint_tags": ["trap:associational", "trap:twin", "trap:reversed"]}}
+{"id": "Q0033", "cause": "proximity to linear disturbances", "outcome": "large mammal movement", "_meta": {"seed_edge": "camo:edge_1b61a1f07612", "hint_tags": ["trap:associational"]}}
+{"id": "Q0034", "cause": "deciduous tree cover", "outcome": "conifer volume growth", "_meta": {"seed_edge": "camo:edge_e6141e8e854c", "hint_tags": ["trap:associational"]}}
+{"id": "Q0035", "cause": "salmonid abundance", "outcome": "fish abundance", "_meta": {"seed_edge": "camo:edge_05da1da4f5dd", "hint_tags": ["trap:associational", "trap:twin"]}}
+{"id": "Q0036", "cause": "reclaimed mine land", "outcome": "bird fledging success", "_meta": {"seed_edge": "camo:edge_2897c7463129", "hint_tags": ["trap:associational"]}}
+{"id": "Q0037", "cause": "geographic distance", "outcome": "seed production", "_meta": {"seed_edge": "camo:edge_a78b3241e654", "hint_tags": ["trap:associational"]}}
+{"id": "Q0038", "cause": "tree planting density", "outcome": "soil temperature", "_meta": {"seed_edge": "camo:edge_00278aac9f80", "hint_tags": ["trap:associational"]}}
+{"id": "Q0039", "cause": "old growth status", "outcome": "spring flowering plant proportion", "_meta": {"seed_edge": "camo:edge_ff915813de2e", "hint_tags": ["trap:associational"]}}
+{"id": "Q0040", "cause": "egg-to-predator ratio", "outcome": "lake location", "_meta": {"seed_edge": "camo:edge_d1a97215ae42", "hint_tags": ["trap:associational", "trap:reversed"]}}
+{"id": "Q0041", "cause": "release technique", "outcome": "predation mortality", "_meta": {"seed_edge": "camo:edge_8118bbb7c131", "hint_tags": ["trap:sign_flip"]}}
+{"id": "Q0042", "cause": "slow release fertilizer application", "outcome": "plant leaf area", "_meta": {"seed_edge": "camo:edge_64dcb8ea730c", "hint_tags": ["trap:sign_flip"]}}
+{"id": "Q0043", "cause": "biosolids application", "outcome": "forb frequency", "_meta": {"seed_edge": "camo:edge_7f5d2b4385c1", "hint_tags": ["trap:sign_flip", "trap:twin"]}}
+{"id": "Q0044", "cause": "herbicide disturbance treatment", "outcome": "grass reproductive effort", "_meta": {"seed_edge": "camo:edge_19f8f07f5d10", "hint_tags": ["trap:sign_flip", "trap:twin"]}}
+{"id": "Q0045", "cause": "brood parasitism", "outcome": "nest survival", "_meta": {"seed_edge": "camo:edge_4ea2870e74f1", "hint_tags": ["trap:sign_flip", "trap:twin"]}}
+{"id": "Q0046", "cause": "river regulation", "outcome": "flow conditions", "_meta": {"seed_edge": "camo:edge_df45f5c2eb06", "hint_tags": ["trap:sign_flip"]}}
+{"id": "Q0047", "cause": "combined mowing, burning and herbicide", "outcome": "native graminoid cover", "_meta": {"seed_edge": "camo:edge_5d2d2e187ed3", "hint_tags": ["trap:sign_flip"]}}
+{"id": "Q0048", "cause": "beaver lodge activity", "outcome": "burn frequency", "_meta": {"seed_edge": "camo:edge_6367c8e10858", "hint_tags": ["trap:sign_flip", "trap:reversed"]}}
+{"id": "Q0049", "cause": "vegetation suppression", "outcome": "planted tree cover", "_meta": {"seed_edge": "camo:edge_3be4a8e85175", "hint_tags": ["trap:sign_flip"]}}
+{"id": "Q0050", "cause": "insect defoliation", "outcome": "forest floor carbon to nitrogen ratio", "_meta": {"seed_edge": "camo:edge_d8ec6d9d57fb", "hint_tags": ["trap:sign_flip"]}}
+{"id": "Q0051", "cause": "disturbed area presence", "outcome": "large mammal avoidance", "_meta": {"seed_edge": "camo:edge_89b49d403051", "hint_tags": ["trap:associational", "trap:twin"]}}
+{"id": "Q0052", "cause": "undisturbed stands", "outcome": "exotic plant presence", "_meta": {"seed_edge": "camo:edge_1c1c3e0945d0", "hint_tags": ["trap:associational", "trap:twin"]}}
+{"id": "Q0053", "cause": "mulching", "outcome": "non-native plant shoot density", "_meta": {"seed_edge": "camo:edge_18ac0bfc5067", "hint_tags": ["trap:sign_flip", "trap:twin"]}}
+{"id": "Q0054", "cause": "moisture retention cover layer", "outcome": "water metal concentration", "_meta": {"seed_edge": "camo:edge_633a47be3f8f", "hint_tags": ["trap:sign_flip", "trap:twin"]}}
+{"id": "Q0055", "cause": "edge habitat presence", "outcome": "large mammal habitat selection", "_meta": {"seed_edge": "camo:edge_99cc6159344e", "hint_tags": ["trap:associational", "trap:twin"]}}
+{"id": "Q0056", "cause": "tree height growth", "outcome": "tree planting", "_meta": {"seed_edge": "camo:edge_9577f358fa11", "hint_tags": ["trap:null", "trap:associational", "trap:twin", "trap:reversed"]}}
+{"id": "Q0057", "cause": "herbicide application", "outcome": "soil moisture", "_meta": {"seed_edge": "camo:edge_20c301f54615", "hint_tags": ["trap:null", "trap:twin"]}}
+{"id": "Q0058", "cause": "season", "outcome": "bee abundance", "_meta": {"seed_edge": "camo:edge_5f364a43dd01", "hint_tags": ["trap:associational", "trap:twin"]}}
+{"id": "Q0059", "cause": "winter road clearance", "outcome": "bryophyte cover", "_meta": {"seed_edge": "camo:edge_a6be7cb832a8", "hint_tags": ["trap:sign_flip", "trap:twin"]}}
+{"id": "Q0060", "cause": "causeway breaching", "outcome": "fish presence", "_meta": {"seed_edge": "camo:edge_5b4fb534d1e2", "hint_tags": ["trap:associational", "trap:twin"]}}
+{"id": "Q0061", "cause": "cutting treatment", "outcome": "conifer seedling survival", "_meta": {"seed_edge": "camo:edge_e636715ffe44", "hint_tags": ["trap:unchanged", "trap:moderator"]}}
+{"id": "Q0062", "cause": "season", "outcome": "bee abundance", "_meta": {"seed_edge": "camo:edge_1f94068afbd0", "hint_tags": ["trap:unchanged", "trap:moderator"]}}
+{"id": "Q0063", "cause": "habitat type", "outcome": "bryophyte species richness", "_meta": {"seed_edge": "camo:edge_b8b3d2ceea0c", "hint_tags": ["trap:moderator"]}}
+{"id": "Q0064", "cause": "conifer recruit abundance", "outcome": "fire history", "_meta": {"seed_edge": "camo:edge_5b6a779495b4", "hint_tags": ["trap:moderator", "trap:reversed"]}}
+{"id": "Q0065", "cause": "fertilization", "outcome": "seedling diameter", "_meta": {"seed_edge": "camo:edge_ee5aa30bcc2d", "hint_tags": ["trap:twin", "trap:moderator"]}}
+{"id": "Q0066", "cause": "water pH", "outcome": "dissolved organic carbon concentration", "_meta": {"seed_edge": "camo:edge_49d54e0e3b20", "hint_tags": ["trap:moderator"]}}
+{"id": "Q0067", "cause": "habitat variable weighting", "outcome": "fish habitat suitability", "_meta": {"seed_edge": "camo:edge_c06d529dc25e", "hint_tags": ["trap:moderator"]}}
+{"id": "Q0068", "cause": "eelgrass cover", "outcome": "fish density", "_meta": {"seed_edge": "camo:edge_cf77265884fa", "hint_tags": ["trap:unchanged", "trap:moderator"]}}
+{"id": "Q0069", "cause": "water table depth", "outcome": "litter decomposition rate", "_meta": {"seed_edge": "camo:edge_590717722fb3", "hint_tags": ["trap:moderator"]}}
+{"id": "Q0070", "cause": "water alkalinity", "outcome": "zooplankton abundance", "_meta": {"seed_edge": "camo:edge_9e0060fc3984", "hint_tags": ["trap:moderator"]}}
+{"id": "Q0071", "cause": "time since restoration", "outcome": "insect catch per unit effort", "_meta": {"seed_edge": "camo:edge_22e511358877", "hint_tags": ["trap:associational"]}}
+{"id": "Q0072", "cause": "tree height and diameter", "outcome": "site preparation", "_meta": {"seed_edge": "camo:edge_e3e6277c475a", "hint_tags": ["trap:null", "trap:reversed"]}}
+{"id": "Q0073", "cause": "slash cover", "outcome": "tree sucker density", "_meta": {"seed_edge": "camo:edge_94f88fca4845", "hint_tags": ["trap:null", "trap:twin"]}}
+{"id": "Q0074", "cause": "time since clearcutting", "outcome": "tree species presence", "_meta": {"seed_edge": "camo:edge_7a877f3238d1", "hint_tags": ["trap:associational"]}}
+{"id": "Q0075", "cause": "catchment identity", "outcome": "leaf litter mass loss", "_meta": {"seed_edge": "camo:edge_dd016daecd18", "hint_tags": []}}
+{"id": "Q0076", "cause": "culvert retrofitting", "outcome": "fish passage", "_meta": {"seed_edge": "camo:edge_5e44a980e430", "hint_tags": ["trap:twin"]}}
+{"id": "Q0077", "cause": "time since protection", "outcome": "fish family richness", "_meta": {"seed_edge": "camo:edge_70db37179680", "hint_tags": ["trap:associational", "trap:twin"]}}
+{"id": "Q0078", "cause": "stream velocity", "outcome": "fish habitat preference", "_meta": {"seed_edge": "camo:edge_484a6d2de0db", "hint_tags": []}}
+{"id": "Q0079", "cause": "wetland habitat presence", "outcome": "vascular plant species richness", "_meta": {"seed_edge": "camo:edge_4a4bf9b4a7cd", "hint_tags": ["trap:null"]}}
+{"id": "Q0080", "cause": "plant cover", "outcome": "seed mix application", "_meta": {"seed_edge": "camo:edge_496e65f6f633", "hint_tags": ["trap:sign_flip", "trap:twin", "trap:reversed"]}}
+{"id": "Q0081", "cause": "site remediation", "outcome": "metal concentrations in animal tissue", "_meta": {"seed_edge": "camo:edge_0cf612813eb0", "hint_tags": ["trap:associational"]}}
+{"id": "Q0082", "cause": "peat thickness", "outcome": "aquatic plant assemblage presence", "_meta": {"seed_edge": "camo:edge_eafee255ae91", "hint_tags": ["trap:removed_subject", "trap:associational", "trap:twin"]}}
+{"id": "Q0083", "cause": "peat mining", "outcome": "forest bird density", "_meta": {"seed_edge": "camo:edge_fba720f12943", "hint_tags": ["trap:null", "trap:twin"]}}
+{"id": "Q0084", "cause": "site preparation", "outcome": "plant vigor", "_meta": {"seed_edge": "camo:edge_655490c88d6f", "hint_tags": ["trap:associational"]}}
+{"id": "Q0085", "cause": "organic matter input", "outcome": "macroinvertebrate diversity", "_meta": {"seed_edge": "camo:edge_b806d1e7ea02", "hint_tags": ["trap:associational"]}}
+{"id": "Q0086", "cause": "microbial biomass", "outcome": "soil respiration rate", "_meta": {"seed_edge": "camo:edge_1b6d0728d25d", "hint_tags": ["trap:associational", "trap:twin"]}}
+{"id": "Q0087", "cause": "fish farm closure", "outcome": "sediment organic matter concentration", "_meta": {"seed_edge": "camo:edge_224465823a2d", "hint_tags": ["trap:removed_subject"]}}
+{"id": "Q0088", "cause": "seed mortality", "outcome": "herbicide treatment", "_meta": {"seed_edge": "camo:edge_333556712ba2", "hint_tags": ["trap:null", "trap:reversed"]}}
+{"id": "Q0089", "cause": "liming", "outcome": "algal biomass", "_meta": {"seed_edge": "camo:edge_3b4060e75715", "hint_tags": ["trap:associational"]}}
+{"id": "Q0090", "cause": "release location", "outcome": "animal dispersal direction", "_meta": {"seed_edge": "camo:edge_0ed39fda34ff", "hint_tags": ["trap:associational"]}}
+{"id": "Q0091", "cause": "soil texture", "outcome": "soil microbial community structure", "_meta": {"seed_edge": "camo:edge_1ec29fd5ff5e", "hint_tags": ["trap:unchanged", "trap:associational"]}}
+{"id": "Q0092", "cause": "site location", "outcome": "bird nest success", "_meta": {"seed_edge": "camo:edge_d0f3a672cdd3", "hint_tags": ["trap:null", "trap:unchanged", "trap:twin"]}}
+{"id": "Q0093", "cause": "soft release", "outcome": "captive-reared bird survival", "_meta": {"seed_edge": "camo:edge_9714cb48111b", "hint_tags": ["trap:null"]}}
+{"id": "Q0094", "cause": "metal concentration", "outcome": "zooplankton community composition", "_meta": {"seed_edge": "camo:edge_ca6c93fee36e", "hint_tags": ["trap:null"]}}
+{"id": "Q0095", "cause": "vulnerability ranking", "outcome": "flowering phenology", "_meta": {"seed_edge": "camo:edge_6bdb3d555a6b", "hint_tags": ["trap:associational"]}}
+{"id": "Q0096", "cause": "plant photosynthetic performance", "outcome": "water type", "_meta": {"seed_edge": "camo:edge_c990902f5fc0", "hint_tags": ["trap:twin", "trap:reversed"]}}
+{"id": "Q0097", "cause": "time since disturbance", "outcome": "bee species richness", "_meta": {"seed_edge": "camo:edge_5b8e29127aa9", "hint_tags": ["trap:associational"]}}
+{"id": "Q0098", "cause": "peatland edge location", "outcome": "water pH", "_meta": {"seed_edge": "camo:edge_5395961a6efd", "hint_tags": ["trap:associational", "trap:twin"]}}
+{"id": "Q0099", "cause": "breeding timing", "outcome": "bird fledging success", "_meta": {"seed_edge": "camo:edge_e16514a4b63e", "hint_tags": ["trap:null"]}}
+{"id": "Q0100", "cause": "microbial biomass", "outcome": "soil respiration rate", "_meta": {"seed_edge": "camo:edge_a0e676bdcb2e", "hint_tags": ["trap:null", "trap:twin"]}}
+{"id": "Q0101", "cause": "invasive fish abundance", "outcome": "native fish abundance", "_meta": {"seed_edge": "camo:edge_de3a25c2b355", "hint_tags": ["trap:associational"]}}
+{"id": "Q0102", "cause": "vertical cover", "outcome": "browsing incidence", "_meta": {"seed_edge": "camo:edge_6bb93191e24b", "hint_tags": ["trap:removed_subject", "trap:associational"]}}
+{"id": "Q0103", "cause": "treatment type", "outcome": "hydrocarbon degradation rate", "_meta": {"seed_edge": "camo:edge_ad2ba30c1e86", "hint_tags": ["trap:null"]}}
+{"id": "Q0104", "cause": "conifer leaf mass", "outcome": "coversoil", "_meta": {"seed_edge": "camo:edge_be0d4d8473b0", "hint_tags": ["trap:twin", "trap:reversed"]}}
+{"id": "Q0105", "cause": "liming", "outcome": "soil chemistry", "_meta": {"seed_edge": "camo:edge_fcb8f0a9ee5a", "hint_tags": []}}
+{"id": "Q0106", "cause": "ash addition", "outcome": "graminoid seedling emergence", "_meta": {"seed_edge": "camo:edge_f6988276e625", "hint_tags": ["trap:twin"]}}
+{"id": "Q0107", "cause": "treatment site type", "outcome": "small mammal survival", "_meta": {"seed_edge": "camo:edge_8ab4784632f7", "hint_tags": ["trap:null"]}}
+{"id": "Q0108", "cause": "forest floor mixing", "outcome": "conifer seedling biomass", "_meta": {"seed_edge": "camo:edge_1f5f5f368bf6", "hint_tags": ["trap:null"]}}
+{"id": "Q0109", "cause": "prescribed fire", "outcome": "soil nutrient availability", "_meta": {"seed_edge": "camo:edge_7d740818d86c", "hint_tags": ["trap:twin"]}}
+{"id": "Q0110", "cause": "seedling age", "outcome": "ectomycorrhizal fungal community composition", "_meta": {"seed_edge": "camo:edge_2d54f5d7e7ce", "hint_tags": ["trap:associational"]}}
+{"id": "Q0111", "cause": "organic matter biomass", "outcome": "macroinvertebrate abundance", "_meta": {"seed_edge": "camo:edge_bbf6b0c9753f", "hint_tags": ["trap:associational", "trap:twin"]}}
+{"id": "Q0112", "cause": "invertebrate biomass", "outcome": "invasive crayfish introduction", "_meta": {"seed_edge": "camo:edge_e05a5f62c6b3", "hint_tags": ["trap:sign_flip", "trap:reversed"]}}
+{"id": "Q0113", "cause": "acidic deposition", "outcome": "lake water pH", "_meta": {"seed_edge": "camo:edge_f26649081735", "hint_tags": ["trap:removed_subject", "trap:unchanged", "trap:associational"]}}
+{"id": "Q0114", "cause": "invasive crayfish presence", "outcome": "benthic algae abundance", "_meta": {"seed_edge": "camo:edge_82348270580f", "hint_tags": ["trap:sign_flip"]}}
+{"id": "Q0115", "cause": "herbicide application", "outcome": "native grass cover", "_meta": {"seed_edge": "camo:edge_4a7ab802a6f0", "hint_tags": ["trap:null"]}}
+{"id": "Q0116", "cause": "fertilization", "outcome": "soil nutrient supply rate", "_meta": {"seed_edge": "camo:edge_5e8400c03987", "hint_tags": ["trap:null"]}}
+{"id": "Q0117", "cause": "seedling height", "outcome": "browsing incidence", "_meta": {"seed_edge": "camo:edge_063e5f6eeea2", "hint_tags": ["trap:associational"]}}
+{"id": "Q0118", "cause": "seeding", "outcome": "forb cover", "_meta": {"seed_edge": "camo:edge_69f3ef635991", "hint_tags": ["trap:null", "trap:twin"]}}
+{"id": "Q0119", "cause": "surface roughness", "outcome": "deciduous seedling establishment", "_meta": {"seed_edge": "camo:edge_2e11d901ae72", "hint_tags": []}}
+{"id": "Q0120", "cause": "bird hatching success", "outcome": "food supplementation", "_meta": {"seed_edge": "camo:edge_557cd380f1a4", "hint_tags": ["trap:null", "trap:reversed"]}}
+{"id": "Q0121", "cause": "initial starch concentration", "outcome": "root and stem carbohydrate concentration", "_meta": {"pair": ["camo:node_a195aaf6a354", "camo:node_51185c135d71"], "hint_tags": ["pair"]}}
+{"id": "Q0122", "cause": "water permanency", "outcome": "habitat stabilization", "_meta": {"pair": ["camo:node_8f9fc3eb203c", "camo:node_cad491aab293"], "hint_tags": ["pair"]}}
+{"id": "Q0123", "cause": "growing season flow", "outcome": "ground beetle community composition", "_meta": {"pair": ["camo:node_189828ea6bde", "camo:node_3131fb086876_variable"], "hint_tags": ["pair"]}}
+{"id": "Q0124", "cause": "habitat type", "outcome": "willow family seedling mortality", "_meta": {"pair": ["camo:node_3e4da24975be", "camo:node_6894cf068fd9_variable"], "hint_tags": ["pair"]}}
+{"id": "Q0125", "cause": "reclamation age", "outcome": "tree water potential", "_meta": {"pair": ["camo:node_12166be070f8", "camo:node_fcf66f9da2fe"], "hint_tags": ["pair"]}}
+{"id": "Q0126", "cause": "logging", "outcome": "conifer seedling browse damage", "_meta": {"pair": ["camo:node_ff2ba1402627", "camo:node_23efc3c3b9da_variable"], "hint_tags": ["pair"]}}
+{"id": "Q0127", "cause": "genetic origin of fish", "outcome": "species richness of vulnerable species", "_meta": {"pair": ["camo:node_0adf7bdc4b20", "camo:node_3b67ebc40ac6"], "hint_tags": ["pair"]}}
+{"id": "Q0128", "cause": "sod transplantation", "outcome": "fish rearing habitat area", "_meta": {"pair": ["camo:node_4ee0c27204f8", "camo:node_39915e54b0cb"], "hint_tags": ["pair"]}}
+{"id": "Q0129", "cause": "nitrogen addition", "outcome": "native grass seedling survival", "_meta": {"pair": ["camo:node_a982a26439c8", "camo:node_2ceb55080fd6_variable"], "hint_tags": ["pair"]}}
+{"id": "Q0130", "cause": "soil mixing", "outcome": "hardwood seedling size", "_meta": {"pair": ["camo:node_a0e8f970d352", "camo:node_381d1dacb6f2"], "hint_tags": ["pair"]}}
+{"id": "Q0131", "cause": "moss dominance", "outcome": "foliar tannin concentration", "_meta": {"pair": ["camo:node_0ecccb58dd37", "camo:node_0a29299daba1"], "hint_tags": ["pair"]}}
+{"id": "Q0132", "cause": "tree shoot to root ratio", "outcome": "herb diversity", "_meta": {"pair": ["camo:node_5290c96078b6", "camo:node_58058351ade5"], "hint_tags": ["pair"]}}
+{"id": "Q0133", "cause": "straw mulch addition", "outcome": "seedling height to diameter ratio", "_meta": {"pair": ["camo:node_34a09c90e881", "camo:node_e4bed9cfd297"], "hint_tags": ["pair"]}}
+{"id": "Q0134", "cause": "donor soil application", "outcome": "large tree abundance", "_meta": {"pair": ["camo:node_57d995bf40b7", "camo:node_1df2f816e1ff"], "hint_tags": ["pair"]}}
+{"id": "Q0135", "cause": "incubation temperature", "outcome": "total plant cover", "_meta": {"pair": ["camo:node_093ec5adbf4f", "camo:node_ca5d480d8166_variable"], "hint_tags": ["pair"]}}
+{"id": "Q0136", "cause": "controlled-release fertilizer application", "outcome": "seedling emergence rate", "_meta": {"pair": ["camo:node_29dac4d7170b", "camo:node_7a88d7f543db"], "hint_tags": ["pair"]}}
+{"id": "Q0137", "cause": "slash cover", "outcome": "bare ground cover", "_meta": {"pair": ["camo:node_1c6d30ea8106", "camo:node_696b3e419e18"], "hint_tags": ["pair"]}}
+{"id": "Q0138", "cause": "site disturbance", "outcome": "non-native grass cover", "_meta": {"pair": ["camo:node_1e0b10d53217", "camo:node_8ebb3e0eb906"], "hint_tags": ["pair"]}}
+{"id": "Q0139", "cause": "depositional invertebrate abundance", "outcome": "soil organic matter concentration", "_meta": {"pair": ["camo:node_9803b6af5864", "camo:node_cf5a29e8d675"], "hint_tags": ["pair"]}}
+{"id": "Q0140", "cause": "prescribed burning", "outcome": "large tree abundance", "_meta": {"pair": ["camo:node_4c1031429be2", "camo:node_1df2f816e1ff"], "hint_tags": ["pair"]}}
+{"id": "Q0141", "cause": "brood parasite egg removal", "outcome": "aspen sucker height", "_meta": {"pair": ["camo:node_d8c3f5aac3f1", "camo:node_de1474ff19a4_variable"], "hint_tags": ["pair"]}}
+{"id": "Q0142", "cause": "time since restoration", "outcome": "ectomycorrhizal formation", "_meta": {"pair": ["camo:node_0f92aeaf5183", "camo:node_317ed8f8e2cd"], "hint_tags": ["pair"]}}
+{"id": "Q0143", "cause": "nitrogen addition", "outcome": "water temperature", "_meta": {"pair": ["camo:node_a982a26439c8", "camo:node_5e15c5aaf7a9_variable"], "hint_tags": ["pair"]}}
+{"id": "Q0144", "cause": "microbial biomass nitrogen", "outcome": "native species evenness", "_meta": {"pair": ["camo:node_6e349b70d8cc", "camo:node_a9baed3f41e1"], "hint_tags": ["pair"]}}
+{"id": "Q0145", "cause": "old growth forest", "outcome": "benthic invertebrate biomass", "_meta": {"pair": ["camo:node_c9a1755d8001", "camo:node_508b58830dbf"], "hint_tags": ["pair"]}}
+{"id": "Q0146", "cause": "pollution source remediation", "outcome": "conifer tree stem diameter", "_meta": {"pair": ["camo:node_55daa8927668", "camo:node_1c4fb4ebdba5"], "hint_tags": ["pair"]}}
+{"id": "Q0147", "cause": "wild versus hatchery-reared origin", "outcome": "fish presence", "_meta": {"pair": ["camo:node_429bfa0d6f79", "camo:node_4d1c3dac16fb"], "hint_tags": ["pair"]}}
+{"id": "Q0148", "cause": "environmental conditions", "outcome": "weedy plant abundance", "_meta": {"pair": ["camo:node_9521e67644e7", "camo:node_fa97436d97fd"], "hint_tags": ["pair"]}}
+{"id": "Q0149", "cause": "hunting", "outcome": "riparian bird abundance", "_meta": {"pair": ["camo:node_69e9768a159c", "camo:node_38bbadffba29"], "hint_tags": ["pair"]}}
+{"id": "Q0150", "cause": "peat depth", "outcome": "allele frequencies", "_meta": {"pair": ["camo:node_fd25d542b06f", "camo:node_d26a8f50cccd"], "hint_tags": ["pair"]}}
+{"id": "Q0151", "cause": "old growth forest", "outcome": "forest bird density", "_meta": {"pair": ["camo:node_49f89cce0d19", "camo:node_06459627f081_variable"], "hint_tags": ["pair"]}}
+{"id": "Q0152", "cause": "hatchery-reared fish", "outcome": "soil hydraulic conductivity", "_meta": {"pair": ["camo:node_caf5e883be0d", "camo:node_c32a0030ceeb"], "hint_tags": ["pair"]}}
+{"id": "Q0153", "cause": "terrain position", "outcome": "forest bird density", "_meta": {"pair": ["camo:node_f250020c31f2", "camo:node_f14de88247ed"], "hint_tags": ["pair"]}}
+{"id": "Q0154", "cause": "shrub cover", "outcome": "plant species richness", "_meta": {"pair": ["camo:node_878428291b62", "camo:node_a931f743114d"], "hint_tags": ["pair"]}}
+{"id": "Q0155", "cause": "soil nitrate concentration", "outcome": "moss cover", "_meta": {"pair": ["camo:node_a8bb5efdbbdc", "camo:node_76824da807e4"], "hint_tags": ["pair"]}}
+{"id": "Q0156", "cause": "time since restoration", "outcome": "understory plant cover", "_meta": {"pair": ["camo:node_409b225684d3", "camo:node_060c3b8f9c50"], "hint_tags": ["pair"]}}
+{"id": "Q0157", "cause": "soil texture", "outcome": "water velocity", "_meta": {"pair": ["camo:node_c48dc7777ff4", "camo:node_2692daf6da0d"], "hint_tags": ["pair"]}}
+{"id": "Q0158", "cause": "invasive fish removal", "outcome": "soil ammonium concentration", "_meta": {"pair": ["camo:node_910daf1c6208", "camo:node_159cd177f36d"], "hint_tags": ["pair"]}}
+{"id": "Q0159", "cause": "pyrogenic carbon addition", "outcome": "stem density", "_meta": {"pair": ["camo:node_e8dc63eed66e", "camo:node_8481350aace0"], "hint_tags": ["pair"]}}
+{"id": "Q0160", "cause": "tree foliage growth", "outcome": "tree dominance", "_meta": {"pair": ["camo:node_39556407c308", "camo:node_71cf074183d2"], "hint_tags": ["pair"]}}
+{"id": "Q0161", "cause": "season", "outcome": "soil bulk density", "_meta": {"pair": ["camo:node_cef1c82bb87d", "camo:node_a6c5fb9e6346"], "hint_tags": ["pair"]}}
+{"id": "Q0162", "cause": "site presence", "outcome": "tree growth", "_meta": {"pair": ["camo:node_7cb235bdf02c", "camo:node_aa34b87736fc_variable"], "hint_tags": ["pair"]}}
+{"id": "Q0163", "cause": "habitat restoration", "outcome": "seedling stem diameter growth", "_meta": {"pair": ["camo:node_fb21fe3bae3a", "camo:node_3f3d39ed6221_variable"], "hint_tags": ["pair"]}}
+{"id": "Q0164", "cause": "pond construction or enhancement", "outcome": "invasive fish presence", "_meta": {"pair": ["camo:node_86e4a040432b", "camo:node_b8a749c41291"], "hint_tags": ["pair"]}}
+{"id": "Q0165", "cause": "fish size", "outcome": "soil available nitrogen", "_meta": {"pair": ["camo:node_b2a4bd077f55", "camo:node_277b7de6a889"], "hint_tags": ["pair"]}}
+{"id": "Q0166", "cause": "regulation changes", "outcome": "herb cover", "_meta": {"pair": ["camo:node_005d6bfe0742", "camo:node_5b0a12c54b0b"], "hint_tags": ["pair"]}}
+{"id": "Q0167", "cause": "season", "outcome": "salmon escapement", "_meta": {"pair": ["camo:node_901807c61fa4", "camo:node_4c764ebfceae"], "hint_tags": ["pair"]}}
+{"id": "Q0168", "cause": "water trace metal and ion concentration", "outcome": "metal concentration in crustacean tissue", "_meta": {"pair": ["camo:node_65264072fd49", "camo:node_6a6d74bc8c59"], "hint_tags": ["pair"]}}
+{"id": "Q0169", "cause": "timing of breeding", "outcome": "forb diversity", "_meta": {"pair": ["camo:node_c0813d9ada46", "camo:node_b46c56a88e1a"], "hint_tags": ["pair"]}}
+{"id": "Q0170", "cause": "ground cover treatment type", "outcome": "saprophage species richness", "_meta": {"pair": ["camo:node_f20b7d817b6a", "camo:node_c50869b63868"], "hint_tags": ["pair"]}}
+{"id": "Q0171", "cause": "container type for forb transplants", "outcome": "plant tissue potassium concentration", "_meta": {"pair": ["camo:node_0cd75f7ee8ec", "camo:node_bf983a0983fe"], "hint_tags": ["pair"]}}
+{"id": "Q0172", "cause": "primary productivity", "outcome": "benthic invertebrate diversity", "_meta": {"pair": ["camo:node_f1f4c1907d0c", "camo:node_c6dd6c87ce5e"], "hint_tags": ["pair"]}}
+{"id": "Q0173", "cause": "straw amendment", "outcome": "forest floor extractable phosphorus", "_meta": {"pair": ["camo:node_12c2f141b97d", "camo:node_4f23be6cedd0"], "hint_tags": ["pair"]}}
+{"id": "Q0174", "cause": "liming", "outcome": "plant taxon frequency", "_meta": {"pair": ["camo:node_bfb130fb4782", "camo:node_1ee5ce966caa"], "hint_tags": ["pair"]}}
+{"id": "Q0175", "cause": "graminoid cover", "outcome": "soil exchangeable calcium and magnesium", "_meta": {"pair": ["camo:node_6d5dd9e710a8", "camo:node_4b2754503894"], "hint_tags": ["pair"]}}
+{"id": "Q0176", "cause": "substrate application", "outcome": "streamflow", "_meta": {"pair": ["camo:node_c04c92d83c52", "camo:node_f9be9bd1a060_variable"], "hint_tags": ["pair"]}}
+{"id": "Q0177", "cause": "restoration treatments", "outcome": "planted conifer stem diameter", "_meta": {"pair": ["camo:node_d13536d962b5", "camo:node_0002711e0792"], "hint_tags": ["pair"]}}
+{"id": "Q0178", "cause": "harvest method", "outcome": "soil basal respiration", "_meta": {"pair": ["camo:node_0f8b72fa7fe4", "camo:node_eb4def0ed410"], "hint_tags": ["pair"]}}
+{"id": "Q0179", "cause": "site preparation", "outcome": "algal biomass", "_meta": {"pair": ["camo:node_8d1143f48c44", "camo:node_94115f9c8e80"], "hint_tags": ["pair"]}}
+{"id": "Q0180", "cause": "lead residues in small mammals", "outcome": "water content stability", "_meta": {"pair": ["camo:node_c7ac32b46a68", "camo:node_17cff732d568"], "hint_tags": ["pair"]}}

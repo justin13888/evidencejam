@@ -1,0 +1,40 @@
+{"id": "Q0081", "cause": "site remediation", "outcome": "metal concentrations in animal tissue"}
+{"id": "Q0082", "cause": "peat thickness", "outcome": "aquatic plant assemblage presence"}
+{"id": "Q0083", "cause": "peat mining", "outcome": "forest bird density"}
+{"id": "Q0084", "cause": "site preparation", "outcome": "plant vigor"}
+{"id": "Q0085", "cause": "organic matter input", "outcome": "macroinvertebrate diversity"}
+{"id": "Q0086", "cause": "microbial biomass", "outcome": "soil respiration rate"}
+{"id": "Q0087", "cause": "fish farm closure", "outcome": "sediment organic matter concentration"}
+{"id": "Q0088", "cause": "seed mortality", "outcome": "herbicide treatment"}
+{"id": "Q0089", "cause": "liming", "outcome": "algal biomass"}
+{"id": "Q0090", "cause": "release location", "outcome": "animal dispersal direction"}
+{"id": "Q0091", "cause": "soil texture", "outcome": "soil microbial community structure"}
+{"id": "Q0092", "cause": "site location", "outcome": "bird nest success"}
+{"id": "Q0093", "cause": "soft release", "outcome": "captive-reared bird survival"}
+{"id": "Q0094", "cause": "metal concentration", "outcome": "zooplankton community composition"}
+{"id": "Q0095", "cause": "vulnerability ranking", "outcome": "flowering phenology"}
+{"id": "Q0096", "cause": "plant photosynthetic performance", "outcome": "water type"}
+{"id": "Q0097", "cause": "time since disturbance", "outcome": "bee species richness"}
+{"id": "Q0098", "cause": "peatland edge location", "outcome": "water pH"}
+{"id": "Q0099", "cause": "breeding timing", "outcome": "bird fledging success"}
+{"id": "Q0100", "cause": "microbial biomass", "outcome": "soil respiration rate"}
+{"id": "Q0101", "cause": "invasive fish abundance", "outcome": "native fish abundance"}
+{"id": "Q0102", "cause": "vertical cover", "outcome": "browsing incidence"}
+{"id": "Q0103", "cause": "treatment type", "outcome": "hydrocarbon degradation rate"}
+{"id": "Q0104", "cause": "conifer leaf mass", "outcome": "coversoil"}
+{"id": "Q0105", "cause": "liming", "outcome": "soil chemistry"}
+{"id": "Q0106", "cause": "ash addition", "outcome": "graminoid seedling emergence"}
+{"id": "Q0107", "cause": "treatment site type", "outcome": "small mammal survival"}
+{"id": "Q0108", "cause": "forest floor mixing", "outcome": "conifer seedling biomass"}
+{"id": "Q0109", "cause": "prescribed fire", "outcome": "soil nutrient availability"}
+{"id": "Q0110", "cause": "seedling age", "outcome": "ectomycorrhizal fungal community composition"}
+{"id": "Q0111", "cause": "organic matter biomass", "outcome": "macroinvertebrate abundance"}
+{"id": "Q0112", "cause": "invertebrate biomass", "outcome": "invasive crayfish introduction"}
+{"id": "Q0113", "cause": "acidic deposition", "outcome": "lake water pH"}
+{"id": "Q0114", "cause": "invasive crayfish presence", "outcome": "benthic algae abundance"}
+{"id": "Q0115", "cause": "herbicide application", "outcome": "native grass cover"}
+{"id": "Q0116", "cause": "fertilization", "outcome": "soil nutrient supply rate"}
+{"id": "Q0117", "cause": "seedling height", "outcome": "browsing incidence"}
+{"id": "Q0118", "cause": "seeding", "outcome": "forb cover"}
+{"id": "Q0119", "cause": "surface roughness", "outcome": "deciduous seedling establishment"}
+{"id": "Q0120", "cause": "bird hatching success", "outcome": "food supplementation"}

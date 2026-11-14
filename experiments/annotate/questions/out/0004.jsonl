@@ -1,0 +1,40 @@
+{"id": "Q0121", "cause": "initial starch concentration", "outcome": "root and stem carbohydrate concentration"}
+{"id": "Q0122", "cause": "water permanency", "outcome": "habitat stabilization"}
+{"id": "Q0123", "cause": "growing season flow", "outcome": "ground beetle community composition"}
+{"id": "Q0124", "cause": "habitat type", "outcome": "willow family seedling mortality"}
+{"id": "Q0125", "cause": "reclamation age", "outcome": "tree water potential"}
+{"id": "Q0126", "cause": "logging", "outcome": "conifer seedling browse damage"}
+{"id": "Q0127", "cause": "genetic origin of fish", "outcome": "species richness of vulnerable species"}
+{"id": "Q0128", "cause": "sod transplantation", "outcome": "fish rearing habitat area"}
+{"id": "Q0129", "cause": "nitrogen addition", "outcome": "native grass seedling survival"}
+{"id": "Q0130", "cause": "soil mixing", "outcome": "hardwood seedling size"}
+{"id": "Q0131", "cause": "moss dominance", "outcome": "foliar tannin concentration"}
+{"id": "Q0132", "cause": "tree shoot to root ratio", "outcome": "herb diversity"}
+{"id": "Q0133", "cause": "straw mulch addition", "outcome": "seedling height to diameter ratio"}
+{"id": "Q0134", "cause": "donor soil application", "outcome": "large tree abundance"}
+{"id": "Q0135", "cause": "incubation temperature", "outcome": "total plant cover"}
+{"id": "Q0136", "cause": "controlled-release fertilizer application", "outcome": "seedling emergence rate"}
+{"id": "Q0137", "cause": "slash cover", "outcome": "bare ground cover"}
+{"id": "Q0138", "cause": "site disturbance", "outcome": "non-native grass cover"}
+{"id": "Q0139", "cause": "depositional invertebrate abundance", "outcome": "soil organic matter concentration"}
+{"id": "Q0140", "cause": "prescribed burning", "outcome": "large tree abundance"}
+{"id": "Q0141", "cause": "brood parasite egg removal", "outcome": "aspen sucker height"}
+{"id": "Q0142", "cause": "time since restoration", "outcome": "ectomycorrhizal formation"}
+{"id": "Q0143", "cause": "nitrogen addition", "outcome": "water temperature"}
+{"id": "Q0144", "cause": "microbial biomass nitrogen", "outcome": "native species evenness"}
+{"id": "Q0145", "cause": "old growth forest", "outcome": "benthic invertebrate biomass"}
+{"id": "Q0146", "cause": "pollution source remediation", "outcome": "conifer tree stem diameter"}
+{"id": "Q0147", "cause": "wild versus hatchery-reared origin", "outcome": "fish presence"}
+{"id": "Q0148", "cause": "environmental conditions", "outcome": "weedy plant abundance"}
+{"id": "Q0149", "cause": "hunting", "outcome": "riparian bird abundance"}
+{"id": "Q0150", "cause": "peat depth", "outcome": "allele frequencies"}
+{"id": "Q0151", "cause": "old growth forest", "outcome": "forest bird density"}
+{"id": "Q0152", "cause": "hatchery-reared fish", "outcome": "soil hydraulic conductivity"}
+{"id": "Q0153", "cause": "terrain position", "outcome": "forest bird density"}
+{"id": "Q0154", "cause": "shrub cover", "outcome": "plant species richness"}
+{"id": "Q0155", "cause": "soil nitrate concentration", "outcome": "moss cover"}
+{"id": "Q0156", "cause": "time since restoration", "outcome": "understory plant cover"}
+{"id": "Q0157", "cause": "soil texture", "outcome": "water velocity"}
+{"id": "Q0158", "cause": "invasive fish removal", "outcome": "soil ammonium concentration"}
+{"id": "Q0159", "cause": "pyrogenic carbon addition", "outcome": "stem density"}
+{"id": "Q0160", "cause": "tree foliage growth", "outcome": "tree dominance"}
