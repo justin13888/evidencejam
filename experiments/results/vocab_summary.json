@@ -1,0 +1,1856 @@
+{
+  "how": "nodes grouped by readable entity_term label + measured_attribute label; counts are edges/documents",
+  "causes": {
+    "concepts": 1933,
+    "concepts_in_>=2_documents": 153,
+    "concepts_in_>=3_documents": 56,
+    "concepts_in_>=5_documents": 18,
+    "edges_on_concepts_in_>=2_documents": 1600,
+    "concepts_by_main_entity_type": {
+      "environmental_variable": 971,
+      "management_intervention": 718,
+      "environmental_process": 122,
+      "taxon": 121,
+      "None": 1
+    },
+    "top_by_documents": [
+      {
+        "concept": "time",
+        "entity_type": "environmental_variable,environmental_process",
+        "documents": 27,
+        "edges": 100,
+        "null_edges": 29
+      },
+      {
+        "concept": "time :: duration",
+        "entity_type": "environmental_variable,environmental_process",
+        "documents": 13,
+        "edges": 36,
+        "null_edges": 4
+      },
+      {
+        "concept": "fertilization",
+        "entity_type": "management_intervention",
+        "documents": 10,
+        "edges": 79,
+        "null_edges": 23
+      },
+      {
+        "concept": "restoration",
+        "entity_type": "management_intervention",
+        "documents": 9,
+        "edges": 57,
+        "null_edges": 8
+      },
+      {
+        "concept": "site location :: location",
+        "entity_type": "environmental_variable",
+        "documents": 9,
+        "edges": 24,
+        "null_edges": 7
+      },
+      {
+        "concept": "seeding",
+        "entity_type": "management_intervention",
+        "documents": 8,
+        "edges": 31,
+        "null_edges": 6
+      },
+      {
+        "concept": "herbicide application",
+        "entity_type": "management_intervention",
+        "documents": 6,
+        "edges": 62,
+        "null_edges": 16
+      },
+      {
+        "concept": "treatment",
+        "entity_type": "management_intervention,environmental_variable",
+        "documents": 6,
+        "edges": 18,
+        "null_edges": 5
+      },
+      {
+        "concept": "time since restoration :: time",
+        "entity_type": "environmental_variable",
+        "documents": 6,
+        "edges": 17,
+        "null_edges": 3
+      },
+      {
+        "concept": "distance",
+        "entity_type": "environmental_variable",
+        "documents": 6,
+        "edges": 16,
+        "null_edges": 1
+      },
+      {
+        "concept": "precipitation :: amount",
+        "entity_type": "environmental_variable",
+        "documents": 6,
+        "edges": 11,
+        "null_edges": 2
+      },
+      {
+        "concept": "scarification",
+        "entity_type": "management_intervention,environmental_process",
+        "documents": 5,
+        "edges": 49,
+        "null_edges": 9
+      },
+      {
+        "concept": "cutting",
+        "entity_type": "management_intervention",
+        "documents": 5,
+        "edges": 22,
+        "null_edges": 2
+      },
+      {
+        "concept": "burning",
+        "entity_type": "management_intervention,environmental_process",
+        "documents": 5,
+        "edges": 15,
+        "null_edges": 1
+      },
+      {
+        "concept": "soil depth :: depth",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 14,
+        "null_edges": 5
+      },
+      {
+        "concept": "fertilizer",
+        "entity_type": "management_intervention",
+        "documents": 5,
+        "edges": 13,
+        "null_edges": 7
+      },
+      {
+        "concept": "ph :: value",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 13,
+        "null_edges": 2
+      },
+      {
+        "concept": "season",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 6,
+        "null_edges": 0
+      },
+      {
+        "concept": "site :: location",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 24,
+        "null_edges": 3
+      },
+      {
+        "concept": "peatland restoration",
+        "entity_type": "management_intervention",
+        "documents": 4,
+        "edges": 22,
+        "null_edges": 4
+      },
+      {
+        "concept": "location",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 11,
+        "null_edges": 0
+      },
+      {
+        "concept": "mulch",
+        "entity_type": "management_intervention",
+        "documents": 4,
+        "edges": 10,
+        "null_edges": 4
+      },
+      {
+        "concept": "straw mulch",
+        "entity_type": "management_intervention",
+        "documents": 4,
+        "edges": 8,
+        "null_edges": 3
+      },
+      {
+        "concept": "soil moisture :: content",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 7,
+        "null_edges": 0
+      },
+      {
+        "concept": "nitrogen :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 6,
+        "null_edges": 0
+      },
+      {
+        "concept": "control",
+        "entity_type": "management_intervention",
+        "documents": 4,
+        "edges": 5,
+        "null_edges": 1
+      },
+      {
+        "concept": "interaction",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 5,
+        "null_edges": 2
+      },
+      {
+        "concept": "ph",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 5,
+        "null_edges": 0
+      },
+      {
+        "concept": "sphagnum :: cover",
+        "entity_type": "environmental_variable,taxon",
+        "documents": 4,
+        "edges": 4,
+        "null_edges": 0
+      },
+      {
+        "concept": "rewetting",
+        "entity_type": "management_intervention",
+        "documents": 3,
+        "edges": 66,
+        "null_edges": 14
+      },
+      {
+        "concept": "prescribed fire",
+        "entity_type": "management_intervention",
+        "documents": 3,
+        "edges": 29,
+        "null_edges": 8
+      },
+      {
+        "concept": "glyphosate application",
+        "entity_type": "management_intervention",
+        "documents": 3,
+        "edges": 24,
+        "null_edges": 1
+      },
+      {
+        "concept": "herbicide",
+        "entity_type": "management_intervention",
+        "documents": 3,
+        "edges": 22,
+        "null_edges": 3
+      },
+      {
+        "concept": "mowing",
+        "entity_type": "management_intervention",
+        "documents": 3,
+        "edges": 15,
+        "null_edges": 5
+      },
+      {
+        "concept": "water level :: level",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 15,
+        "null_edges": 1
+      },
+      {
+        "concept": "mulch application",
+        "entity_type": "management_intervention",
+        "documents": 3,
+        "edges": 14,
+        "null_edges": 11
+      },
+      {
+        "concept": "planting",
+        "entity_type": "management_intervention",
+        "documents": 3,
+        "edges": 14,
+        "null_edges": 1
+      },
+      {
+        "concept": "time :: elapsed_time",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 14,
+        "null_edges": 2
+      },
+      {
+        "concept": "site type",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 13,
+        "null_edges": 2
+      },
+      {
+        "concept": "time :: year",
+        "entity_type": "environmental_variable,environmental_process",
+        "documents": 3,
+        "edges": 13,
+        "null_edges": 3
+      },
+      {
+        "concept": "disturbance treatments",
+        "entity_type": "management_intervention,environmental_process",
+        "documents": 3,
+        "edges": 11,
+        "null_edges": 2
+      },
+      {
+        "concept": "harvesting",
+        "entity_type": "management_intervention",
+        "documents": 3,
+        "edges": 11,
+        "null_edges": 0
+      },
+      {
+        "concept": "seed addition",
+        "entity_type": "management_intervention",
+        "documents": 3,
+        "edges": 11,
+        "null_edges": 4
+      },
+      {
+        "concept": "nitrate :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 10,
+        "null_edges": 0
+      },
+      {
+        "concept": "tree species",
+        "entity_type": "taxon",
+        "documents": 3,
+        "edges": 7,
+        "null_edges": 5
+      },
+      {
+        "concept": "wetland area :: area",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 7,
+        "null_edges": 1
+      },
+      {
+        "concept": "soil temperature :: temperature",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 6,
+        "null_edges": 2
+      },
+      {
+        "concept": "restoration treatment",
+        "entity_type": "management_intervention",
+        "documents": 3,
+        "edges": 5,
+        "null_edges": 2
+      },
+      {
+        "concept": "site age :: age",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 5,
+        "null_edges": 1
+      },
+      {
+        "concept": "environmental variable :: value",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 4,
+        "null_edges": 1
+      },
+      {
+        "concept": "sex",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 4,
+        "null_edges": 2
+      },
+      {
+        "concept": "time :: season",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 4,
+        "null_edges": 0
+      },
+      {
+        "concept": "treatments",
+        "entity_type": "management_intervention",
+        "documents": 3,
+        "edges": 4,
+        "null_edges": 4
+      },
+      {
+        "concept": "water table depth :: depth",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 4,
+        "null_edges": 3
+      },
+      {
+        "concept": "interaction :: presence",
+        "entity_type": "environmental_variable,environmental_process",
+        "documents": 3,
+        "edges": 3,
+        "null_edges": 2
+      },
+      {
+        "concept": "metal concentration :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 3,
+        "null_edges": 0
+      },
+      {
+        "concept": "remediation",
+        "entity_type": "management_intervention",
+        "documents": 2,
+        "edges": 35,
+        "null_edges": 19
+      },
+      {
+        "concept": "seeding method",
+        "entity_type": "management_intervention",
+        "documents": 2,
+        "edges": 24,
+        "null_edges": 12
+      },
+      {
+        "concept": "woody debris",
+        "entity_type": "management_intervention",
+        "documents": 2,
+        "edges": 21,
+        "null_edges": 3
+      },
+      {
+        "concept": "liming",
+        "entity_type": "management_intervention",
+        "documents": 2,
+        "edges": 20,
+        "null_edges": 7
+      }
+    ]
+  },
+  "outcomes": {
+    "concepts": 3084,
+    "concepts_in_>=2_documents": 208,
+    "concepts_in_>=3_documents": 74,
+    "concepts_in_>=5_documents": 27,
+    "edges_on_concepts_in_>=2_documents": 1286,
+    "concepts_by_main_entity_type": {
+      "environmental_variable": 2277,
+      "taxon": 702,
+      "environmental_process": 104,
+      "management_intervention": 1
+    },
+    "top_by_documents": [
+      {
+        "concept": "species richness",
+        "entity_type": "environmental_variable",
+        "documents": 24,
+        "edges": 63,
+        "null_edges": 16
+      },
+      {
+        "concept": "species richness :: richness",
+        "entity_type": "environmental_variable",
+        "documents": 17,
+        "edges": 34,
+        "null_edges": 15
+      },
+      {
+        "concept": "survival",
+        "entity_type": "environmental_variable",
+        "documents": 12,
+        "edges": 35,
+        "null_edges": 12
+      },
+      {
+        "concept": "cover",
+        "entity_type": "environmental_variable",
+        "documents": 11,
+        "edges": 27,
+        "null_edges": 9
+      },
+      {
+        "concept": "sphagnum :: cover",
+        "entity_type": "taxon,environmental_variable",
+        "documents": 11,
+        "edges": 23,
+        "null_edges": 5
+      },
+      {
+        "concept": "moss :: cover",
+        "entity_type": "environmental_variable,taxon",
+        "documents": 9,
+        "edges": 12,
+        "null_edges": 2
+      },
+      {
+        "concept": "soil temperature :: temperature",
+        "entity_type": "environmental_variable",
+        "documents": 8,
+        "edges": 13,
+        "null_edges": 4
+      },
+      {
+        "concept": "ph",
+        "entity_type": "environmental_variable",
+        "documents": 8,
+        "edges": 11,
+        "null_edges": 1
+      },
+      {
+        "concept": "native species :: cover",
+        "entity_type": "environmental_variable,taxon",
+        "documents": 7,
+        "edges": 33,
+        "null_edges": 11
+      },
+      {
+        "concept": "abundance",
+        "entity_type": "environmental_variable,taxon",
+        "documents": 7,
+        "edges": 24,
+        "null_edges": 4
+      },
+      {
+        "concept": "seedling survival :: survival",
+        "entity_type": "environmental_variable",
+        "documents": 7,
+        "edges": 20,
+        "null_edges": 7
+      },
+      {
+        "concept": "species composition :: composition",
+        "entity_type": "environmental_variable",
+        "documents": 7,
+        "edges": 15,
+        "null_edges": 1
+      },
+      {
+        "concept": "vegetation :: cover",
+        "entity_type": "environmental_variable",
+        "documents": 7,
+        "edges": 14,
+        "null_edges": 3
+      },
+      {
+        "concept": "height",
+        "entity_type": "environmental_variable",
+        "documents": 6,
+        "edges": 13,
+        "null_edges": 2
+      },
+      {
+        "concept": "water table :: depth",
+        "entity_type": "environmental_variable",
+        "documents": 6,
+        "edges": 7,
+        "null_edges": 0
+      },
+      {
+        "concept": "frequency",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 27,
+        "null_edges": 2
+      },
+      {
+        "concept": "density",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 23,
+        "null_edges": 6
+      },
+      {
+        "concept": "dissolved organic carbon :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 17,
+        "null_edges": 3
+      },
+      {
+        "concept": "bare ground :: cover",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 12,
+        "null_edges": 2
+      },
+      {
+        "concept": "soil moisture :: moisture",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 11,
+        "null_edges": 2
+      },
+      {
+        "concept": "zinc :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 9,
+        "null_edges": 3
+      },
+      {
+        "concept": "height growth",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 8,
+        "null_edges": 4
+      },
+      {
+        "concept": "nitrogen :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 8,
+        "null_edges": 3
+      },
+      {
+        "concept": "seedling height :: height",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 8,
+        "null_edges": 4
+      },
+      {
+        "concept": "bulk density",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 7,
+        "null_edges": 2
+      },
+      {
+        "concept": "shrub :: cover",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 6,
+        "null_edges": 1
+      },
+      {
+        "concept": "vegetation cover :: cover",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 6,
+        "null_edges": 1
+      },
+      {
+        "concept": "agropyron cristatum :: cover",
+        "entity_type": "environmental_variable,taxon",
+        "documents": 4,
+        "edges": 22,
+        "null_edges": 4
+      },
+      {
+        "concept": "biomass",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 20,
+        "null_edges": 11
+      },
+      {
+        "concept": "iron :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 9,
+        "null_edges": 1
+      },
+      {
+        "concept": "specific leaf area",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 9,
+        "null_edges": 0
+      },
+      {
+        "concept": "methane flux :: flux",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 8,
+        "null_edges": 5
+      },
+      {
+        "concept": "picea mariana :: height",
+        "entity_type": "taxon,environmental_variable",
+        "documents": 4,
+        "edges": 8,
+        "null_edges": 0
+      },
+      {
+        "concept": "plant cover :: cover",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 8,
+        "null_edges": 0
+      },
+      {
+        "concept": "basal area",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 7,
+        "null_edges": 4
+      },
+      {
+        "concept": "foliar n concentration",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 7,
+        "null_edges": 0
+      },
+      {
+        "concept": "sulfate :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 6,
+        "null_edges": 0
+      },
+      {
+        "concept": "plant community composition :: composition",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 5,
+        "null_edges": 3
+      },
+      {
+        "concept": "soil ph :: ph",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 5,
+        "null_edges": 1
+      },
+      {
+        "concept": "species diversity :: diversity",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 5,
+        "null_edges": 1
+      },
+      {
+        "concept": "bryophytes :: cover",
+        "entity_type": "environmental_variable,taxon",
+        "documents": 4,
+        "edges": 4,
+        "null_edges": 0
+      },
+      {
+        "concept": "total plant cover :: cover",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 4,
+        "null_edges": 0
+      },
+      {
+        "concept": "native species :: richness",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 18,
+        "null_edges": 6
+      },
+      {
+        "concept": "community composition :: composition",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 13,
+        "null_edges": 0
+      },
+      {
+        "concept": "native species :: density",
+        "entity_type": "taxon",
+        "documents": 3,
+        "edges": 13,
+        "null_edges": 0
+      },
+      {
+        "concept": "water table level :: level",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 13,
+        "null_edges": 2
+      },
+      {
+        "concept": "potassium :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 11,
+        "null_edges": 1
+      },
+      {
+        "concept": "festuca hallii :: cover",
+        "entity_type": "taxon,environmental_variable",
+        "documents": 3,
+        "edges": 10,
+        "null_edges": 0
+      },
+      {
+        "concept": "nitrate :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 9,
+        "null_edges": 0
+      },
+      {
+        "concept": "root mass",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 9,
+        "null_edges": 5
+      },
+      {
+        "concept": "growth",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 8,
+        "null_edges": 2
+      },
+      {
+        "concept": "non-native species :: cover",
+        "entity_type": "taxon,environmental_variable",
+        "documents": 3,
+        "edges": 8,
+        "null_edges": 2
+      },
+      {
+        "concept": "litter :: cover",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 7,
+        "null_edges": 1
+      },
+      {
+        "concept": "total height",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 6,
+        "null_edges": 2
+      },
+      {
+        "concept": "carbon :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 5,
+        "null_edges": 1
+      },
+      {
+        "concept": "foliar p concentration",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 5,
+        "null_edges": 0
+      },
+      {
+        "concept": "forbs :: cover",
+        "entity_type": "taxon",
+        "documents": 3,
+        "edges": 5,
+        "null_edges": 0
+      },
+      {
+        "concept": "native species :: species richness",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 5,
+        "null_edges": 1
+      },
+      {
+        "concept": "populus tremuloides :: height",
+        "entity_type": "environmental_variable,taxon",
+        "documents": 3,
+        "edges": 5,
+        "null_edges": 2
+      },
+      {
+        "concept": "soil moisture :: content",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 5,
+        "null_edges": 0
+      }
+    ]
+  },
+  "cause_interventions": {
+    "concepts": 718,
+    "edges": 2818,
+    "top": [
+      {
+        "concept": "fertilization",
+        "documents": 10,
+        "edges": 79
+      },
+      {
+        "concept": "restoration",
+        "documents": 9,
+        "edges": 57
+      },
+      {
+        "concept": "seeding",
+        "documents": 8,
+        "edges": 31
+      },
+      {
+        "concept": "herbicide application",
+        "documents": 6,
+        "edges": 62
+      },
+      {
+        "concept": "treatment",
+        "documents": 6,
+        "edges": 18
+      },
+      {
+        "concept": "scarification",
+        "documents": 5,
+        "edges": 49
+      },
+      {
+        "concept": "cutting",
+        "documents": 5,
+        "edges": 22
+      },
+      {
+        "concept": "burning",
+        "documents": 5,
+        "edges": 15
+      },
+      {
+        "concept": "fertilizer",
+        "documents": 5,
+        "edges": 13
+      },
+      {
+        "concept": "peatland restoration",
+        "documents": 4,
+        "edges": 22
+      },
+      {
+        "concept": "mulch",
+        "documents": 4,
+        "edges": 10
+      },
+      {
+        "concept": "straw mulch",
+        "documents": 4,
+        "edges": 8
+      },
+      {
+        "concept": "control",
+        "documents": 4,
+        "edges": 5
+      },
+      {
+        "concept": "rewetting",
+        "documents": 3,
+        "edges": 66
+      },
+      {
+        "concept": "prescribed fire",
+        "documents": 3,
+        "edges": 29
+      },
+      {
+        "concept": "glyphosate application",
+        "documents": 3,
+        "edges": 24
+      },
+      {
+        "concept": "herbicide",
+        "documents": 3,
+        "edges": 22
+      },
+      {
+        "concept": "mowing",
+        "documents": 3,
+        "edges": 15
+      },
+      {
+        "concept": "mulch application",
+        "documents": 3,
+        "edges": 14
+      },
+      {
+        "concept": "planting",
+        "documents": 3,
+        "edges": 14
+      },
+      {
+        "concept": "disturbance treatments",
+        "documents": 3,
+        "edges": 11
+      },
+      {
+        "concept": "harvesting",
+        "documents": 3,
+        "edges": 11
+      },
+      {
+        "concept": "seed addition",
+        "documents": 3,
+        "edges": 11
+      },
+      {
+        "concept": "restoration treatment",
+        "documents": 3,
+        "edges": 5
+      },
+      {
+        "concept": "treatments",
+        "documents": 3,
+        "edges": 4
+      },
+      {
+        "concept": "remediation",
+        "documents": 2,
+        "edges": 35
+      },
+      {
+        "concept": "seeding method",
+        "documents": 2,
+        "edges": 24
+      },
+      {
+        "concept": "woody debris",
+        "documents": 2,
+        "edges": 21
+      },
+      {
+        "concept": "liming",
+        "documents": 2,
+        "edges": 20
+      },
+      {
+        "concept": "grazing",
+        "documents": 2,
+        "edges": 19
+      },
+      {
+        "concept": "mechanical release",
+        "documents": 2,
+        "edges": 19
+      },
+      {
+        "concept": "native hay",
+        "documents": 2,
+        "edges": 17
+      },
+      {
+        "concept": "release",
+        "documents": 2,
+        "edges": 13
+      },
+      {
+        "concept": "peat-mineral mix",
+        "documents": 2,
+        "edges": 12
+      },
+      {
+        "concept": "exponential fertilization",
+        "documents": 2,
+        "edges": 10
+      },
+      {
+        "concept": "nitrogen",
+        "documents": 2,
+        "edges": 10
+      },
+      {
+        "concept": "amendments",
+        "documents": 2,
+        "edges": 9
+      },
+      {
+        "concept": "disturbance",
+        "documents": 2,
+        "edges": 9
+      },
+      {
+        "concept": "carp",
+        "documents": 2,
+        "edges": 8
+      },
+      {
+        "concept": "mounding",
+        "documents": 2,
+        "edges": 8
+      },
+      {
+        "concept": "soil inoculation",
+        "documents": 2,
+        "edges": 8
+      },
+      {
+        "concept": "fertilizer application",
+        "documents": 2,
+        "edges": 6
+      },
+      {
+        "concept": "forest floor-mineral mix",
+        "documents": 2,
+        "edges": 6
+      },
+      {
+        "concept": "soil amendment",
+        "documents": 2,
+        "edges": 6
+      },
+      {
+        "concept": "mulching",
+        "documents": 2,
+        "edges": 5
+      },
+      {
+        "concept": "drilling",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "exclosure :: presence",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "habitat restoration",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "picea glauca",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "seeding :: presence",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "sewage sludge",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "site preparation",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "soil",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "water",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "fertilizer :: application",
+        "documents": 2,
+        "edges": 3
+      },
+      {
+        "concept": "holding period :: duration",
+        "documents": 2,
+        "edges": 3
+      },
+      {
+        "concept": "sethoxydim",
+        "documents": 2,
+        "edges": 3
+      },
+      {
+        "concept": "vegetation",
+        "documents": 2,
+        "edges": 3
+      },
+      {
+        "concept": "elk",
+        "documents": 2,
+        "edges": 2
+      },
+      {
+        "concept": "peatland :: restoration_status",
+        "documents": 2,
+        "edges": 2
+      }
+    ]
+  },
+  "cause_conditions": {
+    "concepts": 1215,
+    "edges": 2736,
+    "top": [
+      {
+        "concept": "time",
+        "entity_type": "environmental_variable,environmental_process",
+        "documents": 27,
+        "edges": 100
+      },
+      {
+        "concept": "time :: duration",
+        "entity_type": "environmental_variable,environmental_process",
+        "documents": 13,
+        "edges": 36
+      },
+      {
+        "concept": "site location :: location",
+        "entity_type": "environmental_variable",
+        "documents": 9,
+        "edges": 24
+      },
+      {
+        "concept": "time since restoration :: time",
+        "entity_type": "environmental_variable",
+        "documents": 6,
+        "edges": 17
+      },
+      {
+        "concept": "distance",
+        "entity_type": "environmental_variable",
+        "documents": 6,
+        "edges": 16
+      },
+      {
+        "concept": "precipitation :: amount",
+        "entity_type": "environmental_variable",
+        "documents": 6,
+        "edges": 11
+      },
+      {
+        "concept": "soil depth :: depth",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 14
+      },
+      {
+        "concept": "ph :: value",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 13
+      },
+      {
+        "concept": "season",
+        "entity_type": "environmental_variable",
+        "documents": 5,
+        "edges": 6
+      },
+      {
+        "concept": "site :: location",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 24
+      },
+      {
+        "concept": "location",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 11
+      },
+      {
+        "concept": "soil moisture :: content",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 7
+      },
+      {
+        "concept": "nitrogen :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 6
+      },
+      {
+        "concept": "interaction",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 5
+      },
+      {
+        "concept": "ph",
+        "entity_type": "environmental_variable",
+        "documents": 4,
+        "edges": 5
+      },
+      {
+        "concept": "sphagnum :: cover",
+        "entity_type": "environmental_variable,taxon",
+        "documents": 4,
+        "edges": 4
+      },
+      {
+        "concept": "water level :: level",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 15
+      },
+      {
+        "concept": "time :: elapsed_time",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 14
+      },
+      {
+        "concept": "site type",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 13
+      },
+      {
+        "concept": "time :: year",
+        "entity_type": "environmental_variable,environmental_process",
+        "documents": 3,
+        "edges": 13
+      },
+      {
+        "concept": "nitrate :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 10
+      },
+      {
+        "concept": "tree species",
+        "entity_type": "taxon",
+        "documents": 3,
+        "edges": 7
+      },
+      {
+        "concept": "wetland area :: area",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 7
+      },
+      {
+        "concept": "soil temperature :: temperature",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 6
+      },
+      {
+        "concept": "site age :: age",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 5
+      },
+      {
+        "concept": "environmental variable :: value",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 4
+      },
+      {
+        "concept": "sex",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 4
+      },
+      {
+        "concept": "time :: season",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 4
+      },
+      {
+        "concept": "water table depth :: depth",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 4
+      },
+      {
+        "concept": "interaction :: presence",
+        "entity_type": "environmental_variable,environmental_process",
+        "documents": 3,
+        "edges": 3
+      },
+      {
+        "concept": "metal concentration :: concentration",
+        "entity_type": "environmental_variable",
+        "documents": 3,
+        "edges": 3
+      },
+      {
+        "concept": "shade :: presence",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 12
+      },
+      {
+        "concept": "clutch initiation date :: timing",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 9
+      },
+      {
+        "concept": "mound height :: height",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 8
+      },
+      {
+        "concept": "organic matter :: thickness",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 8
+      },
+      {
+        "concept": "species identity :: identity",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 8
+      },
+      {
+        "concept": "time since reclamation :: time",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 8
+      },
+      {
+        "concept": "water table position",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 8
+      },
+      {
+        "concept": "elevation",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 7
+      },
+      {
+        "concept": "fish :: presence",
+        "entity_type": "taxon,environmental_variable",
+        "documents": 2,
+        "edges": 7
+      },
+      {
+        "concept": "surface roughness :: roughness",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 6
+      },
+      {
+        "concept": "time since reclamation :: duration",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 6
+      },
+      {
+        "concept": "time since restoration :: duration",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 6
+      },
+      {
+        "concept": "treatment :: type",
+        "entity_type": "environmental_variable,management_intervention",
+        "documents": 2,
+        "edges": 6
+      },
+      {
+        "concept": "treatment type",
+        "entity_type": "environmental_variable,management_intervention",
+        "documents": 2,
+        "edges": 6
+      },
+      {
+        "concept": "water table :: depth",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 6
+      },
+      {
+        "concept": "deer density :: density",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 5
+      },
+      {
+        "concept": "reference site :: status",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 5
+      },
+      {
+        "concept": "restoration status :: status",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 5
+      },
+      {
+        "concept": "seismic line :: presence",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 5
+      },
+      {
+        "concept": "soil moisture :: moisture",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 5
+      },
+      {
+        "concept": "age",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "canopy cover :: cover",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "eriophorum vaginatum :: presence",
+        "entity_type": "environmental_variable,taxon",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "habitat type :: type",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "latitude",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "restoration status",
+        "entity_type": "environmental_variable,management_intervention",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "site type :: type",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "soil moisture",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 4
+      },
+      {
+        "concept": "substrate :: composition",
+        "entity_type": "environmental_variable",
+        "documents": 2,
+        "edges": 4
+      }
+    ]
+  },
+  "subject_entity_terms": {
+    "time": 193,
+    "fertilization": 85,
+    "rewetting": 72,
+    "herbicide application": 62,
+    "restoration": 57,
+    "scarification": 51,
+    "site": 41,
+    "soil moisture": 40,
+    "seeding": 38,
+    "remediation": 35,
+    "biosolids application": 34,
+    "peat mining": 34,
+    "peatland": 32,
+    "winter road clearance": 31,
+    "woody debris": 31,
+    "forest floor mixing": 30,
+    "nitrogen": 30,
+    "site location": 30,
+    "prescribed fire": 29,
+    "site type": 28,
+    "causeway breaching": 26,
+    "time since restoration": 26,
+    "treatment": 26,
+    "herbicide": 25,
+    "glyphosate application": 24,
+    "oncorhynchus kisutch": 24,
+    "seeding method": 24,
+    "cutting": 23,
+    "liming": 23,
+    "harvesting": 22,
+    "peatland restoration": 22,
+    "treeshelter": 22,
+    "insect defoliation": 21,
+    "distance": 20,
+    "grazing": 20,
+    "ph": 20,
+    "water table position": 20,
+    "mechanical release": 19,
+    "mowing": 19,
+    "seismic line": 19,
+    "forest floor material": 18,
+    "smoke plus ash": 18,
+    "manual cutting": 17,
+    "native hay": 17,
+    "precipitation": 17,
+    "ash": 16,
+    "fertilizer": 16,
+    "orconectes virilis": 16,
+    "peat": 16,
+    "peat-mineral mix": 16,
+    "burning": 15,
+    "engineered structures": 15,
+    "microbial biomass carbon": 15,
+    "mulch application": 15,
+    "pipeline right-of-way": 15,
+    "planting": 15,
+    "season": 15,
+    "soil": 15,
+    "succession": 15,
+    "time elapsed after clearcutting and slashburning": 15
+  },
+  "object_entity_terms": {
+    "species richness": 99,
+    "picea mariana": 87,
+    "native species": 78,
+    "sphagnum": 47,
+    "survival": 39,
+    "seedling": 36,
+    "pinus strobus": 35,
+    "soil moisture": 30,
+    "cover": 28,
+    "forest floor": 28,
+    "nitrogen": 28,
+    "soil": 28,
+    "agropyron cristatum": 27,
+    "biomass": 27,
+    "frequency": 27,
+    "abies balsamea": 25,
+    "soil temperature": 25,
+    "abundance": 24,
+    "density": 23,
+    "picea glauca": 23,
+    "water table level": 23,
+    "community composition": 22,
+    "peat": 21,
+    "plant community": 21,
+    "festuca hallii": 20,
+    "seedling survival": 20,
+    "species composition": 20,
+    "moss": 19,
+    "nitrate": 19,
+    "vegetation": 19,
+    "dissolved organic carbon": 18,
+    "populus tremuloides": 18,
+    "carex aquatilis": 16,
+    "grass": 16,
+    "non-native species": 16,
+    "peromyscus maniculatus": 16,
+    "potassium": 16,
+    "thuja occidentalis": 16,
+    "bare ground": 15,
+    "cirsium pitcheri": 15,
+    "phosphorus": 15,
+    "picea rubens": 14,
+    "height": 13,
+    "organic matter": 13,
+    "ph": 13,
+    "relative density": 13,
+    "sediment": 13,
+    "species diversity": 13,
+    "streamflow": 13,
+    "δ13c": 13,
+    "exotic species": 12,
+    "growth": 12,
+    "pinus banksiana": 12,
+    "arsenic": 11,
+    "aspen": 11,
+    "ecosystem respiration": 11,
+    "elk": 11,
+    "plant community composition": 11,
+    "root collar diameter": 11,
+    "shrub": 11
+  },
+  "subject_measured_attributes": {
+    "(none)": 2594,
+    "presence": 381,
+    "time": 151,
+    "type": 131,
+    "occurrence": 126,
+    "cover": 106,
+    "location": 95,
+    "concentration": 90,
+    "duration": 85,
+    "depth": 81,
+    "density": 58,
+    "status": 53,
+    "value": 50,
+    "abundance": 47,
+    "distance": 45,
+    "height": 44,
+    "age": 42,
+    "level": 36,
+    "amount": 30,
+    "application": 29,
+    "timing": 29,
+    "thickness": 27,
+    "biomass": 24,
+    "identity": 24,
+    "ph": 23,
+    "intensity": 22,
+    "proximity": 21,
+    "water content": 17,
+    "method": 16,
+    "season": 16,
+    "size": 16,
+    "area": 15,
+    "content": 15,
+    "position": 15,
+    "succession": 15,
+    "elapsed_time": 14,
+    "origin": 14,
+    "exposure": 13,
+    "proportion": 13,
+    "site type": 13,
+    "year": 13,
+    "aspect": 12,
+    "composition": 12,
+    "temperature": 12,
+    "volume": 12,
+    "availability": 11,
+    "disturbance_status": 11,
+    "interaction": 11,
+    "magnitude": 11,
+    "diameter": 10,
+    "disturbance_type": 10,
+    "elevation": 10,
+    "mean height": 10,
+    "restoration_status": 10,
+    "frequency": 9,
+    "rate": 9,
+    "community_type": 8,
+    "microbial biomass": 8,
+    "moisture": 8,
+    "moisture content": 8
+  },
+  "object_measured_attributes": {
+    "cover": 572,
+    "abundance": 289,
+    "concentration": 272,
+    "density": 218,
+    "species richness": 138,
+    "presence": 134,
+    "survival": 131,
+    "composition": 121,
+    "biomass": 120,
+    "rate": 111,
+    "richness": 96,
+    "height": 85,
+    "growth": 70,
+    "proportion": 69,
+    "value": 68,
+    "diversity": 50,
+    "number": 46,
+    "depth": 44,
+    "frequency": 43,
+    "ph": 43,
+    "occurrence": 41,
+    "temperature": 31,
+    "(none)": 30,
+    "content": 29,
+    "availability": 28,
+    "volume growth": 27,
+    "emergence": 26,
+    "total height": 25,
+    "establishment": 23,
+    "level": 22,
+    "flux": 21,
+    "height growth": 21,
+    "magnitude": 20,
+    "mortality": 20,
+    "size": 20,
+    "amount": 19,
+    "variation": 19,
+    "relative density": 18,
+    "dominance": 17,
+    "ratio": 17,
+    "water content": 17,
+    "relative increase": 16,
+    "survivorship": 16,
+    "bulk density": 15,
+    "diameter": 15,
+    "duration": 15,
+    "prevalence": 15,
+    "regeneration density": 15,
+    "increment": 14,
+    "probability": 14,
+    "similarity": 14,
+    "height increment": 13,
+    "percent cover": 13,
+    "potential": 13,
+    "selection": 13,
+    "success": 13,
+    "variability": 13,
+    "aboveground biomass": 12,
+    "basal diameter increment": 12,
+    "biomass growth": 12
+  },
+  "applied_to_terms_by_node": {
+    "wd:Q469576": 203,
+    "wd:Q218425": 96,
+    "ENVO:00001998": 91,
+    "wd:Q128116": 86,
+    "wd:Q922192": 55,
+    "wd:Q428023": 54,
+    "ENVO:00000044": 53,
+    "ENVO:00005774": 44,
+    "wd:Q806838": 41,
+    "ENVO:01001209": 32,
+    "wd:Q79794": 28,
+    "vegetation": 27,
+    "wd:Q188879": 26,
+    "trees": 25,
+    "wd:Q2720384": 25,
+    "wd:Q5122070": 25,
+    "ENVO:01001582": 23,
+    "wd:Q819825": 23,
+    "wd:Q469151": 21,
+    "ENVO:00002007": 19,
+    "wd:Q147525": 19,
+    "wd:Q21361446": 19,
+    "wd:Q43238": 19,
+    "wd:Q44064": 18,
+    "forb": 17,
+    "mineral soil": 17,
+    "native grasses": 17,
+    "seedling": 17,
+    "wd:Q1462862": 17,
+    "wd:Q1572090": 17,
+    "wd:Q187986": 17,
+    "wd:Q469946": 17,
+    "seedlings": 16,
+    "understory vegetation": 16,
+    "wd:Q756": 16,
+    "native species": 15,
+    "wd:Q152": 15,
+    "wd:Q27636374": 15,
+    "ENVO:00000111": 14,
+    "herbaceous community": 14,
+    "wd:Q1123801": 14,
+    "wd:Q147783": 14,
+    "wd:Q1499241": 14,
+    "wd:Q25356": 14,
+    "wd:Q2868394": 14,
+    "wd:Q35517": 14,
+    "wd:Q159580": 13,
+    "ENVO:00000104": 12,
+    "ENVO:01001192": 12,
+    "wd:Q158590": 12,
+    "wd:Q161164": 12,
+    "wd:Q29993": 12,
+    "wd:Q578005": 12,
+    "wd:Q734085": 12,
+    "wet meadow habitat": 12,
+    "ENVO:02000059": 11,
+    "northern study area": 11,
+    "plant community": 11,
+    "wd:Q147468": 11,
+    "wd:Q2700010": 11
+  }
+}

@@ -110,10 +110,14 @@ flowchart LR
 
 ## Phase 1 — Understand (Fri night)
 
-- [ ] **1. Profile the CAMO graph.** ★ 4/5 · A · `experiments/`
+- [x] **1. Profile the CAMO graph.** ★ 4/5 · A · `experiments/`
   - **Why:** the taxonomy, sign rules and traps must fit this graph, not CAMO in general. Every edge is graded moderate, low or very_low, never high. There are no assessment edges. 5,067 of 6,814 nodes appear in only one edge. 661 of 1,906 signed edges flip sign under naive reading. There are 1,093 null findings and 203 `unchanged` nodes.
   - **Done when:** `mise run profile` output is reviewed. Cause and outcome vocabulary is dumped. A trap inventory with counts goes in `experiments/`, including twin edges from one sentence and `associated_with` with qualifiers.
   - **Points:** feeds D17 and C14.
+  - **Done:** the review is in `experiments/profile/README.md`. The vocabulary is in `vocab_*.tsv`, and the trap inventory, with 5 examples per trap, is in `experiments/results/trap_inventory.json`. Every "Why" number checked out.
+    - **Fragmentation:** 4,801 of 4,820 raw cause→outcome pairs rest on one document, so item 3 must merge hard.
+    - **Open for item 6:** all 39 `prevents`/`disrupts` edges double-negate ("prevents decreased Y"), so the schema sign product reads the opposite of the sentence.
+    - **For items 6 and 8:** the 121 `unchanged` objects are untagged nulls.
 - [ ] **2. Profile the instrumentation.** ★ 4/5 · D · `llm.py` usage
   - **Why:** E12 is estimated from tokens on the endpoint. We need to know whether thinking-off really works, whether usage is reported, and how latency behaves.
   - **Done when:** a smoke call through `ctx.llm` records prompt and completion tokens in `footprint.json`. Completion tokens are small, so no hidden reasoning. The batch chunk size is chosen, and the baseline tokens per question are written down here.

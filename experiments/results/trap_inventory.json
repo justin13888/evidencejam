@@ -1,0 +1,1292 @@
+{
+  "summary": {
+    "reversed_edges": {
+      "count": 20,
+      "share_of_edges_pct": 0.4
+    },
+    "null_is_not_decrease": {
+      "count": 1093,
+      "share_of_edges_pct": 19.7
+    },
+    "associational_is_not_causal": {
+      "count": 2496,
+      "share_of_edges_pct": 44.9
+    },
+    "negative_subject_qualifiers": {
+      "count": 278,
+      "share_of_edges_pct": 5.0
+    },
+    "unchanged_is_not_null": {
+      "count": 268,
+      "share_of_edges_pct": 4.8
+    },
+    "twin_edges_one_sentence": {
+      "count": 1728,
+      "share_of_edges_pct": 31.1
+    },
+    "moderators_mediators": {
+      "count": 28,
+      "share_of_edges_pct": 0.5
+    },
+    "near_miss_classes": {
+      "count": 38,
+      "share_of_edges_pct": 0.7
+    },
+    "negative_predicates_double_negation": {
+      "count": 39,
+      "share_of_edges_pct": 0.7
+    },
+    "intervention_name_vs_fields": {
+      "count": 98,
+      "share_of_edges_pct": 1.8
+    },
+    "one_study_many_edges": {
+      "count": 1227,
+      "share_of_edges_pct": 22.1
+    },
+    "comparator_reference": {
+      "count": 622,
+      "share_of_edges_pct": 11.2
+    },
+    "default_positive_subject": {
+      "count": 1438,
+      "share_of_edges_pct": 25.9
+    },
+    "time_as_cause": {
+      "count": 392,
+      "share_of_edges_pct": 7.1
+    }
+  },
+  "graph": {
+    "nodes": 6814,
+    "edges": 5554,
+    "documents": 293
+  },
+  "reversed_edges": {
+    "count": 20,
+    "share_of_edges_pct": 0.4,
+    "why": "A question asks X -> Y but the graph may hold Y -> X. Raw node pairs almost never appear both ways, so the risk is a question written in reverse (gold: no_evidence, reverse edges named in searched_for) and class-level reversal once concepts are merged (re-count after item 3). Roles must be kept.",
+    "handled_by": "linker (role-aware pairs), retriever (report reverse edges in searched_for)",
+    "breakdown": {
+      "concept_pairs_with_both_directions": 1,
+      "entity_pairs_with_both_directions": 9,
+      "edges_in_entity_pairs_with_both_directions": 20,
+      "concepts_used_as_both_cause_and_outcome": 182,
+      "edges_whose_outcome_concept_is_also_a_cause": 606,
+      "edges_with_outcome_type_subject": 2422,
+      "edges_with_taxon_subject": 232,
+      "edges_with_intervention_object": 1
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_fb3489f963a3",
+        "doc": "10.1139/f05-141",
+        "subject": "[present] presence of sculpin",
+        "predicate": "associated_with",
+        "object": "[present] presence of round gobies",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "In northern Lake Michigan, sculpin were longer (59.4 ± 0.5 mm) than round gobies (54.0 ± 2.6 mm; K–W, P < 0.001);"
+      },
+      {
+        "edge": "camo:edge_de3a25c2b355",
+        "doc": "10.1139/f05-141",
+        "subject": "[present] presence of round gobies",
+        "predicate": "associated_with",
+        "object": "[present] presence of sculpin",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "The average density of round gobies was lower (0.8 ± 0.2 m-2) than that of sculpin (5.8 ± 0.3 m-2; K-W, P < 0.001)."
+      },
+      {
+        "edge": "camo:edge_bd49e718faab",
+        "doc": "10.1139/f05-141",
+        "subject": "[present] presence of sculpin",
+        "predicate": "associated_with",
+        "object": "[present] presence of crayfish",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Unlike Lake Michigan and Parry Sound, sculpin (4.9 ± 0.4 m-2) were more abundant than crayfish in Lake Champlain (1.0 ± 0.2 m-2, K–W, P < 0.001), accounting for 68% of the species collected in egg bags."
+      },
+      {
+        "edge": "camo:edge_802a97d6a6f2",
+        "doc": "10.1139/f05-141",
+        "subject": "[present] presence of crayfish",
+        "predicate": "associated_with",
+        "object": "[present] presence of sculpin",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Crayfish and sculpin were most abundant, crayfish (9.1 ± 0.3 m-2) being significantly more abundant than sculpin (6.1 ± 0.3 m-2; K–W, P < 0.001; Fig. 2)."
+      },
+      {
+        "edge": "camo:edge_2a69dd0fe8f5",
+        "doc": "10.1139/cjb-2018-0109",
+        "subject": "[present] G3-Eriophorum plant assemblage",
+        "predicate": "associated_with",
+        "object": "[increased] High percentage of Eriophorum vaginatum occurrence",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "A high percentage (82%) was found in G3 (Eriophorum group), whereas the frequency was very low (4%) in G1-Scirpus and G2-Trichophorum."
+      }
+    ]
+  },
+  "null_is_not_decrease": {
+    "count": 1093,
+    "share_of_edges_pct": 19.7,
+    "why": "Negated / no_relationship edges are tested-and-found-nothing findings (direction no_effect), not decreases; a 'decreased' object qualifier on a negated edge still means no effect was found.",
+    "handled_by": "interpreter (null votes), aggregator (no_effect vs mixed)",
+    "breakdown": {
+      "negated": 1093,
+      "no_relationship": 1093,
+      "negated_and_no_relationship": 1093,
+      "negated_only": 0,
+      "no_relationship_only": 0,
+      "null_by_predicate": {
+        "causes": 1077,
+        "associated_with": 14,
+        "correlated_with": 2
+      },
+      "null_by_object_qualifier": {
+        "None": 1076,
+        "present": 5,
+        "increased": 4,
+        "decreased": 3,
+        "occurred": 3,
+        "absent": 2
+      },
+      "null_with_negative_object_qualifier": 5,
+      "null_with_any_signed_object_qualifier": 14,
+      "null_by_certainty_grade": {
+        "moderate": 677,
+        "low": 356,
+        "very_low": 60
+      }
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_5e5b83097577",
+        "doc": "10.1002/eco.2210",
+        "subject": "[increased] Increase in Sphagnum cover in the reference zone",
+        "predicate": "NOT causes",
+        "object": "[decreased] Water table level",
+        "causal_language": "no_relationship",
+        "grade": "moderate",
+        "sentence": "Additionally, an (~10%) increase in *Sphagnum* cover in the reference zone was observed between prerewetting (2010) and 6–7 years post-rewetting. This appeared mainly due to an increase in cover around 25 m from the dit…"
+      },
+      {
+        "edge": "camo:edge_13f744bb0b84",
+        "doc": "10.1371/journal.pone.0172667",
+        "subject": "[occurred] time elapsed after clearcutting and slashburning",
+        "predicate": "NOT causes",
+        "object": "[absent] Presence of Pinus contorta var. latifolia and Pinus menziesii var. glauca",
+        "causal_language": "no_relationship",
+        "grade": "moderate",
+        "sentence": "There was no record of *P*. *contorta* var. *latifolia* or *P*. *menziesii* var. *glauca* in the plots post burn."
+      },
+      {
+        "edge": "camo:edge_20171069c1db",
+        "doc": "QFD94IUP",
+        "subject": "[present] Peatland type bog",
+        "predicate": "NOT associated_with",
+        "object": "[decreased] Decreased TBI decomposition rate constant",
+        "causal_language": "no_relationship",
+        "grade": "moderate",
+        "sentence": "The peatlands SB, BDB and sections of PR were classified as bogs and  $k_{\\text{TRI}}$ was lower, but not significantly different than at fen sites PR and SJ  $(F_{1.81} = 1.50, p = 0.224)$ ."
+      },
+      {
+        "edge": "camo:edge_e5aaddf6981b",
+        "doc": "10.1007/s10532-005-9029-3",
+        "subject": "[occurred] 20 weeks of exposure in oiled test plots",
+        "predicate": "NOT causes",
+        "object": "[absent] Physical loss of oil",
+        "causal_language": "no_relationship",
+        "grade": "moderate",
+        "sentence": "Although variability was quite high, little physical loss occurred in any of the treatments during the 20 weeks of the study."
+      },
+      {
+        "edge": "camo:edge_778ff3c88e24",
+        "doc": "10.1002/etc.4408",
+        "subject": "[occurred] Year 2011",
+        "predicate": "NOT causes",
+        "object": "[decreased] Disappearance of association between EROD enzyme induction and chromium levels",
+        "causal_language": "no_relationship",
+        "grade": "moderate",
+        "sentence": "These differences disappeared by 2017."
+      }
+    ]
+  },
+  "associational_is_not_causal": {
+    "count": 2496,
+    "share_of_edges_pct": 44.9,
+    "why": "associated_with / correlated_with have no predicate sign; any direction comes only from endpoint qualifiers and must be worded as association, never 'X increases Y'.",
+    "handled_by": "interpreter (qualifier-only sign), grader (lower certainty), renderer (association wording)",
+    "breakdown": {
+      "language_by_predicate": {
+        "associated_with": {
+          "associational": 2219,
+          "no_relationship": 14
+        },
+        "causes": {
+          "direct_causal": 1802,
+          "no_relationship": 1077,
+          "uncertain_causal": 21
+        },
+        "contributes_to": {
+          "uncertain_causal": 21,
+          "direct_causal": 14,
+          "associational": 12
+        },
+        "correlated_with": {
+          "associational": 277,
+          "no_relationship": 2
+        },
+        "disrupts": {
+          "direct_causal": 9
+        },
+        "enables": {
+          "direct_causal": 27,
+          "uncertain_causal": 1
+        },
+        "mediates": {
+          "associational": 2,
+          "direct_causal": 1,
+          "uncertain_causal": 1
+        },
+        "moderates": {
+          "associational": 13,
+          "direct_causal": 9
+        },
+        "prevents": {
+          "direct_causal": 30
+        },
+        "regulates": {
+          "associational": 1,
+          "direct_causal": 1
+        }
+      },
+      "associational_predicate_non_null": 2496,
+      "associational_with_both_qualifiers_signed": 1646,
+      "associational_with_signed_object_qualifier": 2284,
+      "signed_predicate_but_associational_language": 12,
+      "associational_predicate_but_direct_causal_language": 0
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_9ab77deefcdf",
+        "doc": "10.1016/j.ecoleng.2013.12.013",
+        "subject": "[increased] Increased water table position",
+        "predicate": "correlated_with",
+        "object": "[increased] Increased graminoid cover",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Water table position was significantly positively related to graminoid cover (linear regression, R2(adj) = 0.43, p = 0.012"
+      },
+      {
+        "edge": "camo:edge_65d2e43d9033",
+        "doc": "10.1016/j.ecoleng.2013.12.013",
+        "subject": "[decreased] Decreased water table position",
+        "predicate": "associated_with",
+        "object": "[increased] Increased moss cover",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Comparing wet and dry restored plots, moss and shrub cover was generally higher in dry restored plots"
+      },
+      {
+        "edge": "camo:edge_f136966503a2",
+        "doc": "10.1016/j.ecoleng.2013.12.013",
+        "subject": "[decreased] Decreased water table position",
+        "predicate": "associated_with",
+        "object": "[increased] Increased shrub cover",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Comparing wet and dry restored plots, moss and shrub cover was generally higher in dry restored plots"
+      },
+      {
+        "edge": "camo:edge_f3751bb0d5a0",
+        "doc": "10.1016/j.ecoleng.2013.12.013",
+        "subject": "[increased] Increased water table position",
+        "predicate": "associated_with",
+        "object": "[increased] Increased graminoid cover",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "while total vascular plant cover and graminoid cover was higher in wet restored plots. However, only graminoid cover was statistically significantly different between wet and dry restored plots (t-test, T = −3.36, p = 0…"
+      },
+      {
+        "edge": "camo:edge_d4349eba0a25",
+        "doc": "10.1016/j.ecoleng.2013.12.013",
+        "subject": "[increased] Increased water table position",
+        "predicate": "correlated_with",
+        "object": "[increased] Increased mean seasonal methane flux",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Mean seasonal CH<sub>4</sub> flux varied with water table with log (total season CH<sub>4</sub> flux + 1) increasing as mean season water table position became shallower (Fig. 5;  $R^2$ (adj)=0.25, p=0.057"
+      }
+    ]
+  },
+  "negative_subject_qualifiers": {
+    "count": 278,
+    "share_of_edges_pct": 5.0,
+    "why": "'removal of X causes increased Y' means X lowers Y. Edge sign = subject x predicate x object sign; reading the predicate alone flips the answer.",
+    "handled_by": "node_labeler (polarity), interpreter (sign composition)",
+    "breakdown": {
+      "by_subject_qualifier": {
+        "decreased": 181,
+        "removed": 43,
+        "terminated": 27,
+        "absent": 25,
+        "interrupted": 2
+      },
+      "negative_subject_and_signed_predicate": 107,
+      "naive_predicate_sign_flipped_total": 661,
+      "flipped_by_negative_subject": 66,
+      "flipped_by_negative_object": 595,
+      "signed_edges_total": {
+        "agree": 1245,
+        "disagree": 661
+      }
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_f2c1bfb5b95f",
+        "doc": "10.5558/tfc86234-2",
+        "subject": "[decreased] Kalmia control with herbicide",
+        "predicate": "causes",
+        "object": "[increased] Increased height of black spruce and jack pine",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "Black spruce and jack pine heightincreasedwhen*Kalmia*was controlledwith herbicide, but height oftamarackwas not"
+      },
+      {
+        "edge": "camo:edge_6e2f988b4a10",
+        "doc": "10.1016/j.foreco.2018.05.064",
+        "subject": "[decreased] thin organic matter in lichen-dominated seedbeds",
+        "predicate": "causes",
+        "object": "[increased] increased black spruce seedling establishment",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "mat-intact and mat-mixed plots with thin OM had significantly higher seedling establishment than those with thick OM."
+      },
+      {
+        "edge": "camo:edge_41596c063aef",
+        "doc": "10.1002/eco.2210",
+        "subject": "[removed] removal of trees",
+        "predicate": "causes",
+        "object": "[increased] Water table level similar to intact bog",
+        "causal_language": "direct_causal",
+        "grade": "low",
+        "sentence": "Cutting trees led to a rise of the WTL as it \"switches off\" the biological drainage (Jutras, Plamondon, Hökkä, & Bégin, 2006). This was evident in our dataset, where in the densest treed part (5 m distance from the edge…"
+      },
+      {
+        "edge": "camo:edge_58fb7c905c96",
+        "doc": "10.1046/j.1526-100X.2003.00140.x",
+        "subject": "[removed] planting without soil",
+        "predicate": "causes",
+        "object": "[increased] increased likelihood of trees falling over",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "Trees planted without soil were the most likely and those planted 10 m away from the edge least likely to fall over, but the differences were not large enough for any of the contrasts to be significant."
+      },
+      {
+        "edge": "camo:edge_0378decab58b",
+        "doc": "10.4095/297407",
+        "subject": "[removed] Removal of replacement sediments from the spit enclosing the lagoon",
+        "predicate": "contributes_to",
+        "object": "[occurred] Creation of a cut that will not be filled by natural processes",
+        "causal_language": "direct_causal",
+        "grade": "very_low",
+        "sentence": "the cut into the spit which resulted will not be filled by natural processes as it is not in the active beach zone."
+      }
+    ]
+  },
+  "unchanged_is_not_null": {
+    "count": 268,
+    "share_of_edges_pct": 4.8,
+    "why": "An 'unchanged' endpoint has no variable-level sign but the edge is not negated: 'X causes no change in Y' reads like a null yet is tagged as a positive claim. Decide explicitly how it votes.",
+    "handled_by": "interpreter (unsigned, possibly null-like), aggregator",
+    "breakdown": {
+      "unchanged_nodes": 203,
+      "edges_with_unchanged_subject": 166,
+      "edges_with_unchanged_object": 121,
+      "unchanged_object_and_not_negated": 121,
+      "unchanged_object_and_negated": 0,
+      "unchanged_object_by_predicate": {
+        "associated_with": 70,
+        "causes": 17,
+        "correlated_with": 14,
+        "contributes_to": 8,
+        "moderates": 7,
+        "prevents": 5
+      },
+      "unchanged_object_by_language": {
+        "associational": 93,
+        "direct_causal": 25,
+        "uncertain_causal": 3
+      }
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_07b5d3056850",
+        "doc": "10.4141/S01-084",
+        "subject": "[occurred] conversion of forest to abandoned fallowed fields",
+        "predicate": "associated_with",
+        "object": "[unchanged] unchanged soil exchangeable K levels",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Soil exchangeable K levels, on the other hand, remained relatively stable during the chronosequence."
+      },
+      {
+        "edge": "camo:edge_fda831dab2ed",
+        "doc": "10.1016/j.foreco.2018.05.064",
+        "subject": "[present] interaction between seedbed type and organic matter thickness",
+        "predicate": "moderates",
+        "object": "[unchanged] variable black spruce seed germination",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "However, there was significant interactions with OM thickness and seedbed type (F = 20.78, p < 0.01)"
+      },
+      {
+        "edge": "camo:edge_bbcceb4128a9",
+        "doc": "10.1371/journal.pone.0195480",
+        "subject": "[present] proximity to seismic lines",
+        "predicate": "associated_with",
+        "object": "[unchanged] female grizzly bear movement direction relative to seismic lines",
+        "causal_language": "associational",
+        "grade": "very_low",
+        "sentence": "During summer, M5 indicated that female grizzly bear steps brought them closer to lower vegetation height seismic lines in non-forest, further from higher vegetation height seismic lines in non-forest, neither closer to…"
+      },
+      {
+        "edge": "camo:edge_744e374065aa",
+        "doc": "10.1371/journal.pone.0195480",
+        "subject": "[present] proximity to seismic lines",
+        "predicate": "associated_with",
+        "object": "[unchanged] female grizzly bear movement direction relative to seismic lines",
+        "causal_language": "associational",
+        "grade": "very_low",
+        "sentence": "During fall, M5 indicated that female grizzly bear steps brought them closer to lower vegetation height seismic lines in non-forest and regardless of vegetation height, neither closer to nor further from seismic lines i…"
+      },
+      {
+        "edge": "camo:edge_86905b42b0c6",
+        "doc": "10.1007/s11270-017-3671-3",
+        "subject": "[occurred] Year 2011",
+        "predicate": "associated_with",
+        "object": "[unchanged] Changed Shannon diversity index",
+        "causal_language": "associational",
+        "grade": "moderate",
+        "sentence": "Values of the Shannon and Simpson diversity indexes increased downstream from the source in both years (Figure 5) with the Shannon Index being significantly different between years for all stations (all *p-values* =< 0.…"
+      }
+    ]
+  },
+  "twin_edges_one_sentence": {
+    "count": 1728,
+    "share_of_edges_pct": 31.1,
+    "why": "One sentence is often split into several edges (one per outcome, or the same claim twice). Counting each as a separate study inflates evidence; twins can also disagree (one null, one effect).",
+    "handled_by": "aggregator (one vote per study), citer (dedupe), grader (study count)",
+    "breakdown": {
+      "sentences_total": 4493,
+      "sentences_with_2plus_edges": 667,
+      "edges_in_multi_edge_sentences": 1728,
+      "sentences_with_repeated_concept_pair": 113,
+      "sentences_with_null_and_non_null_edges": 80,
+      "sentences_with_conflicting_signs_on_one_pair": 18,
+      "edges_per_sentence": {
+        "1": 3826,
+        "2": 458,
+        "3": 120,
+        "4": 57,
+        "5": 15,
+        "6": 7,
+        "10": 4,
+        "7": 3,
+        "8": 2,
+        "9": 1
+      }
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_82cc8c02077b",
+        "doc": "10.4141/S01-084",
+        "subject": "[initiated] establishment of Young Plantations",
+        "predicate": "associated_with",
+        "object": "[increased] increased organic C levels in surface horizons",
+        "causal_language": "associational",
+        "grade": "moderate",
+        "sentence": "Organic C levels increased from 0.9 to 5.2 g kg<sup>-1</sup> following establishment of Young Plantations, and reached 16.8 g kg<sup>-1</sup> at the Mature Plantation stage"
+      },
+      {
+        "edge": "camo:edge_ae6455b59571",
+        "doc": "10.4141/S01-084",
+        "subject": "[occurred] development of red pine plantations",
+        "predicate": "associated_with",
+        "object": "[increased] increased organic C levels in surface horizons",
+        "causal_language": "associational",
+        "grade": "moderate",
+        "sentence": "Organic C levels increased from 0.9 to 5.2 g kg<sup>-1</sup> following establishment of Young Plantations, and reached 16.8 g kg<sup>-1</sup> at the Mature Plantation stage"
+      },
+      {
+        "edge": "camo:edge_740fa3104f5b",
+        "doc": "10.1111/rec.12082",
+        "subject": "[present] mineral-organic substrate",
+        "predicate": "associated_with",
+        "object": "[increased] increased abundance of Populus tremuloides seedlings",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "The proportion of occupied microsites differed from their availability for both depth treatments (Table 2); aspen were overrepresented in mineral-organic and underrepresented in mineral substrates (SHALLOW:  $\\chi^2 = 1…"
+      },
+      {
+        "edge": "camo:edge_15a243f43080",
+        "doc": "10.1111/rec.12082",
+        "subject": "[present] mineral-organic substrate",
+        "predicate": "associated_with",
+        "object": "[decreased] decreased abundance of Populus tremuloides seedlings",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "The proportion of occupied microsites differed from their availability for both depth treatments (Table 2); aspen were overrepresented in mineral-organic and underrepresented in mineral substrates (SHALLOW:  $\\chi^2 = 1…"
+      },
+      {
+        "edge": "camo:edge_624b3855328f",
+        "doc": "10.5558/tfc86234-2",
+        "subject": "[introduced] Fertilization",
+        "predicate": "causes",
+        "object": "[increased] Increased 15-year total height of black spruce",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "Fertilization increased black spruce 15-year height by 30% but had no effect on the other two species (Table 2)."
+      }
+    ]
+  },
+  "moderators_mediators": {
+    "count": 28,
+    "share_of_edges_pct": 0.5,
+    "why": "moderates / mediates / regulates have no sign: the subject changes or carries another effect. They must not vote on direction, and 'X moderates Y' is not evidence that X changes Y.",
+    "handled_by": "interpreter (exclude from votes), renderer (mention as context)",
+    "breakdown": {
+      "by_predicate": {
+        "moderates": 22,
+        "mediates": 4,
+        "regulates": 2
+      },
+      "unsigned_predicates_in_graph": {
+        "associated_with": 2233,
+        "correlated_with": 279,
+        "moderates": 22,
+        "mediates": 4,
+        "regulates": 2
+      }
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_c06d529dc25e",
+        "doc": "10.1002/nafm.10250",
+        "subject": "[increased] Weight of velocity being greater than for depth",
+        "predicate": "mediates",
+        "object": "[None] Variation of HSI for Lake Sturgeon with discharge",
+        "causal_language": "direct_causal",
+        "grade": "very_low",
+        "sentence": "Because the weight of velocity was greater than for depth, and substrate does not vary with flow conditions, velocity primarily determined how HSI for Lake Sturgeon varied with discharge (Figure 8)."
+      },
+      {
+        "edge": "camo:edge_ebe0b80620ae",
+        "doc": "10.1002/nafm.10250",
+        "subject": "[None] Discharge level",
+        "predicate": "regulates",
+        "object": "[None] Location of suitable habitat",
+        "causal_language": "direct_causal",
+        "grade": "very_low",
+        "sentence": "The natural island site had the most suitable area at discharges of 38 and 55 m³/s, whereas the natural upstream site had more suitable areas for discharges of 69 and 87 m³/s."
+      },
+      {
+        "edge": "camo:edge_fda831dab2ed",
+        "doc": "10.1016/j.foreco.2018.05.064",
+        "subject": "[present] interaction between seedbed type and organic matter thickness",
+        "predicate": "moderates",
+        "object": "[unchanged] variable black spruce seed germination",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "However, there was significant interactions with OM thickness and seedbed type (F = 20.78, p < 0.01)"
+      },
+      {
+        "edge": "camo:edge_e636715ffe44",
+        "doc": "10.1016/j.foreco.2020.118514",
+        "subject": "[occurred] Cutting treatments",
+        "predicate": "moderates",
+        "object": "[unchanged] Seedling survival rates",
+        "causal_language": "associational",
+        "grade": "moderate",
+        "sentence": "Survival in 2016 was related to the interaction between cutting and release treatments (C × R, *P* = 0.025; [Table 1"
+      },
+      {
+        "edge": "camo:edge_a5d67c3054a2",
+        "doc": "10.1007/s10841-011-9403-x",
+        "subject": "[present] Environmental variables",
+        "predicate": "mediates",
+        "object": "[present] Variance in Brachycera species composition",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "The CCA explained 55.4% (axis 1: 23.7%; axis 2: 18.1%; axis 3: 13.6%) of the variance in Brachycera species composition (Fig."
+      }
+    ]
+  },
+  "near_miss_classes": {
+    "count": 38,
+    "share_of_edges_pct": 0.7,
+    "why": "Hidden questions name broad classes; adjacent classes (native vs non-native, survival vs growth, cover vs richness) share words and papers. Mixing them answers a different question.",
+    "handled_by": "taxonomy_builder (separate classes), node_labeler, linker (margin)",
+    "breakdown": {
+      "native_vs_nonnative": {
+        "a": "(?<!non-)(?<!non)\\bnative\\b",
+        "b": "\\b(non-?native|exotic|invasive|alien|introduced species|weed)",
+        "a_nodes": 162,
+        "b_nodes": 101,
+        "nodes_matching_both": 8,
+        "documents_with_both_as_outcomes": 18
+      },
+      "survival_vs_growth": {
+        "a": "\\bsurviv|\\bmortality\\b",
+        "b": "\\bgrowth\\b|\\bheight\\b|\\bdiameter\\b|\\bbiomass\\b",
+        "a_nodes": 174,
+        "b_nodes": 603,
+        "nodes_matching_both": 9,
+        "documents_with_both_as_outcomes": 35
+      },
+      "cover_vs_richness": {
+        "a": "\\bcover\\b",
+        "b": "\\brichness\\b|\\bdiversity\\b",
+        "a_nodes": 612,
+        "b_nodes": 309,
+        "nodes_matching_both": 5,
+        "documents_with_both_as_outcomes": 48
+      },
+      "abundance_vs_richness": {
+        "a": "\\babundance\\b|\\bdensity\\b",
+        "b": "\\brichness\\b|\\bdiversity\\b",
+        "a_nodes": 580,
+        "b_nodes": 300,
+        "nodes_matching_both": 14,
+        "documents_with_both_as_outcomes": 50
+      },
+      "cover_vs_biomass": {
+        "a": "\\bcover\\b",
+        "b": "\\bbiomass\\b",
+        "a_nodes": 616,
+        "b_nodes": 209,
+        "nodes_matching_both": 1,
+        "documents_with_both_as_outcomes": 14
+      },
+      "germination_vs_establishment": {
+        "a": "\\bgerminat|\\bemergence\\b",
+        "b": "\\bestablish",
+        "a_nodes": 78,
+        "b_nodes": 44,
+        "nodes_matching_both": 1,
+        "documents_with_both_as_outcomes": 2
+      },
+      "co2_vs_methane": {
+        "a": "\\bco2\\b|carbon dioxide|\\bnee\\b|\\bgep\\b",
+        "b": "methane|\\bch4\\b",
+        "a_nodes": 21,
+        "b_nodes": 11,
+        "nodes_matching_both": 0,
+        "documents_with_both_as_outcomes": 3
+      }
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_862d39c58d4d",
+        "doc": "10.1111/rec.13039",
+        "subject": "[increased] Time since reclamation",
+        "predicate": "associated_with",
+        "object": "[decreased] Decreased cover of native and nonnative species",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Both native and nonnative species cover declined on PMMO and PMMT treatments over time (Fig. 2A & 2B)."
+      },
+      {
+        "edge": "camo:edge_458a0043d7f0",
+        "doc": "10.1046/j.1526-100X.2003.00140.x",
+        "subject": "[occurred] Treatment, block, and tree age",
+        "predicate": "NOT causes",
+        "object": "[None] Total seasonal growth of surviving trees",
+        "causal_language": "no_relationship",
+        "grade": "moderate",
+        "sentence": "Total seasonal growth showed no significant differences among treatments, blocks, and tree ages (overall *p* of the ANOVA, 0.10) for each of the 3 years that measurements were taken."
+      },
+      {
+        "edge": "camo:edge_8328e65d2d95",
+        "doc": "10.1111/avsc.12316",
+        "subject": "[occurred] Glyphosate treatment",
+        "predicate": "causes",
+        "object": "[decreased] Decreased native forb cover and richness",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "In 2011 and 2012 native forb cover and richness were significantly lower with glyphosate than controls at Site 3; but only cover at Site 2 in 2011 and Site 3 in 2013 (Fig. 1)."
+      },
+      {
+        "edge": "camo:edge_f47c2c98bce0",
+        "doc": "10.3368/er.19.3.145",
+        "subject": "[initiated] installation and operation of the fishway/carp barrier",
+        "predicate": "causes",
+        "object": "[increased] increases in plant density and diversity",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "With three years of postexclusion data we have found that there has indeed been a significant positive response, including increases in plant density and diversity, improved water clarity, and reductions in suspended se…"
+      },
+      {
+        "edge": "camo:edge_f3523a5f9ecf",
+        "doc": "10.1111/j.1526-100X.2005.00077.x",
+        "subject": "[removed] Absence of peat moss",
+        "predicate": "causes",
+        "object": "[decreased] Reduction in ground cover and biomass of Deschampsia beringensis",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "Festuca rubra lost 7% cover and 51.7 g/m<sup>2</sup> of biomass, whereas D. beringensis lost 35% cover and 125.8 g/m<sup>2</sup> biomass in the absence of peat moss"
+      }
+    ]
+  },
+  "negative_predicates_double_negation": {
+    "count": 39,
+    "share_of_edges_pct": 0.7,
+    "why": "prevents / disrupts carry their own negative sign, but in this graph the object qualifier almost always restates the drop ('rewetting prevents decreased Kalmia cover' for 'Kalmia cover was lower'). The schema product (-1)(-1) = +1 then reads 'increase', against the sentence. Graph error vs schema rule: decide deliberately (item 6) and keep these out of tuning until gold says which reading the hidden set uses.",
+    "handled_by": "interpreter (explicit rule), gold_labeler (sentence-based), renderer (quote sentence)",
+    "breakdown": {
+      "by_predicate": {
+        "prevents": 30,
+        "disrupts": 9
+      },
+      "by_object_qualifier": {
+        "decreased": 28,
+        "absent": 5,
+        "unchanged": 5,
+        "terminated": 1
+      },
+      "negative_predicate_edges": 39,
+      "with_negative_or_unchanged_object": 39,
+      "non_null": 39
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_088dcd02e0a5",
+        "doc": "10.1046/j.1526-100X.2003.00020.x",
+        "subject": "[introduced] High water treatment",
+        "predicate": "prevents",
+        "object": "[terminated] Terminated emergence after mid-June",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "No further emergence occurred in the low water treatment."
+      },
+      {
+        "edge": "camo:edge_898ca6605bdd",
+        "doc": "10.1046/j.1526-100X.2003.00140.x",
+        "subject": "[introduced] caging of small trees",
+        "predicate": "prevents",
+        "object": "[decreased] decreased breakage",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "Caging significantly decreased breakage in small trees compared with the controls (F 9.04, *df*  1, 101, *p*  0.0033 for contrast between treatments 5 and 2 in 4-year-old trees"
+      },
+      {
+        "edge": "camo:edge_02ce36ce0168",
+        "doc": "10.1046/j.1526-100X.2003.00140.x",
+        "subject": "[introduced] addition of soil",
+        "predicate": "prevents",
+        "object": "[decreased] decreased browning",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "Soil addition also significantly decreased browning scores at the end of the first growing season (F 5.09, *df*  1,93, *p*  0.0264 for comparison of treatments 1 and 3 vs. 2 and 4"
+      },
+      {
+        "edge": "camo:edge_3aef2f68a090",
+        "doc": "10.1007/s11273-014-9399-6",
+        "subject": "[present] inundated soil conditions",
+        "predicate": "prevents",
+        "object": "[decreased] decreased carbon dioxide emissions",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "The inundated soil conditions in the trial pit prevented the large carbon dioxide emissions that are characteristic of many harvested peatlands."
+      },
+      {
+        "edge": "camo:edge_45adab683a27",
+        "doc": "10.1016/j.foreco.2013.11.003",
+        "subject": "[increased] Increased burial depth of root fragments",
+        "predicate": "prevents",
+        "object": "[absent] Absence of sucker emergence",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "Although root fragments buried at 40 cm depth had a similar total number of suckers per fragment than fragments buried at 5 and 20 cm, none of these suckers had emerged above the soil surface (p = 0.011)."
+      }
+    ]
+  },
+  "intervention_name_vs_fields": {
+    "count": 98,
+    "share_of_edges_pct": 1.8,
+    "why": "Intervention nodes with a negative qualifier usually encode the *target* in entity_term/attribute ('Kalmia control with herbicide' = Kalmia cover, decreased). Read entity_term + measured_attribute + qualifier, not the name; the intervention itself is only in the name.",
+    "handled_by": "node_labeler (label from fields, keep intervention from name), linker",
+    "breakdown": {
+      "by_subject_qualifier": {
+        "removed": 42,
+        "terminated": 27,
+        "decreased": 15,
+        "absent": 13,
+        "interrupted": 1
+      },
+      "intervention_subject_qualifiers": {
+        "occurred": 1653,
+        "introduced": 823,
+        "present": 116,
+        "removed": 51,
+        "initiated": 44,
+        "increased": 39,
+        "terminated": 27,
+        "None": 24,
+        "decreased": 22,
+        "absent": 13,
+        "unchanged": 2,
+        "interrupted": 1,
+        "ongoing": 1
+      }
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_b1b296daafda",
+        "doc": "10.1016/j.foreco.2019.117839",
+        "subject": "[removed] Release from moose browsing",
+        "predicate": "associated_with",
+        "object": "[increased] Increased canopy closure",
+        "causal_language": "associational",
+        "grade": "moderate",
+        "sentence": "Pooling site/sapling data for all exclosures showed that overall, canopy closure and sapling height were significantly greater inside than outside of exclosures"
+      },
+      {
+        "edge": "camo:edge_f3b94c75b66e",
+        "doc": "10.1016/j.foreco.2019.117839",
+        "subject": "[removed] Release from moose browsing",
+        "predicate": "associated_with",
+        "object": "[increased] Increased sapling height",
+        "causal_language": "associational",
+        "grade": "moderate",
+        "sentence": "Pooling site/sapling data for all exclosures showed that overall, canopy closure and sapling height were significantly greater inside than outside of exclosures"
+      },
+      {
+        "edge": "camo:edge_f8b2466b42a2",
+        "doc": "10.1016/j.foreco.2019.117839",
+        "subject": "[removed] Release from moose browsing",
+        "predicate": "associated_with",
+        "object": "[increased] Increased foliar phenol levels",
+        "causal_language": "associational",
+        "grade": "moderate",
+        "sentence": "Comparing pooled data in non-parametric tests for all exclosures showed that among foliage chemistry variables, only C and phenol levels differed significantly between saplings located inside and outside of exclosures. …"
+      },
+      {
+        "edge": "camo:edge_67a5d67081f6",
+        "doc": "10.1016/j.foreco.2019.117839",
+        "subject": "[removed] Release from moose browsing",
+        "predicate": "associated_with",
+        "object": "[increased] Increased foliar carbon levels",
+        "causal_language": "associational",
+        "grade": "moderate",
+        "sentence": "Comparing pooled data in non-parametric tests for all exclosures showed that among foliage chemistry variables, only C and phenol levels differed significantly between saplings located inside and outside of exclosures. …"
+      },
+      {
+        "edge": "camo:edge_89a4624c7ddd",
+        "doc": "10.1111/rec.12990",
+        "subject": "[removed] Removal of trees, forest floor, and soils",
+        "predicate": "associated_with",
+        "object": "[decreased] Loss of fungal species belonging to Atheliales, Agaricales, and Russulales",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "In particular, there was a greater loss of fungal species belonging to Atheliales (33–100%), Agaricales (33–67%), and Russulales (50–75%) with trees, forest floor, and soils removed than those belonging to Boletales and…"
+      }
+    ]
+  },
+  "one_study_many_edges": {
+    "count": 1227,
+    "share_of_edges_pct": 22.1,
+    "why": "One document often has several edges on the same concept pair (sites, years, species). Votes must be per study; within-study disagreement is not between-study 'mixed'.",
+    "handled_by": "aggregator (one vote per document), grader",
+    "breakdown": {
+      "doc_concept_pairs": 4843,
+      "doc_pairs_with_2plus_edges": 516,
+      "doc_pairs_with_internal_conflict": 124,
+      "edges_per_doc_pair": {
+        "1": 4327,
+        "2": 404,
+        "3": 73,
+        "4": 20,
+        "5": 8,
+        "6": 7,
+        "8": 2,
+        "10": 1,
+        "7": 1
+      },
+      "edges_per_document": {
+        "10": 109,
+        "0": 72,
+        "20": 59,
+        "30": 34,
+        "50": 7,
+        "40": 6,
+        "70": 3,
+        "60": 1,
+        "90": 1
+      }
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_e5968ebcad3b",
+        "doc": "10.1111/j.1526-100X.2010.00665.x",
+        "subject": "[occurred] Assisted restoration at Coniston",
+        "predicate": "causes",
+        "object": "[increased] Increased insect morphofamily richness",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "The insect morphofamilies exhibited a significant increase in richness in the Coniston assisted site (*p <* 0*.*05, *Z* = −2*.*20"
+      },
+      {
+        "edge": "camo:edge_4a8a726bd909",
+        "doc": "10.1111/j.1526-100X.2010.00665.x",
+        "subject": "[occurred] Assisted restoration at Daisy Lake",
+        "predicate": "NOT causes",
+        "object": "[None] Insect morphofamily richness",
+        "causal_language": "no_relationship",
+        "grade": "moderate",
+        "sentence": "The insect morphofamilies exhibited a significant increase in richness in the Coniston assisted site (*p <* 0*.*05, *Z* = −2*.*20) but no difference was observed in the Daisy Lake site (*p >* 0*.*05"
+      },
+      {
+        "edge": "camo:edge_313e112bbe5b",
+        "doc": "10.1111/j.1526-100X.2010.00665.x",
+        "subject": "[occurred] Assisted restoration at Coniston",
+        "predicate": "causes",
+        "object": "[increased] Increased ant genus richness",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "The ant genera exhibited a significant increase in richness in the Coniston assisted site (*p <* 0*.*01, *Z* = −5*.*84"
+      },
+      {
+        "edge": "camo:edge_66b4750c3c3d",
+        "doc": "10.1111/j.1526-100X.2010.00665.x",
+        "subject": "[occurred] Assisted restoration at Daisy Lake",
+        "predicate": "NOT causes",
+        "object": "[None] Ant genus richness",
+        "causal_language": "no_relationship",
+        "grade": "moderate",
+        "sentence": "The ant genera exhibited a significant increase in richness in the Coniston assisted site (*p <* 0*.*01, *Z* = −5*.*84) but no difference in the Daisy Lake site (*p >* 0*.*05"
+      },
+      {
+        "edge": "camo:edge_1d11562dc09e",
+        "doc": "10.3159/TORREY-D-13-00055.1",
+        "subject": "[increased] Crossing distance between climatically dissimilar populations",
+        "predicate": "causes",
+        "object": "[decreased] Decreased seeds per fruit in Lobelia siphilitica",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "Crosses between climatically dissimilar *L. siphilitica* populations produced smaller seeds and accumulated less final biomass than crosses from climatically similar populations"
+      }
+    ]
+  },
+  "comparator_reference": {
+    "count": 622,
+    "share_of_edges_pct": 11.2,
+    "why": "Against a reference (undisturbed) site, 'restored has lower Y' says restoration has not caught up, not that it lowers Y relative to doing nothing. Direction relative to untreated controls differs.",
+    "handled_by": "interpreter (flag), renderer (state comparator), grader",
+    "breakdown": {
+      "comparator_type_sets": {
+        "alternative_treatment": 1801,
+        "not_applicable": 1056,
+        "untreated_control": 737,
+        "pre_treatment_baseline": 629,
+        "reference_undisturbed": 622,
+        "not_reported": 525,
+        "spatial_or_temporal_control": 151,
+        "passive_management_arm": 32,
+        "None": 1
+      }
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_e764a1d31956",
+        "doc": "10.1016/j.ecoleng.2013.12.013",
+        "subject": "[occurred] Restoration of the peatland",
+        "predicate": "associated_with",
+        "object": "[increased] Increased mean gross ecosystem photosynthesis",
+        "causal_language": "associational",
+        "grade": "moderate",
+        "sentence": "Both GEPmax and NEEmax were significantly different between sites (GEPmax: df = 2, F=16.15, p<0.001; NEE: df=2, F=14.55, p=0.001). In both cases, the unrestored site was significantly different from the restored site..."
+      },
+      {
+        "edge": "camo:edge_d8291b819641",
+        "doc": "10.1016/j.ecoleng.2013.12.013",
+        "subject": "[occurred] Restoration of the peatland",
+        "predicate": "associated_with",
+        "object": "[decreased] Decreased global warming potential",
+        "causal_language": "associational",
+        "grade": "moderate",
+        "sentence": "Global warming potential (GWP) based on CO2 and CH4 exchange was 456–2481, –589 to 465 and –490 to 1292 g CO2-e m-2 at unrestored, dry restored and wet restored plots, respectively."
+      },
+      {
+        "edge": "camo:edge_eb8cabd45073",
+        "doc": "10.1007/s11270-018-3741-1",
+        "subject": "[occurred] contamination from mining activity",
+        "predicate": "associated_with",
+        "object": "[increased] elevated arsenic concentrations in surface water",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Mean arsenic concentrations in the surface water of the contaminated lakes was 196 times the mean arsenic concentrations in the surface water of control lakes."
+      },
+      {
+        "edge": "camo:edge_dd75bf7dbc53",
+        "doc": "10.1007/s11270-018-3741-1",
+        "subject": "[decreased] sampling below tailings layers in contaminated lakes",
+        "predicate": "associated_with",
+        "object": "[decreased] sediment arsenic concentrations approaching background levels",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Using sediment samples below the tailings from these cores that predate mining in the region, the range of sediment arsenic concentrations was between 4.4 and 185 mg/kg, with a mean of 77 mg/kg and median of 62 mg/kg."
+      },
+      {
+        "edge": "camo:edge_ef477891f232",
+        "doc": "10.1007/s11270-018-3741-1",
+        "subject": "[occurred] impact from tailings migration or effluent",
+        "predicate": "associated_with",
+        "object": "[increased] elevated arsenic concentrations in surface water",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Lakes impacted by tailings migration or effluent from tailings areas, but that did not have tailings directly dumped into the lake during mining activity, often displayed values that were between the two extremes of con…"
+      }
+    ]
+  },
+  "default_positive_subject": {
+    "count": 1438,
+    "share_of_edges_pct": 25.9,
+    "why": "Subjects with no qualifier, 'occurred' or 'ongoing' count as +1 (schema). Fine for interventions; for a variable like 'time' or 'distance' the direction is 'more X'.",
+    "handled_by": "interpreter",
+    "breakdown": {
+      "by_subject_qualifier": {
+        "occurred": 1361,
+        "None": 76,
+        "ongoing": 1
+      },
+      "by_subject_entity_type": {
+        "management_intervention": 1213,
+        "environmental_process": 125,
+        "environmental_variable": 95,
+        "taxon": 5
+      }
+    },
+    "examples": [
+      {
+        "edge": "camo:edge_f6d8b9c0883c",
+        "doc": "10.1111/j.1526-100X.2010.00665.x",
+        "subject": "[occurred] Assisted restoration at Coniston",
+        "predicate": "causes",
+        "object": "[increased] Increased Shannon diversity index of the ant community",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "The Shannon diversity index of the ant community was significantly higher in the Coniston assisted site than in the Coniston unassisted site (p < 0.001, Z = -5.7)."
+      },
+      {
+        "edge": "camo:edge_4e6865954ba7",
+        "doc": "10.1111/j.1526-100X.2010.00665.x",
+        "subject": "[occurred] Restoration (assisted sites)",
+        "predicate": "causes",
+        "object": "[increased] Increased plant species richness",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "In comparison, there was a significant increase in the plant species at both the Coniston (p < 0.01, Z = 2.94) and Daisy Lake sites (p < 0.01, Z = 3.62) (Fig. 3a & 3b)."
+      },
+      {
+        "edge": "camo:edge_0f4c9898d5df",
+        "doc": "10.1111/j.1526-100X.2010.00665.x",
+        "subject": "[occurred] Restoration (assisted sites)",
+        "predicate": "causes",
+        "object": "[increased] Increased plant family richness",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "This trend was also observed at the family level for the plants at both the Coniston (p < 0.01, Z = 2.94) and Daisy Lake sites (p < 0.05, Z = 2.51) (Fig. 3c & 3d)."
+      },
+      {
+        "edge": "camo:edge_062890b985d7",
+        "doc": "10.1111/j.1526-100X.2010.00665.x",
+        "subject": "[occurred] Assisted restoration at Coniston",
+        "predicate": "causes",
+        "object": "[increased] Increased estimated richness of ant genera",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "Once again, the Coniston assisted site exhibited a higher estimated richness than the unassisted site."
+      },
+      {
+        "edge": "camo:edge_202608c03f32",
+        "doc": "10.1111/j.1526-100X.2010.00665.x",
+        "subject": "[occurred] Assisted restoration at Coniston",
+        "predicate": "causes",
+        "object": "[increased] Increased plant species richness",
+        "causal_language": "direct_causal",
+        "grade": "moderate",
+        "sentence": "In terms of species richness, the plant species show a significant increase in assisted sites for both the Coniston sites (p < 0.01, Z = 10.11)"
+      }
+    ]
+  },
+  "time_as_cause": {
+    "count": 392,
+    "share_of_edges_pct": 7.1,
+    "why": "Time / years since treatment is the most frequent cause concept; it is a trajectory, not an intervention, and should not answer 'what does intervention X do'.",
+    "handled_by": "taxonomy_builder (own class), linker",
+    "examples": [
+      {
+        "edge": "camo:edge_3a223681d917",
+        "doc": "10.1007/s11270-014-1868-2",
+        "subject": "[occurred] Time period",
+        "predicate": "NOT causes",
+        "object": "[None] Mean mucro length trend",
+        "causal_language": "no_relationship",
+        "grade": "low",
+        "sentence": "The mean mucro length time series was not significant across the record (Mann– Kendall trend test τ=0.15, p=0.29) nor during the post-liming period (τ=−0.33, p=0.21)."
+      },
+      {
+        "edge": "camo:edge_da64e23432bf",
+        "doc": "10.1016/j.foreco.2015.03.034",
+        "subject": "[increased] Older stand age (15 years)",
+        "predicate": "associated_with",
+        "object": "[decreased] Decreased proportion of browsed stems",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Older stands had a lower proportion of browsed stems (0.22 ± 0.02 in 15-years-old, 0.39 ± 0.02 in 10-years-old, and 0.50 ± 0.02% in 5-years-old; P 6 0.074) and showed the densest vertical cover (43.37 ± 1.60 in 15-years…"
+      },
+      {
+        "edge": "camo:edge_363fa46fa4ee",
+        "doc": "10.1016/j.foreco.2015.03.034",
+        "subject": "[increased] Older stand age (15 years)",
+        "predicate": "associated_with",
+        "object": "[increased] Increased vertical cover",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Older stands ... showed the densest vertical cover (43.37 ± 1.60 in 15-years-old, 24.93 ± 1.65 in 10 years-old, and 7.59 ± 0.98% in 5-years-old; P < 0.001)."
+      },
+      {
+        "edge": "camo:edge_957becea6de8",
+        "doc": "10.4141/S01-084",
+        "subject": "[occurred] plantation development (75 yr)",
+        "predicate": "associated_with",
+        "object": "[decreased] decreased soil organic C, total N and available P levels in deflated sites",
+        "causal_language": "associational",
+        "grade": "low",
+        "sentence": "Thus, after almost 75 yr of plantation development soil organic C, total N and available P were about one-third, one-half and one-sixth of the lower range of the Forest stage, respectively."
+      },
+      {
+        "edge": "camo:edge_7ff4df1dbb3b",
+        "doc": "10.1016/j.biocon.2010.09.015",
+        "subject": "[occurred] Time passage",
+        "predicate": "associated_with",
+        "object": "[increased] Increased mean basal area per individual",
+        "causal_language": "associational",
+        "grade": "moderate",
+        "sentence": "The loss of small trees was accompanied by an increase over time in mean basal area per individual (±standard error) across size classes (1981: 147 ± 17 cm²; 1996: 299 ± 51 cm²; t₁₈ = 4.02, p < 0.001)."
+      }
+    ]
+  },
+  "certainty_and_records": {
+    "certainty_grades": {
+      "moderate": 2885,
+      "low": 2143,
+      "very_low": 526
+    },
+    "high_grade_edges": 0,
+    "not_assessed_edges": 0,
+    "evidence_types_by_grade": {
+      "low": {
+        "observational_cross_sectional": 1365,
+        "observational_longitudinal": 348,
+        "randomized_experiment": 165,
+        "structural_equation_model": 143,
+        "mechanistic_study": 112,
+        "quasi_experiment": 10
+      },
+      "moderate": {
+        "randomized_experiment": 2176,
+        "observational_longitudinal": 363,
+        "quasi_experiment": 343,
+        "natural_experiment": 3
+      },
+      "very_low": {
+        "observational_cross_sectional": 190,
+        "modeling_simulation": 126,
+        "case_study": 85,
+        "observational_longitudinal": 78,
+        "structural_equation_model": 29,
+        "mechanistic_study": 15,
+        "(none)": 3
+      }
+    },
+    "evidence_base_assessment_edges": 0,
+    "graph_top_level_keys": [
+      "graph_id",
+      "order",
+      "provenance",
+      "schema_version"
+    ],
+    "self_loops": [
+      "camo:edge_8c71288a48ea",
+      "camo:edge_391d5617c985",
+      "camo:edge_8169f37c4fc1",
+      "camo:edge_47fffc638a46",
+      "camo:edge_6e85a314258a",
+      "camo:edge_9638ceaa2be7",
+      "camo:edge_1805576d6905",
+      "camo:edge_26c4b6e4e6dd",
+      "camo:edge_cf50c7db49aa",
+      "camo:edge_fd4d9a5c40f7",
+      "camo:edge_ed82ec794c31",
+      "camo:edge_f6aa3a591188",
+      "camo:edge_7dc0c72fbc90",
+      "camo:edge_a60f55a3a329"
+    ],
+    "nodes_without_entity_type": [
+      "camo:node_3d7d179f15ce"
+    ],
+    "edges_with_null_comparator_type": [
+      "camo:edge_cbaa0d8cde38"
+    ],
+    "edges_without_strength": [
+      "camo:edge_8ace2637a313"
+    ],
+    "dangling_edges": [],
+    "edges_with_unknown_document": [],
+    "ecosystem_context": {
+      "boreal_and_temperate_high_montane_forests_and_woodlands": 1237,
+      "boreal_temperate_and_montane_peat_bogs": 758,
+      "temperate_subhumid_grasslands": 603,
+      "deciduous_temperate_forests": 475,
+      "plantations": 280,
+      "None": 237,
+      "boreal_and_temperate_fens": 228,
+      "large_permanent_freshwater_lakes": 157,
+      "polar_tundra_and_deserts": 150,
+      "small_permanent_freshwater_lakes": 149,
+      "seasonal_floodplain_marshes": 140,
+      "constructed_lacustrine_wetlands": 137,
+      "semi_desert_steppe": 120,
+      "permanent_lowland_rivers": 111,
+      "derived_semi_natural_pastures_and_oldfields": 111,
+      "permanent_upland_streams": 73,
+      "sown_pastures_and_fields": 67,
+      "urban_and_industrial_ecosystems": 61,
+      "young_rocky_pavements_screes_and_lava_flows": 59,
+      "flooded_mines_and_other_voids": 53,
+      "permanently_open_riverine_estuaries_and_bays": 51,
+      "coastal_saltmarshes_and_reedbeds": 50,
+      "coastal_shrublands_and_grasslands": 38,
+      "sandy_shorelines": 31,
+      "oceanic_cool_temperate_rainforests": 28,
+      "subtropical_temperate_forested_wetlands": 25,
+      "marine_aquafarms": 20,
+      "permanent_marshes": 19,
+      "annual_croplands": 16,
+      "photic_coral_reefs": 15,
+      "large_lowland_rivers": 11,
+      "temperate_alpine_grasslands_and_shrublands": 11,
+      "temperate_pyric_sclerophyll_forests_and_woodlands": 8,
+      "large_seabird_and_pinniped_colonies": 7,
+      "seagrass_meadows": 6,
+      "temperate_woodlands": 6,
+      "subtidal_rocky_reefs": 6
+    }
+  }
+}
