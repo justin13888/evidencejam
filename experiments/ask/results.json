@@ -1,0 +1,868 @@
+{
+  "live": true,
+  "n": 25,
+  "max_latency_s": 18.63,
+  "over_10s": [
+    "OT-08",
+    "UC-05"
+  ],
+  "nonzero_exit_other_than_2": [],
+  "calls_total": 4,
+  "tokens_total": 929,
+  "rows": [
+    {
+      "id": "OT-01",
+      "question": "Does mulching lead to more invasive plants?",
+      "exit": 0,
+      "latency_s": 0.56,
+      "status": "answered",
+      "direction": "decrease",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "mulch_surface_cover",
+        "outcome": "invasive_abundance"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "mulch_surface_cover"
+        ],
+        "outcome": [
+          "invasive_abundance"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "mulch_surface_cover"
+        ],
+        "outcome": [
+          "invasive_abundance"
+        ]
+      }
+    },
+    {
+      "id": "OT-02",
+      "question": "Is native plant cover affected by grazing?",
+      "exit": 0,
+      "latency_s": 0.52,
+      "status": "answered",
+      "direction": "decrease",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "grazing_browsing",
+        "outcome": "native_abundance"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "grazing_browsing"
+        ],
+        "outcome": [
+          "native_abundance"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "grazing_browsing"
+        ],
+        "outcome": [
+          "native_abundance"
+        ]
+      }
+    },
+    {
+      "id": "OT-03",
+      "question": "What happens to the water table after rewetting?",
+      "exit": 0,
+      "latency_s": 0.53,
+      "status": "answered",
+      "direction": "mixed",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "peatland_rewetting",
+        "outcome": "water_table_level"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "peatland_rewetting"
+        ],
+        "outcome": [
+          "water_table_level"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "peatland_rewetting"
+        ],
+        "outcome": [
+          "water_table_level"
+        ]
+      }
+    },
+    {
+      "id": "OT-04",
+      "question": "What is the impact of herbicide application on native species?",
+      "exit": 0,
+      "latency_s": 0.54,
+      "status": "answered",
+      "direction": "mixed",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "herbicide_application",
+        "outcome": "native_abundance"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "herbicide_application"
+        ],
+        "outcome": [
+          "native_abundance"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "herbicide_application"
+        ],
+        "outcome": [
+          "native_abundance"
+        ]
+      }
+    },
+    {
+      "id": "OT-05",
+      "question": "Does scarification help seedling survival?",
+      "exit": 0,
+      "latency_s": 0.55,
+      "status": "answered",
+      "direction": "mixed",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "site_preparation",
+        "outcome": "tree_seedling_survival"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "site_preparation"
+        ],
+        "outcome": [
+          "tree_seedling_survival"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "site_preparation"
+        ],
+        "outcome": [
+          "tree_seedling_survival"
+        ]
+      }
+    },
+    {
+      "id": "OT-06",
+      "question": "In restored peatlands, does moss layer transfer increase methane emissions?",
+      "exit": 0,
+      "latency_s": 0.55,
+      "status": "answered",
+      "direction": "increase",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "moss_layer_transfer",
+        "outcome": "methane_emissions"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "moss_layer_transfer"
+        ],
+        "outcome": [
+          "methane_emissions"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "moss_layer_transfer"
+        ],
+        "outcome": [
+          "methane_emissions"
+        ]
+      }
+    },
+    {
+      "id": "OT-07",
+      "question": "Are salmon affected by stocking?",
+      "exit": 0,
+      "latency_s": 0.54,
+      "status": "answered",
+      "direction": "increase",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "species_reintroduction",
+        "outcome": "fish_abundance"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "species_reintroduction"
+        ],
+        "outcome": [
+          "fish_abundance"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "species_reintroduction"
+        ],
+        "outcome": [
+          "fish_abundance"
+        ]
+      }
+    },
+    {
+      "id": "OT-08",
+      "question": "What's the relationship between peatland rewetting and methane emissions?",
+      "exit": 0,
+      "latency_s": 11.63,
+      "status": "no_evidence",
+      "direction": null,
+      "calls": 2,
+      "tokens": 929,
+      "expected": {
+        "cause": "peatland_rewetting",
+        "outcome": "methane_emissions"
+      },
+      "link": {
+        "via": "llm",
+        "cause": [
+          "peatland_rewetting"
+        ],
+        "outcome": [
+          "methane_emissions"
+        ]
+      },
+      "lexical_link": {
+        "cause": [],
+        "outcome": [
+          "methane_emissions"
+        ]
+      }
+    },
+    {
+      "id": "OT-09",
+      "question": "How does clearcut harvesting affect bird abundance in boreal forests?",
+      "exit": 0,
+      "latency_s": 0.53,
+      "status": "no_evidence",
+      "direction": null,
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "clearcut_harvest",
+        "outcome": "bird_abundance"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "clearcut_harvest"
+        ],
+        "outcome": [
+          "bird_abundance"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "clearcut_harvest"
+        ],
+        "outcome": [
+          "bird_abundance"
+        ]
+      }
+    },
+    {
+      "id": "OT-10",
+      "question": "Does fertilization harm tree growth?",
+      "exit": 0,
+      "latency_s": 0.54,
+      "status": "answered",
+      "direction": "mixed",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "fertilization",
+        "outcome": "tree_growth"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "fertilization"
+        ],
+        "outcome": [
+          "tree_growth"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "fertilization"
+        ],
+        "outcome": [
+          "tree_growth"
+        ]
+      }
+    },
+    {
+      "id": "OT-11",
+      "question": "Influence of prescribed fire on species richness",
+      "exit": 0,
+      "latency_s": 0.53,
+      "status": "answered",
+      "direction": "increase",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "prescribed_burning",
+        "outcome": "plant_richness"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "prescribed_burning"
+        ],
+        "outcome": [
+          "plant_richness"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "prescribed_burning"
+        ],
+        "outcome": [
+          "plant_richness"
+        ]
+      }
+    },
+    {
+      "id": "OT-12",
+      "question": "What happens to soil moisture when we add mulch?",
+      "exit": 0,
+      "latency_s": 0.51,
+      "status": "answered",
+      "direction": "no_effect",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "mulch_surface_cover",
+        "outcome": "soil_moisture_water"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "mulch_surface_cover"
+        ],
+        "outcome": [
+          "soil_moisture_water"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "mulch_surface_cover"
+        ],
+        "outcome": [
+          "soil_moisture_water"
+        ]
+      }
+    },
+    {
+      "id": "OT-13",
+      "question": "Does seeding result in higher plant cover?",
+      "exit": 0,
+      "latency_s": 0.51,
+      "status": "answered",
+      "direction": "mixed",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "seeding_sowing",
+        "outcome": "plant_cover_total"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "seeding_sowing"
+        ],
+        "outcome": [
+          "plant_cover_total"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "seeding_sowing"
+        ],
+        "outcome": [
+          "plant_cover_total"
+        ]
+      }
+    },
+    {
+      "id": "OT-14",
+      "question": "How do amphibians respond to wetland creation?",
+      "exit": 0,
+      "latency_s": 0.55,
+      "status": "answered",
+      "direction": "mixed",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "wetland_creation",
+        "outcome": "amphibian_reptile"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "wetland_creation"
+        ],
+        "outcome": [
+          "amphibian_reptile"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "wetland_creation"
+        ],
+        "outcome": [
+          "amphibian_reptile"
+        ]
+      }
+    },
+    {
+      "id": "OT-15",
+      "question": "Can you tell me whether biochar improves soil carbon?",
+      "exit": 0,
+      "latency_s": 0.53,
+      "status": "answered",
+      "direction": "mixed",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "organic_soil_amendment",
+        "outcome": "soil_organic_carbon"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "organic_soil_amendment"
+        ],
+        "outcome": [
+          "soil_organic_carbon"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "organic_soil_amendment"
+        ],
+        "outcome": [
+          "soil_organic_carbon"
+        ]
+      }
+    },
+    {
+      "id": "OT-16",
+      "question": "Is germination influenced by canopy closure?",
+      "exit": 0,
+      "latency_s": 0.57,
+      "status": "answered",
+      "direction": "mixed",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "canopy_light",
+        "outcome": "seed_germination_emergence"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "canopy_light"
+        ],
+        "outcome": [
+          "seed_germination_emergence"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "canopy_light"
+        ],
+        "outcome": [
+          "seed_germination_emergence"
+        ]
+      }
+    },
+    {
+      "id": "OT-17",
+      "question": "Does wildfire increase or decrease soil erosion over time?",
+      "exit": 0,
+      "latency_s": 0.56,
+      "status": "no_evidence",
+      "direction": null,
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "wildfire",
+        "outcome": "soil_erosion"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "wildfire"
+        ],
+        "outcome": [
+          "soil_erosion"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "wildfire"
+        ],
+        "outcome": [
+          "soil_erosion"
+        ]
+      }
+    },
+    {
+      "id": "OT-18",
+      "question": "Is there evidence that fencing reduces deer browsing damage?",
+      "exit": 0,
+      "latency_s": 0.54,
+      "status": "answered",
+      "direction": "increase",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "tree_protection",
+        "outcome": "predation_herbivory_damage"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "tree_protection"
+        ],
+        "outcome": [
+          "predation_herbivory_damage"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "tree_protection"
+        ],
+        "outcome": [
+          "predation_herbivory_damage"
+        ]
+      }
+    },
+    {
+      "id": "OT-19",
+      "question": "“Does” nitrogen   addition change foliar nitrogen in the field?",
+      "exit": 0,
+      "latency_s": 0.54,
+      "status": "answered",
+      "direction": "increase",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "fertilization",
+        "outcome": "foliar_nutrients"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "fertilization"
+        ],
+        "outcome": [
+          "foliar_nutrients"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "fertilization"
+        ],
+        "outcome": [
+          "foliar_nutrients"
+        ]
+      }
+    },
+    {
+      "id": "OT-20",
+      "question": "dredging and water quality",
+      "exit": 0,
+      "latency_s": 0.54,
+      "status": "answered",
+      "direction": "mixed",
+      "calls": 0,
+      "tokens": 0,
+      "expected": {
+        "cause": "sediment_removal",
+        "outcome": "water_chemistry"
+      },
+      "link": {
+        "via": "lexical",
+        "cause": [
+          "sediment_removal"
+        ],
+        "outcome": [
+          "water_chemistry"
+        ]
+      },
+      "lexical_link": {
+        "cause": [
+          "sediment_removal"
+        ],
+        "outcome": [
+          "water_chemistry"
+        ]
+      }
+    },
+    {
+      "id": "UC-01",
+      "question": "What about birds?",
+      "exit": 2,
+      "latency_s": 0.55,
+      "status": "unclear",
+      "direction": null,
+      "calls": 0,
+      "tokens": 0,
+      "expected": null,
+      "link": {
+        "via": "none",
+        "cause": [],
+        "outcome": []
+      },
+      "lexical_link": {
+        "cause": [],
+        "outcome": []
+      },
+      "read": {
+        "cause": {
+          "text": null,
+          "linked": [],
+          "suggestions": [
+            "wildfire & fire regime",
+            "prescribed burning",
+            "competing vegetation"
+          ]
+        },
+        "outcome": {
+          "text": null,
+          "linked": [],
+          "suggestions": [
+            "bird abundance & occupancy",
+            "plant biomass & productivity",
+            "CO2 flux & net ecosystem exchange"
+          ]
+        }
+      }
+    },
+    {
+      "id": "UC-02",
+      "question": "Is restoration good?",
+      "exit": 2,
+      "latency_s": 0.56,
+      "status": "unclear",
+      "direction": null,
+      "calls": 0,
+      "tokens": 0,
+      "expected": null,
+      "link": {
+        "via": "none",
+        "cause": [],
+        "outcome": []
+      },
+      "lexical_link": {
+        "cause": [],
+        "outcome": []
+      },
+      "read": {
+        "cause": {
+          "text": null,
+          "linked": [],
+          "suggestions": [
+            "restoration (general / unspecified)",
+            "moss layer transfer & peatland restoration",
+            "wetland creation & marsh restoration"
+          ]
+        },
+        "outcome": {
+          "text": null,
+          "linked": [],
+          "suggestions": [
+            "CO2 flux & net ecosystem exchange",
+            "soil moisture & water content",
+            "natural regeneration & recruitment"
+          ]
+        }
+      }
+    },
+    {
+      "id": "UC-03",
+      "question": "Does it work?",
+      "exit": 2,
+      "latency_s": 0.54,
+      "status": "unclear",
+      "direction": null,
+      "calls": 0,
+      "tokens": 0,
+      "expected": null,
+      "link": {
+        "via": "none",
+        "cause": [],
+        "outcome": []
+      },
+      "lexical_link": {
+        "cause": [],
+        "outcome": []
+      },
+      "read": {
+        "cause": {
+          "text": null,
+          "linked": [],
+          "suggestions": [
+            "in-stream & engineered structures",
+            "woody debris & structural retention",
+            "organic & soil amendments"
+          ]
+        },
+        "outcome": {
+          "text": null,
+          "linked": [],
+          "suggestions": [
+            "tree species composition & dominance",
+            "mammal abundance & habitat use",
+            "soil & litter invertebrates"
+          ]
+        }
+      }
+    },
+    {
+      "id": "UC-04",
+      "question": "What controls natural conifer regeneration?",
+      "exit": 2,
+      "latency_s": 0.57,
+      "status": "unclear",
+      "direction": null,
+      "calls": 0,
+      "tokens": 0,
+      "expected": null,
+      "link": {
+        "via": "none",
+        "cause": [],
+        "outcome": []
+      },
+      "lexical_link": {
+        "cause": [],
+        "outcome": []
+      },
+      "read": {
+        "cause": {
+          "text": null,
+          "linked": [],
+          "suggestions": [
+            "prescribed burning",
+            "mulch & surface cover",
+            "contaminants & pollution"
+          ]
+        },
+        "outcome": {
+          "text": null,
+          "linked": [],
+          "suggestions": [
+            "natural regeneration & recruitment",
+            "water chemistry & contaminant concentration",
+            "ecosystem recovery & function"
+          ]
+        }
+      }
+    },
+    {
+      "id": "UC-05",
+      "question": "Does yodelling increase bird abundance?",
+      "exit": 2,
+      "latency_s": 18.63,
+      "status": "unclear",
+      "direction": null,
+      "calls": 2,
+      "tokens": 0,
+      "expected": null,
+      "link": {
+        "via": "none",
+        "cause": [],
+        "outcome": [
+          "bird_abundance"
+        ]
+      },
+      "lexical_link": {
+        "cause": [],
+        "outcome": [
+          "bird_abundance"
+        ]
+      },
+      "read": {
+        "cause": {
+          "text": "yodelling",
+          "linked": [],
+          "suggestions": [
+            "rewetting & hydrology restoration",
+            "sediment & contaminated soil removal",
+            "site preparation & scarification"
+          ]
+        },
+        "outcome": {
+          "text": "bird abundance",
+          "linked": [
+            "bird abundance & occupancy"
+          ],
+          "suggestions": []
+        }
+      }
+    }
+  ],
+  "settings": {
+    "ask.sh": "CAMOREASONING_LLM_TIMEOUT=8, CAMOREASONING_STRATEGY_LINKER=assisted, parser=freeform (default)",
+    "date": "2026-11-14",
+    "note": "latency_s is the wall time of one ./ask.sh --json process; `link` is a second in-process parse+link pass with ask.sh's settings, so it can differ from the timed run if the endpoint timed out"
+  },
+  "latency_repeats": {
+    "why": "only questions with a side lexical linking misses call the LLM; endpoint latency is bimodal (about 1 s, or past the timeout) and llm.py retries a timed-out request once after 2 s, so a slow endpoint costs 2 x timeout + 2 s",
+    "timeout_8s_wall_s": {
+      "OT-08": [
+        18.7,
+        1.35,
+        11.4
+      ],
+      "UC-05": [
+        11.03,
+        18.62,
+        1.01
+      ]
+    },
+    "timeout_3s_wall_s": {
+      "OT-08": [
+        1.37,
+        1.35,
+        1.35,
+        6.46
+      ],
+      "UC-05": [
+        8.64,
+        8.64,
+        2.74,
+        6.07
+      ]
+    }
+  }
+}

@@ -7,6 +7,7 @@ import dataclasses
 import json
 import os
 import sys
+import time
 from pathlib import Path
 
 from camoreasoning import registry
@@ -27,6 +28,7 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("answers", type=Path)
     a = sub.add_parser("ask", help="answer one free-form question")
     a.add_argument("question", nargs="+")
+    a.add_argument("--json", action="store_true", help="print the answers.json entry (+ footprint), not a card")
     v = sub.add_parser("validate", help="check answers.json against the README format")
     v.add_argument("answers", type=Path)
     v.add_argument("--questions", type=Path)
@@ -65,10 +67,7 @@ def main(argv: list[str] | None = None) -> int:
         print(dumps({k: v for k, v in summary.items() if k != "log"}), file=sys.stderr)
         return 0
     if args.cmd == "ask":
-        from camoreasoning.pipeline import ask, dumps
-
-        print(dumps(ask(" ".join(args.question), settings)))
-        return 0
+        return ask_cmd(" ".join(args.question), settings, args.json)
     if args.cmd == "validate":
         from camoreasoning.answers import load_questions, validate_answers
         from camoreasoning.graph import load_graph
@@ -155,6 +154,68 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps({"questions": len(items), "labelled": len(gold)}))
         return 0
     return 2
+
+
+def ask_cmd(text: str, settings, as_json: bool) -> int:
+    """Readable card (or the --json entry). Exit 2 without answering if a side links to nothing.
+    Stage exceptions are not caught here: they print a traceback and exit non-zero."""
+    from camoreasoning.pipeline import ask_answer, ask_frame, dumps, side_labels, unclear
+
+    t0 = time.perf_counter()
+    question = " ".join(text.split())
+    p, frame = ask_frame(question, settings)
+    ctx, meter = p.ctx, p.ctx.llm.meter
+    if (u := unclear(frame, ctx)) is not None:
+        msg = unclear_message(u)
+        foot = {k: v for k, v in meter.summary().items() if k != "log"}
+        print(dumps({"id": "ASK", "question": question, "unclear": {"message": msg, **u}, "footprint": foot})
+              if as_json else msg)  # fmt: skip
+        return 2
+    entry, _ = ask_answer(p, frame)
+    if as_json:
+        print(dumps(entry))
+        return 0
+
+    def labels(side) -> str:
+        names = side_labels(side, ctx)
+        return " / ".join(names[:3]) + (f" (+{len(names) - 3} more)" if len(names) > 3 else "")
+
+    edges = ctx.graph.edges
+    studies = {edges[e].get("source_document") for e in entry["edge_ids"] if e in edges} - {None}
+    dash = lambda v: "-" if v is None else v  # noqa: E731
+    lines = [
+        f"Q: {question}",
+        f"Linked: {labels(frame.cause)} -> {labels(frame.outcome)} (via {frame.via})",
+        f"Answer: {entry['answer']}",
+        f"Direction: {dash(entry['direction'])}  Certainty: {dash(entry['certainty'])}  "
+        f"Confidence: {entry['confidence']:.2f}",
+        f"Cites: {len(entry['edge_ids'])} edges, {len(studies)} studies",
+    ]
+    if entry.get("searched_for"):
+        lines.append(f"Searched for: {entry['searched_for']}")
+    lines += [f"Evidence page: {x}" for x in entry.get("extras", [])]
+    n_tokens = meter.prompt_tokens + meter.completion_tokens
+    lines.append(f"({time.perf_counter() - t0:.1f} s, {meter.calls} LLM calls, {n_tokens} tokens)")
+    print("\n".join(lines))
+    return 0
+
+
+def unclear_message(u: dict) -> str:
+    """The refusal text for `ask` when a side linked to nothing (see pipeline.unclear)."""
+
+    def read(kind: str) -> str:
+        side = u[kind]
+        text = f"'{side['text']}'" if side["text"] else "(nothing)"
+        return f"{kind} = {text} -> {' / '.join(side['linked'][:3]) or 'nothing'}"
+
+    example = [u[k]["text"] if u[k]["linked"] and u[k]["text"] else f"<{k}>" for k in ("cause", "outcome")]
+    lines = [
+        f"Question isn't clear: we read {read('cause')}, {read('outcome')}.",
+        f"Please rephrase with more context, e.g. 'What effect does {example[0]} have on {example[1]}?'",
+    ]
+    lines += [f"Nearest {k} classes: {'; '.join(u[k]['suggestions'])}" for k in ("cause", "outcome")
+              if u[k]["suggestions"]]  # fmt: skip
+    return "\n".join(lines)
 
 
 def offline_settings(settings):
