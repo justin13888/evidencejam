@@ -388,14 +388,14 @@ def dev_eval():
 
 
 # Short of the #70 bar (dev, 0 calls): answered accuracy is 0.5205 overall with the `unsigned` interpreter
-# (#76), up from 0.4912. These tags are unchanged at 0.5 (8/16, 2/4, 2/4); the bar rose past them.
+# (#76), up from 0.4912. These tags are unchanged at 0.5 (8/16, 2/4, 2/4); the bar rose past them. #79.
 SHORT = {"unchanged_is_not_null": 0.5, "moderators_mediators": 0.5, "near_miss_classes": 0.5}
 
 
 @pytest.mark.parametrize(
     "trap",
     [pytest.param(k, marks=pytest.mark.xfail(strict=True, raises=AssertionError, reason=f"{SHORT[k]} < answered "
-                                             "overall (#76)")) if k in SHORT else k for k in ITEM7_TRAPS],
+                                             "overall (#79)")) if k in SHORT else k for k in ITEM7_TRAPS],
 )  # fmt: skip
 def test_trap_accuracy_is_at_least_overall(dev_eval, trap):
     """#70 bar: `mise run eval`'s accuracy on the trap's gold-answered items is at or above accuracy on all
