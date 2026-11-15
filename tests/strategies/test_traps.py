@@ -235,3 +235,57 @@ def test_time_is_not_an_intervention():
     time_nodes = {lb.node_id for lb in tax.nodes_of("time_since_disturbance")}
     for c in ("invasive_removal", "mulch_surface_cover"):
         assert not time_nodes & {lb.node_id for lb in tax.nodes_of(c)}
+
+
+# Per-tag dev accuracy (item 7 "done when"). The eight traps item 7 names, as `trap:<key>` gold tags.
+ITEM7_TRAPS = (
+    "reversed_edges",
+    "null_is_not_decrease",
+    "associational_is_not_causal",
+    "negative_subject_qualifiers",
+    "unchanged_is_not_null",
+    "twin_edges_one_sentence",
+    "moderators_mediators",
+    "near_miss_classes",
+)
+
+
+@pytest.fixture(scope="module")
+def dev_gold():
+    from camoreasoning.evaluate import load_devsets
+
+    return load_devsets(None, "dev")
+
+
+def by_trap(gold) -> dict[str, list]:
+    return {k: [g for g in gold if f"trap:{k}" in g.tags] for k in ITEM7_TRAPS}
+
+
+def test_every_trap_has_three_dev_items(dev_gold):
+    assert {k: len(v) for k, v in by_trap(dev_gold).items() if len(v) < 3} == {}
+
+
+@pytest.mark.xfail(strict=True, raises=AssertionError, reason="end to end, traps fall below overall dev accuracy (#61)")
+def test_trap_accuracy_is_at_least_overall():
+    """`mise run eval`'s by_tag accuracy for each item 7 trap is at or above its overall accuracy."""
+    from camoreasoning.config import Settings
+    from camoreasoning.evaluate import run_eval
+
+    res = run_eval(Settings(), split="dev")
+    short = {k: res["by_tag"][f"trap:{k}"]["accuracy"] for k in ITEM7_TRAPS
+             if res["by_tag"][f"trap:{k}"]["accuracy"] < res["accuracy"]}  # fmt: skip
+    assert short == {}, f"overall {res['accuracy']}"
+
+
+def test_engine_reads_every_trap_at_least_as_well_as_overall():
+    """Engine only: the aggregator fed each item's gold edge effects (`evaluate.oracle`), on class-level dev
+    gold (AUDIT.md rule). Per trap, direction accuracy is at or above the overall oracle direction accuracy,
+    so the end-to-end shortfall above is upstream of the engine."""
+    from camoreasoning.config import DEVSETS_DIR, Settings
+    from camoreasoning.evaluate import load_devsets, oracle
+
+    gold = load_devsets([DEVSETS_DIR / "class_gold.yaml"], "dev")
+    overall = oracle(gold, Settings())["direction_accuracy"]
+    per_trap = {k: oracle(v, Settings()).get("direction_accuracy") for k, v in by_trap(gold).items()}
+    assert {k: a for k, a in per_trap.items() if a is not None and a < overall} == {}
+    assert sum(a is not None for a in per_trap.values()) >= 5

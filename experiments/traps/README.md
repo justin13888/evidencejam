@@ -30,11 +30,50 @@ pytest tests/strategies/test_traps.py tests/strategies/test_direction.py -q
 | `time_as_cause` | taxonomy (#3) | `time_since_disturbance` shares no nodes with intervention classes | `test_time_is_not_an_intervention` |
 | `intervention_name_vs_fields`, `default_positive_subject` | node labeller (#4) | polarity comes from fields, not the name | covered by item 4's label audit |
 
-## What gold needs for per-tag accuracy
+## Per-tag dev accuracy
 
-Item 7's "done when" also needs `eval` to report accuracy per tag, at or above the overall accuracy. That
-needs at least 3 dev items per trap in `experiments/devsets/`, tagged `trap:<key>` with the keys above. The 5
-example edges per trap in `trap_inventory.json` are seeds for those items (#9).
+Item 7's "done when" also needs `eval` to report accuracy per tag, at or above the overall accuracy.
+`mise run eval` reports it under `overall.by_tag`. Three tests in `test_traps.py` check it for the eight
+traps item 7 names:
+
+- `test_every_trap_has_three_dev_items` passes. Every trap has at least 5 dev items.
+- `test_trap_accuracy_is_at_least_overall` compares each trap's end-to-end accuracy with overall dev
+  accuracy. It is a **strict xfail until #61**.
+- `test_engine_reads_every_trap_at_least_as_well_as_overall` passes. The aggregator is fed each item's gold
+  edge effects (`evaluate.oracle`) on class-level dev gold. Per trap, its direction accuracy is at or above
+  the overall figure.
+
+Measured on the dev split at 0 calls (n = 267). The overall end-to-end accuracy is 0.566, and the overall
+oracle direction on class dev is 0.979 (n = 48).
+
+| Trap (`trap:<key>`) | Dev n | End to end | Oracle direction, class dev |
+|---|---|---|---|
+| `reversed_edges` | 10 | **1.000** | no class items |
+| `near_miss_classes` | 5 | **0.600** | 1.00 (n = 4) |
+| `twin_edges_one_sentence` | 68 | 0.529 | 1.00 (n = 26) |
+| `null_is_not_decrease` | 57 | 0.526 | 1.00 (n = 27) |
+| `unchanged_is_not_null` | 18 | 0.500 | 1.00 (n = 2) |
+| `moderators_mediators` | 6 | 0.500 | no class items |
+| `associational_is_not_causal` | 85 | 0.447 | 1.00 (n = 27) |
+| `negative_subject_qualifiers` | 22 | 0.273 | 1.00 (n = 6) |
+
+The engine reads every trap right when it is given the gold edges. The end-to-end shortfall comes from
+upstream of the engine, and #61 tracks it:
+
+- **Base rates.** 154 of 171 trap-tagged dev items are gold-answered. Dev accuracy is 0.415 on answered
+  items and 0.833 on no_evidence items, so overall accuracy sits above what answered items reach. Against
+  answered-only accuracy, `negative_subject_qualifiers` is the only one of the eight that falls short.
+- **Retrieval.** The common misses are `no_effect → mixed` and `mixed → increase`: other studies come in
+  through whole classes, or gold studies are missed (item 5).
+- **Negation in the question.** For "removal of", "cessation of" and "abandonment of" a cause, the linker
+  keeps the class at polarity +1, so the flip that `test_asking_about_the_removal_flips_back` checks never
+  fires (D-Q0206, D-Q0207, D-Q0017).
+
+On node-level `gold_annotated`, the oracle misses 12 items. All 12 are gold `unclear` with only unsigned
+gold edges. The oracle counts a vote only when it has an effect, so it turns these into no_evidence. In the
+pipeline, the interpreter includes unsigned votes and `studies` returns `unclear` for them. These 12 misses
+come from the harness and are not counted as engine errors. `comparator_reference` (0.86 oracle, class dev)
+is not one of the eight. See its known limit below.
 
 ## Known limits
 
