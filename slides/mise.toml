@@ -1,0 +1,25 @@
+# Slides toolchain. Nested config: run these from slides/ (root mise.toml stays untouched).
+[tools]
+typst = "0.15.1"
+
+[env]
+TYPST_FLAGS = "--root .. --package-path vendor/packages --font-path fonts --ignore-system-fonts"
+# Accessible, reproducible PDF: tagged PDF/UA-1 (alt text enforced) and a fixed timestamp so rebuilds are byte-stable.
+PDF_FLAGS = "--pdf-standard ua-1 --creation-timestamp 1794700800"
+
+[tasks.build]
+description = "Compile deck.typ -> goose-chain.pdf (offline: vendored packages + fonts)"
+run = "typst compile $TYPST_FLAGS $PDF_FLAGS deck.typ goose-chain.pdf"
+
+[tasks.watch]
+description = "Recompile on save"
+run = "typst watch $TYPST_FLAGS deck.typ goose-chain.pdf"
+
+[tasks.preview]
+description = "Render every page to .preview/NN.png for review"
+depends = ["build"]
+run = "rm -rf .preview && mkdir -p .preview && pdftoppm -r 100 -png goose-chain.pdf .preview/p"
+
+[tasks.notes]
+description = "Export speaker notes for pdfpc -> goose-chain.pdfpc"
+run = "typst eval $TYPST_FLAGS --in deck.typ 'query(<pdfpc-file>).first().value' > goose-chain.pdfpc"
