@@ -1,0 +1,247 @@
+{
+ "n": 267,
+ "k": 5,
+ "seeds": 50,
+ "calls_per_question": 0.0,
+ "issue_120": {
+  "cv_oof": {
+   "baseline": {
+    "pooled.ece": {
+     "mean": 0.0479,
+     "p05": 0.0479,
+     "p95": 0.0479
+    },
+    "pooled.brier": {
+     "mean": 0.2304,
+     "p05": 0.2304,
+     "p95": 0.2304
+    },
+    "class_gold.yaml.ece": {
+     "mean": 0.0867,
+     "p05": 0.0867,
+     "p95": 0.0867
+    },
+    "class_gold.yaml.brier": {
+     "mean": 0.2227,
+     "p05": 0.2227,
+     "p95": 0.2227
+    },
+    "gold_annotated.yaml.ece": {
+     "mean": 0.0304,
+     "p05": 0.0304,
+     "p95": 0.0304
+    },
+    "gold_annotated.yaml.brier": {
+     "mean": 0.2339,
+     "p05": 0.2339,
+     "p95": 0.2339
+    }
+   },
+   "constant": {
+    "pooled.ece": {
+     "mean": 0.0001,
+     "p05": 0.0,
+     "p95": 0.0001
+    },
+    "pooled.brier": {
+     "mean": 0.2299,
+     "p05": 0.2287,
+     "p95": 0.2323
+    },
+    "class_gold.yaml.ece": {
+     "mean": 0.0388,
+     "p05": 0.0385,
+     "p95": 0.0391
+    },
+    "class_gold.yaml.brier": {
+     "mean": 0.2181,
+     "p05": 0.2165,
+     "p95": 0.22
+    },
+    "gold_annotated.yaml.ece": {
+     "mean": 0.0175,
+     "p05": 0.0173,
+     "p95": 0.0177
+    },
+    "gold_annotated.yaml.brier": {
+     "mean": 0.2352,
+     "p05": 0.2337,
+     "p95": 0.2385
+    }
+   },
+   "two_cell": {
+    "pooled.ece": {
+     "mean": 0.0286,
+     "p05": 0.0001,
+     "p95": 0.0754
+    },
+    "pooled.brier": {
+     "mean": 0.2195,
+     "p05": 0.2172,
+     "p95": 0.2228
+    },
+    "class_gold.yaml.ece": {
+     "mean": 0.0905,
+     "p05": 0.0851,
+     "p95": 0.1357
+    },
+    "class_gold.yaml.brier": {
+     "mean": 0.1862,
+     "p05": 0.1837,
+     "p95": 0.1893
+    },
+    "gold_annotated.yaml.ece": {
+     "mean": 0.0469,
+     "p05": 0.0384,
+     "p95": 0.0878
+    },
+    "gold_annotated.yaml.brier": {
+     "mean": 0.2345,
+     "p05": 0.2319,
+     "p95": 0.2385
+    }
+   },
+   "binned": {
+    "pooled.ece": {
+     "mean": 0.076,
+     "p05": 0.0509,
+     "p95": 0.1053
+    },
+    "pooled.brier": {
+     "mean": 0.2213,
+     "p05": 0.2173,
+     "p95": 0.2275
+    },
+    "class_gold.yaml.ece": {
+     "mean": 0.1188,
+     "p05": 0.0824,
+     "p95": 0.1585
+    },
+    "class_gold.yaml.brier": {
+     "mean": 0.1807,
+     "p05": 0.1729,
+     "p95": 0.1895
+    },
+    "gold_annotated.yaml.ece": {
+     "mean": 0.1043,
+     "p05": 0.0728,
+     "p95": 0.143
+    },
+    "gold_annotated.yaml.brier": {
+     "mean": 0.2396,
+     "p05": 0.2343,
+     "p95": 0.2472
+    }
+   }
+  },
+  "cv_per_fold": {
+   "baseline": {
+    "ece": {
+     "mean": 0.0593,
+     "p05": 0.0038,
+     "p95": 0.1407
+    },
+    "brier": {
+     "mean": 0.2304,
+     "p05": 0.2119,
+     "p95": 0.2468
+    }
+   },
+   "constant": {
+    "ece": {
+     "mean": 0.0571,
+     "p05": 0.0003,
+     "p95": 0.1395
+    },
+    "brier": {
+     "mean": 0.2299,
+     "p05": 0.2056,
+     "p95": 0.2561
+    }
+   },
+   "two_cell": {
+    "ece": {
+     "mean": 0.0781,
+     "p05": 0.0232,
+     "p95": 0.16
+    },
+    "brier": {
+     "mean": 0.2194,
+     "p05": 0.1921,
+     "p95": 0.2499
+    }
+   },
+   "binned": {
+    "ece": {
+     "mean": 0.1336,
+     "p05": 0.0652,
+     "p95": 0.2068
+    },
+    "brier": {
+     "mean": 0.2213,
+     "p05": 0.1902,
+     "p95": 0.2615
+    }
+   }
+  },
+  "two_cell_beats_baseline_share": {
+   "ece": 0.88,
+   "brier": 1.0
+  },
+  "in_sample": {
+   "baseline": {
+    "brier": 0.2304,
+    "ece": 0.0479
+   },
+   "constant": {
+    "brier": 0.2281,
+    "ece": 0.0
+   },
+   "two_cell": {
+    "brier": 0.2161,
+    "ece": 0.0
+   },
+   "binned": {
+    "brier": 0.2017,
+    "ece": 0.0115
+   }
+  }
+ },
+ "issue_82": {
+  "pooled": 0.6479,
+  "bootstrap_95": [
+   0.5843,
+   0.7079
+  ],
+  "by_file": {
+   "class_gold.yaml": 0.6867,
+   "gold_annotated.yaml": 0.6304
+  },
+  "by_added_and_gold_status": {
+   "class_gold.yaml @ 2026-11-14T19:57 / answered": {
+    "n": 48,
+    "accuracy": 0.5417
+   },
+   "class_gold.yaml @ 2026-11-14T19:57 / no_evidence": {
+    "n": 35,
+    "accuracy": 0.8857
+   },
+   "gold_annotated.yaml @ 2026-11-14T18:41 / answered": {
+    "n": 82,
+    "accuracy": 0.5244
+   },
+   "gold_annotated.yaml @ 2026-11-14T18:41 / no_evidence": {
+    "n": 60,
+    "accuracy": 0.8333
+   },
+   "gold_annotated.yaml @ 2026-11-14T19:57 / answered": {
+    "n": 41,
+    "accuracy": 0.561
+   },
+   "gold_annotated.yaml @ 2026-11-14T19:57 / no_evidence": {
+    "n": 1,
+    "accuracy": 0
+   }
+  }
+ }
+}
