@@ -168,7 +168,7 @@ def screenshot(pages: list[Path], shots: Path) -> None:
 def readme_shots() -> int:
     """Regenerate the README screenshots in docs/img/ (committed) from a fresh run at HEAD's defaults.
 
-    Light scheme, 1280 x 1400, the top of each page: evidence.png is the page of README_EVIDENCE_ID (a mixed,
+    Dark scheme, 1280 x 1400, the top of each page: evidence.png is the page of README_EVIDENCE_ID (a mixed,
     two-study class question), gapmap.png and limits.png come from the same run. 0 LLM calls."""
     ff = shutil.which("firefox")
     if not ff:
@@ -186,7 +186,7 @@ def readme_shots() -> int:
     pages = run / "outputs"
     targets = {"evidence": pages / f"{q.id}.html", "gapmap": pages / "gapmap.html", "limits": pages / "limits.html"}
     with tempfile.TemporaryDirectory() as prof:
-        _profile(prof, dark=False)
+        _profile(prof, dark=True)
         for name, page in targets.items():
             _shoot(ff, prof, page, IMG / f"{name}.png", 1280, 1400)
     print(f"docs/img: {', '.join(f'{n}.png' for n in targets)} from {q.id} ({summary.get('calls', 0)} LLM calls)")
