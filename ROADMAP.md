@@ -272,6 +272,15 @@ flowchart LR
 
     - **Closed on:** the stream B self-check, oracle certainty ≥ 0.75. `calls_per_question` stays 0.
     - **Still open:** end-to-end certainty is limited by retrieval and linking (item 5); on `class_gold` it dips by one of 48 answerable items (19 → 18).
+  - **Re-verified (Sun Nov 15, #11 closed):** `mise run eval` on dev at `728626c`, with default strategies, nothing tuned and holdout untouched:
+
+    | Gold set | Accuracy | ECE | Oracle certainty | Certainty, end to end | `calls_per_question` |
+    |---|---|---|---|---|---|
+    | default dev (n = 267) | 0.637 | 0.037 | **1.00** (n = 171) | 0.544 | 0 |
+    | `class_gold` (n = 83) | 0.675 | 0.075 | **1.00** (n = 48) | 0.500 | 0 |
+    | `gold_annotated` (n = 184) | 0.620 | 0.020 | **1.00** (n = 123) | 0.561 | 0 |
+
+    - Oracle certainty is 1.00, up from 0.92 at #42, and clears the 0.75 bar. Between the two runs, #68 made the oracle count unsigned gold votes. Gold certainty is labelled with the same D4 rule (`experiments/annotate/*/PROMPT.md`), so 1.00 shows the grader applies D4 exactly. It is not an independent check of D4.
 - [ ] **12. Calibrate confidence.** ★ 4/5 · C · `calibrator`
   - **Why:** 14 points reward confidence that matches how often we're right.
   - **Done when:**
