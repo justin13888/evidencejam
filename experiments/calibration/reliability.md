@@ -28,3 +28,25 @@ rows: 267 · ECE: 0.022 · Brier: 0.213 · prior strength M = 4.0 · PAV: on
 | answered / very_low / 4+ | 7 | 2 | 0.350 |
 | no_evidence / lexical / 0 | 90 | 66 | 0.732 |
 | no_evidence / none / 0 | 23 | 14 | 0.623 |
+
+## Holdout (pooled, out of sample, calibrator `binned`)
+
+rows: 68 · accuracy: 0.382 · ECE: 0.187 · Brier: 0.242 · target ECE <= 0.05: **misses** · constant 0.6 on the same answers: ECE 0.218, Brier 0.283
+
+| confidence bin | n | mean confidence | accuracy |
+|---|---:|---:|---:|
+| 0.0-0.1 | 0 | - | - |
+| 0.1-0.2 | 2 | 0.181 | 0.000 |
+| 0.2-0.3 | 5 | 0.224 | 0.000 |
+| 0.3-0.4 | 12 | 0.358 | 0.417 |
+| 0.4-0.5 | 7 | 0.438 | 0.143 |
+| 0.5-0.6 | 5 | 0.509 | 0.200 |
+| 0.6-0.7 | 12 | 0.644 | 0.333 |
+| 0.7-0.8 | 25 | 0.728 | 0.600 |
+| 0.8-0.9 | 0 | - | - |
+| 0.9-1.0 | 0 | - | - |
+
+| devset file | n | accuracy | ECE | Brier |
+|---|---:|---:|---:|---:|
+| class_gold.yaml | 16 | 0.438 | 0.198 | 0.264 |
+| gold_annotated.yaml | 52 | 0.365 | 0.184 | 0.235 |
