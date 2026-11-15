@@ -1,0 +1,147 @@
+{
+ "lexical": {
+  "n": 83,
+  "accuracy": 0.6867,
+  "ece": 0.0867,
+  "calls_total": 0,
+  "calls_max": 0,
+  "calls_per_question": 0.0,
+  "latency_mean_s": 0.04,
+  "latency_p50_s": 0.034,
+  "latency_max_s": 0.066,
+  "via": {
+   "lexical": 81,
+   "none": 2
+  },
+  "class_link": {
+   "all": {
+    "n": 83,
+    "exact": 77,
+    "any": 77
+   },
+   "paraphrase": {
+    "n": 41,
+    "exact": 35,
+    "any": 35
+   }
+  }
+ },
+ "assisted": {
+  "n": 83,
+  "accuracy": 0.6867,
+  "ece": 0.0867,
+  "calls_total": 20,
+  "calls_max": 1,
+  "calls_per_question": 0.241,
+  "latency_mean_s": 0.712,
+  "latency_p50_s": 0.036,
+  "latency_max_s": 8.074,
+  "via": {
+   "llm": 19,
+   "lexical": 63,
+   "none": 1
+  },
+  "class_link": {
+   "all": {
+    "n": 83,
+    "exact": 79,
+    "any": 79
+   },
+   "paraphrase": {
+    "n": 41,
+    "exact": 37,
+    "any": 37
+   }
+  }
+ },
+ "link_regressions": [
+  "C-C0009"
+ ],
+ "link_gains": [
+  "C-C0002",
+  "C-C0014",
+  "C-C0052"
+ ],
+ "answer_regressions": [],
+ "answer_gains": [],
+ "changed_links": [
+  {
+   "id": "C-C0002",
+   "lexical": [
+    [],
+    [
+     "plant_richness"
+    ]
+   ],
+   "assisted": [
+    [
+     "elevated_co2"
+    ],
+    [
+     "plant_richness"
+    ]
+   ],
+   "via": "llm",
+   "calls": 1
+  },
+  {
+   "id": "C-C0009",
+   "lexical": [
+    [
+     "organic_soil_amendment"
+    ],
+    [
+     "tree_seedling_survival"
+    ]
+   ],
+   "assisted": [
+    [],
+    [
+     "tree_seedling_survival"
+    ]
+   ],
+   "via": "none",
+   "calls": 1
+  },
+  {
+   "id": "C-C0014",
+   "lexical": [
+    [],
+    [
+     "mammal_abundance"
+    ]
+   ],
+   "assisted": [
+    [
+     "engineered_structures"
+    ],
+    [
+     "mammal_abundance"
+    ]
+   ],
+   "via": "llm",
+   "calls": 1
+  },
+  {
+   "id": "C-C0052",
+   "lexical": [
+    [
+     "tree_planting"
+    ],
+    [
+     "diversity_indices"
+    ]
+   ],
+   "assisted": [
+    [
+     "site_preparation"
+    ],
+    [
+     "diversity_indices"
+    ]
+   ],
+   "via": "llm",
+   "calls": 1
+  }
+ ]
+}
