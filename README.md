@@ -24,7 +24,7 @@ To ask your own question:
 
 ## How it works
 
-The graph is only read, never rewritten. A small taxonomy (82 broad classes, with about 6,000 graph nodes labelled into them) is built offline in [`taxonomy/`](taxonomy/). Every question then goes through four steps:
+The graph is only read, never rewritten. A small taxonomy (82 broad classes, with about 6,000 graph nodes labelled into them) is built offline in [`taxonomy/`](taxonomy/). Nodes are labelled by class phrases, by audited graph wording that only labels nodes and never links a question ([`label_synonyms.yaml`](taxonomy/label_synonyms.yaml), proposed offline by bge-base-en-v1.5), and by one offline LLM pass for the rest. Every question then goes through four steps:
 
 1. **Read the question.** Split it into a cause and an outcome (`parser/freeform`). The template form and 16 freer shapes are covered.
 2. **Link each side to the graph** (`linker/cessation`, 0 calls), trying these in order: an exact class label or synonym, a class phrase contained in the wording, the closest node names, then word stems. Words the class doesn't cover narrow the side to the nodes that name them (`retriever/focus`), so "ericaceous shrub cover" isn't outvoted by all plant cover. A cause that ends something ("cessation of …") is read as the opposite of the thing that stops.
@@ -41,18 +41,18 @@ The locked rules behind these steps (D1–D6) are in [ROADMAP.md](ROADMAP.md).
 
 ## Results
 
-Dev split, default pipeline, commit `7461073`. These are model-labelled gold sets in [`experiments/devsets/`](experiments/devsets/), not the hidden set.
+Dev split, default pipeline, commit `205ca6c` (#92). These are model-labelled gold sets in [`experiments/devsets/`](experiments/devsets/), not the hidden set.
 
 | | class dev (n = 83, hidden-set wording) | node dev (n = 184, independent wording) |
 |---|---|---|
-| Accuracy (status + direction) | **0.675** | **0.620** |
-| no_evidence precision / recall | 0.91 / 0.89 | 0.68 / 0.82 |
-| Direction accuracy (answerable) | 0.52 | 0.52 |
-| Cited-edge precision / recall | 0.46 / 0.56 | 0.44 / 0.54 |
-| Calibration error (ECE) | 0.075 | 0.020 |
+| Accuracy (status + direction) | **0.687** | **0.630** |
+| no_evidence precision / recall | 0.94 / 0.89 | 0.71 / 0.82 |
+| Direction accuracy (answerable) | 0.54 | 0.54 |
+| Cited-edge precision / recall | 0.47 / 0.56 | 0.44 / 0.56 |
+| Calibration error (ECE) | 0.087 | 0.030 |
 | LLM calls · tokens per question | **0 · 0** | **0 · 0** |
 
-Reproduce with `python -m camoreasoning eval experiments/devsets/<class_gold|gold_annotated>.yaml --split dev`. The class set uses the taxonomy to pick its class pairs, so the node set is the stricter check. Given the gold edges, the engine's direction is 1.0 on both sets. The remaining loss is mostly retrieval: the right edges aren't found, or extra ones come along (see ROADMAP items 5, 8 and 13). Experiments that didn't win are kept with their numbers under [`experiments/`](experiments/), for example the LLM-assisted linker and static embeddings.
+Reproduce with `python -m camoreasoning eval experiments/devsets/<class_gold|gold_annotated>.yaml --split dev`. The class set uses the taxonomy to pick its class pairs, so the node set is the stricter check. Given the gold edges, the engine's direction is 1.0 on both sets. The remaining loss is mostly retrieval: the right edges aren't found, or extra ones come along (see ROADMAP items 5, 8 and 13). Experiments that didn't win are kept with their numbers under [`experiments/`](experiments/), for example the LLM-assisted linker and static embeddings. Embeddings link too many question sides wrongly to run at judging time; offline, BGE only proposes node-label wording, which an audit then filters ([`experiments/embeddings/bge_synonyms/`](experiments/embeddings/bge_synonyms/README.md)).
 
 ## Extend it in 10 minutes
 
