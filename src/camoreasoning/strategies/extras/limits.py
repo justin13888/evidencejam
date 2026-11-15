@@ -23,6 +23,8 @@ from pathlib import Path
 
 from camoreasoning.components import Context
 from camoreasoning.config import CALIBRATION_DIR, RESULTS_DIR
+from camoreasoning.strategies import DEFAULTS
+from camoreasoning.strategies.calibrator.baseline import CONSTANT
 from camoreasoning.strategies.extras.baseline import _page, _rel, _wrap
 
 REPORT = CALIBRATION_DIR / "holdout_report.json"
@@ -53,6 +55,21 @@ NON_GOALS = (
         "compare magnitudes across studies.",
     ),
 )
+
+
+def shipped(calibrator: str) -> str:
+    """One sentence on what confidence this run's answers carry, against what the tables below measured."""
+    tables = "the confidences in the tables below come from the <code>binned</code> calibrator measured on the holdout."
+    if calibrator == "baseline" and len(set(CONSTANT.values())) == 1:
+        const = next(iter(CONSTANT.values()))
+        return (
+            f'<p class="shipped">The answers in this run all carry confidence {const:g} (the <code>baseline</code> '
+            f"calibrator); {tables}</p>"
+        )
+    return (
+        f'<p class="shipped">The answers in this run take their confidence from the <code>{escape(calibrator)}</code> '
+        f"calibrator; {tables}</p>"
+    )
 
 
 def load_report(path: Path = REPORT) -> dict | None:
@@ -195,11 +212,12 @@ def _reliability(report: dict) -> str:
     )
 
 
-def render(report: dict | None, why: dict[str, str]) -> str:
-    """The page body. report is holdout_report.json as loaded, or None when it is missing or unreadable."""
+def render(report: dict | None, why: dict[str, str], calibrator: str = DEFAULTS["calibrator"]) -> str:
+    """The page body. report is holdout_report.json as loaded, or None when it is missing or unreadable.
+    calibrator is the one this run's answers used, so the page can say what confidence they carry."""
     non_goals = "".join(f"<h3>{escape(h)}</h3><p>{escape(p)}</p>" for h, p in NON_GOALS)
     tail = f'<h2 id="non-goals">What we deliberately do not do</h2>{non_goals}'
-    head = '<h1>Honest limits</h1><p><a href="gapmap.html">Evidence gap map</a></p>'
+    head = '<h1>Honest limits</h1><p><a href="gapmap.html">Evidence gap map</a></p>' + shipped(calibrator)
     if report is None:
         return head + "<p>The holdout report is missing or unreadable, so no failures are shown.</p>" + tail
     items = report["items"]
@@ -220,8 +238,9 @@ def render(report: dict | None, why: dict[str, str]) -> str:
 
 def write_limits(ctx: Context, report_path: Path = REPORT, inventory_path: Path = INVENTORY) -> str:
     """Write limits.html under ctx.out_dir and return its path as extras writers do."""
+    calibrator = (ctx.settings.strategies if ctx.settings else {}).get("calibrator") or DEFAULTS["calibrator"]
     try:
-        body = render(load_report(report_path), load_why(inventory_path))
+        body = render(load_report(report_path), load_why(inventory_path), calibrator)
     except (KeyError, TypeError, ValueError, AttributeError):  # malformed report: say so rather than raise
-        body = render(None, {})
+        body = render(None, {}, calibrator)
     return _rel(_page(ctx, PAGE, "Honest limits", body))

@@ -164,3 +164,17 @@ def test_gapmap_writes_and_links_the_page(make_ctx):
     paths = get("extras", "gapmap").write_run([], [], ctx)
     assert paths[-1].endswith("limits.html") and (ROOT / paths[-1]).exists()
     assert 'href="limits.html"' in (ctx.out_dir / "gapmap.html").read_text(encoding="utf-8")
+
+
+def test_page_states_the_confidence_the_shipped_answers_carry(html):
+    text = re.sub(r"<[^>]+>", "", html)
+    assert (
+        "The answers in this run all carry confidence 0.6 (the baseline calibrator); the confidences in the tables "
+        "below come from the binned calibrator measured on the holdout." in text
+    )
+    assert html.index('class="shipped"') < html.index('id="failures"')
+
+
+def test_a_non_default_calibrator_is_named_instead_of_the_constant():
+    body = limits.render(None, {}, "binned")
+    assert "all carry confidence 0.6" not in body and "<code>binned</code> calibrator;" in body
