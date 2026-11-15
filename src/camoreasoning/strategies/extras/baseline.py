@@ -111,10 +111,21 @@ def _comparator(ctx: Context, eid: str) -> str:
     return "; ".join(parts) or "not stated"
 
 
+_ITALIC = re.compile(r"&lt;i&gt;((?:(?!&lt;/?i&gt;).)+?)&lt;/i&gt;", re.S)
+
+
+def _title(text: str) -> str:
+    """Escaped paper title; each balanced `<i>...</i>` pair (taxon names in CAMO titles) becomes `<em>`.
+
+    Escapes first, then restores only the exact escaped pair, so no other markup survives; a lone or nested
+    tag stays escaped."""
+    return _ITALIC.sub(r"<em>\1</em>", escape(text))
+
+
 def _study(doc: dict, doc_id: str) -> str:
     """First author and year, title, and a DOI link (the document id where the record has no DOI)."""
     who = escape(f"{(doc.get('authors') or ['Unknown'])[0].split(',')[0]} {doc.get('year', '')}".strip())
-    title = f" <cite>{escape(doc['title'])}</cite>" if doc.get("title") else ""
+    title = f" <cite>{_title(doc['title'])}</cite>" if doc.get("title") else ""
     doi = doc.get("doi")
     link = f'<a href="https://doi.org/{escape(doi)}">doi:{escape(doi)}</a>' if doi else escape(doc_id)
     return f"{who}.{title} {link}"
