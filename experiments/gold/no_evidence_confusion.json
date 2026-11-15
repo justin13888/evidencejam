@@ -1,0 +1,645 @@
+{
+ "files": [
+  "class_gold.yaml"
+ ],
+ "n": 83,
+ "confusion": {
+  "fn": 4,
+  "fp": 4,
+  "tn": 44,
+  "tp": 31
+ },
+ "no_evidence_precision": 0.8857,
+ "no_evidence_recall": 0.8857,
+ "errors_by_cause": {
+  "false_no_evidence retrieval:gold_edges_missed": 4,
+  "missed_no_evidence retrieval:edges_gold_rejects": 4
+ },
+ "rows": [
+  {
+   "id": "C-C0016",
+   "error": "missed_no_evidence",
+   "question": "What effect does time since disturbance / stand age have on fish abundance, growth & survival?",
+   "gold": [
+    "no_evidence",
+    null
+   ],
+   "pred": [
+    "answered",
+    "mixed"
+   ],
+   "cause": "retrieval:edges_gold_rejects",
+   "linked": {
+    "cause": [
+     "time_since_disturbance"
+    ],
+    "outcome": [
+     "fish_abundance"
+    ]
+   },
+   "edges": [
+    {
+     "edge": "camo:edge_22e511358877",
+     "predicate": "associated_with",
+     "negated": false,
+     "subject": {
+      "name": "Time period (1997 to 2007)",
+      "classes": [
+       "time_since_disturbance"
+      ]
+     },
+     "object": {
+      "name": "Increased catch per unit effort of S. femoratum",
+      "classes": [
+       "fish_abundance"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_75f53a4f5061",
+     "predicate": "associated_with",
+     "negated": false,
+     "subject": {
+      "name": "Passage of time",
+      "classes": [
+       "time_since_disturbance"
+      ]
+     },
+     "object": {
+      "name": "Increased total fish abundance",
+      "classes": [
+       "fish_abundance"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_f2187cc98255",
+     "predicate": "associated_with",
+     "negated": false,
+     "subject": {
+      "name": "Passage of time",
+      "classes": [
+       "time_since_disturbance"
+      ]
+     },
+     "object": {
+      "name": "Increased mid-trophic level fish abundance",
+      "classes": [
+       "fish_abundance"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_dbbdda2f1d6f",
+     "predicate": "causes",
+     "negated": true,
+     "subject": {
+      "name": "Passage of time",
+      "classes": [
+       "time_since_disturbance"
+      ]
+     },
+     "object": {
+      "name": "Total fish abundance",
+      "classes": [
+       "fish_abundance"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_df7f7e817275",
+     "predicate": "causes",
+     "negated": true,
+     "subject": {
+      "name": "Passage of time",
+      "classes": [
+       "time_since_disturbance"
+      ]
+     },
+     "object": {
+      "name": "Top-trophic fish abundance",
+      "classes": [
+       "fish_abundance"
+      ]
+     }
+    }
+   ],
+   "n_edges": 11
+  },
+  {
+   "id": "C-C0028",
+   "error": "false_no_evidence",
+   "question": "What effect does how wet the soil is have on natural seedling recruitment?",
+   "gold": [
+    "answered",
+    "decrease"
+   ],
+   "pred": [
+    "no_evidence",
+    null
+   ],
+   "cause": "retrieval:gold_edges_missed",
+   "linked": {
+    "cause": [],
+    "outcome": [
+     "natural_regeneration"
+    ]
+   },
+   "edges": [
+    {
+     "edge": "camo:edge_a87d999d586e",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "Soil moisture",
+      "classes": [
+       "soil_moisture_water"
+      ]
+     },
+     "object": {
+      "name": "Decreased tree seedling regeneration",
+      "classes": [
+       "natural_regeneration"
+      ]
+     }
+    }
+   ],
+   "n_edges": 1
+  },
+  {
+   "id": "C-C0029",
+   "error": "false_no_evidence",
+   "question": "What effect does competition from other vegetation have on stand structure and basal area?",
+   "gold": [
+    "answered",
+    "decrease"
+   ],
+   "pred": [
+    "no_evidence",
+    null
+   ],
+   "cause": "retrieval:gold_edges_missed",
+   "linked": {
+    "cause": [
+     "competing_vegetation"
+    ],
+    "outcome": [
+     "stand_structure"
+    ]
+   },
+   "edges": [
+    {
+     "edge": "camo:edge_9ad25f45eace",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "manual cutting of vegetation",
+      "classes": [
+       "mechanical_release_control"
+      ]
+     },
+     "object": {
+      "name": "Increased Engelmann spruce basal stem diameter at 3 years",
+      "classes": [
+       "tree_growth"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_e1e105841f15",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "manual cutting of vegetation",
+      "classes": [
+       "mechanical_release_control"
+      ]
+     },
+     "object": {
+      "name": "Increased Engelmann spruce basal stem diameter at 3 years",
+      "classes": [
+       "tree_growth"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_e52c05e80985",
+     "predicate": "associated_with",
+     "negated": false,
+     "subject": {
+      "name": "First year total shrub or summed Ericaceous shrub abundance",
+      "classes": [
+       "population_size_trend"
+      ]
+     },
+     "object": {
+      "name": "Decreased Engelmann spruce diameter",
+      "classes": [
+       "tree_growth"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_cf3dcfed8798",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "Weed removal",
+      "classes": [
+       "mechanical_release_control"
+      ]
+     },
+     "object": {
+      "name": "Increased seedling root collar diameter",
+      "classes": [
+       "tree_growth"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_54da8bcd5a3b",
+     "predicate": "associated_with",
+     "negated": false,
+     "subject": {
+      "name": "10-year woody-only suppression treatment",
+      "classes": [
+       "mechanical_release_control"
+      ]
+     },
+     "object": {
+      "name": "Increased mean stem diameter of planted white pine",
+      "classes": [
+       "tree_growth"
+      ]
+     }
+    }
+   ],
+   "n_edges": 11
+  },
+  {
+   "id": "C-C0054",
+   "error": "false_no_evidence",
+   "question": "What effect does competing vegetation have on diversity indices (Shannon, evenness)?",
+   "gold": [
+    "answered",
+    "mixed"
+   ],
+   "pred": [
+    "no_evidence",
+    null
+   ],
+   "cause": "retrieval:gold_edges_missed",
+   "linked": {
+    "cause": [
+     "competing_vegetation"
+    ],
+    "outcome": [
+     "diversity_indices"
+    ]
+   },
+   "edges": [
+    {
+     "edge": "camo:edge_70d68e59ca2a",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "1-yr and 4-yr herb and woody suppression",
+      "classes": [
+       "mechanical_release_control"
+      ]
+     },
+     "object": {
+      "name": "Decreased functional diversity",
+      "classes": [
+       "community_composition",
+       "functional_traits"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_17791dba1287",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "4-yr herb-only suppression",
+      "classes": [
+       "mechanical_release_control"
+      ]
+     },
+     "object": {
+      "name": "Increased functional diversity",
+      "classes": [
+       "community_composition",
+       "functional_traits"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_6d21d7acf2e3",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "4-yr herb-only suppression",
+      "classes": [
+       "mechanical_release_control"
+      ]
+     },
+     "object": {
+      "name": "Decreased taxonomic and functional diversity",
+      "classes": [
+       "community_composition",
+       "functional_traits"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_23f0e85aca8d",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "1-yr and 4-yr herb and woody suppression",
+      "classes": [
+       "mechanical_release_control"
+      ]
+     },
+     "object": {
+      "name": "Increased taxonomic and functional diversity",
+      "classes": [
+       "community_composition",
+       "functional_traits"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_4d5d9d5783fc",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "Manual cutting of vegetation",
+      "classes": [
+       "mechanical_release_control"
+      ]
+     },
+     "object": {
+      "name": "Increased species diversity",
+      "classes": [
+       "diversity_indices"
+      ]
+     }
+    }
+   ],
+   "n_edges": 6
+  },
+  {
+   "id": "C-C0058",
+   "error": "missed_no_evidence",
+   "question": "What effect does herbicide application have on total vegetation cover?",
+   "gold": [
+    "no_evidence",
+    null
+   ],
+   "pred": [
+    "answered",
+    "mixed"
+   ],
+   "cause": "retrieval:edges_gold_rejects",
+   "linked": {
+    "cause": [
+     "herbicide_application"
+    ],
+    "outcome": [
+     "plant_cover_total"
+    ]
+   },
+   "edges": [
+    {
+     "edge": "camo:edge_11690083251e",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "application of grass-specific herbicide sethoxydim",
+      "classes": [
+       "herbicide_application"
+      ]
+     },
+     "object": {
+      "name": "increased cover of Festuca roemeri",
+      "classes": [
+       "plant_cover_total"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_27113204c7bc",
+     "predicate": "associated_with",
+     "negated": false,
+     "subject": {
+      "name": "Herbicide application",
+      "classes": [
+       "herbicide_application"
+      ]
+     },
+     "object": {
+      "name": "Decreased Kalmia cover",
+      "classes": [
+       "plant_cover_total"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_9d981cad6d95",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "Herbicide application",
+      "classes": [
+       "herbicide_application"
+      ]
+     },
+     "object": {
+      "name": "Kalmia cover",
+      "classes": [
+       "plant_cover_total"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_9f39530f7a4d",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "SBG and SM treatments (sethoxydim)",
+      "classes": [
+       "herbicide_application"
+      ]
+     },
+     "object": {
+      "name": "decreased cover of Anthoxanthum odoratum",
+      "classes": [
+       "plant_cover_total"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_bf056913d7e7",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "MBG treatment",
+      "classes": [
+       "herbicide_application"
+      ]
+     },
+     "object": {
+      "name": "increased cover of Anthoxanthum odoratum",
+      "classes": [
+       "plant_cover_total"
+      ]
+     }
+    }
+   ],
+   "n_edges": 55
+  },
+  {
+   "id": "C-C0073",
+   "error": "missed_no_evidence",
+   "question": "What effect does water table & water level have on native species abundance & cover?",
+   "gold": [
+    "no_evidence",
+    null
+   ],
+   "pred": [
+    "answered",
+    "increase"
+   ],
+   "cause": "retrieval:edges_gold_rejects",
+   "linked": {
+    "cause": [
+     "water_table_level"
+    ],
+    "outcome": [
+     "native_abundance"
+    ]
+   },
+   "edges": [
+    {
+     "edge": "camo:edge_728873bb897b",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "lower water levels in Lake Ontario",
+      "classes": [
+       "water_table_level"
+      ]
+     },
+     "object": {
+      "name": "decline in submergent plant densities",
+      "classes": [
+       "native_abundance"
+      ]
+     }
+    }
+   ],
+   "n_edges": 1
+  },
+  {
+   "id": "C-C0085",
+   "error": "false_no_evidence",
+   "question": "What effect does site preparation & scarification have on invasive / non-native species abundance?",
+   "gold": [
+    "answered",
+    "no_effect"
+   ],
+   "pred": [
+    "no_evidence",
+    null
+   ],
+   "cause": "retrieval:gold_edges_missed",
+   "linked": {
+    "cause": [
+     "site_preparation"
+    ],
+    "outcome": [
+     "invasive_abundance"
+    ]
+   },
+   "edges": [
+    {
+     "edge": "camo:edge_6d0799a1bb00",
+     "predicate": "causes",
+     "negated": true,
+     "subject": {
+      "name": "Disturbance",
+      "classes": []
+     },
+     "object": {
+      "name": "Cover of introduced perennial grasses",
+      "classes": [
+       "invasive_abundance"
+      ]
+     }
+    }
+   ],
+   "n_edges": 1
+  },
+  {
+   "id": "C-C0096",
+   "error": "missed_no_evidence",
+   "question": "What effect does planting seedlings or transplants have on species diversity and evenness?",
+   "gold": [
+    "no_evidence",
+    null
+   ],
+   "pred": [
+    "answered",
+    "increase"
+   ],
+   "cause": "retrieval:edges_gold_rejects",
+   "linked": {
+    "cause": [
+     "tree_planting"
+    ],
+    "outcome": [
+     "diversity_indices"
+    ]
+   },
+   "edges": [
+    {
+     "edge": "camo:edge_3ff01ad7fe22",
+     "predicate": "associated_with",
+     "negated": false,
+     "subject": {
+      "name": "transplanted native forest understory plants",
+      "classes": [
+       "tree_planting"
+      ]
+     },
+     "object": {
+      "name": "increased Shannon-Wiener diversity index",
+      "classes": [
+       "diversity_indices"
+      ]
+     }
+    },
+    {
+     "edge": "camo:edge_6ee3b158989c",
+     "predicate": "causes",
+     "negated": false,
+     "subject": {
+      "name": "Transplantation of sod",
+      "classes": [
+       "tree_planting"
+      ]
+     },
+     "object": {
+      "name": "Increased species diversity in restored sites",
+      "classes": [
+       "diversity_indices"
+      ]
+     }
+    }
+   ],
+   "n_edges": 2
+  }
+ ]
+}

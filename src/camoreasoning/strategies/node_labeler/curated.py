@@ -5,8 +5,10 @@
    ending in `*` match any word ending. Per node the best two matches by phrase length are kept, so a
    long specific phrase ("seedling survival") beats a short generic one ("survival"). Intervention nodes
    only join cause/both classes.
-2. LLM (offline only, skipped if `ctx.llm` is not configured). Nodes with no lexical label are sent in
-   chunks; the model picks class ids only. Run with CAMOREASONING_MAX_CALLS high enough for the chunks.
+2. LLM (offline only). Nodes with no lexical label are sent in chunks; the model picks class ids only.
+   Run with CAMOREASONING_MAX_CALLS high enough for the chunks. With no `ctx.llm` configured, the
+   committed `llm` labels of nodes that still have no lexical label are kept, so a synonym fix can be
+   rebuilt at 0 calls.
 3. Polarity is never asked of the LLM. It is the node's qualifier sign (`unchanged` -> 0), flipped to -1
    when the name itself says removed/absent/reduced and no qualifier already carries the sign.
 """
@@ -44,6 +46,9 @@ INVERTED = {  # class -> name pattern meaning the opposite end of the class conc
     "wildlife_mortality": re.compile(r"\bmortality\b"),
     "water_table_level": re.compile(r"\b(depth|deeper)\b"),
 }
+# Natural drivers keep their cause label beside an outcome match: "time since recovery to pH 6" and
+# "higher summer temperatures" are the driver, not a pH or microclimate measurement.
+DRIVERS = {"time_since_disturbance", "climate_warming"}
 EXCLUSION_CLASSES = {"grazing_browsing"}  # "deer exclusion" = grazing absent even if qualifier says occurred
 MAX_PER_NODE = 2
 CHUNK = 40
@@ -109,11 +114,17 @@ def _prefer(found: list[tuple[str, int]], text: str, cause_only: set[str], inter
             found = [f for f in found if f[0] != "water_chemistry"]
         else:
             found = [f for f in found if f[0] not in ANIMAL | PLANT_ONLY | GENERIC]
-    if not intervention and any(c not in cause_only for c, _ in found):
-        found = [f for f in found if f[0] not in cause_only]  # "survival of transplants" is an outcome
+    if not intervention and any(c not in cause_only for c, _ in found):  # "survival of transplants" is an outcome
+        found = [f for f in found if f[0] not in cause_only - DRIVERS]
+    if "time_since_disturbance" in ids:  # "time elapsed after slashburning" varies time, not the burn
+        found = [f for f in found if f[0] == "time_since_disturbance" or f[0] not in cause_only]
     if "natural_regeneration" in ids:
         found = [f for f in found if f[0] != "stand_structure"]
     ids = {c for c, _ in found}
+    if ids & ANIMAL and "tree_seedling_survival" in ids:  # copepod survival is animal survival, not plant
+        found = [("wildlife_mortality", n) if c == "tree_seedling_survival" else (c, n) for c, n in found]
+        found = list({c: n for c, n in sorted(found, key=lambda x: x[1])}.items())
+        ids = {c for c, _ in found}
     if ids & ANIMAL:
         found = [f for f in found if f[0] not in PLANT_ONLY]
     if any(c not in GENERIC for c, _ in found):
@@ -157,8 +168,10 @@ class CuratedLabeler(NodeLabeler):
             for cid, length in found:
                 score = 0.9 if length == top else 0.7
                 out.append(NodeLabel(nid, cid, polarity(nodes[nid], cid), score, "lexical"))
-        if taxonomy.empty or not ctx.llm.available:
+        if taxonomy.empty:
             return out
+        if not ctx.llm.available:  # offline rebuild: keep the committed LLM labels of nodes still unmatched
+            return out + [lb for lb in ctx.taxonomy.labels if lb.source == "llm" and lb.node_id not in hits]
         missing = [nid for nid in nodes if nid not in hits]
         out += self._llm(taxonomy, ctx, missing)
         return out

@@ -214,8 +214,11 @@ classes:
   - woody debris
   - coarse woody debris
   - downed wood
+  - dead wood
+  - deadwood
   - snags
   - residual trees
+  - retained tree*
   - tree retention
   - green tree retention
   - riparian reserve
@@ -262,7 +265,10 @@ classes:
   - ditch blocking
   - drain blocking
   - water table manipulation
-  - flooding
+  - experimental flooding
+  - controlled flooding
+  - reflooding
+  - re-flooding
   - hydrological restoration
   - dam
   - beaver dam
@@ -415,6 +421,8 @@ classes:
   - elevated temperature
   - climate change
   - heat wave
+  - summer temperature*
+  - winter temperature*
   - drought
   - precipitation change
   - increased precipitation
@@ -505,6 +513,8 @@ classes:
   label: time since disturbance / stand age
   synonyms:
   - time since
+  - time elapsed
+  - elapsed time
   - stand age
   - years since
   - plantation age
@@ -536,7 +546,7 @@ classes:
   - all-terrain
   - hiking
   - human disturbance
-  - disturbance
+  - visitor*
   description: Human visitation.
 - id: invasive_abundance
   kind: outcome
@@ -590,6 +600,7 @@ classes:
   - shrub cover
   - understory cover
   - understorey cover
+  - vegetative competition
   description: Total or group-level cover.
 - id: bare_ground
   kind: outcome
@@ -691,6 +702,7 @@ classes:
   - seedling height
   - seedling growth
   - root collar diameter
+  - diameter
   - basal area increment
   - relative growth
   - stem diameter
@@ -738,7 +750,9 @@ classes:
   - seedling emergence
   - seed emergence
   - emergence
-  - emerge*
+  - emerged
+  - emerging
+  - emergents
   - germinant*
   - seed bank density
   - seed density
@@ -901,6 +915,7 @@ classes:
   - soil texture
   - aggregate stability
   - penetration resistance
+  - active layer
   description: Soil physical properties.
 - id: soil_temperature
   kind: both
@@ -1022,10 +1037,23 @@ classes:
   kind: outcome
   label: bird abundance & occupancy
   synonyms:
+  - bird
+  - birds
   - bird abundance
   - bird density
   - bird richness
   - avian
+  - flycatcher*
+  - waxwing*
+  - sparrow*
+  - thrush*
+  - vireo*
+  - woodpecker*
+  - chickadee*
+  - nuthatch*
+  - kinglet*
+  - wren*
+  - junco*
   - bird species
   - songbird*
   - waterfowl
@@ -1134,6 +1162,10 @@ classes:
   - invertebrate*
   - benthic
   - zooplankton
+  - copepod*
+  - amphipod*
+  - crustacean*
+  - cladoceran*
   - chironomid*
   - mayfl*
   - caddisfl*
@@ -1185,7 +1217,6 @@ classes:
   - return rates
   - population survival
   - mortality rate of
-  - survival rate
   description: Animal survival (not plant).
 - id: population_size_trend
   kind: outcome
@@ -1225,6 +1256,12 @@ classes:
   - functional diversity
   - life form
   - plant functional
+  - feeding group*
+  - guild*
+  - shredder*
+  - gatherer*
+  - filterer*
+  - scraper*
   - specific leaf area
   - seed mass
   - wood density
