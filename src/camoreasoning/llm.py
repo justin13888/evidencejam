@@ -94,14 +94,17 @@ class LLM:
         return content
 
     def _post(self, body: dict, purpose: str) -> str:
+        headers = {"Content-Type": "application/json"}
+        if self.settings.llm_key:
+            headers["Authorization"] = f"Bearer {self.settings.llm_key}"
+        try:  # a scheme-less BRINE_URL makes urllib raise ValueError; surface it as LLMError, before any call is spent
+            req = urllib.request.Request(self._url(), json.dumps(body).encode(), headers, method="POST")
+        except ValueError as e:
+            raise _Retry(f"bad BRINE_URL: {e}", retry=False) from None
         try:
             self.meter.reserve()
         except BudgetExceeded as e:
             raise _Retry(str(e), retry=False) from None
-        headers = {"Content-Type": "application/json"}
-        if self.settings.llm_key:
-            headers["Authorization"] = f"Bearer {self.settings.llm_key}"
-        req = urllib.request.Request(self._url(), json.dumps(body).encode(), headers, method="POST")
         t0 = time.perf_counter()
         try:
             with urllib.request.urlopen(req, timeout=self.settings.llm_timeout) as r:
@@ -111,7 +114,9 @@ class LLM:
             raise _Retry(f"HTTP {e.code}", retry=e.code in RETRY_STATUS or bad_extras,
                          drop_extras=bad_extras) from None  # fmt: skip
         except (urllib.error.URLError, TimeoutError, OSError) as e:
-            raise _Retry(f"network: {e}", retry=True) from None
+            # A timeout already spent the whole budget; retrying would double the wait (ask.sh must answer < 10 s).
+            timed_out = isinstance(e, TimeoutError) or isinstance(getattr(e, "reason", None), TimeoutError)
+            raise _Retry(f"network: {e}", retry=not timed_out) from None
         except (json.JSONDecodeError, UnicodeDecodeError) as e:
             raise _Retry(f"bad response body: {e}", retry=False) from None
         try:
