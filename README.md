@@ -15,6 +15,8 @@ Every hidden answer is in the graph, so the job is to find the right edges and r
 
 Confidence is a constant 0.6 in this release: a fitted calibrator missed its holdout target (ECE, expected calibration error, 0.187 against 0.05), so we ship the constant and show the miss on the limits page.
 
+Certainty is the weakest output. It follows the D4 rule (the median edge grade, one level lower if mixed or all-associational). The dev numbers below score correctness on status and direction. If correctness also required the exact certainty, measured against a different reading of the gold (for example the maximum edge grade), dev accuracy would fall to about 0.48 ([`experiments/results/scoring_variants.md`](experiments/results/scoring_variants.md), #99).
+
 ## Run
 
 One command, from a clean checkout:
@@ -72,13 +74,15 @@ The graph is only read, never rewritten. A small taxonomy (82 broad classes, wit
 1. **Read the question.** Split it into a cause and an outcome (`parser/freeform`). The template form and 16 freer shapes are covered.
 2. **Link each side to the graph** (`linker/cessation`, 0 calls), trying these in order: an exact class label or synonym, a class phrase contained in the wording, the closest node names, then word stems. Words the class doesn't cover narrow the side to the nodes that name them (`retriever/focus`), so "ericaceous shrub cover" isn't outvoted by all plant cover. A cause that ends something ("cessation of …") is read as the opposite of the thing that stops.
 3. **Read each edge the way its sentence reads** (`interpreter/unsigned`). Sign = the question-relative node polarities × the predicate's sign. A null result is a `no_effect` vote, never a decrease. Double negations ("prevents decreased Y") are pinned to their sentences. An association that names no direction counts as an unsigned vote: it marks the question as having evidence but never outvotes a signed edge. Other edges with no usable sign are kept out and listed.
-4. **Decide, grade, cite, write** (`aggregator/studies`, `grader/rubric`, `renderer/faithful`):
+4. **Decide, grade, cite, write** (`aggregator/studies`, `grader/rubric`, `citer/precise`, `renderer/faithful`, `calibrator/baseline`):
    - **Direction:** one vote per study. A direction wins with at least 2/3 of studies, otherwise the answer is `mixed`.
    - **No evidence:** with no usable vote the answer is `no_evidence`, and `searched_for` says what was searched.
    - **Certainty:** the median edge grade, one level lower if mixed or all-associational, never `high`.
    - **Text:** a templated sentence whose only hedge is that certainty. Associational evidence never gets a causal verb.
 
-   No LLM writes the answers.
+   - **Confidence:** a constant 0.6 (`calibrator/baseline`), for the reason given above.
+
+   No LLM writes the answers. The `extras/gapmap` stage then writes the evidence pages, the gap map (`gapmap.html`, `gapcells.html`) and the honest-limits page (`limits.html`) into `outputs/`.
 
 The locked rules behind these steps (D1–D6) are in [ROADMAP.md](ROADMAP.md).
 
