@@ -25,4 +25,4 @@ Each run prints a field-level diff against [`snapshot.json`](snapshot.json): sta
 
 After a UI change, the loop is: run `build.py --shots`, read the diff, look at the pages or shots, then run `python scripts/a11y_audit.py outputs/showcase/outputs` and `mise run check`.
 
-The README screenshots (`docs/img/*.png`) are committed so they render on GitHub with no network fetch. `--readme` regenerates them from a fresh run at the current defaults: the light scheme at 1280 x 1400 px, with `evidence.png` showing the page for `C-C0004`. Re-run it after any change to the UI or the answer text, then commit the PNGs.
+The README screenshots (`docs/img/*.png`) are committed so they render on GitHub with no network fetch. `--readme` regenerates them from a fresh run at the current defaults: the dark scheme at 1280 x 1400 px, with `evidence.png` showing the page for `C-C0004`. Re-run it after any change to the UI or the answer text, then commit the PNGs.
