@@ -171,6 +171,28 @@ def test_widen_leaves_a_retrieval_with_edges_alone(make_ctx):
     assert base.forward and registry.get("retriever", "widen").retrieve(frame, ctx) == base
 
 
+def test_focus_narrows_a_class_to_the_words_it_does_not_cover(make_ctx):
+    """#66, D-Q0207: "ericaceous shrub cover" links `plant_cover_total`, whose bare ground, tree and herb
+    cover edges turned the answer mixed. `focus` keeps the edges whose nodes name the words no linked
+    class covers ("abandonment", "ericaceous"): the block-cut and vacuum harvesting study only."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, "abandonment of peat harvesting", "ericaceous shrub cover")
+    wide = registry.get("retriever", "widen").retrieve(frame, ctx)
+    narrow = registry.get("retriever", "focus").retrieve(frame, ctx)
+    assert set(narrow.forward) < set(wide.forward)
+    assert {ctx.graph.edges[e]["source_document"] for e in narrow.forward} == {"10.1139/b05-025"}
+    assert all("ricaceous" in ctx.graph.nodes[ctx.graph.edges[e]["object"]]["name"] for e in narrow.forward)
+
+
+def test_focus_leaves_exact_class_wording_alone(make_ctx):
+    """A side worded as its class label has no extra words, so `focus` retrieves exactly as `widen`."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, "prescribed fire", "plant cover")
+    assert registry.get("retriever", "focus").retrieve(frame, ctx) == registry.get("retriever", "widen").retrieve(
+        frame, ctx
+    )
+
+
 def test_unchanged_outcome_is_a_null(graph, ctx):
     """'Soil exchangeable K levels ... remained relatively stable during the chronosequence.'"""
     r = ask(graph, ctx, *ends(graph, "camo:edge_07b5d3056850"))
