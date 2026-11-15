@@ -1,3 +1,8 @@
 {"id": "D-Q0095", "by": "llm:auditor", "status": "answered", "direction": "unclear", "certainty": "very_low", "edges": [{"ref": "e1", "effect": null}, {"ref": "e2", "effect": null}]}
 {"id": "D-Q0003", "by": "llm:auditor", "status": "answered", "direction": "mixed", "certainty": "low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e2", "effect": -1}]}
 {"id": "D-Q0005", "by": "llm:auditor", "status": "answered", "direction": "mixed", "certainty": "very_low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e4", "effect": -1}]}
+{"id": "D-Q0022", "by": "llm:d3-relabel", "status": "answered", "direction": "no_effect", "certainty": "moderate", "edges": [{"ref": "e1", "effect": 0}]}
+{"id": "D-Q0025", "by": "llm:d3-relabel", "status": "answered", "direction": "no_effect", "certainty": "very_low", "edges": [{"ref": "e1", "effect": 0}]}
+{"id": "D-Q0028", "by": "llm:d3-relabel", "status": "answered", "direction": "mixed", "certainty": "very_low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e2", "effect": 0}, {"ref": "e3", "effect": -1}]}
+{"id": "D-Q0069", "by": "llm:d3-relabel", "status": "answered", "direction": "no_effect", "certainty": "low", "edges": [{"ref": "e2", "effect": 0}, {"ref": "e3", "effect": 0}]}
+{"id": "D-Q0222", "by": "llm:auditor", "status": "answered", "direction": "increase", "certainty": "very_low", "edges": [{"ref": "e1", "effect": null}, {"ref": "e2", "effect": 1}]}

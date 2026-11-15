@@ -7,7 +7,8 @@ items:
   edge_ids:
   - camo:edge_b89355ff7d36
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
+  - trap:comparator_reference
   - answerable
   split: holdout
   source: llm:annotate
@@ -23,8 +24,9 @@ items:
   - camo:edge_c84f7fea92b0
   - camo:edge_3d7078fca705
   tags:
-  - trap:null
-  - trap:twin
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -42,7 +44,8 @@ items:
   - camo:edge_15a7f5a2b502
   - camo:edge_3cbccac46759
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
+  - trap:time_as_cause
   - answerable
   split: dev
   source: llm:auditor
@@ -59,7 +62,7 @@ items:
   edge_ids:
   - camo:edge_7926225dc43d
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
   - answerable
   split: dev
   source: llm:annotate
@@ -75,8 +78,9 @@ items:
   - camo:edge_f4cb3c80e187
   - camo:edge_18caf0511a4d
   tags:
-  - trap:null
-  - trap:twin
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:comparator_reference
   - answerable
   split: dev
   source: llm:auditor
@@ -94,7 +98,7 @@ items:
   edge_ids:
   - camo:edge_e7edb4cc5c62
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
   - answerable
   split: dev
   source: llm:annotate
@@ -112,7 +116,8 @@ items:
   - camo:edge_c28b15ab9969
   - camo:edge_c07e7798cd64
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
+  - trap:one_study_many_edges
   - answerable
   split: holdout
   source: llm:annotate
@@ -130,9 +135,9 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:null
-  - trap:twin
-  - trap:reversed
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:reversed_edges
   - empty
   split: dev
   source: llm:annotate
@@ -145,8 +150,8 @@ items:
   edge_ids:
   - camo:edge_e34c727f80be
   tags:
-  - trap:null
-  - trap:associational
+  - trap:null_is_not_decrease
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -162,7 +167,7 @@ items:
   - camo:edge_a90c99c6037b
   - camo:edge_76a965d26c9d
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
   - answerable
   split: dev
   source: llm:annotate
@@ -180,9 +185,9 @@ items:
   - camo:edge_782f36bf90c1
   - camo:edge_646311c9ffe5
   tags:
-  - trap:removed_subject
-  - trap:associational
-  - trap:twin
+  - trap:negative_subject_qualifiers
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -199,8 +204,8 @@ items:
   edge_ids:
   - camo:edge_e03fb29ab25c
   tags:
-  - trap:removed_subject
-  - trap:associational
+  - trap:negative_subject_qualifiers
+  - trap:associational_is_not_causal
   - answerable
   split: holdout
   source: llm:annotate
@@ -215,9 +220,9 @@ items:
   edge_ids:
   - camo:edge_3bc46b01c1b8
   tags:
-  - trap:removed_subject
-  - trap:unchanged
-  - trap:associational
+  - trap:negative_subject_qualifiers
+  - trap:unchanged_is_not_null
+  - trap:associational_is_not_causal
   - answerable
   split: holdout
   source: llm:annotate
@@ -232,8 +237,8 @@ items:
   edge_ids:
   - camo:edge_77a276de1d11
   tags:
-  - trap:removed_subject
-  - trap:associational
+  - trap:negative_subject_qualifiers
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -248,8 +253,8 @@ items:
   edge_ids:
   - camo:edge_2aafb4574233
   tags:
-  - trap:removed_subject
-  - trap:associational
+  - trap:negative_subject_qualifiers
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -264,9 +269,9 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:removed_subject
-  - trap:sign_flip
-  - trap:reversed
+  - trap:negative_subject_qualifiers
+  - trap:reversed_edges
+  - trap:one_study_many_edges
   - empty
   split: dev
   source: llm:annotate
@@ -279,8 +284,7 @@ items:
   edge_ids:
   - camo:edge_eea9e2034298
   tags:
-  - trap:removed_subject
-  - trap:sign_flip
+  - trap:negative_subject_qualifiers
   - answerable
   split: dev
   source: llm:annotate
@@ -298,9 +302,9 @@ items:
   - camo:edge_69822d285db8
   - camo:edge_54da772fbc1a
   tags:
-  - trap:removed_subject
-  - trap:associational
-  - trap:twin
+  - trap:negative_subject_qualifiers
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -322,8 +326,8 @@ items:
   edge_ids:
   - camo:edge_89a4624c7ddd
   tags:
-  - trap:removed_subject
-  - trap:associational
+  - trap:negative_subject_qualifiers
+  - trap:associational_is_not_causal
   - answerable
   split: holdout
   source: llm:annotate
@@ -339,8 +343,7 @@ items:
   - camo:edge_a6271518c200
   - camo:edge_2b8f40aaf119
   tags:
-  - trap:removed_subject
-  - trap:sign_flip
+  - trap:negative_subject_qualifiers
   - answerable
   split: dev
   source: llm:annotate
@@ -366,8 +369,9 @@ items:
   - camo:edge_169cefccb4b7
   - camo:edge_3c7763584a58
   tags:
-  - trap:unchanged
-  - trap:associational
+  - trap:unchanged_is_not_null
+  - trap:associational_is_not_causal
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -394,17 +398,20 @@ items:
     - 1
 - id: D-Q0022
   question: What effect does plot type have on vegetation cover?
-  status: no_evidence
-  direction: null
-  certainty: null
-  edge_ids: []
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_9d920a5ac0d8
   tags:
-  - trap:null
-  - trap:unchanged
-  - empty
+  - trap:null_is_not_decrease
+  - trap:unchanged_is_not_null
+  - answerable
   split: dev
-  source: llm:annotate
-  edge_effects: []
+  source: llm:d3-relabel
+  edge_effects:
+  - - camo:edge_9d920a5ac0d8
+    - 0
 - id: D-Q0023
   question: What effect does water chemistry and fish have on zooplankton composition?
   status: answered
@@ -413,7 +420,7 @@ items:
   edge_ids:
   - camo:edge_e6b8eedc3a5c
   tags:
-  - trap:unchanged
+  - trap:unchanged_is_not_null
   - answerable
   split: dev
   source: llm:annotate
@@ -427,26 +434,30 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:null
-  - trap:unchanged
-  - trap:reversed
+  - trap:null_is_not_decrease
+  - trap:unchanged_is_not_null
+  - trap:reversed_edges
+  - trap:time_as_cause
   - empty
   split: dev
   source: llm:annotate
   edge_effects: []
 - id: D-Q0025
   question: What effect does breeding timing have on nest parasitism?
-  status: no_evidence
-  direction: null
-  certainty: null
-  edge_ids: []
+  status: answered
+  direction: no_effect
+  certainty: very_low
+  edge_ids:
+  - camo:edge_a7f9c1040c5b
   tags:
-  - trap:null
-  - trap:unchanged
-  - empty
+  - trap:null_is_not_decrease
+  - trap:unchanged_is_not_null
+  - answerable
   split: dev
-  source: llm:annotate
-  edge_effects: []
+  source: llm:d3-relabel
+  edge_effects:
+  - - camo:edge_a7f9c1040c5b
+    - 0
 - id: D-Q0026
   question: What effect does sediment depth have on volatile solids concentration?
   status: answered
@@ -455,8 +466,8 @@ items:
   edge_ids:
   - camo:edge_d2fc9dcb7a37
   tags:
-  - trap:unchanged
-  - trap:associational
+  - trap:unchanged_is_not_null
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -471,8 +482,9 @@ items:
   edge_ids:
   - camo:edge_0d7b42c4d6ca
   tags:
-  - trap:unchanged
-  - trap:associational
+  - trap:unchanged_is_not_null
+  - trap:associational_is_not_causal
+  - trap:comparator_reference
   - answerable
   split: dev
   source: llm:annotate
@@ -486,15 +498,18 @@ items:
   certainty: very_low
   edge_ids:
   - camo:edge_ddd9dd384f54
+  - camo:edge_654a9ba69d36
   - camo:edge_74f156b5d964
   tags:
-  - trap:null
-  - trap:unchanged
+  - trap:null_is_not_decrease
+  - trap:unchanged_is_not_null
   - answerable
   split: dev
-  source: llm:annotate
+  source: llm:d3-relabel
   edge_effects:
   - - camo:edge_ddd9dd384f54
+    - 0
+  - - camo:edge_654a9ba69d36
     - 0
   - - camo:edge_74f156b5d964
     - -1
@@ -506,8 +521,8 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:unchanged
-  - trap:associational
+  - trap:unchanged_is_not_null
+  - trap:associational_is_not_causal
   - empty
   split: dev
   source: llm:annotate
@@ -520,8 +535,8 @@ items:
   edge_ids:
   - camo:edge_d8a1d45471a4
   tags:
-  - trap:unchanged
-  - trap:associational
+  - trap:unchanged_is_not_null
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -537,8 +552,8 @@ items:
   - camo:edge_dc9cff81980a
   - camo:edge_db94e870bdd7
   tags:
-  - trap:associational
-  - trap:twin
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
   - answerable
   split: holdout
   source: llm:annotate
@@ -554,9 +569,9 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:associational
-  - trap:twin
-  - trap:reversed
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:reversed_edges
   - empty
   split: dev
   source: llm:annotate
@@ -585,7 +600,8 @@ items:
   - camo:edge_1b61a1f07612
   - camo:edge_10f4712fcd69
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -631,7 +647,7 @@ items:
   - camo:edge_e6141e8e854c
   - camo:edge_6262c99aa6bf
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -649,8 +665,9 @@ items:
   - camo:edge_b762a0d10ecf
   - camo:edge_05da1da4f5dd
   tags:
-  - trap:associational
-  - trap:twin
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -668,7 +685,8 @@ items:
   - camo:edge_2897c7463129
   - camo:edge_8cc3a6b2a894
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
+  - trap:comparator_reference
   - answerable
   split: dev
   source: llm:annotate
@@ -686,7 +704,8 @@ items:
   - camo:edge_a78b3241e654
   - camo:edge_9b827618e9db
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
+  - trap:one_study_many_edges
   - answerable
   split: holdout
   source: llm:annotate
@@ -705,7 +724,8 @@ items:
   - camo:edge_abb97ece8e6c
   - camo:edge_00278aac9f80
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -724,7 +744,7 @@ items:
   edge_ids:
   - camo:edge_ff915813de2e
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -738,8 +758,8 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:associational
-  - trap:reversed
+  - trap:associational_is_not_causal
+  - trap:reversed_edges
   - empty
   split: dev
   source: llm:annotate
@@ -752,7 +772,6 @@ items:
   edge_ids:
   - camo:edge_8118bbb7c131
   tags:
-  - trap:sign_flip
   - answerable
   split: holdout
   source: llm:annotate
@@ -768,7 +787,6 @@ items:
   edge_ids:
   - camo:edge_64dcb8ea730c
   tags:
-  - trap:sign_flip
   - answerable
   split: dev
   source: llm:annotate
@@ -784,8 +802,8 @@ items:
   - camo:edge_7f5d2b4385c1
   - camo:edge_0455c27c8ed0
   tags:
-  - trap:sign_flip
-  - trap:twin
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -805,8 +823,7 @@ items:
   - camo:edge_19f8f07f5d10
   - camo:edge_2e9da3e08ae5
   tags:
-  - trap:sign_flip
-  - trap:twin
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -826,8 +843,7 @@ items:
   - camo:edge_e06081c5ac16
   - camo:edge_4ea2870e74f1
   tags:
-  - trap:sign_flip
-  - trap:twin
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -845,7 +861,6 @@ items:
   - camo:edge_df45f5c2eb06
   - camo:edge_0836bcb53dc0
   tags:
-  - trap:sign_flip
   - answerable
   split: dev
   source: llm:annotate
@@ -863,7 +878,6 @@ items:
   edge_ids:
   - camo:edge_5d2d2e187ed3
   tags:
-  - trap:sign_flip
   - answerable
   split: dev
   source: llm:annotate
@@ -877,8 +891,7 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:sign_flip
-  - trap:reversed
+  - trap:reversed_edges
   - empty
   split: dev
   source: llm:annotate
@@ -900,7 +913,6 @@ items:
   - camo:edge_c11602faff90
   - camo:edge_9e7a6eee45a7
   tags:
-  - trap:sign_flip
   - answerable
   split: dev
   source: llm:annotate
@@ -934,7 +946,6 @@ items:
   edge_ids:
   - camo:edge_d8ec6d9d57fb
   tags:
-  - trap:sign_flip
   - answerable
   split: holdout
   source: llm:annotate
@@ -949,8 +960,8 @@ items:
   edge_ids:
   - camo:edge_89b49d403051
   tags:
-  - trap:associational
-  - trap:twin
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -965,8 +976,8 @@ items:
   edge_ids:
   - camo:edge_1c1c3e0945d0
   tags:
-  - trap:associational
-  - trap:twin
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -981,8 +992,7 @@ items:
   edge_ids:
   - camo:edge_18ac0bfc5067
   tags:
-  - trap:sign_flip
-  - trap:twin
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -999,8 +1009,7 @@ items:
   - camo:edge_633a47be3f8f
   - camo:edge_1d76478a84d1
   tags:
-  - trap:sign_flip
-  - trap:twin
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -1019,8 +1028,8 @@ items:
   edge_ids:
   - camo:edge_99cc6159344e
   tags:
-  - trap:associational
-  - trap:twin
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -1034,10 +1043,10 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:null
-  - trap:associational
-  - trap:twin
-  - trap:reversed
+  - trap:null_is_not_decrease
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:reversed_edges
   - empty
   split: dev
   source: llm:annotate
@@ -1052,8 +1061,9 @@ items:
   - camo:edge_59cab73a066e
   - camo:edge_20c301f54615
   tags:
-  - trap:null
-  - trap:twin
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -1075,8 +1085,8 @@ items:
   - camo:edge_32ffc86c99b0
   - camo:edge_26e0888af312
   tags:
-  - trap:associational
-  - trap:twin
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
   - answerable
   split: holdout
   source: llm:annotate
@@ -1097,8 +1107,8 @@ items:
   edge_ids:
   - camo:edge_a6be7cb832a8
   tags:
-  - trap:sign_flip
-  - trap:twin
+  - trap:twin_edges_one_sentence
+  - trap:comparator_reference
   - answerable
   split: dev
   source: llm:annotate
@@ -1119,8 +1129,9 @@ items:
   - camo:edge_4bc10383411a
   - camo:edge_0c68925d90d4
   tags:
-  - trap:associational
-  - trap:twin
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -1149,8 +1160,8 @@ items:
   - camo:edge_3db49b2a9d32
   - camo:edge_1c146ff8a6e9
   tags:
-  - trap:unchanged
-  - trap:moderator
+  - trap:unchanged_is_not_null
+  - trap:moderators_mediators
   - answerable
   split: dev
   source: llm:annotate
@@ -1168,7 +1179,7 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:moderator
+  - trap:moderators_mediators
   - empty
   split: dev
   source: llm:annotate
@@ -1180,8 +1191,8 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:moderator
-  - trap:reversed
+  - trap:moderators_mediators
+  - trap:reversed_edges
   - empty
   split: holdout
   source: llm:annotate
@@ -1200,8 +1211,8 @@ items:
   - camo:edge_5ee7288c1b1f
   - camo:edge_20a8f4424d68
   tags:
-  - trap:twin
-  - trap:moderator
+  - trap:twin_edges_one_sentence
+  - trap:moderators_mediators
   - answerable
   split: dev
   source: llm:annotate
@@ -1227,7 +1238,7 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:moderator
+  - trap:moderators_mediators
   - empty
   split: holdout
   source: llm:annotate
@@ -1239,7 +1250,7 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:moderator
+  - trap:moderators_mediators
   - empty
   split: dev
   source: llm:annotate
@@ -1256,8 +1267,9 @@ items:
   - camo:edge_83649e6af1f6
   - camo:edge_4c047ddbc5a0
   tags:
-  - trap:unchanged
-  - trap:moderator
+  - trap:unchanged_is_not_null
+  - trap:moderators_mediators
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -1278,13 +1290,16 @@ items:
   direction: no_effect
   certainty: low
   edge_ids:
+  - camo:edge_4c79ad925c0f
   - camo:edge_e983819e4524
   tags:
-  - trap:moderator
+  - trap:moderators_mediators
   - answerable
   split: dev
-  source: llm:annotate
+  source: llm:d3-relabel
   edge_effects:
+  - - camo:edge_4c79ad925c0f
+    - 0
   - - camo:edge_e983819e4524
     - 0
 - id: D-Q0070
@@ -1294,7 +1309,7 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:moderator
+  - trap:moderators_mediators
   - empty
   split: holdout
   source: llm:annotate
@@ -1308,7 +1323,8 @@ items:
   edge_ids:
   - camo:edge_22e511358877
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
+  - trap:time_as_cause
   - answerable
   split: dev
   source: llm:annotate
@@ -1322,8 +1338,8 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:null
-  - trap:reversed
+  - trap:null_is_not_decrease
+  - trap:reversed_edges
   - empty
   split: holdout
   source: llm:annotate
@@ -1336,8 +1352,8 @@ items:
   edge_ids:
   - camo:edge_94f88fca4845
   tags:
-  - trap:null
-  - trap:twin
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -1354,7 +1370,8 @@ items:
   - camo:edge_ff3a7589ac00
   - camo:edge_13f744bb0b84
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
+  - trap:time_as_cause
   - answerable
   split: dev
   source: llm:annotate
@@ -1392,7 +1409,8 @@ items:
   - camo:edge_fef62d7a9c3e
   - camo:edge_ec112433252c
   tags:
-  - trap:twin
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
   - answerable
   split: holdout
   source: llm:annotate
@@ -1411,8 +1429,9 @@ items:
   edge_ids:
   - camo:edge_70db37179680
   tags:
-  - trap:associational
-  - trap:twin
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:time_as_cause
   - answerable
   split: holdout
   source: llm:annotate
@@ -1441,7 +1460,8 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
+  - trap:comparator_reference
   - empty
   split: holdout
   source: llm:annotate
@@ -1453,9 +1473,8 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:sign_flip
-  - trap:twin
-  - trap:reversed
+  - trap:twin_edges_one_sentence
+  - trap:reversed_edges
   - empty
   split: dev
   source: llm:annotate
@@ -1472,7 +1491,8 @@ items:
   - camo:edge_cec167e49d39
   - camo:edge_79baabe22795
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -1494,9 +1514,9 @@ items:
   - camo:edge_eafee255ae91
   - camo:edge_be31229d1695
   tags:
-  - trap:removed_subject
-  - trap:associational
-  - trap:twin
+  - trap:negative_subject_qualifiers
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -1532,8 +1552,9 @@ items:
   - camo:edge_0812414972dd
   - camo:edge_024ec96e9e34
   tags:
-  - trap:null
-  - trap:twin
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:comparator_reference
   - answerable
   split: holdout
   source: llm:annotate
@@ -1586,7 +1607,7 @@ items:
   edge_ids:
   - camo:edge_655490c88d6f
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -1603,7 +1624,7 @@ items:
   - camo:edge_c89452e07900
   - camo:edge_508ad46a180d
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -1623,8 +1644,9 @@ items:
   - camo:edge_a0e676bdcb2e
   - camo:edge_1b6d0728d25d
   tags:
-  - trap:associational
-  - trap:twin
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -1641,7 +1663,7 @@ items:
   edge_ids:
   - camo:edge_224465823a2d
   tags:
-  - trap:removed_subject
+  - trap:negative_subject_qualifiers
   - answerable
   split: dev
   source: llm:annotate
@@ -1655,8 +1677,8 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:null
-  - trap:reversed
+  - trap:null_is_not_decrease
+  - trap:reversed_edges
   - empty
   split: dev
   source: llm:annotate
@@ -1669,7 +1691,7 @@ items:
   edge_ids:
   - camo:edge_3b4060e75715
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -1685,7 +1707,7 @@ items:
   - camo:edge_0ed39fda34ff
   - camo:edge_4e111d668881
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -1702,8 +1724,8 @@ items:
   edge_ids:
   - camo:edge_1ec29fd5ff5e
   tags:
-  - trap:unchanged
-  - trap:associational
+  - trap:unchanged_is_not_null
+  - trap:associational_is_not_causal
   - answerable
   split: holdout
   source: llm:annotate
@@ -1719,9 +1741,9 @@ items:
   - camo:edge_e180b5bd113c
   - camo:edge_d0f3a672cdd3
   tags:
-  - trap:null
-  - trap:unchanged
-  - trap:twin
+  - trap:null_is_not_decrease
+  - trap:unchanged_is_not_null
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -1739,7 +1761,7 @@ items:
   - camo:edge_d342c9743982
   - camo:edge_9714cb48111b
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
   - answerable
   split: dev
   source: llm:annotate
@@ -1761,7 +1783,7 @@ items:
   - camo:edge_498768decc99
   - camo:edge_1f2eb1f22fd2
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
   - answerable
   split: dev
   source: llm:annotate
@@ -1787,7 +1809,8 @@ items:
   - camo:edge_6bdb3d555a6b
   - camo:edge_41b89878909d
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
+  - trap:one_study_many_edges
   - answerable
   split: holdout
   source: llm:auditor
@@ -1803,8 +1826,8 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:twin
-  - trap:reversed
+  - trap:twin_edges_one_sentence
+  - trap:reversed_edges
   - empty
   split: dev
   source: llm:annotate
@@ -1819,7 +1842,9 @@ items:
   - camo:edge_489869dd3b8f
   - camo:edge_4fa2bab66ab7
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
+  - trap:time_as_cause
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -1838,8 +1863,9 @@ items:
   edge_ids:
   - camo:edge_5395961a6efd
   tags:
-  - trap:associational
-  - trap:twin
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:comparator_reference
   - answerable
   split: dev
   source: llm:annotate
@@ -1859,7 +1885,8 @@ items:
   - camo:edge_358c1b5df724
   - camo:edge_627a1249e18c
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -1883,7 +1910,7 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
   - empty
   split: dev
   source: llm:annotate
@@ -1896,8 +1923,8 @@ items:
   edge_ids:
   - camo:edge_6bb93191e24b
   tags:
-  - trap:removed_subject
-  - trap:associational
+  - trap:negative_subject_qualifiers
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -1912,7 +1939,7 @@ items:
   edge_ids:
   - camo:edge_ad2ba30c1e86
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
   - answerable
   split: dev
   source: llm:annotate
@@ -1926,8 +1953,9 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:twin
-  - trap:reversed
+  - trap:twin_edges_one_sentence
+  - trap:reversed_edges
+  - trap:one_study_many_edges
   - empty
   split: holdout
   source: llm:annotate
@@ -1950,6 +1978,7 @@ items:
   - camo:edge_1ef04436cda4
   - camo:edge_0197dbb7f62f
   tags:
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -1987,7 +2016,7 @@ items:
   - camo:edge_3f81eddbae07
   - camo:edge_95c19b836663
   tags:
-  - trap:twin
+  - trap:twin_edges_one_sentence
   - answerable
   split: holdout
   source: llm:annotate
@@ -2009,7 +2038,7 @@ items:
   - camo:edge_8ab4784632f7
   - camo:edge_495dbfc15da8
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
   - answerable
   split: dev
   source: llm:annotate
@@ -2028,7 +2057,8 @@ items:
   - camo:edge_b298a5e3fc18
   - camo:edge_1f5f5f368bf6
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -2059,7 +2089,7 @@ items:
   - camo:edge_6eff85fd616c
   - camo:edge_2607541c1477
   tags:
-  - trap:twin
+  - trap:twin_edges_one_sentence
   - answerable
   split: holdout
   source: llm:annotate
@@ -2099,7 +2129,8 @@ items:
   edge_ids:
   - camo:edge_2d54f5d7e7ce
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
+  - trap:time_as_cause
   - answerable
   split: dev
   source: llm:annotate
@@ -2115,8 +2146,8 @@ items:
   - camo:edge_bbf6b0c9753f
   - camo:edge_3d9bfa1aa8af
   tags:
-  - trap:associational
-  - trap:twin
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
   - answerable
   split: dev
   source: llm:annotate
@@ -2132,8 +2163,7 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:sign_flip
-  - trap:reversed
+  - trap:reversed_edges
   - empty
   split: holdout
   source: llm:annotate
@@ -2149,9 +2179,10 @@ items:
   - camo:edge_493a03ac0245
   - camo:edge_fe0478ba0889
   tags:
-  - trap:removed_subject
-  - trap:unchanged
-  - trap:associational
+  - trap:negative_subject_qualifiers
+  - trap:unchanged_is_not_null
+  - trap:associational_is_not_causal
+  - trap:one_study_many_edges
   - answerable
   split: dev
   source: llm:annotate
@@ -2173,7 +2204,6 @@ items:
   - camo:edge_fb745780ef76
   - camo:edge_82348270580f
   tags:
-  - trap:sign_flip
   - answerable
   split: dev
   source: llm:annotate
@@ -2191,7 +2221,7 @@ items:
   - camo:edge_4a7ab802a6f0
   - camo:edge_47ea0ed77bde
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
   - answerable
   split: holdout
   source: llm:annotate
@@ -2214,7 +2244,7 @@ items:
   - camo:edge_6a5d44eabd48
   - camo:edge_02b6860f7ef8
   tags:
-  - trap:null
+  - trap:null_is_not_decrease
   - answerable
   split: dev
   source: llm:annotate
@@ -2241,7 +2271,7 @@ items:
   edge_ids:
   - camo:edge_063e5f6eeea2
   tags:
-  - trap:associational
+  - trap:associational_is_not_causal
   - answerable
   split: dev
   source: llm:annotate
@@ -2258,8 +2288,9 @@ items:
   - camo:edge_cdfb32b156f4
   - camo:edge_69f3ef635991
   tags:
-  - trap:null
-  - trap:twin
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:comparator_reference
   - answerable
   split: dev
   source: llm:annotate
@@ -2291,8 +2322,8 @@ items:
   certainty: null
   edge_ids: []
   tags:
-  - trap:null
-  - trap:reversed
+  - trap:null_is_not_decrease
+  - trap:reversed_edges
   - empty
   split: holdout
   source: llm:annotate
@@ -3098,3 +3129,1178 @@ items:
   split: dev
   source: llm:annotate
   edge_effects: []
+- id: D-Q0181
+  question: What effect does water velocity have on spawning habitat sedimentation?
+  status: answered
+  direction: decrease
+  certainty: very_low
+  edge_ids:
+  - camo:edge_a6271518c200
+  tags:
+  - trap:negative_predicates_double_negation
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_a6271518c200
+    - -1
+- id: D-Q0182
+  question: What effect does tree caging have on tree breakage?
+  status: answered
+  direction: decrease
+  certainty: moderate
+  edge_ids:
+  - camo:edge_898ca6605bdd
+  tags:
+  - trap:negative_predicates_double_negation
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_898ca6605bdd
+    - -1
+- id: D-Q0183
+  question: What effect does tree shelters have on tree seedling height growth?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_6f8b33f1fce6
+  - camo:edge_7135cfaba3ed
+  - camo:edge_29fe26eba214
+  tags:
+  - trap:twin_edges_one_sentence
+  - trap:negative_predicates_double_negation
+  - trap:one_study_many_edges
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_6f8b33f1fce6
+    - 1
+  - - camo:edge_7135cfaba3ed
+    - 1
+  - - camo:edge_29fe26eba214
+    - 1
+- id: D-Q0184
+  question: What effect does seed mix type have on plant community diversity?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_41a7453a63ad
+  - camo:edge_ced148986691
+  - camo:edge_ed588fc7979b
+  - camo:edge_e39da48eeff6
+  tags:
+  - trap:unchanged_is_not_null
+  - trap:negative_predicates_double_negation
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_41a7453a63ad
+    - -1
+  - - camo:edge_ced148986691
+    - -1
+  - - camo:edge_ed588fc7979b
+    - null
+  - - camo:edge_e39da48eeff6
+    - 0
+- id: D-Q0185
+  question: What effect does environmental flows have on extreme low flow frequency?
+  status: answered
+  direction: decrease
+  certainty: moderate
+  edge_ids:
+  - camo:edge_4a4dc1890502
+  tags:
+  - trap:negative_predicates_double_negation
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_4a4dc1890502
+    - -1
+- id: D-Q0186
+  question: What effect does rewetting have on ericaceous shrub cover?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_be54e21498df
+  - camo:edge_70042c9dac95
+  - camo:edge_78504b79a81e
+  - camo:edge_befad7373e4a
+  - camo:edge_bc09c2946c28
+  - camo:edge_678147b1ced0
+  - camo:edge_00a1f5f75988
+  tags:
+  - trap:negative_predicates_double_negation
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_be54e21498df
+    - -1
+  - - camo:edge_70042c9dac95
+    - 1
+  - - camo:edge_78504b79a81e
+    - 0
+  - - camo:edge_befad7373e4a
+    - -1
+  - - camo:edge_bc09c2946c28
+    - -1
+  - - camo:edge_678147b1ced0
+    - -1
+  - - camo:edge_00a1f5f75988
+    - -1
+- id: D-Q0187
+  question: What effect does organic matter accumulation have on water table decline?
+  status: answered
+  direction: decrease
+  certainty: very_low
+  edge_ids:
+  - camo:edge_86f3ed57d7cf
+  tags:
+  - trap:unchanged_is_not_null
+  - trap:negative_predicates_double_negation
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_86f3ed57d7cf
+    - -1
+- id: D-Q0188
+  question: What effect does tree shelters have on tree seedling biomass growth?
+  status: answered
+  direction: increase
+  certainty: low
+  edge_ids:
+  - camo:edge_f7f1442fca5f
+  tags:
+  - trap:twin_edges_one_sentence
+  - trap:negative_predicates_double_negation
+  - trap:one_study_many_edges
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_f7f1442fca5f
+    - 1
+- id: D-Q0189
+  question: What effect does old growth forest have on tree diversity?
+  status: answered
+  direction: decrease
+  certainty: very_low
+  edge_ids:
+  - camo:edge_ac031fb13510
+  tags:
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:comparator_reference
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_ac031fb13510
+    - -1
+- id: D-Q0190
+  question: What effect does riverbank stabilization have on riparian plant species
+    richness?
+  status: answered
+  direction: increase
+  certainty: very_low
+  edge_ids:
+  - camo:edge_7755142a17f7
+  tags:
+  - trap:associational_is_not_causal
+  - trap:comparator_reference
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_7755142a17f7
+    - 1
+- id: D-Q0191
+  question: What effect does partial harvesting have on clubmoss diversity?
+  status: answered
+  direction: increase
+  certainty: very_low
+  edge_ids:
+  - camo:edge_9404be5454fc
+  tags:
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:comparator_reference
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_9404be5454fc
+    - 1
+- id: D-Q0192
+  question: What effect does partial harvesting have on plant life-form composition?
+  status: answered
+  direction: unclear
+  certainty: very_low
+  edge_ids:
+  - camo:edge_0d83924c97fc
+  - camo:edge_64593752ab2c
+  tags:
+  - trap:associational_is_not_causal
+  - trap:comparator_reference
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_0d83924c97fc
+    - null
+  - - camo:edge_64593752ab2c
+    - null
+- id: D-Q0193
+  question: What effect does time have on tree seedling density?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_5cfc4fe30f8f
+  - camo:edge_5b549e832f21
+  - camo:edge_f0f90036b320
+  - camo:edge_d9e98809e476
+  - camo:edge_b7011b0f8584
+  - camo:edge_8304e6a35203
+  - camo:edge_54e670cb24db
+  - camo:edge_439ea22d28cf
+  - camo:edge_02a74263dc28
+  tags:
+  - trap:associational_is_not_causal
+  - trap:time_as_cause
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_5cfc4fe30f8f
+    - -1
+  - - camo:edge_5b549e832f21
+    - 0
+  - - camo:edge_f0f90036b320
+    - 1
+  - - camo:edge_d9e98809e476
+    - 1
+  - - camo:edge_b7011b0f8584
+    - 0
+  - - camo:edge_8304e6a35203
+    - 1
+  - - camo:edge_54e670cb24db
+    - 0
+  - - camo:edge_439ea22d28cf
+    - 1
+  - - camo:edge_02a74263dc28
+    - 1
+- id: D-Q0194
+  question: What effect does time since harvesting have on dominant plant species
+    composition?
+  status: answered
+  direction: unclear
+  certainty: very_low
+  edge_ids:
+  - camo:edge_88d9df557b31
+  tags:
+  - trap:associational_is_not_causal
+  - trap:time_as_cause
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_88d9df557b31
+    - null
+- id: D-Q0195
+  question: What effect does straw mulch have on carbon dioxide production?
+  status: answered
+  direction: increase
+  certainty: low
+  edge_ids:
+  - camo:edge_aae88d0fa107
+  tags:
+  - trap:time_as_cause
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_aae88d0fa107
+    - 1
+- id: D-Q0196
+  question: What effect does large tree planting have on tree toppling?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_8438e2e5e293
+  tags:
+  - trap:time_as_cause
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_8438e2e5e293
+    - 1
+- id: D-Q0197
+  question: What effect does host species and cover soil have on ectomycorrhizal fungus
+    colonization?
+  status: answered
+  direction: no_effect
+  certainty: low
+  edge_ids:
+  - camo:edge_e618a18f31b9
+  tags:
+  - trap:null_is_not_decrease
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_e618a18f31b9
+    - 0
+- id: D-Q0198
+  question: What effect does restored site soil have on forb mycorrhizal infection
+    rate?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_2fb97750a20b
+  tags:
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:comparator_reference
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_2fb97750a20b
+    - 0
+- id: D-Q0199
+  question: What effect does lead contamination have on small mammal body condition?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_3a92eeeca67d
+  - camo:edge_12f87db76dd7
+  tags:
+  - trap:null_is_not_decrease
+  - trap:one_study_many_edges
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_3a92eeeca67d
+    - -1
+  - - camo:edge_12f87db76dd7
+    - 0
+- id: D-Q0200
+  question: What effect does root fragment diameter have on root fragment mortality?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_42cb19f2226c
+  tags:
+  - trap:null_is_not_decrease
+  - trap:unchanged_is_not_null
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_42cb19f2226c
+    - 0
+- id: D-Q0201
+  question: What effect does mounding have on soil temperature?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_20dfb4982ad9
+  tags:
+  - trap:null_is_not_decrease
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_20dfb4982ad9
+    - 0
+- id: D-Q0202
+  question: What effect does alder planting have on soil nitrogen mineralization?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - trap:null_is_not_decrease
+  - trap:one_study_many_edges
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: D-Q0203
+  question: What effect does lake ph have on aquatic insect abundance?
+  status: answered
+  direction: decrease
+  certainty: low
+  edge_ids:
+  - camo:edge_6eafbc93835f
+  - camo:edge_4580d771727e
+  - camo:edge_fcd48e993c8e
+  - camo:edge_ca44ed5a1be0
+  - camo:edge_712cef58042c
+  - camo:edge_5a9af3ead103
+  - camo:edge_56cf541fde23
+  - camo:edge_43860d6f5b05
+  - camo:edge_03455a7a91d4
+  tags:
+  - trap:negative_subject_qualifiers
+  - trap:associational_is_not_causal
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_6eafbc93835f
+    - 0
+  - - camo:edge_4580d771727e
+    - 0
+  - - camo:edge_fcd48e993c8e
+    - -1
+  - - camo:edge_ca44ed5a1be0
+    - -1
+  - - camo:edge_712cef58042c
+    - null
+  - - camo:edge_5a9af3ead103
+    - -1
+  - - camo:edge_56cf541fde23
+    - null
+  - - camo:edge_43860d6f5b05
+    - 1
+  - - camo:edge_03455a7a91d4
+    - -1
+- id: D-Q0204
+  question: What effect does vegetation removal have on dune erosion?
+  status: answered
+  direction: increase
+  certainty: very_low
+  edge_ids:
+  - camo:edge_3f81177bc0ae
+  tags:
+  - trap:negative_subject_qualifiers
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_3f81177bc0ae
+    - 1
+- id: D-Q0205
+  question: What effect does sulphate concentration have on acidity?
+  status: answered
+  direction: unclear
+  certainty: very_low
+  edge_ids:
+  - camo:edge_2d30145ff9f4
+  tags:
+  - trap:negative_subject_qualifiers
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_2d30145ff9f4
+    - null
+- id: D-Q0206
+  question: What effect does cessation of synthetic estrogen addition have on fish
+    reproductive health?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_1db6d2892a90
+  tags:
+  - trap:negative_subject_qualifiers
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_1db6d2892a90
+    - 1
+- id: D-Q0207
+  question: What effect does abandonment of peat harvesting have on ericaceous shrub
+    cover?
+  status: answered
+  direction: increase
+  certainty: very_low
+  edge_ids:
+  - camo:edge_cadfed4c3d17
+  - camo:edge_719e874f7987
+  - camo:edge_03f4ec410cc0
+  tags:
+  - trap:negative_subject_qualifiers
+  - trap:associational_is_not_causal
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_cadfed4c3d17
+    - 1
+  - - camo:edge_719e874f7987
+    - 1
+  - - camo:edge_03f4ec410cc0
+    - -1
+- id: D-Q0208
+  question: What effect does shelter from wind and waves have on riparian grass presence?
+  status: answered
+  direction: increase
+  certainty: low
+  edge_ids:
+  - camo:edge_f6f0e411dd06
+  tags:
+  - trap:negative_subject_qualifiers
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_f6f0e411dd06
+    - 1
+- id: D-Q0209
+  question: What effect does year of seed addition have on forb cover?
+  status: answered
+  direction: unclear
+  certainty: low
+  edge_ids:
+  - camo:edge_e0186a472e82
+  - camo:edge_a8d3df1111d4
+  - camo:edge_4a83608f70cd
+  - camo:edge_18c311bf2d10
+  - camo:edge_14e1a1c9dd0c
+  tags:
+  - trap:associational_is_not_causal
+  - trap:time_as_cause
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_e0186a472e82
+    - null
+  - - camo:edge_a8d3df1111d4
+    - null
+  - - camo:edge_4a83608f70cd
+    - null
+  - - camo:edge_18c311bf2d10
+    - null
+  - - camo:edge_14e1a1c9dd0c
+    - null
+- id: D-Q0210
+  question: What effect does site age have on plant community similarity to natural
+    forest?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_7c886777191d
+  - camo:edge_8127a15eb28b
+  - camo:edge_0898efc49fb2
+  - camo:edge_71cf2e702359
+  tags:
+  - trap:associational_is_not_causal
+  - trap:time_as_cause
+  - trap:one_study_many_edges
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_7c886777191d
+    - 1
+  - - camo:edge_8127a15eb28b
+    - -1
+  - - camo:edge_0898efc49fb2
+    - 1
+  - - camo:edge_71cf2e702359
+    - 0
+- id: D-Q0211
+  question: What effect does nitrate concentration have on nitrate concentration?
+  status: answered
+  direction: unclear
+  certainty: very_low
+  edge_ids:
+  - camo:edge_fd4d9a5c40f7
+  - camo:edge_cf50c7db49aa
+  - camo:edge_26c4b6e4e6dd
+  - camo:edge_1805576d6905
+  tags:
+  - trap:associational_is_not_causal
+  - trap:one_study_many_edges
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_fd4d9a5c40f7
+    - null
+  - - camo:edge_cf50c7db49aa
+    - null
+  - - camo:edge_26c4b6e4e6dd
+    - null
+  - - camo:edge_1805576d6905
+    - null
+- id: D-Q0212
+  question: What effect does water level have on moss cover?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_6aa0a17090ad
+  - camo:edge_65d2e43d9033
+  - camo:edge_e995c7171379
+  - camo:edge_a7dc4bbef79c
+  - camo:edge_6bb25bd2b1dd
+  - camo:edge_588c26547fc4
+  - camo:edge_0266db4ef85b
+  tags:
+  - trap:associational_is_not_causal
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_6aa0a17090ad
+    - 0
+  - - camo:edge_65d2e43d9033
+    - -1
+  - - camo:edge_e995c7171379
+    - null
+  - - camo:edge_a7dc4bbef79c
+    - null
+  - - camo:edge_6bb25bd2b1dd
+    - 1
+  - - camo:edge_588c26547fc4
+    - null
+  - - camo:edge_0266db4ef85b
+    - null
+- id: D-Q0213
+  question: What effect does peatland restoration have on peat carbon dioxide production?
+  status: answered
+  direction: increase
+  certainty: very_low
+  edge_ids:
+  - camo:edge_26a0437f9e01
+  tags:
+  - trap:associational_is_not_causal
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_26a0437f9e01
+    - 1
+- id: D-Q0214
+  question: What effect does mulching have on specific leaf area?
+  status: answered
+  direction: unclear
+  certainty: very_low
+  edge_ids:
+  - camo:edge_1e714dd7fbba
+  tags:
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_1e714dd7fbba
+    - null
+- id: D-Q0215
+  question: What effect does smoke treatment have on forb seedling emergence?
+  status: answered
+  direction: decrease
+  certainty: moderate
+  edge_ids:
+  - camo:edge_3715f90869ca
+  - camo:edge_092cf92d3527
+  tags:
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_3715f90869ca
+    - -1
+  - - camo:edge_092cf92d3527
+    - -1
+- id: D-Q0216
+  question: What effect does absence of ground protection barrier have on forest floor
+    disturbance?
+  status: answered
+  direction: increase
+  certainty: low
+  edge_ids:
+  - camo:edge_5fc16ea90e74
+  tags:
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_5fc16ea90e74
+    - 1
+- id: D-Q0217
+  question: What effect does pipeline right-of-way have on grass cover?
+  status: answered
+  direction: increase
+  certainty: very_low
+  edge_ids:
+  - camo:edge_f8097398b695
+  - camo:edge_e909ffbc2a4d
+  - camo:edge_ce3021663b4b
+  - camo:edge_cb068f99aeb7
+  - camo:edge_94948bf669e7
+  - camo:edge_69d373dd3606
+  - camo:edge_641bde51f1aa
+  - camo:edge_3b1d9b2b697f
+  - camo:edge_2f182f2a7b75
+  - camo:edge_107598960d64
+  tags:
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:comparator_reference
+  - trap:one_study_many_edges
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_f8097398b695
+    - 1
+  - - camo:edge_e909ffbc2a4d
+    - 1
+  - - camo:edge_ce3021663b4b
+    - -1
+  - - camo:edge_cb068f99aeb7
+    - 1
+  - - camo:edge_94948bf669e7
+    - -1
+  - - camo:edge_69d373dd3606
+    - -1
+  - - camo:edge_641bde51f1aa
+    - 1
+  - - camo:edge_3b1d9b2b697f
+    - 1
+  - - camo:edge_2f182f2a7b75
+    - 1
+  - - camo:edge_107598960d64
+    - -1
+- id: D-Q0218
+  question: What effect does time since clearcutting and slash burning have on shade-tolerant
+    plant cover?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_692debb11864
+  - camo:edge_780a7a480acd
+  - camo:edge_6700c2906728
+  - camo:edge_42beb53cfb15
+  tags:
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:time_as_cause
+  - trap:one_study_many_edges
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_692debb11864
+    - 1
+  - - camo:edge_780a7a480acd
+    - null
+  - - camo:edge_6700c2906728
+    - 1
+  - - camo:edge_42beb53cfb15
+    - 1
+- id: D-Q0220
+  question: What effect does ending deer exclusion have on deciduous stem density?
+  status: answered
+  direction: decrease
+  certainty: moderate
+  edge_ids:
+  - camo:edge_239bafd2c4f0
+  tags:
+  - trap:negative_subject_qualifiers
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_239bafd2c4f0
+    - -1
+- id: D-Q0221
+  question: What effect does ash addition have on forb seedling species richness?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_d78524ca79dd
+  - camo:edge_139d03e04d95
+  tags:
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_d78524ca79dd
+    - 1
+  - - camo:edge_139d03e04d95
+    - 1
+- id: D-Q0222
+  question: What effect does wildfire have on unrecovered forest area?
+  status: answered
+  direction: increase
+  certainty: very_low
+  edge_ids:
+  - camo:edge_b6fcaeee45eb
+  - camo:edge_6441e2a210c3
+  tags:
+  - trap:associational_is_not_causal
+  - answerable
+  split: dev
+  source: llm:auditor
+  edge_effects:
+  - - camo:edge_b6fcaeee45eb
+    - null
+  - - camo:edge_6441e2a210c3
+    - 1
+- id: D-Q0223
+  question: What effect does nickel concentration have on zooplankton community composition?
+  status: answered
+  direction: unclear
+  certainty: very_low
+  edge_ids:
+  - camo:edge_e07049cb1b35
+  - camo:edge_538ac474cfa8
+  - camo:edge_498768decc99
+  - camo:edge_1f2eb1f22fd2
+  tags:
+  - trap:unchanged_is_not_null
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_e07049cb1b35
+    - null
+  - - camo:edge_538ac474cfa8
+    - null
+  - - camo:edge_498768decc99
+    - null
+  - - camo:edge_1f2eb1f22fd2
+    - null
+- id: D-Q0224
+  question: What effect does forest floor cover soil have on conifer stem biomass?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_4620dc6212b7
+  - camo:edge_4479ba2f4515
+  tags:
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_4620dc6212b7
+    - 1
+  - - camo:edge_4479ba2f4515
+    - 0
+- id: D-Q0226
+  question: What effect does cutting and herbicide treatment have on non-native forb
+    reproduction?
+  status: answered
+  direction: decrease
+  certainty: moderate
+  edge_ids:
+  - camo:edge_1096b0589f2d
+  tags:
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_1096b0589f2d
+    - -1
+- id: D-Q0227
+  question: What effect does root fragment burial depth have on root fragment mortality?
+  status: answered
+  direction: unclear
+  certainty: moderate
+  edge_ids:
+  - camo:edge_ff0cb68c4fd5
+  tags:
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_ff0cb68c4fd5
+    - null
+- id: D-Q0228
+  question: What effect does competition release have on tree height?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_cda82887b2cf
+  - camo:edge_a97fddf4d4af
+  - camo:edge_770296791a87
+  - camo:edge_67ad70bccc0d
+  tags:
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_cda82887b2cf
+    - 1
+  - - camo:edge_a97fddf4d4af
+    - 1
+  - - camo:edge_770296791a87
+    - 1
+  - - camo:edge_67ad70bccc0d
+    - -1
+- id: D-Q0229
+  question: What effect does bank stabilization structures have on riparian shrub
+    presence?
+  status: answered
+  direction: increase
+  certainty: low
+  edge_ids:
+  - camo:edge_2d74972a0d9e
+  - camo:edge_d6d28c524305
+  tags:
+  - trap:comparator_reference
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_2d74972a0d9e
+    - 1
+  - - camo:edge_d6d28c524305
+    - 1
+- id: D-Q0230
+  question: What effect does sedge presence and high water table have on soil microbial
+    biomass?
+  status: answered
+  direction: increase
+  certainty: very_low
+  edge_ids:
+  - camo:edge_e5a26944b850
+  tags:
+  - trap:associational_is_not_causal
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_e5a26944b850
+    - 1
+- id: D-Q0231
+  question: What effect does time since road abandonment have on vascular plant species
+    richness?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_00dc413159ee
+  tags:
+  - trap:twin_edges_one_sentence
+  - trap:time_as_cause
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_00dc413159ee
+    - 1
+- id: D-Q0232
+  question: What effect does forest floor mixing have on seedling height growth?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_95667d1e2a45
+  - camo:edge_e9cbe605a9ab
+  - camo:edge_d66a6126664d
+  - camo:edge_c530e0331161
+  - camo:edge_a6e80db2a317
+  tags:
+  - trap:null_is_not_decrease
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_95667d1e2a45
+    - 0
+  - - camo:edge_e9cbe605a9ab
+    - 0
+  - - camo:edge_d66a6126664d
+    - 1
+  - - camo:edge_c530e0331161
+    - 1
+  - - camo:edge_a6e80db2a317
+    - 1
+- id: D-Q0233
+  question: What effect does mulching have on forb seedling shoot growth?
+  status: answered
+  direction: decrease
+  certainty: moderate
+  edge_ids:
+  - camo:edge_ea6c8b6b71d7
+  tags:
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_ea6c8b6b71d7
+    - -1
+- id: D-Q0234
+  question: What effect does seeding have on seeded species frequency?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_dc2eb7765642
+  - camo:edge_8ce61d8b9746
+  tags:
+  - trap:one_study_many_edges
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_dc2eb7765642
+    - 1
+  - - camo:edge_8ce61d8b9746
+    - 1
+- id: D-Q0235
+  question: What effect does fish stocking have on fish population contribution?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_e6e6affabfd1
+  - camo:edge_462708d842dc
+  tags:
+  - trap:null_is_not_decrease
+  - trap:one_study_many_edges
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_e6e6affabfd1
+    - 0
+  - - camo:edge_462708d842dc
+    - 1
+- id: D-Q0236
+  question: What effect does soil moisture have on plant water use efficiency?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_e68c13197ec0
+  - camo:edge_d80dd61d4592
+  - camo:edge_7a5126ff0cf2
+  - camo:edge_2edae0fe9617
+  tags:
+  - trap:one_study_many_edges
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_e68c13197ec0
+    - 1
+  - - camo:edge_d80dd61d4592
+    - 1
+  - - camo:edge_7a5126ff0cf2
+    - null
+  - - camo:edge_2edae0fe9617
+    - -1
+- id: D-Q0237
+  question: What effect does forest floor mixing have on conifer foliar potassium?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_a6038f86bc19
+  - camo:edge_898b55e827d5
+  tags:
+  - trap:null_is_not_decrease
+  - trap:one_study_many_edges
+  - answerable
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_a6038f86bc19
+    - 0
+  - - camo:edge_898b55e827d5
+    - 1
+- id: D-Q0238
+  question: What effect does deciduous tree height have on conifer volume growth?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_fd567b29ee1f
+  - camo:edge_8de160a2506d
+  - camo:edge_3f032f1f8b5e
+  - camo:edge_39064199a12e
+  tags:
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_fd567b29ee1f
+    - -1
+  - - camo:edge_8de160a2506d
+    - 1
+  - - camo:edge_3f032f1f8b5e
+    - null
+  - - camo:edge_39064199a12e
+    - null
+- id: D-Q0239
+  question: What effect does forest cutting treatments have on tree basal area?
+  status: answered
+  direction: decrease
+  certainty: low
+  edge_ids:
+  - camo:edge_211b8c6d8ad9
+  tags:
+  - trap:associational_is_not_causal
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_211b8c6d8ad9
+    - -1
+- id: D-Q0240
+  question: What effect does sapling cover have on tree seedling growth?
+  status: answered
+  direction: decrease
+  certainty: very_low
+  edge_ids:
+  - camo:edge_8e822ebc74f9
+  - camo:edge_75c761839d95
+  tags:
+  - trap:associational_is_not_causal
+  - trap:one_study_many_edges
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_8e822ebc74f9
+    - -1
+  - - camo:edge_75c761839d95
+    - -1

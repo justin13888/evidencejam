@@ -1,0 +1,20 @@
+{"id": "C-C0027", "status": "answered", "direction": "mixed", "certainty": "very_low", "edges": [{"ref": "e14", "effect": 1}, {"ref": "e30", "effect": 1}, {"ref": "e25", "effect": 1}, {"ref": "e55", "effect": -1}]}
+{"id": "C-C0055", "status": "answered", "direction": "decrease", "certainty": "moderate", "edges": [{"ref": "e1", "effect": -1}, {"ref": "e8", "effect": -1}]}
+{"id": "C-C0018", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "C-C0021", "status": "answered", "direction": "increase", "certainty": "moderate", "edges": [{"ref": "e5", "effect": 1}, {"ref": "e46", "effect": -1}, {"ref": "e16", "effect": 1}, {"ref": "e57", "effect": 1}, {"ref": "e4", "effect": 1}]}
+{"id": "C-C0025", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "C-C0095", "status": "answered", "direction": "no_effect", "certainty": "moderate", "edges": [{"ref": "e8", "effect": 1}, {"ref": "e9", "effect": 0}, {"ref": "e57", "effect": 0}, {"ref": "e35", "effect": -1}, {"ref": "e48", "effect": 0}]}
+{"id": "C-C0035", "status": "answered", "direction": "mixed", "certainty": "very_low", "edges": [{"ref": "e2", "effect": 1}, {"ref": "e58", "effect": -1}, {"ref": "e4", "effect": null}, {"ref": "e13", "effect": null}]}
+{"id": "C-C0089", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "C-C0061", "status": "answered", "direction": "increase", "certainty": "moderate", "edges": [{"ref": "e25", "effect": 1}]}
+{"id": "C-C0090", "status": "answered", "direction": "decrease", "certainty": "low", "edges": [{"ref": "e12", "effect": -1}, {"ref": "e23", "effect": -1}]}
+{"id": "C-C0016", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "C-C0066", "status": "answered", "direction": "mixed", "certainty": "very_low", "edges": [{"ref": "e2", "effect": 0}, {"ref": "e5", "effect": 1}, {"ref": "e8", "effect": 1}, {"ref": "e13", "effect": 0}, {"ref": "e16", "effect": 0}, {"ref": "e18", "effect": 1}, {"ref": "e26", "effect": 0}, {"ref": "e27", "effect": 0}, {"ref": "e38", "effect": 1}, {"ref": "e42", "effect": 1}, {"ref": "e12", "effect": 0}, {"ref": "e47", "effect": 1}, {"ref": "e55", "effect": 1}, {"ref": "e19", "effect": null}, {"ref": "e24", "effect": 0}]}
+{"id": "C-C0075", "status": "answered", "direction": "no_effect", "certainty": "low", "edges": [{"ref": "e11", "effect": 0}]}
+{"id": "C-C0073", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "C-C0070", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "C-C0046", "status": "answered", "direction": "no_effect", "certainty": "moderate", "edges": [{"ref": "e14", "effect": 0}, {"ref": "e60", "effect": 0}]}
+{"id": "C-C0028", "status": "answered", "direction": "decrease", "certainty": "low", "edges": [{"ref": "e5", "effect": -1}]}
+{"id": "C-C0079", "status": "answered", "direction": "mixed", "certainty": "very_low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e8", "effect": 1}, {"ref": "e14", "effect": 1}, {"ref": "e26", "effect": 1}, {"ref": "e37", "effect": -1}]}
+{"id": "C-C0082", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "C-C0074", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}

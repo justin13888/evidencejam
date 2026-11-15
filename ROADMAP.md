@@ -105,7 +105,7 @@ flowchart LR
 
 - **D1 Associational edges count.** `associated_with` and `correlated_with` are 45% of edges. They vote, signed through the qualifiers, and are tagged associational. The grader may cap their certainty. Answer text says "is associated with" when every included edge is associational, never "causes".
 - **D2 Direction rubric.** One vote per study. A direction (increase, decrease or no_effect) wins if at least 2/3 of studies give it, otherwise `mixed`. Nulls and `unchanged` outcomes are `no_effect` votes. `unclear` means no study gives a usable sign. The baseline aggregator uses 2/3.
-- **D3 no_evidence.** It applies when no included vote exists: only reversed edges, only non-directional predicates (moderates, mediates, precedes, regulates), or an `unchanged` cause. `searched_for` names the classes searched and any reversed edges.
+- **D3 no_evidence.** It applies when no included vote exists: only reversed edges, only non-directional predicates (moderates, mediates, precedes, regulates), or a non-null edge with an `unchanged` cause. A null (`negated: true`) still votes `no_effect` whatever its qualifiers, because the schema encodes nulls only as negated (clarified Sat Nov 14, #9 audit). `searched_for` names the classes searched and any reversed edges.
 - **D4 Gold certainty.** The median `certainty_grade` of the relevant edges, one level lower if `mixed` or if every edge is associational. Never `high`, because the graph has none.
 - **D5 Gold is independent.** Dev questions are written by a model from graph seeds (edges and random node pairs), not from our taxonomy. Gold finds candidate edges with its own lexical prefilter and reads the sentences. It never uses `node_labels`, the taxonomy or engine code. Any strong model works. Expect a Claude Code session with the `labeler` agent.
 - **D6 Runtime energy.** 0 LLM calls for template questions, and at most one batched call for the rest. Offline LLM use is unlimited.
@@ -215,13 +215,19 @@ flowchart LR
   - **Done when:** `no_evidence` precision and recall are both at least 0.9 on dev, and `searched_for` names the classes, attributes and relation searched, plus any reverse edges found.
   - **Points:** C14, D17.
   - **Progress (Sat Nov 14, #33):** no_evidence comes from `aggregator/studies`, iff no included vote (D3). `renderer/searched` names classes, node counts, outcome attributes, relation, unusable edges by reason and reversed ids. It says when no search ran. **Pending:** precision/recall ≥ 0.9 on dev (needs gold + linker #5).
-- [ ] **9. Build the gold dev set.** ★ 5/5 · C · `devset_builder`
+- [x] **9. Build the gold dev set.** ★ 5/5 · C · `devset_builder`
   - **Why:** the hidden set is scored at judging time and `questions.yaml` has no answers. Without labels we tune on vibes.
   - **Done when:**
     - At least 90 items in the hidden template, about 1/3 empty, trap-tagged, with paraphrased class names.
     - About 20% are held out and never tuned on.
     - Built by agents via `camoreasoning annotate` (no human step). Paraphrases come from a different model or prompt than the linker's, and the holdout split is fixed by a seeded hash of item id before any tuning.
   - **Points:** enables D17, C14, P9 (everything measurable).
+  - **Done (Sat Nov 14, audit):** `experiments/devsets/AUDIT.md`.
+    - **Class set.** `class_gold.yaml` has 99 class-level items in hidden-set wording, 49 of them paraphrased by Claude (the linker is Qwen). 43% are empty, 83 are dev and 16 holdout. Candidates were recall-audited.
+    - **Decisions.** Use the class set for default flips. Use node-level `gold_annotated.yaml` (236 items, 33% empty) for engine and oracle checks.
+    - **Trap tags.** All inventory keys named in #9 have ≥ 5 dev items across the two files.
+    - **Eval, class dev:** accuracy 0.470, ECE 0.130, 0 calls per question, oracle direction 0.94 and certainty 0.60.
+    - **Rubric (Justin):** class membership is strict, and variant-vs-variant contrasts don't vote. Round-2 blind audit 0.825 (round 1 was 0.775). Accepted below the 0.85 target: all 7 disagreements are class-boundary calls, listed in `experiments/gold/CLASS.md`. The 43% empty share is also accepted; strict gold finds fewer evidenced pairs than the taxonomy.
 - [x] **10. Keep the gold labeller independent.** ★ 5/5 · C · `gold_labeler`
   - **Why:** gold made by our own sign code makes the eval circular. The gold labeller is an LLM reading `original_sentence` text, audited by a second, stronger LLM (human audit dropped by choice; some correctness loss accepted).
   - **Done when:**
@@ -235,7 +241,7 @@ flowchart LR
     - **Audit:** a new blind audit of 40 items, covering all 8 trap tags, agreed on 37 (**0.925**). Its 3 corrections win at merge, and they became `tests/strategies/test_gold_disagreements.py`. One of them (a categorical outcome given a sign) is a strict xfail on the engine.
     - **Decision (override of "stronger LLM"):** the auditor is not a stronger model than the labeller, because none was available. Accepted on purpose at the PR #37 review; agreement above was measured under that setup.
     - **First eval of the default pipeline (`mise run eval`, dev, n = 142):** accuracy 0.47, ECE 0.128, 0 calls per question, no_evidence recall 0.97, retrieval recall 0.07. Oracle direction is 0.76 and oracle certainty 0.54. `mise run eval` now scores dev only; `mise run eval:holdout` scores the 36 holdout items.
-    - **For the rubric owner:** D3's "unchanged cause" rule, read literally, turns 3 exact-match questions into no_evidence.
+    - **For the rubric owner:** D3's "unchanged cause" rule, read literally, turns 3 exact-match questions into no_evidence. **Resolved (#9 audit):** nulls vote, so D-Q0022 and D-Q0025 are now `no_effect`, and D-Q0028 and D-Q0069 gained a null edge.
 - [ ] **11. Grade certainty.** ★ 4/5 · B · `grader`
   - **Why:** certainty is part of D17. The graph has no `high` grades, so the grade has to be derived from edge grades, study count, agreement and design (randomized vs observational).
   - **Done when:** the rule is written in the strategy docstring and scores at least 75% certainty accuracy on dev.

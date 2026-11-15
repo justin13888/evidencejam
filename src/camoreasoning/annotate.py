@@ -342,6 +342,123 @@ TASKS: dict[str, Task] = {
                  finalize=_gold_finalize),
 }  # fmt: skip
 
+# --- class-level dev set (issue #9 audit; additive) -------------------------------------------------
+# Hidden questions name broad classes. `class_questions` turns class-pair seeds (written by
+# experiments/devsets/class_seeds.py into experiments/devsets/class_seeds.jsonl) into template wording plus
+# the labeller's own search terms. `class_gold` labels them like `gold`, over a taxonomy-free lexical pool
+# built from those terms, plus edges nominated by experiments/devsets/class_set.py. The labeller cannot see
+# which source offered an edge (the source is kept in meta only).
+
+
+def text_list(min_items: int = 3, max_items: int = 15, max_len: int = 40) -> Spec:
+    def check(v, item, vocab):
+        if not isinstance(v, list) or not min_items <= len(v) <= max_items:
+            return f"need a list of {min_items}-{max_items} strings"
+        bad = [x for x in v if not isinstance(x, str) or not 0 < len(x.strip()) <= max_len]
+        return f"each term must be text <= {max_len} chars" if bad else None
+
+    return Spec(check, fmt=lambda v: "; ".join(v or []), parse=lambda s: [x.strip() for x in s.split(";") if x.strip()])
+
+
+def class_candidates(g, cause_terms: list[str], outcome_terms: list[str], k: int = 60) -> list[str]:
+    """Taxonomy-free pool: each side scores a node by its best-covered term (IDF overlap), both directions."""
+    gold_candidates(g, "x")  # builds the shared IDF index
+    toks, idf = _GOLD_IDX[id(g)]
+    sides = [[q for q in (set(tokens(t)) for t in terms) if q] for terms in (cause_terms, outcome_terms)]
+
+    def cov(qs: list[set[str]], node: str) -> float:
+        best = 0.0
+        for q in qs:
+            tot = sum(idf.get(t, 1.0) for t in q)
+            best = max(best, sum(idf.get(t, 1.0) for t in q & toks[node]) / tot if tot else 0.0)
+        return best
+
+    scored = []
+    for eid, e in g.edges.items():
+        s = max(cov(sides[0], e["subject"]) * cov(sides[1], e["object"]),
+                cov(sides[1], e["subject"]) * cov(sides[0], e["object"]))  # fmt: skip
+        if s > 0:
+            scored.append((s, eid))
+    return [eid for _, eid in sorted(scored, reverse=True)[:k]]
+
+
+def _build_class_questions(ctx, n: int | None, seed: int) -> tuple[list[dict], dict]:
+    path = DEVSETS_DIR / "class_seeds.jsonl"
+    if not path.exists():
+        raise SystemExit("class_questions needs experiments/devsets/class_seeds.jsonl (see class_seeds.py there)")
+    rows = _read_jsonl(path)[: n or None]
+    show = ("cause_label", "cause_description", "outcome_label", "outcome_description", "paraphrase")
+    return [{"id": r["id"], **{k: r[k] for k in show},
+             "_meta": {k: v for k, v in r.items() if k not in ("id", *show)}} for r in rows], {}  # fmt: skip
+
+
+def _build_class_gold(ctx, n: int | None, seed: int, pool: int = 60, extra: int = 40) -> tuple[list[dict], dict]:
+    path = DEVSETS_DIR / "class_generated.yaml"
+    if not path.exists():
+        raise SystemExit("class_gold needs experiments/devsets/class_generated.yaml (experiments/devsets/class_set.py)")
+    rows = ((yaml.safe_load(path.read_text(encoding="utf-8")) or {}).get("items") or [])[: n or None]
+    items = []
+    for r in rows:
+        meta = r.get("meta") or {}
+        m = _SPLIT.match(" ".join(r["question"].split()))
+        c_side, o_side = (m["c"], m["o"]) if m else (r["question"], r["question"])
+        lex = class_candidates(ctx.graph, [c_side, *meta.get("cause_terms", [])],
+                               [o_side, *meta.get("outcome_terms", [])], pool)  # fmt: skip
+        rng = random.Random(f"{seed}:{r['id']}")
+        nominated = sorted(e for e in meta.get("nominated") or [] if e in ctx.graph.edges and e not in lex)
+        nominated = rng.sample(nominated, min(extra, len(nominated)))
+        cands = lex + nominated
+        rng.shuffle(cands)
+        # edges a recall auditor found by searching the graph go last, so earlier refs keep their meaning
+        recall = [e for e in meta.get("recall") or [] if e in ctx.graph.edges and e not in cands]
+        cands += recall
+        refs = {f"e{i + 1}": eid for i, eid in enumerate(cands)}
+        source = {
+            ref: "pool" if eid in lex else "recall" if eid in recall else "nominated" for ref, eid in refs.items()
+        }
+        items.append({"id": str(r["id"]), "question": r["question"],
+                      "candidates": [_edge_view(ctx.graph, eid, ref) for ref, eid in refs.items()],
+                      "refs": list(refs), "_meta": {"refs": refs, "source": source, "tags": r.get("tags") or [],
+                                                     "split": r.get("split", "dev")}})  # fmt: skip
+    return items, {}
+
+
+PROMPTS["class_questions"] = """# Task: word a broad class pair the way a practitioner asks, and list search terms
+
+Each input line is one cause class and one outcome class, each with a short `label` and a `description`.
+Output one JSON line per input:
+{"id": <same id>, "cause": ..., "outcome": ..., "cause_terms": [...], "outcome_terms": [...]}
+
+- `paraphrase: false`: copy `cause_label` and `outcome_label` exactly into `cause` and `outcome`.
+- `paraphrase: true`: say each label as a restoration manager would (2-8 words, lower case). Keep the same
+  breadth and meaning: do not narrow it to one species or method, and do not widen it. Use your own wording
+  where a natural alternative exists.
+- `cause_terms` / `outcome_terms`: 4-12 short search phrases (1-3 words, lower case) that the nodes of an
+  ecological causal graph about this class would use: methods, materials, taxon groups, measured attributes.
+  Match the description's breadth. Write them from your own knowledge.
+- The question becomes "What effect does <cause> have on <outcome>?" mechanically. Do not answer it.
+- Optional "note". No other keys.
+"""
+PROMPTS["class_gold"] = PROMPTS["gold"].replace(
+    "Input: a question and up to 60 candidate edges (`ref` e1..eN) found by a crude lexical search.",
+    "Input: a broad, class-level question and up to 100 candidate edges (`ref` e1..eN) found by search.\n"
+    'An edge is an instance of a class when its node is a kind or case of it ("straw mulch" is an instance\n'
+    'of "mulch & surface cover"); judge from the node text and the sentence.',
+)
+TASKS["class_questions"] = Task(
+    "class_questions",
+    {"cause": text(80), "outcome": text(80), "cause_terms": text_list(), "outcome_terms": text_list()},
+    _build_class_questions, PROMPTS["class_questions"], tokens_per_item=120,
+)  # fmt: skip
+TASKS["class_gold"] = Task(
+    "class_gold",
+    {"status": enum(*STATUSES), "direction": enum(*DIRECTIONS, nullable=True),
+     "certainty": enum(*ANSWER_CERTAINTY, nullable=True),
+     "edges": labelled_refs("refs", "ref", "effect", (-1, 0, 1, None), "item")},
+    _build_class_gold, PROMPTS["class_gold"], tokens_per_item=220, row_check=_gold_row_check,
+    finalize=_gold_finalize,
+)  # fmt: skip
+
 
 # --- files ----------------------------------------------------------------------------------------
 

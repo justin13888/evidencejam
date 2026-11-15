@@ -1,0 +1,16 @@
+{"id": "D-Q0222", "ok": "n", "comment": "Direction differs: model unclear (e1,e2 null), mine increase (e2 Montane Cordillera largest non-recovered share read as +1); certainty very_low matches"}
+{"id": "D-Q0229", "ok": "y", "comment": "Exact match: increase/low, e1 +1, e4 +1"}
+{"id": "D-Q0181", "ok": "y", "comment": "Exact match: decrease/very_low, e1 -1 (velocity prevents infilling)"}
+{"id": "D-Q0203", "ok": "y", "comment": "decrease/low match; model sets e9,e12 null where I gave -1/+1 and omits neutralization edges, no opposite signs"}
+{"id": "D-Q0232", "ok": "y", "comment": "Exact match: mixed/low; same exclusion of scarification-vs-MSM contrasts and FFMM"}
+{"id": "D-Q0236", "ok": "y", "comment": "Exact match: mixed/low; S0 internally tied (+1/-1), S1 +1"}
+{"id": "D-Q0218", "ok": "y", "comment": "increase/moderate match; model omits semi-shade groups and sets e4 null, no opposite signs"}
+{"id": "D-Q0221", "ok": "y", "comment": "increase/moderate match; model excludes smoke+ash e2 (also +1)"}
+{"id": "D-Q0200", "ok": "y", "comment": "Exact match: no_effect/moderate, e1 null result votes 0 (D3)"}
+{"id": "D-Q0227", "ok": "y", "comment": "Exact match: unclear/moderate, e1 null for non-monotonic depth response"}
+{"id": "D-Q0239", "ok": "y", "comment": "Exact match: decrease/low, e1 -1 read from sentence (control had greatest BA), single assoc edge drops a level"}
+{"id": "D-Q0194", "ok": "y", "comment": "Exact match: unclear/very_low, e1 composition change has no sign"}
+{"id": "D-Q0199", "ok": "y", "comment": "Exact match: mixed/very_low, single study tied -1 vs 0"}
+{"id": "D-Q0212", "ok": "y", "comment": "Exact match: mixed/very_low, same edges and signs"}
+{"id": "D-Q0182", "ok": "y", "comment": "Exact match: decrease/moderate, double negative resolved to -1"}
+{"id": "D-Q0196", "ok": "y", "comment": "Exact match: increase/moderate, e1 +1"}

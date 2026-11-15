@@ -1,0 +1,2542 @@
+items:
+- id: C-C0001
+  question: What effect does mechanical vegetation control have on community composition
+    & similarity?
+  status: answered
+  direction: no_effect
+  certainty: very_low
+  edge_ids:
+  - camo:edge_90d4a82cb810
+  - camo:edge_99d23f1bf51f
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:null_is_not_decrease
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_90d4a82cb810
+    - 0
+  - - camo:edge_99d23f1bf51f
+    - 0
+- id: C-C0002
+  question: What effect does rising co2 and air chemistry have on the number of species?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0003
+  question: What effect does releasing captive-reared or translocated animals have
+    on fish numbers, growth and survival?
+  status: answered
+  direction: increase
+  certainty: low
+  edge_ids:
+  - camo:edge_4c621d5f986b
+  - camo:edge_f6e0eeb744c5
+  - camo:edge_375bc5531bfd
+  - camo:edge_462708d842dc
+  - camo:edge_e6e6affabfd1
+  - camo:edge_ebc2b7315c81
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:associational_is_not_causal
+  - trap:one_study_many_edges
+  - trap:null_is_not_decrease
+  - trap:negative_subject_qualifiers
+  split: holdout
+  source: llm:auditor
+  edge_effects:
+  - - camo:edge_4c621d5f986b
+    - 1
+  - - camo:edge_f6e0eeb744c5
+    - 1
+  - - camo:edge_375bc5531bfd
+    - 1
+  - - camo:edge_462708d842dc
+    - 1
+  - - camo:edge_e6e6affabfd1
+    - 0
+  - - camo:edge_ebc2b7315c81
+    - 1
+- id: C-C0004
+  question: What effect does creating or restoring wetlands and marshes have on amphibians
+    and reptiles?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_282ad2248b10
+  - camo:edge_8ecd7ff1b500
+  - camo:edge_4ba4dcd78f3c
+  - camo:edge_fd5b13000066
+  - camo:edge_9268944b8aeb
+  - camo:edge_3b599de2e50d
+  - camo:edge_4b482478c1e0
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:null_is_not_decrease
+  - trap:comparator_reference
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_282ad2248b10
+    - 0
+  - - camo:edge_8ecd7ff1b500
+    - 1
+  - - camo:edge_4ba4dcd78f3c
+    - 0
+  - - camo:edge_fd5b13000066
+    - 1
+  - - camo:edge_9268944b8aeb
+    - 1
+  - - camo:edge_3b599de2e50d
+    - 1
+  - - camo:edge_4b482478c1e0
+    - 1
+- id: C-C0005
+  question: What effect does competing vegetation have on species richness?
+  status: answered
+  direction: decrease
+  certainty: very_low
+  edge_ids:
+  - camo:edge_c08e84fbe3bc
+  - camo:edge_f8e0ea30f515
+  tags:
+  - class
+  - seed:empty
+  - answerable
+  - trap:associational_is_not_causal
+  - trap:negative_subject_qualifiers
+  - trap:twin_edges_one_sentence
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_c08e84fbe3bc
+    - -1
+  - - camo:edge_f8e0ea30f515
+    - -1
+- id: C-C0006
+  question: What effect does canopy shade and light levels have on the number of species?
+  status: answered
+  direction: increase
+  certainty: low
+  edge_ids:
+  - camo:edge_f3cb92423b16
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_f3cb92423b16
+    - 1
+- id: C-C0007
+  question: What effect does restoration work in general have on abundance and cover
+    of native species?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_0d7bbb228d9a
+  - camo:edge_52a13f4045c3
+  - camo:edge_ecc1febb76b5
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:twin_edges_one_sentence
+  - trap:associational_is_not_causal
+  - trap:comparator_reference
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_0d7bbb228d9a
+    - 1
+  - - camo:edge_52a13f4045c3
+    - 1
+  - - camo:edge_ecc1febb76b5
+    - -1
+- id: C-C0008
+  question: What effect does sediment & contaminated soil removal have on bird abundance
+    & occupancy?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: holdout
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0009
+  question: What effect does adding compost or other soil amendments have on survival
+    of seedlings and trees?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_6d8e9994c585
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:null_is_not_decrease
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_6d8e9994c585
+    - 0
+- id: C-C0010
+  question: What effect does mulching the soil surface have on soil microbes, fungi
+    and mycorrhizas?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0011
+  question: What effect does how wet the soil is have on which species make up the
+    community?
+  status: answered
+  direction: unclear
+  certainty: very_low
+  edge_ids:
+  - camo:edge_7660c3153386
+  - camo:edge_438284f45077
+  - camo:edge_10821349078b
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:associational_is_not_causal
+  - trap:one_study_many_edges
+  - trap:twin_edges_one_sentence
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_7660c3153386
+    - null
+  - - camo:edge_438284f45077
+    - null
+  - - camo:edge_10821349078b
+    - null
+- id: C-C0012
+  question: What effect does visitor trampling and recreation have on overall plant
+    cover?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0013
+  question: What effect does logging and timber harvest have on soil compaction and
+    structure?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0014
+  question: What effect does built structures in streams and shorelines have on mammal
+    numbers and habitat use?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0015
+  question: What effect does cutting or mowing competing vegetation have on the number
+    of species?
+  status: answered
+  direction: no_effect
+  certainty: low
+  edge_ids:
+  - camo:edge_ec3de9eb11af
+  - camo:edge_6656bef047a9
+  - camo:edge_f9fc42bf7ab2
+  - camo:edge_fc0bbde3341b
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_ec3de9eb11af
+    - 0
+  - - camo:edge_6656bef047a9
+    - 0
+  - - camo:edge_f9fc42bf7ab2
+    - 0
+  - - camo:edge_fc0bbde3341b
+    - 1
+- id: C-C0016
+  question: What effect does time since disturbance / stand age have on fish abundance,
+    growth & survival?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:time
+  - trap:time_as_cause
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0017
+  question: What effect does temperature & climate warming have on predation, seed
+    consumption & damage?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0018
+  question: What effect does soil moisture & water content have on methane & N2O emissions?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:near_miss
+  - trap:near_miss_classes
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0019
+  question: What effect does reintroduction, stocking & captive rearing have on insects
+    & aquatic invertebrates?
+  status: answered
+  direction: decrease
+  certainty: moderate
+  edge_ids:
+  - camo:edge_1fba57ac97b3
+  - camo:edge_8277d51fabd3
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_1fba57ac97b3
+    - -1
+  - - camo:edge_8277d51fabd3
+    - -1
+- id: C-C0020
+  question: What effect does site preparation & scarification have on erosion & sediment
+    loss?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0021
+  question: What effect does prescribed fire have on abundance and cover of native
+    species?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_e1e5be5c5b52
+  - camo:edge_05f6da15752b
+  - camo:edge_fe61555c94ca
+  - camo:edge_468d56c4fa74
+  - camo:edge_b8744ac5f78d
+  tags:
+  - class
+  - seed:near_miss
+  - trap:near_miss_classes
+  - answerable
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:auditor
+  edge_effects:
+  - - camo:edge_e1e5be5c5b52
+    - 1
+  - - camo:edge_05f6da15752b
+    - -1
+  - - camo:edge_fe61555c94ca
+    - 1
+  - - camo:edge_468d56c4fa74
+    - 1
+  - - camo:edge_b8744ac5f78d
+    - 1
+- id: C-C0022
+  question: What effect does water table & water level have on bare ground?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0023
+  question: What effect does mulching the soil surface have on overall plant cover?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_77889fe5ed24
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:null_is_not_decrease
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_77889fe5ed24
+    - 0
+- id: C-C0024
+  question: What effect does pollution and contaminants have on ecosystem carbon dioxide
+    exchange?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: holdout
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0025
+  question: What effect does reintroduction, stocking & captive rearing have on diversity
+    indices (Shannon, evenness)?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:near_miss
+  - trap:near_miss_classes
+  - empty
+  split: holdout
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0026
+  question: What effect does temperature & climate warming have on bare ground?
+  status: answered
+  direction: increase
+  certainty: very_low
+  edge_ids:
+  - camo:edge_f06109997d02
+  tags:
+  - class
+  - seed:empty
+  - answerable
+  - trap:associational_is_not_causal
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_f06109997d02
+    - 1
+- id: C-C0027
+  question: What effect does leaving dead wood and retained trees have on overall
+    plant cover?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_9c3411ecc2cd
+  - camo:edge_31396e8430d1
+  - camo:edge_f5b91c46d117
+  - camo:edge_df44375e9da6
+  tags:
+  - class
+  - seed:near_miss
+  - trap:near_miss_classes
+  - answerable
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_9c3411ecc2cd
+    - 1
+  - - camo:edge_31396e8430d1
+    - 1
+  - - camo:edge_f5b91c46d117
+    - 1
+  - - camo:edge_df44375e9da6
+    - -1
+- id: C-C0028
+  question: What effect does how wet the soil is have on natural seedling recruitment?
+  status: answered
+  direction: decrease
+  certainty: low
+  edge_ids:
+  - camo:edge_a87d999d586e
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_a87d999d586e
+    - -1
+- id: C-C0029
+  question: What effect does competition from other vegetation have on stand structure
+    and basal area?
+  status: answered
+  direction: decrease
+  certainty: moderate
+  edge_ids:
+  - camo:edge_9ad25f45eace
+  - camo:edge_e1e105841f15
+  - camo:edge_e52c05e80985
+  - camo:edge_cf3dcfed8798
+  - camo:edge_54da8bcd5a3b
+  - camo:edge_514a35a0a734
+  - camo:edge_342784ce0b1b
+  - camo:edge_44a3c1e9a9f6
+  - camo:edge_ec0539d91cc1
+  - camo:edge_53cc5a18beef
+  - camo:edge_4e95110f117c
+  tags:
+  - class
+  - seed:empty
+  - answerable
+  - trap:one_study_many_edges
+  - trap:associational_is_not_causal
+  - trap:negative_subject_qualifiers
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:auditor
+  edge_effects:
+  - - camo:edge_9ad25f45eace
+    - -1
+  - - camo:edge_e1e105841f15
+    - -1
+  - - camo:edge_e52c05e80985
+    - -1
+  - - camo:edge_cf3dcfed8798
+    - -1
+  - - camo:edge_54da8bcd5a3b
+    - -1
+  - - camo:edge_514a35a0a734
+    - -1
+  - - camo:edge_342784ce0b1b
+    - -1
+  - - camo:edge_44a3c1e9a9f6
+    - -1
+  - - camo:edge_ec0539d91cc1
+    - null
+  - - camo:edge_53cc5a18beef
+    - -1
+  - - camo:edge_4e95110f117c
+    - -1
+- id: C-C0030
+  question: What effect does invasive / non-native species presence have on population
+    size & trend?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_84e7faa22543
+  - camo:edge_53223c48be0d
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:associational_is_not_causal
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_84e7faa22543
+    - -1
+  - - camo:edge_53223c48be0d
+    - 1
+- id: C-C0031
+  question: What effect does competing vegetation have on tree & seedling growth?
+  status: answered
+  direction: decrease
+  certainty: low
+  edge_ids:
+  - camo:edge_0a918ec7ae8b
+  - camo:edge_bc97f6aba451
+  - camo:edge_22ae5b45f0c6
+  - camo:edge_ab41dde143a0
+  - camo:edge_8e822ebc74f9
+  - camo:edge_844fed2a70db
+  - camo:edge_8fdb1290742e
+  - camo:edge_033605d9ebd3
+  - camo:edge_75c761839d95
+  - camo:edge_44a3c1e9a9f6
+  - camo:edge_b5d7bac7e91a
+  - camo:edge_6c8bc7ff827e
+  - camo:edge_d66cb3c63f99
+  - camo:edge_3d81bca2d276
+  - camo:edge_e6bae6a5042f
+  - camo:edge_cf3dcfed8798
+  - camo:edge_daba522a96b2
+  - camo:edge_4e95110f117c
+  - camo:edge_905059c5876c
+  - camo:edge_221ee15186a3
+  - camo:edge_999cf10afc2d
+  - camo:edge_168c95230f90
+  - camo:edge_72fa8cb1bb36
+  - camo:edge_e52c05e80985
+  - camo:edge_f76174772463
+  - camo:edge_c3ffcabcb541
+  - camo:edge_5d925e2a8abb
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  - trap:negative_subject_qualifiers
+  - trap:null_is_not_decrease
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_0a918ec7ae8b
+    - -1
+  - - camo:edge_bc97f6aba451
+    - -1
+  - - camo:edge_22ae5b45f0c6
+    - -1
+  - - camo:edge_ab41dde143a0
+    - -1
+  - - camo:edge_8e822ebc74f9
+    - -1
+  - - camo:edge_844fed2a70db
+    - 0
+  - - camo:edge_8fdb1290742e
+    - 0
+  - - camo:edge_033605d9ebd3
+    - -1
+  - - camo:edge_75c761839d95
+    - -1
+  - - camo:edge_44a3c1e9a9f6
+    - -1
+  - - camo:edge_b5d7bac7e91a
+    - -1
+  - - camo:edge_6c8bc7ff827e
+    - -1
+  - - camo:edge_d66cb3c63f99
+    - -1
+  - - camo:edge_3d81bca2d276
+    - -1
+  - - camo:edge_e6bae6a5042f
+    - -1
+  - - camo:edge_cf3dcfed8798
+    - -1
+  - - camo:edge_daba522a96b2
+    - null
+  - - camo:edge_4e95110f117c
+    - -1
+  - - camo:edge_905059c5876c
+    - -1
+  - - camo:edge_221ee15186a3
+    - -1
+  - - camo:edge_999cf10afc2d
+    - null
+  - - camo:edge_168c95230f90
+    - -1
+  - - camo:edge_72fa8cb1bb36
+    - 0
+  - - camo:edge_e52c05e80985
+    - -1
+  - - camo:edge_f76174772463
+    - -1
+  - - camo:edge_c3ffcabcb541
+    - 0
+  - - camo:edge_5d925e2a8abb
+    - 0
+- id: C-C0032
+  question: What effect does organic & soil amendments have on tree & seedling growth?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_294fb9f750f8
+  - camo:edge_036c34db6126
+  - camo:edge_58fbc62548e8
+  - camo:edge_a8d9dfd0d9c7
+  - camo:edge_5872039a1c9a
+  - camo:edge_bca77d1739c3
+  - camo:edge_f0ef499b6db2
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:null_is_not_decrease
+  - trap:one_study_many_edges
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_294fb9f750f8
+    - 1
+  - - camo:edge_036c34db6126
+    - 1
+  - - camo:edge_58fbc62548e8
+    - 0
+  - - camo:edge_a8d9dfd0d9c7
+    - 1
+  - - camo:edge_5872039a1c9a
+    - 0
+  - - camo:edge_bca77d1739c3
+    - 0
+  - - camo:edge_f0ef499b6db2
+    - 0
+- id: C-C0033
+  question: What effect does trampling & recreation have on water table & water level?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0034
+  question: What effect does adding compost or other soil amendments have on abundance
+    and cover of native species?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_571914217329
+  - camo:edge_43b596084930
+  - camo:edge_1a974fbc343a
+  - camo:edge_87cbbe1edaf0
+  - camo:edge_aaf10827ab5c
+  - camo:edge_5f5e8a0b8473
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:associational_is_not_causal
+  - trap:null_is_not_decrease
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_571914217329
+    - 1
+  - - camo:edge_43b596084930
+    - -1
+  - - camo:edge_1a974fbc343a
+    - 0
+  - - camo:edge_87cbbe1edaf0
+    - 1
+  - - camo:edge_aaf10827ab5c
+    - -1
+  - - camo:edge_5f5e8a0b8473
+    - null
+- id: C-C0035
+  question: What effect does time since disturbance or stand age have on abundance
+    and cover of native species?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_d6b218689ff0
+  - camo:edge_862d39c58d4d
+  - camo:edge_6d5711a1528c
+  - camo:edge_88c1bd9a0eeb
+  tags:
+  - class
+  - seed:time
+  - trap:time_as_cause
+  - answerable
+  - recall:engine
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:auditor
+  edge_effects:
+  - - camo:edge_d6b218689ff0
+    - 1
+  - - camo:edge_862d39c58d4d
+    - -1
+  - - camo:edge_6d5711a1528c
+    - null
+  - - camo:edge_88c1bd9a0eeb
+    - null
+- id: C-C0036
+  question: What effect does fertilization & nutrient addition have on foliar & tissue
+    nutrients?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_bf653dfe042f
+  - camo:edge_93500a2246af
+  - camo:edge_6800ea786f3b
+  - camo:edge_cf86f801da2d
+  - camo:edge_2a793ebfe703
+  - camo:edge_3d37085d519a
+  - camo:edge_68b8f5e8412d
+  - camo:edge_8a367c3c8045
+  - camo:edge_d9504acf78eb
+  - camo:edge_21db328eadf6
+  - camo:edge_0236679c72cf
+  - camo:edge_edb7ac42e449
+  - camo:edge_5fd0a32de7c4
+  - camo:edge_981bfb13e035
+  - camo:edge_5b6c299e190b
+  - camo:edge_60695e49a3da
+  - camo:edge_40203a0ebf9d
+  - camo:edge_e550f11f8087
+  - camo:edge_7f635e3b1d74
+  - camo:edge_d300437566d4
+  - camo:edge_6ece8a1481f8
+  - camo:edge_4bddee5bc7c9
+  - camo:edge_8919d76c359a
+  - camo:edge_fc41ce598438
+  - camo:edge_df627c8f51c3
+  - camo:edge_02a93d4b869d
+  - camo:edge_c95df332e382
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:one_study_many_edges
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_bf653dfe042f
+    - 1
+  - - camo:edge_93500a2246af
+    - -1
+  - - camo:edge_6800ea786f3b
+    - 1
+  - - camo:edge_cf86f801da2d
+    - 1
+  - - camo:edge_2a793ebfe703
+    - 0
+  - - camo:edge_3d37085d519a
+    - 1
+  - - camo:edge_68b8f5e8412d
+    - 1
+  - - camo:edge_8a367c3c8045
+    - 1
+  - - camo:edge_d9504acf78eb
+    - 1
+  - - camo:edge_21db328eadf6
+    - 1
+  - - camo:edge_0236679c72cf
+    - -1
+  - - camo:edge_edb7ac42e449
+    - 1
+  - - camo:edge_5fd0a32de7c4
+    - -1
+  - - camo:edge_981bfb13e035
+    - 1
+  - - camo:edge_5b6c299e190b
+    - 1
+  - - camo:edge_60695e49a3da
+    - 1
+  - - camo:edge_40203a0ebf9d
+    - 1
+  - - camo:edge_e550f11f8087
+    - 1
+  - - camo:edge_7f635e3b1d74
+    - 1
+  - - camo:edge_d300437566d4
+    - -1
+  - - camo:edge_6ece8a1481f8
+    - 0
+  - - camo:edge_4bddee5bc7c9
+    - -1
+  - - camo:edge_8919d76c359a
+    - 0
+  - - camo:edge_fc41ce598438
+    - -1
+  - - camo:edge_df627c8f51c3
+    - 0
+  - - camo:edge_02a93d4b869d
+    - -1
+  - - camo:edge_c95df332e382
+    - -1
+- id: C-C0037
+  question: What effect does in-stream & engineered structures have on soil microbes,
+    fungi & mycorrhizae?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0038
+  question: What effect does mulch & surface cover have on seedling & tree survival?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_904cec2741d0
+  - camo:edge_aa5e6890e84f
+  - camo:edge_b84a47c40c99
+  - camo:edge_31833e0d9ee6
+  - camo:edge_ca4a54f43899
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  - trap:null_is_not_decrease
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_904cec2741d0
+    - -1
+  - - camo:edge_aa5e6890e84f
+    - 1
+  - - camo:edge_b84a47c40c99
+    - 0
+  - - camo:edge_31833e0d9ee6
+    - 0
+  - - camo:edge_ca4a54f43899
+    - -1
+- id: C-C0039
+  question: What effect does organic & soil amendments have on species richness?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_a3b35d233689
+  - camo:edge_571914217329
+  - camo:edge_43b596084930
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:associational_is_not_causal
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_a3b35d233689
+    - 1
+  - - camo:edge_571914217329
+    - 1
+  - - camo:edge_43b596084930
+    - -1
+- id: C-C0040
+  question: What effect does temperature & microclimate have on community composition
+    & similarity?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0041
+  question: What effect does rewetting and restoring hydrology have on shannon diversity
+    and evenness?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0042
+  question: What effect does invasive / non-native species presence have on fish abundance,
+    growth & survival?
+  status: answered
+  direction: decrease
+  certainty: very_low
+  edge_ids:
+  - camo:edge_3019a2266311
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:associational_is_not_causal
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_3019a2266311
+    - -1
+- id: C-C0043
+  question: What effect does grazing & browsing have on stand structure & basal area?
+  status: answered
+  direction: decrease
+  certainty: moderate
+  edge_ids:
+  - camo:edge_537946f0928a
+  - camo:edge_e4eac8e5b778
+  - camo:edge_a0770c170da1
+  - camo:edge_5677621cc1c3
+  - camo:edge_f4cb3c80e187
+  - camo:edge_7d0c8c1c169a
+  - camo:edge_18caf0511a4d
+  - camo:edge_239bafd2c4f0
+  - camo:edge_b1b296daafda
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:comparator_reference
+  - trap:null_is_not_decrease
+  - trap:negative_subject_qualifiers
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_537946f0928a
+    - -1
+  - - camo:edge_e4eac8e5b778
+    - 1
+  - - camo:edge_a0770c170da1
+    - -1
+  - - camo:edge_5677621cc1c3
+    - -1
+  - - camo:edge_f4cb3c80e187
+    - 0
+  - - camo:edge_7d0c8c1c169a
+    - -1
+  - - camo:edge_18caf0511a4d
+    - -1
+  - - camo:edge_239bafd2c4f0
+    - -1
+  - - camo:edge_b1b296daafda
+    - -1
+- id: C-C0044
+  question: What effect does organic & soil amendments have on breeding & reproductive
+    success?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: holdout
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0045
+  question: What effect does partial harvesting & selective cutting have on soil &
+    litter invertebrates?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: holdout
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0046
+  question: What effect does planting nursery stock or transplants have on survival
+    of seedlings and trees?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_589e6b84a5b1
+  - camo:edge_fddd15119b80
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:null_is_not_decrease
+  split: dev
+  source: llm:auditor
+  edge_effects:
+  - - camo:edge_589e6b84a5b1
+    - 0
+  - - camo:edge_fddd15119b80
+    - 0
+- id: C-C0047
+  question: What effect does mechanical vegetation control have on seedling & tree
+    survival?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_3db49b2a9d32
+  - camo:edge_1c146ff8a6e9
+  - camo:edge_9302d742892f
+  - camo:edge_0a3a133e25f9
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:null_is_not_decrease
+  - trap:one_study_many_edges
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_3db49b2a9d32
+    - 0
+  - - camo:edge_1c146ff8a6e9
+    - 1
+  - - camo:edge_9302d742892f
+    - 1
+  - - camo:edge_0a3a133e25f9
+    - 1
+- id: C-C0048
+  question: What effect does herbicide application have on flowering, seed production
+    & reproduction?
+  status: answered
+  direction: decrease
+  certainty: moderate
+  edge_ids:
+  - camo:edge_55bf80c7aa17
+  - camo:edge_2e9da3e08ae5
+  - camo:edge_1096b0589f2d
+  - camo:edge_73db5d72baa5
+  - camo:edge_c7b5ce0afc95
+  - camo:edge_97a21e498103
+  - camo:edge_5cbd8f29dc40
+  - camo:edge_88a1353b7370
+  - camo:edge_19f8f07f5d10
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:one_study_many_edges
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_55bf80c7aa17
+    - -1
+  - - camo:edge_2e9da3e08ae5
+    - -1
+  - - camo:edge_1096b0589f2d
+    - -1
+  - - camo:edge_73db5d72baa5
+    - -1
+  - - camo:edge_c7b5ce0afc95
+    - 1
+  - - camo:edge_97a21e498103
+    - 0
+  - - camo:edge_5cbd8f29dc40
+    - 1
+  - - camo:edge_88a1353b7370
+    - -1
+  - - camo:edge_19f8f07f5d10
+    - -1
+- id: C-C0049
+  question: What effect does fertilization & nutrient addition have on tree species
+    composition & dominance?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0050
+  question: What effect does fertilization & nutrient addition have on soil pH & chemistry?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_875ede0bf1c9
+  - camo:edge_5e8400c03987
+  - camo:edge_6a5d44eabd48
+  - camo:edge_d0c5a6d44300
+  - camo:edge_7f2d2dff3d5f
+  - camo:edge_d4ed436095a7
+  - camo:edge_e3a1c4207fa4
+  - camo:edge_a7df4108a68c
+  - camo:edge_655cf5886647
+  - camo:edge_b57960bde7e2
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  - trap:associational_is_not_causal
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_875ede0bf1c9
+    - 1
+  - - camo:edge_5e8400c03987
+    - null
+  - - camo:edge_6a5d44eabd48
+    - 0
+  - - camo:edge_d0c5a6d44300
+    - 1
+  - - camo:edge_7f2d2dff3d5f
+    - 1
+  - - camo:edge_d4ed436095a7
+    - 1
+  - - camo:edge_e3a1c4207fa4
+    - 1
+  - - camo:edge_a7df4108a68c
+    - 1
+  - - camo:edge_655cf5886647
+    - 1
+  - - camo:edge_b57960bde7e2
+    - 1
+- id: C-C0051
+  question: What effect does water table level have on soil carbon?
+  status: answered
+  direction: no_effect
+  certainty: low
+  edge_ids:
+  - camo:edge_7e0b8a0b40b3
+  - camo:edge_8bdb8965fe1b
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:null_is_not_decrease
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_7e0b8a0b40b3
+    - 0
+  - - camo:edge_8bdb8965fe1b
+    - null
+- id: C-C0052
+  question: What effect does soil preparation before planting have on species diversity
+    and evenness?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_22f74f7aa597
+  - camo:edge_28f6776d3524
+  - camo:edge_fe3465cf27e0
+  - camo:edge_cd1d58d8bc1c
+  - camo:edge_deee135ed9e3
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:twin_edges_one_sentence
+  - trap:null_is_not_decrease
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_22f74f7aa597
+    - 1
+  - - camo:edge_28f6776d3524
+    - 1
+  - - camo:edge_fe3465cf27e0
+    - 1
+  - - camo:edge_cd1d58d8bc1c
+    - 1
+  - - camo:edge_deee135ed9e3
+    - 0
+- id: C-C0053
+  question: What effect does cutting or mowing competing vegetation have on plant
+    physiological stress?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_bc070c373d46
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:null_is_not_decrease
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_bc070c373d46
+    - 0
+- id: C-C0054
+  question: What effect does competing vegetation have on diversity indices (Shannon,
+    evenness)?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_70d68e59ca2a
+  - camo:edge_17791dba1287
+  - camo:edge_6d21d7acf2e3
+  - camo:edge_23f0e85aca8d
+  - camo:edge_4d5d9d5783fc
+  - camo:edge_41a79179e208
+  tags:
+  - class
+  - seed:empty
+  - answerable
+  - trap:time_as_cause
+  - trap:associational_is_not_causal
+  split: dev
+  source: llm:auditor
+  edge_effects:
+  - - camo:edge_70d68e59ca2a
+    - 1
+  - - camo:edge_17791dba1287
+    - null
+  - - camo:edge_6d21d7acf2e3
+    - 1
+  - - camo:edge_23f0e85aca8d
+    - -1
+  - - camo:edge_4d5d9d5783fc
+    - -1
+  - - camo:edge_41a79179e208
+    - -1
+- id: C-C0055
+  question: What effect does herbicide application have on diversity indices (Shannon,
+    evenness)?
+  status: answered
+  direction: decrease
+  certainty: moderate
+  edge_ids:
+  - camo:edge_fe312adb1a47
+  - camo:edge_459ae71bbd3b
+  tags:
+  - class
+  - seed:near_miss
+  - trap:near_miss_classes
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_fe312adb1a47
+    - -1
+  - - camo:edge_459ae71bbd3b
+    - -1
+- id: C-C0056
+  question: What effect does timber harvesting have on fish populations?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0057
+  question: What effect does local temperature and microclimate have on invasive species
+    cover?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0058
+  question: What effect does herbicide application have on total vegetation cover?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0059
+  question: What effect does wildfire and fire history have on fish populations?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0060
+  question: What effect does adding organic soil amendments have on soil fertility?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_4f6ccd72fc3b
+  - camo:edge_4b6a90ae0960
+  - camo:edge_fba287e18737
+  - camo:edge_1352153619d1
+  - camo:edge_defb7cbbfcb3
+  - camo:edge_aeeade2e81b2
+  - camo:edge_a4b9fd3391a9
+  - camo:edge_e5bce5e8fffe
+  - camo:edge_33b5726a62a4
+  - camo:edge_4531557f7c4c
+  - camo:edge_483360f3d8af
+  - camo:edge_8d56db6ebfa4
+  - camo:edge_6510e48d09a9
+  - camo:edge_892e8db6c791
+  - camo:edge_5a5f4e59f796
+  - camo:edge_477ed530f1b3
+  - camo:edge_9cedc32dd2be
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:one_study_many_edges
+  - trap:negative_subject_qualifiers
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:associational_is_not_causal
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_4f6ccd72fc3b
+    - 1
+  - - camo:edge_4b6a90ae0960
+    - 1
+  - - camo:edge_fba287e18737
+    - -1
+  - - camo:edge_1352153619d1
+    - 1
+  - - camo:edge_defb7cbbfcb3
+    - 1
+  - - camo:edge_aeeade2e81b2
+    - 1
+  - - camo:edge_a4b9fd3391a9
+    - 1
+  - - camo:edge_e5bce5e8fffe
+    - 1
+  - - camo:edge_33b5726a62a4
+    - 0
+  - - camo:edge_4531557f7c4c
+    - 0
+  - - camo:edge_483360f3d8af
+    - 1
+  - - camo:edge_8d56db6ebfa4
+    - 1
+  - - camo:edge_6510e48d09a9
+    - 1
+  - - camo:edge_892e8db6c791
+    - 0
+  - - camo:edge_5a5f4e59f796
+    - -1
+  - - camo:edge_477ed530f1b3
+    - -1
+  - - camo:edge_9cedc32dd2be
+    - -1
+- id: C-C0061
+  question: What effect does time since disturbance have on ecosystem carbon dioxide
+    exchange?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_1d495e9514a2
+  tags:
+  - class
+  - seed:time
+  - trap:time_as_cause
+  - answerable
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_1d495e9514a2
+    - 1
+- id: C-C0062
+  question: What effect does fertilization & nutrient addition have on soil nutrients
+    & fertility?
+  status: answered
+  direction: increase
+  certainty: moderate
+  edge_ids:
+  - camo:edge_490ba882e0e8
+  - camo:edge_6a5d44eabd48
+  - camo:edge_655cf5886647
+  - camo:edge_875ede0bf1c9
+  - camo:edge_d0c5a6d44300
+  - camo:edge_e3a1c4207fa4
+  - camo:edge_02b6860f7ef8
+  - camo:edge_5e8400c03987
+  - camo:edge_7f2d2dff3d5f
+  - camo:edge_2878178e834c
+  - camo:edge_d4ed436095a7
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  - trap:associational_is_not_causal
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_490ba882e0e8
+    - 1
+  - - camo:edge_6a5d44eabd48
+    - 0
+  - - camo:edge_655cf5886647
+    - 1
+  - - camo:edge_875ede0bf1c9
+    - 1
+  - - camo:edge_d0c5a6d44300
+    - 1
+  - - camo:edge_e3a1c4207fa4
+    - 1
+  - - camo:edge_02b6860f7ef8
+    - 1
+  - - camo:edge_5e8400c03987
+    - null
+  - - camo:edge_7f2d2dff3d5f
+    - 1
+  - - camo:edge_2878178e834c
+    - 1
+  - - camo:edge_d4ed436095a7
+    - 1
+- id: C-C0063
+  question: What effect does organic & soil amendments have on soil organic matter
+    & carbon?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_08a152a155b8
+  - camo:edge_1512fed164c2
+  - camo:edge_11bafe44101a
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_08a152a155b8
+    - -1
+  - - camo:edge_1512fed164c2
+    - 1
+  - - camo:edge_11bafe44101a
+    - 1
+- id: C-C0064
+  question: What effect does pollutants and contamination have on functional trait
+    composition?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_8310099ecb81
+  - camo:edge_3c8e8a8344bd
+  - camo:edge_4b1cb7530faa
+  - camo:edge_8144cb48c6f0
+  tags:
+  - class
+  - seed:empty
+  - answerable
+  - trap:negative_subject_qualifiers
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_8310099ecb81
+    - 1
+  - - camo:edge_3c8e8a8344bd
+    - -1
+  - - camo:edge_4b1cb7530faa
+    - 1
+  - - camo:edge_8144cb48c6f0
+    - -1
+- id: C-C0065
+  question: What effect does restoring hydrology have on bare soil cover?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0066
+  question: What effect does time since disturbance / stand age have on natural regeneration
+    & recruitment?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_8f71139647f8
+  - camo:edge_8304e6a35203
+  - camo:edge_439ea22d28cf
+  - camo:edge_d4ab411e297c
+  - camo:edge_3f67fe1e7c03
+  - camo:edge_54e670cb24db
+  - camo:edge_02a74263dc28
+  - camo:edge_5235af1e0203
+  - camo:edge_5b549e832f21
+  - camo:edge_483b7cf39c73
+  - camo:edge_b7011b0f8584
+  - camo:edge_d9e98809e476
+  - camo:edge_f0f90036b320
+  - camo:edge_0db71e166028
+  - camo:edge_3f0bc5f93df3
+  tags:
+  - class
+  - seed:time
+  - trap:time_as_cause
+  - answerable
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  - trap:associational_is_not_causal
+  - trap:unchanged_is_not_null
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_8f71139647f8
+    - 0
+  - - camo:edge_8304e6a35203
+    - 1
+  - - camo:edge_439ea22d28cf
+    - 1
+  - - camo:edge_d4ab411e297c
+    - 0
+  - - camo:edge_3f67fe1e7c03
+    - 0
+  - - camo:edge_54e670cb24db
+    - 0
+  - - camo:edge_02a74263dc28
+    - 1
+  - - camo:edge_5235af1e0203
+    - null
+  - - camo:edge_5b549e832f21
+    - 0
+  - - camo:edge_483b7cf39c73
+    - 0
+  - - camo:edge_b7011b0f8584
+    - 0
+  - - camo:edge_d9e98809e476
+    - 1
+  - - camo:edge_f0f90036b320
+    - 1
+  - - camo:edge_0db71e166028
+    - 1
+  - - camo:edge_3f0bc5f93df3
+    - 1
+- id: C-C0067
+  question: What effect does trampling & recreation have on moss & bryophyte cover?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0068
+  question: What effect does wildfire and fire history have on overall plant cover?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0069
+  question: What effect does mulch & surface cover have on moss & bryophyte cover?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_2a6803a68dbf
+  - camo:edge_fb0fb38ec285
+  - camo:edge_3ccdabeecc9d
+  - camo:edge_83ac921e4487
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:null_is_not_decrease
+  - trap:associational_is_not_causal
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_2a6803a68dbf
+    - 0
+  - - camo:edge_fb0fb38ec285
+    - 1
+  - - camo:edge_3ccdabeecc9d
+    - null
+  - - camo:edge_83ac921e4487
+    - 0
+- id: C-C0070
+  question: What effect does mechanical vegetation control have on total vegetation
+    cover?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: holdout
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0071
+  question: What effect does site and soil characteristics have on soil chemistry?
+  status: answered
+  direction: no_effect
+  certainty: low
+  edge_ids:
+  - camo:edge_cfda07b3348d
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:null_is_not_decrease
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_cfda07b3348d
+    - 0
+- id: C-C0072
+  question: What effect does controlled burning have on functional trait composition?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0073
+  question: What effect does water table & water level have on native species abundance
+    & cover?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: dev
+  source: llm:auditor
+  edge_effects: []
+- id: C-C0074
+  question: What effect does controlled burning have on water table level?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0075
+  question: What effect does releasing captive-reared or translocated animals have
+    on breeding success?
+  status: answered
+  direction: no_effect
+  certainty: low
+  edge_ids:
+  - camo:edge_dc59c1efd626
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:null_is_not_decrease
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_dc59c1efd626
+    - 0
+- id: C-C0076
+  question: What effect does pollutants and contamination have on water quality and
+    contaminant levels?
+  status: answered
+  direction: increase
+  certainty: low
+  edge_ids:
+  - camo:edge_cbaa0d8cde38
+  - camo:edge_4e3b2055281b
+  - camo:edge_eda393d2edb9
+  - camo:edge_f26649081735
+  - camo:edge_3d9f7f90c358
+  - camo:edge_ebbe9c704432
+  - camo:edge_ef477891f232
+  - camo:edge_63533a0acea4
+  - camo:edge_fca1e9a1d4fc
+  - camo:edge_3a9e65544a3e
+  - camo:edge_64d1fb286a92
+  - camo:edge_0819ceb10da2
+  - camo:edge_f3664091a79e
+  - camo:edge_493a03ac0245
+  - camo:edge_914be93501cd
+  - camo:edge_a42f91bd99bc
+  - camo:edge_3277aaf176c4
+  - camo:edge_bd79c0984faa
+  - camo:edge_0ccf18a18921
+  - camo:edge_eb8cabd45073
+  - camo:edge_fe0478ba0889
+  - camo:edge_e4c39c216f3a
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:associational_is_not_causal
+  - trap:one_study_many_edges
+  - trap:negative_subject_qualifiers
+  - trap:unchanged_is_not_null
+  - trap:comparator_reference
+  - trap:time_as_cause
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_cbaa0d8cde38
+    - 1
+  - - camo:edge_4e3b2055281b
+    - 1
+  - - camo:edge_eda393d2edb9
+    - -1
+  - - camo:edge_f26649081735
+    - 0
+  - - camo:edge_3d9f7f90c358
+    - 1
+  - - camo:edge_ebbe9c704432
+    - 1
+  - - camo:edge_ef477891f232
+    - 1
+  - - camo:edge_63533a0acea4
+    - 1
+  - - camo:edge_fca1e9a1d4fc
+    - 1
+  - - camo:edge_3a9e65544a3e
+    - 1
+  - - camo:edge_64d1fb286a92
+    - -1
+  - - camo:edge_0819ceb10da2
+    - 1
+  - - camo:edge_f3664091a79e
+    - 1
+  - - camo:edge_493a03ac0245
+    - -1
+  - - camo:edge_914be93501cd
+    - 1
+  - - camo:edge_a42f91bd99bc
+    - 1
+  - - camo:edge_3277aaf176c4
+    - 1
+  - - camo:edge_bd79c0984faa
+    - 1
+  - - camo:edge_0ccf18a18921
+    - 1
+  - - camo:edge_eb8cabd45073
+    - 1
+  - - camo:edge_fe0478ba0889
+    - -1
+  - - camo:edge_e4c39c216f3a
+    - 1
+- id: C-C0077
+  question: What effect does temperature & climate warming have on animal condition,
+    growth & health?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0078
+  question: What effect does fertilization & nutrient addition have on species richness?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_43b596084930
+  - camo:edge_77889fe5ed24
+  - camo:edge_0c6b65fd09fd
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:associational_is_not_causal
+  - trap:null_is_not_decrease
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_43b596084930
+    - -1
+  - - camo:edge_77889fe5ed24
+    - 0
+  - - camo:edge_0c6b65fd09fd
+    - 0
+- id: C-C0079
+  question: What effect does woody debris & structural retention have on species richness?
+  status: answered
+  direction: mixed
+  certainty: very_low
+  edge_ids:
+  - camo:edge_96b4f1092477
+  - camo:edge_6d717fa3b5bc
+  - camo:edge_9bf2ef47df73
+  - camo:edge_261dd8ad2d1e
+  - camo:edge_fa817d4fa9cb
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:associational_is_not_causal
+  - trap:comparator_reference
+  - trap:one_study_many_edges
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_96b4f1092477
+    - 0
+  - - camo:edge_6d717fa3b5bc
+    - 1
+  - - camo:edge_9bf2ef47df73
+    - 1
+  - - camo:edge_261dd8ad2d1e
+    - 1
+  - - camo:edge_fa817d4fa9cb
+    - -1
+- id: C-C0080
+  question: What effect does tree shelters & protection have on soil & litter invertebrates?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0081
+  question: What effect does water table & water level have on seed germination &
+    emergence?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0082
+  question: What effect does wildfire and fire history have on ecosystem carbon dioxide
+    exchange?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0083
+  question: What effect does selective logging have on soil erosion and sediment loss?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0084
+  question: What effect does inoculating soil with microbes have on plant productivity?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_58fbc62548e8
+  - camo:edge_5872039a1c9a
+  - camo:edge_63ab1bf37e5d
+  - camo:edge_4d072325ce12
+  - camo:edge_ca8d7a2503bd
+  - camo:edge_f674c0dc310e
+  - camo:edge_779d4207a429
+  - camo:edge_c1fd608d4dc0
+  - camo:edge_fff30734db77
+  - camo:edge_1e4bc7d7a6f1
+  - camo:edge_8bcd25973d95
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:null_is_not_decrease
+  - trap:one_study_many_edges
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_58fbc62548e8
+    - 0
+  - - camo:edge_5872039a1c9a
+    - 0
+  - - camo:edge_63ab1bf37e5d
+    - 0
+  - - camo:edge_4d072325ce12
+    - -1
+  - - camo:edge_ca8d7a2503bd
+    - 0
+  - - camo:edge_f674c0dc310e
+    - -1
+  - - camo:edge_779d4207a429
+    - 0
+  - - camo:edge_c1fd608d4dc0
+    - 1
+  - - camo:edge_fff30734db77
+    - -1
+  - - camo:edge_1e4bc7d7a6f1
+    - 1
+  - - camo:edge_8bcd25973d95
+    - 1
+- id: C-C0085
+  question: What effect does site preparation & scarification have on invasive / non-native
+    species abundance?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_6d0799a1bb00
+  tags:
+  - class
+  - seed:empty
+  - answerable
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_6d0799a1bb00
+    - 0
+- id: C-C0086
+  question: What effect does instream habitat structures have on species composition?
+  status: answered
+  direction: unclear
+  certainty: moderate
+  edge_ids:
+  - camo:edge_e26ac6ceb9ca
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:comparator_reference
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_e26ac6ceb9ca
+    - null
+- id: C-C0087
+  question: What effect does fertilizing or liming have on plant productivity?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_02e74dbfa8b7
+  - camo:edge_73cf7975653b
+  - camo:edge_55fae1717abc
+  - camo:edge_f8b4ee96d021
+  - camo:edge_a17bba572e9b
+  - camo:edge_ed5dd4b0434b
+  - camo:edge_8d09b599854f
+  - camo:edge_6b9afb321f2c
+  - camo:edge_4b5a90a48179
+  - camo:edge_6bfff4b7b1a0
+  - camo:edge_a4ba3ab8148c
+  - camo:edge_4ec17738dc6f
+  - camo:edge_dd253d9b4352
+  - camo:edge_02f366f1c6c7
+  - camo:edge_8cf59e7f1c40
+  - camo:edge_98f30b64c321
+  - camo:edge_893905927a54
+  - camo:edge_7d3aede7cb12
+  - camo:edge_e9b4b035fff0
+  - camo:edge_bcc6137d71ba
+  - camo:edge_8b724dfcf30a
+  - camo:edge_d56bdfcd22dc
+  - camo:edge_c22fdcd224e5
+  - camo:edge_e17870ec1320
+  - camo:edge_5ee7288c1b1f
+  - camo:edge_e482c8e5f79e
+  - camo:edge_f39c8e313f97
+  - camo:edge_20a8f4424d68
+  - camo:edge_43ca4b5132bd
+  - camo:edge_c70165a37ea5
+  - camo:edge_6cc2e113d5e8
+  - camo:edge_7fd63852f9f5
+  - camo:edge_3d0573e58933
+  - camo:edge_06168ef7b1e2
+  - camo:edge_6db3006d655c
+  - camo:edge_abb667992a86
+  - camo:edge_7164fb680f66
+  - camo:edge_408465bc9dcf
+  - camo:edge_64dcb8ea730c
+  - camo:edge_b0ad08c6034c
+  - camo:edge_164c002e6832
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:null_is_not_decrease
+  - trap:twin_edges_one_sentence
+  - trap:one_study_many_edges
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_02e74dbfa8b7
+    - 0
+  - - camo:edge_73cf7975653b
+    - 0
+  - - camo:edge_55fae1717abc
+    - 0
+  - - camo:edge_f8b4ee96d021
+    - 0
+  - - camo:edge_a17bba572e9b
+    - 0
+  - - camo:edge_ed5dd4b0434b
+    - 0
+  - - camo:edge_8d09b599854f
+    - 1
+  - - camo:edge_6b9afb321f2c
+    - 0
+  - - camo:edge_4b5a90a48179
+    - 1
+  - - camo:edge_6bfff4b7b1a0
+    - 1
+  - - camo:edge_a4ba3ab8148c
+    - 1
+  - - camo:edge_4ec17738dc6f
+    - 1
+  - - camo:edge_dd253d9b4352
+    - 0
+  - - camo:edge_02f366f1c6c7
+    - 1
+  - - camo:edge_8cf59e7f1c40
+    - 0
+  - - camo:edge_98f30b64c321
+    - 0
+  - - camo:edge_893905927a54
+    - 1
+  - - camo:edge_7d3aede7cb12
+    - 1
+  - - camo:edge_e9b4b035fff0
+    - 0
+  - - camo:edge_bcc6137d71ba
+    - 0
+  - - camo:edge_8b724dfcf30a
+    - 0
+  - - camo:edge_d56bdfcd22dc
+    - 1
+  - - camo:edge_c22fdcd224e5
+    - 1
+  - - camo:edge_e17870ec1320
+    - 1
+  - - camo:edge_5ee7288c1b1f
+    - 1
+  - - camo:edge_e482c8e5f79e
+    - 1
+  - - camo:edge_f39c8e313f97
+    - 1
+  - - camo:edge_20a8f4424d68
+    - 1
+  - - camo:edge_43ca4b5132bd
+    - 0
+  - - camo:edge_c70165a37ea5
+    - 0
+  - - camo:edge_6cc2e113d5e8
+    - 1
+  - - camo:edge_7fd63852f9f5
+    - 1
+  - - camo:edge_3d0573e58933
+    - 1
+  - - camo:edge_06168ef7b1e2
+    - 0
+  - - camo:edge_6db3006d655c
+    - 0
+  - - camo:edge_abb667992a86
+    - 1
+  - - camo:edge_7164fb680f66
+    - 1
+  - - camo:edge_408465bc9dcf
+    - 1
+  - - camo:edge_64dcb8ea730c
+    - -1
+  - - camo:edge_b0ad08c6034c
+    - -1
+  - - camo:edge_164c002e6832
+    - 1
+- id: C-C0088
+  question: What effect does trampling & recreation have on diversity indices (Shannon,
+    evenness)?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0089
+  question: What effect does time since disturbance have on local temperature and
+    microclimate?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:time
+  - trap:time_as_cause
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0090
+  question: What effect does time since disturbance / stand age have on animal survival
+    & mortality?
+  status: answered
+  direction: decrease
+  certainty: low
+  edge_ids:
+  - camo:edge_c2ea2a7e9574
+  - camo:edge_f6e261c8c517
+  tags:
+  - class
+  - seed:time
+  - trap:time_as_cause
+  - answerable
+  - trap:associational_is_not_causal
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_c2ea2a7e9574
+    - -1
+  - - camo:edge_f6e261c8c517
+    - -1
+- id: C-C0091
+  question: What effect does instream habitat structures have on invertebrate communities?
+  status: answered
+  direction: mixed
+  certainty: low
+  edge_ids:
+  - camo:edge_e8fa34f97764
+  - camo:edge_1184cf6ad59c
+  - camo:edge_dc771b207e81
+  - camo:edge_d5ab54fec0b8
+  - camo:edge_e72bf1edbb8a
+  - camo:edge_a8efc30ffc19
+  - camo:edge_e26ac6ceb9ca
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:associational_is_not_causal
+  - trap:twin_edges_one_sentence
+  - trap:comparator_reference
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_e8fa34f97764
+    - -1
+  - - camo:edge_1184cf6ad59c
+    - -1
+  - - camo:edge_dc771b207e81
+    - -1
+  - - camo:edge_d5ab54fec0b8
+    - -1
+  - - camo:edge_e72bf1edbb8a
+    - 1
+  - - camo:edge_a8efc30ffc19
+    - 1
+  - - camo:edge_e26ac6ceb9ca
+    - null
+- id: C-C0092
+  question: What effect does mulching the soil surface have on functional trait composition?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: holdout
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0093
+  question: What effect does contaminants & pollution have on methane & N2O emissions?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:empty
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0094
+  question: What effect does peat extraction have on tree species composition & dominance?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0095
+  question: What effect does mulching the soil surface have on number of species?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_e17c4fcfb678
+  - camo:edge_7fb05181b298
+  - camo:edge_4f33eab5d8b0
+  - camo:edge_163ce3fc4f35
+  - camo:edge_77889fe5ed24
+  tags:
+  - class
+  - seed:near_miss
+  - trap:near_miss_classes
+  - answerable
+  - trap:twin_edges_one_sentence
+  - trap:null_is_not_decrease
+  - trap:one_study_many_edges
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_e17c4fcfb678
+    - 1
+  - - camo:edge_7fb05181b298
+    - -1
+  - - camo:edge_4f33eab5d8b0
+    - 0
+  - - camo:edge_163ce3fc4f35
+    - 0
+  - - camo:edge_77889fe5ed24
+    - 0
+- id: C-C0096
+  question: What effect does planting seedlings or transplants have on species diversity
+    and evenness?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: dev
+  source: llm:annotate
+  edge_effects: []
+- id: C-C0097
+  question: What effect does planting & transplanting have on plant biomass & productivity?
+  status: answered
+  direction: increase
+  certainty: very_low
+  edge_ids:
+  - camo:edge_3300cd7cf629
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - recall:engine
+  - trap:associational_is_not_causal
+  - trap:comparator_reference
+  split: dev
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_3300cd7cf629
+    - 1
+- id: C-C0098
+  question: What effect does pollutants and contamination have on soil chemistry?
+  status: answered
+  direction: no_effect
+  certainty: moderate
+  edge_ids:
+  - camo:edge_18900ed1b145
+  tags:
+  - class
+  - seed:evidence
+  - answerable
+  - trap:null_is_not_decrease
+  split: holdout
+  source: llm:annotate
+  edge_effects:
+  - - camo:edge_18900ed1b145
+    - 0
+- id: C-C0099
+  question: What effect does woody debris & structural retention have on seedling
+    & tree survival?
+  status: no_evidence
+  direction: null
+  certainty: null
+  edge_ids: []
+  tags:
+  - class
+  - seed:evidence
+  - empty
+  split: holdout
+  source: llm:annotate
+  edge_effects: []

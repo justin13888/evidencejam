@@ -19,16 +19,21 @@ from camoreasoning import annotate as A
 AUDIT = Path(__file__).resolve().parent / "audit"
 
 
-def read(pattern: str) -> dict[str, dict]:
-    return {r["id"]: r for p in sorted(AUDIT.glob(pattern)) for r in A._read_jsonl(p)}
+def read(pattern: str, where: Path = AUDIT) -> dict[str, dict]:
+    return {r["id"]: r for p in sorted(where.glob(pattern)) for r in A._read_jsonl(p)}
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--reviewer", required=True, help='e.g. "llm:auditor"')
+    ap.add_argument("--task", default="gold", help="gold or class_gold")
+    ap.add_argument("--audit-dir", default=str(AUDIT), help="where part*_blind/verdicts.jsonl live")
+    ap.add_argument("--csv", default=None, help="review CSV to fold into (default: <task dir>/review.csv)")
     args = ap.parse_args()
-    t, path = A.TASKS["gold"], A.task_dir("gold") / "review.csv"
-    blind, verdicts = read("part*_blind.jsonl"), read("part*_verdicts.jsonl")
+    t = A.TASKS[args.task]
+    path = Path(args.csv) if args.csv else A.task_dir(args.task) / "review.csv"
+    where = Path(args.audit_dir)
+    blind, verdicts = read("part*_blind.jsonl", where), read("part*_verdicts.jsonl", where)
     with open(path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         fields, rows = list(reader.fieldnames or []), list(reader)
