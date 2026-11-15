@@ -328,6 +328,8 @@ classes:
   - stream restoration
   - channel restoration
   - large wood placement
+  - built structure*
+  - shoreline structure*
   description: Built structures in streams or shores.
 - id: sediment_removal
   kind: cause
@@ -434,6 +436,8 @@ classes:
   synonyms:
   - elevated co2
   - co2 enrichment
+  - rising co2
+  - atmospheric co2
   - ozone
   - nitrogen deposition
   - atmospheric deposition
