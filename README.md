@@ -2,6 +2,13 @@
 
 Evidence Jam 2026, Lane 2. Ask "What effect does X have on Y?" and it answers from the CAMO (Causal Mosaic) causal graph. Each answer gives the direction, certainty and confidence, cites the edges it rests on, and says so when the graph has no evidence. The default run makes **no LLM calls**. The challenge brief is in [CHALLENGE.md](CHALLENGE.md).
 
+**Quick start** (needs only `python3` >= 3.10; details in [Run](#run)):
+
+```sh
+./run.sh questions.yaml answers.json   # batch: answers.json + evidence pages in outputs/
+./ask.sh "What effect does prescribed burning have on native plant richness?"   # one question of your own
+```
+
 ## Why this design
 
 Every hidden answer is in the graph, so the job is to find the right edges and read them faithfully. About a third of questions have no evidence at all, and saying so is a correct answer. Faithfulness forbids overclaiming, so each answer is decided by fixed rules and written from a template, and its only hedge is the certainty of the evidence. Energy is scored per LLM call, so the judged run makes 0 calls. The LLM is used offline, to label graph nodes, and on the `ask` path only, to read wording the rules can't place.
