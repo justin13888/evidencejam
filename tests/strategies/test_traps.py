@@ -147,6 +147,30 @@ def test_asking_about_an_ending_flips_the_node(graph, make_ctx):
     assert pol(graph, nid) == -1 and [(r.id, r.polarity) for r in side.nodes] == [(nid, 1)]
 
 
+def frame_of(ctx, cause: str, outcome: str) -> Frame:
+    q = Question("q", f"What effect does {cause} have on {outcome}?")
+    return registry.get("linker").link([ParsedQuestion(q, cause, outcome, True)], ctx)[0]
+
+
+def test_widen_finds_an_edge_outside_the_linked_class(make_ctx):
+    """#66, D-Q0002: "litter cover" links `soil_fauna`/`soil_microbial`, but the edges' object "Cover of
+    litter" is in no class. `baseline` finds no forward edge; `widen` adds the nodes the side's own words
+    name and finds both edges."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, "native hay application", "litter cover")
+    assert registry.get("retriever", "baseline").retrieve(frame, ctx).forward == ()
+    wide = registry.get("retriever", "widen").retrieve(frame, ctx)
+    assert {"camo:edge_c84f7fea92b0", "camo:edge_3d7078fca705"} <= set(wide.forward)
+
+
+def test_widen_leaves_a_retrieval_with_edges_alone(make_ctx):
+    """Sides that already share an edge are retrieved exactly as `baseline` retrieves them."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, "prescribed fire", "plant cover")
+    base = registry.get("retriever", "baseline").retrieve(frame, ctx)
+    assert base.forward and registry.get("retriever", "widen").retrieve(frame, ctx) == base
+
+
 def test_unchanged_outcome_is_a_null(graph, ctx):
     """'Soil exchangeable K levels ... remained relatively stable during the chronosequence.'"""
     r = ask(graph, ctx, *ends(graph, "camo:edge_07b5d3056850"))
