@@ -98,9 +98,13 @@ def score(
     gold_ne = sum(1 for g, _ in rows if g.status == "no_evidence")
     cited = [(set(g.edge_ids), set(a.edge_ids)) for g, a in ans if g.edge_ids]
     tags: dict[str, list[bool]] = defaultdict(list)
+    tag_status: dict[str, dict[str, list[bool]]] = defaultdict(lambda: defaultdict(list))
+    status: dict[str, list[bool]] = defaultdict(list)
     for (g, _), ok in zip(rows, correct):
+        status[g.status].append(ok)
         for t in g.tags:
             tags[t].append(ok)
+            tag_status[t][g.status].append(ok)
     n = len(rows) or 1
     return {
         "n": len(rows),
@@ -119,9 +123,18 @@ def score(
         "parse_rate": round(sum(not validate_entry(a.to_json(), edge_ids) for _, a in rows if a) / n, 4),
         "missing": sum(1 for _, a in rows if a is None),
         "calibration": calibration(conf, correct),
-        "by_tag": {t: {"n": len(v), "accuracy": round(sum(v) / len(v), 4)} for t, v in sorted(tags.items())},
+        # Per gold status, so a tag that is mostly gold-answered can be compared with answered items only.
+        "by_gold_status": _acc_by(status),
+        "by_tag": {
+            t: {"n": len(v), "accuracy": round(sum(v) / len(v), 4), "by_gold_status": _acc_by(tag_status[t])}
+            for t, v in sorted(tags.items())
+        },
         "footprint": {k: v for k, v in (footprint or {}).items() if k != "log"},
     } | stage_metrics(gold, traces or (), settings)
+
+
+def _acc_by(groups: dict[str, list[bool]]) -> dict[str, dict]:
+    return {k: {"n": len(v), "accuracy": round(sum(v) / len(v), 4)} for k, v in sorted(groups.items()) if v}
 
 
 def _ratio(num: float, den: float) -> float | None:
@@ -217,7 +230,8 @@ def scorecard(res: dict) -> dict:
         "C calibration": {"ece": cal.get("ece"), "brier": cal.get("brier")},
         "D energy+release": {k: fp.get(k) for k in ("calls_per_question", "tokens_per_question")}
         | {"parse_rate": res.get("parse_rate")},
-        "overall": {"n": res.get("n"), "accuracy": res.get("accuracy"), "by_tag": res.get("by_tag")},
+        "overall": {"n": res.get("n"), "accuracy": res.get("accuracy"), "by_gold_status": res.get("by_gold_status"),
+                    "by_tag": res.get("by_tag")},
     }  # fmt: skip
 
 

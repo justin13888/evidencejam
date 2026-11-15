@@ -363,16 +363,49 @@ def test_every_trap_has_three_dev_items(dev_gold):
     assert {k: len(v) for k, v in by_trap(dev_gold).items() if len(v) < 3} == {}
 
 
-@pytest.mark.xfail(strict=True, raises=AssertionError, reason="end to end, traps fall below overall dev accuracy (#70)")
-def test_trap_accuracy_is_at_least_overall():
-    """`mise run eval`'s by_tag accuracy for each item 7 trap is at or above its overall accuracy."""
+def test_by_gold_status_splits_overall_and_tag_accuracy():
+    """`score` reports accuracy per gold status, overall and per tag, next to the unsplit figures."""
+    from camoreasoning.contracts import Answer, GoldItem
+    from camoreasoning.evaluate import score
+
+    gold = [GoldItem("a", "q", "no_evidence", tags=("t",)), GoldItem("b", "q", "answered", "increase", tags=("t",)),
+            GoldItem("c", "q", "answered", "decrease")]  # fmt: skip
+    answers = [Answer("a", "no_evidence", "x", 0.8, searched_for="s"), Answer("b", "answered", "x", 0.8, "increase"),
+               Answer("c", "answered", "x", 0.8, "increase")]  # fmt: skip
+    res = score(gold, answers)
+    assert res["by_gold_status"] == {"answered": {"n": 2, "accuracy": 0.5}, "no_evidence": {"n": 1, "accuracy": 1.0}}
+    t = res["by_tag"]["t"]
+    assert (t["n"], t["accuracy"]) == (2, 1.0)
+    assert t["by_gold_status"] == {"answered": {"n": 1, "accuracy": 1.0}, "no_evidence": {"n": 1, "accuracy": 1.0}}
+
+
+@pytest.fixture(scope="module")
+def dev_eval():
     from camoreasoning.config import Settings
     from camoreasoning.evaluate import run_eval
 
-    res = run_eval(Settings(), split="dev")
-    short = {k: res["by_tag"][f"trap:{k}"]["accuracy"] for k in ITEM7_TRAPS
-             if res["by_tag"][f"trap:{k}"]["accuracy"] < res["accuracy"]}  # fmt: skip
-    assert short == {}, f"overall {res['accuracy']}"
+    return run_eval(Settings(), split="dev")
+
+
+# Short of the #70 bar on master (dev, 0 calls): answered accuracy 0.4912 overall. Tracked in #76.
+SHORT = {"associational_is_not_causal": 0.4691, "negative_subject_qualifiers": 0.4762}
+
+
+@pytest.mark.parametrize(
+    "trap",
+    [pytest.param(k, marks=pytest.mark.xfail(strict=True, raises=AssertionError, reason=f"{SHORT[k]} < answered "
+                                             "overall (#76)")) if k in SHORT else k for k in ITEM7_TRAPS],
+)  # fmt: skip
+def test_trap_accuracy_is_at_least_overall(dev_eval, trap):
+    """#70 bar: `mise run eval`'s accuracy on the trap's gold-answered items is at or above accuracy on all
+    gold-answered items. Trap tags come from the seed edge, so they are almost all gold-answered, while 96
+    gold no_evidence items lift the unsplit overall; comparing within gold status removes that mix.
+    `reversed_edges` has no gold-answered items, so it is compared on gold no_evidence instead."""
+    tag = dev_eval["by_tag"][f"trap:{trap}"]["by_gold_status"]
+    status = "no_evidence" if trap == "reversed_edges" else "answered"
+    if trap == "reversed_edges":
+        assert "answered" not in tag
+    assert tag[status]["accuracy"] >= dev_eval["by_gold_status"][status]["accuracy"]
 
 
 def test_engine_reads_every_trap_at_least_as_well_as_overall():
