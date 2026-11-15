@@ -171,6 +171,22 @@ def test_widen_leaves_a_retrieval_with_edges_alone(make_ctx):
     assert base.forward and registry.get("retriever", "widen").retrieve(frame, ctx) == base
 
 
+@pytest.mark.parametrize(
+    ("cause", "outcome", "eid"),
+    [("vegetation removal", "dune erosion", "camo:edge_3f81177bc0ae"),  # D-Q0204, "Vegetation removal" [removed]
+     ("invasive fish removal", "amphibian colonization", "camo:edge_eea9e2034298")],  # D-Q0017, goldfish [removed]
+)  # fmt: skip
+def test_a_removal_node_in_a_removal_class_is_the_removal(make_ctx, cause, outcome, eid):
+    """#66: node_labels puts these [removed] nodes at -1 in a class that is itself the removal, so the
+    engine read "removal increases erosion" as a decrease. `widen` counts them +1; `baseline` does not."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, cause, outcome)
+    subject = ctx.graph.edges[eid]["subject"]
+    assert registry.get("retriever", "baseline").retrieve(frame, ctx).cause_nodes[subject] == -1
+    c = registry.get("retriever", "widen").retrieve(frame, ctx)
+    assert c.cause_nodes[subject] == 1 and eid in c.forward
+
+
 def test_focus_narrows_a_class_to_the_words_it_does_not_cover(make_ctx):
     """#66, D-Q0207: "ericaceous shrub cover" links `plant_cover_total`, whose bare ground, tree and herb
     cover edges turned the answer mixed. `focus` keeps the edges whose nodes name the words no linked
