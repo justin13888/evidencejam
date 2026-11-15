@@ -20,6 +20,7 @@ One line per subdirectory: what it tested, whether it won (became a default), an
 | [`renderer/`](renderer/) | Overclaim review of `renderer/faithful` answers, and a consistency check over every answered result. | Yes: `faithful` is the default. | `renderer/review_20.md` |
 | [`results/`](results/) | Not an experiment: the JSON and TSV outputs the other directories write. | n/a | see files |
 | [`scoring_variants/`](scoring_variants/) | The same answers scored under each plausible reading of the organizers' scoring, as a best/worst range. | n/a (eval only) | `results/scoring_variants.md`, `.json` |
+| [`showcase/`](showcase/) | Not an experiment: builds ~13 judged-run examples covering every visible part of the report (each direction, associational-only, both no_evidence kinds, a wrong answer) with optional screenshots, and diffs them against a snapshot after each change. | n/a (review tooling) | [`showcase/README.md`](showcase/README.md), `snapshot.json` |
 | [`traps/`](traps/) | Maps each trap in the inventory to the stage and rule that handles it, and to an end-to-end test. | n/a (tests) | [`traps/README.md`](traps/README.md) |
 
 `verify_node_labels.py` checks `taxonomy/node_labels.jsonl` and draws the samples for `labels/node_label_audit.md`.

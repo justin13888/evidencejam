@@ -1,0 +1,252 @@
+{
+ "C-C0036": {
+  "status": "answered",
+  "direction": "increase",
+  "certainty": "moderate",
+  "confidence": 0.6,
+  "edge_ids": [
+   "camo:edge_3b4060e75715",
+   "camo:edge_324fe490aa1b",
+   "camo:edge_60695e49a3da",
+   "camo:edge_fc41ce598438",
+   "camo:edge_75755154922a",
+   "camo:edge_40203a0ebf9d",
+   "camo:edge_6b15f875c543",
+   "camo:edge_21db328eadf6",
+   "camo:edge_3f033108b797",
+   "camo:edge_6800ea786f3b",
+   "camo:edge_0e7caf04efd3",
+   "camo:edge_5ebc87a79c35",
+   "camo:edge_8a367c3c8045",
+   "camo:edge_c95df332e382",
+   "camo:edge_e550f11f8087",
+   "camo:edge_3a7deaaa4c07",
+   "camo:edge_d9504acf78eb",
+   "camo:edge_df627c8f51c3",
+   "camo:edge_d300437566d4",
+   "camo:edge_981bfb13e035",
+   "camo:edge_4bddee5bc7c9",
+   "camo:edge_5b6c299e190b",
+   "camo:edge_edb7ac42e449",
+   "camo:edge_a3200812c435",
+   "camo:edge_104b005091fd",
+   "camo:edge_d0851c2dd7e5"
+  ],
+  "answer": "Fertilization & nutrient addition probably increases foliar & tissue nutrients (moderate certainty). Across 6 studies: 5 report an increase (Labaj 2014; Pokharel 2016; Schott 2013; +2 more) and 1 a decrease (Thiffault 2006).",
+  "searched_for": null
+ },
+ "C-C0031": {
+  "status": "answered",
+  "direction": "decrease",
+  "certainty": "moderate",
+  "confidence": 0.6,
+  "edge_ids": [
+   "camo:edge_b5d7bac7e91a",
+   "camo:edge_53aec4a2551e",
+   "camo:edge_e6bae6a5042f",
+   "camo:edge_d89fe4d3caf0",
+   "camo:edge_b2fb2128e335"
+  ],
+  "answer": "Competing vegetation probably decreases tree & seedling growth (moderate certainty). Across 2 studies: 2 report a decrease (Bourgeois 2016; Sharma 2010).",
+  "searched_for": null
+ },
+ "C-C0004": {
+  "status": "answered",
+  "direction": "mixed",
+  "certainty": "very_low",
+  "confidence": 0.6,
+  "edge_ids": [
+   "camo:edge_9268944b8aeb",
+   "camo:edge_8ecd7ff1b500",
+   "camo:edge_3b599de2e50d",
+   "camo:edge_fd5b13000066",
+   "camo:edge_4ba4dcd78f3c",
+   "camo:edge_282ad2248b10"
+  ],
+  "answer": "The evidence is very uncertain about the effect of creating or restoring wetlands and marshes on amphibians and reptiles, and the results are mixed (very low certainty). Across 2 studies: 1 reports an increase (Ashpole 2018) and 1 mixed results within the study (Stevens 2002).",
+  "searched_for": null
+ },
+ "C-C0051": {
+  "status": "answered",
+  "direction": "no_effect",
+  "certainty": "low",
+  "confidence": 0.6,
+  "edge_ids": [
+   "camo:edge_7e0b8a0b40b3"
+  ],
+  "answer": "Water table level may have no detectable effect on soil carbon (low certainty). Across 1 study: 1 reports no detectable effect (Khadka 2016).",
+  "searched_for": null
+ },
+ "D-Q0011": {
+  "status": "answered",
+  "direction": "unclear",
+  "certainty": "very_low",
+  "confidence": 0.6,
+  "edge_ids": [
+   "camo:edge_5943ed33473a",
+   "camo:edge_99849eb1e96a",
+   "camo:edge_3bc46b01c1b8",
+   "camo:edge_a8a98d8ffffc",
+   "camo:edge_abd56330e2b6",
+   "camo:edge_782f36bf90c1",
+   "camo:edge_646311c9ffe5"
+  ],
+  "answer": "The evidence is very uncertain about the association between water level minimum and wetland plant assemblage, and no direction can be read from it (very low certainty; associational evidence only). None of the linked claims gives a usable direction.",
+  "searched_for": null
+ },
+ "C-C0006": {
+  "status": "answered",
+  "direction": "increase",
+  "certainty": "low",
+  "confidence": 0.6,
+  "edge_ids": [
+   "camo:edge_f3cb92423b16"
+  ],
+  "answer": "Canopy shade and light levels may be associated with a higher number of species (low certainty; associational evidence only). Across 1 study: 1 reports a positive association (Gonzales 2010).",
+  "searched_for": null
+ },
+ "C-C0026": {
+  "status": "answered",
+  "direction": "increase",
+  "certainty": "very_low",
+  "confidence": 0.6,
+  "edge_ids": [
+   "camo:edge_f06109997d02"
+  ],
+  "answer": "The evidence is very uncertain about the association between temperature & climate warming and bare ground, but it points to temperature & climate warming being associated with higher bare ground (very low certainty; associational evidence only). Across 1 study: 1 reports a positive association (González 2014).",
+  "searched_for": null
+ },
+ "D-Q0065": {
+  "status": "answered",
+  "direction": "mixed",
+  "certainty": "low",
+  "confidence": 0.6,
+  "edge_ids": [
+   "camo:edge_4ec17738dc6f",
+   "camo:edge_bcc6137d71ba",
+   "camo:edge_9e35062af2b1",
+   "camo:edge_fe44dfe5c234",
+   "camo:edge_050c8a66dffe",
+   "camo:edge_ee363d4ecaf2",
+   "camo:edge_23af0f739ba4",
+   "camo:edge_086c4a29d347",
+   "camo:edge_e17870ec1320",
+   "camo:edge_06168ef7b1e2",
+   "camo:edge_7a4abb729871",
+   "camo:edge_553f70cddf73",
+   "camo:edge_ed5dd4b0434b",
+   "camo:edge_02f366f1c6c7",
+   "camo:edge_1d04058f3b30",
+   "camo:edge_7fd63852f9f5",
+   "camo:edge_634f67c5a5c9",
+   "camo:edge_3b7abdbb0d9f",
+   "camo:edge_e482c8e5f79e",
+   "camo:edge_8e72c048bea3",
+   "camo:edge_880e5f1f4d43",
+   "camo:edge_6b9afb321f2c",
+   "camo:edge_98f30b64c321",
+   "camo:edge_bb1bb4aaaa27",
+   "camo:edge_585dbd6dae83",
+   "camo:edge_20a8f4424d68",
+   "camo:edge_d218e167b9d3",
+   "camo:edge_3ea0da1ffa98",
+   "camo:edge_624b3855328f",
+   "camo:edge_7d3aede7cb12",
+   "camo:edge_72711e3c7099",
+   "camo:edge_5ee7288c1b1f",
+   "camo:edge_bf545381d498",
+   "camo:edge_574d67f83afc",
+   "camo:edge_1def71929875",
+   "camo:edge_c19d2f3efe82",
+   "camo:edge_3a741bdb9db7",
+   "camo:edge_c998bcd418f7",
+   "camo:edge_d071ab9334cc",
+   "camo:edge_8b724dfcf30a",
+   "camo:edge_43ca4b5132bd",
+   "camo:edge_d56bdfcd22dc",
+   "camo:edge_6bfff4b7b1a0",
+   "camo:edge_a20f2108aab7",
+   "camo:edge_c22fdcd224e5",
+   "camo:edge_1adb62d51a05",
+   "camo:edge_e9b4b035fff0",
+   "camo:edge_f39c8e313f97",
+   "camo:edge_9bc04fe17c8c",
+   "camo:edge_2b93025ec87c",
+   "camo:edge_79240490983f",
+   "camo:edge_085ea1a98ced",
+   "camo:edge_a4ba3ab8148c"
+  ],
+  "answer": "Studies disagree about the effect of fertilization on seedling diameter (low certainty). Across 12 studies: 7 report an increase (Paradis 2012; Pokharel 2016; Rowland 2001; +4 more), 3 no detectable effect (Lemieux 2005; Pinno 2015; Thiffaul 2010) and 2 mixed results within the study (Duchesne 2013; Schott 2013).",
+  "searched_for": null
+ },
+ "C-C0002": {
+  "status": "no_evidence",
+  "direction": null,
+  "certainty": null,
+  "confidence": 0.6,
+  "edge_ids": [],
+  "answer": "No claim was found because the cause 'rising co2 and air chemistry' matched no class or node in the graph.",
+  "searched_for": "edges whose subject is 'rising co2 and air chemistry', which matched no class or node, and whose object is species richness (plant_richness), 221 graph nodes (measured_attribute species richness, richness, species_richness); relation: any directional predicate from cause to outcome. Found 0 forward edges."
+ },
+ "c3": {
+  "status": "no_evidence",
+  "direction": null,
+  "certainty": null,
+  "confidence": 0.6,
+  "edge_ids": [],
+  "answer": "We couldn't find a cause and an outcome in this question. We answer questions like \"What effect does X have on Y?\"",
+  "searched_for": "No edge search was run. We couldn't find a cause and an outcome in this question. We answer questions like \"What effect does X have on Y?\""
+ },
+ "C-C0001": {
+  "status": "answered",
+  "direction": "mixed",
+  "certainty": "low",
+  "confidence": 0.6,
+  "edge_ids": [
+   "camo:edge_90d4a82cb810",
+   "camo:edge_4d71bcd9c978",
+   "camo:edge_99d23f1bf51f",
+   "camo:edge_d4d0b8b08c58",
+   "camo:edge_30318e4bfdb1",
+   "camo:edge_a832f0207e6b",
+   "camo:edge_940a477b0847",
+   "camo:edge_dd29686f962e",
+   "camo:edge_8e89d4cec80b",
+   "camo:edge_7ee62f323ad6",
+   "camo:edge_23f0e85aca8d",
+   "camo:edge_6d21d7acf2e3",
+   "camo:edge_201d815e88f0",
+   "camo:edge_e2eefa08184e",
+   "camo:edge_17791dba1287",
+   "camo:edge_70d68e59ca2a"
+  ],
+  "answer": "Studies disagree about the effect of mechanical vegetation control on community composition & similarity (low certainty). Across 4 studies: 2 report no detectable effect (Revel 1993; Stover 2017), 1 an increase (Santala 2019) and 1 a decrease (Heineman 2007).",
+  "searched_for": null
+ },
+ "C-C0029": {
+  "status": "no_evidence",
+  "direction": null,
+  "certainty": null,
+  "confidence": 0.6,
+  "edge_ids": [],
+  "answer": "The graph has no claim that competition from other vegetation affects stand structure and basal area.",
+  "searched_for": "edges whose subject is competing vegetation (competing_vegetation), 12 graph nodes, and whose object is stand structure & basal area (stand_structure), 73 graph nodes (measured_attribute stem density, basal area, stocking); relation: any directional predicate from cause to outcome. Found 0 forward edges."
+ },
+ "b4": {
+  "status": "answered",
+  "direction": "increase",
+  "certainty": "very_low",
+  "confidence": 0.6,
+  "edge_ids": [
+   "camo:edge_37f04501fe1c",
+   "camo:edge_00007e7ea8b1",
+   "camo:edge_8a643e9fdcea",
+   "camo:edge_0c374760b2c9",
+   "camo:edge_45b5e3dd1915",
+   "camo:edge_f887490761f3",
+   "camo:edge_df52055abe3f"
+  ],
+  "answer": "The evidence is very uncertain about the association between contaminants & pollution and community composition & similarity, but it points to contaminants & pollution being associated with a change in community composition & similarity (very low certainty; associational evidence only). Across 1 study: 1 reports a positive association (Mocq 2018).",
+  "searched_for": null
+ }
+}
