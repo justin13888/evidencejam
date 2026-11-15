@@ -2835,6 +2835,7 @@
 {"node_id": "camo:node_f19f07cbf56e", "class_id": "moss_bryophyte", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_ea5cf6092bc4", "class_id": "mulch_surface_cover", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_1919910aac29_variable", "class_id": "soil_moisture_water", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_4061edff7d10_variable", "class_id": "soil_physical", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_3cda1f0edef0_variable", "class_id": "plant_richness", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_d1d7c90ca90c_variable", "class_id": "moss_bryophyte", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_74f946a2a223", "class_id": "natural_regeneration", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -3133,7 +3134,9 @@
 {"node_id": "camo:node_d756d3f4ff5e_variable", "class_id": "population_size_trend", "polarity": 1, "score": 0.7, "source": "lexical"}
 {"node_id": "camo:node_08ecf42d7ca9_variable", "class_id": "stand_structure", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_47afc70e0958_variable", "class_id": "stand_structure", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_14daa293eb44", "class_id": "soil_physical", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_fc47c5f8523c", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_1e734cf90191", "class_id": "soil_physical", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_5dd3ccc7b156", "class_id": "moss_bryophyte", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_ce68e33a745f", "class_id": "moss_bryophyte", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_882a5abfaae1", "class_id": "plant_cover_total", "polarity": -1, "score": 0.9, "source": "lexical"}
@@ -5716,7 +5719,6 @@
 {"node_id": "camo:node_766a35228113", "class_id": "community_composition", "polarity": 0, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_6bade2e77d20", "class_id": "community_composition", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_57d64fe82961", "class_id": "community_composition", "polarity": -1, "score": 0.6, "source": "llm"}
-{"node_id": "camo:node_4061edff7d10_variable", "class_id": "soil_physical", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_36d83e5833f6_variable", "class_id": "community_composition", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_3522f30a9a86", "class_id": "community_composition", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_6dfc1b3a724f", "class_id": "native_abundance", "polarity": 1, "score": 0.6, "source": "llm"}
@@ -5750,8 +5752,6 @@
 {"node_id": "camo:node_dd62e289307b", "class_id": "organic_soil_amendment", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_70fa055d0b5b", "class_id": "organic_soil_amendment", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_ed93becd6e97", "class_id": "plant_richness", "polarity": 1, "score": 0.6, "source": "llm"}
-{"node_id": "camo:node_14daa293eb44", "class_id": "soil_temperature", "polarity": -1, "score": 0.6, "source": "llm"}
-{"node_id": "camo:node_1e734cf90191", "class_id": "soil_temperature", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_0b41d5e597f0", "class_id": "plant_cover_total", "polarity": -1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_06298390ece5", "class_id": "native_abundance", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_78e2bfea4156", "class_id": "moss_bryophyte", "polarity": 1, "score": 0.6, "source": "llm"}

@@ -915,6 +915,7 @@ classes:
   - soil texture
   - aggregate stability
   - penetration resistance
+  - active layer
   description: Soil physical properties.
 - id: soil_temperature
   kind: both
