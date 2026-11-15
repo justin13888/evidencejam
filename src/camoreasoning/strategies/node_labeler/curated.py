@@ -5,8 +5,10 @@
    ending in `*` match any word ending. Per node the best two matches by phrase length are kept, so a
    long specific phrase ("seedling survival") beats a short generic one ("survival"). Intervention nodes
    only join cause/both classes.
-2. LLM (offline only, skipped if `ctx.llm` is not configured). Nodes with no lexical label are sent in
-   chunks; the model picks class ids only. Run with CAMOREASONING_MAX_CALLS high enough for the chunks.
+2. LLM (offline only). Nodes with no lexical label are sent in chunks; the model picks class ids only.
+   Run with CAMOREASONING_MAX_CALLS high enough for the chunks. With no `ctx.llm` configured, the
+   committed `llm` labels of nodes that still have no lexical label are kept, so a synonym fix can be
+   rebuilt at 0 calls.
 3. Polarity is never asked of the LLM. It is the node's qualifier sign (`unchanged` -> 0), flipped to -1
    when the name itself says removed/absent/reduced and no qualifier already carries the sign.
 """
@@ -157,8 +159,10 @@ class CuratedLabeler(NodeLabeler):
             for cid, length in found:
                 score = 0.9 if length == top else 0.7
                 out.append(NodeLabel(nid, cid, polarity(nodes[nid], cid), score, "lexical"))
-        if taxonomy.empty or not ctx.llm.available:
+        if taxonomy.empty:
             return out
+        if not ctx.llm.available:  # offline rebuild: keep the committed LLM labels of nodes still unmatched
+            return out + [lb for lb in ctx.taxonomy.labels if lb.source == "llm" and lb.node_id not in hits]
         missing = [nid for nid in nodes if nid not in hits]
         out += self._llm(taxonomy, ctx, missing)
         return out
