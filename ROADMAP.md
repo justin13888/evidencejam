@@ -185,13 +185,18 @@ flowchart LR
     - At least 95% of dev questions get the right classes, including paraphrases.
     - Template questions resolve with 0 calls.
     - Questions with a low match margin go to the LLM, all in one batched call.
+  - **Progress (Sat Nov 14):** `linker/phrase` is the default. It is 0-call: `lexical_v2` first. When a side gets no class, it falls back to class-phrase containment ("mulch application" contains `mulch*`), then to close node matches. On gold dev, retrieval recall rises from 0.07 to 0.49. **Pending:** the ≥95% class-link check, and the LLM fallback (`assisted`) for low margins.
   - **Points:** D17, C14, E12.
-- [ ] **6. Aggregate direction.** ★ 5/5 · B · `interpreter`, `aggregator`
+- [x] **6. Aggregate direction.** ★ 5/5 · B · `interpreter`, `aggregator`
   - **Why:** direction is the biggest share of D17. It needs schema sign composition, one vote per study, nulls counted as findings, and "mixed" when studies disagree.
   - **Done when:** at least 85% direction accuracy on dev answerable items, and the thresholds are tuned on dev only.
     - Agents iterate with `mise run eval` (dev split only). `mise run eval:holdout` scores the holdout; it is run once at the end and reported, never looped on.
   - **Points:** D17.
   - **Progress (Sat Nov 14, #32):** `interpreter/sentence` + `aggregator/studies` merged, not default. All 39 `prevents`/`disrupts` edges are pinned to their sentences: the flip matches 29/30 sign-settled, the schema product 1. The 130 nulls with an `unchanged` subject stay nulls. A tied single study gives `mixed`. Across 704 class pairs, 48 verdicts change vs baseline (`experiments/results/direction_compare.json`). **Pending:** the ≥85% dev check and the default flip once gold lands.
+  - **Done (Sat Nov 14):** the defaults are now `interpreter=sentence`, `aggregator=studies` and `linker=phrase`. Results on gold dev (n = 142, holdout untouched) are in `experiments/results/direction_defaults.json`.
+    - **Oracle direction (the stream B self-check):** 0.91 on 79 answerable items, up from 0.76. The aggregator is fed the gold edge effects.
+    - **End-to-end direction on answerable items:** 0.35, up from 0.08. What remains is retrieval and linking (item 5). Narrow dev questions pull in other studies through whole classes, and unsigned edges get signed.
+    - **Overall:** accuracy 0.57 (was 0.47), ECE 0.030 (was 0.128), 0 calls. no_evidence recall fell from 0.97 to 0.84.
 - [ ] **7. Build the trap suite.** ★ 5/5 · B · `interpreter`, `aggregator`, `tests`
   - **Why:** the hidden set includes questions "written to catch common misreadings".
   - **Done when:** each trap has at least 3 tagged dev items, and `eval` reports accuracy per tag at or above the overall accuracy. The traps:

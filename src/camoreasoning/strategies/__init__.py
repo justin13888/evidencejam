@@ -3,10 +3,10 @@ per run with CAMOREASONING_STRATEGY_<STAGE>=<name>. tests/contracts verifies eve
 
 DEFAULTS: dict[str, str] = {
     "parser": "freeform",
-    "linker": "baseline",
+    "linker": "phrase",
     "retriever": "baseline",
-    "interpreter": "baseline",
-    "aggregator": "baseline",
+    "interpreter": "sentence",
+    "aggregator": "studies",
     "grader": "baseline",
     "calibrator": "baseline",
     "citer": "baseline",
