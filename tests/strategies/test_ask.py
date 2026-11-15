@@ -30,9 +30,7 @@ OFFTEMPLATE = yaml.safe_load((EXPERIMENTS_DIR / "ask" / "offtemplate.yaml").read
 ITEMS, UNCLEAR = OFFTEMPLATE["items"], OFFTEMPLATE["unclear"]
 ASK_STRATEGIES = {"parser": "assisted", "linker": "assisted"}  # what ./ask.sh selects
 ANSWERED_Q = "Does mulching lead to more invasive plants?"
-# Known gaps in llm.py (frozen, other owner); strict xfails so they flip to failures once fixed.
-MALFORMED_URL_BUG = "llm.py lets urllib's ValueError escape for a scheme-less BRINE_URL instead of LLMError"
-# ask.sh's default LLM timeout; llm.py retries a timed-out call once after 2 s, so a hung endpoint costs 2t + 2 s.
+# ask.sh's default LLM timeout; llm.py does not retry a timed-out call, so a hung endpoint costs t.
 ASK_TIMEOUT = re.search(r"LLM_TIMEOUT:-(\d+(?:\.\d+)?)", (ROOT / "ask.sh").read_text()).group(1)
 
 
@@ -65,7 +63,7 @@ def test_card_for_answered_question():
     assert lines[1].startswith("Linked: mulch & surface cover -> invasive / non-native species abundance (via ")
     assert lines[2].startswith("Answer: ")
     assert lines[3].startswith("Direction: ") and "Certainty: " in lines[3] and "Confidence: " in lines[3]
-    assert lines[4].startswith("Cites: ") and lines[4].endswith(" studies")
+    assert lines[4].startswith("Cites: ") and lines[4].endswith((" study", " studies"))
     assert any(x.startswith("Evidence page: ") for x in lines)
     assert lines[-1].startswith("(") and "LLM calls" in lines[-1] and lines[-1].endswith(" tokens)")
 
@@ -188,11 +186,12 @@ def test_dead_llm_never_crashes(url, monkeypatch):
 
 
 @pytest.mark.robust
-@pytest.mark.xfail(strict=True, raises=ValueError, reason=MALFORMED_URL_BUG)
-def test_malformed_llm_url_never_crashes(monkeypatch):
-    monkeypatch.setenv("BRINE_URL", "not a url")
+@pytest.mark.parametrize("url", ["not a url", "example.com/v1", "10.0.0.1/v1"])
+def test_malformed_llm_url_never_crashes(url, monkeypatch):
+    monkeypatch.setenv("BRINE_URL", url)
     monkeypatch.setenv("BRINE_MODEL", "x")
-    _timed_all(["What's the relationship between peatland rewetting and methane emissions?"])
+    for _, _, _, doc in _timed_all(["What's the relationship between peatland rewetting and methane emissions?"]):
+        assert doc["footprint"]["calls"] == 0  # rejected before any request is reserved
 
 
 @pytest.mark.robust

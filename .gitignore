@@ -12,3 +12,6 @@ __pycache__/
 outputs/
 answers.json
 .cache/
+# Local agent worktrees and lockfiles (not part of the submission)
+.claude/worktrees/
+uv.lock
