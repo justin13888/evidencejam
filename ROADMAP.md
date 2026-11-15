@@ -107,6 +107,8 @@ flowchart LR
 - **D3 no_evidence.** It applies when no included vote exists: only reversed edges, only non-directional predicates (moderates, mediates, precedes, regulates), or a non-null edge with an `unchanged` cause. A null (`negated: true`) still votes `no_effect` whatever its qualifiers, because the schema encodes nulls only as negated (clarified Sat Nov 14, #9 audit). `searched_for` names the classes searched and any reversed edges.
 - **D4 Gold certainty.** The median `certainty_grade` of the relevant edges, one level lower if `mixed` or if every edge is associational. Never `high`, because the graph has none.
 - **D5 Gold is independent.** Dev questions are written by a model from graph seeds (edges and random node pairs), not from our taxonomy. Gold finds candidate edges with its own lexical prefilter and reads the sentences. It never uses `node_labels`, the taxonomy or engine code. Any strong model works. Expect a Claude Code session with the `labeler` agent.
+  - **Override for the class set (Sun Nov 15, #47).** `class_gold.yaml` is not fully independent. Its class pairs come from `taxonomy/classes.yaml` (`class_seeds.py`), and each item gets up to 40 candidate edges that the taxonomy places between the two classes. 25 of its 99 items rely on those nominated or recall edges (`experiments/devsets/AUDIT.md`, `experiments/gold/CLASS.md`). The labeller never sees where a candidate came from, and strict membership turned 15 of the 57 taxonomy-evidenced pairs into `no_evidence`, so the bias is reduced, not removed. Class dev can still favour linker or taxonomy changes that agree with our own taxonomy. `gold_annotated.yaml` keeps D5 as written.
+  - **Rule.** For a linker or taxonomy default flip, report class dev (`mise run eval:class`) and node-level dev (`mise run eval:node`, taxonomy-free) side by side, and flip only when both agree. `mise run eval` prints both under `by_file`.
 - **D6 Runtime energy.** 0 LLM calls for template questions, and at most one batched call for the rest. Offline LLM use is unlimited.
 
 ## Owners and Saturday deliverables (done by Sat 18:00)
@@ -333,13 +335,20 @@ flowchart LR
 
 ## Phase 4 — Release (Sun PM)
 
-- [ ] **22. Rehearse a clean-checkout run.** ★ 5/5 · D · `scripts/`
+- [x] **22. Rehearse a clean-checkout run.** ★ 5/5 · D · `scripts/`
   - **Why:** it protects R8 and guards against halving all 60 scripted points.
   - **Done when:**
     - `mise run judge-sim` passes: ARM64, Python 3.10, offline with a dead LLM.
     - A real endpoint run passes from a fresh clone.
     - 500 questions finish in under 60 s.
   - **Points:** R8, P9, all 60.
+  - **Done (Sun Nov 15, master `3f2e3be` defaults):**
+    - `mise run judge-sim` passes in `python:3.10-slim`, arm64 (the script now falls back to Docker when podman is missing). Network-on run: 10 answers, 0 errors. `--network none` with an unreachable LLM: 10 answers, 0 errors, parse rate 1.0.
+    - `scripts/clean_run.sh` with the real endpoint, from a fresh clone with mise off PATH: 10 answers valid, 1.6 s wall including venv setup.
+    - 500 questions (`experiments/release/questions_500.yaml`: the 10 competency questions, every devset question, then seeded class-pair templates; timing only, never scored), fresh clone: 1.7 s cold including venv setup, 1.5 s warm with the real endpoint, 2.0 s with a dead LLM. All 500 valid, 261 answered and 239 no_evidence.
+    - Every run made 0 LLM calls: the current defaults link `questions.yaml` and all 500 questions without the endpoint, so the dead-LLM run takes the same path as the live one. `ask.sh` (`assisted` linker) is the only path that calls the LLM, and it is not part of the judged run.
+    - **Re-run after #80 flipped the interpreter default to `unsigned` (master `741907f`; x86_64 host, arm64 via qemu):** judge-sim passes in 80 s total. Both runs: 10 answers, 0 errors, parse rate 1.0, 0 calls. `clean_run.sh` with the real endpoint: valid, 0.4 s. 500 questions in a fresh clone: 1.1 s cold, 1.0 s warm with the real endpoint, 1.0 s with a dead LLM. All 500 valid, 261 answered and 239 no_evidence, 0 calls. The timing set regenerates byte-identical.
+    - **Re-run before the tag (item 23).** This is a gate, not a one-off: run `mise run judge-sim` and `scripts/clean_run.sh` again after any default flip, including #16 if it lands.
 - [ ] **23. Freeze and submit.** ★ 5/5 · all
   - **Why:** only the last commit before 18:00 counts.
   - **Done when:** feature freeze is 16:00. Defaults are set to the best eval, `mise run ci` is green, the commit is tagged `submission`, and no `.env` or keys are in history.

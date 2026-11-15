@@ -54,11 +54,24 @@ def _path(value: str | None) -> Path | None:
     return p if p.is_absolute() else ROOT / p
 
 
+def stage_overrides(raw: Mapping[str, str], where: str) -> dict[str, str]:
+    """{stage: name} with whitespace stripped and stages lower-cased. An unknown stage is an error: silently
+    keeping the default would score the wrong strategy (#51). Empty names are dropped."""
+    out = {}
+    for key, name in raw.items():
+        stage = key.strip().lower()
+        if stage not in STAGES:
+            raise ValueError(f"unknown stage {key!r} in {where}; stages: {', '.join(STAGES)}")
+        if name.strip():
+            out[stage] = name.strip()
+    return out
+
+
 def load_settings(env: Mapping[str, str] | None = None, **overrides) -> Settings:
     """Read settings from the environment. `CAMOREASONING_STRATEGY_<STAGE>=name` selects a strategy."""
     env = os.environ if env is None else env
     prefix = "CAMOREASONING_STRATEGY_"
-    strategies = {k[len(prefix) :].lower(): v for k, v in env.items() if k.startswith(prefix) and v}
+    strategies = stage_overrides({k[len(prefix) :]: v for k, v in env.items() if k.startswith(prefix)}, prefix + "*")
     s = Settings(
         team=env.get("CAMOREASONING_TEAM") or Settings.team,
         llm_url=env.get("BRINE_URL") or None,
@@ -72,6 +85,6 @@ def load_settings(env: Mapping[str, str] | None = None, **overrides) -> Settings
         strategies=strategies,
     )
     if overrides:
-        merged = {**s.strategies, **overrides.pop("strategies", {})}
+        merged = {**s.strategies, **stage_overrides(overrides.pop("strategies", {}), "strategy overrides")}
         s = Settings(**{**s.__dict__, **overrides, "strategies": merged})
     return s

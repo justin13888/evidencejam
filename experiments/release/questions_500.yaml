@@ -1,0 +1,1012 @@
+# Timing set for ROADMAP item 22. Built by questions_500.py; no gold, never scored.
+questions:
+- id: t001
+  question: Which seed-mix species establish, persist and self-seed in each Ontario ELC ecosite type (e.g. dry/wet deciduous
+    forest, meadow, riparian)?
+- id: t002
+  question: For tree planting in Canadian forest restoration, how do planting-stock traits (seedling size, nursery fertilization,
+    mycorrhizal inoculation) affect survival and growth, and how do competing vegetation and site preparation change that?
+- id: t003
+  question: How long do created marshes take to reach biodiversity and function comparable to natural reference wetlands,
+    and which attributes lag?
+- id: t004
+  question: After wildfire in boreal forests, what controls natural conifer regeneration (fire interval, fire severity, seed
+    supply, seedbed type), and which conditions signal that regeneration will fail without active restoration?
+- id: t005
+  question: For grassland restoration in Canada, which intervention-outcome combinations have little or no evidence, and where
+    is the graph densest?
+- id: t006
+  question: Which forestry practices (partial harvesting versus clearcutting, retained woody debris, riparian retention) maintain
+    biodiversity or speed its recovery in Canadian forests?
+- id: t007
+  question: Which restoration actions, such as peatland rewetting, moss layer transfer or salt marsh realignment, turn degraded
+    sites back into carbon sinks, and what happens to methane emissions?
+- id: t008
+  question: When herbicides such as glyphosate are used against invasive plants in grassland restoration, do they also reduce
+    native plant cover and richness?
+- id: t009
+  question: What lethal and sub-lethal effects do contaminants such as oil sands tailings, PCBs and acid deposition have on
+    wildlife and aquatic communities, and do remediation actions allow them to recover?
+- id: t010
+  question: Where restoration sites face several stressors at once (for example deer browsing plus competing vegetation, harvesting
+    plus drought, or repeated fires), do the stressors interact, and which one most limits recovery?
+- id: t011
+  question: What effect does mechanical vegetation control have on community composition & similarity?
+- id: t012
+  question: What effect does rising co2 and air chemistry have on the number of species?
+- id: t013
+  question: What effect does releasing captive-reared or translocated animals have on fish numbers, growth and survival?
+- id: t014
+  question: What effect does creating or restoring wetlands and marshes have on amphibians and reptiles?
+- id: t015
+  question: What effect does competing vegetation have on species richness?
+- id: t016
+  question: What effect does canopy shade and light levels have on the number of species?
+- id: t017
+  question: What effect does restoration work in general have on abundance and cover of native species?
+- id: t018
+  question: What effect does sediment & contaminated soil removal have on bird abundance & occupancy?
+- id: t019
+  question: What effect does adding compost or other soil amendments have on survival of seedlings and trees?
+- id: t020
+  question: What effect does mulching the soil surface have on soil microbes, fungi and mycorrhizas?
+- id: t021
+  question: What effect does how wet the soil is have on which species make up the community?
+- id: t022
+  question: What effect does visitor trampling and recreation have on overall plant cover?
+- id: t023
+  question: What effect does logging and timber harvest have on soil compaction and structure?
+- id: t024
+  question: What effect does built structures in streams and shorelines have on mammal numbers and habitat use?
+- id: t025
+  question: What effect does cutting or mowing competing vegetation have on the number of species?
+- id: t026
+  question: What effect does time since disturbance / stand age have on fish abundance, growth & survival?
+- id: t027
+  question: What effect does temperature & climate warming have on predation, seed consumption & damage?
+- id: t028
+  question: What effect does soil moisture & water content have on methane & N2O emissions?
+- id: t029
+  question: What effect does reintroduction, stocking & captive rearing have on insects & aquatic invertebrates?
+- id: t030
+  question: What effect does site preparation & scarification have on erosion & sediment loss?
+- id: t031
+  question: What effect does prescribed fire have on abundance and cover of native species?
+- id: t032
+  question: What effect does water table & water level have on bare ground?
+- id: t033
+  question: What effect does mulching the soil surface have on overall plant cover?
+- id: t034
+  question: What effect does pollution and contaminants have on ecosystem carbon dioxide exchange?
+- id: t035
+  question: What effect does reintroduction, stocking & captive rearing have on diversity indices (Shannon, evenness)?
+- id: t036
+  question: What effect does temperature & climate warming have on bare ground?
+- id: t037
+  question: What effect does leaving dead wood and retained trees have on overall plant cover?
+- id: t038
+  question: What effect does how wet the soil is have on natural seedling recruitment?
+- id: t039
+  question: What effect does competition from other vegetation have on stand structure and basal area?
+- id: t040
+  question: What effect does invasive / non-native species presence have on population size & trend?
+- id: t041
+  question: What effect does competing vegetation have on tree & seedling growth?
+- id: t042
+  question: What effect does organic & soil amendments have on tree & seedling growth?
+- id: t043
+  question: What effect does trampling & recreation have on water table & water level?
+- id: t044
+  question: What effect does adding compost or other soil amendments have on abundance and cover of native species?
+- id: t045
+  question: What effect does time since disturbance or stand age have on abundance and cover of native species?
+- id: t046
+  question: What effect does fertilization & nutrient addition have on foliar & tissue nutrients?
+- id: t047
+  question: What effect does in-stream & engineered structures have on soil microbes, fungi & mycorrhizae?
+- id: t048
+  question: What effect does mulch & surface cover have on seedling & tree survival?
+- id: t049
+  question: What effect does organic & soil amendments have on species richness?
+- id: t050
+  question: What effect does temperature & microclimate have on community composition & similarity?
+- id: t051
+  question: What effect does rewetting and restoring hydrology have on shannon diversity and evenness?
+- id: t052
+  question: What effect does invasive / non-native species presence have on fish abundance, growth & survival?
+- id: t053
+  question: What effect does grazing & browsing have on stand structure & basal area?
+- id: t054
+  question: What effect does organic & soil amendments have on breeding & reproductive success?
+- id: t055
+  question: What effect does partial harvesting & selective cutting have on soil & litter invertebrates?
+- id: t056
+  question: What effect does planting nursery stock or transplants have on survival of seedlings and trees?
+- id: t057
+  question: What effect does mechanical vegetation control have on seedling & tree survival?
+- id: t058
+  question: What effect does herbicide application have on flowering, seed production & reproduction?
+- id: t059
+  question: What effect does fertilization & nutrient addition have on tree species composition & dominance?
+- id: t060
+  question: What effect does fertilization & nutrient addition have on soil pH & chemistry?
+- id: t061
+  question: What effect does water table level have on soil carbon?
+- id: t062
+  question: What effect does soil preparation before planting have on species diversity and evenness?
+- id: t063
+  question: What effect does cutting or mowing competing vegetation have on plant physiological stress?
+- id: t064
+  question: What effect does competing vegetation have on diversity indices (Shannon, evenness)?
+- id: t065
+  question: What effect does herbicide application have on diversity indices (Shannon, evenness)?
+- id: t066
+  question: What effect does timber harvesting have on fish populations?
+- id: t067
+  question: What effect does local temperature and microclimate have on invasive species cover?
+- id: t068
+  question: What effect does herbicide application have on total vegetation cover?
+- id: t069
+  question: What effect does wildfire and fire history have on fish populations?
+- id: t070
+  question: What effect does adding organic soil amendments have on soil fertility?
+- id: t071
+  question: What effect does time since disturbance have on ecosystem carbon dioxide exchange?
+- id: t072
+  question: What effect does fertilization & nutrient addition have on soil nutrients & fertility?
+- id: t073
+  question: What effect does organic & soil amendments have on soil organic matter & carbon?
+- id: t074
+  question: What effect does pollutants and contamination have on functional trait composition?
+- id: t075
+  question: What effect does restoring hydrology have on bare soil cover?
+- id: t076
+  question: What effect does time since disturbance / stand age have on natural regeneration & recruitment?
+- id: t077
+  question: What effect does trampling & recreation have on moss & bryophyte cover?
+- id: t078
+  question: What effect does wildfire and fire history have on overall plant cover?
+- id: t079
+  question: What effect does mulch & surface cover have on moss & bryophyte cover?
+- id: t080
+  question: What effect does mechanical vegetation control have on total vegetation cover?
+- id: t081
+  question: What effect does site and soil characteristics have on soil chemistry?
+- id: t082
+  question: What effect does controlled burning have on functional trait composition?
+- id: t083
+  question: What effect does water table & water level have on native species abundance & cover?
+- id: t084
+  question: What effect does controlled burning have on water table level?
+- id: t085
+  question: What effect does releasing captive-reared or translocated animals have on breeding success?
+- id: t086
+  question: What effect does pollutants and contamination have on water quality and contaminant levels?
+- id: t087
+  question: What effect does temperature & climate warming have on animal condition, growth & health?
+- id: t088
+  question: What effect does fertilization & nutrient addition have on species richness?
+- id: t089
+  question: What effect does woody debris & structural retention have on species richness?
+- id: t090
+  question: What effect does tree shelters & protection have on soil & litter invertebrates?
+- id: t091
+  question: What effect does water table & water level have on seed germination & emergence?
+- id: t092
+  question: What effect does wildfire and fire history have on ecosystem carbon dioxide exchange?
+- id: t093
+  question: What effect does selective logging have on soil erosion and sediment loss?
+- id: t094
+  question: What effect does inoculating soil with microbes have on plant productivity?
+- id: t095
+  question: What effect does site preparation & scarification have on invasive / non-native species abundance?
+- id: t096
+  question: What effect does instream habitat structures have on species composition?
+- id: t097
+  question: What effect does fertilizing or liming have on plant productivity?
+- id: t098
+  question: What effect does trampling & recreation have on diversity indices (Shannon, evenness)?
+- id: t099
+  question: What effect does time since disturbance have on local temperature and microclimate?
+- id: t100
+  question: What effect does time since disturbance / stand age have on animal survival & mortality?
+- id: t101
+  question: What effect does instream habitat structures have on invertebrate communities?
+- id: t102
+  question: What effect does mulching the soil surface have on functional trait composition?
+- id: t103
+  question: What effect does contaminants & pollution have on methane & N2O emissions?
+- id: t104
+  question: What effect does peat extraction have on tree species composition & dominance?
+- id: t105
+  question: What effect does mulching the soil surface have on number of species?
+- id: t106
+  question: What effect does planting seedlings or transplants have on species diversity and evenness?
+- id: t107
+  question: What effect does planting & transplanting have on plant biomass & productivity?
+- id: t108
+  question: What effect does pollutants and contamination have on soil chemistry?
+- id: t109
+  question: What effect does woody debris & structural retention have on seedling & tree survival?
+- id: t110
+  question: What effect does winter road clearance have on surface elevation?
+- id: t111
+  question: What effect does native hay application have on litter cover?
+- id: t112
+  question: What effect does time period have on fruiting potential?
+- id: t113
+  question: What effect does zooplankton reintroduction have on chlorophyll concentration?
+- id: t114
+  question: What effect does deer presence have on adult tree density?
+- id: t115
+  question: What effect does artificial nesting structures have on accumulated heat units?
+- id: t116
+  question: What effect does mulch application have on native shrub and tree seedling density?
+- id: t117
+  question: What effect does amphibian abundance have on fish biomass?
+- id: t118
+  question: What effect does site location have on nestling survival?
+- id: t119
+  question: What effect does mulch application have on standing crop?
+- id: t120
+  question: What effect does water level minimum have on wetland plant assemblage?
+- id: t121
+  question: What effect does vegetation removal have on turbulent kinetic energy?
+- id: t122
+  question: What effect does water table position have on vegetation composition?
+- id: t123
+  question: What effect does water level have on suspended solids concentration?
+- id: t124
+  question: What effect does tree cover removal have on tree cover?
+- id: t125
+  question: What effect does conifer seedling establishment have on organic matter thickness?
+- id: t126
+  question: What effect does invasive fish removal have on amphibian colonization?
+- id: t127
+  question: What effect does sulphate concentration have on alkalinity?
+- id: t128
+  question: What effect does forest floor and soil removal have on fungal species richness?
+- id: t129
+  question: What effect does water velocity have on sediment infilling?
+- id: t130
+  question: What effect does seeding method have on native species cover?
+- id: t131
+  question: What effect does plot type have on vegetation cover?
+- id: t132
+  question: What effect does water chemistry and fish have on zooplankton composition?
+- id: t133
+  question: What effect does bird nest survival have on time period?
+- id: t134
+  question: What effect does breeding timing have on nest parasitism?
+- id: t135
+  question: What effect does sediment depth have on volatile solids concentration?
+- id: t136
+  question: What effect does restoration status have on microbial biomass?
+- id: t137
+  question: What effect does habitat restoration status have on bird fledgling number?
+- id: t138
+  question: What effect does position within harvest strip have on vascular plant cover?
+- id: t139
+  question: What effect does passive restoration have on understorey plant composition?
+- id: t140
+  question: What effect does harvest method have on conifer height structure?
+- id: t141
+  question: What effect does zooplankton presence have on lake acidification?
+- id: t142
+  question: What effect does proximity to linear disturbances have on large mammal movement?
+- id: t143
+  question: What effect does deciduous tree cover have on conifer volume growth?
+- id: t144
+  question: What effect does salmonid abundance have on fish abundance?
+- id: t145
+  question: What effect does reclaimed mine land have on bird fledging success?
+- id: t146
+  question: What effect does geographic distance have on seed production?
+- id: t147
+  question: What effect does tree planting density have on soil temperature?
+- id: t148
+  question: What effect does old growth status have on spring flowering plant proportion?
+- id: t149
+  question: What effect does egg-to-predator ratio have on lake location?
+- id: t150
+  question: What effect does release technique have on predation mortality?
+- id: t151
+  question: What effect does slow release fertilizer application have on plant leaf area?
+- id: t152
+  question: What effect does biosolids application have on forb frequency?
+- id: t153
+  question: What effect does herbicide disturbance treatment have on grass reproductive effort?
+- id: t154
+  question: What effect does brood parasitism have on nest survival?
+- id: t155
+  question: What effect does river regulation have on flow conditions?
+- id: t156
+  question: What effect does combined mowing, burning and herbicide have on native graminoid cover?
+- id: t157
+  question: What effect does beaver lodge activity have on burn frequency?
+- id: t158
+  question: What effect does vegetation suppression have on planted tree cover?
+- id: t159
+  question: What effect does insect defoliation have on forest floor carbon to nitrogen ratio?
+- id: t160
+  question: What effect does disturbed area presence have on large mammal avoidance?
+- id: t161
+  question: What effect does undisturbed stands have on exotic plant presence?
+- id: t162
+  question: What effect does mulching have on non-native plant shoot density?
+- id: t163
+  question: What effect does moisture retention cover layer have on water metal concentration?
+- id: t164
+  question: What effect does edge habitat presence have on large mammal habitat selection?
+- id: t165
+  question: What effect does tree height growth have on tree planting?
+- id: t166
+  question: What effect does herbicide application have on soil moisture?
+- id: t167
+  question: What effect does season have on bee abundance?
+- id: t168
+  question: What effect does winter road clearance have on bryophyte cover?
+- id: t169
+  question: What effect does causeway breaching have on fish presence?
+- id: t170
+  question: What effect does cutting treatment have on conifer seedling survival?
+- id: t171
+  question: What effect does habitat type have on bryophyte species richness?
+- id: t172
+  question: What effect does conifer recruit abundance have on fire history?
+- id: t173
+  question: What effect does fertilization have on seedling diameter?
+- id: t174
+  question: What effect does water pH have on dissolved organic carbon concentration?
+- id: t175
+  question: What effect does habitat variable weighting have on fish habitat suitability?
+- id: t176
+  question: What effect does eelgrass cover have on fish density?
+- id: t177
+  question: What effect does water table depth have on litter decomposition rate?
+- id: t178
+  question: What effect does water alkalinity have on zooplankton abundance?
+- id: t179
+  question: What effect does time since restoration have on insect catch per unit effort?
+- id: t180
+  question: What effect does tree height and diameter have on site preparation?
+- id: t181
+  question: What effect does slash cover have on tree sucker density?
+- id: t182
+  question: What effect does time since clearcutting have on tree species presence?
+- id: t183
+  question: What effect does catchment identity have on leaf litter mass loss?
+- id: t184
+  question: What effect does culvert retrofitting have on fish passage?
+- id: t185
+  question: What effect does time since protection have on fish family richness?
+- id: t186
+  question: What effect does stream velocity have on fish habitat preference?
+- id: t187
+  question: What effect does wetland habitat presence have on vascular plant species richness?
+- id: t188
+  question: What effect does plant cover have on seed mix application?
+- id: t189
+  question: What effect does site remediation have on metal concentrations in animal tissue?
+- id: t190
+  question: What effect does peat thickness have on aquatic plant assemblage presence?
+- id: t191
+  question: What effect does peat mining have on forest bird density?
+- id: t192
+  question: What effect does site preparation have on plant vigor?
+- id: t193
+  question: What effect does organic matter input have on macroinvertebrate diversity?
+- id: t194
+  question: What effect does microbial biomass have on soil respiration rate?
+- id: t195
+  question: What effect does fish farm closure have on sediment organic matter concentration?
+- id: t196
+  question: What effect does seed mortality have on herbicide treatment?
+- id: t197
+  question: What effect does liming have on algal biomass?
+- id: t198
+  question: What effect does release location have on animal dispersal direction?
+- id: t199
+  question: What effect does soil texture have on soil microbial community structure?
+- id: t200
+  question: What effect does site location have on bird nest success?
+- id: t201
+  question: What effect does soft release have on captive-reared bird survival?
+- id: t202
+  question: What effect does metal concentration have on zooplankton community composition?
+- id: t203
+  question: What effect does vulnerability ranking have on flowering phenology?
+- id: t204
+  question: What effect does plant photosynthetic performance have on water type?
+- id: t205
+  question: What effect does time since disturbance have on bee species richness?
+- id: t206
+  question: What effect does peatland edge location have on water pH?
+- id: t207
+  question: What effect does breeding timing have on bird fledging success?
+- id: t208
+  question: What effect does invasive fish abundance have on native fish abundance?
+- id: t209
+  question: What effect does vertical cover have on browsing incidence?
+- id: t210
+  question: What effect does treatment type have on hydrocarbon degradation rate?
+- id: t211
+  question: What effect does conifer leaf mass have on coversoil?
+- id: t212
+  question: What effect does liming have on soil chemistry?
+- id: t213
+  question: What effect does ash addition have on graminoid seedling emergence?
+- id: t214
+  question: What effect does treatment site type have on small mammal survival?
+- id: t215
+  question: What effect does forest floor mixing have on conifer seedling biomass?
+- id: t216
+  question: What effect does prescribed fire have on soil nutrient availability?
+- id: t217
+  question: What effect does seedling age have on ectomycorrhizal fungal community composition?
+- id: t218
+  question: What effect does organic matter biomass have on macroinvertebrate abundance?
+- id: t219
+  question: What effect does invertebrate biomass have on invasive crayfish introduction?
+- id: t220
+  question: What effect does acidic deposition have on lake water pH?
+- id: t221
+  question: What effect does invasive crayfish presence have on benthic algae abundance?
+- id: t222
+  question: What effect does herbicide application have on native grass cover?
+- id: t223
+  question: What effect does fertilization have on soil nutrient supply rate?
+- id: t224
+  question: What effect does seedling height have on browsing incidence?
+- id: t225
+  question: What effect does seeding have on forb cover?
+- id: t226
+  question: What effect does surface roughness have on deciduous seedling establishment?
+- id: t227
+  question: What effect does bird hatching success have on food supplementation?
+- id: t228
+  question: What effect does initial starch concentration have on root and stem carbohydrate concentration?
+- id: t229
+  question: What effect does water permanency have on habitat stabilization?
+- id: t230
+  question: What effect does growing season flow have on ground beetle community composition?
+- id: t231
+  question: What effect does habitat type have on willow family seedling mortality?
+- id: t232
+  question: What effect does reclamation age have on tree water potential?
+- id: t233
+  question: What effect does logging have on conifer seedling browse damage?
+- id: t234
+  question: What effect does genetic origin of fish have on species richness of vulnerable species?
+- id: t235
+  question: What effect does sod transplantation have on fish rearing habitat area?
+- id: t236
+  question: What effect does nitrogen addition have on native grass seedling survival?
+- id: t237
+  question: What effect does soil mixing have on hardwood seedling size?
+- id: t238
+  question: What effect does moss dominance have on foliar tannin concentration?
+- id: t239
+  question: What effect does tree shoot to root ratio have on herb diversity?
+- id: t240
+  question: What effect does straw mulch addition have on seedling height to diameter ratio?
+- id: t241
+  question: What effect does donor soil application have on large tree abundance?
+- id: t242
+  question: What effect does incubation temperature have on total plant cover?
+- id: t243
+  question: What effect does controlled-release fertilizer application have on seedling emergence rate?
+- id: t244
+  question: What effect does slash cover have on bare ground cover?
+- id: t245
+  question: What effect does site disturbance have on non-native grass cover?
+- id: t246
+  question: What effect does depositional invertebrate abundance have on soil organic matter concentration?
+- id: t247
+  question: What effect does prescribed burning have on large tree abundance?
+- id: t248
+  question: What effect does brood parasite egg removal have on aspen sucker height?
+- id: t249
+  question: What effect does time since restoration have on ectomycorrhizal formation?
+- id: t250
+  question: What effect does nitrogen addition have on water temperature?
+- id: t251
+  question: What effect does microbial biomass nitrogen have on native species evenness?
+- id: t252
+  question: What effect does old growth forest have on benthic invertebrate biomass?
+- id: t253
+  question: What effect does pollution source remediation have on conifer tree stem diameter?
+- id: t254
+  question: What effect does wild versus hatchery-reared origin have on fish presence?
+- id: t255
+  question: What effect does environmental conditions have on weedy plant abundance?
+- id: t256
+  question: What effect does hunting have on riparian bird abundance?
+- id: t257
+  question: What effect does peat depth have on allele frequencies?
+- id: t258
+  question: What effect does old growth forest have on forest bird density?
+- id: t259
+  question: What effect does hatchery-reared fish have on soil hydraulic conductivity?
+- id: t260
+  question: What effect does terrain position have on forest bird density?
+- id: t261
+  question: What effect does shrub cover have on plant species richness?
+- id: t262
+  question: What effect does soil nitrate concentration have on moss cover?
+- id: t263
+  question: What effect does time since restoration have on understory plant cover?
+- id: t264
+  question: What effect does soil texture have on water velocity?
+- id: t265
+  question: What effect does invasive fish removal have on soil ammonium concentration?
+- id: t266
+  question: What effect does pyrogenic carbon addition have on stem density?
+- id: t267
+  question: What effect does tree foliage growth have on tree dominance?
+- id: t268
+  question: What effect does season have on soil bulk density?
+- id: t269
+  question: What effect does site presence have on tree growth?
+- id: t270
+  question: What effect does habitat restoration have on seedling stem diameter growth?
+- id: t271
+  question: What effect does pond construction or enhancement have on invasive fish presence?
+- id: t272
+  question: What effect does fish size have on soil available nitrogen?
+- id: t273
+  question: What effect does regulation changes have on herb cover?
+- id: t274
+  question: What effect does season have on salmon escapement?
+- id: t275
+  question: What effect does water trace metal and ion concentration have on metal concentration in crustacean tissue?
+- id: t276
+  question: What effect does timing of breeding have on forb diversity?
+- id: t277
+  question: What effect does ground cover treatment type have on saprophage species richness?
+- id: t278
+  question: What effect does container type for forb transplants have on plant tissue potassium concentration?
+- id: t279
+  question: What effect does primary productivity have on benthic invertebrate diversity?
+- id: t280
+  question: What effect does straw amendment have on forest floor extractable phosphorus?
+- id: t281
+  question: What effect does liming have on plant taxon frequency?
+- id: t282
+  question: What effect does graminoid cover have on soil exchangeable calcium and magnesium?
+- id: t283
+  question: What effect does substrate application have on streamflow?
+- id: t284
+  question: What effect does restoration treatments have on planted conifer stem diameter?
+- id: t285
+  question: What effect does harvest method have on soil basal respiration?
+- id: t286
+  question: What effect does site preparation have on algal biomass?
+- id: t287
+  question: What effect does lead residues in small mammals have on water content stability?
+- id: t288
+  question: What effect does water velocity have on spawning habitat sedimentation?
+- id: t289
+  question: What effect does tree caging have on tree breakage?
+- id: t290
+  question: What effect does tree shelters have on tree seedling height growth?
+- id: t291
+  question: What effect does seed mix type have on plant community diversity?
+- id: t292
+  question: What effect does environmental flows have on extreme low flow frequency?
+- id: t293
+  question: What effect does rewetting have on ericaceous shrub cover?
+- id: t294
+  question: What effect does organic matter accumulation have on water table decline?
+- id: t295
+  question: What effect does tree shelters have on tree seedling biomass growth?
+- id: t296
+  question: What effect does old growth forest have on tree diversity?
+- id: t297
+  question: What effect does riverbank stabilization have on riparian plant species richness?
+- id: t298
+  question: What effect does partial harvesting have on clubmoss diversity?
+- id: t299
+  question: What effect does partial harvesting have on plant life-form composition?
+- id: t300
+  question: What effect does time have on tree seedling density?
+- id: t301
+  question: What effect does time since harvesting have on dominant plant species composition?
+- id: t302
+  question: What effect does straw mulch have on carbon dioxide production?
+- id: t303
+  question: What effect does large tree planting have on tree toppling?
+- id: t304
+  question: What effect does host species and cover soil have on ectomycorrhizal fungus colonization?
+- id: t305
+  question: What effect does restored site soil have on forb mycorrhizal infection rate?
+- id: t306
+  question: What effect does lead contamination have on small mammal body condition?
+- id: t307
+  question: What effect does root fragment diameter have on root fragment mortality?
+- id: t308
+  question: What effect does mounding have on soil temperature?
+- id: t309
+  question: What effect does alder planting have on soil nitrogen mineralization?
+- id: t310
+  question: What effect does lake ph have on aquatic insect abundance?
+- id: t311
+  question: What effect does vegetation removal have on dune erosion?
+- id: t312
+  question: What effect does sulphate concentration have on acidity?
+- id: t313
+  question: What effect does cessation of synthetic estrogen addition have on fish reproductive health?
+- id: t314
+  question: What effect does abandonment of peat harvesting have on ericaceous shrub cover?
+- id: t315
+  question: What effect does shelter from wind and waves have on riparian grass presence?
+- id: t316
+  question: What effect does year of seed addition have on forb cover?
+- id: t317
+  question: What effect does site age have on plant community similarity to natural forest?
+- id: t318
+  question: What effect does nitrate concentration have on nitrate concentration?
+- id: t319
+  question: What effect does water level have on moss cover?
+- id: t320
+  question: What effect does peatland restoration have on peat carbon dioxide production?
+- id: t321
+  question: What effect does mulching have on specific leaf area?
+- id: t322
+  question: What effect does smoke treatment have on forb seedling emergence?
+- id: t323
+  question: What effect does absence of ground protection barrier have on forest floor disturbance?
+- id: t324
+  question: What effect does pipeline right-of-way have on grass cover?
+- id: t325
+  question: What effect does time since clearcutting and slash burning have on shade-tolerant plant cover?
+- id: t326
+  question: What effect does ending deer exclusion have on deciduous stem density?
+- id: t327
+  question: What effect does ash addition have on forb seedling species richness?
+- id: t328
+  question: What effect does wildfire have on unrecovered forest area?
+- id: t329
+  question: What effect does nickel concentration have on zooplankton community composition?
+- id: t330
+  question: What effect does forest floor cover soil have on conifer stem biomass?
+- id: t331
+  question: What effect does cutting and herbicide treatment have on non-native forb reproduction?
+- id: t332
+  question: What effect does root fragment burial depth have on root fragment mortality?
+- id: t333
+  question: What effect does competition release have on tree height?
+- id: t334
+  question: What effect does bank stabilization structures have on riparian shrub presence?
+- id: t335
+  question: What effect does sedge presence and high water table have on soil microbial biomass?
+- id: t336
+  question: What effect does time since road abandonment have on vascular plant species richness?
+- id: t337
+  question: What effect does forest floor mixing have on seedling height growth?
+- id: t338
+  question: What effect does mulching have on forb seedling shoot growth?
+- id: t339
+  question: What effect does seeding have on seeded species frequency?
+- id: t340
+  question: What effect does fish stocking have on fish population contribution?
+- id: t341
+  question: What effect does soil moisture have on plant water use efficiency?
+- id: t342
+  question: What effect does forest floor mixing have on conifer foliar potassium?
+- id: t343
+  question: What effect does deciduous tree height have on conifer volume growth?
+- id: t344
+  question: What effect does forest cutting treatments have on tree basal area?
+- id: t345
+  question: What effect does sapling cover have on tree seedling growth?
+- id: t346
+  question: What effect does restoration (general / unspecified) have on soil nutrients & fertility?
+- id: t347
+  question: What effect does partial harvesting & selective cutting have on water ph & acidity?
+- id: t348
+  question: What effect does organic & soil amendments have on foliar & tissue nutrients?
+- id: t349
+  question: What effect does planting stock traits have on moss & bryophyte cover?
+- id: t350
+  question: What effect does peat extraction have on ecosystem recovery & function?
+- id: t351
+  question: What effect does canopy & light conditions have on tree species composition & dominance?
+- id: t352
+  question: What effect does temperature & climate warming have on seedling & tree survival?
+- id: t353
+  question: What effect does site & soil conditions have on functional traits & guild structure?
+- id: t354
+  question: What effect does restoration (general / unspecified) have on animal survival & mortality?
+- id: t355
+  question: What effect does canopy & light conditions have on flowering, seed production & reproduction?
+- id: t356
+  question: What effect does planting stock traits have on flowering, seed production & reproduction?
+- id: t357
+  question: What effect does trampling & recreation have on methane & n2o emissions?
+- id: t358
+  question: What effect does clearcut harvesting have on soil organic matter & carbon?
+- id: t359
+  question: What effect does rewetting & hydrology restoration have on bird abundance & occupancy?
+- id: t360
+  question: What effect does elevated co2 & atmospheric chemistry have on plant biomass & productivity?
+- id: t361
+  question: What effect does fertilization & nutrient addition have on community composition & similarity?
+- id: t362
+  question: What effect does contaminants & pollution have on plant physiology & stress?
+- id: t363
+  question: What effect does reintroduction, stocking & captive rearing have on bare ground?
+- id: t364
+  question: What effect does herbicide application have on soil ph & chemistry?
+- id: t365
+  question: What effect does invasive species removal have on diversity indices (shannon, evenness)?
+- id: t366
+  question: What effect does wetland creation & marsh restoration have on plant biomass & productivity?
+- id: t367
+  question: What effect does reintroduction, stocking & captive rearing have on community composition & similarity?
+- id: t368
+  question: What effect does time since disturbance / stand age have on insects & aquatic invertebrates?
+- id: t369
+  question: What effect does wildfire & fire regime have on bare ground?
+- id: t370
+  question: What effect does seeding & sowing have on seed germination & emergence?
+- id: t371
+  question: What effect does reintroduction, stocking & captive rearing have on population size & trend?
+- id: t372
+  question: What effect does seed supply & propagule pressure have on fish abundance, growth & survival?
+- id: t373
+  question: What effect does restoration (general / unspecified) have on natural regeneration & recruitment?
+- id: t374
+  question: What effect does seed supply & propagule pressure have on breeding & reproductive success?
+- id: t375
+  question: What effect does in-stream & engineered structures have on soil organic matter & carbon?
+- id: t376
+  question: What effect does peat extraction have on plant biomass & productivity?
+- id: t377
+  question: What effect does contaminants & pollution have on soil nutrients & fertility?
+- id: t378
+  question: What effect does woody debris & structural retention have on methane & n2o emissions?
+- id: t379
+  question: What effect does seed supply & propagule pressure have on plant biomass & productivity?
+- id: t380
+  question: What effect does land use & land cover change have on erosion & sediment loss?
+- id: t381
+  question: What effect does reintroduction, stocking & captive rearing have on functional traits & guild structure?
+- id: t382
+  question: What effect does soil inoculation have on animal condition, growth & health?
+- id: t383
+  question: What effect does rewetting & hydrology restoration have on erosion & sediment loss?
+- id: t384
+  question: What effect does planting stock traits have on community composition & similarity?
+- id: t385
+  question: What effect does mulch & surface cover have on fish abundance, growth & survival?
+- id: t386
+  question: What effect does invasive species removal have on co2 flux & net ecosystem exchange?
+- id: t387
+  question: What effect does invasive / non-native species presence have on plant biomass & productivity?
+- id: t388
+  question: What effect does seed supply & propagule pressure have on bird abundance & occupancy?
+- id: t389
+  question: What effect does elevated co2 & atmospheric chemistry have on insects & aquatic invertebrates?
+- id: t390
+  question: What effect does temperature & climate warming have on tree species composition & dominance?
+- id: t391
+  question: What effect does rewetting & hydrology restoration have on soil & litter invertebrates?
+- id: t392
+  question: What effect does tree shelters & protection have on soil nutrients & fertility?
+- id: t393
+  question: What effect does tree shelters & protection have on tree & seedling growth?
+- id: t394
+  question: What effect does clearcut harvesting have on functional traits & guild structure?
+- id: t395
+  question: What effect does time since disturbance / stand age have on co2 flux & net ecosystem exchange?
+- id: t396
+  question: What effect does wildfire & fire regime have on stand structure & basal area?
+- id: t397
+  question: What effect does reintroduction, stocking & captive rearing have on seedling & tree survival?
+- id: t398
+  question: What effect does organic & soil amendments have on native species abundance & cover?
+- id: t399
+  question: What effect does rewetting & hydrology restoration have on community composition & similarity?
+- id: t400
+  question: What effect does time since disturbance / stand age have on amphibians & reptiles?
+- id: t401
+  question: What effect does moss layer transfer & peatland restoration have on soil bulk density & structure?
+- id: t402
+  question: What effect does in-stream & engineered structures have on soil bulk density & structure?
+- id: t403
+  question: What effect does invasive species removal have on bare ground?
+- id: t404
+  question: What effect does peat extraction have on methane & n2o emissions?
+- id: t405
+  question: What effect does soil inoculation have on seedling & tree survival?
+- id: t406
+  question: What effect does moss layer transfer & peatland restoration have on soil ph & chemistry?
+- id: t407
+  question: What effect does trampling & recreation have on natural regeneration & recruitment?
+- id: t408
+  question: What effect does soil inoculation have on soil organic matter & carbon?
+- id: t409
+  question: What effect does soil inoculation have on soil bulk density & structure?
+- id: t410
+  question: What effect does planting & transplanting have on stand structure & basal area?
+- id: t411
+  question: What effect does trampling & recreation have on community composition & similarity?
+- id: t412
+  question: What effect does wetland creation & marsh restoration have on water ph & acidity?
+- id: t413
+  question: What effect does planting & transplanting have on moss & bryophyte cover?
+- id: t414
+  question: What effect does peat extraction have on erosion & sediment loss?
+- id: t415
+  question: What effect does organic & soil amendments have on bare ground?
+- id: t416
+  question: What effect does seeding & sowing have on methane & n2o emissions?
+- id: t417
+  question: What effect does rewetting & hydrology restoration have on methane & n2o emissions?
+- id: t418
+  question: What effect does seeding & sowing have on functional traits & guild structure?
+- id: t419
+  question: What effect does mulch & surface cover have on water ph & acidity?
+- id: t420
+  question: What effect does prescribed burning have on erosion & sediment loss?
+- id: t421
+  question: What effect does site & soil conditions have on tree & seedling growth?
+- id: t422
+  question: What effect does planting stock traits have on plant biomass & productivity?
+- id: t423
+  question: What effect does time since disturbance / stand age have on tree & seedling growth?
+- id: t424
+  question: What effect does wildfire & fire regime have on soil ph & chemistry?
+- id: t425
+  question: What effect does partial harvesting & selective cutting have on plant biomass & productivity?
+- id: t426
+  question: What effect does rewetting & hydrology restoration have on seedling & tree survival?
+- id: t427
+  question: What effect does grazing & browsing have on soil microbes, fungi & mycorrhizae?
+- id: t428
+  question: What effect does clearcut harvesting have on total vegetation cover?
+- id: t429
+  question: What effect does contaminants & pollution have on soil organic matter & carbon?
+- id: t430
+  question: What effect does forest harvesting (general) have on fish abundance, growth & survival?
+- id: t431
+  question: What effect does invasive species removal have on soil nutrients & fertility?
+- id: t432
+  question: What effect does sediment & contaminated soil removal have on co2 flux & net ecosystem exchange?
+- id: t433
+  question: What effect does restoration (general / unspecified) have on amphibians & reptiles?
+- id: t434
+  question: What effect does seeding & sowing have on breeding & reproductive success?
+- id: t435
+  question: What effect does site preparation & scarification have on seed germination & emergence?
+- id: t436
+  question: What effect does forest harvesting (general) have on water chemistry & contaminant concentration?
+- id: t437
+  question: What effect does partial harvesting & selective cutting have on animal condition, growth & health?
+- id: t438
+  question: What effect does site preparation & scarification have on ecosystem recovery & function?
+- id: t439
+  question: What effect does site & soil conditions have on erosion & sediment loss?
+- id: t440
+  question: What effect does time since disturbance / stand age have on functional traits & guild structure?
+- id: t441
+  question: What effect does partial harvesting & selective cutting have on natural regeneration & recruitment?
+- id: t442
+  question: What effect does fertilization & nutrient addition have on animal condition, growth & health?
+- id: t443
+  question: What effect does tree shelters & protection have on fish abundance, growth & survival?
+- id: t444
+  question: What effect does land use & land cover change have on fish abundance, growth & survival?
+- id: t445
+  question: What effect does planting stock traits have on water ph & acidity?
+- id: t446
+  question: What effect does elevated co2 & atmospheric chemistry have on methane & n2o emissions?
+- id: t447
+  question: What effect does clearcut harvesting have on stand structure & basal area?
+- id: t448
+  question: What effect does reintroduction, stocking & captive rearing have on co2 flux & net ecosystem exchange?
+- id: t449
+  question: What effect does forest harvesting (general) have on stand structure & basal area?
+- id: t450
+  question: What effect does invasive species removal have on fish abundance, growth & survival?
+- id: t451
+  question: What effect does contaminants & pollution have on natural regeneration & recruitment?
+- id: t452
+  question: What effect does sediment & contaminated soil removal have on soil ph & chemistry?
+- id: t453
+  question: What effect does mechanical vegetation control have on breeding & reproductive success?
+- id: t454
+  question: What effect does contaminants & pollution have on breeding & reproductive success?
+- id: t455
+  question: What effect does moss layer transfer & peatland restoration have on erosion & sediment loss?
+- id: t456
+  question: What effect does fertilization & nutrient addition have on soil bulk density & structure?
+- id: t457
+  question: What effect does clearcut harvesting have on foliar & tissue nutrients?
+- id: t458
+  question: What effect does woody debris & structural retention have on soil ph & chemistry?
+- id: t459
+  question: What effect does invasive species removal have on methane & n2o emissions?
+- id: t460
+  question: What effect does trampling & recreation have on native species abundance & cover?
+- id: t461
+  question: What effect does planting & transplanting have on soil microbes, fungi & mycorrhizae?
+- id: t462
+  question: What effect does grazing & browsing have on invasive / non-native species abundance?
+- id: t463
+  question: What effect does reintroduction, stocking & captive rearing have on flowering, seed production & reproduction?
+- id: t464
+  question: What effect does grazing & browsing have on seedling & tree survival?
+- id: t465
+  question: What effect does sediment & contaminated soil removal have on tree species composition & dominance?
+- id: t466
+  question: What effect does mulch & surface cover have on methane & n2o emissions?
+- id: t467
+  question: What effect does in-stream & engineered structures have on plant physiology & stress?
+- id: t468
+  question: What effect does reintroduction, stocking & captive rearing have on fish abundance, growth & survival?
+- id: t469
+  question: What effect does soil inoculation have on plant biomass & productivity?
+- id: t470
+  question: What effect does grazing & browsing have on ecosystem recovery & function?
+- id: t471
+  question: What effect does site & soil conditions have on soil nutrients & fertility?
+- id: t472
+  question: What effect does woody debris & structural retention have on soil organic matter & carbon?
+- id: t473
+  question: What effect does in-stream & engineered structures have on amphibians & reptiles?
+- id: t474
+  question: What effect does grazing & browsing have on soil organic matter & carbon?
+- id: t475
+  question: What effect does trampling & recreation have on soil organic matter & carbon?
+- id: t476
+  question: What effect does tree shelters & protection have on soil organic matter & carbon?
+- id: t477
+  question: What effect does grazing & browsing have on fish abundance, growth & survival?
+- id: t478
+  question: What effect does elevated co2 & atmospheric chemistry have on ecosystem recovery & function?
+- id: t479
+  question: What effect does rewetting & hydrology restoration have on natural regeneration & recruitment?
+- id: t480
+  question: What effect does in-stream & engineered structures have on stand structure & basal area?
+- id: t481
+  question: What effect does wildfire & fire regime have on water ph & acidity?
+- id: t482
+  question: What effect does reintroduction, stocking & captive rearing have on moss & bryophyte cover?
+- id: t483
+  question: What effect does planting stock traits have on seed germination & emergence?
+- id: t484
+  question: What effect does contaminants & pollution have on population size & trend?
+- id: t485
+  question: What effect does mulch & surface cover have on total vegetation cover?
+- id: t486
+  question: What effect does organic & soil amendments have on bird abundance & occupancy?
+- id: t487
+  question: What effect does woody debris & structural retention have on insects & aquatic invertebrates?
+- id: t488
+  question: What effect does partial harvesting & selective cutting have on soil ph & chemistry?
+- id: t489
+  question: What effect does seed supply & propagule pressure have on functional traits & guild structure?
+- id: t490
+  question: What effect does wildfire & fire regime have on water chemistry & contaminant concentration?
+- id: t491
+  question: What effect does invasive species removal have on foliar & tissue nutrients?
+- id: t492
+  question: What effect does rewetting & hydrology restoration have on soil ph & chemistry?
+- id: t493
+  question: What effect does rewetting & hydrology restoration have on ecosystem recovery & function?
+- id: t494
+  question: What effect does organic & soil amendments have on methane & n2o emissions?
+- id: t495
+  question: What effect does mulch & surface cover have on animal survival & mortality?
+- id: t496
+  question: What effect does elevated co2 & atmospheric chemistry have on foliar & tissue nutrients?
+- id: t497
+  question: What effect does wetland creation & marsh restoration have on animal survival & mortality?
+- id: t498
+  question: What effect does partial harvesting & selective cutting have on water chemistry & contaminant concentration?
+- id: t499
+  question: What effect does invasive / non-native species presence have on seedling & tree survival?
+- id: t500
+  question: What effect does soil inoculation have on flowering, seed production & reproduction?

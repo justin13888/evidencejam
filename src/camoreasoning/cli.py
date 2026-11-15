@@ -15,7 +15,20 @@ from camoreasoning.config import DEVSETS_DIR, RESULTS_DIR, load_settings
 
 
 def _strategies(pairs: list[str]) -> dict[str, str]:
-    return dict(p.split("=", 1) for p in pairs)
+    out = {}
+    for p in pairs:
+        stage, sep, name = p.partition("=")
+        if not sep or not name.strip():
+            raise ValueError(f"-s expects STAGE=NAME, got {p!r}")
+        out[stage] = name
+    return out
+
+
+def _check_strategies(strategies: dict[str, str]) -> None:
+    """Fail before running on a strategy name nobody registered (e.g. one -s argument holding two pairs)."""
+    for stage, name in strategies.items():
+        if name not in registry.names(stage):
+            raise ValueError(f"no strategy {stage}/{name!r}; have {', '.join(registry.names(stage))}")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -58,7 +71,11 @@ def main(argv: list[str] | None = None) -> int:
     an.add_argument("--file", type=Path, help="review CSV path (default experiments/annotate/<task>/review.csv)")
     sub.add_parser("strategies", help="list registered strategies per stage")
     args = ap.parse_args(argv)
-    settings = load_settings(strategies=_strategies(args.strategy))
+    try:
+        settings = load_settings(strategies=_strategies(args.strategy))
+        _check_strategies(dict(settings.strategies))
+    except ValueError as err:
+        ap.error(str(err))
 
     if args.cmd == "run":
         from camoreasoning.pipeline import dumps, run_file
