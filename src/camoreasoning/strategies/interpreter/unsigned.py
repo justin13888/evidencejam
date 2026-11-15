@@ -70,6 +70,15 @@ def unsigned_association(edge: dict, subj: dict, obj: dict) -> bool:
 
 
 SIGNED_ASSOCIATION = ("associational", "reference_locus")  # `sentence` reasons for a signed association
+UNSIGNED_VOTE = (None, True, "unsigned_association")  # (effect, included, reason)
+
+
+def reads_unsigned(reason: str, edge: dict, subj: dict, obj: dict) -> bool:
+    """`sentence` read this edge as a signed association, but the edge names no direction.
+
+    The one test both `read_edge` and `UnsignedInterpreter.interpret` apply, so the two cannot drift.
+    """
+    return reason in SIGNED_ASSOCIATION and unsigned_association(edge, subj, obj)
 
 
 def read_edge(
@@ -77,8 +86,8 @@ def read_edge(
 ) -> tuple[int | None, bool, str]:
     """`sentence.read_edge`, with a signed association that names no direction read as unsigned."""
     effect, included, reason = sentence.read_edge(edge, obj, cause_pol, outcome_pol, subj)
-    if reason in SIGNED_ASSOCIATION and unsigned_association(edge, subj or {}, obj):
-        return None, True, "unsigned_association"
+    if reads_unsigned(reason, edge, subj or {}, obj):
+        return UNSIGNED_VOTE
     return effect, included, reason
 
 
@@ -86,14 +95,13 @@ def read_edge(
 class UnsignedInterpreter(SentenceInterpreter):
     def interpret(self, candidates: Candidates, ctx: Context) -> tuple[EdgeVote, ...]:
         g = ctx.graph
+        effect, included, reason = UNSIGNED_VOTE
 
         def unsigned(v: EdgeVote) -> bool:
             e = g.edges[v.edge_id]
-            return v.reason in SIGNED_ASSOCIATION and unsigned_association(
-                e, g.nodes.get(e["subject"], {}), g.nodes.get(e["object"], {})
-            )
+            return reads_unsigned(v.reason, e, g.nodes.get(e["subject"], {}), g.nodes.get(e["object"], {}))
 
         return tuple(
-            replace(v, effect=None, included=True, reason="unsigned_association") if unsigned(v) else v
+            replace(v, effect=effect, included=included, reason=reason) if unsigned(v) else v
             for v in super().interpret(candidates, ctx)
         )

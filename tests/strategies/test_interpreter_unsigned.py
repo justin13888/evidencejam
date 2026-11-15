@@ -14,15 +14,28 @@ def read(graph, eid: str, module=unsigned):
     return module.read_edge(e, graph.nodes[e["object"]], 1, 1, graph.nodes[e["subject"]])
 
 
-@pytest.mark.parametrize(
+UNSIGNED_RULES = pytest.mark.parametrize(
     "eid",
     ["camo:edge_fd4d9a5c40f7",  # rule 1: "Increased concentration of nitrate" with itself
      "camo:edge_2d54f5d7e7ce",  # rule 2: -> "Shifted ectomycorrhizal fungal community composition" [None]
      "camo:edge_948b5fdf1f56"],  # rule 3: "Seeding method was associated with native cover in Valley plots"
 )  # fmt: skip
+
+
+@UNSIGNED_RULES
 def test_an_association_with_no_direction_is_unsigned(graph, eid):
     assert read(graph, eid, sentence)[2] == "associational"
     assert read(graph, eid) == (None, True, "unsigned_association")
+
+
+@UNSIGNED_RULES
+def test_the_interpreter_reads_each_rule_as_read_edge_does(graph, make_ctx, eid):
+    """The production path, `interpret`, agrees with `read_edge` on every rule, rule 1 included."""
+    e = graph.edges[eid]
+    cands = Candidates(_frame(), {e["subject"]: 1}, {e["object"]: 1}, forward=(eid,))
+    (vote,) = registry.get("interpreter", "unsigned").interpret(cands, make_ctx())
+    assert (vote.edge_id, vote.effect, vote.included, vote.reason) == (eid, *read(graph, eid))
+    assert vote.reason == "unsigned_association"
 
 
 @pytest.mark.parametrize(
@@ -42,10 +55,13 @@ def test_an_unsigned_difference_stays_as_sentence_reads_it(graph):
     assert read(graph, "camo:edge_c641160f3447") == (None, False, "unsigned_difference")
 
 
-def verdict(graph, ctx, eids):
+def _frame() -> Frame:
     q = Question("q", "What effect does cause have on outcome?")
-    frame = Frame(ParsedQuestion(q, "cause", "outcome", True), Side("cause"), Side("outcome"), "regex", 1.0)
-    cands = Candidates(frame, {graph.edges[e]["subject"]: 1 for e in eids},
+    return Frame(ParsedQuestion(q, "cause", "outcome", True), Side("cause"), Side("outcome"), "regex", 1.0)
+
+
+def verdict(graph, ctx, eids):
+    cands = Candidates(_frame(), {graph.edges[e]["subject"]: 1 for e in eids},
                        {graph.edges[e]["object"]: 1 for e in eids}, forward=tuple(eids))  # fmt: skip
     votes = registry.get("interpreter", "unsigned").interpret(cands, ctx)
     return registry.get("aggregator", "studies").aggregate(votes, cands, ctx)
