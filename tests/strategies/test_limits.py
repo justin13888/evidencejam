@@ -91,6 +91,21 @@ def test_every_trap_tag_lists_its_first_misses_in_id_order(html):
             assert ("the only miss" if len(misses) == 1 else f"all {len(misses)} misses") in sections[tag], tag
 
 
+def test_each_trap_section_shows_only_the_first_sentence_of_its_why(html):
+    """Decision 6: judges see the inventory's first sentence; the later team-note sentences stay hidden."""
+    inventory = json.loads((ROOT / "experiments/results/trap_inventory.json").read_text(encoding="utf-8"))
+    sections = {f"trap:{tag}": body for tag, _, body in SECTION.findall(html)}
+    multi = 0
+    for tag in TAGS:
+        sentences = re.split(r"(?<=[.!?])\s+(?=[A-Z'])", inventory[tag[len("trap:") :]]["why"].strip())
+        shown = unescape(re.match(r"<p>(.*?)</p>", sections[tag], re.S).group(1))
+        assert shown == sentences[0], tag
+        for later in sentences[1:]:
+            assert later not in unescape(sections[tag]), (tag, later)
+        multi += len(sentences) > 1
+    assert multi, "at least one holdout trap tag should have later sentences to hide"
+
+
 def test_summary_rows_match_items_and_by_tag(html):
     rows = {f"trap:{t}": tuple(map(int, rest)) for t, *rest in SUMMARY.findall(html)}
     assert sorted(rows) == TAGS
