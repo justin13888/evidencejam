@@ -173,6 +173,10 @@ def main(argv: list[str] | None = None) -> int:
     return 2
 
 
+def _count(n: int, one: str, many: str) -> str:
+    return f"{n} {one if n == 1 else many}"
+
+
 def ask_cmd(text: str, settings, as_json: bool) -> int:
     """Readable card (or the --json entry). Exit 2 without answering if a side links to nothing.
     Stage exceptions are not caught here: they print a traceback and exit non-zero."""
@@ -210,7 +214,7 @@ def ask_cmd(text: str, settings, as_json: bool) -> int:
         f"Answer: {entry['answer']}",
         f"Direction: {dash(entry['direction'])}  Certainty: {dash(entry['certainty'])}  "
         f"Confidence: {entry['confidence']:.2f}",
-        f"Cites: {len(entry['edge_ids'])} edges, {len(studies)} studies",
+        f"Cites: {_count(len(entry['edge_ids']), 'edge', 'edges')}, {_count(len(studies), 'study', 'studies')}",
     ]
     if entry.get("searched_for"):
         lines.append(f"Searched for: {entry['searched_for']}")

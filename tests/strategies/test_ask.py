@@ -63,7 +63,7 @@ def test_card_for_answered_question():
     assert lines[1].startswith("Linked: mulch & surface cover -> invasive / non-native species abundance (via ")
     assert lines[2].startswith("Answer: ")
     assert lines[3].startswith("Direction: ") and "Certainty: " in lines[3] and "Confidence: " in lines[3]
-    assert lines[4].startswith("Cites: ") and lines[4].endswith(" studies")
+    assert lines[4].startswith("Cites: ") and lines[4].endswith((" study", " studies"))
     assert any(x.startswith("Evidence page: ") for x in lines)
     assert lines[-1].startswith("(") and "LLM calls" in lines[-1] and lines[-1].endswith(" tokens)")
 
