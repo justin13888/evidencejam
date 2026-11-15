@@ -130,6 +130,8 @@ def test_significant_unchanged_outcome_is_not_a_null(graph, ctx):
     ("value", "significant"),
     [("p < 0.001", True), ("F=112.04, P=0.000", True), ("T = -17.98, A = 0.14, p < 10^-6", True),
      ("significantly different", True), ("p = 0.06", False), ("not significant", False), ("38.0%", False),
+     ("p = 7.5 × 10^-5", True), ("p-values = 0.012, 0.01, 7.10-3", True), ("10-15%", False),
+     ("marginally significant difference between natural and restored", False),
      ("", False), (None, False), (7, False)],
 )  # fmt: skip
 def test_reports_significance(value, significant):

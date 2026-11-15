@@ -14,11 +14,12 @@ Rules, in order:
 3. Predicate with no sign (moderates, mediates, regulates, precedes, unknown): no vote,
    reason "non_directional_predicate" (D3).
 3b. `unchanged` outcome on a non-null edge whose strength reports a significant test (p <= 0.05,
-   "significant"): no vote, reason "unsigned_difference". The schema reserves `unchanged` for a stable
-   state, so a significant result there is an unsigned variable ("Microbial community structure",
-   "Seeding method was associated with richness", F = 112, P = 0.000) that differed in an unstated
-   direction. Reading it as a null turned a p = 1e-6 association into "no detectable association"
-   (review_20 R08/R18). Negative predicates keep rule 5 ("prevented_change").
+   a 10^-k p-value, "significant" but not "marginally significant"): no vote, reason
+   "unsigned_difference". The schema reserves `unchanged` for a stable state, so a significant
+   result there is an unsigned variable ("Microbial community structure", "Seeding method
+   was associated with richness", F = 112, P = 0.000) that differed in an unstated direction. Reading
+   it as a null turned a p = 1e-6 association into "no detectable association" (review_20 R08/R18).
+   Negative predicates keep rule 5 ("prevented_change").
 4. `associated_with` / `correlated_with`: signed through the node polarities and tagged
    "associational" (D1). Downstream wording must stay associational.
 5. Negative predicate (`prevents`, `disrupts`):
@@ -64,10 +65,12 @@ RESTATING = ("decreased", "absent")  # object qualifiers that restate a negative
 DOUBLE_NEGATION: Literal["sentence", "schema"] = "sentence"
 
 ALPHA = 0.05
-P_VALUE = re.compile(r"\bp\s*(?:<=|<|≤|=)\s*(\d*\.?\d+)", re.I)
-SCIENTIFIC = re.compile(r"10\s*\^?\s*\{?\s*[-−]\s*\d")
+P_VALUE = re.compile(r"\bp(?:-values?)?\s*(?:<=|<|≤|=)\s*(\d*\.?\d+)", re.I)
+# A 10^-k p-value needs an exponent mark: "× 10^-5", "1x10-3", "p < 10^-8". A bare "10-15%" is a range.
+SCIENTIFIC = re.compile(r"(?:[×x]\s*10\s*\^?|\b10\s*\^)\s*\{?\s*[-−]\s*\d")
 SIGNIFICANT = re.compile(r"\bsignifican(?:t|tly|ce)\b", re.I)
-NOT_SIGNIFICANT = re.compile(r"\b(?:not|no|non-?|in)\s*significan|\bn\.?s\.?\b", re.I)
+# "marginally significant" misses the p <= ALPHA bar, so it counts as not significant.
+NOT_SIGNIFICANT = re.compile(r"\b(?:not|no|non-?|in|marginal(?:ly)?)\s*significan|\bn\.?s\.?\b", re.I)
 
 LOWER = r"least|lowest|fewest|smallest|lower|less|fewer"
 HIGHER = r"most|highest|greatest|largest|higher|more"
