@@ -1,6 +1,19 @@
 # camoreasoning
 
-Evidence Jam 2026, Lane 2. Ask "What effect does X have on Y?" and it answers from the CAMO causal graph. Each answer gives the direction, certainty and confidence, cites the edges it rests on, and says so when the graph has no evidence. The default run makes **no LLM calls**. The challenge brief is in [CHALLENGE.md](CHALLENGE.md).
+Evidence Jam 2026, Lane 2. Ask "What effect does X have on Y?" and it answers from the CAMO (Causal Mosaic) causal graph. Each answer gives the direction, certainty and confidence, cites the edges it rests on, and says so when the graph has no evidence. The default run makes **no LLM calls**. The challenge brief is in [CHALLENGE.md](CHALLENGE.md).
+
+## Why this design
+
+Every hidden answer is in the graph, so the job is to find the right edges and read them faithfully. About a third of questions have no evidence at all, and saying so is a correct answer. Faithfulness forbids overclaiming, so each answer is decided by fixed rules and written from a template, and its only hedge is the certainty of the evidence. Energy is scored per LLM call, so the judged run makes 0 calls. The LLM is used offline, to label graph nodes, and on the `ask` path only, to read wording the rules can't place.
+
+## What it can and can't answer
+
+- **Works:** "What effect does X have on Y?" and close paraphrases, such as "Does X reduce Y?".
+- **Freer wording:** `ask.sh` uses one LLM call to read the sides of a question the rules can't place.
+- **Doesn't work:** multi-part questions (like most of [`questions.yaml`](questions.yaml), which is why 9 of 10 practice answers are `no_evidence`), multi-hop chains (A affects B, B affects C), and effect sizes.
+- **Honest limits:** each run writes `outputs/limits.html`, linked from `outputs/gapmap.html`. It lists where the pipeline fails on the holdout and what it never tries.
+
+Confidence is a constant 0.6 in this release: a fitted calibrator missed its holdout target (ECE, expected calibration error, 0.187 against 0.05), so we ship the constant and show the miss on the limits page.
 
 ## Run
 
@@ -22,6 +35,36 @@ To ask your own question:
 
 `ask` accepts free wording. It uses the same rules, and sends any side they can't place confidently to the LLM in one call with a 3 s timeout. If the question still can't be read, it says which side it couldn't place and suggests the nearest classes. It writes its pages to `outputs/ask/`, so it never overwrites a run's pages.
 
+### Screenshots
+
+![Evidence page for one question: the verdict sentence, certainty, confidence and the cited edges](docs/img/evidence.png)
+
+![Evidence gap map: which cause and outcome classes the graph has evidence for](docs/img/gapmap.png)
+
+![Honest limits page: holdout failures by trap tag, the reliability table and the non-goals](docs/img/limits.png)
+
+## Use it from code
+
+`./ask.sh --json "…"` prints one answer object. In Python:
+
+```python
+from camoreasoning.pipeline import ask, run_file
+answer = ask("What effect does mulch have on invasive species abundance?")  # one answer dict, plus footprint
+summary = run_file("questions.yaml", "answers.json")  # writes answers.json and outputs/; returns a summary
+```
+
+The answer fields are defined in [CHALLENGE.md](CHALLENGE.md#answer-format).
+
+## Layout
+
+- `causal_graph.json`, `causal_graph.yaml` and [`schema/`](schema/): the organizers' graph and its CAMO schema.
+- [`src/camoreasoning/`](src/camoreasoning/): the engine. Each stage has its strategies in `strategies/<stage>/`.
+- [`taxonomy/`](taxonomy/): the offline classes, synonyms and node labels.
+- [`experiments/`](experiments/README.md): measured experiments, including the ones that lost.
+- [`product/`](product/): the page template and CSS.
+- [`docs/`](docs/), [`scripts/`](scripts/) and [`tests/`](tests/): notes, helper scripts and the test suite.
+- `hk.pkl`: the git hooks config for hk (lint and Conventional Commits).
+
 ## How it works
 
 The graph is only read, never rewritten. A small taxonomy (82 broad classes, with about 6,000 graph nodes labelled into them) is built offline in [`taxonomy/`](taxonomy/). Nodes are labelled by class phrases, by audited graph wording that only labels nodes and never links a question ([`label_synonyms.yaml`](taxonomy/label_synonyms.yaml), proposed offline by bge-base-en-v1.5), and by one offline LLM pass for the rest. Every question then goes through four steps:
@@ -41,7 +84,7 @@ The locked rules behind these steps (D1–D6) are in [ROADMAP.md](ROADMAP.md).
 
 ## Results
 
-Dev split, default pipeline, commit `205ca6c` (#92). These are model-labelled gold sets in [`experiments/devsets/`](experiments/devsets/), not the hidden set.
+Dev split, default pipeline, first measured at commit `205ca6c` (#92) and re-checked at `b5fd109`, where they reproduce exactly. These are model-labelled gold sets in [`experiments/devsets/`](experiments/devsets/), not the hidden set.
 
 | | class dev (n = 83, hidden-set wording) | node dev (n = 184, independent wording) |
 |---|---|---|
@@ -80,6 +123,7 @@ class OnePerStudy(Citer):
 **2. Check it against the contract.** The tests find every registered strategy, with no test code to write:
 
 ```sh
+source .venv/bin/activate
 pytest tests/contracts -k one_per_study
 ```
 
@@ -89,6 +133,8 @@ pytest tests/contracts -k one_per_study
 CAMOREASONING_STRATEGY_CITER=one_per_study ./run.sh questions.yaml answers.json
 python -m camoreasoning -s citer=one_per_study eval experiments/devsets/class_gold.yaml --split dev
 ```
+
+The eval prints JSON. Compare these keys with the default's: `overall.accuracy`, `C calibration.ece`, `B engine.edge_precision` and `edge_recall`, and `D energy+release.calls_per_question`.
 
 **4. Make it the default** in [`src/camoreasoning/strategies/__init__.py`](src/camoreasoning/strategies/__init__.py), once the eval shows it wins.
 
