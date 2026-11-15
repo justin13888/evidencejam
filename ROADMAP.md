@@ -301,7 +301,17 @@ flowchart LR
   - **Done when:** precision comes first. On dev, edge precision is at least 0.9 and recall at least 0.7.
   - **Points:** P9, J40.
   - **Progress (Sat Nov 14, #30):** `citer/precise` cites every included edge, round-robin by study, cap 60 (the max included set is 55; baseline's 25 truncates 3% of pairs). Filtering to the winning direction was tried and dropped: fixture recall fell 1.0 → 0.71 with no precision gain. **Pending:** precision ≥ 0.9 / recall ≥ 0.7 on dev.
-- [ ] **14. Cut energy without losing accuracy.** ★ 4/5 · D · `linker`, `llm.py` usage
+  - **Measured (Sun Nov 15, dev only, master `6623b37`, 0 calls):** given the gold edges, every citer scores P/R 1.0 / 1.0, so the citer is not the bottleneck. End to end:
+
+    | | class dev P / R | node dev P / R |
+    |---|---|---|
+    | `baseline` (default) | 0.473 / 0.563 | 0.443 / 0.558 |
+    | `precise` | 0.476 / 0.590 | 0.443 / 0.567 |
+
+    - `precise` raises recall on both sets and costs nothing: accuracy (0.687, 0.630), ECE and calls are unchanged.
+    - The 0.9 / 0.7 bar is out of reach from the citer. Precision is averaged over gold-answered items, so each one we answer `no_evidence` scores P = 0, and the rest is retrieval bringing in other studies' edges (items 5, 8). No filter on vote fields gets past 0.5 (analysis on #13).
+    - **Proposed:** flip `citer` to `precise`, and accept the bar as a known limit, as #58 did for #8. Owner's call.
+- [x] **14. Cut energy without losing accuracy.** ★ 4/5 · D · `linker`, `llm.py` usage
   - **Why:** E12 is ranked against teams. Only runtime tokens count, so push work offline.
   - **Done when:**
     - At least 90% of template questions need 0 calls, and the rest share one batched call.
@@ -310,6 +320,7 @@ flowchart LR
     - Accuracy stays the same.
   - **Points:** E12 (gated on at least 50% correct).
   - **Progress (Sat Nov 14, #41):** `linker/nodevote` links with 0 calls. The ~6k labelled nodes act as synonyms: the nearest node names vote for a class, and the side links that class's voting nodes. On the old dev set it beat the old `baseline` linker (0.472 → 0.549) at 0 tokens per question, where `assisted` reached 0.430 at 813 tokens per question. Re-measured against `phrase` (#46, Justin on #41), it loses on both gold sets: class dev 0.482 vs 0.494, node dev 0.462 vs 0.538. **Kept as a non-default strategy for the record, not flipped.** The sweep is in `experiments/energy/`. `tokens_per_question` is already in every eval footprint, and the default pipeline makes 0 calls.
+  - **Done (Sun Nov 15):** every criterion holds on master `6623b37`. The batch run makes 0 calls and 0 tokens per question on both dev sets (class n = 83, node n = 184), so 100% of template questions need 0 calls. `ask` sends the sides it can't place in one batched call (`linker/assisted`), and its prompt lists candidates as `{id, label}`. `tokens_per_question` is in every eval. Accuracy rose rather than held: class dev 0.663 → 0.687, node dev 0.598 → 0.630 since the #41 baseline commit `6868817`.
   - **Note (Sun Nov 15, #94): organizer scoring.** Known: energy is scored on LLM API call count, so `calls_per_question` is the energy metric and the `meter.py` Wh figure is not scored. Unknown: whether correctness includes certainty, how certainty gold is computed, the ECE binning, how edges are scored, and the hidden set's empty share. `experiments/scoring_variants/run.py` scores the default answers under each reading and writes the best/worst range to `experiments/results/scoring_variants.{json,md}`. Its V1 equals `mise run eval` (pooled dev 0.6479 accuracy, 0.0479 ECE, 0.2304 Brier). V2 to V4 are also scored against each certainty-gold rule (D4, median, mode, max, min of edge grades), raw and with gold-empty items reweighted to a 1/3 share. At `8b4b8d6`: dev accuracy does **not** stay ≥ 0.5 under every variant. It fails only when correctness requires exact certainty (V2) and certainty gold is not the labelled one: pooled dev 0.46–0.72, class dev 0.42–0.76, node dev 0.48–0.71, worst V2 with max-grade gold. Under labelled certainty gold, every dev variant holds the floor. Holdout fails the floor under most variants (0.27–0.56, already #82). Dev ECE is 0.001–0.18 and is above 0.1 under V2 with non-labelled certainty gold and under V4 partial credit (V1 and V3 stay below 0.1). Equal-mass bins put tied confidences in one bin, so they agree with equal-width bins. Calls per question: 0.
 
 ## Phase 3 — Product and proof (Sun AM)
