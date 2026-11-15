@@ -9,13 +9,14 @@ Every number below can be recomputed with the commands at the end.
 | | Before (PRs #35, #37) | After |
 |---|---|---|
 | Node-level set (`gold_annotated.yaml`) | 178 items, 44% empty, 8 short trap tags, D3 conflict | 236 items, 33% empty, inventory trap keys, D3 fixed |
-| Class-level set (`class_gold.yaml`) | none | 99 items, 37% empty, 50% paraphrased, recall-audited |
+| Class-level set (`class_gold.yaml`) | none | 99 items, 43% empty, 50% paraphrased, recall-audited, audit 0.825 |
 | Represents the hidden set? | No (node-level wording) | Yes: the class set uses hidden-set wording, so use it for decisions |
 
 - **Trust the node-level set** for engine and oracle checks. It is the larger set and is audited at 0.925 and
   0.94. Its end-to-end accuracy is a linking stress test, not a hidden-set estimate.
-- **Trust the class-level set** for default flips, with this caveat: its blind audit agreed on 31/40 (0.775),
-  below the 0.85 target. The disagreements are class-membership breadth calls and one rubric gap; see below.
+- **Trust the class-level set** for default flips. Its round-2 blind audit agreed on 33/40 (0.825), below the
+  0.85 target. All 7 disagreements are class-boundary calls, and this was accepted on Sat Nov 14 (see
+  `experiments/gold/CLASS.md`).
 
 ## What held (verified)
 
@@ -68,25 +69,23 @@ The record is in `experiments/gold/CLASS.md`. In short:
 - **Questions.** 99 class pairs, chosen by gap-map band only to stratify. A labeller saw each class's label and
   description (never its synonyms) and wrote either the exact label (50 items) or a paraphrase (49 items),
   plus its own search terms.
-- **Gold.** Labelled from edge sentences with the round-2 rubric. Candidates come from a taxonomy-free
-  lexical pool over the labeller's terms, plus edges the taxonomy nominates, shuffled. The labeller never
-  sees where an edge came from.
-- **What nomination bought.** 31 items rely on nominated or recall edges. Restricted to the lexical pool
-  alone, 16 of 99 labels would change, 9 of them in status. An agent-term pool alone is not enough for class
+- **Candidates.** A taxonomy-free lexical pool over the labeller's terms, plus edges the taxonomy nominates,
+  plus edges a recall audit found, shuffled. The labeller never sees where an edge came from.
+- **Labels.** Round 2 follows the round-2 gold rubric plus two rules decided on Sat Nov 14: strict class
+  membership, and variant-vs-variant contrasts don't vote. Round 1 (0.775 audit) is archived in
+  `experiments/gold/class_round1/`.
+- **What nomination bought.** 25 items rely on nominated or recall edges. Restricted to the lexical pool
+  alone, 15 of 99 labels would change, 9 of them in status. An agent-term pool alone is not enough for class
   questions.
-- **Recall audit.** Agents searched `causal_graph.json` directly for every `no_evidence` item (39). They
-  flagged 7 items; a fresh blind relabel turned 4 into answered (C0044, C0064, C0085, C0098). Roughly 1 in 10
-  class empties was a false empty before this audit.
-- **Blind audit.** 40 items, stratified by seed kind and trap: 31 agree (**0.775**). The 9 corrections win at
-  merge. Their causes:
-  - **4 are labeller errors.** Ordination or convergence edges were signed (C0035, C0086), and edges were
-    dropped or included inconsistently (C0015, C0016).
-  - **3 are class breadth.** Is a water table "soil moisture" (C0018)? Is moss-layer transfer "rewetting"
-    (C0041)? Is bryophyte cover "native cover" (C0073)?
-  - **2 are a rubric gap.** The rubric does not say whether contrasts between two variants of the cause
-    (fertilizer regime A vs B) are evidence for the cause (C0032, C0087).
-- **Engine vs gold on empties.** Of 30 pairs the taxonomy calls empty, gold found evidence for 6. Of 57 it
-  calls evidenced, gold says no_evidence for 10. Both are leads for the taxonomy and linker owners.
+- **Recall audit.** Agents searched `causal_graph.json` directly for all 39 round-1 empties and found edges for
+  7. Those edges are now candidates. Roughly 1 in 10 class empties was a false empty before this audit.
+- **Blind audit (round 2).** 40 items, seed 47: 33 agree (**0.825**). All 7 disagreements are class-boundary
+  calls (basal area vs stem diameter, a combined treatment vs prescribed fire, and the like); the arithmetic
+  matched every time. The corrections win at merge.
+- **Empty share is 43%.** Strict membership turned 15 of the 57 taxonomy-evidenced pairs into `no_evidence`,
+  and gold found evidence for 6 of the 30 taxonomy-empty pairs. The engine reads classes more loosely than
+  gold, which is a lead for the taxonomy and linker owners. Accepted on Sat Nov 14; read results split by
+  `empty` / `answerable`.
 
 ## Eval (default pipeline, 0 LLM calls)
 
@@ -94,16 +93,17 @@ The record is in `experiments/gold/CLASS.md`. In short:
 |---|---|---|---|---|---|---|
 | Node dev, before (178 items) | 142 | 0.472 | 0.128 | 0.47 / 0.97 | 0.07 | 0.76 / 0.54 |
 | Node dev, after (236 items) | 184 | 0.397 | 0.203 | 0.37 / 0.97 | 0.10 | 0.78 / 0.56 |
-| **Class dev** | 83 | **0.506** | 0.094 | 0.56 / 0.72 | 0.38 | **0.96** / 0.41 |
-| `mise run eval` (both files, dev) | 267 | 0.431 | 0.169 | 0.41 / 0.88 | 0.18 | 0.83 / 0.51 |
+| **Class dev** | 83 | **0.470** | 0.130 | 0.56 / 0.66 | 0.37 | **0.94** / 0.60 |
+| `mise run eval` (both files, dev) | 267 | 0.420 | 0.181 | 0.41 / 0.86 | 0.18 | 0.82 / 0.57 |
 | Node holdout (once) | 52 | 0.346 | 0.254 | | | 0.67 / 0.42 |
-| Class holdout (once) | 16 | 0.313 | 0.288 | | | 0.82 / 0.36 |
+| Class holdout (once, round 2) | 16 | 0.438 | 0.163 | | | 0.88 / 0.50 |
 
 - Calls per question are 0 in every row.
 - Node accuracy fell because the set lost easy empties. On node dev the engine is right on 97% of empties
   and 11% of answered items. The oracle numbers did not move, so the engine did not regress.
-- On the class set, direction under oracle edges is 0.96 but certainty is 0.41. Certainty is the next
-  engine target.
+- On the class set, direction under oracle edges is 0.94 but certainty is 0.60. On end-to-end answerable
+  items the engine is right 33% of the time, so retrieval and linking (retrieval recall 0.37) and certainty
+  are the next engine targets.
 - `mise run eval` now pools both files. Read each file separately when deciding.
 
 ## Reproduce

@@ -218,11 +218,11 @@ flowchart LR
     - Built by agents via `camoreasoning annotate` (no human step). Paraphrases come from a different model or prompt than the linker's, and the holdout split is fixed by a seeded hash of item id before any tuning.
   - **Points:** enables D17, C14, P9 (everything measurable).
   - **Done (Sat Nov 14, audit):** `experiments/devsets/AUDIT.md`.
-    - **Class set.** `class_gold.yaml` has 99 class-level items in hidden-set wording, 49 of them paraphrased by Claude (the linker is Qwen). 37% are empty, 83 are dev and 16 holdout. Candidates were recall-audited.
+    - **Class set.** `class_gold.yaml` has 99 class-level items in hidden-set wording, 49 of them paraphrased by Claude (the linker is Qwen). 43% are empty, 83 are dev and 16 holdout. Candidates were recall-audited.
     - **Decisions.** Use the class set for default flips. Use node-level `gold_annotated.yaml` (236 items, 33% empty) for engine and oracle checks.
     - **Trap tags.** All inventory keys named in #9 have ≥ 5 dev items across the two files.
-    - **Eval, class dev:** accuracy 0.506, ECE 0.094, 0 calls per question, oracle direction 0.96 and certainty 0.41.
-    - **Open:** the class blind audit agreed on 0.775, below the 0.85 target. The disputes are class breadth and variant-vs-variant contrasts; questions for the rubric owner are in `experiments/gold/CLASS.md`.
+    - **Eval, class dev:** accuracy 0.470, ECE 0.130, 0 calls per question, oracle direction 0.94 and certainty 0.60.
+    - **Rubric (Justin):** class membership is strict, and variant-vs-variant contrasts don't vote. Round-2 blind audit 0.825 (round 1 was 0.775). Accepted below the 0.85 target: all 7 disagreements are class-boundary calls, listed in `experiments/gold/CLASS.md`. The 43% empty share is also accepted; strict gold finds fewer evidenced pairs than the taxonomy.
 - [x] **10. Keep the gold labeller independent.** ★ 5/5 · C · `gold_labeler`
   - **Why:** gold made by our own sign code makes the eval circular. The gold labeller is an LLM reading `original_sentence` text, audited by a second, stronger LLM (human audit dropped by choice; some correctness loss accepted).
   - **Done when:**
