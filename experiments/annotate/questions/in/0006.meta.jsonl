@@ -1,0 +1,60 @@
+{"id": "Q0181", "seed_edge": "camo:edge_a6271518c200", "hint_tags": ["trap:sign_flip"]}
+{"id": "Q0182", "seed_edge": "camo:edge_898ca6605bdd", "hint_tags": ["trap:sign_flip"]}
+{"id": "Q0183", "seed_edge": "camo:edge_6f8b33f1fce6", "hint_tags": ["trap:sign_flip", "trap:twin"]}
+{"id": "Q0184", "seed_edge": "camo:edge_41a7453a63ad", "hint_tags": ["trap:unchanged"]}
+{"id": "Q0185", "seed_edge": "camo:edge_4a4dc1890502", "hint_tags": ["trap:sign_flip"]}
+{"id": "Q0186", "seed_edge": "camo:edge_00a1f5f75988", "hint_tags": ["trap:sign_flip"]}
+{"id": "Q0187", "seed_edge": "camo:edge_86f3ed57d7cf", "hint_tags": ["trap:unchanged"]}
+{"id": "Q0188", "seed_edge": "camo:edge_f7f1442fca5f", "hint_tags": ["trap:sign_flip", "trap:twin"]}
+{"id": "Q0189", "seed_edge": "camo:edge_ac031fb13510", "hint_tags": ["trap:associational", "trap:twin"]}
+{"id": "Q0190", "seed_edge": "camo:edge_7755142a17f7", "hint_tags": ["trap:associational"]}
+{"id": "Q0191", "seed_edge": "camo:edge_9404be5454fc", "hint_tags": ["trap:associational", "trap:twin"]}
+{"id": "Q0192", "seed_edge": "camo:edge_0d83924c97fc", "hint_tags": ["trap:associational"]}
+{"id": "Q0193", "seed_edge": "camo:edge_5cfc4fe30f8f", "hint_tags": ["trap:associational"]}
+{"id": "Q0194", "seed_edge": "camo:edge_88d9df557b31", "hint_tags": ["trap:associational"]}
+{"id": "Q0195", "seed_edge": "camo:edge_aae88d0fa107", "hint_tags": []}
+{"id": "Q0196", "seed_edge": "camo:edge_8438e2e5e293", "hint_tags": []}
+{"id": "Q0197", "seed_edge": "camo:edge_e618a18f31b9", "hint_tags": ["trap:null"]}
+{"id": "Q0198", "seed_edge": "camo:edge_2fb97750a20b", "hint_tags": ["trap:null", "trap:twin"]}
+{"id": "Q0199", "seed_edge": "camo:edge_12f87db76dd7", "hint_tags": ["trap:null"]}
+{"id": "Q0200", "seed_edge": "camo:edge_42cb19f2226c", "hint_tags": ["trap:null", "trap:unchanged"]}
+{"id": "Q0201", "seed_edge": "camo:edge_20dfb4982ad9", "hint_tags": ["trap:null"]}
+{"id": "Q0202", "seed_edge": "camo:edge_b5fea2ff8176", "hint_tags": ["trap:null"]}
+{"id": "Q0203", "seed_edge": "camo:edge_fcd48e993c8e", "hint_tags": ["trap:removed_subject", "trap:associational"]}
+{"id": "Q0204", "seed_edge": "camo:edge_3f81177bc0ae", "hint_tags": ["trap:removed_subject", "trap:sign_flip"]}
+{"id": "Q0205", "seed_edge": "camo:edge_2d30145ff9f4", "hint_tags": ["trap:removed_subject", "trap:associational", "trap:twin"]}
+{"id": "Q0206", "seed_edge": "camo:edge_1db6d2892a90", "hint_tags": ["trap:removed_subject", "trap:sign_flip"]}
+{"id": "Q0207", "seed_edge": "camo:edge_03f4ec410cc0", "hint_tags": ["trap:removed_subject", "trap:associational"]}
+{"id": "Q0208", "seed_edge": "camo:edge_f6f0e411dd06", "hint_tags": ["trap:removed_subject", "trap:sign_flip"]}
+{"id": "Q0209", "seed_edge": "camo:edge_e0186a472e82", "hint_tags": ["trap:associational"]}
+{"id": "Q0210", "seed_edge": "camo:edge_7c886777191d", "hint_tags": ["trap:associational"]}
+{"id": "Q0211", "seed_edge": "camo:edge_fd4d9a5c40f7", "hint_tags": ["trap:associational"]}
+{"id": "Q0212", "seed_edge": "camo:edge_588c26547fc4", "hint_tags": ["trap:associational"]}
+{"id": "Q0213", "seed_edge": "camo:edge_26a0437f9e01", "hint_tags": ["trap:associational"]}
+{"id": "Q0214", "seed_edge": "camo:edge_1e714dd7fbba", "hint_tags": ["trap:associational", "trap:twin"]}
+{"id": "Q0215", "seed_edge": "camo:edge_092cf92d3527", "hint_tags": ["trap:sign_flip", "trap:twin"]}
+{"id": "Q0216", "seed_edge": "camo:edge_5fc16ea90e74", "hint_tags": ["trap:associational", "trap:twin"]}
+{"id": "Q0217", "seed_edge": "camo:edge_3b1d9b2b697f", "hint_tags": ["trap:associational", "trap:twin"]}
+{"id": "Q0218", "seed_edge": "camo:edge_780a7a480acd", "hint_tags": ["trap:associational", "trap:twin"]}
+{"id": "Q0219", "seed_edge": "camo:edge_f771bbf58fbf", "hint_tags": ["trap:null"]}
+{"id": "Q0220", "seed_edge": "camo:edge_239bafd2c4f0", "hint_tags": ["trap:removed_subject"]}
+{"id": "Q0221", "seed_edge": "camo:edge_d78524ca79dd", "hint_tags": ["trap:twin"]}
+{"id": "Q0222", "seed_edge": "camo:edge_6441e2a210c3", "hint_tags": ["trap:associational"]}
+{"id": "Q0223", "seed_edge": "camo:edge_498768decc99", "hint_tags": ["trap:unchanged", "trap:associational", "trap:twin"]}
+{"id": "Q0224", "seed_edge": "camo:edge_4620dc6212b7", "hint_tags": ["trap:twin"]}
+{"id": "Q0225", "seed_edge": "camo:edge_94948bf669e7", "hint_tags": ["trap:associational", "trap:twin"]}
+{"id": "Q0226", "seed_edge": "camo:edge_1096b0589f2d", "hint_tags": ["trap:sign_flip"]}
+{"id": "Q0227", "seed_edge": "camo:edge_ff0cb68c4fd5", "hint_tags": []}
+{"id": "Q0228", "seed_edge": "camo:edge_a97fddf4d4af", "hint_tags": []}
+{"id": "Q0229", "seed_edge": "camo:edge_2d74972a0d9e", "hint_tags": []}
+{"id": "Q0230", "seed_edge": "camo:edge_e5a26944b850", "hint_tags": ["trap:associational"]}
+{"id": "Q0231", "seed_edge": "camo:edge_00dc413159ee", "hint_tags": ["trap:twin"]}
+{"id": "Q0232", "seed_edge": "camo:edge_95667d1e2a45", "hint_tags": ["trap:null"]}
+{"id": "Q0233", "seed_edge": "camo:edge_ea6c8b6b71d7", "hint_tags": ["trap:sign_flip"]}
+{"id": "Q0234", "seed_edge": "camo:edge_8ce61d8b9746", "hint_tags": []}
+{"id": "Q0235", "seed_edge": "camo:edge_e6e6affabfd1", "hint_tags": ["trap:null"]}
+{"id": "Q0236", "seed_edge": "camo:edge_2edae0fe9617", "hint_tags": ["trap:sign_flip"]}
+{"id": "Q0237", "seed_edge": "camo:edge_a6038f86bc19", "hint_tags": ["trap:null"]}
+{"id": "Q0238", "seed_edge": "camo:edge_3f032f1f8b5e", "hint_tags": ["trap:associational", "trap:twin"]}
+{"id": "Q0239", "seed_edge": "camo:edge_211b8c6d8ad9", "hint_tags": ["trap:associational"]}
+{"id": "Q0240", "seed_edge": "camo:edge_75c761839d95", "hint_tags": ["trap:associational"]}

@@ -48,16 +48,32 @@ procedure is in `AUDIT.md`.
 - **Override:** the auditor is not a stronger model than the labeller, which item 10 asks for. This was
   accepted on purpose; see the item 10 note in ROADMAP.md.
 
+## Issue #9 audit (after round 2)
+
+`experiments/devsets/AUDIT.md` has the full audit. Changes to this set:
+
+- **D3 null rule.** A null (`negated: true`) now votes 0 even when its cause is `unchanged`. A blind relabel
+  of 27 affected items (`d3/`, `d3_relabel.py`) changed D-Q0022, Q0025, Q0028 and Q0069. Only differences
+  that the rule caused were applied; the source is `llm:d3-relabel`.
+- **New items.** 58 forward edge seeds were added (Q0181–Q0240, `experiments/devsets/extend_questions.py`).
+  Gold chunks 0010–0012 are new, and 0009 gained 2 rows; old rows and inputs are byte-identical. A blind
+  audit of 16 new items (`audit_new/`) agreed on 15 (0.94); its correction of D-Q0222 wins.
+- **Trap tags** use the `trap_inventory.json` keys (`strategies/devset_builder/_traps.py`).
+- The class-level set is recorded in `CLASS.md`.
+
 ## Reproduce
 
-From `audit/` and the labeller outputs, this chain rebuilds `review.csv`, `human.jsonl`, `merged.jsonl`
-and `experiments/devsets/gold_annotated.yaml` byte for byte:
+From `audit/`, `d3/`, `audit_new/` and the labeller outputs, this chain rebuilds `human.jsonl`,
+`merged.jsonl` and `experiments/devsets/gold_annotated.yaml` byte for byte (verified Sat Nov 14):
 
 ```sh
 export PYTHONPATH=src
 rm experiments/annotate/gold/human.jsonl
 python experiments/gold/fold_audit.py --reviewer llm:auditor
+python -m camoreasoning annotate merge gold
 python -m camoreasoning annotate review-import gold --file experiments/annotate/gold/review.csv
+python -m camoreasoning annotate review-import gold --file experiments/gold/d3/review_d3.csv
+python -m camoreasoning annotate review-import gold --file experiments/gold/audit_new/review.csv
 python -m camoreasoning annotate merge gold
 python -m camoreasoning -s gold_labeler=annotated devset --gold-only
 ```

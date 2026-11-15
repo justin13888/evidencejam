@@ -1,0 +1,20 @@
+{"id": "C-C0027", "ok": "y", "comment": "Same edges (woody debris/slash -> vegetation cover), mixed across two studies, very_low."}
+{"id": "C-C0055", "ok": "y", "comment": "Same glyphosate -> diversity edges; richness-only edges excluded by both; decrease moderate."}
+{"id": "C-C0018", "ok": "y", "comment": "Both no_evidence: water table and anoxia are not soil moisture; e1 is CO2."}
+{"id": "C-C0021", "ok": "n", "comment": "Model counts e58 (mowing+burning+glyphosate combo) which ties er.29 study, giving mixed/low; I excluded the combo node and got increase/moderate."}
+{"id": "C-C0025", "ok": "y", "comment": "Both no_evidence: genetic diversity of hatchery fish is not a Shannon/evenness index."}
+{"id": "C-C0095", "ok": "y", "comment": "Same edges; COGROY study majority 0 plus e48 0 gives no_effect moderate."}
+{"id": "C-C0035", "ok": "n", "comment": "Direction matches (mixed) but model adds e35/e45 time passage (moderate) giving low; I excluded calendar time and kept ordination nulls e4/e13, giving very_low."}
+{"id": "C-C0089", "ok": "y", "comment": "Both no_evidence: canopy openness, active layer and 1938 climate trend are not time-since-disturbance -> microclimate."}
+{"id": "C-C0061", "ok": "y", "comment": "Same single edge e25 (time after disturbance -> CO2 sink), increase moderate."}
+{"id": "C-C0090", "ok": "y", "comment": "Same time-since-acid-recovery -> copepod survival edges, decrease low."}
+{"id": "C-C0016", "ok": "y", "comment": "Both no_evidence: fish edges use calendar/reserve time; copepods are not fish."}
+{"id": "C-C0066", "ok": "y", "comment": "Identical 15-edge set and effects; mixed very_low."}
+{"id": "C-C0075", "ok": "y", "comment": "Same lone e11 null (released salmon offspring), no_effect low; soft vs hard release excluded."}
+{"id": "C-C0073", "ok": "n", "comment": "Model answers increase from e10/e12/e24, but none of those outcomes is stated as native species (submergent plants, bryophytes, total cover); I label no_evidence."}
+{"id": "C-C0070", "ok": "y", "comment": "Both no_evidence: only component covers (understory, herb, shrub, native) or biomass."}
+{"id": "C-C0046", "ok": "n", "comment": "I count hybrid poplar planting vs no-nurse-tree control -> seedling mortality unchanged (e14, e60) as no_effect moderate; model gives no_evidence."}
+{"id": "C-C0028", "ok": "y", "comment": "Same single edge e5 (soil moisture -> lower seedling regeneration), decrease low."}
+{"id": "C-C0079", "ok": "y", "comment": "Same edges (residual trees 0, debris piles +1, riparian reserve -1), mixed very_low."}
+{"id": "C-C0082", "ok": "y", "comment": "Both no_evidence: no wildfire edge reaches NEE/GEP/ER."}
+{"id": "C-C0074", "ok": "y", "comment": "Both no_evidence: burning edges never reach water table."}

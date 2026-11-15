@@ -17,6 +17,7 @@ import csv
 import json
 import random
 from collections import defaultdict
+from pathlib import Path
 
 from camoreasoning import annotate as A
 
@@ -25,10 +26,15 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("-n", type=int, default=40)
     ap.add_argument("--seed", type=int, default=10)
+    ap.add_argument("--task", default="gold", help="gold or class_gold")
+    ap.add_argument("--out", default=None, help="directory for review.csv + blind.jsonl (default: the task dir)")
+    ap.add_argument("--after", default=None, help="only ids sorting after this one (e.g. D-Q0180)")
     args = ap.parse_args()
-    t, d = A.TASKS["gold"], A.task_dir("gold")
-    items = {it["id"]: it for c in A.chunks("gold") for it in A._read_jsonl(d / "in" / f"{c}.jsonl")}
-    rows = [r for r in A.merged("gold") if r["id"] in items]
+    t, d = A.TASKS[args.task], A.task_dir(args.task)
+    items = {it["id"]: it for c in A.chunks(args.task) for it in A._read_jsonl(d / "in" / f"{c}.jsonl")}
+    rows = [r for r in A.merged(args.task) if r["id"] in items and (not args.after or r["id"] > args.after)]
+    out = Path(args.out) if args.out else d
+    out.mkdir(parents=True, exist_ok=True)
     groups: dict[str, list[dict]] = defaultdict(list)
     for r in rows:  # an item joins the group of its rarest tag, so small traps are not crowded out
         groups[min(r["_meta"].get("tags") or ["untagged"], key=lambda g: sum(g in (x["_meta"].get("tags") or [])
@@ -40,7 +46,7 @@ def main() -> None:
     left = [r for r in rows if r not in pick]
     pick += rng.sample(left, max(0, min(args.n - len(pick), len(left))))
     names = list(t.fields)
-    with open(d / "review.csv", "w", newline="", encoding="utf-8") as f:
+    with open(out / "review.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["id", "context", *[f"model_{k}" for k in names], "model_note", "ok", *[f"human_{k}" for k in names],
                     "reviewer", "comment"])  # fmt: skip
@@ -50,13 +56,13 @@ def main() -> None:
             shown = {**r, "edges": edges}
             w.writerow([r["id"], A._describe(items[r["id"]]), *[t.fields[k].fmt(shown.get(k)) for k in names],
                         r.get("note", ""), "", *[""] * len(names), "", ""])  # fmt: skip
-    A._write_jsonl(d / "blind.jsonl", ({"id": r["id"], "question": items[r["id"]]["question"],
+    A._write_jsonl(out / "blind.jsonl", ({"id": r["id"], "question": items[r["id"]]["question"],
                                         "candidates": items[r["id"]]["candidates"]} for r in pick))  # fmt: skip
     tags = defaultdict(int)
     for r in pick:
         for g in r["_meta"].get("tags") or ["untagged"]:
             tags[g] += 1
-    print(json.dumps({"rows": len(pick), "by_tag": dict(sorted(tags.items())), "csv": str(d / "review.csv")}))
+    print(json.dumps({"rows": len(pick), "by_tag": dict(sorted(tags.items())), "csv": str(out / "review.csv")}))
 
 
 if __name__ == "__main__":

@@ -12,8 +12,11 @@ Rubric (locked decisions, ROADMAP "Decisions"):
   sentence: 1 increase, -1 decrease, 0 tested and no effect / no change, null = no usable sign
   (moderator, mediator, pure association with no direction). Watch qualifiers: "removal of X" decreasing Y
   means X increases Y. associated_with/correlated_with count, signed via the qualifiers.
+- A null result votes 0 whatever the node qualifiers say: an edge with `negated: true` or
+  `language: no_relationship` that is otherwise relevant gets effect 0, even if its cause or outcome node
+  is qualified `unchanged` (the schema encodes nulls as negated, never through `unchanged`). (D3)
 - Edges that do not vote: predicates moderates, mediates, precedes, regulates (non-directional), and
-  edges whose cause node is `unchanged`. Leave them out of `edges`. (D3)
+  non-null edges (`negated: false`) whose cause node is `unchanged`. Leave them out of `edges`. (D3)
 - An edge whose outcome is a variance share, an ordination axis, or "explains X% of variation" has no
   usable sign: effect null.
 - One vote per study (`study`): the majority effect among that study's listed edges with effect 1, -1 or 0.
@@ -26,7 +29,7 @@ Rubric (locked decisions, ROADMAP "Decisions"):
   is "mixed" OR every listed edge's predicate is associated_with/correlated_with. The `language` field does
   not trigger the drop. Never "high". Do not default to "low": compute it.
 - status: "answered" when at least one edge votes (effect 1, -1, 0 or null); "no_evidence" when none
-  does (only reversed, non-directional or unchanged-cause edges, or nothing relevant). no_evidence ->
+  does (only reversed, non-directional or non-null unchanged-cause edges, or nothing relevant). no_evidence ->
   direction null, certainty null, edges [].
 - If the candidates look incomplete for this question, still label what you see and add a "note".
 - Only refs offered in that line. No other keys.
