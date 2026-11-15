@@ -1,0 +1,3674 @@
+items:
+- id: C-C0001
+  question: What effect does mechanical vegetation control have on community composition
+    & similarity?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: mechanical_release_control
+    outcome_class: community_composition
+    kind: evidence
+    studies: 4
+    cause_terms:
+    - mowing
+    - cutting
+    - brush cutting
+    - clearing
+    - hand weeding
+    - hand pulling
+    - mechanical removal
+    - slashing
+    - brushing
+    outcome_terms:
+    - species composition
+    - community similarity
+    - plant community
+    - species turnover
+    - assemblage
+    - dissimilarity
+    - dominant species
+    - community structure
+    nominated:
+    - camo:edge_17791dba1287
+    - camo:edge_201d815e88f0
+    - camo:edge_23f0e85aca8d
+    - camo:edge_30318e4bfdb1
+    - camo:edge_4d71bcd9c978
+    - camo:edge_6d21d7acf2e3
+    - camo:edge_70d68e59ca2a
+    - camo:edge_7ee62f323ad6
+    - camo:edge_8e89d4cec80b
+    - camo:edge_90d4a82cb810
+    - camo:edge_940a477b0847
+    - camo:edge_99d23f1bf51f
+    - camo:edge_a832f0207e6b
+    - camo:edge_d4d0b8b08c58
+    - camo:edge_dd29686f962e
+    - camo:edge_e2eefa08184e
+  status: null
+- id: C-C0002
+  question: What effect does rising co2 and air chemistry have on the number of species?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: elevated_co2
+    outcome_class: plant_richness
+    kind: empty
+    studies: 0
+    cause_terms:
+    - elevated co2
+    - atmospheric co2
+    - ozone
+    - nitrogen deposition
+    - acid deposition
+    - sulfur deposition
+    - face experiment
+    - carbon dioxide
+    outcome_terms:
+    - species richness
+    - number of species
+    - plant richness
+    - taxon richness
+    - species count
+    - alpha diversity
+    nominated: []
+  status: null
+- id: C-C0003
+  question: What effect does releasing captive-reared or translocated animals have
+    on fish numbers, growth and survival?
+  tags:
+  - class
+  - seed:evidence
+  split: holdout
+  meta:
+    cause_class: species_reintroduction
+    outcome_class: fish_abundance
+    kind: evidence
+    studies: 4
+    cause_terms:
+    - reintroduction
+    - translocation
+    - stocking
+    - captive rearing
+    - captive breeding
+    - release
+    - hatchery fish
+    - head-starting
+    outcome_terms:
+    - fish abundance
+    - fish density
+    - fish growth
+    - fish survival
+    - fish biomass
+    - juvenile fish
+    - salmonids
+    - trout
+    nominated:
+    - camo:edge_375bc5531bfd
+    - camo:edge_462708d842dc
+    - camo:edge_4c621d5f986b
+    - camo:edge_63e36f7934b9
+    - camo:edge_e6e6affabfd1
+    - camo:edge_ebc2b7315c81
+    - camo:edge_f6e0eeb744c5
+  status: null
+- id: C-C0004
+  question: What effect does creating or restoring wetlands and marshes have on amphibians
+    and reptiles?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: wetland_creation
+    outcome_class: amphibian_reptile
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - wetland creation
+    - constructed wetland
+    - marsh restoration
+    - salt marsh
+    - tidal restoration
+    - pond creation
+    - wetland restoration
+    outcome_terms:
+    - amphibians
+    - frogs
+    - salamanders
+    - tadpoles
+    - reptiles
+    - turtles
+    - snakes
+    - lizards
+    - herpetofauna
+    nominated:
+    - camo:edge_282ad2248b10
+    - camo:edge_3b599de2e50d
+    - camo:edge_4ba4dcd78f3c
+    - camo:edge_8ecd7ff1b500
+    - camo:edge_9268944b8aeb
+    - camo:edge_fd5b13000066
+  status: null
+- id: C-C0005
+  question: What effect does competing vegetation have on species richness?
+  tags:
+  - class
+  - seed:empty
+  split: holdout
+  meta:
+    cause_class: competing_vegetation
+    outcome_class: plant_richness
+    kind: empty
+    studies: 0
+    cause_terms:
+    - competing vegetation
+    - competition
+    - weed cover
+    - shrub competition
+    - herbaceous competition
+    - grass cover
+    - competitor density
+    outcome_terms:
+    - species richness
+    - number of species
+    - plant richness
+    - taxon richness
+    - species count
+    - alpha diversity
+    nominated: []
+  status: null
+- id: C-C0006
+  question: What effect does canopy shade and light levels have on the number of species?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: canopy_light
+    outcome_class: plant_richness
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - canopy cover
+    - canopy openness
+    - light availability
+    - shading
+    - canopy gaps
+    - understory light
+    - light intensity
+    outcome_terms:
+    - species richness
+    - number of species
+    - plant richness
+    - taxon richness
+    - species count
+    - alpha diversity
+    nominated:
+    - camo:edge_f3cb92423b16
+  status: null
+- id: C-C0007
+  question: What effect does restoration work in general have on abundance and cover
+    of native species?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: restoration_general
+    outcome_class: native_abundance
+    kind: evidence
+    studies: 6
+    cause_terms:
+    - restoration
+    - restored sites
+    - ecological restoration
+    - restoration treatment
+    - rehabilitation
+    - reference sites
+    outcome_terms:
+    - native species
+    - native cover
+    - native plant abundance
+    - native density
+    - native grasses
+    - native forbs
+    nominated:
+    - camo:edge_0d7bbb228d9a
+    - camo:edge_1607d2232fbc
+    - camo:edge_21bc82e259f9
+    - camo:edge_28a3b09e7ffe
+    - camo:edge_41ec09803400
+    - camo:edge_6e69a2aedf3b
+    - camo:edge_75c54621540f
+    - camo:edge_7a4694284b37
+    - camo:edge_80f5752895b2
+    - camo:edge_8dd7a58a8d6d
+    - camo:edge_ddca607847e3
+    - camo:edge_ecc1febb76b5
+  status: null
+- id: C-C0008
+  question: What effect does sediment & contaminated soil removal have on bird abundance
+    & occupancy?
+  tags:
+  - class
+  - seed:empty
+  split: holdout
+  meta:
+    cause_class: sediment_removal
+    outcome_class: bird_abundance
+    kind: empty
+    studies: 0
+    cause_terms:
+    - sediment removal
+    - dredging
+    - topsoil removal
+    - soil capping
+    - excavation
+    - contaminated soil
+    - remediation
+    outcome_terms:
+    - bird abundance
+    - bird density
+    - occupancy
+    - songbirds
+    - waterbirds
+    - breeding birds
+    - bird counts
+    nominated: []
+  status: null
+- id: C-C0009
+  question: What effect does adding compost or other soil amendments have on survival
+    of seedlings and trees?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: organic_soil_amendment
+    outcome_class: tree_seedling_survival
+    kind: evidence
+    studies: 6
+    cause_terms:
+    - compost
+    - biochar
+    - manure
+    - biosolids
+    - organic matter
+    - topsoil
+    - soil amendment
+    - sewage sludge
+    outcome_terms:
+    - seedling survival
+    - tree mortality
+    - survival rate
+    - mortality
+    - sapling survival
+    - planted seedlings
+    nominated:
+    - camo:edge_19f1809393fe
+    - camo:edge_6bdbbebae41c
+    - camo:edge_793d703327a1
+    - camo:edge_8ffcc1a50528
+    - camo:edge_91532c1e168d
+    - camo:edge_98396e7ee027
+    - camo:edge_a5d3533882a7
+    - camo:edge_e94e77cf02a1
+    - camo:edge_ecfbdc0eab1d
+    - camo:edge_f802035c7146
+  status: null
+- id: C-C0010
+  question: What effect does mulching the soil surface have on soil microbes, fungi
+    and mycorrhizas?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: mulch_surface_cover
+    outcome_class: soil_microbial
+    kind: empty
+    studies: 0
+    cause_terms:
+    - mulch
+    - straw mulch
+    - wood chips
+    - plastic mulch
+    - mulch mat
+    - geotextile
+    - surface cover
+    outcome_terms:
+    - soil microbes
+    - microbial biomass
+    - mycorrhizae
+    - fungi
+    - bacteria
+    - litter decomposition
+    - decomposition
+    - enzyme activity
+    nominated: []
+  status: null
+- id: C-C0011
+  question: What effect does how wet the soil is have on which species make up the
+    community?
+  tags:
+  - class
+  - seed:evidence
+  split: holdout
+  meta:
+    cause_class: soil_moisture_water
+    outcome_class: community_composition
+    kind: evidence
+    studies: 3
+    cause_terms:
+    - soil moisture
+    - water content
+    - soil water
+    - drought
+    - irrigation
+    - volumetric water
+    outcome_terms:
+    - species composition
+    - community similarity
+    - plant community
+    - species turnover
+    - assemblage
+    - dissimilarity
+    - dominant species
+    - community structure
+    nominated:
+    - camo:edge_10821349078b
+    - camo:edge_438284f45077
+    - camo:edge_7660c3153386
+    - camo:edge_e31b596f68eb
+  status: null
+- id: C-C0012
+  question: What effect does visitor trampling and recreation have on overall plant
+    cover?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: tourism_recreation
+    outcome_class: plant_cover_total
+    kind: evidence
+    studies: 4
+    cause_terms:
+    - trampling
+    - recreation
+    - visitors
+    - hiking trails
+    - foot traffic
+    - camping
+    - off-road vehicles
+    outcome_terms:
+    - vegetation cover
+    - plant cover
+    - herbaceous cover
+    - shrub cover
+    - ground cover
+    - percent cover
+    nominated:
+    - camo:edge_13fa61d6bf1d
+    - camo:edge_22673b7e1965
+    - camo:edge_56565a166dea
+    - camo:edge_7e734c644743
+    - camo:edge_8c54213725f0
+    - camo:edge_90bcb95b081c
+    - camo:edge_98de9a0eb2f0
+    - camo:edge_b71740d4afdf
+    - camo:edge_c7e09708b28c
+    - camo:edge_df786e67f158
+    - camo:edge_edf52ce6538c
+  status: null
+- id: C-C0013
+  question: What effect does logging and timber harvest have on soil compaction and
+    structure?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: harvest_general
+    outcome_class: soil_physical
+    kind: empty
+    studies: 0
+    cause_terms:
+    - harvesting
+    - logging
+    - clearcutting
+    - timber harvest
+    - skidding
+    - forest management
+    outcome_terms:
+    - bulk density
+    - soil compaction
+    - porosity
+    - aggregate stability
+    - infiltration
+    - penetration resistance
+    - soil structure
+    nominated: []
+  status: null
+- id: C-C0014
+  question: What effect does built structures in streams and shorelines have on mammal
+    numbers and habitat use?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: engineered_structures
+    outcome_class: mammal_abundance
+    kind: empty
+    studies: 0
+    cause_terms:
+    - weirs
+    - dams
+    - culverts
+    - groynes
+    - riprap
+    - log structures
+    - breakwaters
+    - fish passes
+    - seawalls
+    outcome_terms:
+    - mammals
+    - small mammals
+    - rodents
+    - deer
+    - bats
+    - carnivores
+    - mammal abundance
+    - habitat use
+    nominated:
+    - camo:edge_e7b5600733f7
+  status: null
+- id: C-C0015
+  question: What effect does cutting or mowing competing vegetation have on the number
+    of species?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: mechanical_release_control
+    outcome_class: plant_richness
+    kind: evidence
+    studies: 6
+    cause_terms:
+    - mowing
+    - cutting
+    - brush cutting
+    - clearing
+    - hand weeding
+    - hand pulling
+    - mechanical removal
+    - slashing
+    - brushing
+    outcome_terms:
+    - species richness
+    - number of species
+    - plant richness
+    - taxon richness
+    - species count
+    - alpha diversity
+    nominated:
+    - camo:edge_4192f0ce799b
+    - camo:edge_6656bef047a9
+    - camo:edge_67a5624fdd3a
+    - camo:edge_99e3cf411743
+    - camo:edge_9f44db03ee7a
+    - camo:edge_ec3de9eb11af
+    - camo:edge_f9fc42bf7ab2
+    - camo:edge_fc0bbde3341b
+  status: null
+- id: C-C0016
+  question: What effect does time since disturbance / stand age have on fish abundance,
+    growth & survival?
+  tags:
+  - class
+  - seed:time
+  - trap:time_as_cause
+  split: dev
+  meta:
+    cause_class: time_since_disturbance
+    outcome_class: fish_abundance
+    kind: time
+    studies: 2
+    cause_terms:
+    - time since fire
+    - stand age
+    - years since restoration
+    - time since harvest
+    - successional age
+    - chronosequence
+    - age class
+    outcome_terms:
+    - fish abundance
+    - fish density
+    - fish growth
+    - fish survival
+    - fish biomass
+    - juvenile fish
+    - salmonids
+    - trout
+    nominated:
+    - camo:edge_0c5a6be87d47
+    - camo:edge_22e511358877
+    - camo:edge_3f508cba3dc8
+    - camo:edge_4d9c4de6a8f6
+    - camo:edge_6e1dd4d4dec0
+    - camo:edge_75f53a4f5061
+    - camo:edge_8266af1697bd
+    - camo:edge_dbbdda2f1d6f
+    - camo:edge_df7f7e817275
+    - camo:edge_f2187cc98255
+    - camo:edge_f881dd990312
+  status: null
+- id: C-C0017
+  question: What effect does temperature & climate warming have on predation, seed
+    consumption & damage?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: climate_warming
+    outcome_class: predation_herbivory_damage
+    kind: empty
+    studies: 0
+    cause_terms:
+    - warming
+    - temperature
+    - climate change
+    - experimental warming
+    - heat
+    - precipitation
+    outcome_terms:
+    - predation
+    - seed predation
+    - herbivory
+    - browsing damage
+    - nest predation
+    - seed removal
+    - insect damage
+    nominated: []
+  status: null
+- id: C-C0018
+  question: What effect does soil moisture & water content have on methane & N2O emissions?
+  tags:
+  - class
+  - seed:near_miss
+  - trap:near_miss_classes
+  split: dev
+  meta:
+    cause_class: soil_moisture_water
+    outcome_class: methane_emissions
+    kind: near_miss
+    studies: 0
+    cause_terms:
+    - soil moisture
+    - water content
+    - soil water
+    - drought
+    - irrigation
+    - volumetric water
+    outcome_terms:
+    - methane
+    - nitrous oxide
+    - ch4 emissions
+    - n2o emissions
+    - greenhouse gas
+    - methanogenesis
+    nominated: []
+  status: null
+- id: C-C0019
+  question: What effect does reintroduction, stocking & captive rearing have on insects
+    & aquatic invertebrates?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: species_reintroduction
+    outcome_class: insect_invertebrate
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - reintroduction
+    - translocation
+    - stocking
+    - captive rearing
+    - captive breeding
+    - release
+    - hatchery fish
+    - head-starting
+    outcome_terms:
+    - insects
+    - aquatic invertebrates
+    - macroinvertebrates
+    - beetles
+    - butterflies
+    - pollinators
+    - mayflies
+    nominated:
+    - camo:edge_1fba57ac97b3
+    - camo:edge_37618bbbe9fa
+    - camo:edge_465ab34534ae
+    - camo:edge_8277d51fabd3
+    - camo:edge_abfc56f32c34
+    - camo:edge_e05a5f62c6b3
+  status: null
+- id: C-C0020
+  question: What effect does site preparation & scarification have on erosion & sediment
+    loss?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: site_preparation
+    outcome_class: soil_erosion
+    kind: empty
+    studies: 0
+    cause_terms:
+    - site preparation
+    - scarification
+    - disking
+    - ploughing
+    - mounding
+    - ripping
+    - tillage
+    - bedding
+    outcome_terms:
+    - erosion
+    - sediment loss
+    - soil loss
+    - runoff
+    - sediment yield
+    - gully
+    - suspended sediment
+    nominated: []
+    recall:
+    - camo:edge_3f81177bc0ae
+  status: null
+- id: C-C0021
+  question: What effect does prescribed fire have on abundance and cover of native
+    species?
+  tags:
+  - class
+  - seed:near_miss
+  - trap:near_miss_classes
+  split: dev
+  meta:
+    cause_class: prescribed_burning
+    outcome_class: native_abundance
+    kind: near_miss
+    studies: 2
+    cause_terms:
+    - prescribed fire
+    - prescribed burning
+    - controlled burn
+    - burn frequency
+    - fire season
+    - burning
+    outcome_terms:
+    - native species
+    - native cover
+    - native plant abundance
+    - native density
+    - native grasses
+    - native forbs
+    nominated:
+    - camo:edge_05f6da15752b
+    - camo:edge_5d2d2e187ed3
+  status: null
+- id: C-C0022
+  question: What effect does water table & water level have on bare ground?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: water_table_level
+    outcome_class: bare_ground
+    kind: empty
+    studies: 0
+    cause_terms:
+    - water table
+    - water level
+    - water depth
+    - flooding
+    - hydroperiod
+    - inundation
+    - groundwater
+    - streamflow
+    outcome_terms:
+    - bare ground
+    - bare soil
+    - exposed soil
+    - unvegetated area
+    - open ground
+    nominated: []
+  status: null
+- id: C-C0023
+  question: What effect does mulching the soil surface have on overall plant cover?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: mulch_surface_cover
+    outcome_class: plant_cover_total
+    kind: evidence
+    studies: 5
+    cause_terms:
+    - mulch
+    - straw mulch
+    - wood chips
+    - plastic mulch
+    - mulch mat
+    - geotextile
+    - surface cover
+    outcome_terms:
+    - vegetation cover
+    - plant cover
+    - herbaceous cover
+    - shrub cover
+    - ground cover
+    - percent cover
+    nominated:
+    - camo:edge_08f4db8b4b87
+    - camo:edge_2e47c952c2f5
+    - camo:edge_3cd9f2ca8d5d
+    - camo:edge_4914d0596b80
+    - camo:edge_696baed77fb2
+    - camo:edge_dea0e6f60388
+    - camo:edge_df44375e9da6
+    - camo:edge_fa456d5592de
+  status: null
+- id: C-C0024
+  question: What effect does pollution and contaminants have on ecosystem carbon dioxide
+    exchange?
+  tags:
+  - class
+  - seed:empty
+  split: holdout
+  meta:
+    cause_class: contaminant_exposure
+    outcome_class: carbon_flux
+    kind: empty
+    studies: 0
+    cause_terms:
+    - contaminants
+    - pollution
+    - heavy metals
+    - pesticides
+    - oil spill
+    - salt
+    - mine tailings
+    outcome_terms:
+    - co2 flux
+    - net ecosystem exchange
+    - soil respiration
+    - ecosystem respiration
+    - gross primary production
+    - carbon uptake
+    nominated: []
+  status: null
+- id: C-C0025
+  question: What effect does reintroduction, stocking & captive rearing have on diversity
+    indices (Shannon, evenness)?
+  tags:
+  - class
+  - seed:near_miss
+  - trap:near_miss_classes
+  split: holdout
+  meta:
+    cause_class: species_reintroduction
+    outcome_class: diversity_indices
+    kind: near_miss
+    studies: 0
+    cause_terms:
+    - reintroduction
+    - translocation
+    - stocking
+    - captive rearing
+    - captive breeding
+    - release
+    - hatchery fish
+    - head-starting
+    outcome_terms:
+    - shannon diversity
+    - evenness
+    - simpson index
+    - diversity index
+    - functional diversity
+    - shannon index
+    nominated: []
+  status: null
+- id: C-C0026
+  question: What effect does temperature & climate warming have on bare ground?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: climate_warming
+    outcome_class: bare_ground
+    kind: empty
+    studies: 0
+    cause_terms:
+    - warming
+    - temperature
+    - climate change
+    - experimental warming
+    - heat
+    - precipitation
+    outcome_terms:
+    - bare ground
+    - bare soil
+    - exposed soil
+    - unvegetated area
+    - open ground
+    nominated: []
+  status: null
+- id: C-C0027
+  question: What effect does leaving dead wood and retained trees have on overall
+    plant cover?
+  tags:
+  - class
+  - seed:near_miss
+  - trap:near_miss_classes
+  split: dev
+  meta:
+    cause_class: woody_debris_retention
+    outcome_class: plant_cover_total
+    kind: near_miss
+    studies: 1
+    cause_terms:
+    - coarse woody debris
+    - deadwood
+    - snags
+    - retention trees
+    - logging residues
+    - slash
+    - green tree retention
+    outcome_terms:
+    - vegetation cover
+    - plant cover
+    - herbaceous cover
+    - shrub cover
+    - ground cover
+    - percent cover
+    nominated:
+    - camo:edge_08ff936c2ce1
+    - camo:edge_31396e8430d1
+    - camo:edge_369358d52b1b
+    - camo:edge_5c994088c9fe
+    - camo:edge_906023b4aaee
+    - camo:edge_9c3411ecc2cd
+    - camo:edge_f5b91c46d117
+    - camo:edge_f5ebd4f17342
+  status: null
+- id: C-C0028
+  question: What effect does how wet the soil is have on natural seedling recruitment?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: soil_moisture_water
+    outcome_class: natural_regeneration
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - soil moisture
+    - water content
+    - soil water
+    - drought
+    - irrigation
+    - volumetric water
+    outcome_terms:
+    - natural regeneration
+    - seedling recruitment
+    - seedling establishment
+    - recruitment
+    - seedling density
+    - advance regeneration
+    - germination
+    nominated:
+    - camo:edge_9cf70248e225
+    - camo:edge_9d2bd64d5397
+    - camo:edge_a87d999d586e
+  status: null
+- id: C-C0029
+  question: What effect does competition from other vegetation have on stand structure
+    and basal area?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: competing_vegetation
+    outcome_class: stand_structure
+    kind: empty
+    studies: 0
+    cause_terms:
+    - competing vegetation
+    - competition
+    - weed cover
+    - shrub competition
+    - herbaceous competition
+    - grass cover
+    - competitor density
+    outcome_terms:
+    - basal area
+    - stand density
+    - tree diameter
+    - dbh
+    - stem density
+    - canopy height
+    - stand structure
+    nominated: []
+  status: null
+- id: C-C0030
+  question: What effect does invasive / non-native species presence have on population
+    size & trend?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: invasive_presence
+    outcome_class: population_size_trend
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - invasive species
+    - non-native species
+    - exotic plants
+    - invasive cover
+    - alien species
+    - introduced predators
+    outcome_terms:
+    - population size
+    - population trend
+    - abundance
+    - density
+    - population growth
+    - counts
+    nominated:
+    - camo:edge_53223c48be0d
+    - camo:edge_84e7faa22543
+  status: null
+- id: C-C0031
+  question: What effect does competing vegetation have on tree & seedling growth?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: competing_vegetation
+    outcome_class: tree_growth
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - competing vegetation
+    - competition
+    - weed cover
+    - shrub competition
+    - herbaceous competition
+    - grass cover
+    - competitor density
+    outcome_terms:
+    - height growth
+    - diameter growth
+    - seedling growth
+    - biomass
+    - stem volume
+    - relative growth rate
+    nominated:
+    - camo:edge_53aec4a2551e
+    - camo:edge_b2fb2128e335
+    - camo:edge_b5d7bac7e91a
+    - camo:edge_d89fe4d3caf0
+    - camo:edge_e6bae6a5042f
+  status: null
+- id: C-C0032
+  question: What effect does organic & soil amendments have on tree & seedling growth?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: organic_soil_amendment
+    outcome_class: tree_growth
+    kind: evidence
+    studies: 11
+    cause_terms:
+    - compost
+    - biochar
+    - manure
+    - biosolids
+    - organic matter
+    - topsoil
+    - soil amendment
+    - sewage sludge
+    outcome_terms:
+    - height growth
+    - diameter growth
+    - seedling growth
+    - biomass
+    - stem volume
+    - relative growth rate
+    nominated:
+    - camo:edge_036c34db6126
+    - camo:edge_087248066a8a
+    - camo:edge_097bb8d60ec8
+    - camo:edge_0a4dea92114a
+    - camo:edge_11c66cf0cf04
+    - camo:edge_13c9ad199941
+    - camo:edge_1536e7c975df
+    - camo:edge_17cf0ed81b29
+    - camo:edge_1b1bc4dc9287
+    - camo:edge_1bcdd36e6c37
+    - camo:edge_294fb9f750f8
+    - camo:edge_2d5831217c20
+    - camo:edge_36d09bd5a405
+    - camo:edge_3e6d747c4733
+    - camo:edge_3faf716791a0
+    - camo:edge_4ccc9f73b4bb
+    - camo:edge_766f915fb191
+    - camo:edge_7da33c1fdd3a
+    - camo:edge_8096a077843e
+    - camo:edge_8c8a99d5a7ac
+    - camo:edge_951ec184ff5d
+    - camo:edge_95667d1e2a45
+    - camo:edge_95c3fe533a25
+    - camo:edge_95d190dd78cc
+    - camo:edge_98151fac0ad8
+    - camo:edge_a8d9dfd0d9c7
+    - camo:edge_bca77d1739c3
+    - camo:edge_c416538fec5a
+    - camo:edge_ca419f7311e8
+    - camo:edge_cc468e41a42f
+    - camo:edge_cca0ea3774cd
+    - camo:edge_d8ff400097fe
+    - camo:edge_d9e2a231b1ad
+    - camo:edge_f0ef499b6db2
+    - camo:edge_f1ff4c260616
+    - camo:edge_f26b994b5bac
+    - camo:edge_f54cc2bb6633
+    - camo:edge_f976fabdf647
+    - camo:edge_fabfc6be4689
+  status: null
+- id: C-C0033
+  question: What effect does trampling & recreation have on water table & water level?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: tourism_recreation
+    outcome_class: water_table_level
+    kind: empty
+    studies: 0
+    cause_terms:
+    - trampling
+    - recreation
+    - visitors
+    - hiking trails
+    - foot traffic
+    - camping
+    - off-road vehicles
+    outcome_terms:
+    - water table
+    - water level
+    - water depth
+    - flooding
+    - hydroperiod
+    - inundation
+    - groundwater
+    - streamflow
+    nominated: []
+  status: null
+- id: C-C0034
+  question: What effect does adding compost or other soil amendments have on abundance
+    and cover of native species?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: organic_soil_amendment
+    outcome_class: native_abundance
+    kind: evidence
+    studies: 5
+    cause_terms:
+    - compost
+    - biochar
+    - manure
+    - biosolids
+    - organic matter
+    - topsoil
+    - soil amendment
+    - sewage sludge
+    outcome_terms:
+    - native species
+    - native cover
+    - native plant abundance
+    - native density
+    - native grasses
+    - native forbs
+    nominated:
+    - camo:edge_0e065f58a280
+    - camo:edge_0eaf1fd9309a
+    - camo:edge_10ee646320a8
+    - camo:edge_1aa3384d8f31
+    - camo:edge_1d56394dd339
+    - camo:edge_1f050b5f7c11
+    - camo:edge_2a53d9092663
+    - camo:edge_5f5e8a0b8473
+    - camo:edge_644761215667
+    - camo:edge_78eff206a230
+    - camo:edge_91a437fd98a7
+    - camo:edge_a7cca9d3257e
+    - camo:edge_ab869e5fe3f4
+    - camo:edge_b55f3e4ca5b8
+    - camo:edge_c2e3d5b77428
+    - camo:edge_d51a6e8002c6
+    - camo:edge_dabbf98642e0
+    - camo:edge_e2fdcdac4118
+    - camo:edge_ea541402573b
+  status: null
+- id: C-C0035
+  question: What effect does time since disturbance or stand age have on abundance
+    and cover of native species?
+  tags:
+  - class
+  - seed:time
+  - trap:time_as_cause
+  split: dev
+  meta:
+    cause_class: time_since_disturbance
+    outcome_class: native_abundance
+    kind: time
+    studies: 5
+    cause_terms:
+    - time since fire
+    - stand age
+    - years since restoration
+    - time since harvest
+    - successional age
+    - chronosequence
+    - age class
+    outcome_terms:
+    - native species
+    - native cover
+    - native plant abundance
+    - native density
+    - native grasses
+    - native forbs
+    nominated:
+    - camo:edge_239d1c9de6f2
+    - camo:edge_5476fc8d95bd
+    - camo:edge_6d5711a1528c
+    - camo:edge_8140184eb2e0
+    - camo:edge_88c1bd9a0eeb
+    - camo:edge_8c1b5ef3361a
+    - camo:edge_a1f42621f8ce
+    - camo:edge_c883016a357b
+    - camo:edge_d6b218689ff0
+    - camo:edge_d9613438d671
+  status: null
+- id: C-C0036
+  question: What effect does fertilization & nutrient addition have on foliar & tissue
+    nutrients?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: fertilization
+    outcome_class: foliar_nutrients
+    kind: evidence
+    studies: 6
+    cause_terms:
+    - fertilizer
+    - fertilization
+    - nitrogen addition
+    - phosphorus addition
+    - liming
+    - nutrient addition
+    - npk
+    outcome_terms:
+    - foliar nitrogen
+    - leaf nutrients
+    - tissue nutrients
+    - foliar phosphorus
+    - nutrient concentration
+    - c:n ratio
+    nominated:
+    - camo:edge_0e7caf04efd3
+    - camo:edge_104b005091fd
+    - camo:edge_21db328eadf6
+    - camo:edge_324fe490aa1b
+    - camo:edge_3a7deaaa4c07
+    - camo:edge_3b4060e75715
+    - camo:edge_3f033108b797
+    - camo:edge_40203a0ebf9d
+    - camo:edge_4bddee5bc7c9
+    - camo:edge_5b6c299e190b
+    - camo:edge_5ebc87a79c35
+    - camo:edge_60695e49a3da
+    - camo:edge_6800ea786f3b
+    - camo:edge_6b15f875c543
+    - camo:edge_75755154922a
+    - camo:edge_8a367c3c8045
+    - camo:edge_981bfb13e035
+    - camo:edge_a3200812c435
+    - camo:edge_a79d5c02f71b
+    - camo:edge_c95df332e382
+    - camo:edge_d0851c2dd7e5
+    - camo:edge_d300437566d4
+    - camo:edge_d9504acf78eb
+    - camo:edge_df627c8f51c3
+    - camo:edge_e550f11f8087
+    - camo:edge_edb7ac42e449
+    - camo:edge_fc41ce598438
+  status: null
+- id: C-C0037
+  question: What effect does in-stream & engineered structures have on soil microbes,
+    fungi & mycorrhizae?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: engineered_structures
+    outcome_class: soil_microbial
+    kind: empty
+    studies: 0
+    cause_terms:
+    - weirs
+    - dams
+    - culverts
+    - groynes
+    - riprap
+    - log structures
+    - breakwaters
+    - fish passes
+    - seawalls
+    outcome_terms:
+    - soil microbes
+    - microbial biomass
+    - mycorrhizae
+    - fungi
+    - bacteria
+    - litter decomposition
+    - decomposition
+    - enzyme activity
+    nominated: []
+  status: null
+- id: C-C0038
+  question: What effect does mulch & surface cover have on seedling & tree survival?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: mulch_surface_cover
+    outcome_class: tree_seedling_survival
+    kind: evidence
+    studies: 6
+    cause_terms:
+    - mulch
+    - straw mulch
+    - wood chips
+    - plastic mulch
+    - mulch mat
+    - geotextile
+    - surface cover
+    outcome_terms:
+    - seedling survival
+    - tree mortality
+    - survival rate
+    - mortality
+    - sapling survival
+    - planted seedlings
+    nominated:
+    - camo:edge_06a5b1ac37c0
+    - camo:edge_172b7974a334
+    - camo:edge_24c4138b7a23
+    - camo:edge_296f1c58ad29
+    - camo:edge_3177c2c787ef
+    - camo:edge_31833e0d9ee6
+    - camo:edge_360ed1abec3b
+    - camo:edge_3ccdabeecc9d
+    - camo:edge_3eb0b9103a01
+    - camo:edge_5b0b83fdbd53
+    - camo:edge_8e18c2b5dc4f
+    - camo:edge_904cec2741d0
+    - camo:edge_aa5e6890e84f
+    - camo:edge_b84a47c40c99
+  status: null
+- id: C-C0039
+  question: What effect does organic & soil amendments have on species richness?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: organic_soil_amendment
+    outcome_class: plant_richness
+    kind: evidence
+    studies: 11
+    cause_terms:
+    - compost
+    - biochar
+    - manure
+    - biosolids
+    - organic matter
+    - topsoil
+    - soil amendment
+    - sewage sludge
+    outcome_terms:
+    - species richness
+    - number of species
+    - plant richness
+    - taxon richness
+    - species count
+    - alpha diversity
+    nominated:
+    - camo:edge_0776326c93e0
+    - camo:edge_0eaf1fd9309a
+    - camo:edge_0f08156c844c
+    - camo:edge_139d03e04d95
+    - camo:edge_1d56394dd339
+    - camo:edge_256535a7318d
+    - camo:edge_2a53d9092663
+    - camo:edge_2e93761db564
+    - camo:edge_34514a19b338
+    - camo:edge_35185d64279c
+    - camo:edge_462a93ba80c1
+    - camo:edge_47ad8af1678f
+    - camo:edge_54b95c4ca17c
+    - camo:edge_65c9ec81e3ed
+    - camo:edge_70aa88c92374
+    - camo:edge_7f8c5f573203
+    - camo:edge_83667dd4cbc6
+    - camo:edge_9e7abf32b99e
+    - camo:edge_9f7d24527875
+    - camo:edge_a3b35d233689
+    - camo:edge_a407ff840faa
+    - camo:edge_a7cca9d3257e
+    - camo:edge_b55f3e4ca5b8
+    - camo:edge_bd211e577fdc
+    - camo:edge_c232308887d0
+    - camo:edge_cbe49613fdee
+    - camo:edge_cc2d918eec78
+    - camo:edge_d32310df5fa3
+    - camo:edge_d78524ca79dd
+    - camo:edge_d8f782093e71
+    - camo:edge_eb87369c66a0
+  status: null
+- id: C-C0040
+  question: What effect does temperature & microclimate have on community composition
+    & similarity?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: soil_temperature
+    outcome_class: community_composition
+    kind: empty
+    studies: 0
+    cause_terms:
+    - microclimate
+    - air temperature
+    - soil temperature
+    - light
+    - humidity
+    - shading
+    outcome_terms:
+    - species composition
+    - community similarity
+    - plant community
+    - species turnover
+    - assemblage
+    - dissimilarity
+    - dominant species
+    - community structure
+    nominated: []
+  status: null
+- id: C-C0041
+  question: What effect does rewetting and restoring hydrology have on shannon diversity
+    and evenness?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: peatland_rewetting
+    outcome_class: diversity_indices
+    kind: empty
+    studies: 0
+    cause_terms:
+    - rewetting
+    - ditch blocking
+    - drain blocking
+    - hydrological restoration
+    - raised water table
+    - peatland rewetting
+    - reflooding
+    outcome_terms:
+    - shannon diversity
+    - evenness
+    - simpson index
+    - diversity index
+    - functional diversity
+    - shannon index
+    nominated: []
+  status: null
+- id: C-C0042
+  question: What effect does invasive / non-native species presence have on fish abundance,
+    growth & survival?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: invasive_presence
+    outcome_class: fish_abundance
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - invasive species
+    - non-native species
+    - exotic plants
+    - invasive cover
+    - alien species
+    - introduced predators
+    outcome_terms:
+    - fish abundance
+    - fish density
+    - fish growth
+    - fish survival
+    - fish biomass
+    - juvenile fish
+    - salmonids
+    - trout
+    nominated:
+    - camo:edge_3019a2266311
+    - camo:edge_fb3489f963a3
+  status: null
+- id: C-C0043
+  question: What effect does grazing & browsing have on stand structure & basal area?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: grazing_browsing
+    outcome_class: stand_structure
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - grazing
+    - browsing
+    - livestock
+    - deer browsing
+    - herbivore exclusion
+    - fencing
+    - exclosures
+    - cattle
+    outcome_terms:
+    - basal area
+    - stand density
+    - tree diameter
+    - dbh
+    - stem density
+    - canopy height
+    - stand structure
+    nominated:
+    - camo:edge_18caf0511a4d
+    - camo:edge_239bafd2c4f0
+    - camo:edge_7d0c8c1c169a
+  status: null
+- id: C-C0044
+  question: What effect does organic & soil amendments have on breeding & reproductive
+    success?
+  tags:
+  - class
+  - seed:empty
+  split: holdout
+  meta:
+    cause_class: organic_soil_amendment
+    outcome_class: reproductive_success
+    kind: empty
+    studies: 0
+    cause_terms:
+    - compost
+    - biochar
+    - manure
+    - biosolids
+    - organic matter
+    - topsoil
+    - soil amendment
+    - sewage sludge
+    outcome_terms:
+    - breeding success
+    - reproductive success
+    - nest success
+    - fledglings
+    - fecundity
+    - clutch size
+    nominated: []
+    recall:
+    - camo:edge_b79fd44169e0
+    - camo:edge_cff60056ba60
+    - camo:edge_ae19dd26ad9c
+  status: null
+- id: C-C0045
+  question: What effect does partial harvesting & selective cutting have on soil &
+    litter invertebrates?
+  tags:
+  - class
+  - seed:empty
+  split: holdout
+  meta:
+    cause_class: partial_harvest
+    outcome_class: soil_fauna
+    kind: empty
+    studies: 0
+    cause_terms:
+    - selective cutting
+    - partial harvest
+    - thinning
+    - shelterwood
+    - group selection
+    - variable retention
+    outcome_terms:
+    - earthworms
+    - soil invertebrates
+    - collembola
+    - mites
+    - ground beetles
+    - litter invertebrates
+    - ants
+    nominated: []
+  status: null
+- id: C-C0046
+  question: What effect does planting nursery stock or transplants have on survival
+    of seedlings and trees?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: tree_planting
+    outcome_class: tree_seedling_survival
+    kind: evidence
+    studies: 9
+    cause_terms:
+    - planting
+    - transplanting
+    - nursery stock
+    - planted seedlings
+    - sod transfer
+    - container seedlings
+    - plugs
+    outcome_terms:
+    - seedling survival
+    - tree mortality
+    - survival rate
+    - mortality
+    - sapling survival
+    - planted seedlings
+    nominated:
+    - camo:edge_03bff5e0e13a
+    - camo:edge_12eee1942d83
+    - camo:edge_1e83315c4674
+    - camo:edge_29578840ed0a
+    - camo:edge_39fcedb99880
+    - camo:edge_589e6b84a5b1
+    - camo:edge_7199c3f205fe
+    - camo:edge_74ff5328d122
+    - camo:edge_7695032c13a0
+    - camo:edge_7e7eb0a7d0ff
+    - camo:edge_7fc6d84c0234
+    - camo:edge_875a0385c187
+    - camo:edge_a2b3f4b00748
+    - camo:edge_a626fd918f46
+    - camo:edge_a90ccce475ce
+    - camo:edge_b919519b1d0a
+    - camo:edge_c3d74945f4a1
+    - camo:edge_d1c988b1b56b
+    - camo:edge_dad3a7219bd8
+    - camo:edge_ea4f0c55a6cf
+    - camo:edge_fddd15119b80
+  status: null
+- id: C-C0047
+  question: What effect does mechanical vegetation control have on seedling & tree
+    survival?
+  tags:
+  - class
+  - seed:evidence
+  split: holdout
+  meta:
+    cause_class: mechanical_release_control
+    outcome_class: tree_seedling_survival
+    kind: evidence
+    studies: 6
+    cause_terms:
+    - mowing
+    - cutting
+    - brush cutting
+    - clearing
+    - hand weeding
+    - hand pulling
+    - mechanical removal
+    - slashing
+    - brushing
+    outcome_terms:
+    - seedling survival
+    - tree mortality
+    - survival rate
+    - mortality
+    - sapling survival
+    - planted seedlings
+    nominated:
+    - camo:edge_0a3a133e25f9
+    - camo:edge_1c146ff8a6e9
+    - camo:edge_1e00bfa9c2f7
+    - camo:edge_3db49b2a9d32
+    - camo:edge_62ac1a00c85a
+    - camo:edge_805cbe11dd56
+    - camo:edge_924c1990dfed
+    - camo:edge_9302d742892f
+    - camo:edge_98075b238614
+    - camo:edge_98de9758b74f
+    - camo:edge_a78035aa6591
+    - camo:edge_d6c398bc8ab5
+    - camo:edge_e636715ffe44
+  status: null
+- id: C-C0048
+  question: What effect does herbicide application have on flowering, seed production
+    & reproduction?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: herbicide_application
+    outcome_class: reproduction_flowering
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - herbicide
+    - glyphosate
+    - chemical control
+    - herbicide spraying
+    - triclopyr
+    - imazapyr
+    outcome_terms:
+    - flowering
+    - seed production
+    - seed set
+    - fruit production
+    - plant reproduction
+    - seed rain
+    nominated:
+    - camo:edge_1096b0589f2d
+    - camo:edge_19f8f07f5d10
+    - camo:edge_2e9da3e08ae5
+    - camo:edge_5cbd8f29dc40
+    - camo:edge_88a1353b7370
+  status: null
+- id: C-C0049
+  question: What effect does fertilization & nutrient addition have on tree species
+    composition & dominance?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: fertilization
+    outcome_class: tree_species_composition
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - fertilizer
+    - fertilization
+    - nitrogen addition
+    - phosphorus addition
+    - liming
+    - nutrient addition
+    - npk
+    outcome_terms:
+    - tree species composition
+    - dominant tree species
+    - conifers
+    - hardwoods
+    - species dominance
+    - overstory composition
+    nominated:
+    - camo:edge_1adb62d51a05
+    - camo:edge_2b93025ec87c
+    - camo:edge_88441aaae0f8
+    - camo:edge_9bc04fe17c8c
+    - camo:edge_f9406f05de7a
+  status: null
+- id: C-C0050
+  question: What effect does fertilization & nutrient addition have on soil pH & chemistry?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: fertilization
+    outcome_class: soil_ph_chemistry
+    kind: evidence
+    studies: 3
+    cause_terms:
+    - fertilizer
+    - fertilization
+    - nitrogen addition
+    - phosphorus addition
+    - liming
+    - nutrient addition
+    - npk
+    outcome_terms:
+    - soil ph
+    - soil nitrogen
+    - soil carbon
+    - soil phosphorus
+    - cation exchange
+    - soil nutrients
+    - soil chemistry
+    nominated:
+    - camo:edge_49b8e2a4df18
+    - camo:edge_6aeab1b5e5f3
+    - camo:edge_9bc527d22542
+    - camo:edge_a014365d0b38
+    - camo:edge_bdddb93d41c7
+    - camo:edge_e9e903c9fa3c
+    - camo:edge_fcb8f0a9ee5a
+  status: null
+- id: C-C0051
+  question: What effect does water table level have on soil carbon?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: water_table_level
+    outcome_class: soil_organic_carbon
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - water table
+    - water level
+    - water depth
+    - groundwater level
+    - flooding
+    - inundation
+    - drainage
+    - hydroperiod
+    - streamflow
+    - soil moisture
+    outcome_terms:
+    - soil organic carbon
+    - soil organic matter
+    - soil carbon
+    - carbon stock
+    - peat carbon
+    - humus
+    - litter carbon
+    - organic layer
+    nominated:
+    - camo:edge_539c81a71b19
+    - camo:edge_7e0b8a0b40b3
+    - camo:edge_86f3ed57d7cf
+  status: null
+- id: C-C0052
+  question: What effect does soil preparation before planting have on species diversity
+    and evenness?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: site_preparation
+    outcome_class: diversity_indices
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - scarification
+    - site preparation
+    - disc trenching
+    - mounding
+    - ploughing
+    - soil tillage
+    - harrowing
+    - mineral soil exposure
+    - bedding
+    outcome_terms:
+    - shannon diversity
+    - simpson diversity
+    - species evenness
+    - diversity index
+    - pielou evenness
+    - beta diversity
+    - alpha diversity
+    - plant diversity
+    nominated:
+    - camo:edge_cd1d58d8bc1c
+  status: null
+- id: C-C0053
+  question: What effect does cutting or mowing competing vegetation have on plant
+    physiological stress?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: mechanical_release_control
+    outcome_class: plant_physiology
+    kind: evidence
+    studies: 4
+    cause_terms:
+    - mowing
+    - brush cutting
+    - cutting
+    - clipping
+    - manual weeding
+    - shrub removal
+    - vegetation removal
+    - thinning understory
+    outcome_terms:
+    - photosynthesis
+    - stomatal conductance
+    - water stress
+    - leaf nitrogen
+    - chlorophyll
+    - water potential
+    - transpiration
+    - leaf area
+    nominated:
+    - camo:edge_1fed459f94ee
+    - camo:edge_23fa765ad058
+    - camo:edge_2e1d69ed8493
+    - camo:edge_32af974ce5f7
+    - camo:edge_568a41963858
+    - camo:edge_b6240489abb5
+    - camo:edge_bc070c373d46
+    - camo:edge_dcd1c4c3999e
+    - camo:edge_ff1a282f80e0
+  status: null
+- id: C-C0054
+  question: What effect does competing vegetation have on diversity indices (Shannon,
+    evenness)?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: competing_vegetation
+    outcome_class: diversity_indices
+    kind: empty
+    studies: 0
+    cause_terms:
+    - competing vegetation
+    - weed cover
+    - shrub competition
+    - grass competition
+    - understory vegetation
+    - herbaceous cover
+    - neighbour density
+    outcome_terms:
+    - shannon diversity
+    - simpson diversity
+    - species evenness
+    - diversity index
+    - pielou evenness
+    - beta diversity
+    - alpha diversity
+    - plant diversity
+    nominated: []
+  status: null
+- id: C-C0055
+  question: What effect does herbicide application have on diversity indices (Shannon,
+    evenness)?
+  tags:
+  - class
+  - seed:near_miss
+  - trap:near_miss_classes
+  split: dev
+  meta:
+    cause_class: herbicide_application
+    outcome_class: diversity_indices
+    kind: near_miss
+    studies: 1
+    cause_terms:
+    - herbicide
+    - glyphosate
+    - chemical weed control
+    - imazapyr
+    - triclopyr
+    - spraying
+    - chemical release
+    outcome_terms:
+    - shannon diversity
+    - simpson diversity
+    - species evenness
+    - diversity index
+    - pielou evenness
+    - beta diversity
+    - alpha diversity
+    - plant diversity
+    nominated:
+    - camo:edge_fe312adb1a47
+  status: null
+- id: C-C0056
+  question: What effect does timber harvesting have on fish populations?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: harvest_general
+    outcome_class: fish_abundance
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - timber harvest
+    - timber harvesting
+    - clearcutting
+    - harvesting
+    - tree removal
+    - forest cutting
+    - deforestation
+    outcome_terms:
+    - fish abundance
+    - fish density
+    - fish growth
+    - fish survival
+    - salmonid
+    - trout
+    - salmon
+    - fish biomass
+    - juvenile fish
+    nominated:
+    - camo:edge_283237dd9e90
+    - camo:edge_55b82b09aa95
+    - camo:edge_621415a80967
+    - camo:edge_78cca4f128d7
+    - camo:edge_8c5ba567b317
+    - camo:edge_99fd4e1026a5
+    - camo:edge_9e7e99cb2eb8
+    - camo:edge_d8432d3fd373
+    - camo:edge_fac586e05846
+    recall:
+    - camo:edge_d8432d3fd373
+    - camo:edge_283237dd9e90
+    - camo:edge_99fd4e1026a5
+    - camo:edge_9e7e99cb2eb8
+    - camo:edge_8c5ba567b317
+    - camo:edge_fac586e05846
+    - camo:edge_621415a80967
+    - camo:edge_78cca4f128d7
+    - camo:edge_55b82b09aa95
+  status: null
+- id: C-C0057
+  question: What effect does local temperature and microclimate have on invasive species
+    cover?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: soil_temperature
+    outcome_class: invasive_abundance
+    kind: empty
+    studies: 0
+    cause_terms:
+    - air temperature
+    - soil temperature
+    - microclimate
+    - light availability
+    - canopy openness
+    - solar radiation
+    - relative humidity
+    - water temperature
+    outcome_terms:
+    - invasive species
+    - non-native plants
+    - exotic species
+    - alien species
+    - invasive cover
+    - weed invasion
+    - introduced species
+    nominated:
+    - camo:edge_dee83be5a33c
+  status: null
+- id: C-C0058
+  question: What effect does herbicide application have on total vegetation cover?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: herbicide_application
+    outcome_class: plant_cover_total
+    kind: evidence
+    studies: 10
+    cause_terms:
+    - herbicide
+    - glyphosate
+    - chemical weed control
+    - imazapyr
+    - triclopyr
+    - spraying
+    - chemical release
+    outcome_terms:
+    - vegetation cover
+    - plant cover
+    - ground cover
+    - herb cover
+    - shrub cover
+    - understory cover
+    - canopy cover
+    nominated:
+    - camo:edge_09a06b168821
+    - camo:edge_0af0dfba8c7d
+    - camo:edge_0e8deb602418
+    - camo:edge_11690083251e
+    - camo:edge_13fa61d6bf1d
+    - camo:edge_1654b2d9a8fe
+    - camo:edge_20dc6a868d10
+    - camo:edge_27113204c7bc
+    - camo:edge_27324a3c69c5
+    - camo:edge_2d3f3a554991
+    - camo:edge_2ebf9473095d
+    - camo:edge_36a7bbfc565c
+    - camo:edge_3c1f6910e080
+    - camo:edge_3d992ef51f00
+    - camo:edge_4729f74d596c
+    - camo:edge_47ea0ed77bde
+    - camo:edge_4a58045362c9
+    - camo:edge_4dc9358c7116
+    - camo:edge_50b9158df51e
+    - camo:edge_5988918f25b5
+    - camo:edge_5a6e4462cef3
+    - camo:edge_5be82b577166
+    - camo:edge_73525954fd38
+    - camo:edge_757a4867ed5e
+    - camo:edge_75d2e0fef1cd
+    - camo:edge_768d12befb95
+    - camo:edge_78690b777465
+    - camo:edge_7caaabebf1a0
+    - camo:edge_828cafdfc4af
+    - camo:edge_8328e65d2d95
+    - camo:edge_8464c9ea8f7a
+    - camo:edge_896514b58906
+    - camo:edge_94e754b7f098
+    - camo:edge_954c587bded7
+    - camo:edge_9a040539c20f
+    - camo:edge_9d981cad6d95
+    - camo:edge_9f39530f7a4d
+    - camo:edge_a636ed0bacc1
+    - camo:edge_aec0fc98c188
+    - camo:edge_af57b1e43d09
+    - camo:edge_b71740d4afdf
+    - camo:edge_bb967238fb34
+    - camo:edge_bc484670f052
+    - camo:edge_bf056913d7e7
+    - camo:edge_ca84e687f0af
+    - camo:edge_d5bb6081f884
+    - camo:edge_dacd35cbcdc3
+    - camo:edge_df786e67f158
+    - camo:edge_e6fc26306f73
+    - camo:edge_e82066342b5b
+    - camo:edge_ed5dd9a3a05b
+    - camo:edge_f65b424fe60c
+    - camo:edge_f764909ac650
+    - camo:edge_fa3061e8edec
+    - camo:edge_fdb87e11c913
+  status: null
+- id: C-C0059
+  question: What effect does wildfire and fire history have on fish populations?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: wildfire
+    outcome_class: fish_abundance
+    kind: empty
+    studies: 0
+    cause_terms:
+    - wildfire
+    - fire severity
+    - fire frequency
+    - burn severity
+    - fire regime
+    - forest fire
+    - burned area
+    - fire intensity
+    outcome_terms:
+    - fish abundance
+    - fish density
+    - fish growth
+    - fish survival
+    - salmonid
+    - trout
+    - salmon
+    - fish biomass
+    - juvenile fish
+    nominated: []
+  status: null
+- id: C-C0060
+  question: What effect does adding organic soil amendments have on soil fertility?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: organic_soil_amendment
+    outcome_class: soil_nutrients
+    kind: evidence
+    studies: 9
+    cause_terms:
+    - compost
+    - biochar
+    - manure
+    - topsoil
+    - sewage sludge
+    - biosolids
+    - organic amendment
+    - wood chips
+    - soil transfer
+    outcome_terms:
+    - soil nitrogen
+    - soil phosphorus
+    - available nitrogen
+    - soil fertility
+    - nutrient availability
+    - exchangeable cations
+    - nitrate
+    - ammonium
+    - potassium
+    nominated:
+    - camo:edge_1352153619d1
+    - camo:edge_13ea2781a59d
+    - camo:edge_1c5c96562b65
+    - camo:edge_26564f7b7d01
+    - camo:edge_270f56fcc3e2
+    - camo:edge_33b5726a62a4
+    - camo:edge_3ce6ab9d6df0
+    - camo:edge_4531557f7c4c
+    - camo:edge_477ed530f1b3
+    - camo:edge_483360f3d8af
+    - camo:edge_55091d32ac49
+    - camo:edge_5a5f4e59f796
+    - camo:edge_6510e48d09a9
+    - camo:edge_6e6ec827456e
+    - camo:edge_714d3a7032d8
+    - camo:edge_72ade58c6633
+    - camo:edge_892e8db6c791
+    - camo:edge_8d56db6ebfa4
+    - camo:edge_9ad92331ffe5
+    - camo:edge_9cedc32dd2be
+    - camo:edge_a4ae6133653f
+    - camo:edge_a4b9fd3391a9
+    - camo:edge_ad6204c54b5d
+    - camo:edge_ae392bb5aed8
+    - camo:edge_aeeade2e81b2
+    - camo:edge_d2f4fa8c6aad
+    - camo:edge_d993b1ee65ba
+    - camo:edge_dac672f3b3c3
+    - camo:edge_defb7cbbfcb3
+    - camo:edge_e5bce5e8fffe
+    - camo:edge_f11048e217b8
+    - camo:edge_f7810e44c4f2
+  status: null
+- id: C-C0061
+  question: What effect does time since disturbance have on ecosystem carbon dioxide
+    exchange?
+  tags:
+  - class
+  - seed:time
+  - trap:time_as_cause
+  split: dev
+  meta:
+    cause_class: time_since_disturbance
+    outcome_class: carbon_flux
+    kind: time
+    studies: 1
+    cause_terms:
+    - stand age
+    - time since fire
+    - time since harvest
+    - years since restoration
+    - successional stage
+    - chronosequence
+    - forest age
+    - recovery time
+    outcome_terms:
+    - co2 flux
+    - net ecosystem exchange
+    - ecosystem respiration
+    - soil respiration
+    - gross primary production
+    - carbon uptake
+    - carbon balance
+    nominated:
+    - camo:edge_1032947ff901
+    - camo:edge_509d80a55677
+  status: null
+- id: C-C0062
+  question: What effect does fertilization & nutrient addition have on soil nutrients
+    & fertility?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: fertilization
+    outcome_class: soil_nutrients
+    kind: evidence
+    studies: 7
+    cause_terms:
+    - fertilization
+    - nitrogen addition
+    - phosphorus addition
+    - liming
+    - npk fertilizer
+    - nutrient enrichment
+    - urea
+    outcome_terms:
+    - soil nitrogen
+    - soil phosphorus
+    - available nitrogen
+    - soil fertility
+    - nutrient availability
+    - exchangeable cations
+    - nitrate
+    - ammonium
+    - potassium
+    nominated:
+    - camo:edge_0236679c72cf
+    - camo:edge_02b6860f7ef8
+    - camo:edge_1bca7adff786
+    - camo:edge_1e7f861300bc
+    - camo:edge_2878178e834c
+    - camo:edge_35280d4e6290
+    - camo:edge_42a5a2a9e0c0
+    - camo:edge_4a089ac86247
+    - camo:edge_4e3950040b0b
+    - camo:edge_4ef5349eae58
+    - camo:edge_5e8400c03987
+    - camo:edge_655cf5886647
+    - camo:edge_6a5d44eabd48
+    - camo:edge_7f2d2dff3d5f
+    - camo:edge_90a6bdf2c908
+    - camo:edge_96055690774f
+    - camo:edge_a7df4108a68c
+    - camo:edge_aca1b3980883
+    - camo:edge_bd8b38c3d1bc
+    - camo:edge_c7ab7cf84d1a
+    - camo:edge_d0c5a6d44300
+    - camo:edge_d4ed436095a7
+    - camo:edge_daec543ad8e2
+    - camo:edge_e3a1c4207fa4
+    - camo:edge_fb317ec43ea0
+  status: null
+- id: C-C0063
+  question: What effect does organic & soil amendments have on soil organic matter
+    & carbon?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: organic_soil_amendment
+    outcome_class: soil_organic_carbon
+    kind: evidence
+    studies: 4
+    cause_terms:
+    - compost
+    - biochar
+    - manure
+    - topsoil
+    - sewage sludge
+    - biosolids
+    - organic amendment
+    - wood chips
+    - soil transfer
+    outcome_terms:
+    - soil organic carbon
+    - soil organic matter
+    - soil carbon
+    - carbon stock
+    - peat carbon
+    - humus
+    - litter carbon
+    - organic layer
+    nominated:
+    - camo:edge_11bafe44101a
+    - camo:edge_1512fed164c2
+    - camo:edge_2c35751d7137
+    - camo:edge_df3febb8f6ec
+  status: null
+- id: C-C0064
+  question: What effect does pollutants and contamination have on functional trait
+    composition?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: contaminant_exposure
+    outcome_class: functional_traits
+    kind: empty
+    studies: 0
+    cause_terms:
+    - heavy metals
+    - pesticides
+    - acid deposition
+    - nitrogen deposition
+    - oil spill
+    - mercury
+    - pollutants
+    - road salt
+    - sewage
+    outcome_terms:
+    - functional traits
+    - feeding guilds
+    - functional diversity
+    - specific leaf area
+    - life form
+    - plant height
+    - functional groups
+    - seed mass
+    nominated: []
+    recall:
+    - camo:edge_8310099ecb81
+    - camo:edge_3c8e8a8344bd
+    - camo:edge_4b1cb7530faa
+    - camo:edge_8144cb48c6f0
+  status: null
+- id: C-C0065
+  question: What effect does restoring hydrology have on bare soil cover?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: peatland_rewetting
+    outcome_class: bare_ground
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - rewetting
+    - ditch blocking
+    - drain blocking
+    - hydrological restoration
+    - raising water table
+    - dam construction
+    - wetland restoration
+    outcome_terms:
+    - bare ground
+    - bare soil
+    - bare peat
+    - exposed soil
+    - unvegetated area
+    - open ground
+    nominated:
+    - camo:edge_a0c841f433f6
+  status: null
+- id: C-C0066
+  question: What effect does time since disturbance / stand age have on natural regeneration
+    & recruitment?
+  tags:
+  - class
+  - seed:time
+  - trap:time_as_cause
+  split: dev
+  meta:
+    cause_class: time_since_disturbance
+    outcome_class: natural_regeneration
+    kind: time
+    studies: 4
+    cause_terms:
+    - stand age
+    - time since fire
+    - time since harvest
+    - years since restoration
+    - successional stage
+    - chronosequence
+    - forest age
+    - recovery time
+    outcome_terms:
+    - natural regeneration
+    - seedling recruitment
+    - seedling density
+    - sapling density
+    - advance regeneration
+    - self-sown seedlings
+    - tree recruitment
+    nominated:
+    - camo:edge_0db71e166028
+    - camo:edge_3f0bc5f93df3
+    - camo:edge_439ea22d28cf
+    - camo:edge_5235af1e0203
+    - camo:edge_5cfc4fe30f8f
+    - camo:edge_8304e6a35203
+    - camo:edge_d9e98809e476
+  status: null
+- id: C-C0067
+  question: What effect does trampling & recreation have on moss & bryophyte cover?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: tourism_recreation
+    outcome_class: moss_bryophyte
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - trampling
+    - recreation
+    - hiking
+    - visitor use
+    - off-road vehicles
+    - footpaths
+    - camping
+    - human disturbance
+    outcome_terms:
+    - moss cover
+    - bryophytes
+    - sphagnum
+    - feather mosses
+    - liverworts
+    - bryophyte cover
+    - moss layer
+    nominated:
+    - camo:edge_d61b7cb87469
+  status: null
+- id: C-C0068
+  question: What effect does wildfire and fire history have on overall plant cover?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: wildfire
+    outcome_class: plant_cover_total
+    kind: empty
+    studies: 0
+    cause_terms:
+    - wildfire
+    - fire severity
+    - fire frequency
+    - burn severity
+    - fire regime
+    - forest fire
+    - burned area
+    - fire intensity
+    outcome_terms:
+    - vegetation cover
+    - plant cover
+    - ground cover
+    - herb cover
+    - shrub cover
+    - understory cover
+    - canopy cover
+    nominated: []
+  status: null
+- id: C-C0069
+  question: What effect does mulch & surface cover have on moss & bryophyte cover?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: mulch_surface_cover
+    outcome_class: moss_bryophyte
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - mulch
+    - straw mulch
+    - wood chip mulch
+    - hay mulch
+    - plastic mulch
+    - nurse crop
+    - geotextile
+    - litter cover
+    outcome_terms:
+    - moss cover
+    - bryophytes
+    - sphagnum
+    - feather mosses
+    - liverworts
+    - bryophyte cover
+    - moss layer
+    nominated:
+    - camo:edge_2a6803a68dbf
+    - camo:edge_77b1405c59cf
+    - camo:edge_83ac921e4487
+  status: null
+- id: C-C0070
+  question: What effect does mechanical vegetation control have on total vegetation
+    cover?
+  tags:
+  - class
+  - seed:evidence
+  split: holdout
+  meta:
+    cause_class: mechanical_release_control
+    outcome_class: plant_cover_total
+    kind: evidence
+    studies: 10
+    cause_terms:
+    - mowing
+    - brush cutting
+    - cutting
+    - clipping
+    - manual weeding
+    - shrub removal
+    - vegetation removal
+    - thinning understory
+    outcome_terms:
+    - vegetation cover
+    - plant cover
+    - ground cover
+    - herb cover
+    - shrub cover
+    - understory cover
+    - canopy cover
+    nominated:
+    - camo:edge_0a125e9b2fde
+    - camo:edge_1ff8ac230fd8
+    - camo:edge_260c325c4afb
+    - camo:edge_2a6916b990ea
+    - camo:edge_362c353c91cb
+    - camo:edge_3a3e0e4204c8
+    - camo:edge_41ccb2a1c3c7
+    - camo:edge_45d967af6774
+    - camo:edge_4d71bcd9c978
+    - camo:edge_4ff5ffb54319
+    - camo:edge_61cbc48a4678
+    - camo:edge_6c150a90614c
+    - camo:edge_7b2761ec5296
+    - camo:edge_8383243ccfc1
+    - camo:edge_8e83ebe737ef
+    - camo:edge_9db776dc822d
+    - camo:edge_9e7a6eee45a7
+    - camo:edge_b28eb4406373
+    - camo:edge_bd363112c0db
+    - camo:edge_c11602faff90
+    - camo:edge_caf72da7c369
+    - camo:edge_cf640d1fc20c
+    - camo:edge_d2c6e5de3e52
+    - camo:edge_e3b42c58eff5
+    - camo:edge_e44052c06f81
+  status: null
+- id: C-C0071
+  question: What effect does site and soil characteristics have on soil chemistry?
+  tags:
+  - class
+  - seed:evidence
+  split: holdout
+  meta:
+    cause_class: site_conditions
+    outcome_class: soil_ph_chemistry
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - soil type
+    - soil texture
+    - parent material
+    - slope
+    - aspect
+    - elevation
+    - soil depth
+    - site quality
+    - drainage class
+    outcome_terms:
+    - soil ph
+    - soil acidity
+    - cation exchange capacity
+    - base saturation
+    - electrical conductivity
+    - soil calcium
+    - aluminium
+    - soil salinity
+    nominated:
+    - camo:edge_04d214adc92d
+    - camo:edge_729f4b0a1910
+  status: null
+- id: C-C0072
+  question: What effect does controlled burning have on functional trait composition?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: prescribed_burning
+    outcome_class: functional_traits
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - prescribed burning
+    - controlled burn
+    - burn frequency
+    - burning season
+    - slash burning
+    - fire management
+    outcome_terms:
+    - functional traits
+    - feeding guilds
+    - functional diversity
+    - specific leaf area
+    - life form
+    - plant height
+    - functional groups
+    - seed mass
+    nominated:
+    - camo:edge_42beb53cfb15
+  status: null
+- id: C-C0073
+  question: What effect does water table & water level have on native species abundance
+    & cover?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: water_table_level
+    outcome_class: native_abundance
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - water table
+    - water level
+    - water depth
+    - groundwater level
+    - flooding
+    - inundation
+    - drainage
+    - hydroperiod
+    - streamflow
+    - soil moisture
+    outcome_terms:
+    - native species cover
+    - native plants
+    - native abundance
+    - native forbs
+    - native grasses
+    - indigenous species
+    nominated:
+    - camo:edge_728873bb897b
+  status: null
+- id: C-C0074
+  question: What effect does controlled burning have on water table level?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: prescribed_burning
+    outcome_class: water_table_level
+    kind: empty
+    studies: 0
+    cause_terms:
+    - prescribed burning
+    - controlled burn
+    - burn frequency
+    - burning season
+    - slash burning
+    - fire management
+    outcome_terms:
+    - water table
+    - water level
+    - water depth
+    - groundwater level
+    - flooding
+    - inundation
+    - drainage
+    - hydroperiod
+    - streamflow
+    - soil moisture
+    nominated: []
+  status: null
+- id: C-C0075
+  question: What effect does releasing captive-reared or translocated animals have
+    on breeding success?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: species_reintroduction
+    outcome_class: reproductive_success
+    kind: evidence
+    studies: 3
+    cause_terms:
+    - reintroduction
+    - translocation
+    - captive breeding
+    - hatchery stocking
+    - fish stocking
+    - head-starting
+    - release
+    - captive rearing
+    outcome_terms:
+    - breeding success
+    - nesting success
+    - fledging success
+    - clutch size
+    - reproductive output
+    - spawning
+    - fecundity
+    - juvenile production
+    nominated:
+    - camo:edge_09391b53ba83
+    - camo:edge_1d428ac9e2d7
+    - camo:edge_31c96b59ee1e
+    - camo:edge_557cd380f1a4
+    - camo:edge_64e38fcd4a3c
+    - camo:edge_890d674042c2
+    - camo:edge_b64a825591a3
+    - camo:edge_dc59c1efd626
+    - camo:edge_ec6526c6ddad
+  status: null
+- id: C-C0076
+  question: What effect does pollutants and contamination have on water quality and
+    contaminant levels?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: contaminant_exposure
+    outcome_class: water_chemistry
+    kind: evidence
+    studies: 7
+    cause_terms:
+    - heavy metals
+    - pesticides
+    - acid deposition
+    - nitrogen deposition
+    - oil spill
+    - mercury
+    - pollutants
+    - road salt
+    - sewage
+    outcome_terms:
+    - water quality
+    - dissolved oxygen
+    - nitrate concentration
+    - phosphorus concentration
+    - water ph
+    - turbidity
+    - tissue concentrations
+    - dissolved organic carbon
+    - metal concentration
+    nominated:
+    - camo:edge_0320e8fff937
+    - camo:edge_0819ceb10da2
+    - camo:edge_0ccf18a18921
+    - camo:edge_18900ed1b145
+    - camo:edge_1db6d2892a90
+    - camo:edge_1efac1e47fd0
+    - camo:edge_2b239716a94a
+    - camo:edge_30a10812ca01
+    - camo:edge_3277aaf176c4
+    - camo:edge_3a9e65544a3e
+    - camo:edge_3d9f7f90c358
+    - camo:edge_4e3b2055281b
+    - camo:edge_4fd15bcbffd9
+    - camo:edge_612fbebb70fc
+    - camo:edge_914be93501cd
+    - camo:edge_9aecc596a0eb
+    - camo:edge_9cc4413dea9d
+    - camo:edge_ad8929966475
+    - camo:edge_ae1a2aea872f
+    - camo:edge_b9ffe46ba686
+    - camo:edge_bf9faa42e813
+    - camo:edge_cbaa0d8cde38
+    - camo:edge_d9b3362da343
+    - camo:edge_dd75bf7dbc53
+    - camo:edge_e4c39c216f3a
+    - camo:edge_e5aaddf6981b
+    - camo:edge_eb0df8835f1b
+    - camo:edge_eb8cabd45073
+    - camo:edge_ef477891f232
+    - camo:edge_f3664091a79e
+    - camo:edge_fca1e9a1d4fc
+  status: null
+- id: C-C0077
+  question: What effect does temperature & climate warming have on animal condition,
+    growth & health?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: climate_warming
+    outcome_class: animal_condition
+    kind: empty
+    studies: 0
+    cause_terms:
+    - climate warming
+    - air temperature
+    - experimental warming
+    - drought
+    - precipitation
+    - climate change
+    - heat waves
+    outcome_terms:
+    - body condition
+    - body mass
+    - growth rate
+    - animal health
+    - disease prevalence
+    - parasite load
+    - body size
+    nominated: []
+  status: null
+- id: C-C0078
+  question: What effect does fertilization & nutrient addition have on species richness?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: fertilization
+    outcome_class: plant_richness
+    kind: evidence
+    studies: 4
+    cause_terms:
+    - fertilization
+    - nitrogen addition
+    - phosphorus addition
+    - liming
+    - npk fertilizer
+    - nutrient enrichment
+    - urea
+    outcome_terms:
+    - species richness
+    - number of species
+    - plant species richness
+    - bird species richness
+    - taxa richness
+    - species count
+    nominated:
+    - camo:edge_0c6b65fd09fd
+    - camo:edge_0e278c3f0493
+    - camo:edge_55fdefc8270e
+    - camo:edge_77889fe5ed24
+    - camo:edge_b86c111cc90c
+  status: null
+- id: C-C0079
+  question: What effect does woody debris & structural retention have on species richness?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: woody_debris_retention
+    outcome_class: plant_richness
+    kind: evidence
+    studies: 4
+    cause_terms:
+    - coarse woody debris
+    - deadwood
+    - snags
+    - retention trees
+    - green tree retention
+    - logging residues
+    - downed logs
+    - slash retention
+    outcome_terms:
+    - species richness
+    - number of species
+    - plant species richness
+    - bird species richness
+    - taxa richness
+    - species count
+    nominated:
+    - camo:edge_261dd8ad2d1e
+    - camo:edge_6d717fa3b5bc
+    - camo:edge_96b4f1092477
+    - camo:edge_9bf2ef47df73
+    - camo:edge_cc4099f7ece8
+    - camo:edge_fa817d4fa9cb
+  status: null
+- id: C-C0080
+  question: What effect does tree shelters & protection have on soil & litter invertebrates?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: tree_protection
+    outcome_class: soil_fauna
+    kind: empty
+    studies: 0
+    cause_terms:
+    - tree shelters
+    - tree guards
+    - fencing
+    - browse protection
+    - seedling protectors
+    - plastic tubes
+    - mesh guards
+    outcome_terms:
+    - soil invertebrates
+    - earthworms
+    - collembola
+    - mites
+    - ground beetles
+    - litter fauna
+    - soil fauna
+    - ants
+    nominated: []
+  status: null
+- id: C-C0081
+  question: What effect does water table & water level have on seed germination &
+    emergence?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: water_table_level
+    outcome_class: seed_germination_emergence
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - water table
+    - water level
+    - water depth
+    - groundwater level
+    - flooding
+    - inundation
+    - drainage
+    - hydroperiod
+    - streamflow
+    - soil moisture
+    outcome_terms:
+    - seed germination
+    - seedling emergence
+    - germination rate
+    - seedling establishment
+    - seed bank
+    - germination success
+    nominated:
+    - camo:edge_9fd6b39c6b1b
+  status: null
+- id: C-C0082
+  question: What effect does wildfire and fire history have on ecosystem carbon dioxide
+    exchange?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: wildfire
+    outcome_class: carbon_flux
+    kind: empty
+    studies: 0
+    cause_terms:
+    - wildfire
+    - fire severity
+    - fire frequency
+    - burn severity
+    - fire regime
+    - forest fire
+    - burned area
+    - fire intensity
+    outcome_terms:
+    - co2 flux
+    - net ecosystem exchange
+    - ecosystem respiration
+    - soil respiration
+    - gross primary production
+    - carbon uptake
+    - carbon balance
+    nominated: []
+  status: null
+- id: C-C0083
+  question: What effect does selective logging have on soil erosion and sediment loss?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: partial_harvest
+    outcome_class: soil_erosion
+    kind: empty
+    studies: 0
+    cause_terms:
+    - selective logging
+    - partial cutting
+    - thinning
+    - shelterwood
+    - variable retention
+    - single-tree selection
+    - group selection
+    - reduced impact logging
+    outcome_terms:
+    - soil erosion
+    - sediment yield
+    - runoff
+    - sediment loss
+    - suspended sediment
+    - rill erosion
+    - soil loss
+    nominated: []
+  status: null
+- id: C-C0084
+  question: What effect does inoculating soil with microbes have on plant productivity?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: soil_inoculation
+    outcome_class: biomass_productivity
+    kind: evidence
+    studies: 3
+    cause_terms:
+    - soil inoculation
+    - mycorrhizal inoculation
+    - mycorrhizae
+    - rhizobia
+    - soil transplant
+    - microbial inoculant
+    - inoculum
+    outcome_terms:
+    - plant biomass
+    - aboveground biomass
+    - belowground biomass
+    - primary productivity
+    - net primary production
+    - root biomass
+    - plant growth
+    - yield
+    nominated:
+    - camo:edge_01afffedce8f
+    - camo:edge_1e4bc7d7a6f1
+    - camo:edge_63ab1bf37e5d
+    - camo:edge_779d4207a429
+    - camo:edge_c1fd608d4dc0
+    - camo:edge_fff30734db77
+  status: null
+- id: C-C0085
+  question: What effect does site preparation & scarification have on invasive / non-native
+    species abundance?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: site_preparation
+    outcome_class: invasive_abundance
+    kind: empty
+    studies: 0
+    cause_terms:
+    - scarification
+    - site preparation
+    - disc trenching
+    - mounding
+    - ploughing
+    - soil tillage
+    - harrowing
+    - mineral soil exposure
+    - bedding
+    outcome_terms:
+    - invasive species
+    - non-native plants
+    - exotic species
+    - alien species
+    - invasive cover
+    - weed invasion
+    - introduced species
+    nominated: []
+    recall:
+    - camo:edge_6d0799a1bb00
+  status: null
+- id: C-C0086
+  question: What effect does instream habitat structures have on species composition?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: engineered_structures
+    outcome_class: community_composition
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - in-stream structures
+    - large woody debris
+    - weirs
+    - log jams
+    - riprap
+    - culverts
+    - artificial reefs
+    - groynes
+    - fish passes
+    outcome_terms:
+    - species composition
+    - community composition
+    - community similarity
+    - assemblage structure
+    - ordination
+    - dissimilarity
+    - species turnover
+    nominated:
+    - camo:edge_e26ac6ceb9ca
+  status: null
+- id: C-C0087
+  question: What effect does fertilizing or liming have on plant productivity?
+  tags:
+  - class
+  - seed:evidence
+  split: holdout
+  meta:
+    cause_class: fertilization
+    outcome_class: biomass_productivity
+    kind: evidence
+    studies: 11
+    cause_terms:
+    - fertilization
+    - nitrogen addition
+    - phosphorus addition
+    - liming
+    - npk fertilizer
+    - nutrient enrichment
+    - urea
+    outcome_terms:
+    - plant biomass
+    - aboveground biomass
+    - belowground biomass
+    - primary productivity
+    - net primary production
+    - root biomass
+    - plant growth
+    - yield
+    nominated:
+    - camo:edge_02e74dbfa8b7
+    - camo:edge_02f366f1c6c7
+    - camo:edge_145205ddf194
+    - camo:edge_1def71929875
+    - camo:edge_248b654455f1
+    - camo:edge_3bde244a7ed0
+    - camo:edge_3d0573e58933
+    - camo:edge_3fb326f2a6c3
+    - camo:edge_408465bc9dcf
+    - camo:edge_4b5a90a48179
+    - camo:edge_4de9efbfec5c
+    - camo:edge_55fae1717abc
+    - camo:edge_64dcb8ea730c
+    - camo:edge_6cc2e113d5e8
+    - camo:edge_7164fb680f66
+    - camo:edge_73cf7975653b
+    - camo:edge_7ab0be2fbee4
+    - camo:edge_7d3aede7cb12
+    - camo:edge_8b724dfcf30a
+    - camo:edge_8d09b599854f
+    - camo:edge_8eac9c464807
+    - camo:edge_98f30b64c321
+    - camo:edge_a17bba572e9b
+    - camo:edge_a20f2108aab7
+    - camo:edge_abb667992a86
+    - camo:edge_b0ad08c6034c
+    - camo:edge_c70165a37ea5
+    - camo:edge_ddfed005df71
+    - camo:edge_e9b4b035fff0
+    - camo:edge_f8b4ee96d021
+  status: null
+- id: C-C0088
+  question: What effect does trampling & recreation have on diversity indices (Shannon,
+    evenness)?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: tourism_recreation
+    outcome_class: diversity_indices
+    kind: evidence
+    studies: 3
+    cause_terms:
+    - trampling
+    - recreation
+    - hiking
+    - visitor use
+    - off-road vehicles
+    - footpaths
+    - camping
+    - human disturbance
+    outcome_terms:
+    - shannon diversity
+    - simpson diversity
+    - species evenness
+    - diversity index
+    - pielou evenness
+    - beta diversity
+    - alpha diversity
+    - plant diversity
+    nominated:
+    - camo:edge_8359a0346ff3
+    - camo:edge_88e3e6146b5a
+    - camo:edge_c34f30ad0e38
+    - camo:edge_d713f60632cb
+    - camo:edge_fa9139d00ae1
+  status: null
+- id: C-C0089
+  question: What effect does time since disturbance have on local temperature and
+    microclimate?
+  tags:
+  - class
+  - seed:time
+  - trap:time_as_cause
+  split: dev
+  meta:
+    cause_class: time_since_disturbance
+    outcome_class: soil_temperature
+    kind: time
+    studies: 1
+    cause_terms:
+    - stand age
+    - time since fire
+    - time since harvest
+    - years since restoration
+    - successional stage
+    - chronosequence
+    - forest age
+    - recovery time
+    outcome_terms:
+    - air temperature
+    - soil temperature
+    - microclimate
+    - light availability
+    - canopy openness
+    - solar radiation
+    - relative humidity
+    - water temperature
+    nominated:
+    - camo:edge_ce0c3b220291
+  status: null
+- id: C-C0090
+  question: What effect does time since disturbance / stand age have on animal survival
+    & mortality?
+  tags:
+  - class
+  - seed:time
+  - trap:time_as_cause
+  split: dev
+  meta:
+    cause_class: time_since_disturbance
+    outcome_class: wildlife_mortality
+    kind: time
+    studies: 0
+    cause_terms:
+    - stand age
+    - time since fire
+    - time since harvest
+    - years since restoration
+    - successional stage
+    - chronosequence
+    - forest age
+    - recovery time
+    outcome_terms:
+    - animal survival
+    - mortality rate
+    - predation
+    - survival rate
+    - road mortality
+    - annual survival
+    - juvenile survival
+    nominated: []
+  status: null
+- id: C-C0091
+  question: What effect does instream habitat structures have on invertebrate communities?
+  tags:
+  - class
+  - seed:evidence
+  split: holdout
+  meta:
+    cause_class: engineered_structures
+    outcome_class: insect_invertebrate
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - in-stream structures
+    - large woody debris
+    - weirs
+    - log jams
+    - riprap
+    - culverts
+    - artificial reefs
+    - groynes
+    - fish passes
+    outcome_terms:
+    - aquatic invertebrates
+    - macroinvertebrates
+    - insects
+    - ept taxa
+    - benthic invertebrates
+    - beetles
+    - pollinators
+    - invertebrate abundance
+    nominated:
+    - camo:edge_1184cf6ad59c
+    - camo:edge_5c30369bfa2c
+    - camo:edge_60fc484de9d1
+    - camo:edge_6167ed2e88a8
+    - camo:edge_66505607469a
+    - camo:edge_9921c71dfa80
+    - camo:edge_9b3e03c67dbf
+    - camo:edge_a8efc30ffc19
+    - camo:edge_d5ab54fec0b8
+    - camo:edge_dc771b207e81
+    - camo:edge_e26ac6ceb9ca
+    - camo:edge_e72bf1edbb8a
+    - camo:edge_e8fa34f97764
+  status: null
+- id: C-C0092
+  question: What effect does mulching the soil surface have on functional trait composition?
+  tags:
+  - class
+  - seed:evidence
+  split: holdout
+  meta:
+    cause_class: mulch_surface_cover
+    outcome_class: functional_traits
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - mulch
+    - straw mulch
+    - wood chip mulch
+    - hay mulch
+    - plastic mulch
+    - nurse crop
+    - geotextile
+    - litter cover
+    outcome_terms:
+    - functional traits
+    - feeding guilds
+    - functional diversity
+    - specific leaf area
+    - life form
+    - plant height
+    - functional groups
+    - seed mass
+    nominated:
+    - camo:edge_1e714dd7fbba
+  status: null
+- id: C-C0093
+  question: What effect does contaminants & pollution have on methane & N2O emissions?
+  tags:
+  - class
+  - seed:empty
+  split: dev
+  meta:
+    cause_class: contaminant_exposure
+    outcome_class: methane_emissions
+    kind: empty
+    studies: 0
+    cause_terms:
+    - heavy metals
+    - pesticides
+    - acid deposition
+    - nitrogen deposition
+    - oil spill
+    - mercury
+    - pollutants
+    - road salt
+    - sewage
+    outcome_terms:
+    - methane emissions
+    - nitrous oxide
+    - ch4 flux
+    - n2o flux
+    - greenhouse gas emissions
+    - methane flux
+    nominated: []
+  status: null
+- id: C-C0094
+  question: What effect does peat extraction have on tree species composition & dominance?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: peat_extraction
+    outcome_class: tree_species_composition
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - peat extraction
+    - peat mining
+    - peat harvesting
+    - cutover peatland
+    - milled peat
+    - peat cutting
+    outcome_terms:
+    - tree species composition
+    - tree dominance
+    - conifer dominance
+    - hardwood proportion
+    - canopy composition
+    - tree species mix
+    - forest composition
+    nominated:
+    - camo:edge_b9ddc3b5019a
+    - camo:edge_fba720f12943
+  status: null
+- id: C-C0095
+  question: What effect does mulching the soil surface have on number of species?
+  tags:
+  - class
+  - seed:near_miss
+  - trap:near_miss_classes
+  split: dev
+  meta:
+    cause_class: mulch_surface_cover
+    outcome_class: plant_richness
+    kind: near_miss
+    studies: 3
+    cause_terms:
+    - mulch
+    - straw mulch
+    - wood chip mulch
+    - hay mulch
+    - plastic mulch
+    - nurse crop
+    - geotextile
+    - litter cover
+    outcome_terms:
+    - species richness
+    - number of species
+    - plant species richness
+    - bird species richness
+    - taxa richness
+    - species count
+    nominated:
+    - camo:edge_163ce3fc4f35
+    - camo:edge_2a537ece97a5
+    - camo:edge_4f33eab5d8b0
+    - camo:edge_77889fe5ed24
+    - camo:edge_7fb05181b298
+    - camo:edge_9b2703b0c61b
+    - camo:edge_e17c4fcfb678
+  status: null
+- id: C-C0096
+  question: What effect does planting seedlings or transplants have on species diversity
+    and evenness?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: tree_planting
+    outcome_class: diversity_indices
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - planting
+    - transplanting
+    - nursery seedlings
+    - container stock
+    - sod transfer
+    - plugs
+    - tree planting
+    - bare-root stock
+    outcome_terms:
+    - shannon diversity
+    - simpson diversity
+    - species evenness
+    - diversity index
+    - pielou evenness
+    - beta diversity
+    - alpha diversity
+    - plant diversity
+    nominated:
+    - camo:edge_3ff01ad7fe22
+    - camo:edge_6ee3b158989c
+  status: null
+- id: C-C0097
+  question: What effect does planting & transplanting have on plant biomass & productivity?
+  tags:
+  - class
+  - seed:evidence
+  split: dev
+  meta:
+    cause_class: tree_planting
+    outcome_class: biomass_productivity
+    kind: evidence
+    studies: 5
+    cause_terms:
+    - planting
+    - transplanting
+    - nursery seedlings
+    - container stock
+    - sod transfer
+    - plugs
+    - tree planting
+    - bare-root stock
+    outcome_terms:
+    - plant biomass
+    - aboveground biomass
+    - belowground biomass
+    - primary productivity
+    - net primary production
+    - root biomass
+    - plant growth
+    - yield
+    nominated:
+    - camo:edge_24ad2f651a92
+    - camo:edge_3300cd7cf629
+    - camo:edge_53a563ebd026
+    - camo:edge_d1fd2daab26a
+    - camo:edge_eab4c6b3e92f
+    - camo:edge_f033da94041c
+  status: null
+- id: C-C0098
+  question: What effect does pollutants and contamination have on soil chemistry?
+  tags:
+  - class
+  - seed:evidence
+  split: holdout
+  meta:
+    cause_class: contaminant_exposure
+    outcome_class: soil_ph_chemistry
+    kind: evidence
+    studies: 2
+    cause_terms:
+    - heavy metals
+    - pesticides
+    - acid deposition
+    - nitrogen deposition
+    - oil spill
+    - mercury
+    - pollutants
+    - road salt
+    - sewage
+    outcome_terms:
+    - soil ph
+    - soil acidity
+    - cation exchange capacity
+    - base saturation
+    - electrical conductivity
+    - soil calcium
+    - aluminium
+    - soil salinity
+    nominated:
+    - camo:edge_493a03ac0245
+    - camo:edge_64d1fb286a92
+    - camo:edge_eda393d2edb9
+    - camo:edge_f26649081735
+    - camo:edge_fe0478ba0889
+    recall:
+    - camo:edge_18900ed1b145
+    - camo:edge_fca1e9a1d4fc
+  status: null
+- id: C-C0099
+  question: What effect does woody debris & structural retention have on seedling
+    & tree survival?
+  tags:
+  - class
+  - seed:evidence
+  split: holdout
+  meta:
+    cause_class: woody_debris_retention
+    outcome_class: tree_seedling_survival
+    kind: evidence
+    studies: 1
+    cause_terms:
+    - coarse woody debris
+    - deadwood
+    - snags
+    - retention trees
+    - green tree retention
+    - logging residues
+    - downed logs
+    - slash retention
+    outcome_terms:
+    - seedling survival
+    - tree survival
+    - tree mortality
+    - seedling mortality
+    - sapling survival
+    - planting survival
+    nominated:
+    - camo:edge_31066082c98f
+    - camo:edge_438fe384f836
+    - camo:edge_495dbfc15da8
+    - camo:edge_6c3b34aa9f79
+    - camo:edge_6fda8f036969
+    - camo:edge_808273fd74cc
+    - camo:edge_b9a2ed7c2930
+    - camo:edge_c7ae9c6e9f6b
+    - camo:edge_da388ea007f7
+    recall:
+    - camo:edge_14c37a89d4cb
+  status: null

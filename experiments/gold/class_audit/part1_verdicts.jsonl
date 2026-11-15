@@ -1,0 +1,20 @@
+{"id": "C-C0002", "ok": "y", "comment": "Both no_evidence: only N-addition (fertilizer) edges, no CO2/air-chemistry cause."}
+{"id": "C-C0041", "ok": "n", "comment": "Model counts peatland/mined-bog restoration (MLTT) as rewetting; nodes never mention hydrology and the explicit rewetting edges (e28, e29) report cover, not diversity, so I label no_evidence."}
+{"id": "C-C0010", "ok": "y", "comment": "Both no_evidence: mulch edges have no microbe/fungi outcome; the microbial edges come from cover soil, which is not mulch."}
+{"id": "C-C0077", "ok": "y", "comment": "Both no_evidence: no temperature -> animal condition edge."}
+{"id": "C-C0033", "ok": "y", "comment": "Both no_evidence: winter road clearances are not trampling/recreation."}
+{"id": "C-C0013", "ok": "y", "comment": "Both no_evidence: no logging edge with a compaction/structure outcome."}
+{"id": "C-C0064", "ok": "y", "comment": "Both no_evidence: no functional-trait outcome with a pollutant cause."}
+{"id": "C-C0005", "ok": "y", "comment": "Same edges (e26, e48 both -1), decrease, very_low."}
+{"id": "C-C0082", "ok": "y", "comment": "Both no_evidence: fire edges never reach CO2 exchange."}
+{"id": "C-C0083", "ok": "y", "comment": "Both no_evidence: no selective logging -> erosion edge."}
+{"id": "C-C0065", "ok": "y", "comment": "Both no_evidence: no rewetting -> bare soil/peat edge."}
+{"id": "C-C0032", "ok": "n", "comment": "Model includes subsoil-type contrasts (S4 Bm/BC/C), PM-Shallow (e20) and acrotelm (e76) and gets mixed/low; I exclude those type-vs-type contrasts and get increase/moderate (S3 wood chips +1, S5 soil inoculum +1, S2 tied); no opposite effect signs."}
+{"id": "C-C0081", "ok": "y", "comment": "Both no_evidence: watering treatments are irrigation, and moss regeneration is not seed germination."}
+{"id": "C-C0087", "ok": "n", "comment": "Model counts S6 exponential-vs-conventional fertilization (e10, e28 -1) and S10 Forest vs Silva Paks (e18) and gets 7/11 = mixed/low; I exclude regime-vs-regime contrasts and get 7/10 = increase/moderate; no opposite signs on shared edges."}
+{"id": "C-C0015", "ok": "n", "comment": "Model counts e57 (Shannon diversity, not number of species) +1 and e40 (defoliation mowing of the sown prairie, not competing vegetation) -1 and gets mixed; I get no_effect/low from e4, e47, e32 = 0 and e45 +1."}
+{"id": "C-C0019", "ok": "y", "comment": "Same: e4, e5 -1 (trout stocking, copepod reintroduction), crayfish invasion excluded; decrease, moderate."}
+{"id": "C-C0086", "ok": "n", "comment": "Only edge e16 (boulder clusters -> macroinvertebrate community converges on reference): model signs +1 -> increase, but a convergence in composition has no usable sign, so I give null -> unclear."}
+{"id": "C-C0004", "ok": "y", "comment": "Same edges and signs; S1 tied, S2 pond creation +1 -> mixed, very_low."}
+{"id": "C-C0076", "ok": "y", "comment": "Same mixed/low with pollutant-oriented flips; I also list e22 (0), which the model omits; no sign conflicts."}
+{"id": "C-C0006", "ok": "y", "comment": "Same: e19 light +1 and e21 tree cover -1 under the literal sign rule -> mixed, very_low."}
