@@ -30,7 +30,13 @@ from camoreasoning.strategies import DEFAULTS
 from camoreasoning.strategies.grader.rubric import is_associational
 from camoreasoning.strategies.renderer.consistency import violations
 
-STAGES = ("retriever", "interpreter", "aggregator", "grader", "renderer")
+STAGES = ("retriever", "interpreter", "aggregator", "grader", "renderer", "citer")
+
+
+def uncited_studies(v, cited: list[str]) -> list[str]:
+    """Studies the text counts (one per `doc_effects` entry) with no edge among the citations (#100)."""
+    docs = {x.doc_id for x in v.included if x.edge_id in set(cited)}
+    return sorted(d for d, _ in v.doc_effects if d not in docs)
 
 
 def check_pairs(ctx) -> tuple[int, list[dict]]:
@@ -57,7 +63,10 @@ def check_pairs(ctx) -> tuple[int, list[dict]]:
             text, _ = s["renderer"].render(v, cands, s["grader"].grade(v, ctx), ctx)
             assoc = bool(v.included) and all(is_associational(x, ctx) for x in v.included)
             n += 1
-            if errs := violations(text, v, assoc, (cause, outcome)):
+            errs = violations(text, v, assoc, (cause, outcome))
+            if miss := uncited_studies(v, s["citer"].cite(v, ctx)):
+                errs = [*errs, f"studies counted but not cited: {miss}"]
+            if errs:
                 bad.append({"id": q.id, "text": text, "violations": errs})
     return n, bad
 
@@ -74,7 +83,10 @@ def check_questions(ctx, questions: list[Question]) -> tuple[int, list[dict]]:
         v, f = t.verdict, t.candidates.frame
         assoc = bool(v.included) and all(is_associational(x, ctx) for x in v.included)
         n += 1
-        if errs := violations(a.answer, v, assoc, (f.cause.text or "", f.outcome.text or "")):
+        errs = violations(a.answer, v, assoc, (f.cause.text or "", f.outcome.text or ""))
+        if miss := uncited_studies(v, a.edge_ids):
+            errs = [*errs, f"studies counted but not cited: {miss}"]
+        if errs:
             bad.append({"id": a.id, "text": a.answer, "violations": errs})
     return n, bad
 

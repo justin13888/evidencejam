@@ -9,7 +9,7 @@ DEFAULTS: dict[str, str] = {
     "aggregator": "studies",
     "grader": "rubric",
     "calibrator": "baseline",
-    "citer": "baseline",
+    "citer": "precise",
     "renderer": "faithful",
     "extras": "gapmap",
     "taxonomy_builder": "baseline",
