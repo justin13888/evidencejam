@@ -86,6 +86,16 @@ run = "python -m camoreasoning probe"
 description = "Labelling harness: mise run annotate <export|check|merge|run|review-export|review-import> <task> [flags]"
 run = "python -m camoreasoning annotate"
 
+[tasks.a11y]
+description = "WCAG 2.2 AA static audit of the generated pages and style.css (also run by the tests)"
+depends = ["run"]
+run = "python scripts/a11y_audit.py outputs"
+
+[tasks."a11y:axe"]
+description = "Dev only, not in check: the static audit plus pinned axe-core in jsdom (needs node + npm)"
+depends = ["run"]
+run = "python scripts/a11y_audit.py outputs --axe"
+
 [tasks.check]
 description = "Gate for every change"
 depends = ["lint", "test", "validate"]
