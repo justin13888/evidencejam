@@ -200,6 +200,58 @@ def test_write_reliability_script(tmp_path):
     assert "| answered / moderate / 4+ | 120 | 102 |" in md
 
 
+COMMITTED = ROOT / "experiments" / "calibration"
+
+
+def test_committed_params_valid_and_capped():
+    params = json.loads((COMMITTED / "binned.json").read_text())
+    assert B._valid(params) and params["clip"] == [B.FLOOR, B.CEIL]
+    subs = {
+        "answered": ("high", "moderate", "low", "very_low"),
+        "no_evidence": ("regex", "lexical", "embedding", "llm", "fallback", "none"),
+    }
+    for status, values in subs.items():
+        for sub in values:
+            for n_docs in (0, 1, 2, 5):
+                for agreement in (0.0, 0.5, 1.0):
+                    assert B.FLOOR <= B.predict(params, feat(status, sub, n_docs, agreement)) <= B.CEIL
+
+
+def test_committed_holdout_report_is_self_consistent():
+    """The one holdout pass (holdout_report.py): pooled numbers recompute from its own item rows."""
+    report = json.loads((COMMITTED / "holdout_report.json").read_text())
+    items = report["items"]
+    ids = [i["id"] for i in items]
+    assert len(ids) == len(set(ids)) == report["pooled"]["n"] == sum(f["n"] for f in report["files"].values())
+    correct = [i["correct"] for i in items]
+    cal = calibration([i["confidence"] for i in items], correct)
+    assert cal["ece"] == report["pooled"]["calibration"]["ece"]
+    assert round(sum(correct) / len(correct), 4) == report["pooled"]["accuracy"]
+    assert report["passes"] == (cal["ece"] <= report["target_ece"])
+    assert all(B.FLOOR <= i["confidence"] <= B.CEIL for i in items)
+    assert {i["file"] for i in items} == set(report["files"])
+
+
+def test_write_reliability_appends_holdout(tmp_path):
+    import runpy
+
+    src = tmp_path / "binned.json"
+    src.write_text(json.dumps(B.fit_params(exact_rows())))
+    rows = [(0.35, False), (0.32, True), (0.72, True), (0.75, False)]
+    cal = calibration([c for c, _ in rows], [y for _, y in rows])
+    pooled = {"n": 4, "accuracy": 0.5, "calibration": cal}
+    base = calibration([0.6] * 4, [y for _, y in rows])
+    report = {"calibrator": "binned", "target_ece": 0.05, "passes": False, "pooled": pooled,
+              "files": {"a.yaml": pooled}, "baseline_constant": base}  # fmt: skip
+    (tmp_path / "holdout_report.json").write_text(json.dumps(report))
+    mod = runpy.run_path(str(ROOT / "experiments" / "calibration" / "write_reliability.py"))
+    assert mod["main"]([str(src)]) == 0
+    md = (tmp_path / "reliability.md").read_text()
+    holdout = md.split("## Holdout", 1)[1]
+    assert "**misses**" in holdout and "| 0.3-0.4 | 2 | 0.335 | 0.500 |" in holdout
+    assert holdout.count("\n| 0.") + holdout.count("\n| 1.") == B.BINS and "| a.yaml | 4 |" in holdout
+
+
 def test_calibrate_end_to_end_on_fixture_never_sees_holdout(tmp_path, monkeypatch):
     """run_calibrate on the fixture gold: holdout ids never reach the pipeline or fit; params land in tmp."""
     from camoreasoning.pipeline import Pipeline
