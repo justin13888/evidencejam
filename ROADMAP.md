@@ -78,7 +78,6 @@ flowchart LR
   19 --> 23
   21 --> 23
   5 -.-> 24[24 Embeddings]
-  6 -.-> 26[26 Multi-hop]
 ```
 
 **Critical path:** 1 → 3 → 4 → 5 → 6 → 8 → 12 → 16 → 22 → 23. Anything slipping on it moves the submission.
@@ -349,7 +348,3 @@ flowchart LR
 
 - [ ] **24. Local static embeddings for linking.** ★ 2/5 · A · `linker`
   - Only if lexical + LLM linking misses on dev. The weights would have to be committed and numpy added. Points: D17.
-- [ ] **25. HTTP/MCP server over the pipeline.** ★ 1/5 · D
-  - Points: J40, craft and reuse, marginal.
-- [ ] **26. Multi-hop chains.** ★ 1/5 · B
-  - Only as labelled extras. Never used in scored answers, since it risks false answers on the 1/3 that are `no_evidence`.
