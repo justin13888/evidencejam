@@ -9,6 +9,9 @@
    Run with CAMOREASONING_MAX_CALLS high enough for the chunks. With no `ctx.llm` configured, the
    committed `llm` labels of nodes that still have no lexical label are kept, so a synonym fix can be
    rebuilt at 0 calls.
+   Label-only phrases (taxonomy/label_synonyms.yaml, {class_id: [phrase, ...]}) join step 1 for nodes only.
+   They are graph wording, too specific to link a question side: `linker/phrase` reads class synonyms
+   through `compile_phrases(taxonomy)`, which never sees them (experiments/embeddings/bge_synonyms).
 3. Polarity is never asked of the LLM. It is the node's qualifier sign (`unchanged` -> 0), flipped to -1
    when the name itself says removed/absent/reduced and no qualifier already carries the sign.
 """
@@ -17,8 +20,12 @@ from __future__ import annotations
 
 import re
 from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+
+import yaml
 
 from camoreasoning.components import Context, NodeLabeler
+from camoreasoning.config import TAXONOMY_DIR
 from camoreasoning.llm import LLMError
 from camoreasoning.registry import register
 from camoreasoning.signs import qualifier_sign
@@ -52,6 +59,7 @@ DRIVERS = {"time_since_disturbance", "climate_warming"}
 EXCLUSION_CLASSES = {"grazing_browsing"}  # "deer exclusion" = grazing absent even if qualifier says occurred
 MAX_PER_NODE = 2
 CHUNK = 40
+LABEL_SYNONYMS = "label_synonyms.yaml"  # in the active taxonomy directory; optional
 WORKERS = 6  # concurrent chunks (offline only); Meter.reserve is locked, so the budget holds across threads
 
 SYSTEM = (
@@ -77,11 +85,23 @@ def node_text(n: dict) -> str:
     return " ".join(parts).lower()
 
 
-def compile_phrases(taxonomy: Taxonomy) -> dict[str, list[tuple[str, re.Pattern]]]:
+def load_label_synonyms(directory: Path | None = None) -> dict[str, list[str]]:
+    """{class_id: [phrase, ...]} from label_synonyms.yaml, or {} when the file is absent."""
+    path = (directory or TAXONOMY_DIR) / LABEL_SYNONYMS
+    if not path.exists():
+        return {}
+    raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return {str(c): [str(p).lower() for p in ps or ()] for c, ps in (raw.get("classes") or {}).items()}
+
+
+def compile_phrases(
+    taxonomy: Taxonomy, extra: dict[str, list[str]] | None = None
+) -> dict[str, list[tuple[str, re.Pattern]]]:
+    """Class label + synonyms (+ `extra` label-only phrases for classes in the taxonomy) as word-bounded patterns."""
     out: dict[str, list[tuple[str, re.Pattern]]] = {}
     for c in taxonomy.classes.values():
         pats = []
-        for p in {c.label.lower(), *c.synonyms}:
+        for p in {c.label.lower(), *c.synonyms, *(extra or {}).get(c.id, ())}:
             if not p:
                 continue
             body = re.escape(p.rstrip("*")) + (r"\w*" if p.endswith("*") else "")
@@ -135,9 +155,11 @@ def _prefer(found: list[tuple[str, int]], text: str, cause_only: set[str], inter
     return found
 
 
-def lexical(taxonomy: Taxonomy, nodes: dict[str, dict]) -> dict[str, list[tuple[str, int]]]:
-    """node_id -> [(class_id, matched phrase length)] best first."""
-    phrases = compile_phrases(taxonomy)
+def lexical(
+    taxonomy: Taxonomy, nodes: dict[str, dict], extra: dict[str, list[str]] | None = None
+) -> dict[str, list[tuple[str, int]]]:
+    """node_id -> [(class_id, matched phrase length)] best first. `extra`: label-only phrases."""
+    phrases = compile_phrases(taxonomy, extra)
     cause_ok = {c.id for c in taxonomy.of_kind("cause")}
     cause_only = {c.id for c in taxonomy.classes.values() if c.kind == "cause"}
     hits: dict[str, list[tuple[str, int]]] = {}
@@ -162,7 +184,8 @@ class CuratedLabeler(NodeLabeler):
     def label(self, taxonomy: Taxonomy, ctx: Context) -> list[NodeLabel]:
         nodes = ctx.graph.nodes
         out: list[NodeLabel] = []
-        hits = lexical(taxonomy, nodes) if not taxonomy.empty else {}
+        extra = load_label_synonyms(ctx.settings.taxonomy_dir)
+        hits = lexical(taxonomy, nodes, extra) if not taxonomy.empty else {}
         for nid, found in hits.items():
             top = found[0][1]
             for cid, length in found:

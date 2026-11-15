@@ -1,0 +1,150 @@
+{"id": "T0901", "term": "silt and sand", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0902", "term": "silt deposit", "class": "soil_erosion", "phrase": "silt deposit*", "why": "silt deposition is sedimentation"}
+{"id": "T0903", "term": "siltation", "class": "soil_erosion", "phrase": "siltation", "why": "fine sediment deposition, sedimentation"}
+{"id": "T0904", "term": "site moisture", "class": null, "phrase": null, "why": "site vs soil moisture ambiguous"}
+{"id": "T0905", "term": "site moisture regime", "class": null, "phrase": null, "why": "site vs soil moisture ambiguous"}
+{"id": "T0906", "term": "site origin", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0907", "term": "site perturbation", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0908", "term": "site perturbation type", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0909", "term": "site-affinity", "class": null, "phrase": null, "why": "site fidelity, no class fits"}
+{"id": "T0910", "term": "site_and_depth", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0911", "term": "site_and_season", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0912", "term": "slash cover", "class": "woody_debris_retention", "phrase": "slash cover", "why": "logging residue retained on ground"}
+{"id": "T0913", "term": "slide expansion", "class": null, "phrase": null, "why": "landslide, ambiguous"}
+{"id": "T0914", "term": "slide rate", "class": null, "phrase": null, "why": "landslide, ambiguous"}
+{"id": "T0915", "term": "sm treatment", "class": null, "phrase": null, "why": "unknown abbreviation"}
+{"id": "T0916", "term": "small trees", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0917", "term": "smelter", "class": "contaminant_exposure", "phrase": "smelter*", "why": "industrial pollution source, like pulp mill"}
+{"id": "T0918", "term": "smelter-related variables", "class": null, "phrase": null, "why": "covered by smelter*"}
+{"id": "T0919", "term": "snow press", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0920", "term": "so2 and metal emissions", "class": "contaminant_exposure", "phrase": "so2", "why": "sulfur dioxide pollutant"}
+{"id": "T0921", "term": "sod", "class": null, "phrase": null, "why": "sod placement exists; bare sod ambiguous"}
+{"id": "T0922", "term": "sod collection", "class": null, "phrase": null, "why": "related, not planting itself"}
+{"id": "T0923", "term": "sod performance", "class": null, "phrase": null, "why": "vague outcome"}
+{"id": "T0924", "term": "soil anoxia", "class": null, "phrase": null, "why": "redox, no clear class"}
+{"id": "T0925", "term": "soil c/n ratio", "class": null, "phrase": null, "why": "carbon vs nutrients ambiguous"}
+{"id": "T0926", "term": "soil cec", "class": "soil_nutrients", "phrase": "soil cec", "why": "cation exchange capacity, already in class"}
+{"id": "T0927", "term": "soil chemical properties", "class": "soil_ph_chemistry", "phrase": "soil chemical propert*", "why": "soil chemistry"}
+{"id": "T0928", "term": "soil clay content", "class": "soil_physical", "phrase": "clay content", "why": "soil texture property"}
+{"id": "T0929", "term": "soil depth of suckering", "class": null, "phrase": null, "why": "no clear class"}
+{"id": "T0930", "term": "soil extractable n-nh4", "class": "soil_nutrients", "phrase": "nh4", "why": "ammonium, already soil_nutrients"}
+{"id": "T0931", "term": "soil growing degree days", "class": "soil_temperature", "phrase": "growing degree day*", "why": "temperature sum measure"}
+{"id": "T0932", "term": "soil impoverishment", "class": null, "phrase": null, "why": "carbon addition, ambiguous class"}
+{"id": "T0933", "term": "soil loading", "class": null, "phrase": null, "why": "unclear"}
+{"id": "T0934", "term": "soil material placement", "class": "organic_soil_amendment", "phrase": "soil material placement", "why": "soil material added"}
+{"id": "T0935", "term": "soil microbial properties", "class": null, "phrase": null, "why": "outcome class but intervention type"}
+{"id": "T0936", "term": "soil or sewage amendment", "class": "organic_soil_amendment", "phrase": "sewage amendment", "why": "biosolids added to soil"}
+{"id": "T0937", "term": "soil organic c, total n and available p", "class": null, "phrase": null, "why": "mixes carbon and nutrients"}
+{"id": "T0938", "term": "soil organic c, total n and exchangeable k", "class": null, "phrase": null, "why": "mixes carbon and nutrients"}
+{"id": "T0939", "term": "soil provenance", "class": null, "phrase": null, "why": "ambiguous inoculation vs amendment"}
+{"id": "T0940", "term": "soil sterilization", "class": null, "phrase": null, "why": "no matching class"}
+{"id": "T0941", "term": "soil sulfate", "class": null, "phrase": null, "why": "nutrient vs chemistry ambiguous"}
+{"id": "T0942", "term": "soil sulphate", "class": null, "phrase": null, "why": "nutrient vs chemistry ambiguous"}
+{"id": "T0943", "term": "soil textural class", "class": null, "phrase": null, "why": "soil texture split across classes"}
+{"id": "T0944", "term": "soil turnover", "class": null, "phrase": null, "why": "ambiguous, also bioturbation"}
+{"id": "T0945", "term": "solvent extraction", "class": null, "phrase": null, "why": "industrial process"}
+{"id": "T0946", "term": "spatial association", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0947", "term": "spatial autocorrelation", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0948", "term": "spatial structure", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0949", "term": "spatio-historical variables", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0950", "term": "spawner size", "class": "animal_condition", "phrase": "spawner size", "why": "fish body size"}
+{"id": "T0951", "term": "spawning gravel", "class": null, "phrase": null, "why": "spawning already matches reproductive_success"}
+{"id": "T0952", "term": "species association", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0953", "term": "species data", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0954", "term": "species presence", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0955", "term": "species prevalence", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0956", "term": "species ratio", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0957", "term": "species reproducing by seed", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0958", "term": "species with physical defences", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0959", "term": "species with rosette form", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0960", "term": "species with small seeds", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0961", "term": "spring ephemeral species", "class": null, "phrase": null, "why": "native status unspecified"}
+{"id": "T0962", "term": "spring green-up", "class": null, "phrase": null, "why": "phenology, no class"}
+{"id": "T0963", "term": "sprout", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0964", "term": "spruce plantation", "class": null, "phrase": null, "why": "spruce already matches; plantation ambiguous"}
+{"id": "T0965", "term": "stabilization", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0966", "term": "stand characteristics", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0967", "term": "stand location", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0968", "term": "starch content", "class": null, "phrase": null, "why": "no clear class"}
+{"id": "T0969", "term": "statistical significance", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0970", "term": "stem volume", "class": null, "phrase": null, "why": "growth vs stand ambiguous"}
+{"id": "T0971", "term": "stratification", "class": null, "phrase": null, "why": "ambiguous seed vs water stratification"}
+{"id": "T0972", "term": "stream velocity", "class": "water_table_level", "phrase": "stream velocity", "why": "stream flow measure"}
+{"id": "T0973", "term": "stream width", "class": null, "phrase": null, "why": "channel morphology, no class"}
+{"id": "T0974", "term": "structural size", "class": null, "phrase": null, "why": "could match non-animal text"}
+{"id": "T0975", "term": "structures", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0976", "term": "study site", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0977", "term": "stump sprouting", "class": "natural_regeneration", "phrase": "stump sprout*", "why": "vegetative regeneration without planting"}
+{"id": "T0978", "term": "sub-community", "class": null, "phrase": null, "why": "community already matches"}
+{"id": "T0979", "term": "submergent plant species", "class": null, "phrase": null, "why": "native status unspecified"}
+{"id": "T0980", "term": "submergent plants", "class": null, "phrase": null, "why": "native status unspecified"}
+{"id": "T0981", "term": "submersion", "class": "water_table_level", "phrase": "submersion", "why": "inundation"}
+{"id": "T0982", "term": "subordinate species", "class": null, "phrase": null, "why": "no clear class"}
+{"id": "T0983", "term": "subsoil", "class": null, "phrase": null, "why": "subsoil alone could be measured property"}
+{"id": "T0984", "term": "subsoil bc", "class": null, "phrase": null, "why": "cryptic code"}
+{"id": "T0985", "term": "subsoil bm", "class": null, "phrase": null, "why": "cryptic code"}
+{"id": "T0986", "term": "subsoil bm and c", "class": null, "phrase": null, "why": "cryptic code"}
+{"id": "T0987", "term": "subsoil c", "class": null, "phrase": null, "why": "cryptic code"}
+{"id": "T0988", "term": "subsoil material", "class": null, "phrase": null, "why": "could describe soil profile"}
+{"id": "T0989", "term": "subsoil material application", "class": "organic_soil_amendment", "phrase": "subsoil material application", "why": "soil material added"}
+{"id": "T0990", "term": "subsoiling", "class": "site_preparation", "phrase": "subsoiling", "why": "deep ripping before planting"}
+{"id": "T0991", "term": "succession", "class": null, "phrase": null, "why": "generic process"}
+{"id": "T0992", "term": "suckers", "class": null, "phrase": null, "why": "ambiguous, also fish"}
+{"id": "T0993", "term": "sudbury region", "class": null, "phrase": null, "why": "place name"}
+{"id": "T0994", "term": "sulphur deposition", "class": "contaminant_exposure", "phrase": "sulphur deposition", "why": "acid deposition"}
+{"id": "T0995", "term": "supplemental food", "class": "species_reintroduction", "phrase": "supplemental food", "why": "food supplementation synonym"}
+{"id": "T0996", "term": "support for recolonization", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T0997", "term": "surface mineral soil", "class": null, "phrase": null, "why": "soil layer, not bare ground"}
+{"id": "T0998", "term": "surface soil disturbance", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0999", "term": "surficial sand", "class": null, "phrase": null, "why": "vague"}
+{"id": "T1000", "term": "survey year", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1001", "term": "survey_method", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1002", "term": "swimmer_status", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1003", "term": "tall phanerophytes", "class": "functional_traits", "phrase": "phanerophyte*", "why": "Raunkiaer life form"}
+{"id": "T1004", "term": "tea bag type", "class": null, "phrase": null, "why": "method word"}
+{"id": "T1005", "term": "temporary spring flooding", "class": "water_table_level", "phrase": "spring flooding", "why": "natural inundation"}
+{"id": "T1006", "term": "testate amoebae", "class": null, "phrase": null, "why": "microbial vs fauna ambiguous"}
+{"id": "T1007", "term": "testicular abnormality", "class": "animal_condition", "phrase": "testicular abnormalit*", "why": "reproductive health like intersex"}
+{"id": "T1008", "term": "thatch layer", "class": null, "phrase": null, "why": "no clear class"}
+{"id": "T1009", "term": "thistle biomass", "class": null, "phrase": null, "why": "native status of thistle unknown"}
+{"id": "T1010", "term": "tidal flooding", "class": "water_table_level", "phrase": "tidal flooding", "why": "tidal inundation"}
+{"id": "T1011", "term": "tidal range", "class": "water_table_level", "phrase": "tidal range", "why": "water level variation"}
+{"id": "T1012", "term": "till-fertilizer", "class": null, "phrase": null, "why": "fertili* already matches"}
+{"id": "T1013", "term": "till-fertilizer treatment", "class": null, "phrase": null, "why": "fertili* already matches"}
+{"id": "T1014", "term": "till-sewage treatment", "class": null, "phrase": null, "why": "till material, ambiguous"}
+{"id": "T1015", "term": "till-unamended and till-fertilizer treatments", "class": null, "phrase": null, "why": "fertili* already matches"}
+{"id": "T1016", "term": "tiller number", "class": null, "phrase": null, "why": "grass growth, no class"}
+{"id": "T1017", "term": "tilling", "class": "site_preparation", "phrase": "tilling", "why": "soil tillage"}
+{"id": "T1018", "term": "time of acidification onset", "class": null, "phrase": null, "why": "soil vs water ambiguous"}
+{"id": "T1019", "term": "time period", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1020", "term": "time spent", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1021", "term": "time-since-seeding", "class": null, "phrase": null, "why": "time since already matches"}
+{"id": "T1022", "term": "time_period", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1023", "term": "topographic microsite and amendment", "class": null, "phrase": null, "why": "mixed"}
+{"id": "T1024", "term": "topography", "class": "site_conditions", "phrase": "topography", "why": "natural site characteristic"}
+{"id": "T1025", "term": "total carbon", "class": null, "phrase": null, "why": "soil vs ecosystem carbon ambiguous"}
+{"id": "T1026", "term": "total forbs", "class": null, "phrase": null, "why": "cover vs richness ambiguous"}
+{"id": "T1027", "term": "total inorganic nitrogen supply rate", "class": "soil_nutrients", "phrase": "nitrogen supply rate", "why": "soil nutrient supply (PRS)"}
+{"id": "T1028", "term": "total inorganic suspended solids", "class": "soil_erosion", "phrase": "suspended solids", "why": "like suspended sediment"}
+{"id": "T1029", "term": "total leaf mass", "class": "biomass_productivity", "phrase": "total leaf mass", "why": "foliar biomass"}
+{"id": "T1030", "term": "total n", "class": "soil_nutrients", "phrase": "total n", "why": "total nitrogen, already soil_nutrients"}
+{"id": "T1031", "term": "total nutrient content", "class": null, "phrase": null, "why": "foliar vs soil ambiguous"}
+{"id": "T1032", "term": "total phenol", "class": null, "phrase": null, "why": "no clear class"}
+{"id": "T1033", "term": "total protein", "class": null, "phrase": null, "why": "no clear class"}
+{"id": "T1034", "term": "total resolved aromatics", "class": null, "phrase": null, "why": "no clear class"}
+{"id": "T1035", "term": "total return", "class": null, "phrase": null, "why": "no clear class"}
+{"id": "T1036", "term": "total volatile solids", "class": null, "phrase": null, "why": "sediment, doubtful"}
+{"id": "T1037", "term": "trait prevalence", "class": "functional_traits", "phrase": "trait prevalence", "why": "trait-based outcome"}
+{"id": "T1038", "term": "trait representation", "class": "functional_traits", "phrase": "trait representation", "why": "trait-based outcome"}
+{"id": "T1039", "term": "transect_type", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1040", "term": "transition from margin impacts to basin and margin impacts", "class": null, "phrase": null, "why": "vague"}
+{"id": "T1041", "term": "transition from pristine to fully impacted wetlands", "class": null, "phrase": null, "why": "vague"}
+{"id": "T1042", "term": "treatment 2", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1043", "term": "treatment 3", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1044", "term": "treatment 4", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1045", "term": "treatment 5", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1046", "term": "treatment 6", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1047", "term": "treatment 7", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1048", "term": "treatment and site", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1049", "term": "treatments", "class": null, "phrase": null, "why": "generic or study-design term"}
+{"id": "T1050", "term": "tree age", "class": null, "phrase": null, "why": "age vs growth ambiguous"}

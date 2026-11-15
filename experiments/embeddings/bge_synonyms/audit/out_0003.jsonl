@@ -1,0 +1,150 @@
+{"id": "T0301", "term": "bilayer cover", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0302", "term": "bioavailable s", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0303", "term": "biocrust recolonization", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0304", "term": "biogeoclimatic zone", "class": "site_conditions", "phrase": "biogeoclimatic zone", "why": "natural site classification"}
+{"id": "T0305", "term": "biological variables", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0306", "term": "biosolids cover", "class": "organic_soil_amendment", "phrase": "biosolids", "why": "biosolids are an organic soil amendment"}
+{"id": "T0307", "term": "bioturbation", "class": null, "phrase": null, "why": "process, not soil fauna abundance"}
+{"id": "T0308", "term": "bioturbation activity", "class": null, "phrase": null, "why": "process, not soil fauna abundance"}
+{"id": "T0309", "term": "bitumen and steam release", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0310", "term": "block", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0311", "term": "block location", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0312", "term": "blocking", "class": null, "phrase": null, "why": "ambiguous: experimental vs ditch blocking"}
+{"id": "T0313", "term": "blue ring formation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0314", "term": "bluegrass", "class": null, "phrase": null, "why": "species name, native status ambiguous"}
+{"id": "T0315", "term": "border", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0316", "term": "br, β-glucosidase, and phosphatase activity", "class": "soil_microbial", "phrase": "glucosidase", "why": "classic soil microbial enzyme"}
+{"id": "T0317", "term": "branches on the whorl", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0318", "term": "breakdown", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0319", "term": "breeding timing", "class": null, "phrase": null, "why": "timing, not success"}
+{"id": "T0320", "term": "breeding_performance", "class": "reproductive_success", "phrase": "breeding performance", "why": "synonym of breeding success"}
+{"id": "T0321", "term": "broadcasting seeds", "class": "seeding_sowing", "phrase": "broadcasting seed*", "why": "broadcast seeding"}
+{"id": "T0322", "term": "bromus inermis and poa pratensis", "class": null, "phrase": null, "why": "species names"}
+{"id": "T0323", "term": "brood hierarchy position", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0324", "term": "bud number", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0325", "term": "c/n ratio", "class": null, "phrase": null, "why": "soil, litter or foliage"}
+{"id": "T0326", "term": "caging", "class": null, "phrase": null, "why": "ambiguous: nest, seed or fish cages"}
+{"id": "T0327", "term": "calamagrostis rubescens control", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0328", "term": "calcium sources", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0329", "term": "capillary break", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0330", "term": "carex plantation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0331", "term": "catch per unit effort", "class": "population_size_trend", "phrase": "catch per unit effort", "why": "standard abundance index across taxa"}
+{"id": "T0332", "term": "causeway breaching", "class": null, "phrase": null, "why": "ambiguous restoration type"}
+{"id": "T0333", "term": "centaurea maculosa and chrysanthemum leucanthemum", "class": null, "phrase": null, "why": "species names"}
+{"id": "T0334", "term": "chance of nest parasitism", "class": "reproductive_success", "phrase": "nest parasitism", "why": "nest-level breeding outcome"}
+{"id": "T0335", "term": "channel morphology", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0336", "term": "chick size", "class": "animal_condition", "phrase": "chick size", "why": "animal body size"}
+{"id": "T0337", "term": "cleaning remainders", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0338", "term": "clearfelling", "class": "clearcut_harvest", "phrase": "clearfell*", "why": "British term for clearcut"}
+{"id": "T0339", "term": "clearing of pine plantation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0340", "term": "clearing of the plantation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0341", "term": "climate moisture index", "class": "climate_warming", "phrase": "climate moisture ind*", "why": "climate drought index"}
+{"id": "T0342", "term": "climatic distance", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0343", "term": "co2 production rate", "class": "carbon_flux", "phrase": "co2 production", "why": "CO2 efflux"}
+{"id": "T0344", "term": "co2/c-fe ratio", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0345", "term": "coarse to fine root ratio", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0346", "term": "coke and charcoal", "class": null, "phrase": null, "why": "charcoal also natural fire residue"}
+{"id": "T0347", "term": "color development", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0348", "term": "combined above and belowground production", "class": "biomass_productivity", "phrase": "belowground production", "why": "plant production"}
+{"id": "T0349", "term": "commercial catch", "class": null, "phrase": null, "why": "harvest vs abundance ambiguous"}
+{"id": "T0350", "term": "commercial nursery-grown seedlings", "class": "planting_stock_traits", "phrase": "nursery-grown seedling*", "why": "nursery stock type"}
+{"id": "T0351", "term": "common grass species", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0352", "term": "compensation channel", "class": "engineered_structures", "phrase": "compensation channel", "why": "constructed stream habitat channel"}
+{"id": "T0353", "term": "complementarity effect", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0354", "term": "complex medium", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0355", "term": "coniferous canopy", "class": null, "phrase": null, "why": "canopy light vs composition ambiguous"}
+{"id": "T0356", "term": "coniferous plantation", "class": "land_use", "phrase": "coniferous plantation*", "why": "plantation forest land use"}
+{"id": "T0357", "term": "conifers and small herbaceous species", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0358", "term": "consolidated-tailings", "class": null, "phrase": null, "why": "already covered by tailings"}
+{"id": "T0359", "term": "construction of railway and train station", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0360", "term": "contamination source", "class": null, "phrase": null, "why": "ambiguous cause class"}
+{"id": "T0361", "term": "contribution", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0362", "term": "control", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0363", "term": "control condition", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0364", "term": "control microtopographic treatment", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0365", "term": "control plot condition", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0366", "term": "control treatment", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0367", "term": "controlled-release urea", "class": "fertilization", "phrase": "controlled-release urea", "why": "urea fertilizer"}
+{"id": "T0368", "term": "conversion of forest to abandoned fallowed fields", "class": "land_use", "phrase": "conversion of forest", "why": "forest conversion"}
+{"id": "T0369", "term": "correlation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0370", "term": "cover crop", "class": "seeding_sowing", "phrase": "cover crop*", "why": "sown companion crop"}
+{"id": "T0371", "term": "cover performance", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0372", "term": "cowbird egg", "class": null, "phrase": null, "why": "no fitting class"}
+{"id": "T0373", "term": "cowbird egg or nestling removal", "class": null, "phrase": null, "why": "cowbird native, no fitting class"}
+{"id": "T0374", "term": "crop field", "class": "land_use", "phrase": "crop field*", "why": "agricultural land use"}
+{"id": "T0375", "term": "crop tree size", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0376", "term": "crop trees", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0377", "term": "crossing", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0378", "term": "cu:mo ratio", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0379", "term": "cut formation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0380", "term": "cutblock age", "class": "time_since_disturbance", "phrase": "cutblock age", "why": "time since harvest"}
+{"id": "T0381", "term": "daphnia pulex complex", "class": null, "phrase": null, "why": "taxon name"}
+{"id": "T0382", "term": "data analysis", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0383", "term": "deep water", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0384", "term": "deer density", "class": null, "phrase": null, "why": "already covered by deer density"}
+{"id": "T0385", "term": "deer density exclusion", "class": null, "phrase": null, "why": "already covered by deer density"}
+{"id": "T0386", "term": "deer density reduction", "class": null, "phrase": null, "why": "already covered by deer density"}
+{"id": "T0387", "term": "deer herd reduction", "class": "grazing_browsing", "phrase": "deer herd reduction*", "why": "reduces browsing pressure"}
+{"id": "T0388", "term": "deer presence", "class": null, "phrase": null, "why": "browsing driver vs mammal abundance"}
+{"id": "T0389", "term": "degree of saturation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0390", "term": "delta-13c", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0391", "term": "depth to mineral soil", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0392", "term": "detection", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0393", "term": "diagnostic tree species", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0394", "term": "diagnostic understory species", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0395", "term": "dicranella cerviculata and eriophorum angustifolium", "class": null, "phrase": null, "why": "species names"}
+{"id": "T0396", "term": "dietary proportion", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0397", "term": "difference", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0398", "term": "discriminant power", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0399", "term": "dispersal direction", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0400", "term": "dispersal_direction", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0401", "term": "dissolved organic nitrogen", "class": null, "phrase": null, "why": "soil or water, ambiguous"}
+{"id": "T0402", "term": "distance from forest edge", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0403", "term": "distance from railway", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0404", "term": "distance from release point", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0405", "term": "distance from release site", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0406", "term": "distance from source", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0407", "term": "distance parallel to the prevailing winds", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0408", "term": "distance to continuous forest", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0409", "term": "distance to kalmia", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0410", "term": "distance to nearest kalmia stem", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0411", "term": "disturbance simulation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0412", "term": "disturbance treatment", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0413", "term": "disturbance treatments", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0414", "term": "disturbance type", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0415", "term": "diversity, allele frequencies, and heterozygosity levels", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0416", "term": "donor material", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0417", "term": "donor site", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0418", "term": "donor site ratio", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0419", "term": "donor: recipient ratio", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0420", "term": "double ring formation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0421", "term": "downstream unharvested forest", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0422", "term": "drainage ditch margin", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0423", "term": "dry weight", "class": null, "phrase": null, "why": "plant or animal dry weight"}
+{"id": "T0424", "term": "duff medium", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0425", "term": "e4:e6 ratio", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0426", "term": "early seral vegetation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0427", "term": "ectomycorrhizal (ecm) formation", "class": "soil_microbial", "phrase": "ectomycorrhiz*", "why": "mycorrhizae; not matched by mycorrhiz*"}
+{"id": "T0428", "term": "ectomycorrhizal formation", "class": "soil_microbial", "phrase": "ectomycorrhiz*", "why": "mycorrhizae; not matched by mycorrhiz*"}
+{"id": "T0429", "term": "edge habitat", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0430", "term": "emergent species groups", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0431", "term": "emergent vegetation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0432", "term": "end of frost free period", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0433", "term": "end of growing season", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0434", "term": "environmental site characteristics", "class": "site_conditions", "phrase": "site characteristic*", "why": "natural site characteristics"}
+{"id": "T0435", "term": "ericaceae cover", "class": "plant_cover_total", "phrase": "ericaceae cover", "why": "group-level shrub cover"}
+{"id": "T0436", "term": "ericaceous plants", "class": null, "phrase": null, "why": "cover vs frequency ambiguous"}
+{"id": "T0437", "term": "ericaceous shrub", "class": null, "phrase": null, "why": "frequency, no specific class"}
+{"id": "T0438", "term": "erosion control structures", "class": "engineered_structures", "phrase": "erosion control structure*", "why": "built erosion structures"}
+{"id": "T0439", "term": "et0/tr0", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0440", "term": "explanatory variables", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0441", "term": "exploitation rate", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0442", "term": "exposure zone", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0443", "term": "extinction coefficient", "class": null, "phrase": null, "why": "water or canopy light"}
+{"id": "T0444", "term": "extreme low flow days", "class": "water_table_level", "phrase": "low flow days", "why": "streamflow metric"}
+{"id": "T0445", "term": "extreme weather conditions", "class": "climate_warming", "phrase": "extreme weather", "why": "climate driver"}
+{"id": "T0446", "term": "fall-flowering species", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0447", "term": "fatty_acid_proportion", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0448", "term": "female age", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0449", "term": "fern", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0450", "term": "fes dissolution", "class": null, "phrase": null, "why": "generic or no fitting class"}

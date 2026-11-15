@@ -1,0 +1,150 @@
+{"id": "T0751", "term": "plant species", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0752", "term": "plant temporal pathway", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0753", "term": "plant traits", "class": "functional_traits", "phrase": "plant traits", "why": "trait-based outcome"}
+{"id": "T0754", "term": "plants", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0755", "term": "poa and dactylis", "class": null, "phrase": null, "why": "species names"}
+{"id": "T0756", "term": "pond construction or enhancement", "class": "wetland_creation", "phrase": "pond construction", "why": "building small wetlands"}
+{"id": "T0757", "term": "pond type", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0758", "term": "pore-water chemistry", "class": "water_chemistry", "phrase": "pore-water chemistry", "why": "chemistry of soil/peat water"}
+{"id": "T0759", "term": "position on the face of the cut", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0760", "term": "position within the strip-cut", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0761", "term": "positioning", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0762", "term": "positive interaction", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0763", "term": "post-liming period", "class": null, "phrase": null, "why": "covered by liming"}
+{"id": "T0764", "term": "pothole treatment", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0765", "term": "practical value", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0766", "term": "predation protection", "class": null, "phrase": null, "why": "no animal protection class"}
+{"id": "T0767", "term": "predator location", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0768", "term": "predator removal", "class": null, "phrase": null, "why": "no predator control class"}
+{"id": "T0769", "term": "predator_contact", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0770", "term": "preferred seed removal", "class": null, "phrase": null, "why": "bird feeding, not seed predation"}
+{"id": "T0771", "term": "probability of extinction", "class": "population_size_trend", "phrase": "probability of extinction", "why": "population viability measure"}
+{"id": "T0772", "term": "proportion in adjacent forest", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0773", "term": "proportion of forest- and disturbance-associated species", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0774", "term": "proportion of fruiting plants", "class": "reproduction_flowering", "phrase": "fruiting plants", "why": "plant reproduction measure"}
+{"id": "T0775", "term": "proportion of sexual plants", "class": "reproduction_flowering", "phrase": "sexual plants", "why": "reproductive-stage plants"}
+{"id": "T0776", "term": "provenance origin", "class": null, "phrase": null, "why": "seed supply vs stock ambiguous"}
+{"id": "T0777", "term": "proximity to point sources", "class": "contaminant_exposure", "phrase": "point source*", "why": "pollution point sources"}
+{"id": "T0778", "term": "pteridophyte", "class": null, "phrase": null, "why": "taxon group name"}
+{"id": "T0779", "term": "pyrophosphate index", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0780", "term": "rainfall frequency", "class": "climate_warming", "phrase": "rainfall frequency", "why": "precipitation regime driver"}
+{"id": "T0781", "term": "raking", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0782", "term": "ramp 2 and vanes", "class": null, "phrase": null, "why": "structure names"}
+{"id": "T0783", "term": "range area", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0784", "term": "raspberry", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0785", "term": "ratio of monosaturated to saturated plfas", "class": "soil_microbial", "phrase": "plfa*", "why": "microbial lipid biomarkers"}
+{"id": "T0786", "term": "reach location", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0787", "term": "reaction_grade", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0788", "term": "reaction_to_stimuli", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0789", "term": "rebuilding components", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0790", "term": "recalcitrant species", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0791", "term": "reclaimed grassland", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0792", "term": "reclaimed grasslands", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0793", "term": "reclaimed soils", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0794", "term": "redox potential", "class": null, "phrase": null, "why": "soil vs water ambiguous"}
+{"id": "T0795", "term": "reed", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0796", "term": "reference condition", "class": null, "phrase": null, "why": "already covered"}
+{"id": "T0797", "term": "reference condition selection", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0798", "term": "reference forest treatment", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0799", "term": "reference site status", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0800", "term": "reference wetland", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0801", "term": "reference_site", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0802", "term": "refuge area", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0803", "term": "regionally rare plant species occurrence", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0804", "term": "regulation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0805", "term": "regulation changes", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0806", "term": "relatedness", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0807", "term": "release", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0808", "term": "release area", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0809", "term": "removal", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0810", "term": "removal efficiency", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0811", "term": "reproductive parameters", "class": null, "phrase": null, "why": "plant vs animal ambiguous"}
+{"id": "T0812", "term": "residual subsoil cover", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0813", "term": "resource-conservation traits", "class": "functional_traits", "phrase": "resource-conservation trait*", "why": "plant functional trait syndrome"}
+{"id": "T0814", "term": "respondent identity", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0815", "term": "restored bare plots", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0816", "term": "restored mined bog", "class": "moss_layer_transfer", "phrase": "restored mined bog", "why": "peatland restoration"}
+{"id": "T0817", "term": "restored plots", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0818", "term": "restored site", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0819", "term": "rhizome size", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0820", "term": "riparian ecotone", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0821", "term": "riparian_zone_status", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0822", "term": "river regulation", "class": null, "phrase": null, "why": "ambiguous between classes"}
+{"id": "T0823", "term": "riverbank profile", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0824", "term": "riverbank stabilization", "class": "engineered_structures", "phrase": "riverbank stabili*", "why": "shore engineering structure"}
+{"id": "T0825", "term": "road deactivation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0826", "term": "road grader use", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0827", "term": "road use", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0828", "term": "rocky mountain fescue, northern brome, and alsike clover", "class": null, "phrase": null, "why": "species names"}
+{"id": "T0829", "term": "rollback", "class": "woody_debris_retention", "phrase": "rollback", "why": "woody debris spread on linear disturbances"}
+{"id": "T0830", "term": "rollback treatment", "class": "woody_debris_retention", "phrase": "rollback", "why": "woody debris spread on linear disturbances"}
+{"id": "T0831", "term": "root", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0832", "term": "root egress", "class": "tree_growth", "phrase": "root egress", "why": "root growth out of plug"}
+{"id": "T0833", "term": "root glucosamine", "class": "soil_microbial", "phrase": "root glucosamine", "why": "fungal/mycorrhizal biomass marker"}
+{"id": "T0834", "term": "root morphology", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0835", "term": "root placement", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0836", "term": "root suckering", "class": "natural_regeneration", "phrase": "root sucker*", "why": "vegetative natural regeneration"}
+{"id": "T0837", "term": "root system", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0838", "term": "root to shoot ratio", "class": "biomass_productivity", "phrase": "root to shoot ratio", "why": "biomass allocation"}
+{"id": "T0839", "term": "root-shoot ratio", "class": "biomass_productivity", "phrase": "root-shoot ratio", "why": "biomass allocation"}
+{"id": "T0840", "term": "round gobies", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0841", "term": "rugged terrain", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0842", "term": "r\u00b2", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0843", "term": "s availability", "class": null, "phrase": null, "why": "single-letter, ambiguous"}
+{"id": "T0844", "term": "s deposition", "class": null, "phrase": null, "why": "single-letter, ambiguous"}
+{"id": "T0845", "term": "s. fuscum", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0846", "term": "s. magellanicum", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0847", "term": "salmon farm operation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0848", "term": "salmonid production", "class": "fish_abundance", "phrase": "salmonid production", "why": "fish productivity"}
+{"id": "T0849", "term": "salvage-logging", "class": null, "phrase": null, "why": "covered by logging"}
+{"id": "T0850", "term": "sample length", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0851", "term": "sampling condition", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0852", "term": "sampling date", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0853", "term": "sampling depth", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0854", "term": "sampling effort reduction", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0855", "term": "sampling_time", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0856", "term": "sand content", "class": null, "phrase": null, "why": "ambiguous cause/outcome"}
+{"id": "T0857", "term": "sand_transport", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0858", "term": "saprophyte species", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0859", "term": "saskatchewan", "class": null, "phrase": null, "why": "place name"}
+{"id": "T0860", "term": "sawdust", "class": null, "phrase": null, "why": "mulch vs amendment ambiguous"}
+{"id": "T0861", "term": "sbg and sm treatments", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0862", "term": "sbg, mbg, and sm treatments", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0863", "term": "scattering native hay", "class": null, "phrase": null, "why": "seeding vs mulch ambiguous"}
+{"id": "T0864", "term": "scirpus validus transfer", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0865", "term": "scute deformity rate", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0866", "term": "sea lamprey parasitism", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0867", "term": "sedge", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0868", "term": "sedges and short-lived forbs", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0869", "term": "sediment and water interaction", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0870", "term": "sediment cover", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0871", "term": "sediment deposition", "class": "soil_erosion", "phrase": "sediment deposition", "why": "sedimentation"}
+{"id": "T0872", "term": "sediment infilling", "class": "soil_erosion", "phrase": "sediment infilling", "why": "sedimentation"}
+{"id": "T0873", "term": "sediment phosphorus retention", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0874", "term": "sediment size", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0875", "term": "sediment texture", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0876", "term": "sediment volume", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0877", "term": "seed cleaning application", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0878", "term": "seed removal", "class": "predation_herbivory_damage", "phrase": "seed removal", "why": "seed predation measure"}
+{"id": "T0879", "term": "seed species identity", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0880", "term": "seeded only", "class": "seeding_sowing", "phrase": "seeded only", "why": "seeding treatment"}
+{"id": "T0881", "term": "seedling age", "class": null, "phrase": null, "why": "stock vs natural ambiguous"}
+{"id": "T0882", "term": "seedling h/d and hg/lg ratios", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0883", "term": "seedling numbers", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0884", "term": "seismic line bearing", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0885", "term": "seismic line orientation", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0886", "term": "sewage and till-fertilizer treatment", "class": null, "phrase": null, "why": "covered by fertili*"}
+{"id": "T0887", "term": "sewage sludge", "class": "organic_soil_amendment", "phrase": "sewage sludge", "why": "biosolids soil amendment"}
+{"id": "T0888", "term": "sewage treatment", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0889", "term": "sex and age class", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0890", "term": "shallow water", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0891", "term": "shape index", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0892", "term": "shelf position or scraped rotten wood", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0893", "term": "shoot growth inhibitor", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0894", "term": "shoot growth inhibitor application", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0895", "term": "shoot to root ratio", "class": "biomass_productivity", "phrase": "shoot to root ratio", "why": "biomass allocation"}
+{"id": "T0896", "term": "shoots", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0897", "term": "short forbs", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0898", "term": "side channel area", "class": null, "phrase": null, "why": "generic or no fitting class"}
+{"id": "T0899", "term": "side-channel construction", "class": "engineered_structures", "phrase": "side-channel construction", "why": "in-stream habitat construction"}
+{"id": "T0900", "term": "signs", "class": null, "phrase": null, "why": "generic or no fitting class"}

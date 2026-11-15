@@ -1,0 +1,2535 @@
+{
+ "phrases": 1052,
+ "glove_pr72": {
+  "empty63_linked_right": 1,
+  "empty63_linked_wrong": 6
+ },
+ "bge-small-en-v1.5": {
+  "empty63_forced_top1_right": 19,
+  "empty63_top3_hit": 34,
+  "gap_sweep": [
+   {
+    "gap": 0.0,
+    "right": 19,
+    "wrong": 44,
+    "empty": 0
+   },
+   {
+    "gap": 0.01,
+    "right": 17,
+    "wrong": 35,
+    "empty": 11
+   },
+   {
+    "gap": 0.02,
+    "right": 14,
+    "wrong": 25,
+    "empty": 24
+   },
+   {
+    "gap": 0.03,
+    "right": 12,
+    "wrong": 20,
+    "empty": 31
+   },
+   {
+    "gap": 0.04,
+    "right": 10,
+    "wrong": 16,
+    "empty": 37
+   },
+   {
+    "gap": 0.05,
+    "right": 7,
+    "wrong": 12,
+    "empty": 44
+   },
+   {
+    "gap": 0.06,
+    "right": 5,
+    "wrong": 9,
+    "empty": 49
+   },
+   {
+    "gap": 0.08,
+    "right": 3,
+    "wrong": 6,
+    "empty": 54
+   },
+   {
+    "gap": 0.1,
+    "right": 2,
+    "wrong": 3,
+    "empty": 58
+   }
+  ],
+  "all160_forced_top1_right": 82,
+  "examples": [
+   {
+    "asked": "early blooming herbaceous plants share",
+    "want": [
+     "reproduction_flowering"
+    ],
+    "top1": "seed_germination_emergence",
+    "cos": 0.782,
+    "gap": 0.021
+   },
+   {
+    "asked": "landform alteration",
+    "want": [
+     "soil_erosion"
+    ],
+    "top1": "soil_erosion",
+    "cos": 0.745,
+    "gap": 0.032
+   },
+   {
+    "asked": "tree felling and elapsed years",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.785,
+    "gap": 0.054
+   },
+   {
+    "asked": "young tree numbers of non-timber species",
+    "want": [
+     "natural_regeneration"
+    ],
+    "top1": "tree_species_composition",
+    "cos": 0.808,
+    "gap": 0.003
+   },
+   {
+    "asked": "tree felling methods",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "tree_planting",
+    "cos": 0.794,
+    "gap": 0.027
+   },
+   {
+    "asked": "sparse conifer tree farm",
+    "want": [
+     "tree_planting"
+    ],
+    "top1": "tree_planting",
+    "cos": 0.78,
+    "gap": 0.013
+   },
+   {
+    "asked": "elk droppings count",
+    "want": [
+     "mammal_abundance"
+    ],
+    "top1": "mammal_abundance",
+    "cos": 0.74,
+    "gap": 0.041
+   },
+   {
+    "asked": "man-made nest platforms",
+    "want": [
+     "site_preparation"
+    ],
+    "top1": "species_reintroduction",
+    "cos": 0.77,
+    "gap": 0.084
+   },
+   {
+    "asked": "man-made nest platforms",
+    "want": [
+     "site_preparation"
+    ],
+    "top1": "species_reintroduction",
+    "cos": 0.77,
+    "gap": 0.084
+   },
+   {
+    "asked": "thermal accumulation",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "carbon_flux",
+    "cos": 0.739,
+    "gap": 0.036
+   },
+   {
+    "asked": "nutrient resorption efficiency",
+    "want": [
+     "foliar_nutrients"
+    ],
+    "top1": "foliar_nutrients",
+    "cos": 0.809,
+    "gap": 0.002
+   },
+   {
+    "asked": "invasive crayfish arrival",
+    "want": [
+     "species_reintroduction"
+    ],
+    "top1": "invasive_presence",
+    "cos": 0.786,
+    "gap": 0.057
+   },
+   {
+    "asked": "dragonfly and damselfly dry weight",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "animal_condition",
+    "cos": 0.686,
+    "gap": 0.013
+   },
+   {
+    "asked": "ongoing invasive plant control with habitat recovery",
+    "want": [
+     "restoration_general"
+    ],
+    "top1": "invasive_removal",
+    "cos": 0.868,
+    "gap": 0.047
+   },
+   {
+    "asked": "cool-season grass numbers",
+    "want": [
+     "population_size_trend"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.72,
+    "gap": 0.0
+   },
+   {
+    "asked": "tree farm removal",
+    "want": [
+     "clearcut_harvest"
+    ],
+    "top1": "site_preparation",
+    "cos": 0.83,
+    "gap": 0.004
+   },
+   {
+    "asked": "subordinate vegetation coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.885,
+    "gap": 0.103
+   },
+   {
+    "asked": "bottom material",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "organic_soil_amendment",
+    "cos": 0.75,
+    "gap": 0.043
+   },
+   {
+    "asked": "untreated surface relief",
+    "want": [
+     "site_preparation"
+    ],
+    "top1": "restoration_general",
+    "cos": 0.737,
+    "gap": 0.012
+   },
+   {
+    "asked": "thicker layer applied",
+    "want": [
+     "organic_soil_amendment"
+    ],
+    "top1": "partial_harvest",
+    "cos": 0.758,
+    "gap": 0.023
+   },
+   {
+    "asked": "rehabilitated wetland category",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "wetland_creation",
+    "cos": 0.878,
+    "gap": 0.108
+   },
+   {
+    "asked": "natural gas emission under oxygenated conditions",
+    "want": [
+     "methane_emissions"
+    ],
+    "top1": "methane_emissions",
+    "cos": 0.794,
+    "gap": 0.059
+   },
+   {
+    "asked": "vegetation coverage after several years",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.864,
+    "gap": 0.095
+   },
+   {
+    "asked": "basic and varied replanting",
+    "want": [
+     "tree_planting"
+    ],
+    "top1": "restoration_general",
+    "cos": 0.753,
+    "gap": 0.01
+   },
+   {
+    "asked": "peak underground warmth",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "biomass_productivity",
+    "cos": 0.663,
+    "gap": 0.03
+   },
+   {
+    "asked": "canopy tree clearing",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "canopy_light",
+    "cos": 0.835,
+    "gap": 0.023
+   },
+   {
+    "asked": "bush coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.637,
+    "gap": 0.016
+   },
+   {
+    "asked": "built wetland type",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "wetland_creation",
+    "cos": 0.895,
+    "gap": 0.175
+   },
+   {
+    "asked": "bitumen prospecting habitat",
+    "want": [
+     "contaminant_exposure"
+    ],
+    "top1": "engineered_structures",
+    "cos": 0.745,
+    "gap": 0.014
+   },
+   {
+    "asked": "sedge vigor score",
+    "want": [
+     "plant_physiology"
+    ],
+    "top1": "reproduction_flowering",
+    "cos": 0.674,
+    "gap": 0.005
+   },
+   {
+    "asked": "clearing plant cover",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "organic_soil_amendment",
+    "cos": 0.8,
+    "gap": 0.001
+   },
+   {
+    "asked": "coastal sand ridge scouring",
+    "want": [
+     "soil_erosion"
+    ],
+    "top1": "soil_erosion",
+    "cos": 0.729,
+    "gap": 0.017
+   },
+   {
+    "asked": "adult salmonid mass",
+    "want": [
+     "fish_abundance"
+    ],
+    "top1": "fish_abundance",
+    "cos": 0.76,
+    "gap": 0.058
+   },
+   {
+    "asked": "more light gaps",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "canopy_light",
+    "cos": 0.795,
+    "gap": 0.157
+   },
+   {
+    "asked": "per-tree crown leaf mass",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "functional_traits",
+    "cos": 0.78,
+    "gap": 0.008
+   },
+   {
+    "asked": "native wildflower ground coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "native_abundance",
+    "cos": 0.807,
+    "gap": 0.017
+   },
+   {
+    "asked": "algal pigment levels",
+    "want": [
+     "foliar_nutrients"
+    ],
+    "top1": "foliar_nutrients",
+    "cos": 0.746,
+    "gap": 0.031
+   },
+   {
+    "asked": "riparian tree development",
+    "want": [
+     "tree_growth"
+    ],
+    "top1": "natural_regeneration",
+    "cos": 0.758,
+    "gap": 0.031
+   },
+   {
+    "asked": "peak warmth",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "tree_growth",
+    "cos": 0.66,
+    "gap": 0.01
+   },
+   {
+    "asked": "removing bottom-feeding fish",
+    "want": [
+     "invasive_removal"
+    ],
+    "top1": "sediment_removal",
+    "cos": 0.751,
+    "gap": 0.018
+   },
+   {
+    "asked": "water cloudiness",
+    "want": [
+     "soil_erosion"
+    ],
+    "top1": "water_chemistry",
+    "cos": 0.781,
+    "gap": 0.023
+   },
+   {
+    "asked": "ecosystem class and fine-scale relief",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "restoration_general",
+    "cos": 0.755,
+    "gap": 0.048
+   },
+   {
+    "asked": "debris rows versus woods",
+    "want": [
+     "woody_debris_retention"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.802,
+    "gap": 0.063
+   },
+   {
+    "asked": "rodent breeding output",
+    "want": [
+     "reproduction_flowering"
+    ],
+    "top1": "reproduction_flowering",
+    "cos": 0.796,
+    "gap": 0.002
+   },
+   {
+    "asked": "weedkiller use",
+    "want": [
+     "herbicide_application"
+    ],
+    "top1": "mechanical_release_control",
+    "cos": 0.782,
+    "gap": 0.027
+   },
+   {
+    "asked": "sparse tree cover",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.783,
+    "gap": 0.079
+   },
+   {
+    "asked": "bog humification",
+    "want": [
+     "soil_microbial"
+    ],
+    "top1": "bare_ground",
+    "cos": 0.797,
+    "gap": 0.077
+   },
+   {
+    "asked": "flooding disused bogs",
+    "want": [
+     "peatland_rewetting"
+    ],
+    "top1": "moss_layer_transfer",
+    "cos": 0.841,
+    "gap": 0.087
+   },
+   {
+    "asked": "heath shrub mass",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.742,
+    "gap": 0.036
+   },
+   {
+    "asked": "aquatic rodent den use",
+    "want": [
+     "mammal_abundance"
+    ],
+    "top1": "insect_invertebrate",
+    "cos": 0.763,
+    "gap": 0.019
+   },
+   {
+    "asked": "farming",
+    "want": [
+     "land_use"
+    ],
+    "top1": "tree_planting",
+    "cos": 0.836,
+    "gap": 0.043
+   },
+   {
+    "asked": "damselfly mass",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "functional_traits",
+    "cos": 0.743,
+    "gap": 0.012
+   },
+   {
+    "asked": "big fallen logs",
+    "want": [
+     "woody_debris_retention"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.745,
+    "gap": 0.023
+   },
+   {
+    "asked": "ground thermal variability",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "biomass_productivity",
+    "cos": 0.741,
+    "gap": 0.018
+   },
+   {
+    "asked": "late-stage rewetted bog sites",
+    "want": [
+     "restoration_general"
+    ],
+    "top1": "moss_layer_transfer",
+    "cos": 0.839,
+    "gap": 0.077
+   },
+   {
+    "asked": "plant growth regulator",
+    "want": [
+     "herbicide_application"
+    ],
+    "top1": "mechanical_release_control",
+    "cos": 0.738,
+    "gap": 0.006
+   },
+   {
+    "asked": "belowground sulfur content",
+    "want": [
+     "water_chemistry"
+    ],
+    "top1": "biomass_productivity",
+    "cos": 0.818,
+    "gap": 0.105
+   },
+   {
+    "asked": "denser overhead foliage",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "canopy_light",
+    "cos": 0.781,
+    "gap": 0.042
+   },
+   {
+    "asked": "understory shrub blooming rate",
+    "want": [
+     "reproduction_flowering"
+    ],
+    "top1": "natural_regeneration",
+    "cos": 0.75,
+    "gap": 0.004
+   },
+   {
+    "asked": "marsh gradient",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "wetland_creation",
+    "cos": 0.768,
+    "gap": 0.058
+   },
+   {
+    "asked": "stature gain of evergreens",
+    "want": [
+     "tree_growth"
+    ],
+    "top1": "tree_growth",
+    "cos": 0.793,
+    "gap": 0.075
+   },
+   {
+    "asked": "pasture sward coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.769,
+    "gap": 0.047
+   },
+   {
+    "asked": "tree felling",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.782,
+    "gap": 0.011
+   }
+  ],
+  "load_s": 0.4,
+  "encode_s": 2.05
+ },
+ "bge-base-en-v1.5": {
+  "empty63_forced_top1_right": 27,
+  "empty63_top3_hit": 37,
+  "gap_sweep": [
+   {
+    "gap": 0.0,
+    "right": 27,
+    "wrong": 36,
+    "empty": 0
+   },
+   {
+    "gap": 0.01,
+    "right": 24,
+    "wrong": 29,
+    "empty": 10
+   },
+   {
+    "gap": 0.02,
+    "right": 23,
+    "wrong": 23,
+    "empty": 17
+   },
+   {
+    "gap": 0.03,
+    "right": 21,
+    "wrong": 16,
+    "empty": 26
+   },
+   {
+    "gap": 0.04,
+    "right": 17,
+    "wrong": 12,
+    "empty": 34
+   },
+   {
+    "gap": 0.05,
+    "right": 14,
+    "wrong": 10,
+    "empty": 39
+   },
+   {
+    "gap": 0.06,
+    "right": 11,
+    "wrong": 8,
+    "empty": 44
+   },
+   {
+    "gap": 0.08,
+    "right": 7,
+    "wrong": 5,
+    "empty": 51
+   },
+   {
+    "gap": 0.1,
+    "right": 5,
+    "wrong": 3,
+    "empty": 55
+   }
+  ],
+  "all160_forced_top1_right": 87,
+  "examples": [
+   {
+    "asked": "early blooming herbaceous plants share",
+    "want": [
+     "reproduction_flowering"
+    ],
+    "top1": "reproduction_flowering",
+    "cos": 0.751,
+    "gap": 0.041
+   },
+   {
+    "asked": "landform alteration",
+    "want": [
+     "soil_erosion"
+    ],
+    "top1": "soil_erosion",
+    "cos": 0.707,
+    "gap": 0.055
+   },
+   {
+    "asked": "tree felling and elapsed years",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.709,
+    "gap": 0.019
+   },
+   {
+    "asked": "young tree numbers of non-timber species",
+    "want": [
+     "natural_regeneration"
+    ],
+    "top1": "tree_species_composition",
+    "cos": 0.783,
+    "gap": 0.023
+   },
+   {
+    "asked": "tree felling methods",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "harvest_general",
+    "cos": 0.746,
+    "gap": 0.005
+   },
+   {
+    "asked": "sparse conifer tree farm",
+    "want": [
+     "tree_planting"
+    ],
+    "top1": "partial_harvest",
+    "cos": 0.781,
+    "gap": 0.024
+   },
+   {
+    "asked": "elk droppings count",
+    "want": [
+     "mammal_abundance"
+    ],
+    "top1": "mammal_abundance",
+    "cos": 0.666,
+    "gap": 0.023
+   },
+   {
+    "asked": "man-made nest platforms",
+    "want": [
+     "site_preparation"
+    ],
+    "top1": "species_reintroduction",
+    "cos": 0.755,
+    "gap": 0.082
+   },
+   {
+    "asked": "man-made nest platforms",
+    "want": [
+     "site_preparation"
+    ],
+    "top1": "species_reintroduction",
+    "cos": 0.755,
+    "gap": 0.082
+   },
+   {
+    "asked": "thermal accumulation",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "bird_abundance",
+    "cos": 0.655,
+    "gap": 0.004
+   },
+   {
+    "asked": "nutrient resorption efficiency",
+    "want": [
+     "foliar_nutrients"
+    ],
+    "top1": "foliar_nutrients",
+    "cos": 0.767,
+    "gap": 0.001
+   },
+   {
+    "asked": "invasive crayfish arrival",
+    "want": [
+     "species_reintroduction"
+    ],
+    "top1": "invasive_presence",
+    "cos": 0.777,
+    "gap": 0.051
+   },
+   {
+    "asked": "dragonfly and damselfly dry weight",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "biomass_productivity",
+    "cos": 0.709,
+    "gap": 0.057
+   },
+   {
+    "asked": "ongoing invasive plant control with habitat recovery",
+    "want": [
+     "restoration_general"
+    ],
+    "top1": "invasive_removal",
+    "cos": 0.826,
+    "gap": 0.032
+   },
+   {
+    "asked": "cool-season grass numbers",
+    "want": [
+     "population_size_trend"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.76,
+    "gap": 0.032
+   },
+   {
+    "asked": "tree farm removal",
+    "want": [
+     "clearcut_harvest"
+    ],
+    "top1": "mechanical_release_control",
+    "cos": 0.836,
+    "gap": 0.002
+   },
+   {
+    "asked": "subordinate vegetation coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.845,
+    "gap": 0.095
+   },
+   {
+    "asked": "bottom material",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "organic_soil_amendment",
+    "cos": 0.737,
+    "gap": 0.053
+   },
+   {
+    "asked": "untreated surface relief",
+    "want": [
+     "site_preparation"
+    ],
+    "top1": "mulch_surface_cover",
+    "cos": 0.756,
+    "gap": 0.032
+   },
+   {
+    "asked": "thicker layer applied",
+    "want": [
+     "organic_soil_amendment"
+    ],
+    "top1": "mulch_surface_cover",
+    "cos": 0.685,
+    "gap": 0.019
+   },
+   {
+    "asked": "rehabilitated wetland category",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "wetland_creation",
+    "cos": 0.85,
+    "gap": 0.121
+   },
+   {
+    "asked": "natural gas emission under oxygenated conditions",
+    "want": [
+     "methane_emissions"
+    ],
+    "top1": "methane_emissions",
+    "cos": 0.766,
+    "gap": 0.09
+   },
+   {
+    "asked": "vegetation coverage after several years",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.834,
+    "gap": 0.113
+   },
+   {
+    "asked": "basic and varied replanting",
+    "want": [
+     "tree_planting"
+    ],
+    "top1": "tree_planting",
+    "cos": 0.761,
+    "gap": 0.033
+   },
+   {
+    "asked": "peak underground warmth",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "bare_ground",
+    "cos": 0.611,
+    "gap": 0.006
+   },
+   {
+    "asked": "canopy tree clearing",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "canopy_light",
+    "cos": 0.805,
+    "gap": 0.014
+   },
+   {
+    "asked": "bush coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.615,
+    "gap": 0.032
+   },
+   {
+    "asked": "built wetland type",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "wetland_creation",
+    "cos": 0.89,
+    "gap": 0.214
+   },
+   {
+    "asked": "bitumen prospecting habitat",
+    "want": [
+     "contaminant_exposure"
+    ],
+    "top1": "engineered_structures",
+    "cos": 0.714,
+    "gap": 0.017
+   },
+   {
+    "asked": "sedge vigor score",
+    "want": [
+     "plant_physiology"
+    ],
+    "top1": "seed_germination_emergence",
+    "cos": 0.681,
+    "gap": 0.002
+   },
+   {
+    "asked": "clearing plant cover",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "mechanical_release_control",
+    "cos": 0.814,
+    "gap": 0.046
+   },
+   {
+    "asked": "coastal sand ridge scouring",
+    "want": [
+     "soil_erosion"
+    ],
+    "top1": "soil_erosion",
+    "cos": 0.64,
+    "gap": 0.025
+   },
+   {
+    "asked": "adult salmonid mass",
+    "want": [
+     "fish_abundance"
+    ],
+    "top1": "fish_abundance",
+    "cos": 0.736,
+    "gap": 0.08
+   },
+   {
+    "asked": "more light gaps",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "canopy_light",
+    "cos": 0.781,
+    "gap": 0.147
+   },
+   {
+    "asked": "per-tree crown leaf mass",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "biomass_productivity",
+    "cos": 0.771,
+    "gap": 0.005
+   },
+   {
+    "asked": "native wildflower ground coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "native_abundance",
+    "cos": 0.785,
+    "gap": 0.022
+   },
+   {
+    "asked": "algal pigment levels",
+    "want": [
+     "foliar_nutrients"
+    ],
+    "top1": "foliar_nutrients",
+    "cos": 0.745,
+    "gap": 0.033
+   },
+   {
+    "asked": "riparian tree development",
+    "want": [
+     "tree_growth"
+    ],
+    "top1": "tree_growth",
+    "cos": 0.738,
+    "gap": 0.005
+   },
+   {
+    "asked": "peak warmth",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "plant_richness",
+    "cos": 0.642,
+    "gap": 0.021
+   },
+   {
+    "asked": "removing bottom-feeding fish",
+    "want": [
+     "invasive_removal"
+    ],
+    "top1": "invasive_removal",
+    "cos": 0.738,
+    "gap": 0.045
+   },
+   {
+    "asked": "water cloudiness",
+    "want": [
+     "soil_erosion"
+    ],
+    "top1": "soil_erosion",
+    "cos": 0.737,
+    "gap": 0.055
+   },
+   {
+    "asked": "ecosystem class and fine-scale relief",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "restoration_general",
+    "cos": 0.711,
+    "gap": 0.036
+   },
+   {
+    "asked": "debris rows versus woods",
+    "want": [
+     "woody_debris_retention"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.823,
+    "gap": 0.103
+   },
+   {
+    "asked": "rodent breeding output",
+    "want": [
+     "reproduction_flowering"
+    ],
+    "top1": "reproduction_flowering",
+    "cos": 0.784,
+    "gap": 0.037
+   },
+   {
+    "asked": "weedkiller use",
+    "want": [
+     "herbicide_application"
+    ],
+    "top1": "mechanical_release_control",
+    "cos": 0.781,
+    "gap": 0.01
+   },
+   {
+    "asked": "sparse tree cover",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.752,
+    "gap": 0.025
+   },
+   {
+    "asked": "bog humification",
+    "want": [
+     "soil_microbial"
+    ],
+    "top1": "bare_ground",
+    "cos": 0.682,
+    "gap": 0.018
+   },
+   {
+    "asked": "flooding disused bogs",
+    "want": [
+     "peatland_rewetting"
+    ],
+    "top1": "moss_layer_transfer",
+    "cos": 0.821,
+    "gap": 0.064
+   },
+   {
+    "asked": "heath shrub mass",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.753,
+    "gap": 0.068
+   },
+   {
+    "asked": "aquatic rodent den use",
+    "want": [
+     "mammal_abundance"
+    ],
+    "top1": "mammal_abundance",
+    "cos": 0.751,
+    "gap": 0.063
+   },
+   {
+    "asked": "farming",
+    "want": [
+     "land_use"
+    ],
+    "top1": "harvest_general",
+    "cos": 0.776,
+    "gap": 0.008
+   },
+   {
+    "asked": "damselfly mass",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "insect_invertebrate",
+    "cos": 0.694,
+    "gap": 0.01
+   },
+   {
+    "asked": "big fallen logs",
+    "want": [
+     "woody_debris_retention"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.785,
+    "gap": 0.104
+   },
+   {
+    "asked": "ground thermal variability",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.698,
+    "gap": 0.024
+   },
+   {
+    "asked": "late-stage rewetted bog sites",
+    "want": [
+     "restoration_general"
+    ],
+    "top1": "moss_layer_transfer",
+    "cos": 0.828,
+    "gap": 0.075
+   },
+   {
+    "asked": "plant growth regulator",
+    "want": [
+     "herbicide_application"
+    ],
+    "top1": "mechanical_release_control",
+    "cos": 0.73,
+    "gap": 0.007
+   },
+   {
+    "asked": "belowground sulfur content",
+    "want": [
+     "water_chemistry"
+    ],
+    "top1": "biomass_productivity",
+    "cos": 0.743,
+    "gap": 0.047
+   },
+   {
+    "asked": "denser overhead foliage",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "canopy_light",
+    "cos": 0.78,
+    "gap": 0.064
+   },
+   {
+    "asked": "understory shrub blooming rate",
+    "want": [
+     "reproduction_flowering"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.71,
+    "gap": 0.044
+   },
+   {
+    "asked": "marsh gradient",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "wetland_creation",
+    "cos": 0.776,
+    "gap": 0.124
+   },
+   {
+    "asked": "stature gain of evergreens",
+    "want": [
+     "tree_growth"
+    ],
+    "top1": "tree_growth",
+    "cos": 0.755,
+    "gap": 0.063
+   },
+   {
+    "asked": "pasture sward coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.776,
+    "gap": 0.104
+   },
+   {
+    "asked": "tree felling",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "tree_planting",
+    "cos": 0.757,
+    "gap": 0.021
+   }
+  ],
+  "load_s": 0.3,
+  "encode_s": 5.69
+ },
+ "e5-small-v2": {
+  "empty63_forced_top1_right": 19,
+  "empty63_top3_hit": 40,
+  "gap_sweep": [
+   {
+    "gap": 0.0,
+    "right": 19,
+    "wrong": 44,
+    "empty": 0
+   },
+   {
+    "gap": 0.01,
+    "right": 14,
+    "wrong": 20,
+    "empty": 29
+   },
+   {
+    "gap": 0.02,
+    "right": 9,
+    "wrong": 12,
+    "empty": 42
+   },
+   {
+    "gap": 0.03,
+    "right": 7,
+    "wrong": 8,
+    "empty": 48
+   },
+   {
+    "gap": 0.04,
+    "right": 4,
+    "wrong": 7,
+    "empty": 52
+   },
+   {
+    "gap": 0.05,
+    "right": 3,
+    "wrong": 5,
+    "empty": 55
+   },
+   {
+    "gap": 0.06,
+    "right": 2,
+    "wrong": 2,
+    "empty": 59
+   },
+   {
+    "gap": 0.08,
+    "right": 0,
+    "wrong": 0,
+    "empty": 63
+   },
+   {
+    "gap": 0.1,
+    "right": 0,
+    "wrong": 0,
+    "empty": 63
+   }
+  ],
+  "all160_forced_top1_right": 80,
+  "examples": [
+   {
+    "asked": "early blooming herbaceous plants share",
+    "want": [
+     "reproduction_flowering"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.874,
+    "gap": 0.011
+   },
+   {
+    "asked": "landform alteration",
+    "want": [
+     "soil_erosion"
+    ],
+    "top1": "soil_erosion",
+    "cos": 0.843,
+    "gap": 0.008
+   },
+   {
+    "asked": "tree felling and elapsed years",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.859,
+    "gap": 0.003
+   },
+   {
+    "asked": "young tree numbers of non-timber species",
+    "want": [
+     "natural_regeneration"
+    ],
+    "top1": "invasive_abundance",
+    "cos": 0.878,
+    "gap": 0.005
+   },
+   {
+    "asked": "tree felling methods",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "harvest_general",
+    "cos": 0.874,
+    "gap": 0.002
+   },
+   {
+    "asked": "sparse conifer tree farm",
+    "want": [
+     "tree_planting"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.851,
+    "gap": 0.009
+   },
+   {
+    "asked": "elk droppings count",
+    "want": [
+     "mammal_abundance"
+    ],
+    "top1": "population_size_trend",
+    "cos": 0.832,
+    "gap": 0.002
+   },
+   {
+    "asked": "man-made nest platforms",
+    "want": [
+     "site_preparation"
+    ],
+    "top1": "species_reintroduction",
+    "cos": 0.87,
+    "gap": 0.051
+   },
+   {
+    "asked": "man-made nest platforms",
+    "want": [
+     "site_preparation"
+    ],
+    "top1": "species_reintroduction",
+    "cos": 0.87,
+    "gap": 0.051
+   },
+   {
+    "asked": "thermal accumulation",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "methane_emissions",
+    "cos": 0.843,
+    "gap": 0.005
+   },
+   {
+    "asked": "nutrient resorption efficiency",
+    "want": [
+     "foliar_nutrients"
+    ],
+    "top1": "plant_physiology",
+    "cos": 0.901,
+    "gap": 0.015
+   },
+   {
+    "asked": "invasive crayfish arrival",
+    "want": [
+     "species_reintroduction"
+    ],
+    "top1": "invasive_presence",
+    "cos": 0.871,
+    "gap": 0.008
+   },
+   {
+    "asked": "dragonfly and damselfly dry weight",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "biomass_productivity",
+    "cos": 0.851,
+    "gap": 0.008
+   },
+   {
+    "asked": "ongoing invasive plant control with habitat recovery",
+    "want": [
+     "restoration_general"
+    ],
+    "top1": "invasive_removal",
+    "cos": 0.918,
+    "gap": 0.034
+   },
+   {
+    "asked": "cool-season grass numbers",
+    "want": [
+     "population_size_trend"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.863,
+    "gap": 0.007
+   },
+   {
+    "asked": "tree farm removal",
+    "want": [
+     "clearcut_harvest"
+    ],
+    "top1": "sediment_removal",
+    "cos": 0.894,
+    "gap": 0.007
+   },
+   {
+    "asked": "subordinate vegetation coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.905,
+    "gap": 0.042
+   },
+   {
+    "asked": "bottom material",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "site_conditions",
+    "cos": 0.846,
+    "gap": 0.001
+   },
+   {
+    "asked": "untreated surface relief",
+    "want": [
+     "site_preparation"
+    ],
+    "top1": "mulch_surface_cover",
+    "cos": 0.865,
+    "gap": 0.029
+   },
+   {
+    "asked": "thicker layer applied",
+    "want": [
+     "organic_soil_amendment"
+    ],
+    "top1": "partial_harvest",
+    "cos": 0.858,
+    "gap": 0.008
+   },
+   {
+    "asked": "rehabilitated wetland category",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "wetland_creation",
+    "cos": 0.913,
+    "gap": 0.044
+   },
+   {
+    "asked": "natural gas emission under oxygenated conditions",
+    "want": [
+     "methane_emissions"
+    ],
+    "top1": "methane_emissions",
+    "cos": 0.888,
+    "gap": 0.029
+   },
+   {
+    "asked": "vegetation coverage after several years",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.906,
+    "gap": 0.057
+   },
+   {
+    "asked": "basic and varied replanting",
+    "want": [
+     "tree_planting"
+    ],
+    "top1": "peatland_rewetting",
+    "cos": 0.861,
+    "gap": 0.008
+   },
+   {
+    "asked": "peak underground warmth",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "methane_emissions",
+    "cos": 0.844,
+    "gap": 0.009
+   },
+   {
+    "asked": "canopy tree clearing",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "canopy_light",
+    "cos": 0.914,
+    "gap": 0.035
+   },
+   {
+    "asked": "bush coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.867,
+    "gap": 0.022
+   },
+   {
+    "asked": "built wetland type",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "wetland_creation",
+    "cos": 0.934,
+    "gap": 0.063
+   },
+   {
+    "asked": "bitumen prospecting habitat",
+    "want": [
+     "contaminant_exposure"
+    ],
+    "top1": "engineered_structures",
+    "cos": 0.857,
+    "gap": 0.007
+   },
+   {
+    "asked": "sedge vigor score",
+    "want": [
+     "plant_physiology"
+    ],
+    "top1": "wildlife_mortality",
+    "cos": 0.818,
+    "gap": 0.001
+   },
+   {
+    "asked": "clearing plant cover",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "organic_soil_amendment",
+    "cos": 0.889,
+    "gap": 0.017
+   },
+   {
+    "asked": "coastal sand ridge scouring",
+    "want": [
+     "soil_erosion"
+    ],
+    "top1": "soil_erosion",
+    "cos": 0.832,
+    "gap": 0.015
+   },
+   {
+    "asked": "adult salmonid mass",
+    "want": [
+     "fish_abundance"
+    ],
+    "top1": "fish_abundance",
+    "cos": 0.879,
+    "gap": 0.016
+   },
+   {
+    "asked": "more light gaps",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "canopy_light",
+    "cos": 0.882,
+    "gap": 0.063
+   },
+   {
+    "asked": "per-tree crown leaf mass",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "biomass_productivity",
+    "cos": 0.888,
+    "gap": 0.002
+   },
+   {
+    "asked": "native wildflower ground coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "native_abundance",
+    "cos": 0.9,
+    "gap": 0.02
+   },
+   {
+    "asked": "algal pigment levels",
+    "want": [
+     "foliar_nutrients"
+    ],
+    "top1": "plant_physiology",
+    "cos": 0.863,
+    "gap": 0.003
+   },
+   {
+    "asked": "riparian tree development",
+    "want": [
+     "tree_growth"
+    ],
+    "top1": "tree_seedling_survival",
+    "cos": 0.853,
+    "gap": 0.009
+   },
+   {
+    "asked": "peak warmth",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "methane_emissions",
+    "cos": 0.862,
+    "gap": 0.015
+   },
+   {
+    "asked": "removing bottom-feeding fish",
+    "want": [
+     "invasive_removal"
+    ],
+    "top1": "sediment_removal",
+    "cos": 0.863,
+    "gap": 0.009
+   },
+   {
+    "asked": "water cloudiness",
+    "want": [
+     "soil_erosion"
+    ],
+    "top1": "water_chemistry",
+    "cos": 0.896,
+    "gap": 0.014
+   },
+   {
+    "asked": "ecosystem class and fine-scale relief",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "site_conditions",
+    "cos": 0.852,
+    "gap": 0.011
+   },
+   {
+    "asked": "debris rows versus woods",
+    "want": [
+     "woody_debris_retention"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.904,
+    "gap": 0.066
+   },
+   {
+    "asked": "rodent breeding output",
+    "want": [
+     "reproduction_flowering"
+    ],
+    "top1": "reproduction_flowering",
+    "cos": 0.905,
+    "gap": 0.014
+   },
+   {
+    "asked": "weedkiller use",
+    "want": [
+     "herbicide_application"
+    ],
+    "top1": "mechanical_release_control",
+    "cos": 0.879,
+    "gap": 0.02
+   },
+   {
+    "asked": "sparse tree cover",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.864,
+    "gap": 0.008
+   },
+   {
+    "asked": "bog humification",
+    "want": [
+     "soil_microbial"
+    ],
+    "top1": "bare_ground",
+    "cos": 0.862,
+    "gap": 0.017
+   },
+   {
+    "asked": "flooding disused bogs",
+    "want": [
+     "peatland_rewetting"
+    ],
+    "top1": "moss_layer_transfer",
+    "cos": 0.89,
+    "gap": 0.025
+   },
+   {
+    "asked": "heath shrub mass",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "functional_traits",
+    "cos": 0.883,
+    "gap": 0.01
+   },
+   {
+    "asked": "aquatic rodent den use",
+    "want": [
+     "mammal_abundance"
+    ],
+    "top1": "insect_invertebrate",
+    "cos": 0.863,
+    "gap": 0.0
+   },
+   {
+    "asked": "farming",
+    "want": [
+     "land_use"
+    ],
+    "top1": "tree_planting",
+    "cos": 0.924,
+    "gap": 0.006
+   },
+   {
+    "asked": "damselfly mass",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "functional_traits",
+    "cos": 0.88,
+    "gap": 0.024
+   },
+   {
+    "asked": "big fallen logs",
+    "want": [
+     "woody_debris_retention"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.887,
+    "gap": 0.019
+   },
+   {
+    "asked": "ground thermal variability",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "bare_ground",
+    "cos": 0.849,
+    "gap": 0.005
+   },
+   {
+    "asked": "late-stage rewetted bog sites",
+    "want": [
+     "restoration_general"
+    ],
+    "top1": "moss_layer_transfer",
+    "cos": 0.89,
+    "gap": 0.046
+   },
+   {
+    "asked": "plant growth regulator",
+    "want": [
+     "herbicide_application"
+    ],
+    "top1": "mechanical_release_control",
+    "cos": 0.859,
+    "gap": 0.008
+   },
+   {
+    "asked": "belowground sulfur content",
+    "want": [
+     "water_chemistry"
+    ],
+    "top1": "biomass_productivity",
+    "cos": 0.902,
+    "gap": 0.057
+   },
+   {
+    "asked": "denser overhead foliage",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "canopy_light",
+    "cos": 0.85,
+    "gap": 0.01
+   },
+   {
+    "asked": "understory shrub blooming rate",
+    "want": [
+     "reproduction_flowering"
+    ],
+    "top1": "plant_physiology",
+    "cos": 0.866,
+    "gap": 0.003
+   },
+   {
+    "asked": "marsh gradient",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "wetland_creation",
+    "cos": 0.891,
+    "gap": 0.065
+   },
+   {
+    "asked": "stature gain of evergreens",
+    "want": [
+     "tree_growth"
+    ],
+    "top1": "tree_growth",
+    "cos": 0.88,
+    "gap": 0.03
+   },
+   {
+    "asked": "pasture sward coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.868,
+    "gap": 0.032
+   },
+   {
+    "asked": "tree felling",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "tree_planting",
+    "cos": 0.899,
+    "gap": 0.007
+   }
+  ],
+  "load_s": 0.5,
+  "encode_s": 2.26
+ },
+ "e5-base-v2": {
+  "empty63_forced_top1_right": 28,
+  "empty63_top3_hit": 38,
+  "gap_sweep": [
+   {
+    "gap": 0.0,
+    "right": 28,
+    "wrong": 35,
+    "empty": 0
+   },
+   {
+    "gap": 0.01,
+    "right": 16,
+    "wrong": 25,
+    "empty": 22
+   },
+   {
+    "gap": 0.02,
+    "right": 12,
+    "wrong": 15,
+    "empty": 36
+   },
+   {
+    "gap": 0.03,
+    "right": 8,
+    "wrong": 10,
+    "empty": 45
+   },
+   {
+    "gap": 0.04,
+    "right": 6,
+    "wrong": 5,
+    "empty": 52
+   },
+   {
+    "gap": 0.05,
+    "right": 1,
+    "wrong": 3,
+    "empty": 59
+   },
+   {
+    "gap": 0.06,
+    "right": 1,
+    "wrong": 2,
+    "empty": 60
+   },
+   {
+    "gap": 0.08,
+    "right": 0,
+    "wrong": 0,
+    "empty": 63
+   },
+   {
+    "gap": 0.1,
+    "right": 0,
+    "wrong": 0,
+    "empty": 63
+   }
+  ],
+  "all160_forced_top1_right": 90,
+  "examples": [
+   {
+    "asked": "early blooming herbaceous plants share",
+    "want": [
+     "reproduction_flowering"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.865,
+    "gap": 0.03
+   },
+   {
+    "asked": "landform alteration",
+    "want": [
+     "soil_erosion"
+    ],
+    "top1": "soil_erosion",
+    "cos": 0.851,
+    "gap": 0.022
+   },
+   {
+    "asked": "tree felling and elapsed years",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "time_since_disturbance",
+    "cos": 0.858,
+    "gap": 0.025
+   },
+   {
+    "asked": "young tree numbers of non-timber species",
+    "want": [
+     "natural_regeneration"
+    ],
+    "top1": "invasive_abundance",
+    "cos": 0.867,
+    "gap": 0.011
+   },
+   {
+    "asked": "tree felling methods",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "tree_planting",
+    "cos": 0.867,
+    "gap": 0.01
+   },
+   {
+    "asked": "sparse conifer tree farm",
+    "want": [
+     "tree_planting"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.832,
+    "gap": 0.013
+   },
+   {
+    "asked": "elk droppings count",
+    "want": [
+     "mammal_abundance"
+    ],
+    "top1": "mammal_abundance",
+    "cos": 0.814,
+    "gap": 0.008
+   },
+   {
+    "asked": "man-made nest platforms",
+    "want": [
+     "site_preparation"
+    ],
+    "top1": "species_reintroduction",
+    "cos": 0.856,
+    "gap": 0.037
+   },
+   {
+    "asked": "man-made nest platforms",
+    "want": [
+     "site_preparation"
+    ],
+    "top1": "species_reintroduction",
+    "cos": 0.856,
+    "gap": 0.037
+   },
+   {
+    "asked": "thermal accumulation",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "soil_erosion",
+    "cos": 0.841,
+    "gap": 0.005
+   },
+   {
+    "asked": "nutrient resorption efficiency",
+    "want": [
+     "foliar_nutrients"
+    ],
+    "top1": "foliar_nutrients",
+    "cos": 0.878,
+    "gap": 0.006
+   },
+   {
+    "asked": "invasive crayfish arrival",
+    "want": [
+     "species_reintroduction"
+    ],
+    "top1": "invasive_presence",
+    "cos": 0.879,
+    "gap": 0.014
+   },
+   {
+    "asked": "dragonfly and damselfly dry weight",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "biomass_productivity",
+    "cos": 0.841,
+    "gap": 0.008
+   },
+   {
+    "asked": "ongoing invasive plant control with habitat recovery",
+    "want": [
+     "restoration_general"
+    ],
+    "top1": "invasive_removal",
+    "cos": 0.889,
+    "gap": 0.006
+   },
+   {
+    "asked": "cool-season grass numbers",
+    "want": [
+     "population_size_trend"
+    ],
+    "top1": "native_abundance",
+    "cos": 0.833,
+    "gap": 0.004
+   },
+   {
+    "asked": "tree farm removal",
+    "want": [
+     "clearcut_harvest"
+    ],
+    "top1": "mechanical_release_control",
+    "cos": 0.891,
+    "gap": 0.01
+   },
+   {
+    "asked": "subordinate vegetation coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.89,
+    "gap": 0.042
+   },
+   {
+    "asked": "bottom material",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "site_conditions",
+    "cos": 0.845,
+    "gap": 0.0
+   },
+   {
+    "asked": "untreated surface relief",
+    "want": [
+     "site_preparation"
+    ],
+    "top1": "mulch_surface_cover",
+    "cos": 0.859,
+    "gap": 0.006
+   },
+   {
+    "asked": "thicker layer applied",
+    "want": [
+     "organic_soil_amendment"
+    ],
+    "top1": "mulch_surface_cover",
+    "cos": 0.843,
+    "gap": 0.003
+   },
+   {
+    "asked": "rehabilitated wetland category",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "wetland_creation",
+    "cos": 0.909,
+    "gap": 0.059
+   },
+   {
+    "asked": "natural gas emission under oxygenated conditions",
+    "want": [
+     "methane_emissions"
+    ],
+    "top1": "methane_emissions",
+    "cos": 0.873,
+    "gap": 0.025
+   },
+   {
+    "asked": "vegetation coverage after several years",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.897,
+    "gap": 0.043
+   },
+   {
+    "asked": "basic and varied replanting",
+    "want": [
+     "tree_planting"
+    ],
+    "top1": "tree_planting",
+    "cos": 0.859,
+    "gap": 0.021
+   },
+   {
+    "asked": "peak underground warmth",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "methane_emissions",
+    "cos": 0.808,
+    "gap": 0.013
+   },
+   {
+    "asked": "canopy tree clearing",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "canopy_light",
+    "cos": 0.905,
+    "gap": 0.033
+   },
+   {
+    "asked": "bush coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.836,
+    "gap": 0.017
+   },
+   {
+    "asked": "built wetland type",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "wetland_creation",
+    "cos": 0.929,
+    "gap": 0.079
+   },
+   {
+    "asked": "bitumen prospecting habitat",
+    "want": [
+     "contaminant_exposure"
+    ],
+    "top1": "restoration_general",
+    "cos": 0.838,
+    "gap": 0.009
+   },
+   {
+    "asked": "sedge vigor score",
+    "want": [
+     "plant_physiology"
+    ],
+    "top1": "reproduction_flowering",
+    "cos": 0.802,
+    "gap": 0.003
+   },
+   {
+    "asked": "clearing plant cover",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "mechanical_release_control",
+    "cos": 0.903,
+    "gap": 0.026
+   },
+   {
+    "asked": "coastal sand ridge scouring",
+    "want": [
+     "soil_erosion"
+    ],
+    "top1": "soil_erosion",
+    "cos": 0.821,
+    "gap": 0.012
+   },
+   {
+    "asked": "adult salmonid mass",
+    "want": [
+     "fish_abundance"
+    ],
+    "top1": "fish_abundance",
+    "cos": 0.886,
+    "gap": 0.049
+   },
+   {
+    "asked": "more light gaps",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "canopy_light",
+    "cos": 0.861,
+    "gap": 0.047
+   },
+   {
+    "asked": "per-tree crown leaf mass",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "biomass_productivity",
+    "cos": 0.868,
+    "gap": 0.014
+   },
+   {
+    "asked": "native wildflower ground coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "native_abundance",
+    "cos": 0.88,
+    "gap": 0.022
+   },
+   {
+    "asked": "algal pigment levels",
+    "want": [
+     "foliar_nutrients"
+    ],
+    "top1": "foliar_nutrients",
+    "cos": 0.859,
+    "gap": 0.004
+   },
+   {
+    "asked": "riparian tree development",
+    "want": [
+     "tree_growth"
+    ],
+    "top1": "tree_growth",
+    "cos": 0.85,
+    "gap": 0.004
+   },
+   {
+    "asked": "peak warmth",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "methane_emissions",
+    "cos": 0.833,
+    "gap": 0.021
+   },
+   {
+    "asked": "removing bottom-feeding fish",
+    "want": [
+     "invasive_removal"
+    ],
+    "top1": "invasive_removal",
+    "cos": 0.861,
+    "gap": 0.006
+   },
+   {
+    "asked": "water cloudiness",
+    "want": [
+     "soil_erosion"
+    ],
+    "top1": "soil_erosion",
+    "cos": 0.868,
+    "gap": 0.005
+   },
+   {
+    "asked": "ecosystem class and fine-scale relief",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "restoration_general",
+    "cos": 0.843,
+    "gap": 0.033
+   },
+   {
+    "asked": "debris rows versus woods",
+    "want": [
+     "woody_debris_retention"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.894,
+    "gap": 0.061
+   },
+   {
+    "asked": "rodent breeding output",
+    "want": [
+     "reproduction_flowering"
+    ],
+    "top1": "reproduction_flowering",
+    "cos": 0.888,
+    "gap": 0.016
+   },
+   {
+    "asked": "weedkiller use",
+    "want": [
+     "herbicide_application"
+    ],
+    "top1": "herbicide_application",
+    "cos": 0.881,
+    "gap": 0.01
+   },
+   {
+    "asked": "sparse tree cover",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "tree_protection",
+    "cos": 0.861,
+    "gap": 0.014
+   },
+   {
+    "asked": "bog humification",
+    "want": [
+     "soil_microbial"
+    ],
+    "top1": "soil_organic_carbon",
+    "cos": 0.844,
+    "gap": 0.007
+   },
+   {
+    "asked": "flooding disused bogs",
+    "want": [
+     "peatland_rewetting"
+    ],
+    "top1": "moss_layer_transfer",
+    "cos": 0.896,
+    "gap": 0.039
+   },
+   {
+    "asked": "heath shrub mass",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.861,
+    "gap": 0.014
+   },
+   {
+    "asked": "aquatic rodent den use",
+    "want": [
+     "mammal_abundance"
+    ],
+    "top1": "mammal_abundance",
+    "cos": 0.834,
+    "gap": 0.0
+   },
+   {
+    "asked": "farming",
+    "want": [
+     "land_use"
+    ],
+    "top1": "tree_planting",
+    "cos": 0.905,
+    "gap": 0.004
+   },
+   {
+    "asked": "damselfly mass",
+    "want": [
+     "biomass_productivity"
+    ],
+    "top1": "functional_traits",
+    "cos": 0.849,
+    "gap": 0.012
+   },
+   {
+    "asked": "big fallen logs",
+    "want": [
+     "woody_debris_retention"
+    ],
+    "top1": "woody_debris_retention",
+    "cos": 0.878,
+    "gap": 0.002
+   },
+   {
+    "asked": "ground thermal variability",
+    "want": [
+     "soil_temperature"
+    ],
+    "top1": "methane_emissions",
+    "cos": 0.832,
+    "gap": 0.007
+   },
+   {
+    "asked": "late-stage rewetted bog sites",
+    "want": [
+     "restoration_general"
+    ],
+    "top1": "moss_layer_transfer",
+    "cos": 0.885,
+    "gap": 0.047
+   },
+   {
+    "asked": "plant growth regulator",
+    "want": [
+     "herbicide_application"
+    ],
+    "top1": "tree_protection",
+    "cos": 0.864,
+    "gap": 0.011
+   },
+   {
+    "asked": "belowground sulfur content",
+    "want": [
+     "water_chemistry"
+    ],
+    "top1": "biomass_productivity",
+    "cos": 0.89,
+    "gap": 0.041
+   },
+   {
+    "asked": "denser overhead foliage",
+    "want": [
+     "canopy_light"
+    ],
+    "top1": "canopy_light",
+    "cos": 0.851,
+    "gap": 0.007
+   },
+   {
+    "asked": "understory shrub blooming rate",
+    "want": [
+     "reproduction_flowering"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.853,
+    "gap": 0.021
+   },
+   {
+    "asked": "marsh gradient",
+    "want": [
+     "site_conditions"
+    ],
+    "top1": "wetland_creation",
+    "cos": 0.882,
+    "gap": 0.069
+   },
+   {
+    "asked": "stature gain of evergreens",
+    "want": [
+     "tree_growth"
+    ],
+    "top1": "tree_growth",
+    "cos": 0.874,
+    "gap": 0.04
+   },
+   {
+    "asked": "pasture sward coverage",
+    "want": [
+     "plant_cover_total"
+    ],
+    "top1": "plant_cover_total",
+    "cos": 0.85,
+    "gap": 0.035
+   },
+   {
+    "asked": "tree felling",
+    "want": [
+     "mechanical_release_control"
+    ],
+    "top1": "tree_planting",
+    "cos": 0.899,
+    "gap": 0.025
+   }
+  ],
+  "load_s": 0.5,
+  "encode_s": 5.59
+ }
+}

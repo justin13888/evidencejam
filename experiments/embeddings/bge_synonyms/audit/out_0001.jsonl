@@ -1,0 +1,150 @@
+{"id": "T0001", "term": "cover", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0002", "term": "site location", "class": null, "phrase": null, "why": "study design"}
+{"id": "T0003", "term": "site", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0004", "term": "treatment", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0005", "term": "time", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0006", "term": "surface roughness", "class": null, "phrase": null, "why": "ambiguous: site condition or treatment effect"}
+{"id": "T0007", "term": "tree cover", "class": null, "phrase": null, "why": "canopy cause vs cover outcome ambiguous"}
+{"id": "T0008", "term": "trees", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0009", "term": "vegetation", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0010", "term": "clutch initiation date", "class": "reproductive_success", "phrase": "clutch initiation", "why": "breeding parameter of nesting animals"}
+{"id": "T0011", "term": "flow velocity", "class": "water_table_level", "phrase": "flow velocity", "why": "flow property; class covers water flow"}
+{"id": "T0012", "term": "interaction", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0013", "term": "relative competitive effect", "class": null, "phrase": null, "why": "competition outcome metric, class is cause"}
+{"id": "T0014", "term": "co2 production", "class": "carbon_flux", "phrase": "co2 production", "why": "co2 release is carbon dioxide exchange"}
+{"id": "T0015", "term": "daily site fidelity", "class": null, "phrase": null, "why": "fish movement, no fitting class"}
+{"id": "T0016", "term": "escapement", "class": "fish_abundance", "phrase": "escapement*", "why": "adult fish returning to spawn"}
+{"id": "T0017", "term": "oxygen flux", "class": null, "phrase": null, "why": "no fitting class"}
+{"id": "T0018", "term": "sediment depth", "class": null, "phrase": null, "why": "depth generic, ambiguous"}
+{"id": "T0019", "term": "seed size", "class": "functional_traits", "phrase": "seed size", "why": "plant trait, same as seed mass"}
+{"id": "T0020", "term": "soil depth", "class": null, "phrase": null, "why": "also sampling depth text"}
+{"id": "T0021", "term": "stump sprout", "class": null, "phrase": null, "why": "resprouting, regeneration vs invasive ambiguous"}
+{"id": "T0022", "term": "tree", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0023", "term": "water velocity", "class": "water_table_level", "phrase": "water velocity", "why": "flow property; class covers water flow"}
+{"id": "T0024", "term": "acceptable growing stock", "class": "stand_structure", "phrase": "acceptable growing stock", "why": "forestry stand stocking quality measure"}
+{"id": "T0025", "term": "al:fe molar ratio", "class": null, "phrase": null, "why": "sediment geochemistry, no fit"}
+{"id": "T0026", "term": "blue ring", "class": null, "phrase": null, "why": "wood anatomy, no fit"}
+{"id": "T0027", "term": "dispersal distance", "class": null, "phrase": null, "why": "seed vs animal dispersal ambiguous"}
+{"id": "T0028", "term": "disturbance", "class": null, "phrase": null, "why": "removed generic"}
+{"id": "T0029", "term": "eelgrass", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0030", "term": "environmental variable", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0031", "term": "habitat type", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0032", "term": "leaf length", "class": null, "phrase": null, "why": "growth vs trait ambiguous"}
+{"id": "T0033", "term": "microtopography", "class": null, "phrase": null, "why": "natural vs created microtopography ambiguous"}
+{"id": "T0034", "term": "microtus gapperi", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0035", "term": "mineralization rate", "class": null, "phrase": null, "why": "nitrogen vs contaminant mineralization"}
+{"id": "T0036", "term": "moisture retention layer", "class": null, "phrase": null, "why": "engineered cover layer, not moisture"}
+{"id": "T0037", "term": "non-recovered area", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0038", "term": "shrubs", "class": null, "phrase": null, "why": "generic plant group"}
+{"id": "T0039", "term": "soil-water pressure", "class": "soil_moisture_water", "phrase": "soil-water pressure", "why": "soil water potential, hyphen not matched"}
+{"id": "T0040", "term": "species", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0041", "term": "species assemblages", "class": "community_composition", "phrase": "species assemblage*", "why": "plural not matched by assemblage"}
+{"id": "T0042", "term": "understory species", "class": null, "phrase": null, "why": "would match understory species richness"}
+{"id": "T0043", "term": "undesirable species", "class": null, "phrase": null, "why": "native vs non-native ambiguous"}
+{"id": "T0044", "term": "water chemistry", "class": "water_chemistry", "phrase": "water chemistry", "why": "exact class meaning"}
+{"id": "T0045", "term": "water permanency", "class": "water_table_level", "phrase": "water permanency", "why": "equivalent to hydroperiod"}
+{"id": "T0046", "term": "age_class", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0047", "term": "available p", "class": "soil_nutrients", "phrase": "available p", "why": "available phosphorus abbreviation"}
+{"id": "T0048", "term": "available passable flows", "class": null, "phrase": null, "why": "fish passage flow niche, ambiguous"}
+{"id": "T0049", "term": "burial depth", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0050", "term": "canopy cover", "class": null, "phrase": null, "why": "canopy cause vs cover outcome ambiguous"}
+{"id": "T0051", "term": "dca axis 1 score", "class": "community_composition", "phrase": "dca axis", "why": "ordination of species data"}
+{"id": "T0052", "term": "disturbed area", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0053", "term": "double ring", "class": null, "phrase": null, "why": "wood anatomy, no fit"}
+{"id": "T0054", "term": "ericaceous species", "class": null, "phrase": null, "why": "plant group, cover vs composition"}
+{"id": "T0055", "term": "forbs", "class": null, "phrase": null, "why": "generic plant group"}
+{"id": "T0056", "term": "geomorphic_unit", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0057", "term": "graminoids", "class": null, "phrase": null, "why": "generic plant group"}
+{"id": "T0058", "term": "grassy weed", "class": null, "phrase": null, "why": "cover vs competition ambiguous"}
+{"id": "T0059", "term": "heat units", "class": "soil_temperature", "phrase": "heat units", "why": "accumulated thermal time, a temperature measure"}
+{"id": "T0060", "term": "herb cover", "class": "plant_cover_total", "phrase": "herb cover", "why": "group-level cover like herbaceous cover"}
+{"id": "T0061", "term": "holding period", "class": null, "phrase": null, "why": "ambiguous holding context"}
+{"id": "T0062", "term": "indicator species", "class": null, "phrase": null, "why": "ambiguous composition vs richness"}
+{"id": "T0063", "term": "inorganic nitrogen", "class": null, "phrase": null, "why": "soil vs water nitrogen ambiguous"}
+{"id": "T0064", "term": "light ring", "class": null, "phrase": null, "why": "wood anatomy, no fit"}
+{"id": "T0065", "term": "low_flow_days", "class": "water_table_level", "phrase": "low-flow days", "why": "streamflow metric"}
+{"id": "T0066", "term": "maple syrup production", "class": null, "phrase": null, "why": "no fitting cause class"}
+{"id": "T0067", "term": "peatland type", "class": null, "phrase": null, "why": "generic class, location qualifier"}
+{"id": "T0068", "term": "pipeline right-of-way", "class": null, "phrase": null, "why": "location qualifier in outcome text"}
+{"id": "T0069", "term": "reference site", "class": null, "phrase": null, "why": "study design"}
+{"id": "T0070", "term": "root sucker", "class": null, "phrase": null, "why": "suckers not seedlings; invasive ambiguous"}
+{"id": "T0071", "term": "seedling", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0072", "term": "seeds per fruit", "class": "reproduction_flowering", "phrase": "seeds per fruit", "why": "seed set measure"}
+{"id": "T0073", "term": "seismic line", "class": null, "phrase": null, "why": "location qualifier in outcome text"}
+{"id": "T0074", "term": "shoot/root ratio", "class": null, "phrase": null, "why": "growth vs biomass allocation ambiguous"}
+{"id": "T0075", "term": "side channel", "class": null, "phrase": null, "why": "habitat, no fit"}
+{"id": "T0076", "term": "site age", "class": "time_since_disturbance", "phrase": "site age", "why": "elapsed time since creation/restoration"}
+{"id": "T0077", "term": "species identity", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0078", "term": "stage recession", "class": "water_table_level", "phrase": "stage recession", "why": "decline of water stage"}
+{"id": "T0079", "term": "standing crop", "class": null, "phrase": null, "why": "plant vs fish standing crop"}
+{"id": "T0080", "term": "sugar", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0081", "term": "tbi stabilization factor", "class": "soil_microbial", "phrase": "tbi stabilization factor", "why": "tea bag index decomposition metric"}
+{"id": "T0082", "term": "topographic microsite", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0083", "term": "tree species", "class": null, "phrase": null, "why": "would match tree species richness"}
+{"id": "T0084", "term": "turbulent kinetic energy", "class": null, "phrase": null, "why": "hydraulics, no fit"}
+{"id": "T0085", "term": "vegetation assemblages", "class": "community_composition", "phrase": "vegetation assemblage*", "why": "plant community composition"}
+{"id": "T0086", "term": "vegetation structure", "class": null, "phrase": null, "why": "not stand-level, ambiguous"}
+{"id": "T0087", "term": "vegetation type", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0088", "term": "vegetation volume", "class": null, "phrase": null, "why": "vague biomass proxy"}
+{"id": "T0089", "term": "vulnerability ranking", "class": null, "phrase": null, "why": "no fit"}
+{"id": "T0090", "term": "waste rock wr2", "class": null, "phrase": null, "why": "named material"}
+{"id": "T0091", "term": "windthrow", "class": null, "phrase": null, "why": "damage vs mortality vs cause ambiguous"}
+{"id": "T0092", "term": "year", "class": null, "phrase": null, "why": "study design"}
+{"id": "T0093", "term": "accretion", "class": null, "phrase": null, "why": "sediment vs peat accretion ambiguous"}
+{"id": "T0094", "term": "achillea millifolium", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0095", "term": "allele", "class": null, "phrase": null, "why": "genetics, no fit"}
+{"id": "T0096", "term": "annuals", "class": null, "phrase": null, "why": "generic plant group"}
+{"id": "T0097", "term": "aromatic degradation", "class": null, "phrase": null, "why": "no clear class"}
+{"id": "T0098", "term": "artificial ecotone", "class": null, "phrase": null, "why": "no fit"}
+{"id": "T0099", "term": "available light", "class": "canopy_light", "phrase": "available light", "why": "same as light availability"}
+{"id": "T0100", "term": "biosolids application", "class": "organic_soil_amendment", "phrase": "biosolids", "why": "organic amendment applied to soil"}
+{"id": "T0101", "term": "breeding", "class": null, "phrase": null, "why": "matches breeding birds, habitat"}
+{"id": "T0102", "term": "brood parasitism", "class": null, "phrase": null, "why": "cause vs outcome ambiguous"}
+{"id": "T0103", "term": "carbon dioxide emissions", "class": "carbon_flux", "phrase": "carbon dioxide emission*", "why": "co2 exchange to atmosphere"}
+{"id": "T0104", "term": "co2 production variation", "class": null, "phrase": null, "why": "covered by co2 production (T0014)"}
+{"id": "T0105", "term": "container type", "class": "planting_stock_traits", "phrase": "container type", "why": "nursery stock property"}
+{"id": "T0106", "term": "cover crops", "class": "seeding_sowing", "phrase": "cover crop*", "why": "sown companion crop"}
+{"id": "T0107", "term": "cover material", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0108", "term": "cross type", "class": null, "phrase": null, "why": "genetics, no fit"}
+{"id": "T0109", "term": "crossing distance", "class": null, "phrase": null, "why": "no fit"}
+{"id": "T0110", "term": "cumulative co2 production", "class": null, "phrase": null, "why": "covered by co2 production (T0014)"}
+{"id": "T0111", "term": "daily flows", "class": "water_table_level", "phrase": "daily flows", "why": "streamflow discharge"}
+{"id": "T0112", "term": "dca axis 2 score", "class": null, "phrase": null, "why": "covered by dca axis (T0051)"}
+{"id": "T0113", "term": "dispersal bearing", "class": null, "phrase": null, "why": "no fit"}
+{"id": "T0114", "term": "dispersion", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0115", "term": "distance from contamination source", "class": "contaminant_exposure", "phrase": "contamination source", "why": "pollution source as driver"}
+{"id": "T0116", "term": "distance from mining activities", "class": null, "phrase": null, "why": "mining, no fitting class"}
+{"id": "T0117", "term": "distance from netpen", "class": null, "phrase": null, "why": "no fit"}
+{"id": "T0118", "term": "disturbance severity", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0119", "term": "edge", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0120", "term": "environmental variables", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0121", "term": "epiphyte species", "class": null, "phrase": null, "why": "no clear class"}
+{"id": "T0122", "term": "ericaceous shrubs", "class": null, "phrase": null, "why": "plant group, cover vs composition"}
+{"id": "T0123", "term": "erod activity", "class": "animal_condition", "phrase": "erod activity", "why": "fish/bird liver contaminant biomarker"}
+{"id": "T0124", "term": "etiolation index", "class": null, "phrase": null, "why": "growth vs physiology ambiguous"}
+{"id": "T0125", "term": "exchangeable ca and mg", "class": "soil_nutrients", "phrase": "exchangeable ca", "why": "exchangeable soil cations"}
+{"id": "T0126", "term": "exchangeable k", "class": "soil_nutrients", "phrase": "exchangeable k", "why": "exchangeable soil potassium"}
+{"id": "T0127", "term": "extracellular polysaccharide", "class": null, "phrase": null, "why": "source ambiguous"}
+{"id": "T0128", "term": "fibric peat", "class": null, "phrase": null, "why": "peat depth, no clear class"}
+{"id": "T0129", "term": "fine particulate inorganic matter", "class": null, "phrase": null, "why": "water vs erosion ambiguous"}
+{"id": "T0130", "term": "foliar c/n ratio", "class": "foliar_nutrients", "phrase": "foliar c/n", "why": "foliar tissue stoichiometry"}
+{"id": "T0131", "term": "foliar carbon level", "class": "foliar_nutrients", "phrase": "foliar carbon", "why": "foliar tissue chemistry"}
+{"id": "T0132", "term": "foliar carbon levels", "class": null, "phrase": null, "why": "covered by foliar carbon (T0131)"}
+{"id": "T0133", "term": "foliar phenol levels", "class": null, "phrase": null, "why": "secondary chemistry, not nutrient"}
+{"id": "T0134", "term": "foliar tannin levels", "class": null, "phrase": null, "why": "secondary chemistry, not nutrient"}
+{"id": "T0135", "term": "forest floor total c content", "class": "soil_organic_carbon", "phrase": "forest floor total c", "why": "forest floor carbon pool"}
+{"id": "T0136", "term": "forest floor total n content", "class": "soil_nutrients", "phrase": "forest floor total n", "why": "like forest floor nitrogen"}
+{"id": "T0137", "term": "forest treatment", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0138", "term": "genetic composition", "class": null, "phrase": null, "why": "genetics, no fit"}
+{"id": "T0139", "term": "glacial till", "class": null, "phrase": null, "why": "amendment vs substrate ambiguous"}
+{"id": "T0140", "term": "green-up", "class": null, "phrase": null, "why": "phenology, no fit"}
+{"id": "T0141", "term": "habitat suitability", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0142", "term": "hand-pulling", "class": null, "phrase": null, "why": "invasive vs weed control ambiguous"}
+{"id": "T0143", "term": "hatch date", "class": "reproductive_success", "phrase": "hatch date", "why": "breeding timing of animals"}
+{"id": "T0144", "term": "hatching probability", "class": "reproductive_success", "phrase": "hatching probability", "why": "like hatching success"}
+{"id": "T0145", "term": "herb and woody vegetation suppression", "class": null, "phrase": null, "why": "mechanical vs herbicide ambiguous"}
+{"id": "T0146", "term": "host species", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0147", "term": "impact", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0148", "term": "incubation", "class": null, "phrase": null, "why": "lab method"}
+{"id": "T0149", "term": "inflorescence count", "class": "reproduction_flowering", "phrase": "inflorescence*", "why": "flowering output"}
+{"id": "T0150", "term": "introduced forbs", "class": "invasive_abundance", "phrase": "introduced forb*", "why": "non-native forbs, like introduced plant"}

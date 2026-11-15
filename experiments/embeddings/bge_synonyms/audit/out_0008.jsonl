@@ -1,0 +1,87 @@
+{"id": "T1051", "term": "tree and major ericaceous shrub species", "class": null, "phrase": null, "why": "mixed list of plant groups"}
+{"id": "T1052", "term": "tree canopy cover", "class": null, "phrase": null, "why": "canopy light vs plant cover ambiguous"}
+{"id": "T1053", "term": "tree cluster", "class": null, "phrase": null, "why": "vague spatial pattern"}
+{"id": "T1054", "term": "tree clustering", "class": null, "phrase": null, "why": "vague spatial pattern"}
+{"id": "T1055", "term": "tree saplings", "class": null, "phrase": null, "why": "saplings planted or natural, ambiguous"}
+{"id": "T1056", "term": "tree size", "class": null, "phrase": null, "why": "size generic; growth vs structure ambiguous"}
+{"id": "T1057", "term": "tree variables", "class": null, "phrase": null, "why": "generic"}
+{"id": "T1058", "term": "tree volume", "class": null, "phrase": null, "why": "growth vs stand volume ambiguous"}
+{"id": "T1059", "term": "trees, forest floor, and soils", "class": null, "phrase": null, "why": "compound list"}
+{"id": "T1060", "term": "trees, shrubs, and mosses", "class": null, "phrase": null, "why": "compound list"}
+{"id": "T1061", "term": "treeshelter", "class": "tree_protection", "phrase": "treeshelter*", "why": "one-word spelling of tree shelter"}
+{"id": "T1062", "term": "treeshelter application", "class": null, "phrase": null, "why": "covered by treeshelter* (T1061)"}
+{"id": "T1063", "term": "trophic group", "class": "functional_traits", "phrase": "trophic group*", "why": "trophic grouping is guild structure"}
+{"id": "T1064", "term": "unaccounted total quantity of 15n", "class": null, "phrase": null, "why": "tracer bookkeeping, no class"}
+{"id": "T1065", "term": "unamended plots", "class": null, "phrase": null, "why": "control/study design"}
+{"id": "T1066", "term": "unamended processed kimberlite", "class": null, "phrase": null, "why": "unamended control substrate"}
+{"id": "T1067", "term": "unamended treatment", "class": null, "phrase": null, "why": "control/study design"}
+{"id": "T1068", "term": "understory high stratum", "class": null, "phrase": null, "why": "vague structure term"}
+{"id": "T1069", "term": "understory wind", "class": null, "phrase": null, "why": "wind speed, no class"}
+{"id": "T1070", "term": "undesirables", "class": null, "phrase": null, "why": "vague"}
+{"id": "T1071", "term": "undisturbed", "class": null, "phrase": null, "why": "reference/control"}
+{"id": "T1072", "term": "undisturbed control", "class": null, "phrase": null, "why": "control"}
+{"id": "T1073", "term": "undisturbed forest", "class": null, "phrase": null, "why": "reference condition, generic"}
+{"id": "T1074", "term": "undisturbed peatland", "class": null, "phrase": null, "why": "reference condition"}
+{"id": "T1075", "term": "undisturbed site", "class": null, "phrase": null, "why": "reference condition"}
+{"id": "T1076", "term": "undisturbed stand", "class": null, "phrase": null, "why": "reference condition"}
+{"id": "T1077", "term": "undisturbed stands", "class": null, "phrase": null, "why": "reference condition"}
+{"id": "T1078", "term": "untouched treatment", "class": null, "phrase": null, "why": "control"}
+{"id": "T1079", "term": "vacuum mining", "class": "peat_extraction", "phrase": "vacuum min*", "why": "vacuum mining is peat extraction method"}
+{"id": "T1080", "term": "variability of nutrient profiles", "class": null, "phrase": null, "why": "vague variability measure"}
+{"id": "T1081", "term": "variability of nutrient supply profiles", "class": null, "phrase": null, "why": "vague variability measure"}
+{"id": "T1082", "term": "variance of mean frequencies of occurrence", "class": null, "phrase": null, "why": "statistical term"}
+{"id": "T1083", "term": "variation", "class": null, "phrase": null, "why": "generic"}
+{"id": "T1084", "term": "vascular plant species", "class": null, "phrase": null, "why": "cover vs richness ambiguous"}
+{"id": "T1085", "term": "vascular species", "class": null, "phrase": null, "why": "cover vs richness ambiguous"}
+{"id": "T1086", "term": "vegetation array", "class": null, "phrase": null, "why": "vague"}
+{"id": "T1087", "term": "vegetation characteristics", "class": null, "phrase": null, "why": "generic"}
+{"id": "T1088", "term": "vegetation class", "class": null, "phrase": null, "why": "generic classification"}
+{"id": "T1089", "term": "vegetation cluster group", "class": null, "phrase": null, "why": "analysis grouping"}
+{"id": "T1090", "term": "vegetation functional groups", "class": null, "phrase": null, "why": "cover vs traits ambiguous"}
+{"id": "T1091", "term": "vegetation recolonization", "class": null, "phrase": null, "why": "cover vs regeneration ambiguous"}
+{"id": "T1092", "term": "vegetation reduction", "class": null, "phrase": null, "why": "mechanical vs herbicide ambiguous"}
+{"id": "T1093", "term": "vegetation suppression treatment", "class": null, "phrase": null, "why": "mechanical vs herbicide ambiguous"}
+{"id": "T1094", "term": "vegetation-removed treatment", "class": "mechanical_release_control", "phrase": "vegetation-removed", "why": "hyphen form of existing vegetation removal"}
+{"id": "T1095", "term": "vertebrate-consumed dispersers", "class": null, "phrase": null, "why": "vague dispersal guild"}
+{"id": "T1096", "term": "vigor", "class": null, "phrase": null, "why": "single generic word"}
+{"id": "T1097", "term": "vulnerability", "class": null, "phrase": null, "why": "generic"}
+{"id": "T1098", "term": "water addition", "class": null, "phrase": null, "why": "irrigation, not rewetting"}
+{"id": "T1099", "term": "water characteristics", "class": null, "phrase": null, "why": "generic"}
+{"id": "T1100", "term": "water chemistry variable", "class": "water_chemistry", "phrase": "water chemistry", "why": "core class meaning, not yet a synonym"}
+{"id": "T1101", "term": "water pc 1", "class": null, "phrase": null, "why": "PCA axis"}
+{"id": "T1102", "term": "water pc 3", "class": null, "phrase": null, "why": "PCA axis"}
+{"id": "T1103", "term": "water pc1", "class": null, "phrase": null, "why": "PCA axis"}
+{"id": "T1104", "term": "water surface profile", "class": null, "phrase": null, "why": "hydraulics, uncertain fit"}
+{"id": "T1105", "term": "water treatment", "class": null, "phrase": null, "why": "generic"}
+{"id": "T1106", "term": "water_chemistry_difference", "class": null, "phrase": null, "why": "malformed; covered by water chemistry"}
+{"id": "T1107", "term": "watering", "class": null, "phrase": null, "why": "irrigation, not rewetting"}
+{"id": "T1108", "term": "wave action", "class": null, "phrase": null, "why": "no matching class"}
+{"id": "T1109", "term": "wave action and flooding", "class": null, "phrase": null, "why": "compound, no clear class"}
+{"id": "T1110", "term": "weed", "class": null, "phrase": null, "why": "single generic word"}
+{"id": "T1111", "term": "weed removal", "class": null, "phrase": null, "why": "invasive vs competition control ambiguous"}
+{"id": "T1112", "term": "wetland age", "class": "time_since_disturbance", "phrase": "wetland age", "why": "age since creation, like stand age"}
+{"id": "T1113", "term": "wetland coverage", "class": null, "phrase": null, "why": "landscape cover, unclear class"}
+{"id": "T1114", "term": "wetland perimeter-to-area ratio", "class": null, "phrase": null, "why": "landscape metric, no class"}
+{"id": "T1115", "term": "wetland perimeter-to-area ratio and shape", "class": null, "phrase": null, "why": "landscape metric, no class"}
+{"id": "T1116", "term": "wetland size", "class": null, "phrase": null, "why": "size generic"}
+{"id": "T1117", "term": "wetland type", "class": null, "phrase": null, "why": "generic type"}
+{"id": "T1118", "term": "wind and wave exposure", "class": null, "phrase": null, "why": "no matching class"}
+{"id": "T1119", "term": "wind energy", "class": null, "phrase": null, "why": "no matching class"}
+{"id": "T1120", "term": "wind strength", "class": null, "phrase": null, "why": "no matching class"}
+{"id": "T1121", "term": "wind- and explosion-dispersed species", "class": null, "phrase": null, "why": "dispersal guild, vague"}
+{"id": "T1122", "term": "windstorm", "class": null, "phrase": null, "why": "wind disturbance, no class"}
+{"id": "T1123", "term": "wing deflector instream structures", "class": "engineered_structures", "phrase": "wing deflector*", "why": "in-stream engineered flow deflectors"}
+{"id": "T1124", "term": "wing length", "class": "animal_condition", "phrase": "wing length", "why": "animal body size measure"}
+{"id": "T1125", "term": "winter barley cover", "class": null, "phrase": null, "why": "species name"}
+{"id": "T1126", "term": "winter fishery", "class": null, "phrase": null, "why": "fishing, no class"}
+{"id": "T1127", "term": "winter fishing", "class": null, "phrase": null, "why": "fishing, no class"}
+{"id": "T1128", "term": "winter-survived seedlings", "class": "tree_seedling_survival", "phrase": "winter-survived seedling*", "why": "seedling overwinter survival"}
+{"id": "T1129", "term": "wintergreens and orchids", "class": null, "phrase": null, "why": "taxon names"}
+{"id": "T1130", "term": "wood chip incorporation", "class": "organic_soil_amendment", "phrase": "wood chip incorporation", "why": "wood chips mixed into soil"}
+{"id": "T1131", "term": "wood medium", "class": null, "phrase": null, "why": "vague"}
+{"id": "T1132", "term": "woody-only suppression", "class": null, "phrase": null, "why": "mechanical vs herbicide ambiguous"}
+{"id": "T1133", "term": "y2r", "class": null, "phrase": null, "why": "unknown acronym"}
+{"id": "T1134", "term": "yellow birch soil", "class": null, "phrase": null, "why": "species name; inoculum vs amendment"}
+{"id": "T1135", "term": "young of the year production", "class": null, "phrase": null, "why": "fish abundance vs reproduction ambiguous"}
+{"id": "T1136", "term": "β-glucosidase activity", "class": "soil_microbial", "phrase": "glucosidase", "why": "soil enzyme activity"}
+{"id": "T1137", "term": "δnbrregrowth", "class": null, "phrase": null, "why": "remote-sensing index, unclear"}
