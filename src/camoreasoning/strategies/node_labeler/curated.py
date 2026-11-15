@@ -46,6 +46,7 @@ INVERTED = {  # class -> name pattern meaning the opposite end of the class conc
     "wildlife_mortality": re.compile(r"\bmortality\b"),
     "water_table_level": re.compile(r"\b(depth|deeper)\b"),
 }
+ELAPSED_TIME = {"time_since_disturbance"}  # "time since recovery to pH 6" is the driver, even beside an outcome
 EXCLUSION_CLASSES = {"grazing_browsing"}  # "deer exclusion" = grazing absent even if qualifier says occurred
 MAX_PER_NODE = 2
 CHUNK = 40
@@ -111,11 +112,15 @@ def _prefer(found: list[tuple[str, int]], text: str, cause_only: set[str], inter
             found = [f for f in found if f[0] != "water_chemistry"]
         else:
             found = [f for f in found if f[0] not in ANIMAL | PLANT_ONLY | GENERIC]
-    if not intervention and any(c not in cause_only for c, _ in found):
-        found = [f for f in found if f[0] not in cause_only]  # "survival of transplants" is an outcome
+    if not intervention and any(c not in cause_only for c, _ in found):  # "survival of transplants" is an outcome
+        found = [f for f in found if f[0] not in cause_only - ELAPSED_TIME]
     if "natural_regeneration" in ids:
         found = [f for f in found if f[0] != "stand_structure"]
     ids = {c for c, _ in found}
+    if ids & ANIMAL and "tree_seedling_survival" in ids:  # copepod survival is animal survival, not plant
+        found = [("wildlife_mortality", n) if c == "tree_seedling_survival" else (c, n) for c, n in found]
+        found = list({c: n for c, n in sorted(found, key=lambda x: x[1])}.items())
+        ids = {c for c, _ in found}
     if ids & ANIMAL:
         found = [f for f in found if f[0] not in PLANT_ONLY]
     if any(c not in GENERIC for c, _ in found):
