@@ -30,13 +30,19 @@ Rules:
    MAX_NAMES studies as "Surname Year" (first author's text before the first comma; "n.d." without a
    year; else DOI; else doc id), then "+N more". Identical labels get a/b/... suffixes, only when two
    studies in the answer share one.
-5. 0 LLM calls, reads only existing CAMO fields (`authors`, `year`, `doi`), never raises: any failure
+5. Wording (#113): X and Y pass `searched.phrase` (short noun phrase, else the class label). A plural X
+   takes plural verbs. An outcome with no natural direction (UNDIRECTED classes, or Y naming composition,
+   similarity or ordination) says "changes Y" / "associated with a change in Y", never "higher" or
+   "increases". Surnames: all-caps title-cased ("McLACHLAN" -> "McLachlan"); a given name left before the
+   comma ("Anne Naeth, M.") or a "Given Surname" string with no comma gives the last token.
+6. 0 LLM calls, reads only existing CAMO fields (`authors`, `year`, `doi`), never raises: any failure
    falls back to the `searched`/`baseline` text.
 """
 
 from __future__ import annotations
 
 import ast
+import re
 from collections import defaultdict
 
 from camoreasoning.components import Context
@@ -44,7 +50,7 @@ from camoreasoning.contracts import Candidates, Certainty, Verdict
 from camoreasoning.registry import register
 from camoreasoning.schema import CERTAINTY_MODIFIER, VERY_LOW_TEMPLATE
 from camoreasoning.strategies.grader.rubric import is_associational
-from camoreasoning.strategies.renderer.searched import SearchedRenderer
+from camoreasoning.strategies.renderer.searched import SearchedRenderer, is_plural, phrase
 
 MAX_NAMES = 3
 ORDER = (1, -1, 0, None)
@@ -53,6 +59,41 @@ CAUSAL_GROUP = {1: "an increase", -1: "a decrease", 0: "no detectable effect", N
 ASSOC_GROUP = {1: "a positive association", -1: "a negative association", 0: "no detectable association", None: WITHIN}
 VERB = {"increase": ("increases", "increase"), "decrease": ("decreases", "decrease")}  # 3rd person, base
 SIGN = {"increase": 1, "decrease": -1, "no_effect": 0}
+# Outcome classes (taxonomy/classes.yaml) whose values have no natural "higher": which species are present.
+UNDIRECTED = {"community_composition"}
+UNDIRECTED_WORDS = re.compile(r"\b(composition|similarity|dissimilarity|ordination|make up|assemblages?)\b", re.I)
+PARTICLES = {"van", "von", "de", "der", "den", "del", "della", "di", "da", "du", "das", "dos", "la", "le", "st",
+             "st.", "ten", "ter", "mac", "mc", "o"}  # fmt: skip
+INITIALS = re.compile(r"^(?:[A-Z]\.?\s*-?)+$")
+
+
+def _fix_case(name: str) -> str:
+    """Title-case an all-caps surname ("McLACHLAN" -> "McLachlan", "O'BRIEN" -> "O'Brien")."""
+    letters = [c for c in name if c.isalpha()]
+    if len(letters) < 3 or sum(c.isupper() for c in letters) <= len(letters) // 2 + 1:
+        return name
+
+    def word(w: str) -> str:
+        w = w.lower().capitalize()
+        if w.startswith("Mc") and len(w) > 2:
+            w = "Mc" + w[2:].capitalize()
+        if w.startswith("O'") and len(w) > 2:
+            w = "O'" + w[2:].capitalize()
+        return w
+
+    return re.sub(r"[^\s-]+", lambda m: word(m.group(0)), name)
+
+
+def _surname(first: str, has_comma_part: bool, after: str) -> str:
+    """Drop given names left in the surname slot: "Anne Naeth" (no comma), "Anne Naeth, M." (initials after
+    the comma). Multi-word surnames with a particle ("Van Wieren", "Das Gupta") and real double surnames
+    followed by a given name ("Grégoire Taillefer, Amélie") are kept."""
+    toks = first.split()
+    if len(toks) < 2 or toks[0].lower() in PARTICLES:
+        return first
+    if not has_comma_part or INITIALS.match(after.strip()):
+        return toks[-1]
+    return first
 
 
 def _first_author(authors) -> str:
@@ -74,7 +115,9 @@ def _first_author(authors) -> str:
         first = first.get("family") or first.get("name") or ""
     if not isinstance(first, str):
         return ""
-    return first.split(",")[0].strip().strip("'\"[] ")
+    head, comma, after = first.partition(",")
+    name = head.strip().strip("'\"[] ")
+    return _fix_case(_surname(name, bool(comma), after))
 
 
 def short_cite(doc_id: str, ctx: Context) -> str:
@@ -130,8 +173,14 @@ def _cap(s: str) -> str:
 
 
 def headline(direction: str, certainty: Certainty | None, cause: str, outcome: str, outcome_named: bool,
-             associational: bool, doc_effects: tuple = ()) -> str:  # fmt: skip
-    """The verdict sentence. The certainty is its only hedge, and it is stated once in words."""
+             associational: bool, doc_effects: tuple = (), plural: bool = False,
+             undirected: bool = False) -> str:  # fmt: skip
+    """The verdict sentence. The certainty is its only hedge, and it is stated once in words. `plural`: X
+    takes plural verbs. `undirected`: Y has no natural direction, so a sign is "a change in Y"."""
+
+    def agree(singular: str, pl: str) -> str:
+        return pl if plural else singular
+
     tag = f"{certainty.replace('_', ' ')} certainty" if certainty else "certainty not graded"
     if associational:
         tag += "; associational evidence only"
@@ -143,7 +192,12 @@ def headline(direction: str, certainty: Certainty | None, cause: str, outcome: s
     mixed_clause = ("the studies disagree" if disagree else "the one study reports mixed results" if n_docs == 1
                     else "the results are mixed")  # fmt: skip
     higher = {"increase": "higher", "decrease": "lower"}.get(direction, "")
-    what = (f"{higher} {outcome}" if outcome_named else f"{higher} values of {outcome}") if higher else ""
+    if higher and outcome_named and outcome.lower().startswith("the "):
+        what = f"a {higher} {outcome[4:]}"  # "a higher number of species", not "higher the number"
+    else:
+        what = (f"{higher} {outcome}" if outcome_named else f"{higher} values of {outcome}") if higher else ""
+    if undirected and higher:
+        what, lean = f"a change in {outcome}", f"a change in {outcome}"
     if certainty == "very_low":
         # schema: very_low has no verb modifier and its own template
         lead = (f"The evidence is very uncertain about the {rel}" if associational
@@ -156,16 +210,19 @@ def headline(direction: str, certainty: Certainty | None, cause: str, outcome: s
         return f"{lead}, and {tail} ({tag})."
     if direction in ("increase", "decrease"):
         if associational:
-            be = {"probably": "is probably", "may": "may be"}.get(mod, "is")
+            be = {"probably": agree("is", "are") + " probably", "may": "may be"}.get(mod, agree("is", "are"))
             return f"{_cap(cause)} {be} associated with {what} ({tag})."
-        third, base = VERB[direction]
+        third, base = ("changes", "change") if undirected else VERB[direction]
+        third = agree(third, base)
         verb = f"may {base}" if mod == "may" else f"{mod} {third}".strip()
         return f"{_cap(cause)} {verb} {outcome} ({tag})."
     if direction == "no_effect":  # a null is a direction too, so it takes the modifier (one hedge source)
         if associational:
-            verb = {"probably": "probably shows", "may": "may show"}.get(mod, "shows")
+            verb = {"probably": "probably " + agree("shows", "show"), "may": "may show"}.get(
+                mod, agree("shows", "show")
+            )
             return f"{_cap(cause)} {verb} no detectable association with {outcome} ({tag})."
-        verb = {"probably": "probably has", "may": "may have"}.get(mod, "has")
+        verb = {"probably": "probably " + agree("has", "have"), "may": "may have"}.get(mod, agree("has", "have"))
         return f"{_cap(cause)} {verb} no detectable effect on {outcome} ({tag})."
     if direction == "mixed":
         if disagree:
@@ -198,11 +255,16 @@ class FaithfulRenderer(SearchedRenderer):
     @staticmethod
     def answered(verdict: Verdict, candidates: Candidates, certainty: Certainty | None, ctx: Context) -> str:
         f = candidates.frame
-        cause = (f.cause.text or "").strip() or "the intervention"
-        outcome = (f.outcome.text or "").strip() or "the outcome"
+        q = f.parsed.question.text or ""
+        cause, cause_label = phrase(f.cause, ctx, q, "the intervention")
+        outcome, _ = phrase(f.outcome, ctx, q, "the outcome")
         included = verdict.included
         associational = bool(included) and all(is_associational(v, ctx) for v in included)
-        head = headline(verdict.direction or "unclear", certainty, cause, outcome,
-                        bool((f.outcome.text or "").strip()), associational, verdict.doc_effects)  # fmt: skip
+        undirected = bool(f.outcome.classes and f.outcome.classes[0].id in UNDIRECTED) or bool(
+            UNDIRECTED_WORDS.search(outcome) or UNDIRECTED_WORDS.search(f.outcome.text or "")
+        )
+        head = headline(verdict.direction or "unclear", certainty, cause, outcome, outcome != "the outcome",
+                        associational, verdict.doc_effects, plural=is_plural(cause, cause_label),
+                        undirected=undirected)  # fmt: skip
         rest = [s for s in (breakdown(verdict, associational, ctx), unclear_note(verdict)) if s]
         return " ".join([head, *rest])

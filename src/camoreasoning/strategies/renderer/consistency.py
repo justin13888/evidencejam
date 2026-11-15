@@ -49,6 +49,8 @@ STATES = {
     "unclear": re.compile(r"\bunclear\b|no direction can be read"),
 }
 
+CHANGE = re.compile(r"\bchanges?\b|associated with a change in|points to a change in")
+
 
 def expected_direction(doc_effects: tuple) -> str:
     """D2 (aggregator `studies`): the direction the study votes support."""
@@ -96,6 +98,8 @@ def violations(text: str, verdict: Verdict, associational: bool, spans: tuple[st
         if stated != actual:
             out.append(f"votes: breakdown {dict(stated)} != study votes {dict(actual)}")
     said = {d for d, rx in STATES.items() if rx.search(head)}
+    if not said and direction in ("increase", "decrease") and CHANGE.search(head):
+        said = {direction}  # an outcome with no natural direction (composition) states its sign as "a change"
     if direction not in said:
         out.append(f"direction: verdict sentence does not state {direction!r}")
     if said - {direction}:

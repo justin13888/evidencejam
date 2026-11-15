@@ -252,7 +252,7 @@ def test_missing_doc_metadata_falls_back():
     ("authors", "surname"),
     [(["Strack, Maria", "Keith, Arnold"], "Strack"), ("['Strack, Maria', 'Keith, Arnold Magnus']", "Strack"),
      ('["D\'Astous, A."]', "D'Astous"), ("Strack, Maria; Keith, A.", "Strack"), ("[]", ""), ([], ""), (None, ""),
-     ("['unterminated", "unterminated"), ([None], ""), ("Organisation Name", "Organisation Name")],
+     ("['unterminated", "unterminated"), ([None], ""), ("Anne Naeth", "Naeth")],
 )  # fmt: skip
 def test_first_author_parsing_is_robust(authors, surname):
     assert _first_author(authors) == surname

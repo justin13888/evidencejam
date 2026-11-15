@@ -6,7 +6,7 @@ import pytest
 
 from camoreasoning import registry
 from camoreasoning.contracts import Candidates, Frame, ParsedQuestion, Question, Ref, Side
-from camoreasoning.strategies.renderer.searched import MAX_IDS
+from camoreasoning.strategies.renderer.searched import MAX_IDS, UNPARSED
 
 
 def frame(cause: Side, outcome: Side) -> Frame:
@@ -44,7 +44,7 @@ def test_unlinked_question_says_what_was_not_matched(make_ctx):
     ctx = make_ctx()
     c = Candidates(frame(Side("moon phase"), Side("seedling survival", (Ref("survival"),))), {}, {})
     verdict, text, searched = run(c, ctx)
-    assert verdict.status == "no_evidence" and "could not match the question's cause" in text
+    assert verdict.status == "no_evidence" and "the cause 'moon phase' matched no class or node" in text
     assert "'moon phase', which matched no class or node" in searched
     assert "Seedling survival (survival)" in searched
 
@@ -117,4 +117,5 @@ def test_unparsed_question_says_no_search_ran(make_ctx):
     q = Question("q", "Which seed-mix species persist in each ecosite type?")
     c = Candidates(Frame(ParsedQuestion(q, None, None, False), Side(None), Side(None), "none", 0.0), {}, {})
     verdict, text, searched = run(c, make_ctx())
-    assert verdict.status == "no_evidence" and searched.startswith("no edge search was run")
+    assert verdict.status == "no_evidence" and searched.startswith("No edge search was run")
+    assert text == UNPARSED and searched.endswith(UNPARSED)  # #103: one reason in both fields
