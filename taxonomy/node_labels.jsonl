@@ -2234,7 +2234,7 @@
 {"node_id": "camo:node_63d32274653a", "class_id": "bird_abundance", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_c5f6973e1ca8", "class_id": "reproduction_flowering", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_e5059d890508", "class_id": "bird_abundance", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_a5a2fdabf0a4_variable", "class_id": "tree_seedling_survival", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_a5a2fdabf0a4_variable", "class_id": "wildlife_mortality", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_694354a752e8_variable", "class_id": "reproductive_success", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_bac41aee8878_variable", "class_id": "tree_seedling_survival", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_939e0b3a222c_variable", "class_id": "wildlife_mortality", "polarity": 1, "score": 0.9, "source": "lexical"}
