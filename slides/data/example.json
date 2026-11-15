@@ -1,0 +1,21 @@
+{
+  "_src": "camoreasoning.pipeline.ask() at c7ef4e9, no BRINE_* set (0 LLM calls). Re-run to refresh.",
+  "answered": {
+    "question": "What effect does mulch have on invasive species abundance?",
+    "status": "answered",
+    "answer": "Mulch probably decreases invasive species abundance (moderate certainty). Across 2 studies: 2 report a decrease (Murphy 2007; Phillips 2014).",
+    "direction": "decrease",
+    "confidence": 0.6,
+    "certainty": "moderate",
+    "edge_ids": ["camo:edge_94ab359bc6fc", "camo:edge_18ac0bfc5067", "camo:edge_3fd8481993c1", "camo:edge_18f2d74ed933", "camo:edge_3745d6283566", "camo:edge_851245d6e751"],
+    "calls": 0,
+    "wall_s": 0.241
+  },
+  "no_evidence": {
+    "question": "What effect does herbicide have on bird abundance?",
+    "status": "no_evidence",
+    "answer": "The graph has no claim that herbicide affects bird abundance.",
+    "searched_for": "edges whose subject is herbicide application (herbicide_application), 36 graph nodes, and whose object is bird abundance & occupancy (bird_abundance), 52 graph nodes (measured_attribute abundance, diversity, timing); relation: any directional predicate from cause to outcome. Found 0 forward edges.",
+    "calls": 0
+  }
+}
