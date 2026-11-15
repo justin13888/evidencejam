@@ -28,7 +28,7 @@ from tests.robustness.fake_llm import FakeLLM
 
 OFFTEMPLATE = yaml.safe_load((EXPERIMENTS_DIR / "ask" / "offtemplate.yaml").read_text(encoding="utf-8"))
 ITEMS, UNCLEAR = OFFTEMPLATE["items"], OFFTEMPLATE["unclear"]
-ASK_STRATEGIES = {"parser": "freeform", "linker": "assisted"}  # what ./ask.sh selects
+ASK_STRATEGIES = {"parser": "assisted", "linker": "assisted"}  # what ./ask.sh selects
 ANSWERED_Q = "Does mulching lead to more invasive plants?"
 # Known gaps in llm.py (frozen, other owner); strict xfails so they flip to failures once fixed.
 MALFORMED_URL_BUG = "llm.py lets urllib's ValueError escape for a scheme-less BRINE_URL instead of LLMError"
@@ -82,7 +82,7 @@ def test_json_flag_prints_the_ask_entry():
 def test_unclear_question_is_refused_with_exit_2(item):
     code, out = cli(item["question"])
     assert code == 2
-    assert out.startswith("Question isn't clear: we read cause = ")
+    assert out.startswith(("Question isn't clear: we read cause = ", "Question isn't clear. We couldn't find a cause"))
     assert "Please rephrase with more context, e.g. 'What effect does " in out
     assert "Nearest " in out and "Answer:" not in out
     code, out = cli("--json", item["question"])

@@ -184,6 +184,10 @@ def ask_cmd(text: str, settings, as_json: bool) -> int:
     ctx, meter = p.ctx, p.ctx.llm.meter
     if (u := unclear(frame, ctx)) is not None:
         msg = unclear_message(u)
+        if not frame.cause.text and u["outcome"]["linked"]:  # open cause, e.g. "How do I control X?" (#114)
+            from camoreasoning.strategies.parser.assisted import causes_with_evidence
+
+            msg = open_cause_message(u, causes_with_evidence(frame, ctx)) or msg
         foot = {k: v for k, v in meter.summary().items() if k != "log"}
         print(dumps({"id": "ASK", "question": question, "unclear": {"message": msg, **u}, "footprint": foot})
               if as_json else msg)  # fmt: skip
@@ -226,13 +230,29 @@ def unclear_message(u: dict) -> str:
         return f"{kind} = {text} -> {' / '.join(side['linked'][:3]) or 'nothing'}"
 
     example = [u[k]["text"] if u[k]["linked"] and u[k]["text"] else f"<{k}>" for k in ("cause", "outcome")]
+    found_none = all(not u[k]["text"] and not u[k]["linked"] for k in ("cause", "outcome"))
     lines = [
-        f"Question isn't clear: we read {read('cause')}, {read('outcome')}.",
+        "Question isn't clear. We couldn't find a cause and an outcome in your question."
+        if found_none
+        else f"Question isn't clear: we read {read('cause')}, {read('outcome')}.",
         f"Please rephrase with more context, e.g. 'What effect does {example[0]} have on {example[1]}?'",
     ]
     lines += [f"Nearest {k} classes: {'; '.join(u[k]['suggestions'])}" for k in ("cause", "outcome")
               if u[k]["suggestions"]]  # fmt: skip
     return "\n".join(lines)
+
+
+def open_cause_message(u: dict, causes: list[tuple[str, int]]) -> str | None:
+    """The `ask` reply for a question that names an outcome but no cause; None if no cause has evidence."""
+    if not causes:
+        return None
+    outcome = " / ".join(u["outcome"]["linked"][:3])
+    said = f"{u['outcome']['text']} -> {outcome}" if u["outcome"]["text"] else outcome
+    listed = ", ".join(f"{label} ({n} {'study' if n == 1 else 'studies'})" for label, n in causes)
+    return (
+        f"Your question names an outcome ({said}) but no intervention. Interventions with evidence on it: "
+        f"{listed}.\nAsk e.g. 'What effect does {causes[0][0]} have on {u['outcome']['linked'][0]}?'"
+    )
 
 
 def offline_settings(settings):
