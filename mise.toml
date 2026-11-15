@@ -37,8 +37,16 @@ usage = 'arg "<question>"'
 run = './ask.sh "$usage_question"'
 
 [tasks.eval]
-description = "Score the pipeline on the dev split of experiments/devsets (accuracy, calibration, calls/question)"
+description = "Score the pipeline on the dev split of experiments/devsets: pooled, then per file under by_file"
 run = "python -m camoreasoning eval --split dev"
+
+[tasks."eval:class"]
+description = "Dev split of class_gold.yaml only (hidden-set wording): the number to report for default flips"
+run = "python -m camoreasoning eval --split dev experiments/devsets/class_gold.yaml"
+
+[tasks."eval:node"]
+description = "Dev split of gold_annotated.yaml only (node wording, taxonomy-free): linking stress test"
+run = "python -m camoreasoning eval --split dev experiments/devsets/gold_annotated.yaml"
 
 [tasks."eval:holdout"]
 description = "Score on the holdout split only. Run once at the audit and report; never tune on it"
