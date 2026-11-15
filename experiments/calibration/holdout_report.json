@@ -1,0 +1,1870 @@
+{
+  "split": "holdout",
+  "calibrator": "binned",
+  "target_ece": 0.05,
+  "passes": false,
+  "pooled": {
+    "n": 68,
+    "accuracy": 0.3824,
+    "no_evidence_precision": 0.6538,
+    "no_evidence_recall": 0.7083,
+    "calibration": {
+      "brier": 0.2416,
+      "ece": 0.1872,
+      "bins": [
+        {
+          "bin": 1,
+          "n": 2,
+          "mean_conf": 0.181,
+          "accuracy": 0.0
+        },
+        {
+          "bin": 2,
+          "n": 5,
+          "mean_conf": 0.224,
+          "accuracy": 0.0
+        },
+        {
+          "bin": 3,
+          "n": 12,
+          "mean_conf": 0.358,
+          "accuracy": 0.417
+        },
+        {
+          "bin": 4,
+          "n": 7,
+          "mean_conf": 0.438,
+          "accuracy": 0.143
+        },
+        {
+          "bin": 5,
+          "n": 5,
+          "mean_conf": 0.509,
+          "accuracy": 0.2
+        },
+        {
+          "bin": 6,
+          "n": 12,
+          "mean_conf": 0.644,
+          "accuracy": 0.333
+        },
+        {
+          "bin": 7,
+          "n": 25,
+          "mean_conf": 0.728,
+          "accuracy": 0.6
+        }
+      ]
+    },
+    "by_tag": {
+      "answerable": {
+        "n": 44,
+        "accuracy": 0.2045
+      },
+      "class": {
+        "n": 16,
+        "accuracy": 0.4375
+      },
+      "empty": {
+        "n": 24,
+        "accuracy": 0.7083
+      },
+      "pair": {
+        "n": 10,
+        "accuracy": 0.5
+      },
+      "recall:engine": {
+        "n": 4,
+        "accuracy": 0.25
+      },
+      "seed:empty": {
+        "n": 5,
+        "accuracy": 0.8
+      },
+      "seed:evidence": {
+        "n": 10,
+        "accuracy": 0.2
+      },
+      "seed:near_miss": {
+        "n": 1,
+        "accuracy": 1.0
+      },
+      "trap:associational_is_not_causal": {
+        "n": 19,
+        "accuracy": 0.1053
+      },
+      "trap:comparator_reference": {
+        "n": 5,
+        "accuracy": 0.6
+      },
+      "trap:moderators_mediators": {
+        "n": 3,
+        "accuracy": 0.6667
+      },
+      "trap:near_miss_classes": {
+        "n": 1,
+        "accuracy": 1.0
+      },
+      "trap:negative_predicates_double_negation": {
+        "n": 2,
+        "accuracy": 0.5
+      },
+      "trap:negative_subject_qualifiers": {
+        "n": 7,
+        "accuracy": 0.1429
+      },
+      "trap:null_is_not_decrease": {
+        "n": 16,
+        "accuracy": 0.625
+      },
+      "trap:one_study_many_edges": {
+        "n": 14,
+        "accuracy": 0.4286
+      },
+      "trap:reversed_edges": {
+        "n": 5,
+        "accuracy": 1.0
+      },
+      "trap:time_as_cause": {
+        "n": 2,
+        "accuracy": 0.0
+      },
+      "trap:twin_edges_one_sentence": {
+        "n": 15,
+        "accuracy": 0.1333
+      },
+      "trap:unchanged_is_not_null": {
+        "n": 4,
+        "accuracy": 0.25
+      }
+    }
+  },
+  "files": {
+    "class_gold.yaml": {
+      "n": 16,
+      "accuracy": 0.4375,
+      "no_evidence_precision": 0.625,
+      "no_evidence_recall": 0.625,
+      "calibration": {
+        "brier": 0.2642,
+        "ece": 0.1984,
+        "bins": [
+          {
+            "bin": 2,
+            "n": 1,
+            "mean_conf": 0.201,
+            "accuracy": 0.0
+          },
+          {
+            "bin": 3,
+            "n": 2,
+            "mean_conf": 0.375,
+            "accuracy": 0.5
+          },
+          {
+            "bin": 5,
+            "n": 3,
+            "mean_conf": 0.507,
+            "accuracy": 0.333
+          },
+          {
+            "bin": 6,
+            "n": 2,
+            "mean_conf": 0.672,
+            "accuracy": 0.0
+          },
+          {
+            "bin": 7,
+            "n": 8,
+            "mean_conf": 0.732,
+            "accuracy": 0.625
+          }
+        ]
+      },
+      "by_tag": {
+        "answerable": {
+          "n": 8,
+          "accuracy": 0.25
+        },
+        "class": {
+          "n": 16,
+          "accuracy": 0.4375
+        },
+        "empty": {
+          "n": 8,
+          "accuracy": 0.625
+        },
+        "recall:engine": {
+          "n": 4,
+          "accuracy": 0.25
+        },
+        "seed:empty": {
+          "n": 5,
+          "accuracy": 0.8
+        },
+        "seed:evidence": {
+          "n": 10,
+          "accuracy": 0.2
+        },
+        "seed:near_miss": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "trap:associational_is_not_causal": {
+          "n": 4,
+          "accuracy": 0.25
+        },
+        "trap:comparator_reference": {
+          "n": 1,
+          "accuracy": 0.0
+        },
+        "trap:near_miss_classes": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "trap:negative_subject_qualifiers": {
+          "n": 2,
+          "accuracy": 0.5
+        },
+        "trap:null_is_not_decrease": {
+          "n": 5,
+          "accuracy": 0.4
+        },
+        "trap:one_study_many_edges": {
+          "n": 4,
+          "accuracy": 0.5
+        },
+        "trap:twin_edges_one_sentence": {
+          "n": 4,
+          "accuracy": 0.0
+        }
+      }
+    },
+    "gold_annotated.yaml": {
+      "n": 52,
+      "accuracy": 0.3654,
+      "no_evidence_precision": 0.6667,
+      "no_evidence_recall": 0.75,
+      "calibration": {
+        "brier": 0.2346,
+        "ece": 0.1837,
+        "bins": [
+          {
+            "bin": 1,
+            "n": 2,
+            "mean_conf": 0.181,
+            "accuracy": 0.0
+          },
+          {
+            "bin": 2,
+            "n": 4,
+            "mean_conf": 0.23,
+            "accuracy": 0.0
+          },
+          {
+            "bin": 3,
+            "n": 10,
+            "mean_conf": 0.355,
+            "accuracy": 0.4
+          },
+          {
+            "bin": 4,
+            "n": 7,
+            "mean_conf": 0.438,
+            "accuracy": 0.143
+          },
+          {
+            "bin": 5,
+            "n": 2,
+            "mean_conf": 0.511,
+            "accuracy": 0.0
+          },
+          {
+            "bin": 6,
+            "n": 10,
+            "mean_conf": 0.638,
+            "accuracy": 0.4
+          },
+          {
+            "bin": 7,
+            "n": 17,
+            "mean_conf": 0.726,
+            "accuracy": 0.588
+          }
+        ]
+      },
+      "by_tag": {
+        "answerable": {
+          "n": 36,
+          "accuracy": 0.1944
+        },
+        "empty": {
+          "n": 16,
+          "accuracy": 0.75
+        },
+        "pair": {
+          "n": 10,
+          "accuracy": 0.5
+        },
+        "trap:associational_is_not_causal": {
+          "n": 15,
+          "accuracy": 0.0667
+        },
+        "trap:comparator_reference": {
+          "n": 4,
+          "accuracy": 0.75
+        },
+        "trap:moderators_mediators": {
+          "n": 3,
+          "accuracy": 0.6667
+        },
+        "trap:negative_predicates_double_negation": {
+          "n": 2,
+          "accuracy": 0.5
+        },
+        "trap:negative_subject_qualifiers": {
+          "n": 5,
+          "accuracy": 0.0
+        },
+        "trap:null_is_not_decrease": {
+          "n": 11,
+          "accuracy": 0.7273
+        },
+        "trap:one_study_many_edges": {
+          "n": 10,
+          "accuracy": 0.4
+        },
+        "trap:reversed_edges": {
+          "n": 5,
+          "accuracy": 1.0
+        },
+        "trap:time_as_cause": {
+          "n": 2,
+          "accuracy": 0.0
+        },
+        "trap:twin_edges_one_sentence": {
+          "n": 11,
+          "accuracy": 0.1818
+        },
+        "trap:unchanged_is_not_null": {
+          "n": 4,
+          "accuracy": 0.25
+        }
+      }
+    }
+  },
+  "baseline_constant": {
+    "brier": 0.2835,
+    "ece": 0.2176,
+    "bins": [
+      {
+        "bin": 6,
+        "n": 68,
+        "mean_conf": 0.6,
+        "accuracy": 0.382
+      }
+    ]
+  },
+  "calls_per_question": 0.0,
+  "items": [
+    {
+      "id": "C-C0003",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:evidence",
+        "answerable",
+        "recall:engine",
+        "trap:associational_is_not_causal",
+        "trap:one_study_many_edges",
+        "trap:null_is_not_decrease",
+        "trap:negative_subject_qualifiers"
+      ],
+      "question": "What effect does releasing captive-reared or translocated animals have on fish numbers, growth and survival?",
+      "gold": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "low"
+      },
+      "confidence": 0.363624,
+      "correct": true
+    },
+    {
+      "id": "C-C0005",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:empty",
+        "answerable",
+        "trap:associational_is_not_causal",
+        "trap:negative_subject_qualifiers",
+        "trap:twin_edges_one_sentence"
+      ],
+      "question": "What effect does competing vegetation have on species richness?",
+      "gold": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": false
+    },
+    {
+      "id": "C-C0008",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:empty",
+        "empty"
+      ],
+      "question": "What effect does sediment & contaminated soil removal have on bird abundance & occupancy?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "C-C0011",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:evidence",
+        "answerable",
+        "recall:engine",
+        "trap:associational_is_not_causal",
+        "trap:one_study_many_edges",
+        "trap:twin_edges_one_sentence"
+      ],
+      "question": "What effect does how wet the soil is have on which species make up the community?",
+      "gold": {
+        "status": "answered",
+        "direction": "unclear",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "very_low"
+      },
+      "confidence": 0.386275,
+      "correct": false
+    },
+    {
+      "id": "C-C0024",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:empty",
+        "empty"
+      ],
+      "question": "What effect does pollution and contaminants have on ecosystem carbon dioxide exchange?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "C-C0025",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:near_miss",
+        "trap:near_miss_classes",
+        "empty"
+      ],
+      "question": "What effect does reintroduction, stocking & captive rearing have on diversity indices (Shannon, evenness)?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "C-C0044",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:empty",
+        "empty"
+      ],
+      "question": "What effect does organic & soil amendments have on breeding & reproductive success?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "C-C0045",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:empty",
+        "empty"
+      ],
+      "question": "What effect does partial harvesting & selective cutting have on soil & litter invertebrates?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "C-C0047",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:evidence",
+        "answerable",
+        "trap:null_is_not_decrease",
+        "trap:one_study_many_edges"
+      ],
+      "question": "What effect does mechanical vegetation control have on seedling & tree survival?",
+      "gold": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "moderate"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "moderate"
+      },
+      "confidence": 0.505825,
+      "correct": true
+    },
+    {
+      "id": "C-C0070",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:evidence",
+        "empty"
+      ],
+      "question": "What effect does mechanical vegetation control have on total vegetation cover?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.200506,
+      "correct": false
+    },
+    {
+      "id": "C-C0071",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:evidence",
+        "answerable",
+        "trap:null_is_not_decrease"
+      ],
+      "question": "What effect does site and soil characteristics have on soil chemistry?",
+      "gold": {
+        "status": "answered",
+        "direction": "no_effect",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": false
+    },
+    {
+      "id": "C-C0087",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:evidence",
+        "answerable",
+        "recall:engine",
+        "trap:null_is_not_decrease",
+        "trap:twin_edges_one_sentence",
+        "trap:one_study_many_edges"
+      ],
+      "question": "What effect does fertilizing or liming have on plant productivity?",
+      "gold": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "moderate"
+      },
+      "confidence": 0.505825,
+      "correct": false
+    },
+    {
+      "id": "C-C0091",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:evidence",
+        "answerable",
+        "recall:engine",
+        "trap:associational_is_not_causal",
+        "trap:twin_edges_one_sentence",
+        "trap:comparator_reference"
+      ],
+      "question": "What effect does instream habitat structures have on invertebrate communities?",
+      "gold": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "moderate"
+      },
+      "confidence": 0.696837,
+      "correct": false
+    },
+    {
+      "id": "C-C0092",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:evidence",
+        "empty"
+      ],
+      "question": "What effect does mulching the soil surface have on functional trait composition?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "very_low"
+      },
+      "confidence": 0.647532,
+      "correct": false
+    },
+    {
+      "id": "C-C0098",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:evidence",
+        "answerable",
+        "trap:null_is_not_decrease"
+      ],
+      "question": "What effect does pollutants and contamination have on soil chemistry?",
+      "gold": {
+        "status": "answered",
+        "direction": "no_effect",
+        "certainty": "moderate"
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": false
+    },
+    {
+      "id": "C-C0099",
+      "file": "class_gold.yaml",
+      "tags": [
+        "class",
+        "seed:evidence",
+        "empty"
+      ],
+      "question": "What effect does woody debris & structural retention have on seedling & tree survival?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "no_effect",
+        "certainty": "moderate"
+      },
+      "confidence": 0.510603,
+      "correct": false
+    },
+    {
+      "id": "D-Q0001",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:null_is_not_decrease",
+        "trap:comparator_reference",
+        "answerable"
+      ],
+      "question": "What effect does winter road clearance have on surface elevation?",
+      "gold": {
+        "status": "answered",
+        "direction": "no_effect",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "no_effect",
+        "certainty": "low"
+      },
+      "confidence": 0.712886,
+      "correct": true
+    },
+    {
+      "id": "D-Q0007",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:null_is_not_decrease",
+        "trap:one_study_many_edges",
+        "answerable"
+      ],
+      "question": "What effect does mulch application have on native shrub and tree seedling density?",
+      "gold": {
+        "status": "answered",
+        "direction": "no_effect",
+        "certainty": "moderate"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.42794600000000005,
+      "correct": false
+    },
+    {
+      "id": "D-Q0012",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:negative_subject_qualifiers",
+        "trap:associational_is_not_causal",
+        "answerable"
+      ],
+      "question": "What effect does vegetation removal have on turbulent kinetic energy?",
+      "gold": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": false
+    },
+    {
+      "id": "D-Q0013",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:negative_subject_qualifiers",
+        "trap:unchanged_is_not_null",
+        "trap:associational_is_not_causal",
+        "answerable"
+      ],
+      "question": "What effect does water table position have on vegetation composition?",
+      "gold": {
+        "status": "answered",
+        "direction": "unclear",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "very_low"
+      },
+      "confidence": 0.181034,
+      "correct": false
+    },
+    {
+      "id": "D-Q0019",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:negative_subject_qualifiers",
+        "trap:associational_is_not_causal",
+        "answerable"
+      ],
+      "question": "What effect does forest floor and soil removal have on fungal species richness?",
+      "gold": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "moderate"
+      },
+      "confidence": 0.696837,
+      "correct": false
+    },
+    {
+      "id": "D-Q0031",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:associational_is_not_causal",
+        "trap:twin_edges_one_sentence",
+        "answerable"
+      ],
+      "question": "What effect does harvest method have on conifer height structure?",
+      "gold": {
+        "status": "answered",
+        "direction": "unclear",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "no_effect",
+        "certainty": "low"
+      },
+      "confidence": 0.712886,
+      "correct": false
+    },
+    {
+      "id": "D-Q0037",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:associational_is_not_causal",
+        "trap:one_study_many_edges",
+        "answerable"
+      ],
+      "question": "What effect does geographic distance have on seed production?",
+      "gold": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.46736599999999995,
+      "correct": true
+    },
+    {
+      "id": "D-Q0041",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "answerable"
+      ],
+      "question": "What effect does release technique have on predation mortality?",
+      "gold": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "moderate"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.346949,
+      "correct": false
+    },
+    {
+      "id": "D-Q0050",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "answerable"
+      ],
+      "question": "What effect does insect defoliation have on forest floor carbon to nitrogen ratio?",
+      "gold": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "moderate"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "moderate"
+      },
+      "confidence": 0.510603,
+      "correct": false
+    },
+    {
+      "id": "D-Q0058",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:associational_is_not_causal",
+        "trap:twin_edges_one_sentence",
+        "answerable"
+      ],
+      "question": "What effect does season have on bee abundance?",
+      "gold": {
+        "status": "answered",
+        "direction": "unclear",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.46736599999999995,
+      "correct": false
+    },
+    {
+      "id": "D-Q0064",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:moderators_mediators",
+        "trap:reversed_edges",
+        "empty"
+      ],
+      "question": "What effect does conifer recruit abundance have on fire history?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.622683,
+      "correct": true
+    },
+    {
+      "id": "D-Q0066",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:moderators_mediators",
+        "empty"
+      ],
+      "question": "What effect does water pH have on dissolved organic carbon concentration?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "D-Q0070",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:moderators_mediators",
+        "empty"
+      ],
+      "question": "What effect does water alkalinity have on zooplankton abundance?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "low"
+      },
+      "confidence": 0.712886,
+      "correct": false
+    },
+    {
+      "id": "D-Q0072",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:null_is_not_decrease",
+        "trap:reversed_edges",
+        "empty"
+      ],
+      "question": "What effect does tree height and diameter have on site preparation?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.622683,
+      "correct": true
+    },
+    {
+      "id": "D-Q0076",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:twin_edges_one_sentence",
+        "trap:one_study_many_edges",
+        "answerable"
+      ],
+      "question": "What effect does culvert retrofitting have on fish passage?",
+      "gold": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "moderate"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "very_low"
+      },
+      "confidence": 0.181034,
+      "correct": false
+    },
+    {
+      "id": "D-Q0077",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:associational_is_not_causal",
+        "trap:twin_edges_one_sentence",
+        "trap:time_as_cause",
+        "answerable"
+      ],
+      "question": "What effect does time since protection have on fish family richness?",
+      "gold": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "very_low"
+      },
+      "confidence": 0.203514,
+      "correct": false
+    },
+    {
+      "id": "D-Q0079",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:null_is_not_decrease",
+        "trap:comparator_reference",
+        "empty"
+      ],
+      "question": "What effect does wetland habitat presence have on vascular plant species richness?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "D-Q0083",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:null_is_not_decrease",
+        "trap:twin_edges_one_sentence",
+        "trap:comparator_reference",
+        "answerable"
+      ],
+      "question": "What effect does peat mining have on forest bird density?",
+      "gold": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "low"
+      },
+      "confidence": 0.712886,
+      "correct": true
+    },
+    {
+      "id": "D-Q0091",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:unchanged_is_not_null",
+        "trap:associational_is_not_causal",
+        "answerable"
+      ],
+      "question": "What effect does soil texture have on soil microbial community structure?",
+      "gold": {
+        "status": "answered",
+        "direction": "unclear",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "very_low"
+      },
+      "confidence": 0.349957,
+      "correct": false
+    },
+    {
+      "id": "D-Q0095",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:associational_is_not_causal",
+        "trap:one_study_many_edges",
+        "answerable"
+      ],
+      "question": "What effect does vulnerability ranking have on flowering phenology?",
+      "gold": {
+        "status": "answered",
+        "direction": "unclear",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "very_low"
+      },
+      "confidence": 0.647532,
+      "correct": false
+    },
+    {
+      "id": "D-Q0104",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:twin_edges_one_sentence",
+        "trap:reversed_edges",
+        "trap:one_study_many_edges",
+        "empty"
+      ],
+      "question": "What effect does conifer leaf mass have on coversoil?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.622683,
+      "correct": true
+    },
+    {
+      "id": "D-Q0106",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:twin_edges_one_sentence",
+        "answerable"
+      ],
+      "question": "What effect does ash addition have on graminoid seedling emergence?",
+      "gold": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "moderate"
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": false
+    },
+    {
+      "id": "D-Q0109",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:twin_edges_one_sentence",
+        "answerable"
+      ],
+      "question": "What effect does prescribed fire have on soil nutrient availability?",
+      "gold": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "moderate"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.42794600000000005,
+      "correct": false
+    },
+    {
+      "id": "D-Q0112",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:reversed_edges",
+        "empty"
+      ],
+      "question": "What effect does invertebrate biomass have on invasive crayfish introduction?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "D-Q0115",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:null_is_not_decrease",
+        "answerable"
+      ],
+      "question": "What effect does herbicide application have on native grass cover?",
+      "gold": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.346949,
+      "correct": true
+    },
+    {
+      "id": "D-Q0120",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:null_is_not_decrease",
+        "trap:reversed_edges",
+        "empty"
+      ],
+      "question": "What effect does bird hatching success have on food supplementation?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.622683,
+      "correct": true
+    },
+    {
+      "id": "D-Q0129",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "pair",
+        "empty"
+      ],
+      "question": "What effect does nitrogen addition have on native grass seedling survival?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.28150300000000006,
+      "correct": false
+    },
+    {
+      "id": "D-Q0132",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "pair",
+        "empty"
+      ],
+      "question": "What effect does tree shoot to root ratio have on herb diversity?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "D-Q0133",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "pair",
+        "empty"
+      ],
+      "question": "What effect does straw mulch addition have on seedling height to diameter ratio?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.200506,
+      "correct": false
+    },
+    {
+      "id": "D-Q0148",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "pair",
+        "empty"
+      ],
+      "question": "What effect does environmental conditions have on weedy plant abundance?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "D-Q0159",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "pair",
+        "empty"
+      ],
+      "question": "What effect does pyrogenic carbon addition have on stem density?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "D-Q0167",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "pair",
+        "empty"
+      ],
+      "question": "What effect does season have on salmon escapement?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "very_low"
+      },
+      "confidence": 0.4020119999999999,
+      "correct": false
+    },
+    {
+      "id": "D-Q0168",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "pair",
+        "empty"
+      ],
+      "question": "What effect does water trace metal and ion concentration have on metal concentration in crustacean tissue?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "D-Q0170",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "pair",
+        "answerable"
+      ],
+      "question": "What effect does ground cover treatment type have on saprophage species richness?",
+      "gold": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "no_effect",
+        "certainty": "low"
+      },
+      "confidence": 0.712886,
+      "correct": false
+    },
+    {
+      "id": "D-Q0174",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "pair",
+        "answerable"
+      ],
+      "question": "What effect does liming have on plant taxon frequency?",
+      "gold": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "no_effect",
+        "certainty": "moderate"
+      },
+      "confidence": 0.510603,
+      "correct": false
+    },
+    {
+      "id": "D-Q0176",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "pair",
+        "empty"
+      ],
+      "question": "What effect does substrate application have on streamflow?",
+      "gold": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": true
+    },
+    {
+      "id": "D-Q0184",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:unchanged_is_not_null",
+        "trap:negative_predicates_double_negation",
+        "answerable"
+      ],
+      "question": "What effect does seed mix type have on plant community diversity?",
+      "gold": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.346949,
+      "correct": true
+    },
+    {
+      "id": "D-Q0186",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:negative_predicates_double_negation",
+        "answerable"
+      ],
+      "question": "What effect does rewetting have on ericaceous shrub cover?",
+      "gold": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "moderate"
+      },
+      "confidence": 0.654714,
+      "correct": false
+    },
+    {
+      "id": "D-Q0194",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:associational_is_not_causal",
+        "trap:time_as_cause",
+        "answerable"
+      ],
+      "question": "What effect does time since harvesting have on dominant plant species composition?",
+      "gold": {
+        "status": "answered",
+        "direction": "unclear",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "low"
+      },
+      "confidence": 0.363624,
+      "correct": false
+    },
+    {
+      "id": "D-Q0197",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:null_is_not_decrease",
+        "answerable"
+      ],
+      "question": "What effect does host species and cover soil have on ectomycorrhizal fungus colonization?",
+      "gold": {
+        "status": "answered",
+        "direction": "no_effect",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "very_low"
+      },
+      "confidence": 0.233623,
+      "correct": false
+    },
+    {
+      "id": "D-Q0199",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:null_is_not_decrease",
+        "trap:one_study_many_edges",
+        "answerable"
+      ],
+      "question": "What effect does lead contamination have on small mammal body condition?",
+      "gold": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.346949,
+      "correct": true
+    },
+    {
+      "id": "D-Q0201",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:null_is_not_decrease",
+        "answerable"
+      ],
+      "question": "What effect does mounding have on soil temperature?",
+      "gold": {
+        "status": "answered",
+        "direction": "no_effect",
+        "certainty": "moderate"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.346949,
+      "correct": false
+    },
+    {
+      "id": "D-Q0208",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:negative_subject_qualifiers",
+        "answerable"
+      ],
+      "question": "What effect does shelter from wind and waves have on riparian grass presence?",
+      "gold": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": false
+    },
+    {
+      "id": "D-Q0212",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:associational_is_not_causal",
+        "answerable"
+      ],
+      "question": "What effect does water level have on moss cover?",
+      "gold": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "low"
+      },
+      "confidence": 0.363624,
+      "correct": false
+    },
+    {
+      "id": "D-Q0213",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:associational_is_not_causal",
+        "answerable"
+      ],
+      "question": "What effect does peatland restoration have on peat carbon dioxide production?",
+      "gold": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.622683,
+      "correct": false
+    },
+    {
+      "id": "D-Q0214",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:associational_is_not_causal",
+        "trap:twin_edges_one_sentence",
+        "trap:one_study_many_edges",
+        "answerable"
+      ],
+      "question": "What effect does mulching have on specific leaf area?",
+      "gold": {
+        "status": "answered",
+        "direction": "unclear",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "very_low"
+      },
+      "confidence": 0.647532,
+      "correct": false
+    },
+    {
+      "id": "D-Q0220",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:negative_subject_qualifiers",
+        "answerable"
+      ],
+      "question": "What effect does ending deer exclusion have on deciduous stem density?",
+      "gold": {
+        "status": "answered",
+        "direction": "decrease",
+        "certainty": "moderate"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.42794600000000005,
+      "correct": false
+    },
+    {
+      "id": "D-Q0223",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:unchanged_is_not_null",
+        "trap:associational_is_not_causal",
+        "trap:twin_edges_one_sentence",
+        "trap:one_study_many_edges",
+        "answerable"
+      ],
+      "question": "What effect does nickel concentration have on zooplankton community composition?",
+      "gold": {
+        "status": "answered",
+        "direction": "unclear",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "very_low"
+      },
+      "confidence": 0.386275,
+      "correct": false
+    },
+    {
+      "id": "D-Q0224",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:twin_edges_one_sentence",
+        "trap:one_study_many_edges",
+        "answerable"
+      ],
+      "question": "What effect does forest floor cover soil have on conifer stem biomass?",
+      "gold": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.732047,
+      "correct": false
+    },
+    {
+      "id": "D-Q0229",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:comparator_reference",
+        "answerable"
+      ],
+      "question": "What effect does bank stabilization structures have on riparian shrub presence?",
+      "gold": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "no_evidence",
+        "direction": null,
+        "certainty": null
+      },
+      "confidence": 0.622683,
+      "correct": false
+    },
+    {
+      "id": "D-Q0230",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:associational_is_not_causal",
+        "answerable"
+      ],
+      "question": "What effect does sedge presence and high water table have on soil microbial biomass?",
+      "gold": {
+        "status": "answered",
+        "direction": "increase",
+        "certainty": "very_low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "no_effect",
+        "certainty": "low"
+      },
+      "confidence": 0.44462100000000004,
+      "correct": false
+    },
+    {
+      "id": "D-Q0237",
+      "file": "gold_annotated.yaml",
+      "tags": [
+        "trap:null_is_not_decrease",
+        "trap:one_study_many_edges",
+        "answerable"
+      ],
+      "question": "What effect does forest floor mixing have on conifer foliar potassium?",
+      "gold": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "predicted": {
+        "status": "answered",
+        "direction": "mixed",
+        "certainty": "low"
+      },
+      "confidence": 0.346949,
+      "correct": true
+    }
+  ]
+}

@@ -111,10 +111,147 @@ def test_asking_about_the_removal_flips_back(graph, ctx):
     assert r.verdict.direction == "increase"
 
 
+def link_cause(make_ctx, text: str):
+    """The default linker's cause side for "What effect does <text> have on plant cover?", real taxonomy."""
+    q = Question("q", f"What effect does {text} have on plant cover?")
+    frames = registry.get("linker").link([ParsedQuestion(q, text, "plant cover", True)], make_ctx(tax=load_taxonomy()))
+    return frames[0].cause
+
+
+@pytest.mark.parametrize(
+    ("text", "cid"),
+    [("cessation of synthetic estrogen addition", "contaminant_exposure"),  # D-Q0206
+     ("abandonment of peat harvesting", "peat_extraction")],  # D-Q0207
+)  # fmt: skip
+def test_asking_about_an_ending_flips_the_class(make_ctx, text, cid):
+    """#61: a cause that ends something links its class at polarity -1, as the node-level removal above."""
+    assert [(r.id, r.polarity) for r in link_cause(make_ctx, text).classes] == [(cid, -1)]
+
+
+@pytest.mark.parametrize(
+    ("text", "cid"),
+    [("invasive fish removal", "invasive_removal"),  # the class already is the removal
+     ("vegetation removal", "mechanical_release_control"),  # through its synonym "vegetation removal"
+     ("time since road abandonment", "time_since_disturbance")],  # elapsed time, not an ending
+)  # fmt: skip
+def test_an_ending_the_class_already_names_is_not_flipped(make_ctx, text, cid):
+    assert [(r.id, r.polarity) for r in link_cause(make_ctx, text).classes] == [(cid, 1)]
+
+
+def test_asking_about_an_ending_flips_the_node(graph, make_ctx):
+    """D-Q0015 "tree cover removal" links the node "Removal of protective tree cover" directly. Its
+    qualifier "removed" sets polarity -1, and the cue flips it, because only the entity term
+    ("protective tree cover") says whether the node itself is the ending, not its name."""
+    nid = "camo:node_14c375fc4ad5"
+    side = link_cause(make_ctx, "tree cover removal")
+    assert pol(graph, nid) == -1 and [(r.id, r.polarity) for r in side.nodes] == [(nid, 1)]
+
+
+def frame_of(ctx, cause: str, outcome: str) -> Frame:
+    q = Question("q", f"What effect does {cause} have on {outcome}?")
+    return registry.get("linker").link([ParsedQuestion(q, cause, outcome, True)], ctx)[0]
+
+
+def test_widen_finds_an_edge_outside_the_linked_class(make_ctx):
+    """#66, D-Q0002: "litter cover" links `soil_fauna`/`soil_microbial`, but the edges' object "Cover of
+    litter" is in no class. `baseline` finds no forward edge; `widen` adds the nodes the side's own words
+    name and finds both edges."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, "native hay application", "litter cover")
+    assert registry.get("retriever", "baseline").retrieve(frame, ctx).forward == ()
+    wide = registry.get("retriever", "widen").retrieve(frame, ctx)
+    assert {"camo:edge_c84f7fea92b0", "camo:edge_3d7078fca705"} <= set(wide.forward)
+
+
+def test_widen_leaves_a_retrieval_with_edges_alone(make_ctx):
+    """Sides that already share an edge are retrieved exactly as `baseline` retrieves them."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, "prescribed fire", "plant cover")
+    base = registry.get("retriever", "baseline").retrieve(frame, ctx)
+    assert base.forward and registry.get("retriever", "widen").retrieve(frame, ctx) == base
+
+
+@pytest.mark.parametrize(
+    ("cause", "outcome", "eid"),
+    [("vegetation removal", "dune erosion", "camo:edge_3f81177bc0ae"),  # D-Q0204, "Vegetation removal" [removed]
+     ("invasive fish removal", "amphibian colonization", "camo:edge_eea9e2034298")],  # D-Q0017, goldfish [removed]
+)  # fmt: skip
+def test_a_removal_node_in_a_removal_class_is_the_removal(make_ctx, cause, outcome, eid):
+    """#66: node_labels puts these [removed] nodes at -1 in a class that is itself the removal, so the
+    engine read "removal increases erosion" as a decrease. `widen` counts them +1; `baseline` does not."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, cause, outcome)
+    subject = ctx.graph.edges[eid]["subject"]
+    assert registry.get("retriever", "baseline").retrieve(frame, ctx).cause_nodes[subject] == -1
+    c = registry.get("retriever", "widen").retrieve(frame, ctx)
+    assert c.cause_nodes[subject] == 1 and eid in c.forward
+
+
+def test_focus_narrows_a_class_to_the_words_it_does_not_cover(make_ctx):
+    """#66, D-Q0207: "ericaceous shrub cover" links `plant_cover_total`, whose bare ground, tree and herb
+    cover edges turned the answer mixed. `focus` keeps the edges whose nodes name the words no linked
+    class covers ("abandonment", "ericaceous"): the block-cut and vacuum harvesting study only."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, "abandonment of peat harvesting", "ericaceous shrub cover")
+    wide = registry.get("retriever", "widen").retrieve(frame, ctx)
+    narrow = registry.get("retriever", "focus").retrieve(frame, ctx)
+    assert set(narrow.forward) < set(wide.forward)
+    assert {ctx.graph.edges[e]["source_document"] for e in narrow.forward} == {"10.1139/b05-025"}
+    assert all("ricaceous" in ctx.graph.nodes[ctx.graph.edges[e]["object"]]["name"] for e in narrow.forward)
+
+
+def test_focus_leaves_exact_class_wording_alone(make_ctx):
+    """A side worded as its class label has no extra words, so `focus` retrieves exactly as `widen`."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, "prescribed fire", "plant cover")
+    assert registry.get("retriever", "focus").retrieve(frame, ctx) == registry.get("retriever", "widen").retrieve(
+        frame, ctx
+    )
+
+
 def test_unchanged_outcome_is_a_null(graph, ctx):
     """'Soil exchangeable K levels ... remained relatively stable during the chronosequence.'"""
     r = ask(graph, ctx, *ends(graph, "camo:edge_07b5d3056850"))
     assert r.verdict.direction == "no_effect"
+
+
+def test_significant_unchanged_outcome_is_not_a_null(graph, ctx):
+    """'Seeding method was associated with richness ... (F=112.04, P=0.000)', object [unchanged] Richness:
+    a significant difference in an unstated direction gives no vote, never 'no detectable effect'."""
+    r = ask(graph, ctx, *ends(graph, "camo:edge_c641160f3447"))
+    assert r.verdict.status == "no_evidence" and "no detectable" not in r.text
+    assert [v.reason for v in r.verdict.votes] == ["unsigned_difference"]
+    assert "without saying which way" in r.searched
+
+
+@pytest.mark.parametrize(
+    ("value", "significant"),
+    [("p < 0.001", True), ("F=112.04, P=0.000", True), ("T = -17.98, A = 0.14, p < 10^-6", True),
+     ("significantly different", True), ("p = 0.06", False), ("not significant", False), ("38.0%", False),
+     ("p = 7.5 × 10^-5", True), ("p-values = 0.012, 0.01, 7.10-3", True), ("10-15%", False),
+     ("marginally significant difference between natural and restored", False),
+     ("", False), (None, False), (7, False)],
+)  # fmt: skip
+def test_reports_significance(value, significant):
+    from camoreasoning.strategies.interpreter.sentence import reports_significance
+
+    assert reports_significance({"strength": {"quantitative_value": value}}) is significant
+
+
+def test_reference_locus_needs_the_reference_as_the_only_locus(graph):
+    """R07: 'grasses were least evenly distributed in reference forests' -> clearcuts higher. The same
+    sentence with a two-arm comparison, or with the qualifier already inverted, is left as annotated."""
+    from camoreasoning.strategies.interpreter.sentence import read_edge, reference_locus
+
+    e = graph.edges["camo:edge_eadd32061916"]
+    s, o = graph.nodes[e["subject"]], graph.nodes[e["object"]]
+    assert reference_locus(e, s, o)
+    assert read_edge(e, o, 1, -1, s) == (1, True, "reference_locus")
+    assert read_edge(e, o, 1, -1) == (-1, True, "associational")  # no subject given: rule 8 is off
+    two_arm = {**e, "original_sentence": "grasses were less even in clearcuts than in reference forests."}
+    assert not reference_locus(two_arm, s, o)
+    assert not reference_locus(e, s, {**o, "state_or_change_qualifier": "increased"})
+    assert not reference_locus(e, {**s, "entity_type": "environmental_variable"}, o)
 
 
 def test_prevented_change_is_not_a_null(graph, ctx):
@@ -196,3 +333,91 @@ def test_time_is_not_an_intervention():
     time_nodes = {lb.node_id for lb in tax.nodes_of("time_since_disturbance")}
     for c in ("invasive_removal", "mulch_surface_cover"):
         assert not time_nodes & {lb.node_id for lb in tax.nodes_of(c)}
+
+
+# Per-tag dev accuracy (item 7 "done when"). The eight traps item 7 names, as `trap:<key>` gold tags.
+ITEM7_TRAPS = (
+    "reversed_edges",
+    "null_is_not_decrease",
+    "associational_is_not_causal",
+    "negative_subject_qualifiers",
+    "unchanged_is_not_null",
+    "twin_edges_one_sentence",
+    "moderators_mediators",
+    "near_miss_classes",
+)
+
+
+@pytest.fixture(scope="module")
+def dev_gold():
+    from camoreasoning.evaluate import load_devsets
+
+    return load_devsets(None, "dev")
+
+
+def by_trap(gold) -> dict[str, list]:
+    return {k: [g for g in gold if f"trap:{k}" in g.tags] for k in ITEM7_TRAPS}
+
+
+def test_every_trap_has_three_dev_items(dev_gold):
+    assert {k: len(v) for k, v in by_trap(dev_gold).items() if len(v) < 3} == {}
+
+
+def test_by_gold_status_splits_overall_and_tag_accuracy():
+    """`score` reports accuracy per gold status, overall and per tag, next to the unsplit figures."""
+    from camoreasoning.contracts import Answer, GoldItem
+    from camoreasoning.evaluate import score
+
+    gold = [GoldItem("a", "q", "no_evidence", tags=("t",)), GoldItem("b", "q", "answered", "increase", tags=("t",)),
+            GoldItem("c", "q", "answered", "decrease")]  # fmt: skip
+    answers = [Answer("a", "no_evidence", "x", 0.8, searched_for="s"), Answer("b", "answered", "x", 0.8, "increase"),
+               Answer("c", "answered", "x", 0.8, "increase")]  # fmt: skip
+    res = score(gold, answers)
+    assert res["by_gold_status"] == {"answered": {"n": 2, "accuracy": 0.5}, "no_evidence": {"n": 1, "accuracy": 1.0}}
+    t = res["by_tag"]["t"]
+    assert (t["n"], t["accuracy"]) == (2, 1.0)
+    assert t["by_gold_status"] == {"answered": {"n": 1, "accuracy": 1.0}, "no_evidence": {"n": 1, "accuracy": 1.0}}
+
+
+@pytest.fixture(scope="module")
+def dev_eval():
+    from camoreasoning.config import Settings
+    from camoreasoning.evaluate import run_eval
+
+    return run_eval(Settings(), split="dev")
+
+
+# Short of the #70 bar (dev, 0 calls): answered accuracy is 0.5205 overall with the `unsigned` interpreter
+# (#76), up from 0.4912. These tags are unchanged at 0.5 (8/16, 2/4, 2/4); the bar rose past them. #79.
+SHORT = {"unchanged_is_not_null": 0.5, "moderators_mediators": 0.5, "near_miss_classes": 0.5}
+
+
+@pytest.mark.parametrize(
+    "trap",
+    [pytest.param(k, marks=pytest.mark.xfail(strict=True, raises=AssertionError, reason=f"{SHORT[k]} < answered "
+                                             "overall (#79)")) if k in SHORT else k for k in ITEM7_TRAPS],
+)  # fmt: skip
+def test_trap_accuracy_is_at_least_overall(dev_eval, trap):
+    """#70 bar: `mise run eval`'s accuracy on the trap's gold-answered items is at or above accuracy on all
+    gold-answered items. Trap tags come from the seed edge, so they are almost all gold-answered, while 96
+    gold no_evidence items lift the unsplit overall; comparing within gold status removes that mix.
+    `reversed_edges` has no gold-answered items, so it is compared on gold no_evidence instead."""
+    tag = dev_eval["by_tag"][f"trap:{trap}"]["by_gold_status"]
+    status = "no_evidence" if trap == "reversed_edges" else "answered"
+    if trap == "reversed_edges":
+        assert "answered" not in tag
+    assert tag[status]["accuracy"] >= dev_eval["by_gold_status"][status]["accuracy"]
+
+
+def test_engine_reads_every_trap_at_least_as_well_as_overall():
+    """Engine only: the aggregator fed each item's gold edge effects (`evaluate.oracle`), on class-level dev
+    gold (AUDIT.md rule). Per trap, direction accuracy is at or above the overall oracle direction accuracy,
+    so the end-to-end shortfall above is upstream of the engine."""
+    from camoreasoning.config import DEVSETS_DIR, Settings
+    from camoreasoning.evaluate import load_devsets, oracle
+
+    gold = load_devsets([DEVSETS_DIR / "class_gold.yaml"], "dev")
+    overall = oracle(gold, Settings())["direction_accuracy"]
+    per_trap = {k: oracle(v, Settings()).get("direction_accuracy") for k, v in by_trap(gold).items()}
+    assert {k: a for k, a in per_trap.items() if a is not None and a < overall} == {}
+    assert sum(a is not None for a in per_trap.values()) >= 5

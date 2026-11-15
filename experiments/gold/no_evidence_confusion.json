@@ -5,14 +5,14 @@
  "n": 83,
  "confusion": {
   "fn": 4,
-  "fp": 4,
-  "tn": 44,
+  "fp": 3,
+  "tn": 45,
   "tp": 31
  },
- "no_evidence_precision": 0.8857,
+ "no_evidence_precision": 0.9118,
  "no_evidence_recall": 0.8857,
  "errors_by_cause": {
-  "false_no_evidence retrieval:gold_edges_missed": 4,
+  "false_no_evidence retrieval:gold_edges_missed": 3,
   "missed_no_evidence retrieval:edges_gold_rejects": 4
  },
  "rows": [
@@ -125,46 +125,6 @@
     }
    ],
    "n_edges": 11
-  },
-  {
-   "id": "C-C0028",
-   "error": "false_no_evidence",
-   "question": "What effect does how wet the soil is have on natural seedling recruitment?",
-   "gold": [
-    "answered",
-    "decrease"
-   ],
-   "pred": [
-    "no_evidence",
-    null
-   ],
-   "cause": "retrieval:gold_edges_missed",
-   "linked": {
-    "cause": [],
-    "outcome": [
-     "natural_regeneration"
-    ]
-   },
-   "edges": [
-    {
-     "edge": "camo:edge_a87d999d586e",
-     "predicate": "causes",
-     "negated": false,
-     "subject": {
-      "name": "Soil moisture",
-      "classes": [
-       "soil_moisture_water"
-      ]
-     },
-     "object": {
-      "name": "Decreased tree seedling regeneration",
-      "classes": [
-       "natural_regeneration"
-      ]
-     }
-    }
-   ],
-   "n_edges": 1
   },
   {
    "id": "C-C0029",

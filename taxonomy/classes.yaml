@@ -828,6 +828,8 @@ classes:
   - water content
   - moisture content
   - soil water
+  - wet soil*
+  - soil wetness
   - evaporation
   - evapotranspiration
   - runoff
@@ -1001,6 +1003,18 @@ classes:
   - toxicity
   - toxic*
   description: Chemistry of water or tissue concentrations.
+- id: water_ph
+  kind: outcome
+  label: water pH & acidity
+  synonyms:
+  - water ph
+  - lake ph
+  - lake water ph
+  - lakewater ph
+  - stream ph
+  - surface ph
+  description: pH, acidity and alkalinity of lakes, streams and surface water (soil
+    pH is soil_ph_chemistry).
 - id: carbon_flux
   kind: outcome
   label: CO2 flux & net ecosystem exchange

@@ -25,6 +25,7 @@ from camoreasoning.components import Context
 from camoreasoning.contracts import Answer, Trace
 from camoreasoning.registry import register
 from camoreasoning.strategies.extras.baseline import HtmlExtras, _page, _rel, _slug
+from camoreasoning.strategies.extras.limits import write_limits
 
 MEMO = "extras.gapmap.run"
 DENSEST = 15  # cells listed under "Where the graph is densest"
@@ -65,6 +66,7 @@ class GapMapExtras(HtmlExtras):
         paths = super().write_run(answers, traces, ctx)  # index.html + gapmap.html (via self.gap_map)
         if not ctx.taxonomy.empty:
             paths.append(_rel(self.cell_pages(ctx)))
+        paths.append(write_limits(ctx))  # limits.html, from the recorded holdout report (item 20)
         return paths
 
     def _axes(self, ctx: Context, counts: dict[tuple[str, str], int]):
@@ -108,6 +110,7 @@ class GapMapExtras(HtmlExtras):
             "claim. Every cell links to an "
             'example question and to the questions in this run that asked about it (<a href="gapcells.html">'
             "all cells</a>). Darker shading repeats the count: 1 study, 2, 3 to 5, and 6 or more.</p>"
+            '<p>Where answers go wrong, and what we do not try: <a href="limits.html">honest limits</a>.</p>'
             f"<ul><li>{len(causes)} interventions and conditions × {len(outcomes)} outcomes = {len(cells)} cells"
             f"</li><li>{len(filled)} cells have evidence; {len(cells) - len(filled)} are gaps "
             f"({(len(cells) - len(filled)) / max(1, len(cells)):.0%})</li>"
