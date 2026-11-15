@@ -1,0 +1,728 @@
+{
+ "n_questions": 80,
+ "sides": 160,
+ "cessation": {
+  "right": 63,
+  "empty": 63,
+  "wrong": 34
+ },
+ "embed": {
+  "right": 64,
+  "empty": 56,
+  "wrong": 40
+ },
+ "where_cessation_empty": {
+  "empty -> empty": 56,
+  "empty -> wrong": 6,
+  "empty -> right": 1
+ },
+ "detail": [
+  {
+   "id": "S002",
+   "kind": "outcome",
+   "orig": "Increased proportion of spring flowering perennials",
+   "asked": "early blooming herbaceous plants share",
+   "want": [
+    "reproduction_flowering"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S004",
+   "kind": "outcome",
+   "orig": "Significant geomorphic change",
+   "asked": "landform alteration",
+   "want": [
+    "soil_erosion"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S005",
+   "kind": "cause",
+   "orig": "cutting treatment and time",
+   "asked": "tree felling and elapsed years",
+   "want": [
+    "mechanical_release_control"
+   ],
+   "embed": "wrong",
+   "got": [
+    "time_since_disturbance"
+   ]
+  },
+  {
+   "id": "S005",
+   "kind": "outcome",
+   "orig": "increased density of non-commercial species saplings",
+   "asked": "young tree numbers of non-timber species",
+   "want": [
+    "natural_regeneration"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S008",
+   "kind": "cause",
+   "orig": "Cutting treatments",
+   "asked": "tree felling methods",
+   "want": [
+    "mechanical_release_control"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S012",
+   "kind": "cause",
+   "orig": "Low-density spruce plantation (1350 stems/ha)",
+   "asked": "sparse conifer tree farm",
+   "want": [
+    "tree_planting"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S012",
+   "kind": "outcome",
+   "orig": "Number of moose feces",
+   "asked": "elk droppings count",
+   "want": [
+    "mammal_abundance"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S013",
+   "kind": "cause",
+   "orig": "nesting on artificial mounds",
+   "asked": "man-made nest platforms",
+   "want": [
+    "site_preparation"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S015",
+   "kind": "cause",
+   "orig": "nesting on artificial mounds",
+   "asked": "man-made nest platforms",
+   "want": [
+    "site_preparation"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S015",
+   "kind": "outcome",
+   "orig": "accumulated heat units",
+   "asked": "thermal accumulation",
+   "want": [
+    "soil_temperature"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S016",
+   "kind": "outcome",
+   "orig": "Percent nitrogen retranslocation",
+   "asked": "nutrient resorption efficiency",
+   "want": [
+    "foliar_nutrients"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S018",
+   "kind": "cause",
+   "orig": "introduction of Orconectes virilis",
+   "asked": "invasive crayfish arrival",
+   "want": [
+    "species_reintroduction"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S018",
+   "kind": "outcome",
+   "orig": "decreased odonate biomass",
+   "asked": "dragonfly and damselfly dry weight",
+   "want": [
+    "biomass_productivity"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S020",
+   "kind": "cause",
+   "orig": "repeated exotic species management plus ecological restoration",
+   "asked": "ongoing invasive plant control with habitat recovery",
+   "want": [
+    "restoration_general"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S021",
+   "kind": "outcome",
+   "orig": "Increased abundance of wheatgrass and bluegrass species",
+   "asked": "cool-season grass numbers",
+   "want": [
+    "population_size_trend"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S024",
+   "kind": "cause",
+   "orig": "clearing of the plantation",
+   "asked": "tree farm removal",
+   "want": [
+    "clearcut_harvest"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S024",
+   "kind": "outcome",
+   "orig": "increased cover of non-dominant plant species",
+   "asked": "subordinate vegetation coverage",
+   "want": [
+    "plant_cover_total"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S025",
+   "kind": "cause",
+   "orig": "substrate type",
+   "asked": "bottom material",
+   "want": [
+    "site_conditions"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S027",
+   "kind": "cause",
+   "orig": "Control microtopographic treatment",
+   "asked": "untreated surface relief",
+   "want": [
+    "site_preparation"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S028",
+   "kind": "cause",
+   "orig": "Increased application thickness",
+   "asked": "thicker layer applied",
+   "want": [
+    "organic_soil_amendment"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S030",
+   "kind": "cause",
+   "orig": "Restored site type",
+   "asked": "rehabilitated wetland category",
+   "want": [
+    "site_conditions"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S030",
+   "kind": "outcome",
+   "orig": "Presence of methane production in aerobic conditions",
+   "asked": "natural gas emission under oxygenated conditions",
+   "want": [
+    "methane_emissions"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S032",
+   "kind": "outcome",
+   "orig": "increased plant cover in year 5",
+   "asked": "vegetation coverage after several years",
+   "want": [
+    "plant_cover_total"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S033",
+   "kind": "cause",
+   "orig": "Simple and diverse revegetation treatments",
+   "asked": "basic and varied replanting",
+   "want": [
+    "tree_planting"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S034",
+   "kind": "outcome",
+   "orig": "Increased maximum subsurface temperatures",
+   "asked": "peak underground warmth",
+   "want": [
+    "soil_temperature"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S035",
+   "kind": "cause",
+   "orig": "Overstory removal",
+   "asked": "canopy tree clearing",
+   "want": [
+    "canopy_light"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S035",
+   "kind": "outcome",
+   "orig": "Decreased shrub cover",
+   "asked": "bush coverage",
+   "want": [
+    "plant_cover_total"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S036",
+   "kind": "cause",
+   "orig": "Constructed fen site type",
+   "asked": "built wetland type",
+   "want": [
+    "site_conditions"
+   ],
+   "embed": "wrong",
+   "got": [
+    "wetland_creation"
+   ]
+  },
+  {
+   "id": "S037",
+   "kind": "cause",
+   "orig": "Presence of oil sands exploration habitat",
+   "asked": "bitumen prospecting habitat",
+   "want": [
+    "contaminant_exposure"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S040",
+   "kind": "outcome",
+   "orig": "Increased plant performance index (PI) of Carex aquatilis",
+   "asked": "sedge vigor score",
+   "want": [
+    "plant_physiology"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S041",
+   "kind": "cause",
+   "orig": "Vegetation removal",
+   "asked": "clearing plant cover",
+   "want": [
+    "mechanical_release_control"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S041",
+   "kind": "outcome",
+   "orig": "Erosion of foredune crest",
+   "asked": "coastal sand ridge scouring",
+   "want": [
+    "soil_erosion"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S042",
+   "kind": "outcome",
+   "orig": "Older trout and salmon biomass",
+   "asked": "adult salmonid mass",
+   "want": [
+    "fish_abundance"
+   ],
+   "embed": "wrong",
+   "got": [
+    "wildlife_mortality"
+   ]
+  },
+  {
+   "id": "S043",
+   "kind": "cause",
+   "orig": "increased canopy openness",
+   "asked": "more light gaps",
+   "want": [
+    "canopy_light"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S047",
+   "kind": "outcome",
+   "orig": "Increased estimated foliar biomass of individual trees",
+   "asked": "per-tree crown leaf mass",
+   "want": [
+    "biomass_productivity"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S048",
+   "kind": "outcome",
+   "orig": "Decreased cover of Camassia quamash",
+   "asked": "native wildflower ground coverage",
+   "want": [
+    "plant_cover_total"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S049",
+   "kind": "outcome",
+   "orig": "Decreased chlorophyll concentrations",
+   "asked": "algal pigment levels",
+   "want": [
+    "foliar_nutrients"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S051",
+   "kind": "outcome",
+   "orig": "increased growth of downstream cottonwoods",
+   "asked": "riparian tree development",
+   "want": [
+    "tree_growth"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S054",
+   "kind": "outcome",
+   "orig": "decreased maximal temperatures",
+   "asked": "peak warmth",
+   "want": [
+    "soil_temperature"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S055",
+   "kind": "cause",
+   "orig": "exclusion of carp from the system",
+   "asked": "removing bottom-feeding fish",
+   "want": [
+    "invasive_removal"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S055",
+   "kind": "outcome",
+   "orig": "Decreased turbidity",
+   "asked": "water cloudiness",
+   "want": [
+    "soil_erosion"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S057",
+   "kind": "cause",
+   "orig": "Interaction between habitat type and microtopographic elevation",
+   "asked": "ecosystem class and fine-scale relief",
+   "want": [
+    "site_conditions"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S058",
+   "kind": "cause",
+   "orig": "treatment site type (windrow and forest sites)",
+   "asked": "debris rows versus woods",
+   "want": [
+    "woody_debris_retention"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S058",
+   "kind": "outcome",
+   "orig": "higher mean number of successful pregnancies of M. gapperi",
+   "asked": "rodent breeding output",
+   "want": [
+    "reproduction_flowering"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S059",
+   "kind": "cause",
+   "orig": "Herbicide application",
+   "asked": "weedkiller use",
+   "want": [
+    "herbicide_application"
+   ],
+   "embed": "wrong",
+   "got": [
+    "land_use"
+   ]
+  },
+  {
+   "id": "S060",
+   "kind": "cause",
+   "orig": "open canopies",
+   "asked": "sparse tree cover",
+   "want": [
+    "canopy_light"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S060",
+   "kind": "outcome",
+   "orig": "more decomposed peat",
+   "asked": "bog humification",
+   "want": [
+    "soil_microbial"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S061",
+   "kind": "cause",
+   "orig": "rewetting of abandoned block-cut peatlands",
+   "asked": "flooding disused bogs",
+   "want": [
+    "peatland_rewetting"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S061",
+   "kind": "outcome",
+   "orig": "decreased ericaceous shrub biomass",
+   "asked": "heath shrub mass",
+   "want": [
+    "biomass_productivity"
+   ],
+   "embed": "wrong",
+   "got": [
+    "plant_cover_total"
+   ]
+  },
+  {
+   "id": "S062",
+   "kind": "outcome",
+   "orig": "decreased odds of beaver lodge activity",
+   "asked": "aquatic rodent den use",
+   "want": [
+    "mammal_abundance"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S063",
+   "kind": "cause",
+   "orig": "Agricultural land use",
+   "asked": "farming",
+   "want": [
+    "land_use"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S064",
+   "kind": "outcome",
+   "orig": "Increased total zygopteran biomass",
+   "asked": "damselfly mass",
+   "want": [
+    "biomass_productivity"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S066",
+   "kind": "cause",
+   "orig": "Presence of large Picea mariana woody debris",
+   "asked": "big fallen logs",
+   "want": [
+    "woody_debris_retention"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S066",
+   "kind": "outcome",
+   "orig": "Decreased weekly soil temperature range",
+   "asked": "ground thermal variability",
+   "want": [
+    "soil_temperature"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S067",
+   "kind": "cause",
+   "orig": "being in restored peat fields in the latter stage after restoration",
+   "asked": "late-stage rewetted bog sites",
+   "want": [
+    "restoration_general"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S069",
+   "kind": "cause",
+   "orig": "shoot growth inhibitor (SGI) application",
+   "asked": "plant growth regulator",
+   "want": [
+    "herbicide_application"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S069",
+   "kind": "outcome",
+   "orig": "Root S concentration",
+   "asked": "belowground sulfur content",
+   "want": [
+    "water_chemistry"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S071",
+   "kind": "cause",
+   "orig": "higher percent tree canopy cover",
+   "asked": "denser overhead foliage",
+   "want": [
+    "canopy_light"
+   ],
+   "embed": "right",
+   "got": [
+    "canopy_light"
+   ]
+  },
+  {
+   "id": "S071",
+   "kind": "outcome",
+   "orig": "increased flowering frequency of Gaultheria procumbens",
+   "asked": "understory shrub blooming rate",
+   "want": [
+    "reproduction_flowering"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S073",
+   "kind": "cause",
+   "orig": "wetland slope",
+   "asked": "marsh gradient",
+   "want": [
+    "site_conditions"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S075",
+   "kind": "outcome",
+   "orig": "Height growth of white spruce",
+   "asked": "stature gain of evergreens",
+   "want": [
+    "tree_growth"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S076",
+   "kind": "outcome",
+   "orig": "Cover of Poa pratensis",
+   "asked": "pasture sward coverage",
+   "want": [
+    "plant_cover_total"
+   ],
+   "embed": "empty",
+   "got": []
+  },
+  {
+   "id": "S078",
+   "kind": "cause",
+   "orig": "Cutting treatments",
+   "asked": "tree felling",
+   "want": [
+    "mechanical_release_control"
+   ],
+   "embed": "wrong",
+   "got": [
+    "tree_planting"
+   ]
+  }
+ ]
+}
