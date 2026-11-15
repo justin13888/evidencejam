@@ -1,0 +1,150 @@
+{"id": "T0601", "term": "main road", "class": null, "phrase": null, "why": "no matching class"}
+{"id": "T0602", "term": "man-made reef", "class": "engineered_structures", "phrase": "man-made reef*", "why": "artificial reef equivalent, built structure"}
+{"id": "T0603", "term": "manitoba", "class": null, "phrase": null, "why": "place name"}
+{"id": "T0604", "term": "manual cleaning", "class": null, "phrase": null, "why": "ambiguous cleaning method"}
+{"id": "T0605", "term": "marine organism", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0606", "term": "marsh location", "class": null, "phrase": null, "why": "study design location"}
+{"id": "T0607", "term": "mat seeded below", "class": null, "phrase": null, "why": "mulch vs seeding ambiguous"}
+{"id": "T0608", "term": "mat seeded on top", "class": null, "phrase": null, "why": "mulch vs seeding ambiguous"}
+{"id": "T0609", "term": "material mixing", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0610", "term": "matting", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0611", "term": "mature forest reference traits", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0612", "term": "mbg and sm treatments", "class": null, "phrase": null, "why": "unknown abbreviation"}
+{"id": "T0613", "term": "mbg treatment", "class": null, "phrase": null, "why": "unknown abbreviation"}
+{"id": "T0614", "term": "mean mucro length", "class": null, "phrase": null, "why": "ambiguous organism trait"}
+{"id": "T0615", "term": "mechanical treatment", "class": null, "phrase": null, "why": "site prep vs vegetation control ambiguous"}
+{"id": "T0616", "term": "mehlich k", "class": "soil_nutrients", "phrase": "mehlich k", "why": "Mehlich-extractable soil potassium"}
+{"id": "T0617", "term": "metabolic coefficient", "class": null, "phrase": null, "why": "ambiguous, could be animal"}
+{"id": "T0618", "term": "metabolic quotient", "class": "soil_microbial", "phrase": "metabolic quotient", "why": "qCO2, standard soil microbial index"}
+{"id": "T0619", "term": "mg, ca, k, fe, zn and al availability", "class": null, "phrase": null, "why": "element list, soil or water"}
+{"id": "T0620", "term": "micro-environmental variables", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0621", "term": "microaspect", "class": "site_conditions", "phrase": "microaspect*", "why": "microsite aspect, natural site characteristic"}
+{"id": "T0622", "term": "microform type and sampling depth", "class": null, "phrase": null, "why": "study design mix"}
+{"id": "T0623", "term": "microhabitat refugia and cover", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0624", "term": "micronutrient uptake", "class": "foliar_nutrients", "phrase": "micronutrient uptake", "why": "plant nutrient uptake; not covered by boundary"}
+{"id": "T0625", "term": "microsite topography", "class": "site_conditions", "phrase": "microsite topography", "why": "natural microsite characteristic"}
+{"id": "T0626", "term": "microsite treatment", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0627", "term": "microtopographic position", "class": "site_conditions", "phrase": "microtopographic position", "why": "natural microsite position"}
+{"id": "T0628", "term": "microtopographic treatments", "class": null, "phrase": null, "why": "site prep vs wetland ambiguous"}
+{"id": "T0629", "term": "microtopography variance", "class": null, "phrase": null, "why": "cause/outcome ambiguous"}
+{"id": "T0630", "term": "mine waste treatment", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0631", "term": "mineral soil", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0632", "term": "mineralization index", "class": null, "phrase": null, "why": "N vs C mineralization ambiguous"}
+{"id": "T0633", "term": "minerotrophic species", "class": null, "phrase": null, "why": "vague taxon group"}
+{"id": "T0634", "term": "mining activity", "class": null, "phrase": null, "why": "land use vs contamination ambiguous"}
+{"id": "T0635", "term": "mining history", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0636", "term": "mitigative measures", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0637", "term": "mixture of wetland plants", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0638", "term": "mn, b and cu availability", "class": null, "phrase": null, "why": "element list"}
+{"id": "T0639", "term": "model accuracy", "class": null, "phrase": null, "why": "study design"}
+{"id": "T0640", "term": "model fit", "class": null, "phrase": null, "why": "study design"}
+{"id": "T0641", "term": "model specification", "class": null, "phrase": null, "why": "study design"}
+{"id": "T0642", "term": "model support", "class": null, "phrase": null, "why": "study design"}
+{"id": "T0643", "term": "modeling", "class": null, "phrase": null, "why": "study design"}
+{"id": "T0644", "term": "moisture regime", "class": "soil_moisture_water", "phrase": "moisture regime", "why": "soil moisture regime"}
+{"id": "T0645", "term": "moisture retention", "class": null, "phrase": null, "why": "physical vs moisture ambiguous"}
+{"id": "T0646", "term": "monolayer cover", "class": null, "phrase": null, "why": "ambiguous cover design"}
+{"id": "T0647", "term": "month of the year", "class": null, "phrase": null, "why": "time word"}
+{"id": "T0648", "term": "mosses", "class": "moss_bryophyte", "phrase": "mosses", "why": "plural not matched by moss"}
+{"id": "T0649", "term": "multi-species mixtures", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0650", "term": "n-nh4/c-fe ratio", "class": null, "phrase": null, "why": "obscure ratio"}
+{"id": "T0651", "term": "n-nh4/n-fe ratio", "class": null, "phrase": null, "why": "obscure ratio"}
+{"id": "T0652", "term": "n/k total ratio", "class": null, "phrase": null, "why": "soil or foliar ambiguous"}
+{"id": "T0653", "term": "n/p total ratio", "class": null, "phrase": null, "why": "soil, foliar or water ambiguous"}
+{"id": "T0654", "term": "naoh-al:bd-fe molar ratio", "class": null, "phrase": null, "why": "obscure ratio"}
+{"id": "T0655", "term": "naoh-p:tp ratio", "class": null, "phrase": null, "why": "obscure ratio"}
+{"id": "T0656", "term": "native annuals", "class": "native_abundance", "phrase": "native annual*", "why": "native plant group abundance"}
+{"id": "T0657", "term": "native hay", "class": null, "phrase": null, "why": "seeding vs mulch ambiguous"}
+{"id": "T0658", "term": "native lilies", "class": "native_abundance", "phrase": "native lilies", "why": "native plant group"}
+{"id": "T0659", "term": "native perennial forbs", "class": "native_abundance", "phrase": "native perennial*", "why": "native plant groups"}
+{"id": "T0660", "term": "native perennial geophytes", "class": null, "phrase": null, "why": "covered by native perennial*"}
+{"id": "T0661", "term": "native perennial graminoids or forbs", "class": null, "phrase": null, "why": "covered by native perennial*"}
+{"id": "T0662", "term": "native shrub species", "class": "native_abundance", "phrase": "native shrub*", "why": "native plant group"}
+{"id": "T0663", "term": "natsal1 sub-community", "class": null, "phrase": null, "why": "opaque code"}
+{"id": "T0664", "term": "natural attenuation", "class": null, "phrase": null, "why": "not removal or capping"}
+{"id": "T0665", "term": "natural boreal forest", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0666", "term": "natural disturbance", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0667", "term": "natural ecotone", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0668", "term": "natural site", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0669", "term": "needle litter", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0670", "term": "nest age", "class": null, "phrase": null, "why": "covariate"}
+{"id": "T0671", "term": "nest parasitism rate", "class": null, "phrase": null, "why": "no fitting class"}
+{"id": "T0672", "term": "nesting location preference", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0673", "term": "net ecosystem production", "class": "carbon_flux", "phrase": "net ecosystem production", "why": "NEP is ecosystem carbon balance"}
+{"id": "T0674", "term": "net radiation", "class": "soil_temperature", "phrase": "net radiation", "why": "microclimate radiation measure"}
+{"id": "T0675", "term": "nitrogen anion ratio", "class": null, "phrase": null, "why": "obscure"}
+{"id": "T0676", "term": "nitrogen retranslocation", "class": "foliar_nutrients", "phrase": "retranslocation", "why": "plant tissue nutrient resorption"}
+{"id": "T0677", "term": "no barrier treatment", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0678", "term": "no suppression", "class": null, "phrase": null, "why": "ambiguous suppression"}
+{"id": "T0679", "term": "no suppression and woody-only suppression", "class": null, "phrase": null, "why": "ambiguous suppression"}
+{"id": "T0680", "term": "non-dominant plant species cover", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0681", "term": "non-mounded microsite", "class": null, "phrase": null, "why": "already covered by mound*"}
+{"id": "T0682", "term": "non-recovering area", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0683", "term": "nonplanted annuals", "class": null, "phrase": null, "why": "native vs non-native ambiguous"}
+{"id": "T0684", "term": "number of days with average temp > 5\u00b0c", "class": null, "phrase": null, "why": "awkward, temperature covered"}
+{"id": "T0685", "term": "number of leaves", "class": null, "phrase": null, "why": "growth vs biomass ambiguous"}
+{"id": "T0686", "term": "number of oldfield species consumed", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0687", "term": "nutrient additions", "class": "fertilization", "phrase": "nutrient additions", "why": "plural of existing nutrient addition"}
+{"id": "T0688", "term": "nutrient loading", "class": null, "phrase": null, "why": "pollution vs fertilization ambiguous"}
+{"id": "T0689", "term": "nutrient profile", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0690", "term": "nutrient ratio", "class": null, "phrase": null, "why": "soil, foliar or water ambiguous"}
+{"id": "T0691", "term": "observed preference for natural sites", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0692", "term": "occupation", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0693", "term": "oil addition", "class": "contaminant_exposure", "phrase": "oil addition", "why": "experimental oil contamination"}
+{"id": "T0694", "term": "oil exposure", "class": "contaminant_exposure", "phrase": "oil exposure", "why": "oil contamination exposure"}
+{"id": "T0695", "term": "old field", "class": null, "phrase": null, "why": "land use vs habitat ambiguous"}
+{"id": "T0696", "term": "old field stand", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0697", "term": "old growth", "class": null, "phrase": null, "why": "cause/outcome ambiguous"}
+{"id": "T0698", "term": "old pasture", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0699", "term": "old-growth species", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0700", "term": "older partially harvested stand", "class": "partial_harvest", "phrase": "partially harvested", "why": "partial canopy removal"}
+{"id": "T0701", "term": "operational taxonomic units", "class": null, "phrase": null, "why": "microbial vs plant richness"}
+{"id": "T0702", "term": "organic c", "class": "soil_organic_carbon", "phrase": "organic c", "why": "abbreviated organic carbon"}
+{"id": "T0703", "term": "organic c content", "class": null, "phrase": null, "why": "covered by organic c (T0702)"}
+{"id": "T0704", "term": "organic c, total n, and exchangeable k, ca and mg", "class": null, "phrase": null, "why": "element list"}
+{"id": "T0705", "term": "organic layer", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0706", "term": "organic mat", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0707", "term": "organic mat depth", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0708", "term": "organic residual cover", "class": null, "phrase": null, "why": "mulch vs amendment ambiguous"}
+{"id": "T0709", "term": "oscinella sp. a", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0710", "term": "ose habitat", "class": null, "phrase": null, "why": "opaque"}
+{"id": "T0711", "term": "outbreeding depression", "class": null, "phrase": null, "why": "no fitting class"}
+{"id": "T0712", "term": "overall nutrient supply", "class": null, "phrase": null, "why": "supply could mean addition"}
+{"id": "T0713", "term": "overall nutrient supply rate", "class": "soil_nutrients", "phrase": "nutrient supply rate*", "why": "measured soil nutrient supply"}
+{"id": "T0714", "term": "ovis canadenesis", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0715", "term": "p availability", "class": "soil_nutrients", "phrase": "p availability", "why": "phosphorus availability"}
+{"id": "T0716", "term": "p. pratensis and e. repens", "class": null, "phrase": null, "why": "species names"}
+{"id": "T0717", "term": "pah degradation", "class": null, "phrase": null, "why": "microbial vs chemistry ambiguous"}
+{"id": "T0718", "term": "parasitism rate", "class": null, "phrase": null, "why": "no fitting class"}
+{"id": "T0719", "term": "passable flow", "class": null, "phrase": null, "why": "no fitting class"}
+{"id": "T0720", "term": "passage efficiency", "class": null, "phrase": null, "why": "no fitting outcome class"}
+{"id": "T0721", "term": "passage of time", "class": "time_since_disturbance", "phrase": "passage of time", "why": "elapsed time"}
+{"id": "T0722", "term": "pc 2 scores", "class": null, "phrase": null, "why": "statistics"}
+{"id": "T0723", "term": "peat chemical property", "class": "soil_ph_chemistry", "phrase": "peat chemical propert*", "why": "peat analogue of soil chemistry"}
+{"id": "T0724", "term": "peat chemistry", "class": "soil_ph_chemistry", "phrase": "peat chemistry", "why": "peat analogue of soil chemistry"}
+{"id": "T0725", "term": "peat collection", "class": null, "phrase": null, "why": "donor collection vs extraction ambiguous"}
+{"id": "T0726", "term": "peat depth", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0727", "term": "peat donor material", "class": null, "phrase": null, "why": "amendment vs moss transfer ambiguous"}
+{"id": "T0728", "term": "peat field", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0729", "term": "peat-ec", "class": null, "phrase": null, "why": "opaque"}
+{"id": "T0730", "term": "peatland center", "class": null, "phrase": null, "why": "location"}
+{"id": "T0731", "term": "peatland edge", "class": null, "phrase": null, "why": "location"}
+{"id": "T0732", "term": "percent root egress", "class": "tree_growth", "phrase": "root egress", "why": "seedling root growth measure"}
+{"id": "T0733", "term": "performance", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0734", "term": "performance traits", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0735", "term": "phosphorus deposition", "class": null, "phrase": null, "why": "atmospheric vs sediment ambiguous"}
+{"id": "T0736", "term": "phosphorus supply rate", "class": "soil_nutrients", "phrase": "phosphorus supply rate", "why": "measured soil P supply"}
+{"id": "T0737", "term": "physical loss", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0738", "term": "physicochemical condition", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0739", "term": "picea plantation", "class": null, "phrase": null, "why": "planting vs land use ambiguous"}
+{"id": "T0740", "term": "piles", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0741", "term": "pinegrass", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0742", "term": "pinus contorta var. latifolia and pinus menziesii var. glauca", "class": null, "phrase": null, "why": "species names"}
+{"id": "T0743", "term": "pioneer mosses", "class": null, "phrase": null, "why": "covered by mosses (T0648)"}
+{"id": "T0744", "term": "pipeline construction", "class": null, "phrase": null, "why": "no fitting class"}
+{"id": "T0745", "term": "pipeline construction technique", "class": null, "phrase": null, "why": "no fitting class"}
+{"id": "T0746", "term": "pk treatments", "class": null, "phrase": null, "why": "ambiguous abbreviation"}
+{"id": "T0747", "term": "placement depth", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0748", "term": "plant available sulfate", "class": "soil_nutrients", "phrase": "plant available sulfate", "why": "soil nutrient availability"}
+{"id": "T0749", "term": "plant form", "class": "functional_traits", "phrase": "plant form", "why": "growth/life form trait"}
+{"id": "T0750", "term": "plant group canopy cover", "class": null, "phrase": null, "why": "tree canopy vs plant cover ambiguous"}

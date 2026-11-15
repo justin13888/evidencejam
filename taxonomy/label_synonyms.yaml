@@ -1,0 +1,274 @@
+# Label-only synonyms: graph wording that places a node in a class. Read by node_labeler/curated only,
+# never by the linker (too specific to link a question side to a whole class). Proposed by
+# bge-base-en-v1.5 and audited: experiments/embeddings/bge_synonyms/. Same phrase syntax as
+# curated_classes.yaml (lower case, word boundaries, trailing * = any word ending).
+classes:
+  animal_condition:
+  - chick size
+  - erod activity
+  - gonadal abnormalit*
+  - spawner size
+  - testicular abnormalit*
+  - wing length
+  biomass_productivity:
+  - belowground production
+  - forb mass
+  - root to shoot ratio
+  - root-shoot ratio
+  - shoot to root ratio
+  - total leaf mass
+  canopy_light:
+  - available light
+  carbon_flux:
+  - carbon dioxide emission*
+  - co2 production
+  - gross ecosystem production
+  - net ecosystem production
+  clearcut_harvest:
+  - clearfell*
+  climate_warming:
+  - climate moisture ind*
+  - extreme weather
+  - heavy rainfall
+  - rainfall frequency
+  community_composition:
+  - dca axis
+  - jaccard*
+  - vegetation assemblage*
+  competing_vegetation:
+  - tall woody competitive species
+  contaminant_exposure:
+  - acid mine drainage
+  - contamination source
+  - oil addition
+  - oil exposure
+  - point source*
+  - smelter*
+  - sulphur deposition
+  engineered_structures:
+  - anchor stone*
+  - compensation channel
+  - erosion control structure*
+  - instream structure*
+  - man-made reef*
+  - riverbank stabili*
+  - side-channel construction
+  - wing deflector*
+  fertilization:
+  - controlled-release urea
+  - immediately available urea
+  - lake neutralization
+  - nitrogen application
+  - nutrient additions
+  fish_abundance:
+  - angler catch*
+  - escapement*
+  - salmonid production
+  - salmonid*
+  foliar_nutrients:
+  - foliar c/n
+  - foliar carbon
+  - macronutrient uptake
+  - micronutrient uptake
+  - retranslocation
+  functional_traits:
+  - functional group*
+  - phanerophyte*
+  - plant form
+  - plant traits
+  - resource-conservation trait*
+  - seed size
+  - trait prevalence
+  - trait representation
+  - trophic group*
+  insect_invertebrate:
+  - infaunal trophic index
+  invasive_abundance:
+  - introduced forb*
+  - introduced grass*
+  - introduced perennial grass*
+  invasive_removal:
+  - goldfish removal
+  land_use:
+  - coniferous plantation*
+  - conversion of forest
+  - crop field*
+  - land-use
+  mechanical_release_control:
+  - herb-only suppression
+  - vegetation suppression
+  - vegetation-removed
+  moss_bryophyte:
+  - mosses
+  moss_layer_transfer:
+  - restored mined bog
+  native_abundance:
+  - native annual*
+  - native graminoid*
+  - native lilies
+  - native perennial*
+  - native shrub*
+  natural_regeneration:
+  - root sucker*
+  - stump sprout*
+  organic_soil_amendment:
+  - biosolids
+  - forest floor mineral mix
+  - forest floor-mineral mix
+  - kimberlite amendment*
+  - lake sediment amendment*
+  - lfh donor material
+  - sewage amendment
+  - sewage sludge
+  - soil material placement
+  - subsoil material application
+  - wood chip incorporation
+  partial_harvest:
+  - partially harvested
+  peat_extraction:
+  - vacuum min*
+  plant_cover_total:
+  - ericaceae cover
+  - herb cover
+  plant_physiology:
+  - non-structural carbohydrate*
+  planting_stock_traits:
+  - container type
+  - nursery-grown seedling*
+  population_size_trend:
+  - probability of extinction
+  predation_herbivory_damage:
+  - seed removal
+  reproduction_flowering:
+  - floral resource*
+  - fruiting plants
+  - fruiting potential
+  - inflorescence*
+  - seeds per fruit
+  - sexual plants
+  reproductive_success:
+  - breeding performance
+  - clutch initiation
+  - fledgling*
+  - hatch date
+  - hatching probability
+  - nest parasitism
+  - number of fledglings
+  - young fledged
+  seeding_sowing:
+  - broadcasting seed*
+  - cover crop*
+  - seeded only
+  site_conditions:
+  - biogeoclimatic zone
+  - microaspect*
+  - microsite topography
+  - microtopographic position
+  - site characteristic*
+  - terrain position
+  - topography
+  site_preparation:
+  - hilled microtopograph*
+  - microsite soil mixing
+  - microtopography manipulation
+  - subsoiling
+  - tilling
+  soil_erosion:
+  - landslide rate
+  - sediment deposition
+  - sediment infilling
+  - silt deposit*
+  - siltation
+  - suspended solids
+  - total suspended solids
+  soil_inoculation:
+  - live soil
+  soil_microbial:
+  - arginine ammonification
+  - ectomycorrhiz*
+  - glucosidase
+  - hydrocarbon mineralization
+  - litter breakdown
+  - metabolic quotient
+  - plfa*
+  - root glucosamine
+  - tbi stabilization factor
+  soil_moisture_water:
+  - fh moisture
+  - moisture regime
+  - soil-water pressure
+  soil_nutrients:
+  - available n
+  - available nutrient*
+  - available p
+  - exchangeable ca
+  - exchangeable k
+  - fh total n
+  - forest floor total n
+  - mehlich k
+  - nitrogen supply rate
+  - nutrient supply profile*
+  - nutrient supply rate*
+  - p availability
+  - phosphorus supply rate
+  - plant available sulfate
+  - soil cec
+  - total n
+  soil_organic_carbon:
+  - forest floor c
+  - forest floor total c
+  - organic c
+  - peat accumulation
+  - surface organic layer*
+  soil_ph_chemistry:
+  - peat chemical propert*
+  - peat chemistry
+  - soil chemical propert*
+  soil_physical:
+  - clay content
+  soil_temperature:
+  - degree day*
+  - growing degree day*
+  - heat units
+  - net radiation
+  species_reintroduction:
+  - supplemental food
+  stand_structure:
+  - acceptable growing stock
+  time_since_disturbance:
+  - cutblock age
+  - forest age
+  - passage of time
+  - site age
+  - wetland age
+  tree_growth:
+  - root egress
+  tree_protection:
+  - treeshelter*
+  tree_seedling_survival:
+  - winter-survived seedling*
+  water_chemistry:
+  - lake water chemistry
+  - pore-water chemistry
+  - water chemistry
+  water_ph:
+  - lake acidification
+  water_table_level:
+  - daily flows
+  - flood flow*
+  - flow velocity
+  - low flow days
+  - low-flow days
+  - spring flooding
+  - stage recession
+  - stream velocity
+  - submersion
+  - tidal flooding
+  - tidal range
+  - water permanency
+  - water velocity
+  wetland_creation:
+  - pond construction
+  woody_debris_retention:
+  - rollback
+  - slash cover

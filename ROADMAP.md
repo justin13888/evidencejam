@@ -381,3 +381,9 @@ flowchart LR
     - Independent probe, not tuned on (`experiments/embeddings/synonym_probe.py`): 80 graph edges reworded by a model that saw only node wording. Of the 63 sides `cessation` leaves empty, embed links 1 right and 6 wrong ("weedkiller use" → land use). Generic GloVe does not know ecology wording.
     - Side finding: on the same rewording `cessation` gets 63 right, 34 wrong and 63 empty of 160 sides. `ask` is covered by its LLM fallback (#18); the batch run is not, but hidden questions follow graph wording.
     - Do not flip the default to `embed`.
+  - **Follow-up (Sun Nov 15): BGE proposes, an audit decides, offline only** (`experiments/embeddings/bge_synonyms/README.md`).
+    - **Model choice.** On the same probe, bge-base-en-v1.5 holds the right class in its top 3 for 37 of 63 empty sides. It still links about 40% wrong at a usable gap, so it never runs at judging time.
+    - **Candidates and audit.** BGE ranks classes for the 1137 graph terms no class phrase matches. Claude auditors accept 236 against `AUDIT.md`, and a second review drops 6 more.
+    - **Shipped.** The 213 phrases go to `taxonomy/label_synonyms.yaml`, which only `node_labeler/curated` reads. 476 node labels change as a delta, so hand fixes are kept.
+    - **Not class synonyms.** Matched on question sides as well, the same phrases dropped node dev from 0.620 to 0.609.
+    - **Dev, 0 calls.** Class dev 0.675 → 0.687, node dev 0.620 → 0.630, pooled answered 0.521 → 0.538. ECE rises about 0.01 on both sets, and the linker and the probe are unchanged.

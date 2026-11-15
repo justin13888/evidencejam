@@ -389,7 +389,11 @@ def dev_eval():
 
 # Short of the #70 bar (dev, 0 calls): answered accuracy is 0.5205 overall with the `unsigned` interpreter
 # (#76), up from 0.4912. These tags are unchanged at 0.5 (8/16, 2/4, 2/4); the bar rose past them. #79.
-SHORT = {"unchanged_is_not_null": 0.5, "moderators_mediators": 0.5, "near_miss_classes": 0.5}
+# Label-only synonyms (experiments/embeddings/bge_synonyms) lift answered overall to 0.538: near_miss_classes
+# rises to 0.75 and meets it; negative_subject_qualifiers is unchanged at 0.5238 (11/21) and the bar rose
+# past it; unchanged_is_not_null and moderators_mediators each lose D-Q0061 (7/16, 1/4), where a root-sucker
+# count now labelled natural regeneration adds a no-effect vote.
+SHORT = {"unchanged_is_not_null": 0.4375, "moderators_mediators": 0.25, "negative_subject_qualifiers": 0.5238}
 
 
 @pytest.mark.parametrize(

@@ -1,0 +1,150 @@
+{"id": "T0451", "term": "fescue", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0452", "term": "festuca sp.", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0453", "term": "fetch exposure", "class": null, "phrase": null, "why": "no fitting class"}
+{"id": "T0454", "term": "fh depth", "class": null, "phrase": null, "why": "ambiguous abbreviation, depth generic"}
+{"id": "T0455", "term": "fh moisture", "class": "soil_moisture_water", "phrase": "fh moisture", "why": "forest floor (FH) moisture is soil water"}
+{"id": "T0456", "term": "fh total n", "class": "soil_nutrients", "phrase": "fh total n", "why": "forest floor total nitrogen pool"}
+{"id": "T0457", "term": "fibric peat accumulation depth", "class": "soil_organic_carbon", "phrase": "peat accumulation", "why": "peat accumulation is organic matter build-up"}
+{"id": "T0458", "term": "fibric peat accumulation rate", "class": "soil_organic_carbon", "phrase": "peat accumulation", "why": "peat accumulation is organic matter build-up"}
+{"id": "T0459", "term": "fine root", "class": null, "phrase": null, "why": "growth vs biomass ambiguous"}
+{"id": "T0460", "term": "fine silt", "class": null, "phrase": null, "why": "texture vs sediment ambiguous"}
+{"id": "T0461", "term": "fish inclusion", "class": null, "phrase": null, "why": "unclear meaning"}
+{"id": "T0462", "term": "fishxing prediction", "class": null, "phrase": null, "why": "model tool, not class"}
+{"id": "T0463", "term": "fledgling count", "class": "reproductive_success", "phrase": "fledgling*", "why": "fledgling counts measure breeding success"}
+{"id": "T0464", "term": "flood flow", "class": "water_table_level", "phrase": "flood flow*", "why": "flood flows are high discharge"}
+{"id": "T0465", "term": "floodplain width", "class": null, "phrase": null, "why": "geomorphology, no class"}
+{"id": "T0466", "term": "floral resource", "class": "reproduction_flowering", "phrase": "floral resource*", "why": "flower availability is plant reproduction"}
+{"id": "T0467", "term": "flow_event", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0468", "term": "foliar phenol level", "class": null, "phrase": null, "why": "secondary compounds, not nutrients"}
+{"id": "T0469", "term": "foliar tannin level", "class": null, "phrase": null, "why": "secondary compounds, not nutrients"}
+{"id": "T0470", "term": "forage grasses", "class": null, "phrase": null, "why": "plant group, not outcome"}
+{"id": "T0471", "term": "forb", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0472", "term": "forb and graminoid layers", "class": null, "phrase": null, "why": "cover vs biomass ambiguous"}
+{"id": "T0473", "term": "forb mass", "class": "biomass_productivity", "phrase": "forb mass", "why": "forb mass is plant biomass"}
+{"id": "T0474", "term": "forbs components", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0475", "term": "forest age", "class": "time_since_disturbance", "phrase": "forest age", "why": "forest age equals stand age"}
+{"id": "T0476", "term": "forest area", "class": null, "phrase": null, "why": "generic, location sense"}
+{"id": "T0477", "term": "forest disturbance", "class": null, "phrase": null, "why": "generic disturbance"}
+{"id": "T0478", "term": "forest edge", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0479", "term": "forest floor c content", "class": "soil_organic_carbon", "phrase": "forest floor c", "why": "forest floor carbon content"}
+{"id": "T0480", "term": "forest floor depth", "class": null, "phrase": null, "why": "organic matter vs site condition ambiguous"}
+{"id": "T0481", "term": "forest floor mineral mix", "class": "organic_soil_amendment", "phrase": "forest floor mineral mix", "why": "FFMM is a reclamation cover soil"}
+{"id": "T0482", "term": "forest floor-mineral mix", "class": "organic_soil_amendment", "phrase": "forest floor-mineral mix", "why": "FFMM is a reclamation cover soil"}
+{"id": "T0483", "term": "forest health", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0484", "term": "forest_status", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0485", "term": "frost ring formation", "class": null, "phrase": null, "why": "no class"}
+{"id": "T0486", "term": "fruiting potential", "class": "reproduction_flowering", "phrase": "fruiting potential", "why": "fruiting is plant reproduction"}
+{"id": "T0487", "term": "functional group identity", "class": "functional_traits", "phrase": "functional group*", "why": "functional groups are trait-based guilds"}
+{"id": "T0488", "term": "galloping_initiation_time", "class": null, "phrase": null, "why": "behaviour, no class"}
+{"id": "T0489", "term": "gap edge", "class": null, "phrase": null, "why": "location"}
+{"id": "T0490", "term": "gap interior", "class": null, "phrase": null, "why": "location"}
+{"id": "T0491", "term": "gap origin", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0492", "term": "genetic assignment", "class": null, "phrase": null, "why": "genetics, no class"}
+{"id": "T0493", "term": "genetic exclusion", "class": null, "phrase": null, "why": "genetics, no class"}
+{"id": "T0494", "term": "genetic group presence", "class": null, "phrase": null, "why": "genetics, no class"}
+{"id": "T0495", "term": "genetic similarity", "class": null, "phrase": null, "why": "genetics, not community"}
+{"id": "T0496", "term": "genetic_ancestry", "class": null, "phrase": null, "why": "genetics, no class"}
+{"id": "T0497", "term": "geographic distance", "class": null, "phrase": null, "why": "generic distance"}
+{"id": "T0498", "term": "geomorphic_change", "class": null, "phrase": null, "why": "no class"}
+{"id": "T0499", "term": "goldfish removal", "class": "invasive_removal", "phrase": "goldfish removal", "why": "removal of non-native goldfish"}
+{"id": "T0500", "term": "gonadal abnormality", "class": "animal_condition", "phrase": "gonadal abnormalit*", "why": "gonadal abnormality is animal health, like intersex"}
+{"id": "T0501", "term": "grass species", "class": null, "phrase": null, "why": "cover vs richness ambiguous"}
+{"id": "T0502", "term": "grass stratum", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0503", "term": "grasses and forbs", "class": null, "phrase": null, "why": "plant group only"}
+{"id": "T0504", "term": "grassy weeds", "class": null, "phrase": null, "why": "cause vs outcome ambiguous"}
+{"id": "T0505", "term": "gravel and cobble", "class": null, "phrase": null, "why": "substrate, ambiguous"}
+{"id": "T0506", "term": "gravel-fertilizer treatment", "class": null, "phrase": null, "why": "already covered by fertili*"}
+{"id": "T0507", "term": "gravel-soil", "class": null, "phrase": null, "why": "unclear"}
+{"id": "T0508", "term": "gross ecosystem production", "class": "carbon_flux", "phrase": "gross ecosystem production", "why": "GEP is gross CO2 uptake"}
+{"id": "T0509", "term": "gross tph", "class": null, "phrase": null, "why": "tph ambiguous abbreviation"}
+{"id": "T0510", "term": "h/d ratio", "class": null, "phrase": null, "why": "form ratio, not growth"}
+{"id": "T0511", "term": "habitat area", "class": null, "phrase": null, "why": "habitat, no class"}
+{"id": "T0512", "term": "habitat association", "class": null, "phrase": null, "why": "habitat, no class"}
+{"id": "T0513", "term": "habitat availability", "class": null, "phrase": null, "why": "habitat, no class"}
+{"id": "T0514", "term": "habitat complexity", "class": null, "phrase": null, "why": "habitat, no class"}
+{"id": "T0515", "term": "habitat location", "class": null, "phrase": null, "why": "location"}
+{"id": "T0516", "term": "habitat quality", "class": null, "phrase": null, "why": "habitat, no class"}
+{"id": "T0517", "term": "habitat suitability index", "class": null, "phrase": null, "why": "habitat, no class"}
+{"id": "T0518", "term": "habitat zone", "class": null, "phrase": null, "why": "location"}
+{"id": "T0519", "term": "harvested vegetation", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0520", "term": "hatching date", "class": null, "phrase": null, "why": "phenology, not success"}
+{"id": "T0521", "term": "haul road", "class": null, "phrase": null, "why": "no class"}
+{"id": "T0522", "term": "heavy rainfall", "class": "climate_warming", "phrase": "heavy rainfall", "why": "precipitation extreme, climate driver"}
+{"id": "T0523", "term": "hemicryptophytes and therophytes", "class": "functional_traits", "phrase": "hemicryptophyte*", "why": "Raunkiaer life form, a functional trait"}
+{"id": "T0524", "term": "herb", "class": null, "phrase": null, "why": "generic"}
+{"id": "T0525", "term": "herb + woody suppression", "class": null, "phrase": null, "why": "awkward punctuation"}
+{"id": "T0526", "term": "herb and tree coverage", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0527", "term": "herb vegetation suppression", "class": "mechanical_release_control", "phrase": "vegetation suppression", "why": "competing vegetation control"}
+{"id": "T0528", "term": "herb-only and woody-only suppression", "class": null, "phrase": null, "why": "awkward compound"}
+{"id": "T0529", "term": "herb-only suppression", "class": "mechanical_release_control", "phrase": "herb-only suppression", "why": "herbaceous competition control"}
+{"id": "T0530", "term": "herbaceous vegetation", "class": null, "phrase": null, "why": "cover vs biomass ambiguous"}
+{"id": "T0531", "term": "herbaceous vegetation suppression", "class": "mechanical_release_control", "phrase": "vegetation suppression", "why": "competing vegetation control"}
+{"id": "T0532", "term": "herbivore pellet deposition", "class": null, "phrase": null, "why": "herbivore pressure vs abundance ambiguous"}
+{"id": "T0533", "term": "heterosis", "class": null, "phrase": null, "why": "genetics, no class"}
+{"id": "T0534", "term": "hg/lg ratio", "class": null, "phrase": null, "why": "unclear ratio"}
+{"id": "T0535", "term": "high marsh species", "class": null, "phrase": null, "why": "plant group only"}
+{"id": "T0536", "term": "high wall", "class": null, "phrase": null, "why": "no class"}
+{"id": "T0537", "term": "high-quality stock", "class": null, "phrase": null, "why": "stock ambiguous (fish stock)"}
+{"id": "T0538", "term": "hilled microtopographic treatment", "class": "site_preparation", "phrase": "hilled microtopograph*", "why": "hilling is mounding-type site preparation"}
+{"id": "T0539", "term": "holding duration", "class": null, "phrase": null, "why": "no class"}
+{"id": "T0540", "term": "hollow microtopography", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0541", "term": "host species identity", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0542", "term": "hummock species", "class": null, "phrase": null, "why": "unclear"}
+{"id": "T0543", "term": "hummock topography", "class": null, "phrase": null, "why": "site vs outcome ambiguous"}
+{"id": "T0544", "term": "hunting", "class": null, "phrase": null, "why": "no hunting class"}
+{"id": "T0545", "term": "hydrocarbon mineralization", "class": "soil_microbial", "phrase": "hydrocarbon mineralization", "why": "microbial biodegradation of hydrocarbons"}
+{"id": "T0546", "term": "hydrological_feature", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0547", "term": "hydrophytic ericaceous species", "class": null, "phrase": null, "why": "plant group only"}
+{"id": "T0548", "term": "hydrophytic herbaceous species", "class": null, "phrase": null, "why": "plant group only"}
+{"id": "T0549", "term": "hydrophytic species", "class": null, "phrase": null, "why": "plant group only"}
+{"id": "T0550", "term": "immediately available urea", "class": "fertilization", "phrase": "immediately available urea", "why": "urea fertilizer application"}
+{"id": "T0551", "term": "inadvertent reinforcement", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0552", "term": "inbreeding level", "class": null, "phrase": null, "why": "genetics, no class"}
+{"id": "T0553", "term": "indicator species strength", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0554", "term": "individual length", "class": null, "phrase": null, "why": "plant vs animal ambiguous"}
+{"id": "T0555", "term": "individual maximum size", "class": null, "phrase": null, "why": "plant vs animal ambiguous"}
+{"id": "T0556", "term": "infaunal trophic index", "class": "insect_invertebrate", "phrase": "infaunal trophic index", "why": "benthic invertebrate index"}
+{"id": "T0557", "term": "inflorescence production", "class": "reproduction_flowering", "phrase": "inflorescence*", "why": "inflorescences are flowering output"}
+{"id": "T0558", "term": "instream structures", "class": "engineered_structures", "phrase": "instream structure*", "why": "in-stream habitat structures"}
+{"id": "T0559", "term": "intact vegetation", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0560", "term": "interior forest herbs", "class": null, "phrase": null, "why": "plant group only"}
+{"id": "T0561", "term": "internodes on the branch", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0562", "term": "introduced grasses", "class": "invasive_abundance", "phrase": "introduced grass*", "why": "non-native grasses abundance"}
+{"id": "T0563", "term": "introduced perennial grasses", "class": "invasive_abundance", "phrase": "introduced perennial grass*", "why": "non-native grasses abundance"}
+{"id": "T0564", "term": "jaccard's similarity", "class": "community_composition", "phrase": "jaccard*", "why": "Jaccard is community similarity"}
+{"id": "T0565", "term": "juvenile to adult ratio", "class": null, "phrase": null, "why": "no class"}
+{"id": "T0566", "term": "k/mg ratio", "class": null, "phrase": null, "why": "soil vs foliar ambiguous"}
+{"id": "T0567", "term": "kimberlite amendments", "class": "organic_soil_amendment", "phrase": "kimberlite amendment*", "why": "mineral soil material added"}
+{"id": "T0568", "term": "kinnikinnick", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0569", "term": "l:f ratio", "class": null, "phrase": null, "why": "unclear ratio"}
+{"id": "T0570", "term": "lake acidification history", "class": "water_ph", "phrase": "lake acidification", "why": "lake acidity"}
+{"id": "T0571", "term": "lake michigan and parry sound", "class": null, "phrase": null, "why": "place name"}
+{"id": "T0572", "term": "lake neutralization", "class": "fertilization", "phrase": "lake neutralization", "why": "lake liming"}
+{"id": "T0573", "term": "lake sediment amendments", "class": "organic_soil_amendment", "phrase": "lake sediment amendment*", "why": "sediment material added to soil"}
+{"id": "T0574", "term": "land-use class", "class": "land_use", "phrase": "land-use", "why": "hyphenated land use"}
+{"id": "T0575", "term": "land-use subclass", "class": "land_use", "phrase": "land-use", "why": "hyphenated land use"}
+{"id": "T0576", "term": "landscape condition", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0577", "term": "landslide rate", "class": "soil_erosion", "phrase": "landslide rate", "why": "mass wasting is sediment loss"}
+{"id": "T0578", "term": "large diatom species", "class": null, "phrase": null, "why": "algae, no class"}
+{"id": "T0579", "term": "large herbaceous species", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0580", "term": "larix lasiocarpa", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0581", "term": "larix plantation", "class": null, "phrase": null, "why": "species name"}
+{"id": "T0582", "term": "late summer pulse of cyclopoid nauplii", "class": null, "phrase": null, "why": "too specific"}
+{"id": "T0583", "term": "latent heat exchange", "class": null, "phrase": null, "why": "energy flux, no clear class"}
+{"id": "T0584", "term": "latewood anomaly", "class": null, "phrase": null, "why": "no class"}
+{"id": "T0585", "term": "leaf litter breakdown", "class": "soil_microbial", "phrase": "litter breakdown", "why": "litter decomposition"}
+{"id": "T0586", "term": "lfh", "class": null, "phrase": null, "why": "lfh also natural soil horizon"}
+{"id": "T0587", "term": "lfh donor material", "class": "organic_soil_amendment", "phrase": "lfh donor material", "why": "forest floor material applied"}
+{"id": "T0588", "term": "li donor material", "class": null, "phrase": null, "why": "unclear abbreviation"}
+{"id": "T0589", "term": "life cycle", "class": null, "phrase": null, "why": "vague"}
+{"id": "T0590", "term": "light requirement", "class": null, "phrase": null, "why": "trait vs light ambiguous"}
+{"id": "T0591", "term": "line-point intercept method", "class": null, "phrase": null, "why": "method"}
+{"id": "T0592", "term": "little traverse bay", "class": null, "phrase": null, "why": "place name"}
+{"id": "T0593", "term": "live soil", "class": "soil_inoculation", "phrase": "live soil", "why": "live soil adds soil biota"}
+{"id": "T0594", "term": "livestock_exclusion", "class": null, "phrase": null, "why": "already covered by livestock"}
+{"id": "T0595", "term": "longest leaf", "class": null, "phrase": null, "why": "ambiguous"}
+{"id": "T0596", "term": "lunker", "class": null, "phrase": null, "why": "lunker also slang for big fish"}
+{"id": "T0597", "term": "macrofauna", "class": null, "phrase": null, "why": "soil vs aquatic fauna ambiguous"}
+{"id": "T0598", "term": "macrofaunal activity", "class": null, "phrase": null, "why": "soil vs aquatic fauna ambiguous"}
+{"id": "T0599", "term": "macronutrient uptake", "class": "foliar_nutrients", "phrase": "macronutrient uptake", "why": "plant nutrient uptake"}
+{"id": "T0600", "term": "macrophytes", "class": null, "phrase": null, "why": "plant group only"}

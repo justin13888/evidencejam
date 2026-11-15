@@ -1,0 +1,5022 @@
+{
+ "phrases_added": {
+  "stand_structure": [
+   "acceptable growing stock"
+  ],
+  "contaminant_exposure": [
+   "acid mine drainage",
+   "contamination source",
+   "oil addition",
+   "oil exposure",
+   "point source*",
+   "smelter*",
+   "sulphur deposition"
+  ],
+  "engineered_structures": [
+   "anchor stone*",
+   "compensation channel",
+   "erosion control structure*",
+   "instream structure*",
+   "man-made reef*",
+   "riverbank stabili*",
+   "side-channel construction",
+   "wing deflector*"
+  ],
+  "fish_abundance": [
+   "angler catch*",
+   "escapement*",
+   "salmonid production",
+   "salmonid*"
+  ],
+  "soil_microbial": [
+   "arginine ammonification",
+   "ectomycorrhiz*",
+   "glucosidase",
+   "hydrocarbon mineralization",
+   "litter breakdown",
+   "metabolic quotient",
+   "plfa*",
+   "root glucosamine",
+   "tbi stabilization factor"
+  ],
+  "canopy_light": [
+   "available light"
+  ],
+  "soil_nutrients": [
+   "available n",
+   "available nutrient*",
+   "available p",
+   "exchangeable ca",
+   "exchangeable k",
+   "fh total n",
+   "forest floor total n",
+   "mehlich k",
+   "nitrogen supply rate",
+   "nutrient supply profile*",
+   "nutrient supply rate*",
+   "p availability",
+   "phosphorus supply rate",
+   "plant available sulfate",
+   "soil cec",
+   "total n"
+  ],
+  "biomass_productivity": [
+   "belowground production",
+   "forb mass",
+   "root to shoot ratio",
+   "root-shoot ratio",
+   "shoot to root ratio",
+   "total leaf mass"
+  ],
+  "site_conditions": [
+   "biogeoclimatic zone",
+   "microaspect*",
+   "microsite topography",
+   "microtopographic position",
+   "site characteristic*",
+   "terrain position",
+   "topography"
+  ],
+  "organic_soil_amendment": [
+   "biosolids",
+   "forest floor mineral mix",
+   "forest floor-mineral mix",
+   "kimberlite amendment*",
+   "lake sediment amendment*",
+   "lfh donor material",
+   "sewage amendment",
+   "sewage sludge",
+   "soil material placement",
+   "subsoil material application",
+   "wood chip incorporation"
+  ],
+  "reproductive_success": [
+   "breeding performance",
+   "clutch initiation",
+   "fledgling*",
+   "hatch date",
+   "hatching probability",
+   "nest parasitism",
+   "number of fledglings",
+   "young fledged"
+  ],
+  "seeding_sowing": [
+   "broadcasting seed*",
+   "cover crop*",
+   "seeded only"
+  ],
+  "carbon_flux": [
+   "carbon dioxide emission*",
+   "co2 production",
+   "gross ecosystem production",
+   "net ecosystem production"
+  ],
+  "animal_condition": [
+   "chick size",
+   "erod activity",
+   "gonadal abnormalit*",
+   "spawner size",
+   "testicular abnormalit*",
+   "wing length"
+  ],
+  "soil_physical": [
+   "clay content"
+  ],
+  "clearcut_harvest": [
+   "clearfell*"
+  ],
+  "climate_warming": [
+   "climate moisture ind*",
+   "extreme weather",
+   "heavy rainfall",
+   "rainfall frequency"
+  ],
+  "land_use": [
+   "coniferous plantation*",
+   "conversion of forest",
+   "crop field*",
+   "land-use"
+  ],
+  "planting_stock_traits": [
+   "container type",
+   "nursery-grown seedling*"
+  ],
+  "fertilization": [
+   "controlled-release urea",
+   "immediately available urea",
+   "lake neutralization",
+   "nitrogen application",
+   "nutrient additions"
+  ],
+  "time_since_disturbance": [
+   "cutblock age",
+   "forest age",
+   "passage of time",
+   "site age",
+   "wetland age"
+  ],
+  "water_table_level": [
+   "daily flows",
+   "flood flow*",
+   "flow velocity",
+   "low flow days",
+   "low-flow days",
+   "spring flooding",
+   "stage recession",
+   "stream velocity",
+   "submersion",
+   "tidal flooding",
+   "tidal range",
+   "water permanency",
+   "water velocity"
+  ],
+  "community_composition": [
+   "dca axis",
+   "jaccard*",
+   "vegetation assemblage*"
+  ],
+  "soil_temperature": [
+   "degree day*",
+   "growing degree day*",
+   "heat units",
+   "net radiation"
+  ],
+  "plant_cover_total": [
+   "ericaceae cover",
+   "herb cover"
+  ],
+  "soil_moisture_water": [
+   "fh moisture",
+   "moisture regime",
+   "soil-water pressure"
+  ],
+  "reproduction_flowering": [
+   "floral resource*",
+   "fruiting plants",
+   "fruiting potential",
+   "inflorescence*",
+   "seeds per fruit",
+   "sexual plants"
+  ],
+  "foliar_nutrients": [
+   "foliar c/n",
+   "foliar carbon",
+   "macronutrient uptake",
+   "micronutrient uptake",
+   "retranslocation"
+  ],
+  "soil_organic_carbon": [
+   "forest floor c",
+   "forest floor total c",
+   "organic c",
+   "peat accumulation",
+   "surface organic layer*"
+  ],
+  "functional_traits": [
+   "functional group*",
+   "phanerophyte*",
+   "plant form",
+   "plant traits",
+   "resource-conservation trait*",
+   "seed size",
+   "trait prevalence",
+   "trait representation",
+   "trophic group*"
+  ],
+  "invasive_removal": [
+   "goldfish removal"
+  ],
+  "mechanical_release_control": [
+   "herb-only suppression",
+   "vegetation suppression",
+   "vegetation-removed"
+  ],
+  "site_preparation": [
+   "hilled microtopograph*",
+   "microsite soil mixing",
+   "microtopography manipulation",
+   "subsoiling",
+   "tilling"
+  ],
+  "insect_invertebrate": [
+   "infaunal trophic index"
+  ],
+  "invasive_abundance": [
+   "introduced forb*",
+   "introduced grass*",
+   "introduced perennial grass*"
+  ],
+  "water_ph": [
+   "lake acidification"
+  ],
+  "water_chemistry": [
+   "lake water chemistry",
+   "pore-water chemistry",
+   "water chemistry"
+  ],
+  "soil_erosion": [
+   "landslide rate",
+   "sediment deposition",
+   "sediment infilling",
+   "silt deposit*",
+   "siltation",
+   "suspended solids",
+   "total suspended solids"
+  ],
+  "soil_inoculation": [
+   "live soil"
+  ],
+  "moss_bryophyte": [
+   "mosses"
+  ],
+  "native_abundance": [
+   "native annual*",
+   "native graminoid*",
+   "native lilies",
+   "native perennial*",
+   "native shrub*"
+  ],
+  "plant_physiology": [
+   "non-structural carbohydrate*"
+  ],
+  "partial_harvest": [
+   "partially harvested"
+  ],
+  "soil_ph_chemistry": [
+   "peat chemical propert*",
+   "peat chemistry",
+   "soil chemical propert*"
+  ],
+  "wetland_creation": [
+   "pond construction"
+  ],
+  "population_size_trend": [
+   "probability of extinction"
+  ],
+  "moss_layer_transfer": [
+   "restored mined bog"
+  ],
+  "woody_debris_retention": [
+   "rollback",
+   "slash cover"
+  ],
+  "tree_growth": [
+   "root egress"
+  ],
+  "natural_regeneration": [
+   "root sucker*",
+   "stump sprout*"
+  ],
+  "predation_herbivory_damage": [
+   "seed removal"
+  ],
+  "species_reintroduction": [
+   "supplemental food"
+  ],
+  "competing_vegetation": [
+   "tall woody competitive species"
+  ],
+  "tree_protection": [
+   "treeshelter*"
+  ],
+  "peat_extraction": [
+   "vacuum min*"
+  ],
+  "tree_seedling_survival": [
+   "winter-survived seedling*"
+  ]
+ },
+ "n_phrases": 213,
+ "dropped": [
+  {
+   "phrase": "catch per unit effort",
+   "classes": [
+    "population_size_trend"
+   ],
+   "why": "review: turns fish catch per unit effort from fish_abundance into the generic trend class"
+  },
+  {
+   "phrase": "deer herd reduction*",
+   "classes": [
+    "grazing_browsing"
+   ],
+   "why": "review: labels a herd reduction +1 grazing: the name has no negative cue the labeller reads"
+  },
+  {
+   "phrase": "hemicryptophyte*",
+   "classes": [
+    "functional_traits"
+   ],
+   "why": "review: pushes out the non-native label of 'exotic hemicryptophytes' (D-Q0052 then had no vote)"
+  },
+  {
+   "phrase": "nh4",
+   "classes": [
+    "soil_nutrients"
+   ],
+   "why": "too short"
+  },
+  {
+   "phrase": "reclaimed mine land",
+   "classes": [
+    "restoration_general"
+   ],
+   "why": "review: turns 'breeding on reclaimed mine land' from breeding into the generic restoration class"
+  },
+  {
+   "phrase": "so2",
+   "classes": [
+    "contaminant_exposure"
+   ],
+   "why": "too short"
+  },
+  {
+   "phrase": "species assemblage*",
+   "classes": [
+    "community_composition"
+   ],
+   "why": "review: turns bird and insect assemblages into plant community composition"
+  },
+  {
+   "phrase": "water flow",
+   "classes": [
+    "water_table_level"
+   ],
+   "why": "review: too broad: relabels 'preventing water flow to reactive tailings' as water level"
+  }
+ ],
+ "nodes_relabelled": 476,
+ "nodes_skipped_hand_fixed": [
+  "camo:node_017af7010c8e_variable",
+  "camo:node_0bce884d57b7",
+  "camo:node_29ab28b59254",
+  "camo:node_37377928cd85",
+  "camo:node_589696a53770",
+  "camo:node_621974a215e6",
+  "camo:node_f8965b1496e9",
+  "camo:node_f92ffda47aa5_variable"
+ ],
+ "label_sources_before": {
+  "lexical": 4858,
+  "llm": 1369
+ },
+ "label_sources_after": {
+  "lexical": 5267,
+  "llm": 1050
+ },
+ "changes": [
+  {
+   "node": "camo:node_003cc0f91ab9",
+   "name": "Reference sites",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_00b731fe735d",
+   "name": "increased exchangeable K levels",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_012964f0c735",
+   "name": "decreased topsoil organic C content",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_01cd154661f3",
+   "name": "broadcasting seeds",
+   "before": [
+    "seeding_sowing"
+   ],
+   "after": [
+    "seeding_sowing"
+   ]
+  },
+  {
+   "node": "camo:node_022ea409cbd6",
+   "name": "site age",
+   "before": [
+    "time_since_disturbance"
+   ],
+   "after": [
+    "time_since_disturbance"
+   ]
+  },
+  {
+   "node": "camo:node_0231380ece51",
+   "name": "Application of Subsoil Bm and C treatments",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_03f0a35173e8",
+   "name": "Use of cover crops",
+   "before": [
+    "seeding_sowing"
+   ],
+   "after": [
+    "seeding_sowing"
+   ]
+  },
+  {
+   "node": "camo:node_05a0167d756d",
+   "name": "Increased variation in CO2 production",
+   "before": [
+    "carbon_flux"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_060bee073339_variable",
+   "name": "variability in hummock-hollow topography",
+   "before": [],
+   "after": [
+    "site_conditions"
+   ]
+  },
+  {
+   "node": "camo:node_065da4e33ed9",
+   "name": "Increased TBI stabilization factor",
+   "before": [
+    "soil_physical"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_06639faffe3e",
+   "name": "Recently partially harvested stand",
+   "before": [],
+   "after": [
+    "partial_harvest"
+   ]
+  },
+  {
+   "node": "camo:node_073cbe197b24",
+   "name": "altered stage recession and drought hydrological characteristics",
+   "before": [
+    "climate_warming"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_07e8fe6cd9d5",
+   "name": "Increased depth of surface organic layers",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_0a3730ec23df",
+   "name": "Decreased cover of true mosses",
+   "before": [
+    "moss_bryophyte"
+   ],
+   "after": [
+    "moss_bryophyte"
+   ]
+  },
+  {
+   "node": "camo:node_0a73adb355a7",
+   "name": "Restored treatment status",
+   "before": [],
+   "after": [
+    "moss_layer_transfer"
+   ]
+  },
+  {
+   "node": "camo:node_0c08c336e321",
+   "name": "Extreme weather conditions",
+   "before": [],
+   "after": [
+    "climate_warming"
+   ]
+  },
+  {
+   "node": "camo:node_0c2b91fdd37f",
+   "name": "1-yr and 4-yr herb and woody suppression",
+   "before": [
+    "mechanical_release_control"
+   ],
+   "after": [
+    "mechanical_release_control"
+   ]
+  },
+  {
+   "node": "camo:node_0c394f3bb110",
+   "name": "increased EROD activity in male southern red-backed voles",
+   "before": [
+    "mammal_abundance"
+   ],
+   "after": [
+    "animal_condition"
+   ]
+  },
+  {
+   "node": "camo:node_0e140199ea92",
+   "name": "Temporary wetlands",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_0eb18eda276e",
+   "name": "Vegetation suppression treatments",
+   "before": [
+    "mechanical_release_control"
+   ],
+   "after": [
+    "mechanical_release_control"
+   ]
+  },
+  {
+   "node": "camo:node_0f02c374b796",
+   "name": "Later hatch date",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_0fad031fd364",
+   "name": "DCA axis 1 score",
+   "before": [
+    "community_composition"
+   ],
+   "after": [
+    "community_composition"
+   ]
+  },
+  {
+   "node": "camo:node_101b017007f9",
+   "name": "decreased extreme low flow days",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_10362aebc028",
+   "name": "Disturbance",
+   "before": [],
+   "after": [
+    "site_preparation"
+   ]
+  },
+  {
+   "node": "camo:node_116dce5109cc",
+   "name": "presence of native shrub species",
+   "before": [
+    "native_abundance"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_11a16aa8c491_variable",
+   "name": "Total suspended solids concentration",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "soil_erosion"
+   ]
+  },
+  {
+   "node": "camo:node_12d34572af25",
+   "name": "providing supplemental food early in the season",
+   "before": [],
+   "after": [
+    "species_reintroduction"
+   ]
+  },
+  {
+   "node": "camo:node_132268442214",
+   "name": "4-year herb-only suppression treatment",
+   "before": [
+    "mechanical_release_control"
+   ],
+   "after": [
+    "mechanical_release_control"
+   ]
+  },
+  {
+   "node": "camo:node_149cb2576c91",
+   "name": "FFMM soil application",
+   "before": [
+    "soil_inoculation"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_1694bf8555bc_variable",
+   "name": "Relative cover of introduced forbs",
+   "before": [
+    "invasive_abundance"
+   ],
+   "after": [
+    "invasive_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_169c293a5ae7",
+   "name": "Herb cover",
+   "before": [],
+   "after": [
+    "plant_cover_total"
+   ]
+  },
+  {
+   "node": "camo:node_16a1750ee742",
+   "name": "variation in rate of AGS of spruces",
+   "before": [
+    "stand_structure"
+   ],
+   "after": [
+    "stand_structure"
+   ]
+  },
+  {
+   "node": "camo:node_16b0d148ba6d",
+   "name": "Moisture regime",
+   "before": [
+    "soil_moisture_water"
+   ],
+   "after": [
+    "soil_moisture_water"
+   ]
+  },
+  {
+   "node": "camo:node_16ea2782fab2",
+   "name": "Vegetation-removed treatment",
+   "before": [
+    "mechanical_release_control"
+   ],
+   "after": [
+    "mechanical_release_control"
+   ]
+  },
+  {
+   "node": "camo:node_171573ff51d0",
+   "name": "Nitrogen application",
+   "before": [
+    "fertilization"
+   ],
+   "after": [
+    "fertilization"
+   ]
+  },
+  {
+   "node": "camo:node_177a74fb0e96",
+   "name": "extreme tides in 1995",
+   "before": [],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_184d27afd56d",
+   "name": "presence of the man-made reefs",
+   "before": [
+    "engineered_structures"
+   ],
+   "after": [
+    "engineered_structures"
+   ]
+  },
+  {
+   "node": "camo:node_185163da6a88",
+   "name": "Decreased available light",
+   "before": [
+    "canopy_light"
+   ],
+   "after": [
+    "canopy_light"
+   ]
+  },
+  {
+   "node": "camo:node_18657a34668d",
+   "name": "Accumulated heat units",
+   "before": [
+    "soil_temperature"
+   ],
+   "after": [
+    "soil_temperature"
+   ]
+  },
+  {
+   "node": "camo:node_1c6d30ea8106",
+   "name": "Increased slash cover",
+   "before": [
+    "mulch_surface_cover"
+   ],
+   "after": [
+    "woody_debris_retention"
+   ]
+  },
+  {
+   "node": "camo:node_1c7fb9338c1a_variable",
+   "name": "Number of fledglings",
+   "before": [],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_1c8450c931d0",
+   "name": "Increased abundance of root suckers",
+   "before": [
+    "population_size_trend"
+   ],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_1ce8ef1d00ea",
+   "name": "Variable ectomycorrhizal fungal OTU richness",
+   "before": [
+    "plant_richness",
+    "soil_microbial"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_1d0fe8e96409_variable",
+   "name": "Variation by study area, year, female age, or clutch initiation date in tree swallows",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_1ec4678c7aeb_variable",
+   "name": "Soil chemical properties",
+   "before": [
+    "soil_ph_chemistry"
+   ],
+   "after": [
+    "soil_ph_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_1f0fbbe166ba",
+   "name": "Vacuum mining",
+   "before": [
+    "peat_extraction"
+   ],
+   "after": [
+    "peat_extraction"
+   ]
+  },
+  {
+   "node": "camo:node_1f45b8eadb6c",
+   "name": "4-yr herb-only suppression",
+   "before": [
+    "mechanical_release_control"
+   ],
+   "after": [
+    "mechanical_release_control"
+   ]
+  },
+  {
+   "node": "camo:node_2206034d92b9",
+   "name": "Increased foliar C/N ratio",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "foliar_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_2208328c6d17",
+   "name": "Wood chip incorporation treatment",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_22fd7b6c8847",
+   "name": "variation in AGS of balsam fir",
+   "before": [
+    "tree_species_composition"
+   ],
+   "after": [
+    "stand_structure"
+   ]
+  },
+  {
+   "node": "camo:node_23555912e96d",
+   "name": "Vegetation assemblages",
+   "before": [
+    "community_composition"
+   ],
+   "after": [
+    "community_composition"
+   ]
+  },
+  {
+   "node": "camo:node_23555912e96d_variable",
+   "name": "Vegetation assemblages",
+   "before": [
+    "community_composition"
+   ],
+   "after": [
+    "community_composition"
+   ]
+  },
+  {
+   "node": "camo:node_248f869b5f2b",
+   "name": "Decreased numbers of fledglings per successful nest in Song Sparrows and Yellow Warblers",
+   "before": [
+    "bird_abundance"
+   ],
+   "after": [
+    "bird_abundance",
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_24ec1a11149f",
+   "name": "increased native annuals in seeded subplots",
+   "before": [
+    "population_size_trend"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_250e420af586",
+   "name": "Increased soil CEC",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_2523b9e535d7",
+   "name": "Land-use subclass",
+   "before": [],
+   "after": [
+    "land_use"
+   ]
+  },
+  {
+   "node": "camo:node_2567f21edd1a",
+   "name": "occurrence of temporary spring flooding",
+   "before": [],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_25d74560f63f_variable",
+   "name": "Richness or abundance of functional groups",
+   "before": [
+    "plant_richness"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_25e7661b8d55",
+   "name": "Submersion index",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_26162d55c010",
+   "name": "decreased temporal variability of soil-water pressure",
+   "before": [
+    "soil_moisture_water"
+   ],
+   "after": [
+    "soil_moisture_water"
+   ]
+  },
+  {
+   "node": "camo:node_2684544b14a4",
+   "name": "1-year herb + woody suppression treatment",
+   "before": [
+    "mechanical_release_control"
+   ],
+   "after": [
+    "mechanical_release_control"
+   ]
+  },
+  {
+   "node": "camo:node_26ba9376e218",
+   "name": "Increased cumulative belowground production",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "biomass_productivity"
+   ]
+  },
+  {
+   "node": "camo:node_274df4799614",
+   "name": "Decreased probability of stump sprout production",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_277b7de6a889",
+   "name": "Increased available N",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_2877b4aa67ac",
+   "name": "application of the highest rate of nitrogen",
+   "before": [
+    "fertilization"
+   ],
+   "after": [
+    "fertilization"
+   ]
+  },
+  {
+   "node": "camo:node_28ab7e46813f",
+   "name": "increased mean water velocity",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_291f1cce3cd6",
+   "name": "hilled microtopographic treatment",
+   "before": [
+    "site_preparation"
+   ],
+   "after": [
+    "site_preparation"
+   ]
+  },
+  {
+   "node": "camo:node_29666e975814_variable",
+   "name": "removal of preferred seed from feeding stations",
+   "before": [
+    "predation_herbivory_damage"
+   ],
+   "after": [
+    "predation_herbivory_damage"
+   ]
+  },
+  {
+   "node": "camo:node_29dac4d7170b",
+   "name": "application of controlled-release urea (CRF)",
+   "before": [
+    "fertilization"
+   ],
+   "after": [
+    "fertilization"
+   ]
+  },
+  {
+   "node": "camo:node_2b88a4669d65",
+   "name": "Warm and dry summers with highly negative climate moisture indices combined with a sudden increase in precipitation in September",
+   "before": [
+    "soil_temperature"
+   ],
+   "after": [
+    "climate_warming"
+   ]
+  },
+  {
+   "node": "camo:node_2b8f28895472",
+   "name": "construction of large anchor stone",
+   "before": [
+    "engineered_structures"
+   ],
+   "after": [
+    "engineered_structures"
+   ]
+  },
+  {
+   "node": "camo:node_2cd4d9f9575c",
+   "name": "Increased rainfall frequency",
+   "before": [],
+   "after": [
+    "climate_warming"
+   ]
+  },
+  {
+   "node": "camo:node_2dff2adaff0c",
+   "name": "Increased EROD activity in 2004",
+   "before": [
+    "plant_physiology"
+   ],
+   "after": [
+    "animal_condition"
+   ]
+  },
+  {
+   "node": "camo:node_2eacee6320c6",
+   "name": "Presence of hummock topography",
+   "before": [],
+   "after": [
+    "site_conditions"
+   ]
+  },
+  {
+   "node": "camo:node_2f99229fc8ce_variable",
+   "name": "Chance of nest parasitism",
+   "before": [],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_2fb2f52df752",
+   "name": "sediment deposition",
+   "before": [
+    "soil_erosion"
+   ],
+   "after": [
+    "soil_erosion"
+   ]
+  },
+  {
+   "node": "camo:node_30107e8483fa_variable",
+   "name": "density of native shrub and tree seedlings",
+   "before": [
+    "population_size_trend"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_3023360af23b",
+   "name": "Older partially harvested stand",
+   "before": [],
+   "after": [
+    "partial_harvest"
+   ]
+  },
+  {
+   "node": "camo:node_30a6847c5b18",
+   "name": "Increased proportional biomass of native perennial grasses",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_30c05d7f1efa",
+   "name": "Root-shoot ratio of Empetrum nigrum",
+   "before": [
+    "plant_physiology"
+   ],
+   "after": [
+    "biomass_productivity"
+   ]
+  },
+  {
+   "node": "camo:node_317ed8f8e2cd",
+   "name": "ECM formation",
+   "before": [
+    "soil_microbial"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_319b6f76a52b",
+   "name": "Decreased seeds per fruit in Lobelia siphilitica",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "reproduction_flowering"
+   ]
+  },
+  {
+   "node": "camo:node_31c6accac079",
+   "name": "later clutch initiation dates",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_334a8f059753_variable",
+   "name": "Exchangeable Ca, Mg and available P status recovery trends",
+   "before": [
+    "functional_recovery"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_3412fb0abf75",
+   "name": "Present inflorescence production",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "reproduction_flowering"
+   ]
+  },
+  {
+   "node": "camo:node_3566f94d8a4f",
+   "name": "Increased CO2 production rates",
+   "before": [
+    "carbon_flux"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_35beb91daf9c",
+   "name": "DCA axis 1 score",
+   "before": [
+    "community_composition"
+   ],
+   "after": [
+    "community_composition"
+   ]
+  },
+  {
+   "node": "camo:node_366520787d27",
+   "name": "Wetland age",
+   "before": [
+    "time_since_disturbance"
+   ],
+   "after": [
+    "time_since_disturbance"
+   ]
+  },
+  {
+   "node": "camo:node_37ab92dd4714",
+   "name": "Changes in velocity and depth caused by the weirs",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_37e1622625fd_variable",
+   "name": "Available N",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_38122b1dfdc3",
+   "name": "Peat chemical properties (Peat3)",
+   "before": [],
+   "after": [
+    "soil_ph_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_383309867cea",
+   "name": "Stable flow velocity",
+   "before": [],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_38727c2853e1",
+   "name": "environmental site characteristics",
+   "before": [],
+   "after": [
+    "site_conditions"
+   ]
+  },
+  {
+   "node": "camo:node_38f9ac4b31f8_variable",
+   "name": "Cover of native graminoids",
+   "before": [
+    "native_abundance"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_39e3b0d28f88",
+   "name": "increased soil-water pressure at -5 cm depth",
+   "before": [
+    "soil_moisture_water"
+   ],
+   "after": [
+    "soil_moisture_water"
+   ]
+  },
+  {
+   "node": "camo:node_3a12ad28a77b",
+   "name": "addition of 1500 ml of live soil",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "soil_inoculation"
+   ]
+  },
+  {
+   "node": "camo:node_3a2aa056681d",
+   "name": "Increased proportion of net radiation partitioned to latent heat exchange",
+   "before": [],
+   "after": [
+    "soil_temperature"
+   ]
+  },
+  {
+   "node": "camo:node_3c97afeaddab_variable",
+   "name": "Available P status",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_3cc03f5b370e_variable",
+   "name": "Canopy cover of functional groups",
+   "before": [
+    "plant_cover_total"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_3d2ef3280a60_variable",
+   "name": "Breeding performance of Willow Flycatchers, Song Sparrows, Yellow Warblers, or Gray Catbirds",
+   "before": [
+    "bird_abundance"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_3e6d99be8b3c_variable",
+   "name": "Salmonid biomass",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_3ea83ab4fc66",
+   "name": "increased number of fledglings per burrowing owl pair",
+   "before": [
+    "bird_abundance"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_3f07fc9445fd",
+   "name": "Companion cover crop application",
+   "before": [
+    "seeding_sowing"
+   ],
+   "after": [
+    "seeding_sowing"
+   ]
+  },
+  {
+   "node": "camo:node_3f4e50c5322a",
+   "name": "Increased potential salmonid production",
+   "before": [
+    "fish_abundance"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_405bc3ad352e",
+   "name": "shift in plant form",
+   "before": [
+    "functional_traits"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_413cb9fa6c54",
+   "name": "Increased relative cover of introduced grasses",
+   "before": [
+    "invasive_abundance"
+   ],
+   "after": [
+    "invasive_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_416b1a07754a",
+   "name": "presence of high relative terrain position",
+   "before": [],
+   "after": [
+    "site_conditions"
+   ]
+  },
+  {
+   "node": "camo:node_41f410569730",
+   "name": "Increased number of low-flow days",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_4204d3852b09",
+   "name": "decreased total suspended solids concentration",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "soil_erosion"
+   ]
+  },
+  {
+   "node": "camo:node_4236b5b83480",
+   "name": "10-year woody-only suppression treatment",
+   "before": [
+    "mechanical_release_control"
+   ],
+   "after": [
+    "mechanical_release_control"
+   ]
+  },
+  {
+   "node": "camo:node_4261941079a1",
+   "name": "increasing tidal range",
+   "before": [],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_428e7858c3e3",
+   "name": "FH moisture",
+   "before": [
+    "soil_moisture_water"
+   ],
+   "after": [
+    "soil_moisture_water"
+   ]
+  },
+  {
+   "node": "camo:node_43bd775c861a",
+   "name": "Changed foliar C/N ratio",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "foliar_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_448c5b8c7a6a",
+   "name": "later clutch initiation date",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_4648949fa69a_variable",
+   "name": "CO2 production in deeper layer",
+   "before": [
+    "carbon_flux"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_46d540547691",
+   "name": "later clutch initiation dates in mountain bluebirds",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_46e0edd1e75d",
+   "name": "seeded only treatment",
+   "before": [
+    "seeding_sowing"
+   ],
+   "after": [
+    "seeding_sowing"
+   ]
+  },
+  {
+   "node": "camo:node_47ec606601ee",
+   "name": "species identity within tall perennial with rhizome functional group",
+   "before": [],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_4887605c9933",
+   "name": "Sewage amendment",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_49fd923f8f1c",
+   "name": "Increased velocity",
+   "before": [],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_4a116822114b",
+   "name": "decreased topsoil total N content",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_4a12047c1c2d",
+   "name": "South and east microaspects compared to north and west microaspects",
+   "before": [],
+   "after": [
+    "site_conditions"
+   ]
+  },
+  {
+   "node": "camo:node_4a1893d0695c",
+   "name": "increased carbon dioxide emissions",
+   "before": [
+    "carbon_flux"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_4ad3e1a1c934",
+   "name": "Increased chinook escapements to Stave River",
+   "before": [
+    "fish_abundance"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_4b2754503894",
+   "name": "decreased exchangeable Ca and Mg levels in the upper solum",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_4b6207ead800_variable",
+   "name": "Tree variables, peat depth, or water chemistry",
+   "before": [],
+   "after": [
+    "water_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_4c54a54859e9",
+   "name": "Proximity of predators to contamination source",
+   "before": [
+    "contaminant_exposure"
+   ],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_4c7526d0ede3",
+   "name": "Container type",
+   "before": [
+    "planting_stock_traits"
+   ],
+   "after": [
+    "planting_stock_traits"
+   ]
+  },
+  {
+   "node": "camo:node_4c764ebfceae",
+   "name": "Increased annual chum escapements",
+   "before": [
+    "fish_abundance"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_4ed9bbe0f3c1",
+   "name": "initiating breeding earlier in the season",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_4f9bb1181a93_variable",
+   "name": "percentage cover of vegetation functional groups",
+   "before": [
+    "plant_cover_total"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_50068d162a19_variable",
+   "name": "Proportional biomass of native perennial forbs",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_51fa49006cee",
+   "name": "Peat chemical properties (Peat3) and vegetation type (Vege1)",
+   "before": [],
+   "after": [
+    "soil_ph_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_51fb0c340e5e",
+   "name": "Silt deposit presence",
+   "before": [
+    "soil_erosion"
+   ],
+   "after": [
+    "soil_erosion"
+   ]
+  },
+  {
+   "node": "camo:node_520d76f6105a",
+   "name": "earlier clutch initiation dates in mountain bluebirds",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_5290c96078b6",
+   "name": "Increased shoot to root ratio",
+   "before": [
+    "tree_growth"
+   ],
+   "after": [
+    "biomass_productivity"
+   ]
+  },
+  {
+   "node": "camo:node_52b4d22d4d28",
+   "name": "decreased mass flux of total suspended solids",
+   "before": [],
+   "after": [
+    "soil_erosion"
+   ]
+  },
+  {
+   "node": "camo:node_53e4955a4742",
+   "name": "decreased available P in the Bm horizon",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_53fcd575806b",
+   "name": "Grass vegetation",
+   "before": [
+    "plant_cover_total"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_544cfc21852d",
+   "name": "Increased percent root egress",
+   "before": [
+    "plant_physiology"
+   ],
+   "after": [
+    "tree_growth"
+   ]
+  },
+  {
+   "node": "camo:node_54761db29949",
+   "name": "unchanged soil exchangeable K levels",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_55daa8927668",
+   "name": "remediation of the PCB point sources",
+   "before": [
+    "sediment_removal"
+   ],
+   "after": [
+    "contaminant_exposure",
+    "sediment_removal"
+   ]
+  },
+  {
+   "node": "camo:node_55f6b471932e",
+   "name": "No suppression, 1-yr herb and woody, or 10-yr woodyonly suppression",
+   "before": [
+    "mechanical_release_control"
+   ],
+   "after": [
+    "mechanical_release_control"
+   ]
+  },
+  {
+   "node": "camo:node_562707801212",
+   "name": "Soil or sewage amendment",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_576493221336",
+   "name": "Increased site age",
+   "before": [
+    "time_since_disturbance"
+   ],
+   "after": [
+    "time_since_disturbance"
+   ]
+  },
+  {
+   "node": "camo:node_57d36a81cbaf",
+   "name": "later clutch initiation dates in tree swallows",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_57d5abef9f6f_variable",
+   "name": "Breeding performance of Willow Flycatchers and Gray Catbirds",
+   "before": [
+    "bird_abundance"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_57d995bf40b7",
+   "name": "LFH donor material application",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_58197eafb3e5",
+   "name": "Increased number of root suckers",
+   "before": [
+    "natural_regeneration"
+   ],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_585871780ab0",
+   "name": "increased sediment deposition rate",
+   "before": [],
+   "after": [
+    "soil_erosion"
+   ]
+  },
+  {
+   "node": "camo:node_5a28139b07a5_variable",
+   "name": "Jaccard's similarity to adjacent peatland",
+   "before": [],
+   "after": [
+    "community_composition"
+   ]
+  },
+  {
+   "node": "camo:node_5a4a4730c390",
+   "name": "Hatch date",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_5a6211218986",
+   "name": "Increased average salmonid biomass",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_5ae1a25c2571",
+   "name": "Kimberlite amendments",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_5b0a12c54b0b",
+   "name": "lagged detection response of herb cover",
+   "before": [],
+   "after": [
+    "plant_cover_total"
+   ]
+  },
+  {
+   "node": "camo:node_5b1b5e063772",
+   "name": "Application of lake sediment or lake sediment with gypsum and rock phosphate",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_5b46ec40f477",
+   "name": "Subsoiler treatment",
+   "before": [
+    "site_preparation"
+   ],
+   "after": [
+    "site_preparation"
+   ]
+  },
+  {
+   "node": "camo:node_5b988db41205",
+   "name": "Abundance of specific functional groups",
+   "before": [
+    "population_size_trend"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_5c8889f2ac3f",
+   "name": "decreased cover of Dicranum polysetum and Pleurozium schreberi",
+   "before": [
+    "moss_bryophyte"
+   ],
+   "after": [
+    "moss_bryophyte"
+   ]
+  },
+  {
+   "node": "camo:node_5d5fa3001131",
+   "name": "Increased preference for mid-channel instream structures by salmonids",
+   "before": [
+    "fish_abundance"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_5dc388ec1957",
+   "name": "Lake neutralization",
+   "before": [],
+   "after": [
+    "fertilization"
+   ]
+  },
+  {
+   "node": "camo:node_5ded8a4f9817",
+   "name": "Riverbank stabilization via granular embankment",
+   "before": [
+    "engineered_structures"
+   ],
+   "after": [
+    "engineered_structures"
+   ]
+  },
+  {
+   "node": "camo:node_5e0f65207ba5",
+   "name": "Decreased root egress",
+   "before": [
+    "plant_physiology"
+   ],
+   "after": [
+    "tree_growth"
+   ]
+  },
+  {
+   "node": "camo:node_5ff5af91cd9b",
+   "name": "Unchanged foliar carbon levels",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "foliar_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_60c2020e195a",
+   "name": "Decreased foliar carbon level",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "foliar_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_612e9fae8aa5",
+   "name": "decreased cover of introduced perennial grasses",
+   "before": [
+    "invasive_abundance"
+   ],
+   "after": [
+    "invasive_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_621e8d8956d1_variable",
+   "name": "hatching probability",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_640ec3ea2258",
+   "name": "Increased average escapements of Stave River chum",
+   "before": [
+    "fish_abundance"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_642db33cd92a_variable",
+   "name": "Arginine ammonification rates",
+   "before": [
+    "soil_microbial"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_64e0f91beecf",
+   "name": "higher soil growing degree days",
+   "before": [
+    "soil_temperature"
+   ],
+   "after": [
+    "soil_temperature"
+   ]
+  },
+  {
+   "node": "camo:node_651a2245f260",
+   "name": "Absent stump sprout production",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_6567f4e6e7f2",
+   "name": "increase in Ericaceae cover estimates",
+   "before": [
+    "plant_cover_total"
+   ],
+   "after": [
+    "plant_cover_total"
+   ]
+  },
+  {
+   "node": "camo:node_660d19d635ca_variable",
+   "name": "Absolute cover of introduced forbs (excluding knapweed)",
+   "before": [
+    "invasive_abundance"
+   ],
+   "after": [
+    "invasive_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_66d6314e586b",
+   "name": "Variation in water chemistry variables",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_679e83839fc4",
+   "name": "Increased proportion of sexual Podophyllum peltatum plants",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "reproduction_flowering"
+   ]
+  },
+  {
+   "node": "camo:node_67a3283d0474",
+   "name": "increased available P in the Bm horizon",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_682e18999468_variable",
+   "name": "Number of young fledged",
+   "before": [
+    "population_size_trend"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_69346a26d045",
+   "name": "Increased seed size",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_69f8a33d8aaf_variable",
+   "name": "Soil exchangeable Ca and Mg levels",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_6a2fba30d974",
+   "name": "Aerobic CO2 production",
+   "before": [
+    "carbon_flux"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_6a4ade0afad6",
+   "name": "variation in AGS of sawlogs",
+   "before": [
+    "stand_structure"
+   ],
+   "after": [
+    "stand_structure"
+   ]
+  },
+  {
+   "node": "camo:node_6b48f8f89e8e",
+   "name": "Variation in Salmonidae abundance",
+   "before": [
+    "population_size_trend"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_6b5ad4780264_variable",
+   "name": "Convergence of FFMM nutrient supply profiles toward benchmark conditions",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_6b7427ae1d56",
+   "name": "spawner size",
+   "before": [
+    "animal_condition"
+   ],
+   "after": [
+    "animal_condition"
+   ]
+  },
+  {
+   "node": "camo:node_6bcbc68e4f76",
+   "name": "increased uptake of micronutrients B, Cu, Mn, Mo, and Zn",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "foliar_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_6be301279bda",
+   "name": "Acid lake conditions",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_6c15e661f475_variable",
+   "name": "Stump sprout height in the small diameter stand",
+   "before": [
+    "tree_growth"
+   ],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_6c40862e7019",
+   "name": "10-yr woody-only suppression",
+   "before": [
+    "mechanical_release_control"
+   ],
+   "after": [
+    "mechanical_release_control"
+   ]
+  },
+  {
+   "node": "camo:node_6c5fc05025c7_variable",
+   "name": "percentage cover of pioneer mosses",
+   "before": [
+    "moss_bryophyte"
+   ],
+   "after": [
+    "moss_bryophyte"
+   ]
+  },
+  {
+   "node": "camo:node_6c808261fb21_variable",
+   "name": "Similarity in nutrient supply profiles between reclaimed and benchmark soils",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_6e16cc3111fa",
+   "name": "infilling of spawning habitat with sediment",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "soil_erosion"
+   ]
+  },
+  {
+   "node": "camo:node_6e18e0e6d6d1",
+   "name": "increased fibric peat accumulation rates",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_6e54a3e33082_variable",
+   "name": "Total number of inflorescences",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "reproduction_flowering"
+   ]
+  },
+  {
+   "node": "camo:node_6e8a268edbb6_variable",
+   "name": "hatching probability",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_6f5b1b1cbc56_variable",
+   "name": "Water chemistry",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_7019facb2618",
+   "name": "decreased carbon dioxide emissions",
+   "before": [
+    "carbon_flux"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_70fdd6e8fad7",
+   "name": "Decreased flow velocity",
+   "before": [],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_710495597c03",
+   "name": "gonadal abnormalities and feminization in male fathead minnow",
+   "before": [
+    "animal_condition"
+   ],
+   "after": [
+    "animal_condition"
+   ]
+  },
+  {
+   "node": "camo:node_71630f0fb17a",
+   "name": "increasing depth of fibric peat accumulation",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_7186d7dd7a0f",
+   "name": "Increased number of low-flow days",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_719caeb98f90",
+   "name": "rollback (RB) treatment",
+   "before": [],
+   "after": [
+    "woody_debris_retention"
+   ]
+  },
+  {
+   "node": "camo:node_7229f3aae580",
+   "name": "Placement of FFM and Peat materials",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_7245754e3294_variable",
+   "name": "Pore-water chemistry",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_729d10e7eb4e",
+   "name": "Increased total floral resources per plot",
+   "before": [
+    "plant_richness"
+   ],
+   "after": [
+    "reproduction_flowering"
+   ]
+  },
+  {
+   "node": "camo:node_72f4d943a636",
+   "name": "DCA axis 1 score",
+   "before": [
+    "community_composition"
+   ],
+   "after": [
+    "community_composition"
+   ]
+  },
+  {
+   "node": "camo:node_73daef4d1126",
+   "name": "increased soil organic C content",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_73dee3f7e240",
+   "name": "Decreased proportion of sexual Podophyllum peltatum plants producing fruit",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "reproduction_flowering"
+   ]
+  },
+  {
+   "node": "camo:node_73fd4bfa73b2",
+   "name": "decreased spatial variability of soil-water pressure",
+   "before": [
+    "soil_moisture_water"
+   ],
+   "after": [
+    "soil_moisture_water"
+   ]
+  },
+  {
+   "node": "camo:node_759fe35ffbb0_variable",
+   "name": "Number of fledglings",
+   "before": [
+    "population_size_trend"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_76eadf194d31",
+   "name": "Traits associated with fast resource acquisition",
+   "before": [],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_76ed39c364c3_variable",
+   "name": "Size of 12-day-old chicks",
+   "before": [
+    "animal_condition"
+   ],
+   "after": [
+    "animal_condition"
+   ]
+  },
+  {
+   "node": "camo:node_777f66e3dbdc_variable",
+   "name": "Weight and wing length of 6-day-old nestlings",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "animal_condition",
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_77f253df7719",
+   "name": "Increased daily flows in April and May",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_788ed65baef8",
+   "name": "Decreased total suspended solids",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "soil_erosion"
+   ]
+  },
+  {
+   "node": "camo:node_7965fbc5b690",
+   "name": "increased seed size",
+   "before": [
+    "plant_physiology"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_798af52084b4",
+   "name": "Recently partially harvested stand",
+   "before": [],
+   "after": [
+    "partial_harvest"
+   ]
+  },
+  {
+   "node": "camo:node_7bbb35e933c0",
+   "name": "Increasing soil clay content",
+   "before": [
+    "soil_physical"
+   ],
+   "after": [
+    "soil_physical"
+   ]
+  },
+  {
+   "node": "camo:node_7cf5a7f1666d",
+   "name": "microtopographic treatments",
+   "before": [],
+   "after": [
+    "site_preparation"
+   ]
+  },
+  {
+   "node": "camo:node_7e17f8be7a62",
+   "name": "Deciduous vegetation",
+   "before": [
+    "tree_species_composition"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_7f0a1b5f5b97",
+   "name": "Increased accumulated degree days",
+   "before": [
+    "soil_temperature"
+   ],
+   "after": [
+    "soil_temperature"
+   ]
+  },
+  {
+   "node": "camo:node_8097ba069084",
+   "name": "Increased PLFA evenness",
+   "before": [
+    "diversity_indices"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_80ffc436b498",
+   "name": "Spruce vegetation",
+   "before": [
+    "tree_species_composition"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_8147d1d96298",
+   "name": "initial NSC and starch content",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "plant_physiology"
+   ]
+  },
+  {
+   "node": "camo:node_81d30aaf1c5b",
+   "name": "application of immediately available urea (IAF)",
+   "before": [
+    "fertilization"
+   ],
+   "after": [
+    "fertilization"
+   ]
+  },
+  {
+   "node": "camo:node_825651228a5c",
+   "name": "Variation in available nutrient conditions",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_825d09cdf6c8",
+   "name": "Use of cover crops",
+   "before": [
+    "seeding_sowing"
+   ],
+   "after": [
+    "seeding_sowing"
+   ]
+  },
+  {
+   "node": "camo:node_82b28f1ed632",
+   "name": "microsite soil mixing (MSM) treatment",
+   "before": [
+    "site_preparation"
+   ],
+   "after": [
+    "site_preparation"
+   ]
+  },
+  {
+   "node": "camo:node_83ad75763a45",
+   "name": "decreased soil organic C, total N and available P levels in deflated sites",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients",
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_83b451ae5b81",
+   "name": "Siltation level",
+   "before": [
+    "soil_erosion"
+   ],
+   "after": [
+    "soil_erosion"
+   ]
+  },
+  {
+   "node": "camo:node_83d5ce07c676",
+   "name": "Sewage amendment",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_8667db193e84",
+   "name": "use of cone containers",
+   "before": [
+    "planting_stock_traits"
+   ],
+   "after": [
+    "planting_stock_traits"
+   ]
+  },
+  {
+   "node": "camo:node_86e4a040432b",
+   "name": "construction or enhancement of ponds",
+   "before": [
+    "wetland_creation"
+   ],
+   "after": [
+    "wetland_creation"
+   ]
+  },
+  {
+   "node": "camo:node_87b77708abb0",
+   "name": "Decreased available N",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_880c3250e1a2",
+   "name": "Increased forb mass",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "biomass_productivity"
+   ]
+  },
+  {
+   "node": "camo:node_88178af2ed5c",
+   "name": "unfavorable stage recession",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_895709cd14fb_variable",
+   "name": "Wing length at 12 days",
+   "before": [
+    "animal_condition"
+   ],
+   "after": [
+    "animal_condition"
+   ]
+  },
+  {
+   "node": "camo:node_89d616022793_variable",
+   "name": "EROD activity",
+   "before": [
+    "plant_physiology"
+   ],
+   "after": [
+    "animal_condition"
+   ]
+  },
+  {
+   "node": "camo:node_89f4c2b53783",
+   "name": "change in functional group composition from 2009 to 2010",
+   "before": [
+    "community_composition"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_8b04e0f556cb",
+   "name": "Reduced deposition of sulphur",
+   "before": [
+    "contaminant_exposure"
+   ],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_8bcc71b5004d",
+   "name": "Lake acidification history",
+   "before": [],
+   "after": [
+    "water_ph"
+   ]
+  },
+  {
+   "node": "camo:node_8c8b280ae90d_variable",
+   "name": "Proportion of young fledged in mountain bluebirds",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_8ca2678846d6",
+   "name": "FFMM soil type",
+   "before": [
+    "site_conditions"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_8d49ba081503",
+   "name": "metabolic quotient",
+   "before": [
+    "soil_microbial"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_8d84fb40e3a1",
+   "name": "infilling of reef beds with fine sediments",
+   "before": [
+    "soil_erosion"
+   ],
+   "after": [
+    "soil_erosion"
+   ]
+  },
+  {
+   "node": "camo:node_8d98fd8a6d39",
+   "name": "gradual post-peak stage recession",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_8e8a01821d08",
+   "name": "Increased leaf litter breakdown",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_8ead0d2ff2a3",
+   "name": "lower number of fledglings",
+   "before": [
+    "population_size_trend"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_8ec0650ec6bc",
+   "name": "Presence of Cu, DOC, Centrarchidae, Percidae, Ca, Ni, Cyprinidae, Salmonidae, and pH",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_8f9fc3eb203c",
+   "name": "Water permanency class",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_904b4d4b0592",
+   "name": "timing of breeding",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_908b36bccc10",
+   "name": "DCA axis 2 score",
+   "before": [
+    "community_composition"
+   ],
+   "after": [
+    "community_composition"
+   ]
+  },
+  {
+   "node": "camo:node_910daf1c6208",
+   "name": "successful removal of non-native invasive goldfish",
+   "before": [
+    "invasive_removal"
+   ],
+   "after": [
+    "invasive_removal"
+   ]
+  },
+  {
+   "node": "camo:node_91921bbb5806_variable",
+   "name": "CO2 production within a site and for a given incubation condition",
+   "before": [
+    "carbon_flux"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_91f217747136",
+   "name": "Increased forest floor total N content",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_927669c1215b",
+   "name": "FH total N",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_92c2ea0a9ebf",
+   "name": "Root suckering in the stands",
+   "before": [],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_943e231c9efd",
+   "name": "Alignment of PMM nutrient supply profile trajectory to benchmark conditions",
+   "before": [
+    "functional_recovery"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_9451d0ce6561",
+   "name": "application of biosolids cover",
+   "before": [
+    "mulch_surface_cover"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_949aeb94033f_variable",
+   "name": "Stump sprouting in the stands",
+   "before": [],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_9563f158a0c5",
+   "name": "Increased stream velocity",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_9576a6068e5b",
+   "name": "Topography (basin vs. flat surface)",
+   "before": [],
+   "after": [
+    "site_conditions"
+   ]
+  },
+  {
+   "node": "camo:node_960686c1e079",
+   "name": "Hilled microtopographic treatment",
+   "before": [
+    "site_preparation"
+   ],
+   "after": [
+    "site_preparation"
+   ]
+  },
+  {
+   "node": "camo:node_9610f58e4c58",
+   "name": "Increased forest floor total C content",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_96245fbc954b",
+   "name": "Increased root egress relative to total root mass",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "biomass_productivity",
+    "tree_growth"
+   ]
+  },
+  {
+   "node": "camo:node_967b8186dcd9",
+   "name": "higher cumulative net ecosystem production",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_96dc5fe5c947",
+   "name": "Herb cover similar to unmined sites",
+   "before": [
+    "plant_cover_total"
+   ],
+   "after": [
+    "plant_cover_total"
+   ]
+  },
+  {
+   "node": "camo:node_96dc5fe5c947_variable",
+   "name": "Herb cover",
+   "before": [
+    "plant_cover_total"
+   ],
+   "after": [
+    "plant_cover_total"
+   ]
+  },
+  {
+   "node": "camo:node_97791402cd1e",
+   "name": "Increased P availability",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_97a37272081e_variable",
+   "name": "Forest floor total N content",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_982fb9ee9a4c",
+   "name": "use of commercial nursery-grown seedlings",
+   "before": [
+    "planting_stock_traits"
+   ],
+   "after": [
+    "planting_stock_traits"
+   ]
+  },
+  {
+   "node": "camo:node_9889e6384faa",
+   "name": "Water velocity within ideal range for redside dace",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_990e632350a9",
+   "name": "Decreased available light",
+   "before": [
+    "canopy_light"
+   ],
+   "after": [
+    "canopy_light"
+   ]
+  },
+  {
+   "node": "camo:node_995a631cd828",
+   "name": "high ratio of monosaturated to saturated PLFAs",
+   "before": [],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_9aafda69a498_variable",
+   "name": "Forest floor total C content",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_9afd7bbcff2f_variable",
+   "name": "CO2 production variation",
+   "before": [
+    "carbon_flux"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_9b79386081e6",
+   "name": "increased flow velocity",
+   "before": [],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_9ba761043512",
+   "name": "Increased cumulative CO2 production compared to cutover sites",
+   "before": [
+    "carbon_flux"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_9ba80f71d86e_variable",
+   "name": "Overall nutrient supply rate",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_9cc1f6656034",
+   "name": "Increased root sucker height in the large diameter stand",
+   "before": [
+    "tree_growth"
+   ],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_9cf4a8f02499",
+   "name": "Treeshelter application",
+   "before": [
+    "tree_protection"
+   ],
+   "after": [
+    "tree_protection"
+   ]
+  },
+  {
+   "node": "camo:node_9d3ef5378afe",
+   "name": "Undisturbed site status (hummocks and hollows)",
+   "before": [],
+   "after": [
+    "site_conditions"
+   ]
+  },
+  {
+   "node": "camo:node_9e5136be07fc",
+   "name": "Increased flow velocity",
+   "before": [],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_9ea9fa15a6db",
+   "name": "Increased coho escapements to Stave River",
+   "before": [
+    "fish_abundance"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_9eb45b3f22db",
+   "name": "Increased foliar carbon levels",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "foliar_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_9f1f7694fd58",
+   "name": "smelter-related variables",
+   "before": [
+    "contaminant_exposure"
+   ],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_9f310d88034e",
+   "name": "highest relative occurrence of summer flowering, bird-dispersed phanerophytes",
+   "before": [
+    "bird_abundance"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_9f322abf3508_variable",
+   "name": "difference in cumulative CO2 production compared to cutover sites",
+   "before": [
+    "carbon_flux"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_a08108b951ad",
+   "name": "variation in AGS of poles",
+   "before": [
+    "stand_structure"
+   ],
+   "after": [
+    "stand_structure"
+   ]
+  },
+  {
+   "node": "camo:node_a0e8f970d352",
+   "name": "Microsite soil mixing (MSM) treatment",
+   "before": [
+    "site_preparation"
+   ],
+   "after": [
+    "site_preparation"
+   ]
+  },
+  {
+   "node": "camo:node_a1e43302bc5e",
+   "name": "Increased seeds per fruit in Lobelia siphilitica",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "reproduction_flowering"
+   ]
+  },
+  {
+   "node": "camo:node_a2be49c9857e",
+   "name": "Accumulated heat units",
+   "before": [
+    "soil_temperature"
+   ],
+   "after": [
+    "soil_temperature"
+   ]
+  },
+  {
+   "node": "camo:node_a4477d9e08da",
+   "name": "Water permanency class",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_a4501059d7c0",
+   "name": "increased recovery rates of soil pH, available P and exchangeable Ca and Mg",
+   "before": [
+    "soil_ph_chemistry"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_a5153facb16b",
+   "name": "Increased root to shoot ratio",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "biomass_productivity"
+   ]
+  },
+  {
+   "node": "camo:node_a542b60d6239",
+   "name": "Decreased difference in peat chemistry between restored and natural states",
+   "before": [],
+   "after": [
+    "soil_ph_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_a54754612d2b",
+   "name": "Decreased stem TNC contents",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "plant_physiology"
+   ]
+  },
+  {
+   "node": "camo:node_a5f115d1a411",
+   "name": "increasing seed size",
+   "before": [
+    "functional_traits"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_a5f44d63e434",
+   "name": "decreased cover of native graminoids",
+   "before": [
+    "native_abundance"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_a5f7832a7cb8_variable",
+   "name": "Infaunal Trophic Index values",
+   "before": [
+    "soil_fauna"
+   ],
+   "after": [
+    "insect_invertebrate"
+   ]
+  },
+  {
+   "node": "camo:node_a69cfd0f3b21",
+   "name": "Increased foliar carbon level",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "foliar_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_a74e91c7db6d_variable",
+   "name": "Seeds per fruit",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "reproduction_flowering"
+   ]
+  },
+  {
+   "node": "camo:node_a76bfb769ced",
+   "name": "increased soil CEC",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_a77761f2504b",
+   "name": "Passage of time",
+   "before": [
+    "time_since_disturbance"
+   ],
+   "after": [
+    "time_since_disturbance"
+   ]
+  },
+  {
+   "node": "camo:node_a8685981decb",
+   "name": "Increased plant available sulfate",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_a8dc5fff5f11",
+   "name": "increasing distance from contamination source",
+   "before": [],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_a947b2a54404",
+   "name": "Increased total inorganic nitrogen supply rate",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_a96522ac69f3",
+   "name": "concave or sloped microsite topography",
+   "before": [],
+   "after": [
+    "site_conditions"
+   ]
+  },
+  {
+   "node": "camo:node_a968c4fc50a1",
+   "name": "Closure of the Coniston Smelter",
+   "before": [],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_a9690ed7a038",
+   "name": "Increased cumulative CO2 production",
+   "before": [
+    "carbon_flux"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_a9a9d678de3e",
+   "name": "application of sewage amendment",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_a9c653101547",
+   "name": "Variation in water chemistry (Ni, DOC)",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "water_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_aa09ff46712f",
+   "name": "biosolids application",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_aa8e0e0ec4c9_variable",
+   "name": "Presence of stump sprouts",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_ab385543af89",
+   "name": "Treeshelter application",
+   "before": [
+    "tree_protection"
+   ],
+   "after": [
+    "tree_protection"
+   ]
+  },
+  {
+   "node": "camo:node_ac15331a271b",
+   "name": "Presence of compensation channel",
+   "before": [],
+   "after": [
+    "engineered_structures"
+   ]
+  },
+  {
+   "node": "camo:node_ac221c8ee21d",
+   "name": "greater cover of tall woody competitive species",
+   "before": [
+    "competing_vegetation"
+   ],
+   "after": [
+    "competing_vegetation"
+   ]
+  },
+  {
+   "node": "camo:node_ac4d8c732f53",
+   "name": "increased density of native shrub and tree seedlings",
+   "before": [
+    "population_size_trend"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_ac4ded37174c",
+   "name": "Increased total leaf mass",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "biomass_productivity"
+   ]
+  },
+  {
+   "node": "camo:node_ac984abf9cfa",
+   "name": "Presence of crop field cover type",
+   "before": [],
+   "after": [
+    "land_use"
+   ]
+  },
+  {
+   "node": "camo:node_ad1873fc1a07",
+   "name": "Increased ectomycorrhizal fungal OTU richness",
+   "before": [
+    "plant_richness",
+    "soil_microbial"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_af9aea6a7117",
+   "name": "conversion of forest to abandoned fallowed fields",
+   "before": [],
+   "after": [
+    "land_use"
+   ]
+  },
+  {
+   "node": "camo:node_b0b78cf5a6b2",
+   "name": "toe and between-hill microtopographic positions",
+   "before": [],
+   "after": [
+    "site_conditions"
+   ]
+  },
+  {
+   "node": "camo:node_b22fd073dc5e",
+   "name": "Decreased abundance of root suckers",
+   "before": [
+    "population_size_trend"
+   ],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_b244f2168de7_variable",
+   "name": "overall water chemistry",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_b28f8b7cee4f",
+   "name": "Variation in water chemistry",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_b2d306b1dcc9",
+   "name": "decrease in seed removal from cafeteria stations",
+   "before": [
+    "predation_herbivory_damage"
+   ],
+   "after": [
+    "predation_herbivory_damage"
+   ]
+  },
+  {
+   "node": "camo:node_b2fa562835fd",
+   "name": "Variation in Ni, DOC, Centrarchidae, Percidae, Ca, Cyprinidae, Salmonidae, pH, and Cu",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_b38ba5b610c3",
+   "name": "increasing nitrogen application",
+   "before": [
+    "fertilization"
+   ],
+   "after": [
+    "fertilization"
+   ]
+  },
+  {
+   "node": "camo:node_b5c62c8b4d9f",
+   "name": "Increased development of surface organic layer",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_b5ea7b6df470",
+   "name": "Increased PLFA biomass",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_b686a3db9bf4",
+   "name": "Development of surface organic layer",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_b7e3f1730314",
+   "name": "Presence of fish communities (Centrarchidae, Percidae, Salmonidae)",
+   "before": [
+    "community_composition"
+   ],
+   "after": [
+    "community_composition",
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_b873b11876eb",
+   "name": "Absence of reported angler catches of backcrosses",
+   "before": [
+    "fish_abundance"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_b8b723255be0",
+   "name": "Proportion of young fledged in tree swallows",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_bba5996e542a_variable",
+   "name": "Chance of nest parasitism",
+   "before": [],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_bbe8051c6fea",
+   "name": "Increased forest age",
+   "before": [
+    "time_since_disturbance"
+   ],
+   "after": [
+    "time_since_disturbance"
+   ]
+  },
+  {
+   "node": "camo:node_bc26431ce338",
+   "name": "increased clutch initiation rate of burrowing owl pairs",
+   "before": [
+    "bird_abundance"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_bc6c286c02a5_variable",
+   "name": "Number of fledglings from successful nests",
+   "before": [],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_bca5cd9e074e",
+   "name": "later clutch initiation dates",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_bd18008a97a3",
+   "name": "Site age",
+   "before": [
+    "time_since_disturbance"
+   ],
+   "after": [
+    "time_since_disturbance"
+   ]
+  },
+  {
+   "node": "camo:node_bd3edf274db3",
+   "name": "DCA axis 2 score",
+   "before": [
+    "community_composition"
+   ],
+   "after": [
+    "community_composition"
+   ]
+  },
+  {
+   "node": "camo:node_bd789df3ef95_variable",
+   "name": "ground-level light, available N, soil moisture, and bare soil",
+   "before": [
+    "soil_moisture_water"
+   ],
+   "after": [
+    "soil_moisture_water",
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_bd7e508af8f3",
+   "name": "slower water velocities",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_bded10083fc2",
+   "name": "increased winter-survived seedlings",
+   "before": [
+    "tree_seedling_survival"
+   ],
+   "after": [
+    "tree_seedling_survival"
+   ]
+  },
+  {
+   "node": "camo:node_be3afca903a4",
+   "name": "Rollback treatment",
+   "before": [],
+   "after": [
+    "woody_debris_retention"
+   ]
+  },
+  {
+   "node": "camo:node_be8cbcddb882",
+   "name": "Decreased total inorganic suspended solids",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "soil_erosion"
+   ]
+  },
+  {
+   "node": "camo:node_bf3aeb319d3f",
+   "name": "Rollback treatment",
+   "before": [],
+   "after": [
+    "woody_debris_retention"
+   ]
+  },
+  {
+   "node": "camo:node_bfb129b12d18",
+   "name": "zone type",
+   "before": [],
+   "after": [
+    "site_conditions"
+   ]
+  },
+  {
+   "node": "camo:node_c0813d9ada46",
+   "name": "timing of breeding",
+   "before": [
+    "reproductive_success"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_c0e9726ed8bb",
+   "name": "Decreased seed size",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_c1c464269a6f_variable",
+   "name": "accumulated heat units",
+   "before": [
+    "soil_temperature"
+   ],
+   "after": [
+    "soil_temperature"
+   ]
+  },
+  {
+   "node": "camo:node_c22866045d6d",
+   "name": "Increased available N",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_c32748535692",
+   "name": "removal of land-based contamination source",
+   "before": [
+    "sediment_removal"
+   ],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_c3757ee35562",
+   "name": "Natural vegetation",
+   "before": [
+    "plant_cover_total"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_c3832148621e",
+   "name": "treatment type",
+   "before": [],
+   "after": [
+    "mechanical_release_control"
+   ]
+  },
+  {
+   "node": "camo:node_c3fe951dfe6b",
+   "name": "Prevalence of specific plant traits",
+   "before": [
+    "functional_traits"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_c461764136dd_variable",
+   "name": "Seed size in Lobelia siphilitica",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_c4c8c16d5e1e",
+   "name": "Increased mineralization of hexadecane, naphthalene, and phenanthrene",
+   "before": [
+    "soil_microbial"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_c5d02129de79",
+   "name": "Forest floor C content reaching control levels",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_c5f6973e1ca8",
+   "name": "increased mean number of fledglings per pair",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_c63e4fefdfd1",
+   "name": "Cutblock age",
+   "before": [
+    "time_since_disturbance"
+   ],
+   "after": [
+    "time_since_disturbance"
+   ]
+  },
+  {
+   "node": "camo:node_c647c5ddf838",
+   "name": "greater cover of tall woody competitive species",
+   "before": [
+    "competing_vegetation"
+   ],
+   "after": [
+    "competing_vegetation"
+   ]
+  },
+  {
+   "node": "camo:node_c6e273d5b154",
+   "name": "Sewage sludge application",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_c71bed97533e",
+   "name": "Passage of time",
+   "before": [
+    "time_since_disturbance"
+   ],
+   "after": [
+    "time_since_disturbance"
+   ]
+  },
+  {
+   "node": "camo:node_c7ead8763a64",
+   "name": "Increased number of stump sprouts",
+   "before": [],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_c7ee68273d9c",
+   "name": "Wing deflector instream structures",
+   "before": [
+    "engineered_structures"
+   ],
+   "after": [
+    "engineered_structures"
+   ]
+  },
+  {
+   "node": "camo:node_c8631ac6e8fb",
+   "name": "Decreased landslide rate",
+   "before": [
+    "soil_erosion"
+   ],
+   "after": [
+    "soil_erosion"
+   ]
+  },
+  {
+   "node": "camo:node_c966214a25b5",
+   "name": "highest relative occurrence of short, bird-dispersed multi-stemmed phanerophytes",
+   "before": [
+    "bird_abundance"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_c9a1ad841696",
+   "name": "Decline in light-demanding and non-native traits",
+   "before": [
+    "invasive_abundance"
+   ],
+   "after": [
+    "functional_traits",
+    "invasive_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_c9b46bbf985f",
+   "name": "absence of testicular abnormalities in male fathead minnow",
+   "before": [
+    "animal_condition"
+   ],
+   "after": [
+    "animal_condition"
+   ]
+  },
+  {
+   "node": "camo:node_c9d9ee458a1c",
+   "name": "Increased coefficient of variation of velocity",
+   "before": [],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_cad491aab293",
+   "name": "Decreased TBI stabilization factor",
+   "before": [
+    "soil_physical"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_cadf9704ba3f",
+   "name": "Installation of erosion control structures",
+   "before": [
+    "engineered_structures"
+   ],
+   "after": [
+    "engineered_structures"
+   ]
+  },
+  {
+   "node": "camo:node_cbe5d42a48f9_variable",
+   "name": "Ectomycorrhizal fungal OTU richness",
+   "before": [
+    "plant_richness",
+    "soil_microbial"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_cc42ee7d06f2",
+   "name": "Water chemistry approaching natural reference conditions",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_cc666091449c_variable",
+   "name": "Breeding performance of Western Yellow-breasted Chats",
+   "before": [],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_cd9c7294e7b1",
+   "name": "functional group identity of wetland plants",
+   "before": [],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_ced2fd00ac7b",
+   "name": "Increased cover of native perennial geophytes",
+   "before": [
+    "native_abundance"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_cfb6953f7419",
+   "name": "Arginine ammonification to biomass ratio",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_d0029c3e9f0c",
+   "name": "Trophic group",
+   "before": [
+    "functional_traits"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_d0e16afbaab3_variable",
+   "name": "Number of stump sprouts",
+   "before": [],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_d0e8c6f15814",
+   "name": "Exposure to swift flood flows",
+   "before": [],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_d2dc9360eee2",
+   "name": "Increased acid mine drainage generation",
+   "before": [],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_d321bc3dbdf1",
+   "name": "Decreased number of low-flow days",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_d33663dc749c",
+   "name": "Decreased number of fledglings from successful nests",
+   "before": [],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_d55069def6b4",
+   "name": "Increased proportional biomass of native annual forbs",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_d747748bc3a0",
+   "name": "Resource-conservation traits",
+   "before": [],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_d74e8e707888",
+   "name": "Native lilies",
+   "before": [
+    "native_abundance"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_d78f33a80ae4",
+   "name": "presence of mosses that typically appear under dense canopies and tolerate shading",
+   "before": [
+    "canopy_light"
+   ],
+   "after": [
+    "moss_bryophyte"
+   ]
+  },
+  {
+   "node": "camo:node_d860a573a891",
+   "name": "Increased organic C concentration in the 0–12 cm layer",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_d8b629c3b758",
+   "name": "presence of coniferous plantations",
+   "before": [
+    "tree_planting"
+   ],
+   "after": [
+    "land_use"
+   ]
+  },
+  {
+   "node": "camo:node_d8e5d5139df8",
+   "name": "Decreased TBI stabilization factor (S)",
+   "before": [
+    "soil_physical"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_d9785be2ba07_variable",
+   "name": "Cover of introduced perennial grasses",
+   "before": [
+    "invasive_abundance"
+   ],
+   "after": [
+    "invasive_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_d9808571d4e2",
+   "name": "Clearfelling in the large diameter stand",
+   "before": [],
+   "after": [
+    "clearcut_harvest"
+   ]
+  },
+  {
+   "node": "camo:node_d99c9f8229c0",
+   "name": "Distance from contamination source",
+   "before": [
+    "contaminant_exposure"
+   ],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_d9cb41429c4c_variable",
+   "name": "EROD activity in southern red-backed voles",
+   "before": [
+    "animal_condition"
+   ],
+   "after": [
+    "animal_condition"
+   ]
+  },
+  {
+   "node": "camo:node_d9d15b40e6b2",
+   "name": "Construction of a side-channel",
+   "before": [
+    "engineered_structures"
+   ],
+   "after": [
+    "engineered_structures"
+   ]
+  },
+  {
+   "node": "camo:node_dad762f44fb3",
+   "name": "Variation in TBI stabilization factor (S)",
+   "before": [
+    "soil_physical"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_db0d298c1936",
+   "name": "Increased Stave chum escapements",
+   "before": [
+    "fish_abundance"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_db10aa211eca",
+   "name": "irregular downstream stage recession",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_db3323441196",
+   "name": "Main land-use class",
+   "before": [],
+   "after": [
+    "land_use"
+   ]
+  },
+  {
+   "node": "camo:node_db51e202ebae",
+   "name": "Acid mine drainage production",
+   "before": [],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_db66ebedc6a9",
+   "name": "Heavy rainfall in June 2009",
+   "before": [],
+   "after": [
+    "climate_warming"
+   ]
+  },
+  {
+   "node": "camo:node_db81588a83df",
+   "name": "Increased PLFA diversity",
+   "before": [
+    "diversity_indices"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_dbef5ffd509c",
+   "name": "Increased probability of root sucker production",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_dcac4f9366ae",
+   "name": "increased native shrub cover",
+   "before": [
+    "plant_cover_total"
+   ],
+   "after": [
+    "native_abundance",
+    "plant_cover_total"
+   ]
+  },
+  {
+   "node": "camo:node_dd1f65d318f4",
+   "name": "increased uptake of macronutrients N, S, Ca, K, Mg, and P",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "foliar_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_ddd2f1e17f75_variable",
+   "name": "New recruitment of native perennial species",
+   "before": [
+    "natural_regeneration"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_de2dae12bdfb",
+   "name": "Increased variability of nutrient supply profiles",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_df52534cd9e2",
+   "name": "highest pH levels",
+   "before": [
+    "soil_ph_chemistry"
+   ],
+   "after": [
+    "water_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_dfb5c2b57efc",
+   "name": "Increased phosphorus supply rate",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_e01873ab6b41",
+   "name": "Increased root sucker number in the large diameter stand",
+   "before": [
+    "tree_growth"
+   ],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_e03a1a7d6263",
+   "name": "increased exchangeable Ca and topsoil pH",
+   "before": [
+    "soil_ph_chemistry"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_e06af6990a08",
+   "name": "proximity to former point sources",
+   "before": [],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_e0e39c563b9a",
+   "name": "comparable soil organic C, total N and exchangeable K contents",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_e1a1488dd981",
+   "name": "biosolids application",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "organic_soil_amendment"
+   ]
+  },
+  {
+   "node": "camo:node_e2b53690215a",
+   "name": "wet site status",
+   "before": [],
+   "after": [
+    "soil_moisture_water"
+   ]
+  },
+  {
+   "node": "camo:node_e554f29eb085",
+   "name": "Increased absolute cover of native and introduced grasses and native forbs",
+   "before": [
+    "native_abundance"
+   ],
+   "after": [
+    "invasive_abundance",
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_e65e7f46c5b8_variable",
+   "name": "Levels of organic C, total N, and exchangeable K, Ca and Mg in Bt horizons",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_e6a86e81ff74",
+   "name": "Liming and cover crop application",
+   "before": [
+    "fertilization"
+   ],
+   "after": [
+    "seeding_sowing"
+   ]
+  },
+  {
+   "node": "camo:node_e6db726b7075_variable",
+   "name": "Chance of nest parasitism",
+   "before": [],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_e7236a9f440d",
+   "name": "lower initial NSC content",
+   "before": [
+    "plant_physiology"
+   ],
+   "after": [
+    "plant_physiology"
+   ]
+  },
+  {
+   "node": "camo:node_e7565d90c586",
+   "name": "Decreased TBI stabilization factor",
+   "before": [
+    "soil_physical"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_e77447081f68",
+   "name": "higher initial non-structural carbohydrate (NSC) content",
+   "before": [
+    "plant_physiology"
+   ],
+   "after": [
+    "plant_physiology"
+   ]
+  },
+  {
+   "node": "camo:node_e7dbae3d004a_variable",
+   "name": "Biomass of other true mosses",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "biomass_productivity",
+    "moss_bryophyte"
+   ]
+  },
+  {
+   "node": "camo:node_e7e50c344c3d",
+   "name": "increased ectomycorrhizal (ECM) formation",
+   "before": [
+    "soil_microbial"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_e88ecb4d0ce2",
+   "name": "Increased probability of extinction",
+   "before": [],
+   "after": [
+    "population_size_trend"
+   ]
+  },
+  {
+   "node": "camo:node_e8b42d48de04",
+   "name": "increased EROD activity in female southern red-backed voles",
+   "before": [
+    "mammal_abundance"
+   ],
+   "after": [
+    "animal_condition"
+   ]
+  },
+  {
+   "node": "camo:node_e95598f2b0d2",
+   "name": "4-yr herb-only suppression",
+   "before": [
+    "mechanical_release_control"
+   ],
+   "after": [
+    "mechanical_release_control"
+   ]
+  },
+  {
+   "node": "camo:node_e973949aef2c",
+   "name": "Increased nitrogen application",
+   "before": [
+    "fertilization"
+   ],
+   "after": [
+    "fertilization"
+   ]
+  },
+  {
+   "node": "camo:node_e980b3141354",
+   "name": "decreased flow velocity",
+   "before": [],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_e9e1f089dac7",
+   "name": "proximity to contamination source",
+   "before": [],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_ea20aec29e61_variable",
+   "name": "Cover of native perennial graminoids or forbs",
+   "before": [
+    "native_abundance"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_ea5f0d83a531",
+   "name": "Increase in shrubs and specific plant traits",
+   "before": [
+    "population_size_trend"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_ea783997d057",
+   "name": "Increased similarity in nutrient supply profiles between reclaimed and benchmark soils",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_ea947c2b2cc3",
+   "name": "Increased foliar carbon levels",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "foliar_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_eaba5f800b16",
+   "name": "Proximity to contamination source",
+   "before": [
+    "contaminant_exposure"
+   ],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_eb5ea503520e",
+   "name": "Increased CO2 production",
+   "before": [
+    "carbon_flux"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_ec456b2b4f9c",
+   "name": "Increased mean number of inflorescences per plant",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "reproduction_flowering"
+   ]
+  },
+  {
+   "node": "camo:node_ec98c7830bb5",
+   "name": "Native perennial forbs",
+   "before": [
+    "native_abundance"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_ed309208ebf1_variable",
+   "name": "Number of fledglings from successful nests",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "reproductive_success"
+   ]
+  },
+  {
+   "node": "camo:node_edf1e4a8ef8d",
+   "name": "Urban lake conditions",
+   "before": [
+    "water_chemistry"
+   ],
+   "after": [
+    "water_chemistry"
+   ]
+  },
+  {
+   "node": "camo:node_ee997b461eff",
+   "name": "Increased root glucosamine",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "soil_microbial"
+   ]
+  },
+  {
+   "node": "camo:node_f087e3b73170_variable",
+   "name": "Percentage of returning fledglings",
+   "before": [
+    "wildlife_mortality"
+   ],
+   "after": [
+    "reproductive_success",
+    "wildlife_mortality"
+   ]
+  },
+  {
+   "node": "camo:node_f105c5f78ed6",
+   "name": "Nutrient additions in Cole's Pond",
+   "before": [
+    "fertilization"
+   ],
+   "after": [
+    "fertilization"
+   ]
+  },
+  {
+   "node": "camo:node_f130a200d190",
+   "name": "increased cover of native annuals",
+   "before": [
+    "native_abundance"
+   ],
+   "after": [
+    "native_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_f15d9096d9ac",
+   "name": "Baulk topography",
+   "before": [],
+   "after": [
+    "site_conditions"
+   ]
+  },
+  {
+   "node": "camo:node_f187a5329ec2",
+   "name": "increased total N status",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_f219b90075ad",
+   "name": "Oil addition",
+   "before": [
+    "contaminant_exposure"
+   ],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_f250020c31f2",
+   "name": "presence of high relative terrain position",
+   "before": [],
+   "after": [
+    "site_conditions"
+   ]
+  },
+  {
+   "node": "camo:node_f2769ff6c4f2",
+   "name": "increased organic C levels in surface horizons",
+   "before": [
+    "soil_organic_carbon"
+   ],
+   "after": [
+    "soil_organic_carbon"
+   ]
+  },
+  {
+   "node": "camo:node_f283a758c9b0",
+   "name": "water permanency class",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_f2e9c0297ddd_variable",
+   "name": "Percent nitrogen retranslocation",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "foliar_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_f39a297d00d7_variable",
+   "name": "Number of root suckers",
+   "before": [],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_f3e4f7eea53f",
+   "name": "increased EROD activity in southern red-backed voles",
+   "before": [
+    "animal_condition"
+   ],
+   "after": [
+    "animal_condition"
+   ]
+  },
+  {
+   "node": "camo:node_f477fae0e5ed_variable",
+   "name": "Combined above and belowground production",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "biomass_productivity"
+   ]
+  },
+  {
+   "node": "camo:node_f55db8344dcf",
+   "name": "increased topsoil total N",
+   "before": [
+    "organic_soil_amendment"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_f565bf434455",
+   "name": "Decreased Mehlich K levels",
+   "before": [
+    "soil_nutrients"
+   ],
+   "after": [
+    "soil_nutrients"
+   ]
+  },
+  {
+   "node": "camo:node_f5ec579a0c06",
+   "name": "midday gross ecosystem production levels similar to natural conditions",
+   "before": [
+    "biomass_productivity"
+   ],
+   "after": [
+    "carbon_flux"
+   ]
+  },
+  {
+   "node": "camo:node_f64eeba77cbb",
+   "name": "Instream structures in Joe Farrell's Brook",
+   "before": [
+    "engineered_structures"
+   ],
+   "after": [
+    "engineered_structures"
+   ]
+  },
+  {
+   "node": "camo:node_f71f0229df1b",
+   "name": "Increased stump sprout number in the small diameter stand",
+   "before": [
+    "tree_growth"
+   ],
+   "after": [
+    "natural_regeneration"
+   ]
+  },
+  {
+   "node": "camo:node_f80ed5cff7f4",
+   "name": "Decreased daily flows in June",
+   "before": [
+    "water_table_level"
+   ],
+   "after": [
+    "water_table_level"
+   ]
+  },
+  {
+   "node": "camo:node_f93257a0fd6c",
+   "name": "20 weeks of exposure in oiled test plots",
+   "before": [
+    "contaminant_exposure"
+   ],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_f9af272ec34f_variable",
+   "name": "Representation of traits",
+   "before": [
+    "functional_traits"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_f9f1a09b6e69_variable",
+   "name": "Cover of other mosses",
+   "before": [
+    "moss_bryophyte"
+   ],
+   "after": [
+    "moss_bryophyte"
+   ]
+  },
+  {
+   "node": "camo:node_fa05d596e32f",
+   "name": "increasing relative occurrence of tall phanerophytes",
+   "before": [
+    "community_composition"
+   ],
+   "after": [
+    "functional_traits"
+   ]
+  },
+  {
+   "node": "camo:node_fb1d2373b9da",
+   "name": "Presence of Hordeum vulgare cover crop",
+   "before": [
+    "plant_cover_total"
+   ],
+   "after": [
+    "seeding_sowing"
+   ]
+  },
+  {
+   "node": "camo:node_fb4af317ff7b",
+   "name": "Slash cover",
+   "before": [
+    "mulch_surface_cover"
+   ],
+   "after": [
+    "woody_debris_retention"
+   ]
+  },
+  {
+   "node": "camo:node_fb9ddce0afbe",
+   "name": "Presence of acid mine drainage",
+   "before": [
+    "contaminant_exposure"
+   ],
+   "after": [
+    "contaminant_exposure"
+   ]
+  },
+  {
+   "node": "camo:node_fc07ab45196e",
+   "name": "Increased root TNC contents",
+   "before": [
+    "foliar_nutrients"
+   ],
+   "after": [
+    "plant_physiology"
+   ]
+  },
+  {
+   "node": "camo:node_fc6aed9a6fc8",
+   "name": "vegetation assemblages similarity to undisturbed bogs",
+   "before": [
+    "community_composition"
+   ],
+   "after": [
+    "community_composition"
+   ]
+  },
+  {
+   "node": "camo:node_fdf227d4fd57",
+   "name": "Slight preference by salmonids during low flow periods",
+   "before": [
+    "fish_abundance"
+   ],
+   "after": [
+    "fish_abundance"
+   ]
+  },
+  {
+   "node": "camo:node_febb4004d7f3_variable",
+   "name": "Fruiting potential of Caulophyllum thalictroides",
+   "before": [
+    "reproduction_flowering"
+   ],
+   "after": [
+    "reproduction_flowering"
+   ]
+  },
+  {
+   "node": "camo:node_febe238bc497",
+   "name": "variation in AGS of birches",
+   "before": [
+    "stand_structure"
+   ],
+   "after": [
+    "stand_structure"
+   ]
+  },
+  {
+   "node": "camo:node_fec38d4482ab",
+   "name": "presence of trees, shrubs, and mosses",
+   "before": [],
+   "after": [
+    "moss_bryophyte"
+   ]
+  },
+  {
+   "node": "camo:node_ff8bc1261d11",
+   "name": "prevented soil-water pressure at -5 cm depth dropping below -100 mb",
+   "before": [
+    "soil_moisture_water"
+   ],
+   "after": [
+    "soil_moisture_water"
+   ]
+  }
+ ]
+}
