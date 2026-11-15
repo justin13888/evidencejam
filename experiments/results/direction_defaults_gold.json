@@ -1,0 +1,109 @@
+{
+  "n": 184,
+  "accuracy": 0.538,
+  "status_accuracy": 0.7772,
+  "direction_accuracy": 0.377,
+  "certainty_accuracy": 0.3852,
+  "no_evidence_precision": 0.6235,
+  "no_evidence_recall": 0.8548,
+  "edge_precision": 0.341,
+  "edge_recall": 0.5007,
+  "parse_rate": 1.0,
+  "missing": 0,
+  "calibration": {
+    "brier": 0.2524,
+    "ece": 0.062,
+    "bins": [
+      {
+        "bin": 6,
+        "n": 184,
+        "mean_conf": 0.6,
+        "accuracy": 0.538
+      }
+    ]
+  },
+  "by_tag": {
+    "answerable": {
+      "n": 122,
+      "accuracy": 0.377
+    },
+    "empty": {
+      "n": 62,
+      "accuracy": 0.8548
+    },
+    "pair": {
+      "n": 50,
+      "accuracy": 0.82
+    },
+    "trap:associational_is_not_causal": {
+      "n": 58,
+      "accuracy": 0.3966
+    },
+    "trap:comparator_reference": {
+      "n": 12,
+      "accuracy": 0.5833
+    },
+    "trap:moderators_mediators": {
+      "n": 6,
+      "accuracy": 0.5
+    },
+    "trap:negative_predicates_double_negation": {
+      "n": 6,
+      "accuracy": 0.8333
+    },
+    "trap:negative_subject_qualifiers": {
+      "n": 16,
+      "accuracy": 0.1875
+    },
+    "trap:null_is_not_decrease": {
+      "n": 30,
+      "accuracy": 0.5
+    },
+    "trap:one_study_many_edges": {
+      "n": 30,
+      "accuracy": 0.3667
+    },
+    "trap:reversed_edges": {
+      "n": 10,
+      "accuracy": 1.0
+    },
+    "trap:time_as_cause": {
+      "n": 13,
+      "accuracy": 0.3846
+    },
+    "trap:twin_edges_one_sentence": {
+      "n": 42,
+      "accuracy": 0.5
+    },
+    "trap:unchanged_is_not_null": {
+      "n": 16,
+      "accuracy": 0.5625
+    }
+  },
+  "footprint": {
+    "max_calls": 8,
+    "calls": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "cache_hits": 0,
+    "failures": 0,
+    "questions": 184,
+    "wall_s": 0.571,
+    "cpu_s": 0.529,
+    "est_wh": 0.00441,
+    "est_wh_per_question": 2.4e-05,
+    "calls_per_question": 0.0,
+    "tokens_per_question": 0.0
+  },
+  "retrieval_recall": 0.522,
+  "retrieval_precision": 0.4614,
+  "interpreter_effect_accuracy": 0.7516,
+  "interpreter_effect_n": 157,
+  "oracle": {
+    "n": 122,
+    "direction_accuracy": 0.9016,
+    "certainty_accuracy": 0.5574,
+    "edge_precision": 1.0,
+    "edge_recall": 0.8522
+  }
+}
