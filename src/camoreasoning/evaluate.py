@@ -232,7 +232,8 @@ def scorecard(res: dict) -> dict:
         | {"parse_rate": res.get("parse_rate")},
         "overall": {"n": res.get("n"), "accuracy": res.get("accuracy"), "by_gold_status": res.get("by_gold_status"),
                     "by_tag": res.get("by_tag")},
-    }  # fmt: skip
+    } | ({"by_file": {name: {k: v for k, v in scorecard(r).items() if k != "D energy+release"}
+                      for name, r in res["by_file"].items()}} if res.get("by_file") else {})  # fmt: skip
 
 
 def run_eval(
@@ -240,7 +241,8 @@ def run_eval(
 ) -> dict:
     from camoreasoning.pipeline import Pipeline, make_context
 
-    gold = load_devsets(paths, split)
+    files = list(paths or sorted(DEVSETS_DIR.glob("*.yaml")))
+    gold = load_devsets(files, split)
     if not gold:
         return {"n": 0, "note": f"no labelled items in {DEVSETS_DIR} (see ROADMAP: gold dev set)"}
     runs = []
@@ -253,7 +255,24 @@ def run_eval(
     if repeat > 1:
         keys = [{a.id: (a.status, a.direction) for a in ans} for ans, _, _ in runs]
         result["flip_rate"] = round(sum(len({k[g.id] for k in keys}) > 1 for g in gold) / len(gold), 4)
+    if by_file := score_by_file(files, split, gold, answers, traces, settings):
+        result["by_file"] = by_file
     return result
+
+
+def score_by_file(
+    files: Sequence[Path], split: str | None, gold: Sequence[GoldItem], answers: Sequence[Answer],
+    traces: Sequence[Trace], settings: Settings,
+) -> dict:  # fmt: skip
+    """One score per devset file (#50): the sets measure different things (class wording estimates the
+    hidden set; node wording stress-tests linking), and a pooled number hides which one a change moved.
+    Same run as the pooled score; the footprint is only pooled. Empty when fewer than two files score."""
+    out = {}
+    for p in files:
+        ids = {g.id for g in load_devsets([p], split)}
+        if sub := [g for g in gold if g.id in ids]:
+            out[Path(p).name] = score(sub, answers, None, traces, settings)
+    return out if len(out) > 1 else {}
 
 
 def run_calibrate(settings: Settings, split: str = "dev", paths: Sequence[Path] | None = None) -> dict:

@@ -151,3 +151,44 @@ def test_taxonomy_dir_env():
 def test_fixture_devset_is_marked_smoke_only():
     head = FIXTURE_DEVSET.read_text(encoding="utf-8").splitlines()[0]
     assert "SMOKE FIXTURE ONLY" in head and yaml.safe_load(FIXTURE_DEVSET.read_text())["items"]
+
+
+def test_eval_scores_each_devset_file(tmp_path):
+    """#50: two devset files get one score each, next to the pooled score."""
+    items = yaml.safe_load(FIXTURE_DEVSET.read_text())["items"]
+    half = len(items) // 2
+    a, b = tmp_path / "a.yaml", tmp_path / "b.yaml"
+    a.write_text(yaml.safe_dump({"items": items[:half]}))
+    b.write_text(yaml.safe_dump({"items": items[half:]}))
+    res = run_eval(Settings(taxonomy_dir=FIXTURE_TAX), None, 1, [a, b])
+    by = res["by_file"]
+    assert set(by) == {"a.yaml", "b.yaml"} and by["a.yaml"]["n"] + by["b.yaml"]["n"] == res["n"]
+    card = scorecard(res)
+    assert set(card["by_file"]) == {"a.yaml", "b.yaml"} and "D energy+release" not in card["by_file"]["a.yaml"]
+    assert "by_file" not in run_eval(Settings(taxonomy_dir=FIXTURE_TAX), None, 1, [a])
+
+
+def test_strategy_overrides_reject_unknown_stages():
+    """#51: a typo'd or padded stage key used to be ignored silently, so eval scored the default."""
+    assert load_settings({}, strategies={" grader": "rubric "}).strategies == {"grader": "rubric"}
+    assert load_settings({"CAMOREASONING_STRATEGY_GRADER": "rubric"}).strategies == {"grader": "rubric"}
+    with pytest.raises(ValueError, match="unknown stage 'bogus'"):
+        load_settings({}, strategies={"bogus": "x"})
+    with pytest.raises(ValueError, match="unknown stage 'GRADR'"):
+        load_settings({"CAMOREASONING_STRATEGY_GRADR": "rubric"})
+
+
+@pytest.mark.parametrize("argv", [["-s", "bogus=x"], ["-s", "grader"], ["-s", "grader=rubric -s linker=phrase"],
+                                  ["-s", "grader=nope"]])  # fmt: skip
+def test_cli_rejects_bad_strategy_overrides(argv, capsys):
+    from camoreasoning.cli import main
+
+    with pytest.raises(SystemExit) as exc:
+        main([*argv, "strategies"])
+    assert exc.value.code == 2 and "error:" in capsys.readouterr().err
+
+
+def test_cli_accepts_padded_override(capsys):
+    from camoreasoning.cli import main
+
+    assert main(["-s", " grader=rubric", "strategies"]) == 0
