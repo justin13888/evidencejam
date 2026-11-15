@@ -18,7 +18,7 @@ hooks {
     ["commit-msg"] {
         steps {
             ["conventional-commit"] {
-                check = "hk util check-conventional-commit --allowed-types \(commitTypes) {{commit_msg_file}}"
+                check = "hk util check-conventional-commit --allowed-types \(commitTypes) \"{{commit_msg_file}}\""
             }
         }
     }
