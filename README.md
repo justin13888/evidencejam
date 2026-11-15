@@ -33,7 +33,7 @@ To ask your own question:
 ./ask.sh "What effect does mulch have on invasive species abundance?"
 ```
 
-`ask` accepts free wording. It uses the same rules, and sends any side they can't place confidently to the LLM in one call with a 3 s timeout. If the question still can't be read, it says which side it couldn't place and suggests the nearest classes. It writes its pages to `outputs/ask/`, so it never overwrites a run's pages.
+`ask` accepts free wording. It uses the same rules, and sends any side they can't place confidently to the LLM in one call with an 8 s timeout. If the question still can't be read, it says which side it couldn't place and suggests the nearest classes. It writes its pages to `outputs/ask/`, so it never overwrites a run's pages.
 
 ### Screenshots
 
@@ -84,14 +84,14 @@ The locked rules behind these steps (D1–D6) are in [ROADMAP.md](ROADMAP.md).
 
 ## Results
 
-Dev split, default pipeline, first measured at commit `205ca6c` (#92) and re-checked at `b5fd109`, where they reproduce exactly. These are model-labelled gold sets in [`experiments/devsets/`](experiments/devsets/), not the hidden set.
+Dev split, default pipeline, first measured at commit `205ca6c` (#92) and re-measured on 2026-11-15 after the `precise` citer became the default (#100): only cited-edge precision and recall changed. These are model-labelled gold sets in [`experiments/devsets/`](experiments/devsets/), not the hidden set.
 
 | | class dev (n = 83, hidden-set wording) | node dev (n = 184, independent wording) |
 |---|---|---|
 | Accuracy (status + direction) | **0.687** | **0.630** |
 | no_evidence precision / recall | 0.94 / 0.89 | 0.71 / 0.82 |
 | Direction accuracy (answerable) | 0.54 | 0.54 |
-| Cited-edge precision / recall | 0.47 / 0.56 | 0.44 / 0.56 |
+| Cited-edge precision / recall | 0.48 / 0.59 | 0.44 / 0.57 |
 | Calibration error (ECE) | 0.087 | 0.030 |
 | LLM calls · tokens per question | **0 · 0** | **0 · 0** |
 

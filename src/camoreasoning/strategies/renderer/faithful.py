@@ -50,7 +50,7 @@ from camoreasoning.contracts import Candidates, Certainty, Verdict
 from camoreasoning.registry import register
 from camoreasoning.schema import CERTAINTY_MODIFIER, VERY_LOW_TEMPLATE
 from camoreasoning.strategies.grader.rubric import is_associational
-from camoreasoning.strategies.renderer.searched import SearchedRenderer, is_plural, phrase
+from camoreasoning.strategies.renderer.searched import SearchedRenderer, is_plural, phrase, side_label
 
 MAX_NAMES = 3
 ORDER = (1, -1, 0, None)
@@ -258,6 +258,9 @@ class FaithfulRenderer(SearchedRenderer):
         q = f.parsed.question.text or ""
         cause, cause_label = phrase(f.cause, ctx, q, "the intervention")
         outcome, _ = phrase(f.outcome, ctx, q, "the outcome")
+        if f.via == "llm":  # an LLM link can be broader than the words asked ("dogwood" -> native species):
+            cause, cause_label = side_label(f.cause, ctx) or cause, True  # name what the evidence covers
+            outcome = side_label(f.outcome, ctx) or outcome
         included = verdict.included
         associational = bool(included) and all(is_associational(v, ctx) for v in included)
         undirected = bool(f.outcome.classes and f.outcome.classes[0].id in UNDIRECTED) or bool(

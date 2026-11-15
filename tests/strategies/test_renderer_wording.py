@@ -239,3 +239,16 @@ def test_sweep_no_pasted_question_text(strategies, monkeypatch, tmp_path):
     for a in answers:
         if a["answer"] == UNPARSED:
             assert a["searched_for"].endswith(UNPARSED), a
+
+
+# --- LLM-linked sides name what the evidence covers -------------------------------------------------------
+
+
+def test_llm_link_uses_class_labels_not_the_narrower_words_asked():
+    """'dogwood' linked by the LLM to a broad outcome class must not be claimed in the answer."""
+    c = cands("burning", "dogwood abundance", question="We burned and the dogwood is back. Burn again?")
+    c = Candidates(Frame(c.frame.parsed, c.frame.cause, c.frame.outcome, "llm", 1.0), c.cause_nodes,
+                   c.outcome_nodes, forward=c.forward)  # fmt: skip
+    text = render(verdict("decrease"), c)
+    assert "dogwood" not in text.lower()
+    assert text.lower().startswith("invasive species removal probably decreases species richness"), text
