@@ -50,7 +50,7 @@ def test_contrast_matches_wcag_reference_values():
 
 def test_stylesheet_tokens_are_read_for_both_schemes():
     s = schemes((PRODUCT_DIR / "style.css").read_text(encoding="utf-8"))
-    assert s["light"]["bg"] == "#ffffff" and s["dark"]["bg"] == "#121212"
+    assert s["light"]["bg"] == "#fbfbfd" and s["dark"]["bg"] == "#0f1115"
     assert {"fg", "muted", "link", "line", "d1", "d4"} <= s["dark"].keys()
 
 
