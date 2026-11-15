@@ -7,42 +7,59 @@ V1 is the frozen scorer and equals `mise run eval`. Holdout is reported, never t
 - **V2**: V1 + certainty exact
 - **V3**: V1 + certainty within one ordinal level
 - **V4**: partial credit: mean of status, direction and certainty hits
-- Reweighted: gold-empty items weighted to a 1/3 share. Floor: accuracy >= 0.5.
+- **V2@rule, V3@rule, V4@rule**: the same, with certainty gold from that rule instead of the labelled field
+- Reweighted: gold-empty items weighted to a 1/3 share, for accuracy and calibration. Floor: accuracy >= 0.5.
 - Certainty gold rules: labelled (devset field), D4 recomputed, median, mode, max, min of edge grades.
-- ECE: 10 and 15 equal-width bins, 10 equal-mass bins.
+- ECE: 10 and 15 equal-width bins, 10 equal-mass bins (tied confidences share a bin).
+- Ranges span every variant, raw and reweighted. Edge precision matches `evaluate.score`.
+- Null-vs-effect: gold-answered items; a no_evidence answer counts as a miss.
 
 | row | pooled_dev | class_dev | node_dev | pooled_holdout | class_holdout | node_holdout |
 |---|---|---|---|---|---|---|
 | n | 267 | 83 | 184 | 68 | 16 | 52 |
 | gold empty share | 0.3596 | 0.4217 | 0.3315 | 0.3529 | 0.5 | 0.3077 |
 | accuracy, current (V1) | 0.6479 | 0.6867 | 0.6304 | 0.4118 | 0.4375 | 0.4038 |
-| accuracy, best | 0.7228 (V4 raw) | 0.759 (V4 raw) | 0.7068 (V4 reweighted_empty_1_3) | 0.5588 (V4 raw) | 0.5208 (V4 raw) | 0.5748 (V4 reweighted_empty_1_3) |
-| accuracy, worst | 0.5736 (V2 reweighted_empty_1_3) | 0.5452 (V2 reweighted_empty_1_3) | 0.5815 (V2 raw) | 0.3737 (V2 reweighted_empty_1_3) | 0.375 (V1 reweighted_empty_1_3) | 0.3654 (V2 raw) |
-| floor holds under every variant | True | True | True | False | False | False |
+| accuracy, best | 0.7228 (V4 raw) | 0.759 (V4 raw) | 0.7068 (V4 reweighted_empty_1_3) | 0.5588 (V4 raw) | 0.5417 (V4@median raw) | 0.5748 (V4 reweighted_empty_1_3) |
+| accuracy, worst | 0.4645 (V2@max reweighted_empty_1_3) | 0.4202 (V2@max reweighted_empty_1_3) | 0.4783 (V2@max raw) | 0.2677 (V2@mode reweighted_empty_1_3) | 0.2917 (V2@mode reweighted_empty_1_3) | 0.25 (V2@median raw) |
+| floor holds under every variant | False | False | False | False | False | False |
+| variants below the floor | 5 | 5 | 2 | 26 | 31 | 26 |
 | certainty accuracy, best | 0.5556 (labelled) | 0.5 (labelled) | 0.5772 (labelled) | 0.4091 (labelled) | 0.5 (median) | 0.4167 (labelled) |
 | certainty accuracy, worst | 0.4035 (max) | 0.3542 (max) | 0.4228 (max) | 0.2727 (max) | 0.375 (labelled) | 0.25 (max) |
 | D4 recomputed agrees with label | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 |
 | ECE, current (V1, 10 bins) | 0.0479 | 0.0867 | 0.0304 | 0.1882 | 0.1625 | 0.1962 |
-| ECE, best | 0.0157 (ece10 V2) | 0.0096 (ece10 V2) | 0.0185 (ece10 V2) | 0.0412 (ece10 V4) | 0.0792 (ece10 V4) | 0.0295 (ece10 V4) |
-| ECE, worst | 0.1318 (ece_mass10 V4) | 0.159 (ece10 V4) | 0.1467 (ece_mass10 V2) | 0.2529 (ece_mass10 V2) | 0.4625 (ece_mass10 V1) | 0.25 (ece_mass10 V2) |
-| Brier, best | 0.1538 (V4) | 0.1332 (V4) | 0.1631 (V4) | 0.1633 (V4) | 0.2142 (V4) | 0.1476 (V4) |
-| Brier, worst | 0.2431 (V2) | 0.2419 (V2) | 0.2437 (V2) | 0.2835 (V2) | 0.2725 (V1) | 0.2869 (V2) |
-| log-loss, best | 0.6232 (V4) | 0.6085 (V4) | 0.6298 (V4) | 0.6897 (V4) | 0.7051 (V4) | 0.685 (V4) |
-| log-loss, worst | 0.6794 (V2) | 0.6769 (V2) | 0.6805 (V2) | 0.7613 (V2) | 0.7389 (V1) | 0.7681 (V2) |
-| edges, best | 0.8713 (existence_only) | 0.9583 (existence_only) | 0.8374 (existence_only) | 0.8182 (existence_only) | 0.7741 (precision) | 0.8611 (existence_only) |
-| edges, worst | 0.456 (f1) | 0.4506 (f1) | 0.4581 (f1) | 0.3891 (f1) | 0.3985 (f1) | 0.3871 (f1) |
-| null-vs-effect accuracy | 0.883 | 0.7917 | 0.9187 | 0.75 | 0.75 | 0.75 |
+| ECE, best | 0.003 (ece10 V3@max raw) | 0.0008 (ece10 V3@mode reweighted_empty_1_3) | 0.0016 (ece10 V3@max reweighted_empty_1_3) | 0.0412 (ece10 V4 raw) | 0.0583 (ece10 V4@median raw) | 0.0252 (ece10 V4 reweighted_empty_1_3) |
+| ECE, worst | 0.1355 (ece10 V2@max reweighted_empty_1_3) | 0.1798 (ece10 V2@max reweighted_empty_1_3) | 0.1217 (ece10 V2@max raw) | 0.3323 (ece10 V2@mode reweighted_empty_1_3) | 0.3083 (ece10 V2@mode reweighted_empty_1_3) | 0.35 (ece10 V2@median raw) |
+| Brier, best | 0.1348 (V4@max reweighted_empty_1_3) | 0.1043 (V4@max reweighted_empty_1_3) | 0.1471 (V4@max raw) | 0.1418 (V4@mode reweighted_empty_1_3) | 0.1887 (V4@mode reweighted_empty_1_3) | 0.1271 (V4@median raw) |
+| Brier, worst | 0.2671 (V2@max reweighted_empty_1_3) | 0.276 (V2@max reweighted_empty_1_3) | 0.2643 (V2@max raw) | 0.3065 (V2@mode reweighted_empty_1_3) | 0.3017 (V2@mode reweighted_empty_1_3) | 0.31 (V2@median raw) |
+| log-loss, best | 0.6232 (V4 raw) | 0.6085 (V4 raw) | 0.6297 (V4 reweighted_empty_1_3) | 0.6897 (V4 raw) | 0.6967 (V4@median raw) | 0.6832 (V4 reweighted_empty_1_3) |
+| log-loss, worst | 0.728 (V2@max reweighted_empty_1_3) | 0.7459 (V2@max reweighted_empty_1_3) | 0.7224 (V2@max raw) | 0.8078 (V2@mode reweighted_empty_1_3) | 0.798 (V2@mode reweighted_empty_1_3) | 0.8149 (V2@median raw) |
+| edges, best | 0.8713 (existence_only) | 0.9583 (existence_only) | 0.8374 (existence_only) | 0.8182 (existence_only) | 0.625 (any_overlap) | 0.8611 (existence_only) |
+| edges, worst | 0.4512 (precision) | 0.4506 (f1) | 0.4428 (precision) | 0.3891 (f1) | 0.3985 (f1) | 0.3871 (f1) |
+| null-vs-effect accuracy | 0.7602 | 0.75 | 0.7642 | 0.6136 | 0.625 | 0.6111 |
 | searched_for names both classes | 1.0 (n=49) | 1.0 (n=31) | 1.0 (n=18) | 1.0 (n=10) | 1.0 (n=7) | 1.0 (n=3) |
 | parse-fail share (< 0.05) | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | calls_per_question | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 
-## Accuracy per variant
+## Accuracy per variant (raw / reweighted; * = below the 0.5 floor)
 
-| set | V1 raw | V1 rw | V2 raw | V2 rw | V3 raw | V3 rw | V4 raw | V4 rw |
-|---|---|---|---|---|---|---|---|---|
-| pooled_dev | 0.6479 | 0.6399 | 0.5843 | 0.5736 | 0.633 | 0.6243 | 0.7228 | 0.7179 |
-| class_dev | 0.6867 | 0.6563 | 0.5904 | 0.5452 | 0.6627 | 0.6286 | 0.759 | 0.7397 |
-| node_dev | 0.6304 | 0.6309 | 0.5815 | 0.5822 | 0.6196 | 0.6201 | 0.7065 | 0.7068 |
-| pooled_holdout | 0.4118 | 0.404 | 0.3824 | 0.3737 | 0.4118 | 0.404 | 0.5588 | 0.5556 |
-| class_holdout | 0.4375 | 0.375 | 0.4375 | 0.375 | 0.4375 | 0.375 | 0.5208 | 0.4861 |
-| node_holdout | 0.4038 | 0.4144 | 0.3654 | 0.3773 | 0.4038 | 0.4144 | 0.5705 | 0.5748 |
+| variant | pooled_dev | class_dev | node_dev | pooled_holdout | class_holdout | node_holdout |
+|---|---|---|---|---|---|---|
+| V1 | 0.6479 / 0.6399 | 0.6867 / 0.6563 | 0.6304 / 0.6309 | 0.4118* / 0.404* | 0.4375* / 0.375* | 0.4038* / 0.4144* |
+| V2 | 0.5843 / 0.5736 | 0.5904 / 0.5452 | 0.5815 / 0.5822 | 0.3824* / 0.3737* | 0.4375* / 0.375* | 0.3654* / 0.3773* |
+| V2@D4 | 0.5843 / 0.5736 | 0.5904 / 0.5452 | 0.5815 / 0.5822 | 0.3824* / 0.3737* | 0.4375* / 0.375* | 0.3654* / 0.3773* |
+| V2@median | 0.5019 / 0.4879* | 0.506 / 0.448* | 0.5 / 0.5009 | 0.2941* / 0.2828* | 0.4375* / 0.375* | 0.25* / 0.2662* |
+| V2@mode | 0.5019 / 0.4879* | 0.506 / 0.448* | 0.5 / 0.5009 | 0.2794* / 0.2677* | 0.375* / 0.2917* | 0.25* / 0.2662* |
+| V2@max | 0.4794* / 0.4645* | 0.4819* / 0.4202* | 0.4783* / 0.4792* | 0.2794* / 0.2677* | 0.375* / 0.2917* | 0.25* / 0.2662* |
+| V2@min | 0.5094 / 0.4957* | 0.506 / 0.448* | 0.5109 / 0.5117 | 0.2794* / 0.2677* | 0.375* / 0.2917* | 0.25* / 0.2662* |
+| V3 | 0.633 / 0.6243 | 0.6627 / 0.6286 | 0.6196 / 0.6201 | 0.4118* / 0.404* | 0.4375* / 0.375* | 0.4038* / 0.4144* |
+| V3@D4 | 0.633 / 0.6243 | 0.6627 / 0.6286 | 0.6196 / 0.6201 | 0.4118* / 0.404* | 0.4375* / 0.375* | 0.4038* / 0.4144* |
+| V3@median | 0.6255 / 0.6165 | 0.6506 / 0.6147 | 0.6141 / 0.6147 | 0.3971* / 0.3889* | 0.4375* / 0.375* | 0.3846* / 0.3958* |
+| V3@mode | 0.6217 / 0.6126 | 0.6386 / 0.6008 | 0.6141 / 0.6147 | 0.3971* / 0.3889* | 0.4375* / 0.375* | 0.3846* / 0.3958* |
+| V3@max | 0.603 / 0.5931 | 0.6145 / 0.573 | 0.5978 / 0.5984 | 0.3971* / 0.3889* | 0.4375* / 0.375* | 0.3846* / 0.3958* |
+| V3@min | 0.6255 / 0.6165 | 0.6506 / 0.6147 | 0.6141 / 0.6147 | 0.3971* / 0.3889* | 0.4375* / 0.375* | 0.3846* / 0.3958* |
+| V4 | 0.7228 / 0.7179 | 0.759 / 0.7397 | 0.7065 / 0.7068 | 0.5588 / 0.5556 | 0.5208 / 0.4861* | 0.5705 / 0.5748 |
+| V4@D4 | 0.7228 / 0.7179 | 0.759 / 0.7397 | 0.7065 / 0.7068 | 0.5588 / 0.5556 | 0.5208 / 0.4861* | 0.5705 / 0.5748 |
+| V4@median | 0.6991 / 0.6932 | 0.739 / 0.7165 | 0.6812 / 0.6815 | 0.5441 / 0.5404 | 0.5417 / 0.5139 | 0.5449 / 0.5502 |
+| V4@mode | 0.7004 / 0.6945 | 0.743 / 0.7212 | 0.6812 / 0.6815 | 0.5392 / 0.5354 | 0.5208 / 0.4861* | 0.5449 / 0.5502 |
+| V4@max | 0.6904 / 0.6841 | 0.7309 / 0.7073 | 0.6721 / 0.6725 | 0.5294 / 0.5253 | 0.5208 / 0.4861* | 0.5321 / 0.5378 |
+| V4@min | 0.7066 / 0.701 | 0.747 / 0.7258 | 0.6884 / 0.6888 | 0.5392 / 0.5354 | 0.5208 / 0.4861* | 0.5449 / 0.5502 |
