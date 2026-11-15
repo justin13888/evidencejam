@@ -120,12 +120,19 @@ def _study(doc: dict, doc_id: str) -> str:
     return f"{who}.{title} {link}"
 
 
-def _table(caption: str, cols: Sequence[str], rows: Sequence[str]) -> str:
-    head = "".join(f'<th scope="col">{c}</th>' for c in cols)
+def _wrap(cid: str, caption: str, rest: str, cls: str = "") -> str:
+    """A table in a horizontal scroller. The scroller takes keyboard focus and is named by the caption
+    (WCAG 2.1.1), because a wide table can overflow a 320 px screen and hold no link to tab to."""
+    table = f'<table class="{cls}">' if cls else "<table>"
     return (
-        f'<div class="wrap"><table><caption>{caption}</caption><thead><tr>{head}</tr></thead>'
-        f"<tbody>{''.join(rows)}</tbody></table></div>"
+        f'<div class="wrap" tabindex="0" role="region" aria-labelledby="{cid}">{table}'
+        f'<caption id="{cid}">{caption}</caption>{rest}</table></div>'
     )
+
+
+def _table(cid: str, caption: str, cols: Sequence[str], rows: Sequence[str]) -> str:
+    head = "".join(f'<th scope="col">{c}</th>' for c in cols)
+    return _wrap(cid, caption, f"<thead><tr>{head}</tr></thead><tbody>{''.join(rows)}</tbody>")
 
 
 def _section(sid: str, title: str, intro: str, content: str) -> str:
@@ -162,7 +169,7 @@ def _studies(ctx: Context, votes: Sequence[EdgeVote], doc_effects: dict[str, int
             by_doc[v.doc_id].append(v)
     cols = ("Claim and quote", "Comparator", "Effect on outcome", "Certainty, language", "Edge")
     tables = []
-    for doc_id, vs in by_doc.items():
+    for n, (doc_id, vs) in enumerate(by_doc.items(), 1):
         vote = STUDY_VOTE[doc_effects[doc_id]] if doc_id in doc_effects else NO_STUDY_VOTE
         rows = [
             f"<tr><td>{_claim(ctx, v.edge_id)}</td><td>{_comparator(ctx, v.edge_id)}</td><td>{EFFECT[v.effect]}</td>"
@@ -171,7 +178,7 @@ def _studies(ctx: Context, votes: Sequence[EdgeVote], doc_effects: dict[str, int
             for v in vs
         ]
         caption = f"{_study(ctx.graph.doc(vs[0].edge_id), doc_id)}. Study vote: <strong>{vote}</strong>"
-        tables.append(_table(caption, cols, rows))
+        tables.append(_table(f"study-{n}", caption, cols, rows))
     return _section(
         "studies",
         "Votes by study",
@@ -196,7 +203,9 @@ def _sign_trace(ctx: Context, trace: Trace, votes: Sequence[EdgeVote], doc_effec
             f"<td>{'yes' if v.included else 'no'}</td><td>{_reason(v.reason)}</td></tr>"
         )
     cols = ("Claim", "Cause side", "Predicate", "Outcome side", "Product", "Read as", "Counted", "Rule")
-    table = _table("Sign of each claim on the question's outcome", cols, rows) if rows else "<p>None.</p>"
+    table = (
+        _table("sign-trace-t", "Sign of each claim on the question's outcome", cols, rows) if rows else "<p>None.</p>"
+    )
     tally: dict[str, int] = defaultdict(int)
     for effect in doc_effects.values():
         tally[STUDY_VOTE[effect]] += 1
@@ -233,7 +242,11 @@ def _excluded(ctx: Context, trace: Trace, votes: Sequence[EdgeVote]) -> str:
         f"<code>{escape(eid)}</code></td></tr>"
         for eid in near
     ]
-    content = _table("Claims not counted", ("Claim and quote", "Why not counted", "Source"), rows) if rows else ""
+    content = (
+        _table("excluded-t", "Claims not counted", ("Claim and quote", "Why not counted", "Source"), rows)
+        if rows
+        else ""
+    )
     return _section(
         "excluded",
         "Excluded edges",
@@ -255,7 +268,9 @@ def _reversed(ctx: Context, trace: Trace) -> str:
         "Reversed edges",
         "Claims that run from the outcome to the cause. They say the outcome affects the cause, not the "
         "other way round, so they are never counted.",
-        _table("Claims from outcome to cause", ("Claim and quote", "Source"), rows) if rows else "<p>None.</p>",
+        _table("reversed-t", "Claims from outcome to cause", ("Claim and quote", "Source"), rows)
+        if rows
+        else "<p>None.</p>",
     )
 
 
@@ -280,11 +295,9 @@ class HtmlExtras(ExtrasWriter):
             f"<td>{escape(a.status)}</td><td>{escape(str(a.direction or ''))}</td><td>{a.confidence:.0%}</td></tr>"
             for a, t in zip(answers, traces)
         )
-        index = (
-            '<h1>Answers</h1><p><a href="gapmap.html">Evidence gap map</a></p><div class="wrap"><table>'
-            '<caption>All questions</caption><thead><tr><th scope="col">Id</th><th scope="col">Question</th>'
-            '<th scope="col">Status</th><th scope="col">Direction</th><th scope="col">Confidence</th></tr></thead>'
-            f"<tbody>{rows}</tbody></table></div>"
+        cols = ("Id", "Question", "Status", "Direction", "Confidence")
+        index = '<h1>Answers</h1><p><a href="gapmap.html">Evidence gap map</a></p>' + _table(
+            "all-t", "All questions", cols, [rows]
         )
         return [_rel(_page(ctx, "index.html", "Answers", index)), _rel(self.gap_map(ctx))]
 
@@ -308,8 +321,12 @@ class HtmlExtras(ExtrasWriter):
         )
         body = (
             "<h1>Evidence gap map</h1><p>Number of studies with at least one claim from each intervention or condition "
-            '(rows) to each outcome (columns). "gap" means the graph has no such claim.</p><div class="wrap"><table>'
-            f"<caption>Studies per intervention and outcome</caption><thead><tr><td></td>{head}</tr></thead>"
-            f"<tbody>{body_rows}</tbody></table></div>"
+            '(rows) to each outcome (columns). "gap" means the graph has no such claim.</p>'
+            + _wrap(
+                "grid-t",
+                "Studies per intervention and outcome",
+                f'<thead><tr><th scope="col">Intervention or condition</th>{head}</tr></thead>'
+                f"<tbody>{body_rows}</tbody>",
+            )
         )
         return _page(ctx, "gapmap.html", "Evidence gap map", body)

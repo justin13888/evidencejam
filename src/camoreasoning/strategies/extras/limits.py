@@ -23,7 +23,7 @@ from pathlib import Path
 
 from camoreasoning.components import Context
 from camoreasoning.config import CALIBRATION_DIR, RESULTS_DIR
-from camoreasoning.strategies.extras.baseline import _page, _rel
+from camoreasoning.strategies.extras.baseline import _page, _rel, _wrap
 
 REPORT = CALIBRATION_DIR / "holdout_report.json"
 INVENTORY = RESULTS_DIR / "trap_inventory.json"
@@ -110,12 +110,12 @@ def _summary(items: list[dict], tags: list[str]) -> str:
             f"<td>{len(tagged)}</td><td>{right}</td><td>{len(tagged) - right}</td>"
             f"<td>{right / len(tagged):.0%}</td></tr>"
         )
-    return (
-        '<div class="wrap"><table class="traps"><caption>Holdout questions per trap tag</caption><thead><tr>'
-        '<th scope="col">Trap tag</th><th scope="col">Questions</th><th scope="col">Correct</th>'
-        '<th scope="col">Missed</th><th scope="col">Accuracy</th></tr></thead><tbody>'
-        + "".join(rows)
-        + "</tbody></table></div>"
+    return _wrap(
+        "traps-t",
+        "Holdout questions per trap tag",
+        '<thead><tr><th scope="col">Trap tag</th><th scope="col">Questions</th><th scope="col">Correct</th>'
+        '<th scope="col">Missed</th><th scope="col">Accuracy</th></tr></thead><tbody>' + "".join(rows) + "</tbody>",
+        "traps",
     )
 
 
@@ -137,12 +137,13 @@ def _tag_section(items: list[dict], tag: str, why: dict[str, str]) -> str:
         if total > len(misses)
         else ("the only miss" if total == 1 else f"all {total} misses")
     )
-    return (
-        f'<section>{head}{expl}<div class="wrap"><table><caption>{escape(tag[len(TRAP) :])}: {shown}, '
-        'in question-id order</caption><thead><tr><th scope="col">Id</th><th scope="col">Question</th>'
-        '<th scope="col">Correct answer</th><th scope="col">Our answer</th><th scope="col">Our confidence</th>'
-        f"</tr></thead><tbody>{rows}</tbody></table></div></section>"
+    table = _wrap(
+        f"{escape(tag.replace(':', '-'))}-t",
+        f"{escape(tag[len(TRAP) :])}: {shown}, in question-id order",
+        '<thead><tr><th scope="col">Id</th><th scope="col">Question</th><th scope="col">Correct answer</th>'
+        f'<th scope="col">Our answer</th><th scope="col">Our confidence</th></tr></thead><tbody>{rows}</tbody>',
     )
+    return f"<section>{head}{expl}{table}</section>"
 
 
 def _reliability(report: dict) -> str:
@@ -175,13 +176,22 @@ def _reliability(report: dict) -> str:
             "on, so the confidence we state runs high."
         )
         + "</p>"
-        '<div class="wrap"><table class="reliability"><caption>Holdout reliability: stated confidence against how '
-        'often the answer was right</caption><thead><tr><th scope="col">Confidence bin</th><th scope="col">'
-        'Questions</th><th scope="col">Mean confidence</th><th scope="col">Accuracy</th></tr></thead><tbody>'
-        + "".join(rows)
-        + '</tbody></table></div><div class="wrap"><table class="files"><caption>Holdout by devset file</caption>'
-        '<thead><tr><th scope="col">File</th><th scope="col">Questions</th><th scope="col">Accuracy</th>'
-        f'<th scope="col">ECE</th><th scope="col">Brier</th></tr></thead><tbody>{files}</tbody></table></div>'
+        + _wrap(
+            "reliability-t",
+            "Holdout reliability: stated confidence against how often the answer was right",
+            '<thead><tr><th scope="col">Confidence bin</th><th scope="col">Questions</th>'
+            '<th scope="col">Mean confidence</th><th scope="col">Accuracy</th></tr></thead><tbody>'
+            + "".join(rows)
+            + "</tbody>",
+            "reliability",
+        )
+        + _wrap(
+            "files-t",
+            "Holdout by devset file",
+            '<thead><tr><th scope="col">File</th><th scope="col">Questions</th><th scope="col">Accuracy</th>'
+            f'<th scope="col">ECE</th><th scope="col">Brier</th></tr></thead><tbody>{files}</tbody>',
+            "files",
+        )
     )
 
 

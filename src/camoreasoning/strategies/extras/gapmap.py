@@ -24,7 +24,7 @@ from statistics import median
 from camoreasoning.components import Context
 from camoreasoning.contracts import Answer, Trace
 from camoreasoning.registry import register
-from camoreasoning.strategies.extras.baseline import HtmlExtras, _page, _rel, _slug
+from camoreasoning.strategies.extras.baseline import HtmlExtras, _page, _rel, _slug, _wrap
 from camoreasoning.strategies.extras.limits import write_limits
 
 MEMO = "extras.gapmap.run"
@@ -119,10 +119,14 @@ class GapMapExtras(HtmlExtras):
             + (f"<li>No evidence for any outcome: {escape(', '.join(empty_rows))}</li>" if empty_rows else "")
             + "</ul>"
             f"<h2>Where the graph is densest</h2><ol>{dense_li}</ol>"
-            '<h2>The grid</h2><div class="wrap"><table class="gapmap">'
-            "<caption>Studies per intervention or condition (rows) and outcome (columns)</caption>"
-            f'<thead><tr><th scope="col">Intervention or condition</th>{head}</tr></thead>'
-            f"<tbody>{''.join(rows)}</tbody></table></div>"
+            "<h2>The grid</h2>"
+            + _wrap(
+                "grid-t",
+                "Studies per intervention or condition (rows) and outcome (columns)",
+                f'<thead><tr><th scope="col">Intervention or condition</th>{head}</tr></thead>'
+                f"<tbody>{''.join(rows)}</tbody>",
+                "gapmap",
+            )
         )
         return _page(ctx, "gapmap.html", "Evidence gap map", body)
 
