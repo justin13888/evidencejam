@@ -111,6 +111,33 @@ def test_asking_about_the_removal_flips_back(graph, ctx):
     assert r.verdict.direction == "increase"
 
 
+def link_cause(make_ctx, text: str):
+    """The default linker's cause side for "What effect does <text> have on plant cover?", real taxonomy."""
+    q = Question("q", f"What effect does {text} have on plant cover?")
+    frames = registry.get("linker").link([ParsedQuestion(q, text, "plant cover", True)], make_ctx(tax=load_taxonomy()))
+    return frames[0].cause
+
+
+@pytest.mark.parametrize(
+    ("text", "cid"),
+    [("cessation of synthetic estrogen addition", "contaminant_exposure"),  # D-Q0206
+     ("abandonment of peat harvesting", "peat_extraction")],  # D-Q0207
+)  # fmt: skip
+def test_asking_about_an_ending_flips_the_class(make_ctx, text, cid):
+    """#61: a cause that ends something links its class at polarity -1, as the node-level removal above."""
+    assert [(r.id, r.polarity) for r in link_cause(make_ctx, text).classes] == [(cid, -1)]
+
+
+@pytest.mark.parametrize(
+    ("text", "cid"),
+    [("invasive fish removal", "invasive_removal"),  # the class already is the removal
+     ("vegetation removal", "mechanical_release_control"),  # through its synonym "vegetation removal"
+     ("time since road abandonment", "time_since_disturbance")],  # elapsed time, not an ending
+)  # fmt: skip
+def test_an_ending_the_class_already_names_is_not_flipped(make_ctx, text, cid):
+    assert [(r.id, r.polarity) for r in link_cause(make_ctx, text).classes] == [(cid, 1)]
+
+
 def test_unchanged_outcome_is_a_null(graph, ctx):
     """'Soil exchangeable K levels ... remained relatively stable during the chronosequence.'"""
     r = ask(graph, ctx, *ends(graph, "camo:edge_07b5d3056850"))
