@@ -247,11 +247,21 @@ flowchart LR
     - **Decision (override of "stronger LLM"):** the auditor is not a stronger model than the labeller, because none was available. Accepted on purpose at the PR #37 review; agreement above was measured under that setup.
     - **First eval of the default pipeline (`mise run eval`, dev, n = 142):** accuracy 0.47, ECE 0.128, 0 calls per question, no_evidence recall 0.97, retrieval recall 0.07. Oracle direction is 0.76 and oracle certainty 0.54. `mise run eval` now scores dev only; `mise run eval:holdout` scores the 36 holdout items.
     - **For the rubric owner:** D3's "unchanged cause" rule, read literally, turns 3 exact-match questions into no_evidence. **Resolved (#9 audit):** nulls vote, so D-Q0022 and D-Q0025 are now `no_effect`, and D-Q0028 and D-Q0069 gained a null edge.
-- [ ] **11. Grade certainty.** ★ 4/5 · B · `grader`
+- [x] **11. Grade certainty.** ★ 4/5 · B · `grader`
   - **Why:** certainty is part of D17. The graph has no `high` grades, so the grade has to be derived from edge grades, study count, agreement and design (randomized vs observational).
   - **Done when:** the rule is written in the strategy docstring and scores at least 75% certainty accuracy on dev.
   - **Points:** D17.
   - **Progress (Sat Nov 14, #31):** `grader/rubric` implements D4: the median grade, one level lower if mixed or all associational, never high. `OBSERVATIONAL_SINGLE_STUDY_DROP` is off and reads `evidential_basis.evidence_types`, since `study_design` is unpopulated. **Pending:** ≥75% on dev.
+  - **Done (Sat Nov 14, #42):** `grader=rubric` is the default. All runs are 0-call, on the dev split, with holdout untouched (baseline → rubric):
+
+    | Gold set | Accuracy | ECE | Oracle certainty | Certainty, end to end |
+    |---|---|---|---|---|
+    | `mise run eval` default dev (n = 267) | 0.52 → 0.52 | 0.079 → 0.079 | 0.57 → **0.92** | 0.39 → 0.45 |
+    | `class_gold` (n = 83) | 0.49 → 0.49 | 0.106 → 0.106 | 0.60 → **0.98** | 0.40 → 0.38 |
+    | `gold_annotated` (n = 184) | 0.53 → 0.53 | 0.067 → 0.067 | 0.55 → **0.89** | 0.38 → 0.48 |
+
+    - **Closed on:** the stream B self-check, oracle certainty ≥ 0.75. `calls_per_question` stays 0.
+    - **Still open:** end-to-end certainty is limited by retrieval and linking (item 5); on `class_gold` it dips by one of 48 answerable items (19 → 18).
 - [ ] **12. Calibrate confidence.** ★ 4/5 · C · `calibrator`
   - **Why:** 14 points reward confidence that matches how often we're right.
   - **Done when:**

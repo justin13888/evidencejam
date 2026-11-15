@@ -7,7 +7,7 @@ DEFAULTS: dict[str, str] = {
     "retriever": "baseline",
     "interpreter": "sentence",
     "aggregator": "studies",
-    "grader": "baseline",
+    "grader": "rubric",
     "calibrator": "baseline",
     "citer": "baseline",
     "renderer": "faithful",
