@@ -5,7 +5,7 @@ DEFAULTS: dict[str, str] = {
     "parser": "freeform",
     "linker": "cessation",
     "retriever": "focus",
-    "interpreter": "sentence",
+    "interpreter": "unsigned",
     "aggregator": "studies",
     "grader": "rubric",
     "calibrator": "baseline",
