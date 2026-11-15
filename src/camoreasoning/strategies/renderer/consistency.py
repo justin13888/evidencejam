@@ -42,8 +42,8 @@ GROUP_EFFECT = {
 }
 GROUP = re.compile(r"(?:^|, | and )(\d+) (?:reports? )?(" + "|".join(map(re.escape, GROUP_EFFECT)) + r") \(")
 STATES = {
-    "increase": re.compile(r"\bincreases?\b|\ban increase\b|associated with higher|a positive association"),
-    "decrease": re.compile(r"\bdecreases?\b|\ba decrease\b|associated with lower|a negative association"),
+    "increase": re.compile(r"\bincreases?\b|\ban increase\b|associated with (?:a )?higher|a positive association"),
+    "decrease": re.compile(r"\bdecreases?\b|\ba decrease\b|associated with (?:a )?lower|a negative association"),
     "no_effect": re.compile(r"no detectable (?:effect|association)"),
     "mixed": re.compile(r"\bdisagree\b|mixed results|\bare mixed\b"),
     "unclear": re.compile(r"\bunclear\b|no direction can be read"),
