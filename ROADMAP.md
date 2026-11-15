@@ -165,13 +165,14 @@ flowchart LR
 
 ## Phase 2 — Core engine (Sat)
 
-- [ ] **3. Build the taxonomy (class inventory).** ★ 5/5 · A · `taxonomy_builder`
+- [x] **3. Build the taxonomy (class inventory).** ★ 5/5 · A · `taxonomy_builder`
   - **Why:** hidden questions name broad classes, like "mulch & surface cover" or "invasive / non-native species abundance", while nodes are specific to one paper. Every answer goes through these classes.
   - **Done when:**
     - Every concept in the CHALLENGE examples and the practice questions maps to a class.
     - Near-misses stay separate: native vs non-native, survival vs growth, cover vs richness.
     - Roughly 30–80 cause classes (interventions and conditions) and 40–100 outcome classes, each with synonyms.
   - **Points:** D17, C14 and P9. Almost all 40 scripted accuracy points rest on it. Also J40: it gives the gap map its axes.
+  - **Done (Sun Nov 15, re-checked at `4c328b9`):** the committed `taxonomy/classes.yaml` is identical to `taxonomy/curated_classes.yaml` (same 82 classes, labels and synonyms), so the curated inventory is what the judged run uses. The default `baseline` taxonomy_builder is a pass-through that keeps the committed file, so flipping it to `curated` would change no output. There are 38 cause, 41 outcome and 3 `both` classes: 41 on the cause side and 44 on the outcome side, all with synonyms. Every concept in the CHALLENGE example and the 10 `questions.yaml` questions has a class, including riparian retention, salt marsh realignment, drought, seedbed type, acid deposition and ecosite. Near-misses have separate classes: `native_abundance`/`invasive_abundance`, `tree_seedling_survival`/`tree_growth`, `plant_cover_total`/`plant_richness`, `wildlife_mortality`/`animal_condition`. Whether the linker *finds* those classes is item 5 (#88).
 - [ ] **4. Label nodes with classes and polarity (offline LLM).** ★ 5/5 · A · `node_labeler`
   - **Why:** retrieval and sign reading depend on knowing what each node is and which way it points ("removal of buckthorn" = invasive abundance −1).
   - **Done when:**
@@ -180,6 +181,7 @@ flowchart LR
     - At least 80% of edges have both endpoints labelled.
     - The artifact is committed and the build is reproducible.
   - **Points:** D17, C14, P9.
+  - **Open (Sun Nov 15, #87):** not met. Recounted at `4c328b9`: 4,203/5,554 edges (75.7%) have both ends labelled, against ≥80%. Precision has only been self-audited (best 86/100). #87 carries both bars, with an independent-model precision audit.
 - [ ] **5. Link questions to classes.** ★ 5/5 · A · `linker`
   - **Why:** a wrong class pair is a wrong answer, and judges also phrase their own questions.
   - **Done when:**
@@ -188,6 +190,7 @@ flowchart LR
     - Questions with a low match margin go to the LLM, all in one batched call.
   - **Progress (Sat Nov 14):** `linker/phrase` is the default. It is 0-call: `lexical_v2` first. When a side gets no class, it falls back to class-phrase containment ("mulch application" contains `mulch*`), then to close node matches. Retrieval recall on gold dev rises from 0.10 to 0.52 (`gold_annotated`) and from 0.37 to 0.43 (`class_gold`). **Pending:** the ≥95% class-link check, and the LLM fallback (`assisted`) for low margins.
   - **Points:** D17, C14, E12.
+  - **Open (Sun Nov 15, #88):** not met. Measured at `4c328b9` with the default `cessation` linker, 0 calls: 77/83 (92.8%) class-dev questions link both gold classes, against ≥95%; paraphrases 35/41. #88 lists the six misses.
 - [x] **6. Aggregate direction.** ★ 5/5 · B · `interpreter`, `aggregator`
   - **Why:** direction is the biggest share of D17. It needs schema sign composition, one vote per study, nulls counted as findings, and "mixed" when studies disagree.
   - **Done when:** at least 85% direction accuracy on dev answerable items, and the thresholds are tuned on dev only.
@@ -221,6 +224,7 @@ flowchart LR
   - **Bar (Sun Nov 15, #70):** the owner chose a status-matched bar: each trap's accuracy on its gold-answered items is at or above accuracy on all gold-answered items (0.491, n = 171). `reversed_edges` has no gold-answered items and is compared on gold no_evidence (1.000 against 0.844). `eval` now reports `by_gold_status` overall and per tag. `test_trap_accuracy_is_at_least_overall` asserts the bar per trap, with no whole-test xfail. Six of the eight meet it. `associational_is_not_causal` (0.469) and `negative_subject_qualifiers` (0.476) fall short and stay strict xfail cases, tracked in #76. This departs from the letter of #70, whose answer said to drop the strict xfail and whose done-when said the test passes without it: the whole-test xfail is gone, but these two per-trap xfails remain because the bar was not lowered to pass them. #76 closes that gap. The item stays unticked until they pass.
   - **Update (Sun Nov 15, #76):** the default interpreter is now `unsigned`, which reads an associational edge that names no direction as an unsigned vote. Dev accuracy rises from 0.618 to 0.637, and the answered-only bar rises from 0.491 to 0.521. `associational_is_not_causal` (0.531) and `negative_subject_qualifiers` (0.524) now meet it. Under the higher bar, `unchanged_is_not_null` (0.50, n = 16), `moderators_mediators` (0.50, n = 4) and `near_miss_classes` (0.50, n = 4) fall short. They are strict xfail cases, tracked in #79. Their misses come from retrieval and scope. The item stays unticked until they pass.
   - **Known limit (Sun Nov 15, #79):** the owner accepts the three short traps as a known limit. Measured at `01ee010` (dev, n = 267, 0 calls), answered accuracy is 0.50 for `unchanged_is_not_null` (8/16), `moderators_mediators` (2/4) and `near_miss_classes` (2/4), against the answered-only bar of 0.5205 (n = 171). The misses come from retrieval and scope (#79 lists them), not interpretation. No tuning was done on dev items, and the bar is unchanged. Their strict xfails in `tests/strategies/test_traps.py` stay as they are, so a fix that lifts any of them fails the test until its mark is removed. The item stays unticked.
+  - **Open (Sun Nov 15, #89):** the three xfails are re-confirmed at `4c328b9`. #89 tracks clearing them at the unchanged bar.
 - [x] **8. Decide no_evidence and write searched_for.** ★ 5/5 · B · `aggregator`, `renderer`
   - **Why:** about 1/3 of hidden questions have no evidence, and a confident wrong "answered" costs both D17 and C14.
   - **Done when:** `no_evidence` precision and recall are both at least 0.9 on dev, and `searched_for` names the classes, attributes and relation searched, plus any reverse edges found.
@@ -339,10 +343,11 @@ flowchart LR
   - **Done when:** the page shows real holdout failures by trap tag, the reliability table, and what we deliberately don't do (multi-hop, effect sizes).
   - **Points:** J40.
   - **Done (Sun Nov 15):** the default `gapmap` extras now also writes `limits.html` (`strategies/extras/limits.py`), linked from `gapmap.html`. It is built only from #12's single holdout pass (`experiments/calibration/holdout_report.json`), with no second holdout run, and says so: that pass measured the pipeline at 82fa03d, before #65, #68 and #69, with the `binned` calibrator, which is not the default. For each of the 12 trap tags on the holdout it lists questions, correct and missed counts, the first sentence of the trap inventory's explanation, and the first 3 misses in item-id order, unfiltered. Each miss shows the correct answer, ours and our confidence. Then come the pooled reliability table (10 bins), the ECE miss (0.187 against the 0.05 target; constant 0.6 scores 0.218), one line per devset file, and the two non-goals: multi-hop chains and effect sizes. `tests/strategies/test_limits.py` recomputes every row from the report and checks it against the page. A missing or malformed report gives a page that says so, and nothing raises.
-- [ ] **21. Write the README method and extend guide.** ★ 3/5 · D · docs
+- [x] **21. Write the README method and extend guide.** ★ 3/5 · D · docs
   - **Why:** judges score method and fit, and craft and reuse.
   - **Done when:** the README explains the method in 4 steps with the headline eval numbers, and another team could add a strategy in 10 minutes.
   - **Points:** J40.
+  - **Done (Sun Nov 15, #73):** the README has the method in 4 steps, a results table, and a 10-minute extend guide (write a strategy, run the contract tests, eval, flip the default).
 
 ## Phase 4 — Release (Sun PM)
 
