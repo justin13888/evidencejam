@@ -1,0 +1,272 @@
+[
+ {
+  "center": false,
+  "MIN_COS": 0.3,
+  "MIN_GAP": 0.02,
+  "syn_right": 19,
+  "dev_right": 1,
+  "dev_wrong": 6,
+  "dev_skip": 2
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.3,
+  "MIN_GAP": 0.05,
+  "syn_right": 18,
+  "dev_right": 1,
+  "dev_wrong": 2,
+  "dev_skip": 6
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.3,
+  "MIN_GAP": 0.1,
+  "syn_right": 15,
+  "dev_right": 1,
+  "dev_wrong": 0,
+  "dev_skip": 8
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.4,
+  "MIN_GAP": 0.02,
+  "syn_right": 19,
+  "dev_right": 1,
+  "dev_wrong": 6,
+  "dev_skip": 2
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.4,
+  "MIN_GAP": 0.05,
+  "syn_right": 18,
+  "dev_right": 1,
+  "dev_wrong": 2,
+  "dev_skip": 6
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.4,
+  "MIN_GAP": 0.1,
+  "syn_right": 15,
+  "dev_right": 1,
+  "dev_wrong": 0,
+  "dev_skip": 8
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.5,
+  "MIN_GAP": 0.02,
+  "syn_right": 19,
+  "dev_right": 1,
+  "dev_wrong": 6,
+  "dev_skip": 2
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.5,
+  "MIN_GAP": 0.05,
+  "syn_right": 18,
+  "dev_right": 1,
+  "dev_wrong": 2,
+  "dev_skip": 6
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.5,
+  "MIN_GAP": 0.1,
+  "syn_right": 15,
+  "dev_right": 1,
+  "dev_wrong": 0,
+  "dev_skip": 8
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.6,
+  "MIN_GAP": 0.02,
+  "syn_right": 19,
+  "dev_right": 1,
+  "dev_wrong": 6,
+  "dev_skip": 2
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.6,
+  "MIN_GAP": 0.05,
+  "syn_right": 18,
+  "dev_right": 1,
+  "dev_wrong": 2,
+  "dev_skip": 6
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.6,
+  "MIN_GAP": 0.1,
+  "syn_right": 15,
+  "dev_right": 1,
+  "dev_wrong": 0,
+  "dev_skip": 8
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.7,
+  "MIN_GAP": 0.02,
+  "syn_right": 18,
+  "dev_right": 0,
+  "dev_wrong": 5,
+  "dev_skip": 4
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.7,
+  "MIN_GAP": 0.05,
+  "syn_right": 18,
+  "dev_right": 0,
+  "dev_wrong": 2,
+  "dev_skip": 7
+ },
+ {
+  "center": false,
+  "MIN_COS": 0.7,
+  "MIN_GAP": 0.1,
+  "syn_right": 15,
+  "dev_right": 0,
+  "dev_wrong": 0,
+  "dev_skip": 9
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.3,
+  "MIN_GAP": 0.02,
+  "syn_right": 19,
+  "dev_right": 1,
+  "dev_wrong": 5,
+  "dev_skip": 3
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.3,
+  "MIN_GAP": 0.05,
+  "syn_right": 19,
+  "dev_right": 1,
+  "dev_wrong": 5,
+  "dev_skip": 3
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.3,
+  "MIN_GAP": 0.1,
+  "syn_right": 18,
+  "dev_right": 1,
+  "dev_wrong": 0,
+  "dev_skip": 8
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.4,
+  "MIN_GAP": 0.02,
+  "syn_right": 19,
+  "dev_right": 1,
+  "dev_wrong": 5,
+  "dev_skip": 3
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.4,
+  "MIN_GAP": 0.05,
+  "syn_right": 19,
+  "dev_right": 1,
+  "dev_wrong": 5,
+  "dev_skip": 3
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.4,
+  "MIN_GAP": 0.1,
+  "syn_right": 18,
+  "dev_right": 1,
+  "dev_wrong": 0,
+  "dev_skip": 8
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.5,
+  "MIN_GAP": 0.02,
+  "syn_right": 19,
+  "dev_right": 1,
+  "dev_wrong": 5,
+  "dev_skip": 3
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.5,
+  "MIN_GAP": 0.05,
+  "syn_right": 19,
+  "dev_right": 1,
+  "dev_wrong": 5,
+  "dev_skip": 3
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.5,
+  "MIN_GAP": 0.1,
+  "syn_right": 18,
+  "dev_right": 1,
+  "dev_wrong": 0,
+  "dev_skip": 8
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.6,
+  "MIN_GAP": 0.02,
+  "syn_right": 18,
+  "dev_right": 1,
+  "dev_wrong": 5,
+  "dev_skip": 3
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.6,
+  "MIN_GAP": 0.05,
+  "syn_right": 18,
+  "dev_right": 1,
+  "dev_wrong": 5,
+  "dev_skip": 3
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.6,
+  "MIN_GAP": 0.1,
+  "syn_right": 18,
+  "dev_right": 1,
+  "dev_wrong": 0,
+  "dev_skip": 8
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.7,
+  "MIN_GAP": 0.02,
+  "syn_right": 18,
+  "dev_right": 0,
+  "dev_wrong": 4,
+  "dev_skip": 5
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.7,
+  "MIN_GAP": 0.05,
+  "syn_right": 18,
+  "dev_right": 0,
+  "dev_wrong": 4,
+  "dev_skip": 5
+ },
+ {
+  "center": true,
+  "MIN_COS": 0.7,
+  "MIN_GAP": 0.1,
+  "syn_right": 18,
+  "dev_right": 0,
+  "dev_wrong": 0,
+  "dev_skip": 9
+ }
+]

@@ -1,0 +1,82 @@
+{
+ "class_gold": {
+  "file": "experiments/devsets/class_gold.yaml",
+  "n": 83,
+  "linker": null,
+  "counts": {
+   "correct": 55,
+   "ans:downstream": 17,
+   "ans:no_gold_edge": 7,
+   "empty:answered": 4
+  },
+  "side_empty": []
+ },
+ "gold_annotated": {
+  "file": "experiments/devsets/gold_annotated.yaml",
+  "n": 184,
+  "linker": null,
+  "counts": {
+   "correct": 110,
+   "ans:no_gold_edge": 30,
+   "ans:downstream": 24,
+   "empty:answered": 11,
+   "ans:side_empty": 9
+  },
+  "side_empty": [
+   {
+    "id": "D-Q0033",
+    "q": "What effect does proximity to linear disturbances have on large mammal movement?",
+    "cause": true,
+    "outcome": false
+   },
+   {
+    "id": "D-Q0082",
+    "q": "What effect does peat thickness have on aquatic plant assemblage presence?",
+    "cause": true,
+    "outcome": false
+   },
+   {
+    "id": "D-Q0085",
+    "q": "What effect does organic matter input have on macroinvertebrate diversity?",
+    "cause": true,
+    "outcome": false
+   },
+   {
+    "id": "D-Q0087",
+    "q": "What effect does fish farm closure have on sediment organic matter concentration?",
+    "cause": true,
+    "outcome": false
+   },
+   {
+    "id": "D-Q0103",
+    "q": "What effect does treatment type have on hydrocarbon degradation rate?",
+    "cause": false,
+    "outcome": true
+   },
+   {
+    "id": "D-Q0187",
+    "q": "What effect does organic matter accumulation have on water table decline?",
+    "cause": true,
+    "outcome": false
+   },
+   {
+    "id": "D-Q0196",
+    "q": "What effect does large tree planting have on tree toppling?",
+    "cause": false,
+    "outcome": true
+   },
+   {
+    "id": "D-Q0216",
+    "q": "What effect does absence of ground protection barrier have on forest floor disturbance?",
+    "cause": true,
+    "outcome": false
+   },
+   {
+    "id": "D-Q0222",
+    "q": "What effect does wildfire have on unrecovered forest area?",
+    "cause": false,
+    "outcome": true
+   }
+  ]
+ }
+}

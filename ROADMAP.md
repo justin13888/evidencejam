@@ -367,5 +367,10 @@ flowchart LR
 
 ## Stretch (only if all ★5 items are done)
 
-- [ ] **24. Local static embeddings for linking.** ★ 2/5 · A · `linker`
+- [x] **24. Local static embeddings for linking.** ★ 2/5 · A · `linker`
   - Only if lexical + LLM linking misses on dev. The weights would have to be committed and numpy added. Points: D17.
+  - **Done (Sun Nov 15): built and measured, not recommended.** `linker/embed` (0 calls, pure Python, not default) is `cessation` plus trimmed GloVe vectors, used only for a side every lexical step leaves empty. The 4.4 MB vectors file is not committed; `experiments/embeddings/build_vectors.py` rebuilds it.
+    - Gold dev vs `cessation`: class dev 0.663 → 0.663, node dev 0.598 → 0.603. Class dev has no empty sides (`experiments/embeddings/link_misses.py`).
+    - Independent probe, not tuned on (`experiments/embeddings/synonym_probe.py`): 80 graph edges reworded by a model that saw only node wording. Of the 63 sides `cessation` leaves empty, embed links 1 right and 6 wrong ("weedkiller use" → land use). Generic GloVe does not know ecology wording.
+    - Side finding: on the same rewording `cessation` gets 63 right, 34 wrong and 63 empty of 160 sides. `ask` is covered by its LLM fallback (#18); the batch run is not, but hidden questions follow graph wording.
+    - Do not flip the default to `embed`.
