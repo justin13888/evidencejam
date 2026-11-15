@@ -1,4 +1,7 @@
-"""Issue #9 audit: relabel class-level items where a recall auditor found edges the gold pool missed.
+"""Issue #9 audit, round 1 (superseded): relabel class items where a recall auditor found edges the pool missed.
+
+Round 2 relabelled every item with the recall edges already in its candidates, so this script and its
+outputs (now in experiments/gold/class_round1/) are kept as the record of round 1 only.
 
     PYTHONPATH=src python experiments/devsets/class_set.py build          # adds meta.recall from found_part*.jsonl
     PYTHONPATH=src python -m camoreasoning annotate export class_gold --chunk 10   # recall edges appended last

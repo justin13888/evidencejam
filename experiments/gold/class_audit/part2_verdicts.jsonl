@@ -1,20 +1,20 @@
-{"id": "C-C0021", "ok": "y", "comment": "Both increase/moderate; model omits e23 and e56 (both +1), and no edge has an opposite sign."}
-{"id": "C-C0095", "ok": "y", "comment": "Both no_effect/moderate with the same five edges and signs."}
-{"id": "C-C0027", "ok": "y", "comment": "Both mixed/very_low with the same woody-debris and slash edges and signs."}
-{"id": "C-C0025", "ok": "y", "comment": "Both no_evidence: hatchery genetic diversity is not a Shannon/evenness index."}
-{"id": "C-C0055", "ok": "y", "comment": "Both decrease/moderate from glyphosate diversity edges e1 and e8; richness excluded."}
-{"id": "C-C0018", "ok": "n", "comment": "Model counts water table position as soil water content (mixed/very_low); I treat water table as a separate class and soil anoxia as not moisture, so no_evidence."}
-{"id": "C-C0089", "ok": "y", "comment": "Both no_evidence; active layer depth, canopy openness and the calendar temperature trend excluded."}
-{"id": "C-C0016", "ok": "n", "comment": "Model drops the lake trout rehabilitation-trend edges (e15/e45/e56 +1) as calendar year, giving no_effect; with them I get mixed. Certainty is low in both."}
-{"id": "C-C0090", "ok": "y", "comment": "Both decrease/low; model drops the elk time-since-release edges, but its e12/e23 match mine and nothing is opposite."}
-{"id": "C-C0066", "ok": "y", "comment": "Identical edge set and signs; both mixed/very_low."}
-{"id": "C-C0035", "ok": "n", "comment": "Model signs e4/e13 +1 from ordination-axis loadings and omits the biocontrol time-passage nulls (e35/e45), giving increase; I set e4/e13 to null, include e35/e45 as 0, and get mixed. Certainty is very_low in both."}
-{"id": "C-C0061", "ok": "y", "comment": "Both mixed/low with e25 +1, e53 +1, e57 -1; NPP excluded."}
-{"id": "C-C0043", "ok": "y", "comment": "Same nine deer/moose edges and signs; both decrease/moderate."}
-{"id": "C-C0044", "ok": "y", "comment": "Both no_evidence: no amendment cause with a reproductive outcome."}
-{"id": "C-C0062", "ok": "y", "comment": "Both increase/moderate; model excludes liming and I include it, but every shared edge has the same sign."}
-{"id": "C-C0073", "ok": "n", "comment": "Model counts submergent and bryophyte cover as native abundance (increase/low); I keep only drainage-to-native-cover e38 (increase/very_low). Certainty differs, and no edge is opposite."}
-{"id": "C-C0040", "ok": "y", "comment": "Both no_evidence: no temperature/microclimate cause with a composition outcome."}
-{"id": "C-C0057", "ok": "y", "comment": "Both no_evidence; e54 is reversed."}
-{"id": "C-C0029", "ok": "y", "comment": "Both no_evidence: seedling diameter read as tree growth, not stand structure or basal area."}
-{"id": "C-C0026", "ok": "y", "comment": "Both increase/very_low; I also include e7 (+1), which is not opposite."}
+{"id": "C-C0027", "ok": "y", "comment": "Same edges (woody debris/slash -> vegetation cover), mixed across two studies, very_low."}
+{"id": "C-C0055", "ok": "y", "comment": "Same glyphosate -> diversity edges; richness-only edges excluded by both; decrease moderate."}
+{"id": "C-C0018", "ok": "y", "comment": "Both no_evidence: water table and anoxia are not soil moisture; e1 is CO2."}
+{"id": "C-C0021", "ok": "n", "comment": "Model counts e58 (mowing+burning+glyphosate combo) which ties er.29 study, giving mixed/low; I excluded the combo node and got increase/moderate."}
+{"id": "C-C0025", "ok": "y", "comment": "Both no_evidence: genetic diversity of hatchery fish is not a Shannon/evenness index."}
+{"id": "C-C0095", "ok": "y", "comment": "Same edges; COGROY study majority 0 plus e48 0 gives no_effect moderate."}
+{"id": "C-C0035", "ok": "n", "comment": "Direction matches (mixed) but model adds e35/e45 time passage (moderate) giving low; I excluded calendar time and kept ordination nulls e4/e13, giving very_low."}
+{"id": "C-C0089", "ok": "y", "comment": "Both no_evidence: canopy openness, active layer and 1938 climate trend are not time-since-disturbance -> microclimate."}
+{"id": "C-C0061", "ok": "y", "comment": "Same single edge e25 (time after disturbance -> CO2 sink), increase moderate."}
+{"id": "C-C0090", "ok": "y", "comment": "Same time-since-acid-recovery -> copepod survival edges, decrease low."}
+{"id": "C-C0016", "ok": "y", "comment": "Both no_evidence: fish edges use calendar/reserve time; copepods are not fish."}
+{"id": "C-C0066", "ok": "y", "comment": "Identical 15-edge set and effects; mixed very_low."}
+{"id": "C-C0075", "ok": "y", "comment": "Same lone e11 null (released salmon offspring), no_effect low; soft vs hard release excluded."}
+{"id": "C-C0073", "ok": "n", "comment": "Model answers increase from e10/e12/e24, but none of those outcomes is stated as native species (submergent plants, bryophytes, total cover); I label no_evidence."}
+{"id": "C-C0070", "ok": "y", "comment": "Both no_evidence: only component covers (understory, herb, shrub, native) or biomass."}
+{"id": "C-C0046", "ok": "n", "comment": "I count hybrid poplar planting vs no-nurse-tree control -> seedling mortality unchanged (e14, e60) as no_effect moderate; model gives no_evidence."}
+{"id": "C-C0028", "ok": "y", "comment": "Same single edge e5 (soil moisture -> lower seedling regeneration), decrease low."}
+{"id": "C-C0079", "ok": "y", "comment": "Same edges (residual trees 0, debris piles +1, riparian reserve -1), mixed very_low."}
+{"id": "C-C0082", "ok": "y", "comment": "Both no_evidence: no wildfire edge reaches NEE/GEP/ER."}
+{"id": "C-C0074", "ok": "y", "comment": "Both no_evidence: burning edges never reach water table."}

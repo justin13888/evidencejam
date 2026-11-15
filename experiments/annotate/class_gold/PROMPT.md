@@ -19,6 +19,14 @@ Rubric (locked decisions, ROADMAP "Decisions"):
   is qualified `unchanged` (the schema encodes nulls as negated, never through `unchanged`). (D3)
 - Edges that do not vote: predicates moderates, mediates, precedes, regulates (non-directional), and
   non-null edges (`negated: false`) whose cause node is `unchanged`. Leave them out of `edges`. (D3)
+- Class membership is strict (round 2). An edge counts only if its node is plainly a kind or case of the
+  class as worded. If a narrower neighbouring concept describes the node better, it is not an instance: a
+  water table is not soil moisture, plant flowering is not (animal) breeding success, modelled habitat area
+  is not fish abundance, and a restoration method that never mentions water is not rewetting.
+- Variant-vs-variant contrasts do not vote (round 2). The question asks what the cause does, so an edge
+  must compare the cause with its absence, or more of it with less. An edge comparing two kinds of the
+  cause (exponential vs conventional fertilization, subsoil type A vs B, soft vs hard release) leaves both
+  arms treated: leave it out of `edges`.
 - An edge whose outcome is a variance share, an ordination axis, or "explains X% of variation" has no
   usable sign: effect null.
 - One vote per study (`study`): the majority effect among that study's listed edges with effect 1, -1 or 0.
