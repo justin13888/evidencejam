@@ -598,6 +598,7 @@ classes:
   - shrub cover
   - understory cover
   - understorey cover
+  - vegetative competition
   description: Total or group-level cover.
 - id: bare_ground
   kind: outcome
@@ -841,7 +842,6 @@ classes:
   - groundwater level
   - hydroperiod
   - inundation
-  - flooding
   - flooding depth
   - stream flow
   - streamflow

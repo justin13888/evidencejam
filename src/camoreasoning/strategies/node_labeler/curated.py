@@ -46,7 +46,9 @@ INVERTED = {  # class -> name pattern meaning the opposite end of the class conc
     "wildlife_mortality": re.compile(r"\bmortality\b"),
     "water_table_level": re.compile(r"\b(depth|deeper)\b"),
 }
-ELAPSED_TIME = {"time_since_disturbance"}  # "time since recovery to pH 6" is the driver, even beside an outcome
+# Natural drivers keep their cause label beside an outcome match: "time since recovery to pH 6" and
+# "higher summer temperatures" are the driver, not a pH or microclimate measurement.
+DRIVERS = {"time_since_disturbance", "climate_warming"}
 EXCLUSION_CLASSES = {"grazing_browsing"}  # "deer exclusion" = grazing absent even if qualifier says occurred
 MAX_PER_NODE = 2
 CHUNK = 40
@@ -113,7 +115,7 @@ def _prefer(found: list[tuple[str, int]], text: str, cause_only: set[str], inter
         else:
             found = [f for f in found if f[0] not in ANIMAL | PLANT_ONLY | GENERIC]
     if not intervention and any(c not in cause_only for c, _ in found):  # "survival of transplants" is an outcome
-        found = [f for f in found if f[0] not in cause_only - ELAPSED_TIME]
+        found = [f for f in found if f[0] not in cause_only - DRIVERS]
     if "natural_regeneration" in ids:
         found = [f for f in found if f[0] != "stand_structure"]
     ids = {c for c, _ in found}

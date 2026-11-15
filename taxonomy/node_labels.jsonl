@@ -100,7 +100,7 @@
 {"node_id": "camo:node_00b801f324c5", "class_id": "population_size_trend", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_a9ce8ef84ccd", "class_id": "population_size_trend", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_c440239aaeb3", "class_id": "soil_temperature", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_eb88302b21be", "class_id": "soil_temperature", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_eb88302b21be", "class_id": "climate_warming", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_33695a460713", "class_id": "stand_structure", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_318fa7d7ebde", "class_id": "stand_structure", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_c61d0d5b0af6", "class_id": "mammal_abundance", "polarity": -1, "score": 0.9, "source": "lexical"}
@@ -983,7 +983,6 @@
 {"node_id": "camo:node_c10b88d784ea", "class_id": "plant_cover_total", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_6763f2d2a0d9", "class_id": "soil_moisture_water", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_24952470f1ba", "class_id": "soil_moisture_water", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_9f680a010ac1", "class_id": "water_table_level", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_4abbb33515a7", "class_id": "mulch_surface_cover", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_ffc7c75ac4ef", "class_id": "tree_seedling_survival", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_0a618bb4afff", "class_id": "population_size_trend", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -2065,8 +2064,6 @@
 {"node_id": "camo:node_91bf23701d98", "class_id": "site_conditions", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_48e24859e488", "class_id": "site_conditions", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_cd62a0a3498a", "class_id": "water_table_level", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_177a74fb0e96", "class_id": "water_table_level", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_0a21533e577d", "class_id": "water_table_level", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_1b68d80bebf3", "class_id": "tree_species_composition", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_4ebb9cb4d620", "class_id": "mechanical_release_control", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_e09580fdb3c5", "class_id": "mechanical_release_control", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -3703,8 +3700,8 @@
 {"node_id": "camo:node_9d03d2c4822c", "class_id": "tree_growth", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_908a3e50723f", "class_id": "foliar_nutrients", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_c7629a343627", "class_id": "water_chemistry", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_94b93433f58b", "class_id": "tree_species_composition", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_db59d04e2cfa", "class_id": "tree_species_composition", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_94b93433f58b", "class_id": "plant_cover_total", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_db59d04e2cfa", "class_id": "plant_cover_total", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_501a2bbaa02e_variable", "class_id": "tree_seedling_survival", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_710685a663d0_variable", "class_id": "tree_seedling_survival", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_18009853c9aa", "class_id": "population_size_trend", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -3965,7 +3962,7 @@
 {"node_id": "camo:node_1082ead125e9", "class_id": "tree_growth", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_39a82eb3931c", "class_id": "tree_seedling_survival", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_dd95f1a4cedf", "class_id": "community_composition", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_62dbde6b4fbe", "class_id": "soil_temperature", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_62dbde6b4fbe", "class_id": "climate_warming", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_ce3884902110", "class_id": "bare_ground", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_fc4fe22b1595", "class_id": "peatland_rewetting", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_f9ff47d5c6d8", "class_id": "restoration_general", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -4605,7 +4602,6 @@
 {"node_id": "camo:node_322b67413ed2", "class_id": "seeding_sowing", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_b32b3bb2da21", "class_id": "community_composition", "polarity": 0, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_f1871f7958d7_variable", "class_id": "soil_nutrients", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_56dc5ee33df7", "class_id": "water_table_level", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_d421c26dfcf6", "class_id": "soil_erosion", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_a72d6fb54d5e", "class_id": "population_size_trend", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_503e2058a191", "class_id": "invasive_abundance", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -4797,7 +4793,6 @@
 {"node_id": "camo:node_6aa0ffe8b1e3", "class_id": "tree_seedling_survival", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_067d3cabc37d", "class_id": "tree_species_composition", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_d1328c30f57c", "class_id": "tree_seedling_survival", "polarity": -1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_2567f21edd1a", "class_id": "water_table_level", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_a0331dce7d5b", "class_id": "plant_cover_total", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_a70fb3f6eec5", "class_id": "tree_seedling_survival", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_d176bbaf81df", "class_id": "plant_cover_total", "polarity": 1, "score": 0.9, "source": "lexical"}
