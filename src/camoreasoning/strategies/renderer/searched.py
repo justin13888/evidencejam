@@ -27,6 +27,7 @@ WHY = {
     "non_directional_predicate": "moderate, mediate or regulate it without a direction",
     "unchanged_cause": "compare categories of the cause, with no direction",
     "prevented_change": "say it prevented a change rather than giving a direction",
+    "unsigned_difference": "report a significant difference without saying which way",
     "unsigned": "carry no usable sign",
 }
 

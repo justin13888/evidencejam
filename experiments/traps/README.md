@@ -18,9 +18,9 @@ pytest tests/strategies/test_traps.py tests/strategies/test_direction.py -q
 | `reversed_edges` | retriever, `searched` | no_evidence; reverse edge ids named in `searched_for` | `test_reversed_edges` |
 | `null_is_not_decrease` | `sentence` rule 1 | null → `no_effect` vote, never decrease. Also when the subject is annotated `unchanged` (130 nulls) | `test_null_is_not_decrease`, `test_null_with_unchanged_subject_is_still_a_null` |
 | `associational_is_not_causal` | `sentence` rule 4, `rubric` | votes, tagged `associational`; certainty one level lower (D4) | `test_associational_is_not_causal` |
-| ″ (answer wording) | renderer, item 15 | "is associated with", never "causes" (D1) | `test_associational_answer_text_never_says_causes`, **xfail until #15** |
+| ″ (answer wording) | renderer, item 15 | "is associated with", never "causes" (D1) | `test_associational_answer_text_never_says_causes`; `experiments/renderer/consistency_check.py` (d1) |
 | `negative_subject_qualifiers` | node polarity × `sentence` rule 7 | decreased/removed subject flips the sign; asking about the removal flips it back | `test_negative_subject_qualifier`, `test_asking_about_the_removal_flips_back` |
-| `unchanged_is_not_null` | `sentence` rules 2, 5, 6 | `unchanged` outcome → `no_effect`; `prevents … unchanged` → no vote; categorical `unchanged` cause → no vote | `test_unchanged_outcome_is_a_null`, `test_prevented_change_is_not_a_null` |
+| `unchanged_is_not_null` | `sentence` rules 2, 3b, 5, 6 | `unchanged` outcome → `no_effect`; `unchanged` outcome on a significant test → no vote (`unsigned_difference`); `prevents … unchanged` → no vote; categorical `unchanged` cause → no vote | `test_unchanged_outcome_is_a_null`, `test_significant_unchanged_outcome_is_not_a_null`, `test_prevented_change_is_not_a_null` |
 | `negative_predicates_double_negation` | `sentence` rule 5 | `prevents`/`disrupts` + decreased/absent object read as one negation (29/30 sign-settled sentences) | `test_double_negation`; all 39 edges in `test_direction.py` |
 | `twin_edges_one_sentence` | `studies`, `precise` | one vote per study; disagreeing twins → mixed study; every twin cited | `test_twin_edges_are_one_study`, `test_twins_that_disagree_make_a_mixed_study` |
 | `one_study_many_edges` | `studies` | majority within study, then 2/3 across studies (D2) | `test_aggregator_d2` in `test_direction.py` |

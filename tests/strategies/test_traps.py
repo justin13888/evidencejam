@@ -117,6 +117,45 @@ def test_unchanged_outcome_is_a_null(graph, ctx):
     assert r.verdict.direction == "no_effect"
 
 
+def test_significant_unchanged_outcome_is_not_a_null(graph, ctx):
+    """'Seeding method was associated with richness ... (F=112.04, P=0.000)', object [unchanged] Richness:
+    a significant difference in an unstated direction gives no vote, never 'no detectable effect'."""
+    r = ask(graph, ctx, *ends(graph, "camo:edge_c641160f3447"))
+    assert r.verdict.status == "no_evidence" and "no detectable" not in r.text
+    assert [v.reason for v in r.verdict.votes] == ["unsigned_difference"]
+    assert "without saying which way" in r.searched
+
+
+@pytest.mark.parametrize(
+    ("value", "significant"),
+    [("p < 0.001", True), ("F=112.04, P=0.000", True), ("T = -17.98, A = 0.14, p < 10^-6", True),
+     ("significantly different", True), ("p = 0.06", False), ("not significant", False), ("38.0%", False),
+     ("p = 7.5 × 10^-5", True), ("p-values = 0.012, 0.01, 7.10-3", True), ("10-15%", False),
+     ("marginally significant difference between natural and restored", False),
+     ("", False), (None, False), (7, False)],
+)  # fmt: skip
+def test_reports_significance(value, significant):
+    from camoreasoning.strategies.interpreter.sentence import reports_significance
+
+    assert reports_significance({"strength": {"quantitative_value": value}}) is significant
+
+
+def test_reference_locus_needs_the_reference_as_the_only_locus(graph):
+    """R07: 'grasses were least evenly distributed in reference forests' -> clearcuts higher. The same
+    sentence with a two-arm comparison, or with the qualifier already inverted, is left as annotated."""
+    from camoreasoning.strategies.interpreter.sentence import read_edge, reference_locus
+
+    e = graph.edges["camo:edge_eadd32061916"]
+    s, o = graph.nodes[e["subject"]], graph.nodes[e["object"]]
+    assert reference_locus(e, s, o)
+    assert read_edge(e, o, 1, -1, s) == (1, True, "reference_locus")
+    assert read_edge(e, o, 1, -1) == (-1, True, "associational")  # no subject given: rule 8 is off
+    two_arm = {**e, "original_sentence": "grasses were less even in clearcuts than in reference forests."}
+    assert not reference_locus(two_arm, s, o)
+    assert not reference_locus(e, s, {**o, "state_or_change_qualifier": "increased"})
+    assert not reference_locus(e, {**s, "entity_type": "environmental_variable"}, o)
+
+
 def test_prevented_change_is_not_a_null(graph, ctx):
     """'community diversity increased ... except adaptable-mix': prevents [unchanged] is not 'no effect'."""
     r = ask(graph, ctx, *ends(graph, "camo:edge_41a7453a63ad"))
