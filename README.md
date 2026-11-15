@@ -41,15 +41,15 @@ The locked rules behind these steps (D1–D6) are in [ROADMAP.md](ROADMAP.md).
 
 ## Results
 
-Dev split, default pipeline, commit `6868817`. These are model-labelled gold sets in [`experiments/devsets/`](experiments/devsets/), not the hidden set.
+Dev split, default pipeline, commit `7461073`. These are model-labelled gold sets in [`experiments/devsets/`](experiments/devsets/), not the hidden set.
 
 | | class dev (n = 83, hidden-set wording) | node dev (n = 184, independent wording) |
 |---|---|---|
-| Accuracy (status + direction) | **0.663** | **0.598** |
+| Accuracy (status + direction) | **0.675** | **0.620** |
 | no_evidence precision / recall | 0.91 / 0.89 | 0.68 / 0.82 |
-| Direction accuracy (answerable) | 0.50 | 0.49 |
+| Direction accuracy (answerable) | 0.52 | 0.52 |
 | Cited-edge precision / recall | 0.46 / 0.56 | 0.44 / 0.54 |
-| Calibration error (ECE) | 0.063 | 0.002 |
+| Calibration error (ECE) | 0.075 | 0.020 |
 | LLM calls · tokens per question | **0 · 0** | **0 · 0** |
 
 Reproduce with `python -m camoreasoning eval experiments/devsets/<class_gold|gold_annotated>.yaml --split dev`. The class set uses the taxonomy to pick its class pairs, so the node set is the stricter check. Given the gold edges, the engine's direction is 1.0 on both sets. The remaining loss is mostly retrieval: the right edges aren't found, or extra ones come along (see ROADMAP items 5, 8 and 13). Experiments that didn't win are kept with their numbers under [`experiments/`](experiments/), for example the LLM-assisted linker and static embeddings.
