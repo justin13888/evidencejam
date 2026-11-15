@@ -828,6 +828,8 @@ classes:
   - water content
   - moisture content
   - soil water
+  - wet soil*
+  - soil wetness
   - evaporation
   - evapotranspiration
   - runoff
