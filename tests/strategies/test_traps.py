@@ -265,7 +265,7 @@ def test_every_trap_has_three_dev_items(dev_gold):
     assert {k: len(v) for k, v in by_trap(dev_gold).items() if len(v) < 3} == {}
 
 
-@pytest.mark.xfail(strict=True, reason="end to end, 6 of 8 traps are below overall dev accuracy (#61)")
+@pytest.mark.xfail(strict=True, raises=AssertionError, reason="end to end, traps fall below overall dev accuracy (#61)")
 def test_trap_accuracy_is_at_least_overall():
     """`mise run eval`'s by_tag accuracy for each item 7 trap is at or above its overall accuracy."""
     from camoreasoning.config import Settings
