@@ -326,27 +326,27 @@ def test_trap_null_text(graph, make_ctx):
 
 
 # --- upstream overclaims found by the review_20 audit (round 1). Not renderer wording: the text renders
-# the verdict faithfully, but the verdict misreads the sentence. Strict xfail so a fix upstream flips them.
+# the verdict faithfully, but the verdict misread the sentence. Fixed upstream (item 15, issue #15).
 
 
-@pytest.mark.xfail(strict=True, reason="R20: 'No Barrier' (absence of protection) is labelled +1 in tree_protection")
 def test_review_no_barrier_node_is_not_protection():
+    """R20: 'No Barrier' (absence of protection) was labelled +1 in tree_protection."""
     tax = load_taxonomy()
     node = "camo:node_1352a634368d"  # "No Barrier forest floor protection treatment"
     assert all(lb.polarity != 1 for lb in tax.labels if lb.node_id == node and lb.class_id == "tree_protection")
 
 
-@pytest.mark.xfail(strict=True, reason="R08/R18: CAMO stores a p=1e-6 association as [unchanged], read as a null")
 def test_review_significant_association_is_not_a_null(graph, make_ctx):
+    """R08/R18: CAMO stores a p = 1e-6 association as [unchanged]; it was read as a null."""
     from tests.strategies.test_traps import ask, ends
 
     r = ask(graph, make_ctx(), *ends(graph, "camo:edge_e31b596f68eb"))
     assert r.verdict.direction != "no_effect"
 
 
-@pytest.mark.xfail(strict=True, reason="R07: CAMO edge says clearcut [decreased] evenness; the sentence says the "
-                                       "reference forests were least even, i.e. clearcuts higher")  # fmt: skip
 def test_review_least_even_in_reference_is_higher_in_clearcuts(graph, make_ctx):
+    """R07: CAMO says clearcut [decreased] evenness; the sentence says the reference forests were least
+    even, i.e. clearcuts higher."""
     from tests.strategies.test_traps import ask, ends
 
     r = ask(graph, make_ctx(), *ends(graph, "camo:edge_eadd32061916"))
