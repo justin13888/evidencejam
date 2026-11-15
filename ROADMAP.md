@@ -257,6 +257,7 @@ flowchart LR
     - `tokens_per_question` is tracked in every eval.
     - Accuracy stays the same.
   - **Points:** E12 (gated on at least 50% correct).
+  - **Progress (Sat Nov 14):** `linker/nodevote` links with 0 calls. The ~6k labelled nodes act as synonyms: the nearest node names vote for a class, and the side links that class's voting nodes. Dev (n = 142), default downstream: accuracy 0.472 → 0.549, ECE 0.128 → 0.051, no_evidence recall 0.97 → 1.00, random-pair accuracy 0.92 → 0.94, 0 tokens per question. `assisted` reaches 0.430 at 813 tokens per question: with full class lists it sends large prompts, and it forces matches on random pairs. Linking the whole winning class gives 0.44, because many unrelated studies make answers `mixed`. Tuned on dev only (`experiments/energy/sweep_nodevote.py`, flat for K ≥ 30). `tokens_per_question` is already in every eval footprint. **Pending:** flip the default linker (Justin). Direction accuracy is still 0.19, so the remaining loss is downstream.
 
 ## Phase 3 — Product and proof (Sun AM)
 

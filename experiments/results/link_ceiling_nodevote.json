@@ -1,0 +1,951 @@
+{
+ "linker": "nodevote",
+ "split": "dev",
+ "counts": {
+  "ans_n": 79,
+  "cause_covered": 59,
+  "cause_hit": 39,
+  "cause_empty": 18,
+  "outcome_covered": 77,
+  "outcome_hit": 57,
+  "outcome_empty": 7,
+  "both_covered": 59,
+  "both_hit": 29,
+  "empty_n": 63,
+  "empty_both_linked": 28
+ },
+ "misses": [
+  {
+   "id": "D-Q0002",
+   "q": "What effect does native hay application have on litter cover?",
+   "got": [
+    [
+     "mulch_surface_cover"
+    ],
+    [
+     "plant_cover_total"
+    ]
+   ],
+   "want": [
+    [],
+    []
+   ]
+  },
+  {
+   "id": "D-Q0003",
+   "q": "What effect does time period have on fruiting potential?",
+   "got": [
+    [
+     "time_since_disturbance"
+    ],
+    [
+     "plant_physiology",
+     "soil_moisture_water"
+    ]
+   ],
+   "want": [
+    [
+     "time_since_disturbance"
+    ],
+    [
+     "reproduction_flowering"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0009",
+   "q": "What effect does site location have on nestling survival?",
+   "got": [
+    [
+     "contaminant_exposure"
+    ],
+    [
+     "reproductive_success"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "reproductive_success"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0015",
+   "q": "What effect does tree cover removal have on tree cover?",
+   "got": [
+    [
+     "partial_harvest"
+    ],
+    [
+     "community_composition",
+     "plant_cover_total"
+    ]
+   ],
+   "want": [
+    [
+     "partial_harvest"
+    ],
+    [
+     "clearcut_harvest"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0018",
+   "q": "What effect does sulphate concentration have on alkalinity?",
+   "got": [
+    [],
+    [
+     "soil_ph_chemistry"
+    ]
+   ],
+   "want": [
+    [
+     "water_chemistry"
+    ],
+    [
+     "soil_ph_chemistry"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0020",
+   "q": "What effect does water velocity have on sediment infilling?",
+   "got": [
+    [],
+    [
+     "reproductive_success"
+    ]
+   ],
+   "want": [
+    [
+     "water_chemistry"
+    ],
+    [
+     "reproductive_success",
+     "soil_erosion"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0023",
+   "q": "What effect does water chemistry and fish have on zooplankton composition?",
+   "got": [
+    [],
+    [
+     "community_composition",
+     "insect_invertebrate"
+    ]
+   ],
+   "want": [
+    [
+     "soil_organic_carbon"
+    ],
+    [
+     "community_composition",
+     "insect_invertebrate"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0026",
+   "q": "What effect does sediment depth have on volatile solids concentration?",
+   "got": [
+    [],
+    [
+     "water_chemistry"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "water_chemistry"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0027",
+   "q": "What effect does restoration status have on microbial biomass?",
+   "got": [
+    [
+     "restoration_general"
+    ],
+    [
+     "soil_microbial"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "biomass_productivity"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0028",
+   "q": "What effect does habitat restoration status have on bird fledgling number?",
+   "got": [
+    [
+     "restoration_general"
+    ],
+    [
+     "population_size_trend"
+    ]
+   ],
+   "want": [
+    [
+     "restoration_general"
+    ],
+    [
+     "biomass_productivity"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0033",
+   "q": "What effect does proximity to linear disturbances have on large mammal movement?",
+   "got": [
+    [],
+    [
+     "mammal_abundance"
+    ]
+   ],
+   "want": [
+    [
+     "tree_growth"
+    ],
+    [
+     "mammal_abundance"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0034",
+   "q": "What effect does deciduous tree cover have on conifer volume growth?",
+   "got": [
+    [],
+    [
+     "tree_growth"
+    ]
+   ],
+   "want": [
+    [
+     "plant_cover_total"
+    ],
+    [
+     "tree_growth"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0035",
+   "q": "What effect does salmonid abundance have on fish abundance?",
+   "got": [
+    [
+     "species_reintroduction"
+    ],
+    [
+     "fish_abundance"
+    ]
+   ],
+   "want": [
+    [
+     "population_size_trend"
+    ],
+    [
+     "fish_abundance"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0036",
+   "q": "What effect does reclaimed mine land have on bird fledging success?",
+   "got": [
+    [],
+    [
+     "reproductive_success"
+    ]
+   ],
+   "want": [
+    [
+     "reproductive_success"
+    ],
+    [
+     "reproductive_success"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0038",
+   "q": "What effect does tree planting density have on soil temperature?",
+   "got": [
+    [
+     "tree_planting"
+    ],
+    [
+     "soil_temperature"
+    ]
+   ],
+   "want": [
+    [
+     "population_size_trend",
+     "tree_species_composition"
+    ],
+    [
+     "soil_temperature"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0039",
+   "q": "What effect does old growth status have on spring flowering plant proportion?",
+   "got": [
+    [],
+    [
+     "reproduction_flowering"
+    ]
+   ],
+   "want": [
+    [
+     "tree_growth"
+    ],
+    [
+     "reproduction_flowering"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0045",
+   "q": "What effect does brood parasitism have on nest survival?",
+   "got": [
+    [],
+    [
+     "reproductive_success"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "reproductive_success"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0046",
+   "q": "What effect does river regulation have on flow conditions?",
+   "got": [
+    [
+     "engineered_structures"
+    ],
+    []
+   ],
+   "want": [
+    [
+     "engineered_structures"
+    ],
+    [
+     "water_table_level"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0051",
+   "q": "What effect does disturbed area presence have on large mammal avoidance?",
+   "got": [
+    [
+     "tourism_recreation"
+    ],
+    []
+   ],
+   "want": [
+    [],
+    [
+     "mammal_abundance"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0052",
+   "q": "What effect does undisturbed stands have on exotic plant presence?",
+   "got": [
+    [
+     "time_since_disturbance"
+    ],
+    [
+     "invasive_abundance"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "invasive_abundance"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0054",
+   "q": "What effect does moisture retention cover layer have on water metal concentration?",
+   "got": [
+    [
+     "soil_moisture_water"
+    ],
+    [
+     "water_chemistry"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "water_chemistry"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0055",
+   "q": "What effect does edge habitat presence have on large mammal habitat selection?",
+   "got": [
+    [],
+    []
+   ],
+   "want": [
+    [],
+    [
+     "mammal_abundance"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0059",
+   "q": "What effect does winter road clearance have on bryophyte cover?",
+   "got": [
+    [
+     "time_since_disturbance"
+    ],
+    [
+     "moss_bryophyte",
+     "natural_regeneration"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "moss_bryophyte"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0060",
+   "q": "What effect does causeway breaching have on fish presence?",
+   "got": [
+    [],
+    [
+     "fish_abundance"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "fish_abundance"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0068",
+   "q": "What effect does eelgrass cover have on fish density?",
+   "got": [
+    [
+     "invasive_removal"
+    ],
+    [
+     "fish_abundance"
+    ]
+   ],
+   "want": [
+    [
+     "invasive_removal",
+     "plant_cover_total"
+    ],
+    [
+     "population_size_trend"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0073",
+   "q": "What effect does slash cover have on tree sucker density?",
+   "got": [
+    [
+     "prescribed_burning"
+    ],
+    [
+     "population_size_trend",
+     "tree_species_composition"
+    ]
+   ],
+   "want": [
+    [
+     "mulch_surface_cover"
+    ],
+    [
+     "population_size_trend",
+     "tree_species_composition"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0074",
+   "q": "What effect does time since clearcutting have on tree species presence?",
+   "got": [
+    [
+     "peatland_rewetting",
+     "seeding_sowing",
+     "time_since_disturbance"
+    ],
+    []
+   ],
+   "want": [
+    [
+     "clearcut_harvest",
+     "prescribed_burning"
+    ],
+    [
+     "community_composition"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0075",
+   "q": "What effect does catchment identity have on leaf litter mass loss?",
+   "got": [
+    [
+     "harvest_general"
+    ],
+    [
+     "tree_species_composition"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "biomass_productivity"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0078",
+   "q": "What effect does stream velocity have on fish habitat preference?",
+   "got": [
+    [
+     "engineered_structures"
+    ],
+    [
+     "reproductive_success"
+    ]
+   ],
+   "want": [
+    [
+     "water_chemistry"
+    ],
+    [
+     "fish_abundance"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0082",
+   "q": "What effect does peat thickness have on aquatic plant assemblage presence?",
+   "got": [
+    [
+     "organic_soil_amendment"
+    ],
+    [
+     "community_composition"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "community_composition"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0084",
+   "q": "What effect does site preparation have on plant vigor?",
+   "got": [
+    [
+     "site_preparation"
+    ],
+    [
+     "tree_species_composition"
+    ]
+   ],
+   "want": [
+    [
+     "site_preparation"
+    ],
+    [
+     "tree_growth"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0085",
+   "q": "What effect does organic matter input have on macroinvertebrate diversity?",
+   "got": [
+    [],
+    [
+     "insect_invertebrate"
+    ]
+   ],
+   "want": [
+    [
+     "soil_organic_carbon"
+    ],
+    [
+     "diversity_indices",
+     "insect_invertebrate"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0086",
+   "q": "What effect does microbial biomass have on soil respiration rate?",
+   "got": [
+    [],
+    [
+     "carbon_flux"
+    ]
+   ],
+   "want": [
+    [
+     "soil_microbial"
+    ],
+    [
+     "carbon_flux"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0087",
+   "q": "What effect does fish farm closure have on sediment organic matter concentration?",
+   "got": [
+    [],
+    [
+     "soil_organic_carbon",
+     "soil_physical"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "water_chemistry"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0089",
+   "q": "What effect does liming have on algal biomass?",
+   "got": [
+    [
+     "fertilization"
+    ],
+    [
+     "community_composition"
+    ]
+   ],
+   "want": [
+    [
+     "fertilization"
+    ],
+    [
+     "foliar_nutrients"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0090",
+   "q": "What effect does release location have on animal dispersal direction?",
+   "got": [
+    [
+     "mechanical_release_control"
+    ],
+    []
+   ],
+   "want": [
+    [],
+    []
+   ]
+  },
+  {
+   "id": "D-Q0092",
+   "q": "What effect does site location have on bird nest success?",
+   "got": [
+    [
+     "contaminant_exposure"
+    ],
+    [
+     "reproductive_success"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "reproductive_success"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0093",
+   "q": "What effect does soft release have on captive-reared bird survival?",
+   "got": [
+    [
+     "species_reintroduction"
+    ],
+    []
+   ],
+   "want": [
+    [
+     "species_reintroduction"
+    ],
+    [
+     "tree_seedling_survival",
+     "wildlife_mortality"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0094",
+   "q": "What effect does metal concentration have on zooplankton community composition?",
+   "got": [
+    [
+     "contaminant_exposure"
+    ],
+    [
+     "community_composition",
+     "insect_invertebrate"
+    ]
+   ],
+   "want": [
+    [
+     "water_chemistry"
+    ],
+    [
+     "community_composition",
+     "plant_richness"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0098",
+   "q": "What effect does peatland edge location have on water pH?",
+   "got": [
+    [],
+    [
+     "soil_ph_chemistry"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "soil_ph_chemistry"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0099",
+   "q": "What effect does breeding timing have on bird fledging success?",
+   "got": [
+    [],
+    [
+     "reproductive_success"
+    ]
+   ],
+   "want": [
+    [
+     "reproductive_success"
+    ],
+    [
+     "reproductive_success"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0102",
+   "q": "What effect does vertical cover have on browsing incidence?",
+   "got": [
+    [],
+    [
+     "predation_herbivory_damage"
+    ]
+   ],
+   "want": [
+    [
+     "plant_cover_total"
+    ],
+    [
+     "stand_structure"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0103",
+   "q": "What effect does treatment type have on hydrocarbon degradation rate?",
+   "got": [
+    [
+     "site_conditions"
+    ],
+    []
+   ],
+   "want": [
+    [],
+    [
+     "water_chemistry"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0107",
+   "q": "What effect does treatment site type have on small mammal survival?",
+   "got": [
+    [
+     "site_conditions"
+    ],
+    [
+     "mammal_abundance"
+    ]
+   ],
+   "want": [
+    [
+     "site_conditions",
+     "woody_debris_retention"
+    ],
+    [
+     "tree_seedling_survival"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0108",
+   "q": "What effect does forest floor mixing have on conifer seedling biomass?",
+   "got": [
+    [
+     "organic_soil_amendment"
+    ],
+    [
+     "natural_regeneration"
+    ]
+   ],
+   "want": [
+    [
+     "organic_soil_amendment"
+    ],
+    [
+     "biomass_productivity"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0110",
+   "q": "What effect does seedling age have on ectomycorrhizal fungal community composition?",
+   "got": [
+    [
+     "time_since_disturbance"
+    ],
+    [
+     "community_composition"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "community_composition"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0111",
+   "q": "What effect does organic matter biomass have on macroinvertebrate abundance?",
+   "got": [
+    [
+     "mulch_surface_cover"
+    ],
+    [
+     "insect_invertebrate"
+    ]
+   ],
+   "want": [
+    [
+     "soil_organic_carbon"
+    ],
+    [
+     "insect_invertebrate"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0117",
+   "q": "What effect does seedling height have on browsing incidence?",
+   "got": [
+    [],
+    [
+     "predation_herbivory_damage"
+    ]
+   ],
+   "want": [
+    [
+     "tree_growth"
+    ],
+    [
+     "grazing_browsing"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0119",
+   "q": "What effect does surface roughness have on deciduous seedling establishment?",
+   "got": [
+    [
+     "organic_soil_amendment"
+    ],
+    [
+     "native_abundance",
+     "tree_seedling_survival"
+    ]
+   ],
+   "want": [
+    [],
+    [
+     "tree_seedling_survival"
+    ]
+   ]
+  },
+  {
+   "id": "D-Q0177",
+   "q": "What effect does restoration treatments have on planted conifer stem diameter?",
+   "got": [
+    [
+     "restoration_general"
+    ],
+    [
+     "tree_growth"
+    ]
+   ],
+   "want": [
+    [
+     "mechanical_release_control",
+     "mulch_surface_cover",
+     "organic_soil_amendment",
+     "partial_harvest",
+     "site_preparation",
+     "tree_protection"
+    ],
+    [
+     "tree_growth",
+     "tree_species_composition"
+    ]
+   ]
+  }
+ ]
+}
