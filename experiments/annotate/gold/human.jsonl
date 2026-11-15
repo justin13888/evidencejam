@@ -6,3 +6,4 @@
 {"id": "D-Q0028", "by": "llm:d3-relabel", "status": "answered", "direction": "mixed", "certainty": "very_low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e2", "effect": 0}, {"ref": "e3", "effect": -1}]}
 {"id": "D-Q0069", "by": "llm:d3-relabel", "status": "answered", "direction": "no_effect", "certainty": "low", "edges": [{"ref": "e2", "effect": 0}, {"ref": "e3", "effect": 0}]}
 {"id": "D-Q0222", "by": "llm:auditor", "status": "answered", "direction": "increase", "certainty": "very_low", "edges": [{"ref": "e1", "effect": null}, {"ref": "e2", "effect": 1}]}
+{"id": "D-Q0101", "by": "llm:recheck-relabel", "status": "answered", "direction": "decrease", "certainty": "very_low", "edges": [{"ref": "e24", "effect": -1}]}
