@@ -1,0 +1,16 @@
+{"id": "D-Q0222", "status": "answered", "direction": "increase", "certainty": "very_low", "edges": [{"ref": "e1", "effect": null}, {"ref": "e2", "effect": 1}]}
+{"id": "D-Q0229", "status": "answered", "direction": "increase", "certainty": "low", "edges": [{"ref": "e1", "effect": 1}, {"ref": "e4", "effect": 1}]}
+{"id": "D-Q0181", "status": "answered", "direction": "decrease", "certainty": "very_low", "edges": [{"ref": "e1", "effect": -1}]}
+{"id": "D-Q0203", "status": "answered", "direction": "decrease", "certainty": "low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e2", "effect": 0}, {"ref": "e7", "effect": -1}, {"ref": "e8", "effect": -1}, {"ref": "e9", "effect": -1}, {"ref": "e11", "effect": -1}, {"ref": "e12", "effect": 1}, {"ref": "e13", "effect": 1}, {"ref": "e14", "effect": -1}, {"ref": "e32", "effect": 1}, {"ref": "e34", "effect": -1}, {"ref": "e38", "effect": 1}]}
+{"id": "D-Q0232", "status": "answered", "direction": "mixed", "certainty": "low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e6", "effect": 0}, {"ref": "e7", "effect": 1}, {"ref": "e22", "effect": 1}, {"ref": "e23", "effect": 1}]}
+{"id": "D-Q0236", "status": "answered", "direction": "mixed", "certainty": "low", "edges": [{"ref": "e1", "effect": 1}, {"ref": "e3", "effect": null}, {"ref": "e4", "effect": -1}, {"ref": "e2", "effect": 1}]}
+{"id": "D-Q0218", "status": "answered", "direction": "increase", "certainty": "moderate", "edges": [{"ref": "e1", "effect": 1}, {"ref": "e2", "effect": 1}, {"ref": "e4", "effect": 1}, {"ref": "e5", "effect": 1}, {"ref": "e7", "effect": null}, {"ref": "e8", "effect": 0}, {"ref": "e12", "effect": 1}, {"ref": "e25", "effect": 1}]}
+{"id": "D-Q0221", "status": "answered", "direction": "increase", "certainty": "moderate", "edges": [{"ref": "e1", "effect": 1}, {"ref": "e2", "effect": 1}, {"ref": "e3", "effect": 1}]}
+{"id": "D-Q0200", "status": "answered", "direction": "no_effect", "certainty": "moderate", "edges": [{"ref": "e1", "effect": 0}]}
+{"id": "D-Q0227", "status": "answered", "direction": "unclear", "certainty": "moderate", "edges": [{"ref": "e1", "effect": null}]}
+{"id": "D-Q0239", "status": "answered", "direction": "decrease", "certainty": "low", "edges": [{"ref": "e1", "effect": -1}]}
+{"id": "D-Q0194", "status": "answered", "direction": "unclear", "certainty": "very_low", "edges": [{"ref": "e1", "effect": null}]}
+{"id": "D-Q0199", "status": "answered", "direction": "mixed", "certainty": "very_low", "edges": [{"ref": "e1", "effect": -1}, {"ref": "e2", "effect": 0}]}
+{"id": "D-Q0212", "status": "answered", "direction": "mixed", "certainty": "very_low", "edges": [{"ref": "e1", "effect": 0}, {"ref": "e2", "effect": -1}, {"ref": "e4", "effect": null}, {"ref": "e6", "effect": null}, {"ref": "e10", "effect": null}, {"ref": "e13", "effect": null}, {"ref": "e8", "effect": 1}]}
+{"id": "D-Q0182", "status": "answered", "direction": "decrease", "certainty": "moderate", "edges": [{"ref": "e1", "effect": -1}]}
+{"id": "D-Q0196", "status": "answered", "direction": "increase", "certainty": "moderate", "edges": [{"ref": "e1", "effect": 1}]}

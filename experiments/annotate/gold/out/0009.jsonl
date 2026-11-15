@@ -16,3 +16,5 @@
 {"id": "D-Q0178", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
 {"id": "D-Q0179", "status": "no_evidence", "direction": null, "certainty": null, "edges": [], "note": "e19 epilithon biomass edge has engineered stream structures as cause, not site preparation."}
 {"id": "D-Q0180", "status": "no_evidence", "direction": null, "certainty": null, "edges": []}
+{"id": "D-Q0181", "status": "answered", "direction": "decrease", "certainty": "very_low", "edges": [{"ref": "e1", "effect": -1}]}
+{"id": "D-Q0182", "status": "answered", "direction": "decrease", "certainty": "moderate", "edges": [{"ref": "e1", "effect": -1}], "note": "e1 is encoded as 'prevents' + object 'decreased breakage' (double negative); the sentence says caging significantly decreased breakage, so effect -1 is taken from the sentence."}
