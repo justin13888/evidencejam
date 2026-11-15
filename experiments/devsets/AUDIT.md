@@ -52,8 +52,9 @@ Every number below can be recomputed with the commands at the end.
    (graph fields only). `near_miss_classes` comes from the class set. Every inventory key named in #9 now
    has ≥ 5 dev items across the two files.
 5. **Gold candidate recall.** Node-level gold uses a lexical top-60 prefilter. The labeller wrote "candidates
-   incomplete" on 4 empties (Q0101, Q0121, Q0122, Q0162). These are **not re-checked**; treat them as
-   possible false empties.
+   incomplete" on 4 empties (Q0101, Q0121, Q0122, Q0162).
+   **Fix (issue #49):** a blind graph search and relabel (`experiments/gold/recheck_empties/`) flipped Q0101
+   to answered. The other 3 stay `no_evidence`.
 6. **Holdout contamination.** Holdout item D-Q0095 is a strict-xfail engine test
    (`tests/strategies/test_gold_disagreements.py`). Node holdout accuracy is 0.346 with it and 0.353 without
    it. Keep it out of any engine fix aimed at that test.

@@ -1905,16 +1905,19 @@ items:
     - -1
 - id: D-Q0101
   question: What effect does invasive fish abundance have on native fish abundance?
-  status: no_evidence
-  direction: null
-  certainty: null
-  edge_ids: []
+  status: answered
+  direction: decrease
+  certainty: very_low
+  edge_ids:
+  - camo:edge_3019a2266311
   tags:
   - trap:associational_is_not_causal
-  - empty
+  - answerable
   split: dev
-  source: llm:annotate
-  edge_effects: []
+  source: llm:recheck-relabel
+  edge_effects:
+  - - camo:edge_3019a2266311
+    - -1
 - id: D-Q0102
   question: What effect does vertical cover have on browsing incidence?
   status: answered

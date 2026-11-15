@@ -61,10 +61,28 @@ procedure is in `AUDIT.md`.
 - **Trap tags** use the `trap_inventory.json` keys (`strategies/devset_builder/_traps.py`).
 - The class-level set is recorded in `CLASS.md`.
 
+## Issue #49: re-check of 4 possible false empties
+
+The labeller wrote "candidates incomplete" on 4 `no_evidence` items (D-Q0101, Q0121, Q0122, Q0162; AUDIT.md
+finding 5). `recheck_empties/` holds the re-check, run by `recheck_empties/recheck.py`:
+
+- **Search.** A searcher read only `questions.jsonl` and `causal_graph.json`, with no taxonomy, and wrote
+  `found.jsonl`: 2 edges for Q0101, none for Q0121, 2 for Q0122 and 10 for Q0162.
+- **Relabel.** A fresh labeller read only `PROMPT.md` and `blind.jsonl` (each item's candidates, with the
+  found edges it lacked appended last) and wrote `relabel.jsonl`.
+- **Flip rule.** An item flips only if the relabel cites edges that give a direction (effect 1, -1 or 0).
+  Otherwise it stays `no_evidence`.
+- **Result.** Only D-Q0101 flips, to `decrease`, `very_low`, on `camo:edge_3019a2266311` (sculpin density
+  is lower at sites with invasive round goby). `recheck.py extend` appended that edge to the item's input
+  row as `e24`. The other 3 stay `no_evidence`. The source is `llm:recheck-relabel`.
+- **Gold counts.** Dev is now 123 answered and 61 `no_evidence` (was 122 and 62). Holdout is unchanged at
+  36 and 16.
+
 ## Reproduce
 
-From `audit/`, `d3/`, `audit_new/` and the labeller outputs, this chain rebuilds `human.jsonl`,
-`merged.jsonl` and `experiments/devsets/gold_annotated.yaml` byte for byte (verified Sat Nov 14):
+From `audit/`, `d3/`, `audit_new/`, `recheck_empties/` and the labeller outputs, this chain rebuilds
+`human.jsonl`, `merged.jsonl` and `experiments/devsets/gold_annotated.yaml` byte for byte (verified Sat
+Nov 14, after issue #49):
 
 ```sh
 export PYTHONPATH=src
@@ -74,6 +92,7 @@ python -m camoreasoning annotate merge gold
 python -m camoreasoning annotate review-import gold --file experiments/annotate/gold/review.csv
 python -m camoreasoning annotate review-import gold --file experiments/gold/d3/review_d3.csv
 python -m camoreasoning annotate review-import gold --file experiments/gold/audit_new/review.csv
+python -m camoreasoning annotate review-import gold --file experiments/gold/recheck_empties/review.csv
 python -m camoreasoning annotate merge gold
 python -m camoreasoning -s gold_labeler=annotated devset --gold-only
 ```
