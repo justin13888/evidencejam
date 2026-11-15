@@ -346,7 +346,8 @@ flowchart LR
     - `scripts/clean_run.sh` with the real endpoint, from a fresh clone with mise off PATH: 10 answers valid, 1.6 s wall including venv setup.
     - 500 questions (`experiments/release/questions_500.yaml`: the 10 competency questions, every devset question, then seeded class-pair templates; timing only, never scored), fresh clone: 1.7 s cold including venv setup, 1.5 s warm with the real endpoint, 2.0 s with a dead LLM. All 500 valid, 261 answered and 239 no_evidence.
     - Every run made 0 LLM calls: the current defaults link `questions.yaml` and all 500 questions without the endpoint, so the dead-LLM run takes the same path as the live one. `ask.sh` (`assisted` linker) is the only path that calls the LLM, and it is not part of the judged run.
-    - **Re-run before the tag (item 23).** This is a gate, not a one-off: run `mise run judge-sim` and `scripts/clean_run.sh` again after any default flip, including #14 and #16 if they land.
+    - **Re-run after #80 flipped the interpreter default to `unsigned` (master `741907f`; x86_64 host, arm64 via qemu):** judge-sim passes in 80 s total. Both runs: 10 answers, 0 errors, parse rate 1.0, 0 calls. `clean_run.sh` with the real endpoint: valid, 0.4 s. 500 questions in a fresh clone: 1.1 s cold, 1.0 s warm with the real endpoint, 1.0 s with a dead LLM. All 500 valid, 261 answered and 239 no_evidence, 0 calls. The timing set regenerates byte-identical.
+    - **Re-run before the tag (item 23).** This is a gate, not a one-off: run `mise run judge-sim` and `scripts/clean_run.sh` again after any default flip, including #16 if it lands.
 - [ ] **23. Freeze and submit.** ★ 5/5 · all
   - **Why:** only the last commit before 18:00 counts.
   - **Done when:** feature freeze is 16:00. Defaults are set to the best eval, `mise run ci` is green, the commit is tagged `submission`, and no `.env` or keys are in history.
