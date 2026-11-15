@@ -147,6 +147,68 @@ def test_asking_about_an_ending_flips_the_node(graph, make_ctx):
     assert pol(graph, nid) == -1 and [(r.id, r.polarity) for r in side.nodes] == [(nid, 1)]
 
 
+def frame_of(ctx, cause: str, outcome: str) -> Frame:
+    q = Question("q", f"What effect does {cause} have on {outcome}?")
+    return registry.get("linker").link([ParsedQuestion(q, cause, outcome, True)], ctx)[0]
+
+
+def test_widen_finds_an_edge_outside_the_linked_class(make_ctx):
+    """#66, D-Q0002: "litter cover" links `soil_fauna`/`soil_microbial`, but the edges' object "Cover of
+    litter" is in no class. `baseline` finds no forward edge; `widen` adds the nodes the side's own words
+    name and finds both edges."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, "native hay application", "litter cover")
+    assert registry.get("retriever", "baseline").retrieve(frame, ctx).forward == ()
+    wide = registry.get("retriever", "widen").retrieve(frame, ctx)
+    assert {"camo:edge_c84f7fea92b0", "camo:edge_3d7078fca705"} <= set(wide.forward)
+
+
+def test_widen_leaves_a_retrieval_with_edges_alone(make_ctx):
+    """Sides that already share an edge are retrieved exactly as `baseline` retrieves them."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, "prescribed fire", "plant cover")
+    base = registry.get("retriever", "baseline").retrieve(frame, ctx)
+    assert base.forward and registry.get("retriever", "widen").retrieve(frame, ctx) == base
+
+
+@pytest.mark.parametrize(
+    ("cause", "outcome", "eid"),
+    [("vegetation removal", "dune erosion", "camo:edge_3f81177bc0ae"),  # D-Q0204, "Vegetation removal" [removed]
+     ("invasive fish removal", "amphibian colonization", "camo:edge_eea9e2034298")],  # D-Q0017, goldfish [removed]
+)  # fmt: skip
+def test_a_removal_node_in_a_removal_class_is_the_removal(make_ctx, cause, outcome, eid):
+    """#66: node_labels puts these [removed] nodes at -1 in a class that is itself the removal, so the
+    engine read "removal increases erosion" as a decrease. `widen` counts them +1; `baseline` does not."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, cause, outcome)
+    subject = ctx.graph.edges[eid]["subject"]
+    assert registry.get("retriever", "baseline").retrieve(frame, ctx).cause_nodes[subject] == -1
+    c = registry.get("retriever", "widen").retrieve(frame, ctx)
+    assert c.cause_nodes[subject] == 1 and eid in c.forward
+
+
+def test_focus_narrows_a_class_to_the_words_it_does_not_cover(make_ctx):
+    """#66, D-Q0207: "ericaceous shrub cover" links `plant_cover_total`, whose bare ground, tree and herb
+    cover edges turned the answer mixed. `focus` keeps the edges whose nodes name the words no linked
+    class covers ("abandonment", "ericaceous"): the block-cut and vacuum harvesting study only."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, "abandonment of peat harvesting", "ericaceous shrub cover")
+    wide = registry.get("retriever", "widen").retrieve(frame, ctx)
+    narrow = registry.get("retriever", "focus").retrieve(frame, ctx)
+    assert set(narrow.forward) < set(wide.forward)
+    assert {ctx.graph.edges[e]["source_document"] for e in narrow.forward} == {"10.1139/b05-025"}
+    assert all("ricaceous" in ctx.graph.nodes[ctx.graph.edges[e]["object"]]["name"] for e in narrow.forward)
+
+
+def test_focus_leaves_exact_class_wording_alone(make_ctx):
+    """A side worded as its class label has no extra words, so `focus` retrieves exactly as `widen`."""
+    ctx = make_ctx(tax=load_taxonomy())
+    frame = frame_of(ctx, "prescribed fire", "plant cover")
+    assert registry.get("retriever", "focus").retrieve(frame, ctx) == registry.get("retriever", "widen").retrieve(
+        frame, ctx
+    )
+
+
 def test_unchanged_outcome_is_a_null(graph, ctx):
     """'Soil exchangeable K levels ... remained relatively stable during the chronosequence.'"""
     r = ask(graph, ctx, *ends(graph, "camo:edge_07b5d3056850"))
@@ -301,7 +363,7 @@ def test_every_trap_has_three_dev_items(dev_gold):
     assert {k: len(v) for k, v in by_trap(dev_gold).items() if len(v) < 3} == {}
 
 
-@pytest.mark.xfail(strict=True, raises=AssertionError, reason="end to end, traps fall below overall dev accuracy (#66)")
+@pytest.mark.xfail(strict=True, raises=AssertionError, reason="end to end, traps fall below overall dev accuracy (#70)")
 def test_trap_accuracy_is_at_least_overall():
     """`mise run eval`'s by_tag accuracy for each item 7 trap is at or above its overall accuracy."""
     from camoreasoning.config import Settings
