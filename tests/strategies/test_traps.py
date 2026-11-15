@@ -138,6 +138,15 @@ def test_an_ending_the_class_already_names_is_not_flipped(make_ctx, text, cid):
     assert [(r.id, r.polarity) for r in link_cause(make_ctx, text).classes] == [(cid, 1)]
 
 
+def test_asking_about_an_ending_flips_the_node(graph, make_ctx):
+    """D-Q0015 "tree cover removal" links the node "Removal of protective tree cover" directly. Its
+    qualifier "removed" sets polarity -1, and the cue flips it, because only the entity term
+    ("protective tree cover") says whether the node itself is the ending, not its name."""
+    nid = "camo:node_14c375fc4ad5"
+    side = link_cause(make_ctx, "tree cover removal")
+    assert pol(graph, nid) == -1 and [(r.id, r.polarity) for r in side.nodes] == [(nid, 1)]
+
+
 def test_unchanged_outcome_is_a_null(graph, ctx):
     """'Soil exchangeable K levels ... remained relatively stable during the chronosequence.'"""
     r = ask(graph, ctx, *ends(graph, "camo:edge_07b5d3056850"))

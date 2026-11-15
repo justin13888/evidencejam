@@ -11,7 +11,8 @@ polarity) when all of these hold:
 2. The cue is not after "since", "after" or "following": "time since road abandonment" is elapsed
    time, which `time_since_disturbance` already means.
 3. The class or node is not itself an ending: none of its label/synonym phrases (or, for a node, its
-   name and entity term) contain a cue. "invasive fish removal" links `invasive species removal`,
+   entity term) contain a cue. A node's name is not checked: it repeats the node's qualifier,
+   which already set the Ref's polarity. "invasive fish removal" links `invasive species removal`,
    which already is the removal, and "vegetation removal" links `mechanical vegetation control`
    through its synonym "vegetation removal".
 
@@ -48,8 +49,9 @@ def _class_is_ending(cid: str, ctx: Context) -> bool:
 
 
 def _node_is_ending(nid: str, ctx: Context) -> bool:
-    n = ctx.graph.nodes.get(nid, {})
-    return any(CUE.search(str(n.get(f) or "")) for f in ("name", "entity_term"))
+    # entity_term only: a node's `name` repeats its state_or_change_qualifier ("Removal of protective
+    # tree cover", qualifier "removed"), which already set the Ref's polarity to -1 (D-Q0015).
+    return bool(CUE.search(str(ctx.graph.nodes.get(nid, {}).get("entity_term") or "")))
 
 
 def _flip(refs: tuple[Ref, ...], is_ending) -> tuple[Ref, ...]:
