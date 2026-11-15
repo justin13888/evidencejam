@@ -318,10 +318,11 @@ flowchart LR
   - **Why:** W3C criteria are judged.
   - **Done when:** WCAG 2.2 AA is checked by hand and with a checker, covering contrast, headings, table headers, `lang`, keyboard use, no colour-only meaning, and reflow at 320 px.
   - **Points:** J40.
-- [ ] **20. Write an honest-limits page.** ★ 3/5 · C · `extras`
+- [x] **20. Write an honest-limits page.** ★ 3/5 · C · `extras`
   - **Why:** judges ask "Does it show where it fails, with examples?"
   - **Done when:** the page shows real holdout failures by trap tag, the reliability table, and what we deliberately don't do (multi-hop, effect sizes).
   - **Points:** J40.
+  - **Done (Sun Nov 15):** the default `gapmap` extras now also writes `limits.html` (`strategies/extras/limits.py`), linked from `gapmap.html`. It is built only from #12's single holdout pass (`experiments/calibration/holdout_report.json`), with no second holdout run, and says so: that pass measured the pipeline at 82fa03d, before #65, #68 and #69, with the `binned` calibrator, which is not the default. For each of the 12 trap tags on the holdout it lists questions, correct and missed counts, the first sentence of the trap inventory's explanation, and the first 3 misses in item-id order, unfiltered. Each miss shows the correct answer, ours and our confidence. Then come the pooled reliability table (10 bins), the ECE miss (0.187 against the 0.05 target; constant 0.6 scores 0.218), one line per devset file, and the two non-goals: multi-hop chains and effect sizes. `tests/strategies/test_limits.py` recomputes every row from the report and checks it against the page. A missing or malformed report gives a page that says so, and nothing raises.
 - [ ] **21. Write the README method and extend guide.** ★ 3/5 · D · docs
   - **Why:** judges score method and fit, and craft and reuse.
   - **Done when:** the README explains the method in 4 steps with the headline eval numbers, and another team could add a strategy in 10 minutes.

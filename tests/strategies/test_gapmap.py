@@ -83,7 +83,7 @@ def test_gapmap_is_the_default():
 
 def test_grid_counts_labels_and_summary(written):
     ctx, _, _, paths = written
-    assert [p.rsplit("/", 1)[-1] for p in paths] == ["index.html", "gapmap.html", "gapcells.html"]
+    assert [p.rsplit("/", 1)[-1] for p in paths] == ["index.html", "gapmap.html", "gapcells.html", "limits.html"]
     assert all((ROOT / p).exists() for p in paths)
     cells = check_grid(ctx)
     filled = [n for _, _, n in cells if n]
@@ -192,7 +192,7 @@ def test_single_pair_questions_on_a_gap_are_no_evidence(written):
 def test_empty_taxonomy_falls_back(make_ctx):
     ctx = make_ctx(tax=Taxonomy({}, (), "empty"))
     paths = get("extras", "gapmap").write_run([], [], ctx)
-    assert [p.rsplit("/", 1)[-1] for p in paths] == ["index.html", "gapmap.html"]
+    assert [p.rsplit("/", 1)[-1] for p in paths] == ["index.html", "gapmap.html", "limits.html"]
     assert "Available once taxonomy/classes.yaml is built" in (ctx.out_dir / "gapmap.html").read_text(encoding="utf-8")
 
 
