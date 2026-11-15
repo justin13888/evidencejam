@@ -31,7 +31,7 @@ STAGES = RUNTIME_STAGES + OFFLINE_STAGES
 
 @dataclass(frozen=True)
 class Settings:
-    team: str = "TBD"
+    team: str = "Goose Chain"
     llm_url: str | None = None
     llm_model: str | None = None
     llm_key: str | None = None
