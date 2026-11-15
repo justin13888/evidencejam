@@ -48,7 +48,7 @@ oracle direction on class dev is 0.979 (n = 48).
 
 | Trap (`trap:<key>`) | Dev n | End to end | Oracle direction, class dev |
 |---|---|---|---|
-| `reversed_edges` | 10 | **1.000** | no answered items |
+| `reversed_edges` | 10 | **1.000** | no class items |
 | `near_miss_classes` | 5 | **0.600** | 1.00 (n = 4) |
 | `twin_edges_one_sentence` | 68 | 0.529 | 1.00 (n = 26) |
 | `null_is_not_decrease` | 57 | 0.526 | 1.00 (n = 27) |
