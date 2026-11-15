@@ -14,6 +14,7 @@ from camoreasoning.config import Settings
 from camoreasoning.contracts import Candidates, EdgeVote, Frame, ParsedQuestion, Question, Ref, Side, Verdict
 from camoreasoning.llm import LLM
 from camoreasoning.strategies.grader.rubric import is_associational
+from camoreasoning.strategies.renderer.consistency import expected_direction, violations
 from camoreasoning.strategies.renderer.faithful import MAX_NAMES, _first_author, cite_labels, short_cite
 from camoreasoning.taxonomy import load_taxonomy
 
@@ -273,6 +274,55 @@ def test_no_evidence_path_is_searched_unchanged(make_ctx):
     assert R.render(v, c, None, ctx) == registry.get("renderer", "searched").render(v, c, None, ctx)
 
 
+# --- consistency check (issue #15's executable done-check) -----------------------------------------
+
+SPANS = ("prescribed burning", "native plant richness")
+
+
+@pytest.mark.parametrize(
+    ("direction", "docs", "assoc", "certainty"),
+    [("increase", [("d:lee", 1), ("d:ortiz", 1), ("d:strack", 0)], False, "moderate"),
+     ("decrease", [("d:lee", -1), ("d:ortiz", -1)], True, "low"),
+     ("no_effect", [("d:lee", 0)], False, "very_low"),
+     ("mixed", [("d:lee", 1), ("d:ortiz", -1), ("d:strack", None)], True, "low"),
+     ("mixed", [("d:lee", None)], False, "high"),
+     ("unclear", [], False, "low")],
+)  # fmt: skip
+def test_consistency_passes_rendered_text(direction, docs, assoc, certainty):
+    v = verdict(direction, docs, assoc)
+    assert not violations(render(v, certainty), v, assoc, SPANS)
+
+
+def test_consistency_flags_each_violation():
+    v = verdict("increase", [("d:lee", 1), ("d:ortiz", 1), ("d:strack", 0)], assoc=True)
+    good = render(v, "low")
+    assert not violations(good, v, True, SPANS)
+    causal = good.replace("may be associated with higher", "may increase")
+    assert any(e.startswith("d1: causal wording") for e in violations(causal, v, True, SPANS))
+    assert any(
+        "associational evidence only" in e
+        for e in violations(good.replace("; associational evidence only", ""), v, True, SPANS)
+    )
+    miscount = good.replace("Across 3 studies", "Across 4 studies")
+    assert any(e.startswith("votes: 'Across'") for e in violations(miscount, v, True, SPANS))
+    regroup = good.replace("2 report a positive association", "1 reports a positive association")
+    assert any(e.startswith("votes: breakdown") for e in violations(regroup, v, True, SPANS))
+    flipped = good.replace("associated with higher", "associated with lower")
+    errs = violations(flipped, v, True, SPANS)
+    assert any("does not state 'increase'" in e for e in errs) and any("also states" in e for e in errs)
+    wrong_verdict = verdict("increase", [("d:lee", 1), ("d:ortiz", -1)])
+    assert any("under D2" in e for e in violations(render(wrong_verdict, "low"), wrong_verdict, False, SPANS))
+
+
+@pytest.mark.parametrize(
+    ("effects", "direction"),
+    [((), "unclear"), ((None,), "mixed"), ((1, 1, 0), "increase"), ((1, -1), "mixed"), ((0, 0, None), "no_effect"),
+     ((-1, -1, 1), "decrease"), ((1, 1, None, 0), "mixed")],
+)  # fmt: skip
+def test_expected_direction_is_d2(effects, direction):
+    assert expected_direction(tuple((f"d{i}", e) for i, e in enumerate(effects))) == direction
+
+
 # --- overclaim sweep over every class pair --------------------------------------------------------
 
 ENGINES = {
@@ -309,6 +359,8 @@ def test_overclaim_sweep_every_class_pair(engine, graph, tmp_path):
             assert searched is None
             assoc = all(is_associational(x, ctx) for x in v.included)
             check_invariants(text, v, certainty, assoc, cause, outcome)
+            if ENGINES[engine]["aggregator"] == "studies":  # the D2 vote rule the consistency check reads
+                assert not violations(text, v, assoc, (cause, outcome)), text
             n_answered += 1
             n_assoc += assoc
             seen.add((v.direction, assoc))
