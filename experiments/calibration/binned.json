@@ -1,0 +1,191 @@
+{
+  "cells": {
+    "answered|low|1": {
+      "estimate": 0.654566,
+      "k": 6,
+      "n": 8
+    },
+    "answered|low|2-3": {
+      "estimate": 0.428424,
+      "k": 5,
+      "n": 12
+    },
+    "answered|low|4+": {
+      "estimate": 0.347427,
+      "k": 11,
+      "n": 33
+    },
+    "answered|moderate|1": {
+      "estimate": 0.452283,
+      "k": 9,
+      "n": 20
+    },
+    "answered|moderate|2-3": {
+      "estimate": 0.638517,
+      "k": 9,
+      "n": 13
+    },
+    "answered|moderate|4+": {
+      "estimate": 0.489628,
+      "k": 5,
+      "n": 10
+    },
+    "answered|very_low|1": {
+      "estimate": 0.589212,
+      "k": 17,
+      "n": 28
+    },
+    "answered|very_low|2-3": {
+      "estimate": 0.327955,
+      "k": 7,
+      "n": 23
+    },
+    "answered|very_low|4+": {
+      "estimate": 0.350435,
+      "k": 2,
+      "n": 7
+    },
+    "no_evidence|lexical|0": {
+      "estimate": 0.732047,
+      "k": 66,
+      "n": 90
+    },
+    "no_evidence|none|0": {
+      "estimate": 0.622683,
+      "k": 14,
+      "n": 23
+    }
+  },
+  "clip": [
+    0.05,
+    0.95
+  ],
+  "global": {
+    "estimate": 0.566052,
+    "k": 151,
+    "n": 267
+  },
+  "min_pav_rows": 20,
+  "model": "hierarchical shrinkage cells + residual PAV on agreement (answered)",
+  "pav": [
+    {
+      "hi": 0.0,
+      "lo": 0.0,
+      "n": 5,
+      "offset": -0.1872
+    },
+    {
+      "hi": 0.333333,
+      "lo": 0.2,
+      "n": 8,
+      "offset": -0.146921
+    },
+    {
+      "hi": 0.416667,
+      "lo": 0.416667,
+      "n": 2,
+      "offset": -0.116812
+    },
+    {
+      "hi": 0.6,
+      "lo": 0.444444,
+      "n": 48,
+      "offset": -0.000478
+    },
+    {
+      "hi": 0.875,
+      "lo": 0.625,
+      "n": 24,
+      "offset": 0.016197
+    },
+    {
+      "hi": 1.0,
+      "lo": 1.0,
+      "n": 67,
+      "offset": 0.05832
+    }
+  ],
+  "prior": 0.6,
+  "prior_strength": 4.0,
+  "reliability": {
+    "bins": [
+      {
+        "accuracy": null,
+        "bin": "0.0-0.1",
+        "mean_conf": null,
+        "n": 0
+      },
+      {
+        "accuracy": 0.0,
+        "bin": "0.1-0.2",
+        "mean_conf": 0.1743,
+        "n": 6
+      },
+      {
+        "accuracy": 0.2,
+        "bin": "0.2-0.3",
+        "mean_conf": 0.2179,
+        "n": 5
+      },
+      {
+        "accuracy": 0.3774,
+        "bin": "0.3-0.4",
+        "mean_conf": 0.3471,
+        "n": 53
+      },
+      {
+        "accuracy": 0.3333,
+        "bin": "0.4-0.5",
+        "mean_conf": 0.4283,
+        "n": 15
+      },
+      {
+        "accuracy": 0.4667,
+        "bin": "0.5-0.6",
+        "mean_conf": 0.509,
+        "n": 30
+      },
+      {
+        "accuracy": 0.65,
+        "bin": "0.6-0.7",
+        "mean_conf": 0.6473,
+        "n": 60
+      },
+      {
+        "accuracy": 0.7347,
+        "bin": "0.7-0.8",
+        "mean_conf": 0.7305,
+        "n": 98
+      },
+      {
+        "accuracy": null,
+        "bin": "0.8-0.9",
+        "mean_conf": null,
+        "n": 0
+      },
+      {
+        "accuracy": null,
+        "bin": "0.9-1.0",
+        "mean_conf": null,
+        "n": 0
+      }
+    ],
+    "brier": 0.2134,
+    "ece": 0.0225,
+    "n": 267
+  },
+  "reliability_md": "# Reliability (binned calibrator, fitting rows: in-sample)\n\nrows: 267 \u00b7 ECE: 0.022 \u00b7 Brier: 0.213 \u00b7 prior strength M = 4.0 \u00b7 PAV: on\n\n| confidence bin | n | mean confidence | accuracy |\n|---|---:|---:|---:|\n| 0.0-0.1 | 0 | - | - |\n| 0.1-0.2 | 6 | 0.174 | 0.000 |\n| 0.2-0.3 | 5 | 0.218 | 0.200 |\n| 0.3-0.4 | 53 | 0.347 | 0.377 |\n| 0.4-0.5 | 15 | 0.428 | 0.333 |\n| 0.5-0.6 | 30 | 0.509 | 0.467 |\n| 0.6-0.7 | 60 | 0.647 | 0.650 |\n| 0.7-0.8 | 98 | 0.731 | 0.735 |\n| 0.8-0.9 | 0 | - | - |\n| 0.9-1.0 | 0 | - | - |\n\n| cell (status / certainty or link_via / n_docs) | n | correct | estimate |\n|---|---:|---:|---:|\n| answered / low / 1 | 8 | 6 | 0.655 |\n| answered / low / 2-3 | 12 | 5 | 0.428 |\n| answered / low / 4+ | 33 | 11 | 0.347 |\n| answered / moderate / 1 | 20 | 9 | 0.452 |\n| answered / moderate / 2-3 | 13 | 9 | 0.639 |\n| answered / moderate / 4+ | 10 | 5 | 0.490 |\n| answered / very_low / 1 | 28 | 17 | 0.589 |\n| answered / very_low / 2-3 | 23 | 7 | 0.328 |\n| answered / very_low / 4+ | 7 | 2 | 0.350 |\n| no_evidence / lexical / 0 | 90 | 66 | 0.732 |\n| no_evidence / none / 0 | 23 | 14 | 0.623 |\n",
+  "status": {
+    "answered": {
+      "estimate": 0.463698,
+      "k": 71,
+      "n": 154
+    },
+    "no_evidence": {
+      "estimate": 0.703113,
+      "k": 80,
+      "n": 113
+    }
+  },
+  "version": 1
+}
