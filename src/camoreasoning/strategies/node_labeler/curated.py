@@ -116,6 +116,8 @@ def _prefer(found: list[tuple[str, int]], text: str, cause_only: set[str], inter
             found = [f for f in found if f[0] not in ANIMAL | PLANT_ONLY | GENERIC]
     if not intervention and any(c not in cause_only for c, _ in found):  # "survival of transplants" is an outcome
         found = [f for f in found if f[0] not in cause_only - DRIVERS]
+    if "time_since_disturbance" in ids:  # "time elapsed after slashburning" varies time, not the burn
+        found = [f for f in found if f[0] == "time_since_disturbance" or f[0] not in cause_only]
     if "natural_regeneration" in ids:
         found = [f for f in found if f[0] != "stand_structure"]
     ids = {c for c, _ in found}

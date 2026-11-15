@@ -813,7 +813,7 @@
 {"node_id": "camo:node_29a6c8e3b4ec_variable", "class_id": "diversity_indices", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_df3611f72d13_variable", "class_id": "tree_planting", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_ab68524d62db", "class_id": "species_reintroduction", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_c1c672976872", "class_id": "species_reintroduction", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_c1c672976872", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_bbd90a45360f", "class_id": "restoration_general", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_ce0d9a6f4ca0", "class_id": "fish_abundance", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_4d6ed112c960", "class_id": "fish_abundance", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -906,6 +906,7 @@
 {"node_id": "camo:node_2826d2bffe8a", "class_id": "prescribed_burning", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_2826d2bffe8a", "class_id": "wildfire", "polarity": 1, "score": 0.7, "source": "lexical"}
 {"node_id": "camo:node_fadd2ddabdf9", "class_id": "soil_ph_chemistry", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_5c1a28dcf628", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_a9df8856a12b", "class_id": "water_chemistry", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_440c514b6d80", "class_id": "soil_nutrients", "polarity": 0, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_9ecece5debf5", "class_id": "foliar_nutrients", "polarity": -1, "score": 0.9, "source": "lexical"}
@@ -2325,6 +2326,7 @@
 {"node_id": "camo:node_e04baa65d27f", "class_id": "natural_regeneration", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_1b6b0c692fb7", "class_id": "natural_regeneration", "polarity": 0, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_fd7aad2f7dd1", "class_id": "carbon_flux", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_c943f703214e", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_e8b864e5fd4f", "class_id": "carbon_flux", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_f43db9213082", "class_id": "soil_moisture_water", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_be269913e51d", "class_id": "carbon_flux", "polarity": -1, "score": 0.9, "source": "lexical"}
@@ -2696,6 +2698,7 @@
 {"node_id": "camo:node_7767f9eb170d", "class_id": "moss_bryophyte", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_48b433ed2931", "class_id": "plant_cover_total", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_4f9a32dd985b", "class_id": "plant_cover_total", "polarity": -1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_f46f7409d41d", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_d8f14f5243a3", "class_id": "functional_recovery", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_a2983b2df529", "class_id": "site_conditions", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_991dfdf6eb92", "class_id": "bird_abundance", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -2907,7 +2910,7 @@
 {"node_id": "camo:node_b92a713807e5", "class_id": "organic_soil_amendment", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_4de84061b7c0", "class_id": "organic_soil_amendment", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_0883d9413ad5", "class_id": "community_composition", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_28f25075b69c", "class_id": "clearcut_harvest", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_28f25075b69c", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_4274eb2f9bea", "class_id": "diversity_indices", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_033a08f791bf", "class_id": "clearcut_harvest", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_3fb90746d505", "class_id": "plant_richness", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -2919,7 +2922,6 @@
 {"node_id": "camo:node_e1149e3c024e", "class_id": "clearcut_harvest", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_14e382628ecb", "class_id": "moss_bryophyte", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_793954766ca4", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_793954766ca4", "class_id": "clearcut_harvest", "polarity": 1, "score": 0.7, "source": "lexical"}
 {"node_id": "camo:node_6e34bc0441f6", "class_id": "diversity_indices", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_4993b0dfcac2", "class_id": "moss_bryophyte", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_da01cb9ca3ed", "class_id": "diversity_indices", "polarity": -1, "score": 0.9, "source": "lexical"}
@@ -3021,14 +3023,12 @@
 {"node_id": "camo:node_07186a24c191", "class_id": "canopy_light", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_e3242e111078", "class_id": "canopy_light", "polarity": 0, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_8106b352a4c2", "class_id": "tree_species_composition", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_5215b13abf34", "class_id": "clearcut_harvest", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_5215b13abf34", "class_id": "prescribed_burning", "polarity": 1, "score": 0.7, "source": "lexical"}
+{"node_id": "camo:node_5215b13abf34", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_b7835e61803a", "class_id": "canopy_light", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_be8f30c08580", "class_id": "canopy_light", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_a7d74e853781", "class_id": "clearcut_harvest", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_a7d74e853781", "class_id": "prescribed_burning", "polarity": 1, "score": 0.7, "source": "lexical"}
-{"node_id": "camo:node_a595a25cde5b", "class_id": "clearcut_harvest", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_a595a25cde5b", "class_id": "prescribed_burning", "polarity": 1, "score": 0.7, "source": "lexical"}
+{"node_id": "camo:node_a595a25cde5b", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_10814eb2df40", "class_id": "functional_traits", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_a3c4b13d2ba8", "class_id": "tree_species_composition", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_e0983a4bfe9a", "class_id": "plant_cover_total", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -3307,7 +3307,6 @@
 {"node_id": "camo:node_693bbac234d4", "class_id": "soil_nutrients", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_37bfca62242a", "class_id": "soil_nutrients", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_15a3cadfa074", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_15a3cadfa074", "class_id": "seeding_sowing", "polarity": 1, "score": 0.7, "source": "lexical"}
 {"node_id": "camo:node_dff84c2d2377", "class_id": "native_abundance", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_fda312feeeb5", "class_id": "community_composition", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_206fea201904", "class_id": "native_abundance", "polarity": -1, "score": 0.9, "source": "lexical"}
@@ -3425,7 +3424,6 @@
 {"node_id": "camo:node_5d96c80e9c1c", "class_id": "moss_bryophyte", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_5d96c80e9c1c", "class_id": "biomass_productivity", "polarity": 1, "score": 0.7, "source": "lexical"}
 {"node_id": "camo:node_230a13b580b2", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_230a13b580b2", "class_id": "peatland_rewetting", "polarity": 1, "score": 0.7, "source": "lexical"}
 {"node_id": "camo:node_649db15c44e2", "class_id": "soil_organic_carbon", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_fc7a64387b3a", "class_id": "peatland_rewetting", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_dcb2b81104b0", "class_id": "soil_organic_carbon", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -3445,11 +3443,9 @@
 {"node_id": "camo:node_be953b75bfa6", "class_id": "soil_organic_carbon", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_be953b75bfa6", "class_id": "community_composition", "polarity": 1, "score": 0.7, "source": "lexical"}
 {"node_id": "camo:node_8676fd291971", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_8676fd291971", "class_id": "peatland_rewetting", "polarity": 1, "score": 0.7, "source": "lexical"}
 {"node_id": "camo:node_08bdc8420114", "class_id": "community_composition", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_6ac23041c96b", "class_id": "biomass_productivity", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_bd6da2047a8c", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_bd6da2047a8c", "class_id": "peatland_rewetting", "polarity": 1, "score": 0.7, "source": "lexical"}
 {"node_id": "camo:node_8363a027c9eb", "class_id": "water_table_level", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_820f1e889db6", "class_id": "community_composition", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_e01d1f1c4be5_variable", "class_id": "community_composition", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -4274,7 +4270,7 @@
 {"node_id": "camo:node_e2a81c970660", "class_id": "water_chemistry", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_9b7474e70f90", "class_id": "water_chemistry", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_e608951f5bf4", "class_id": "water_chemistry", "polarity": 1, "score": 0.9, "source": "lexical"}
-{"node_id": "camo:node_fda71f50a9fa", "class_id": "sediment_removal", "polarity": 1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_fda71f50a9fa", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_99f52c07774d", "class_id": "water_chemistry", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_80792c1cc4ef", "class_id": "water_chemistry", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_594313a5d881", "class_id": "water_chemistry", "polarity": -1, "score": 0.9, "source": "lexical"}
@@ -4536,6 +4532,7 @@
 {"node_id": "camo:node_475687a36d5a", "class_id": "tree_seedling_survival", "polarity": -1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_6d0d778b2764", "class_id": "predation_herbivory_damage", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_51ffc42cff2d", "class_id": "biomass_productivity", "polarity": -1, "score": 0.9, "source": "lexical"}
+{"node_id": "camo:node_6d3beaaa60e5", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_ce8df7afe1ce", "class_id": "tree_seedling_survival", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_b725f2e8fe63", "class_id": "species_reintroduction", "polarity": 1, "score": 0.9, "source": "lexical"}
 {"node_id": "camo:node_2a4c5888f738", "class_id": "predation_herbivory_damage", "polarity": 1, "score": 0.9, "source": "lexical"}
@@ -5146,7 +5143,6 @@
 {"node_id": "camo:node_9610f58e4c58", "class_id": "soil_organic_carbon", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_c5d02129de79", "class_id": "soil_organic_carbon", "polarity": 0, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_91f217747136", "class_id": "soil_nutrients", "polarity": 1, "score": 0.6, "source": "llm"}
-{"node_id": "camo:node_5c1a28dcf628", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_9aafda69a498_variable", "class_id": "soil_organic_carbon", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_97a37272081e_variable", "class_id": "soil_nutrients", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_0fad031fd364", "class_id": "community_composition", "polarity": -1, "score": 0.6, "source": "llm"}
@@ -5697,7 +5693,6 @@
 {"node_id": "camo:node_d78c5a1e1d3f", "class_id": "native_abundance", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_3cd8a52fbf31_variable", "class_id": "community_composition", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_48a7821759d5", "class_id": "plant_cover_total", "polarity": -1, "score": 0.6, "source": "llm"}
-{"node_id": "camo:node_f46f7409d41d", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_c48c03aee246", "class_id": "stand_structure", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_039b84466907", "class_id": "bird_abundance", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_6f00dcdee49f_variable", "class_id": "bird_abundance", "polarity": 1, "score": 0.6, "source": "llm"}
@@ -6148,7 +6143,6 @@
 {"node_id": "camo:node_dfa28815faf7", "class_id": "species_reintroduction", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_5566027ad821", "class_id": "mammal_abundance", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_4aa343cc3499", "class_id": "soil_temperature", "polarity": 1, "score": 0.6, "source": "llm"}
-{"node_id": "camo:node_6d3beaaa60e5", "class_id": "time_since_disturbance", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_61cbfcbfd309", "class_id": "species_reintroduction", "polarity": 1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_b468595f8281", "class_id": "mammal_abundance", "polarity": -1, "score": 0.6, "source": "llm"}
 {"node_id": "camo:node_7587666c0a29", "class_id": "mammal_abundance", "polarity": 1, "score": 0.6, "source": "llm"}

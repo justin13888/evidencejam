@@ -513,6 +513,8 @@ classes:
   label: time since disturbance / stand age
   synonyms:
   - time since
+  - time elapsed
+  - elapsed time
   - stand age
   - years since
   - plantation age
