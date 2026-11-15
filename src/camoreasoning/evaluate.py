@@ -159,7 +159,11 @@ def stage_metrics(gold: Sequence[GoldItem], traces: Sequence[Trace], settings: S
 
 def oracle(gold: Sequence[GoldItem], settings: Settings) -> dict:
     """Aggregator, grader and citer fed the gold edges' effects as votes: isolates them from linker,
-    labels, retriever and interpreter. Only answered gold items with edge_effects count."""
+    labels, retriever and interpreter. Only answered gold items with edge_effects count.
+
+    Every gold vote is included, unsigned ones (effect None) too: the item is gold-answered, so its edges
+    bear on the answer, and an item whose edges are all unsigned is the D2 `unclear` case. Excluding
+    them turned those items into no_evidence, which no gold-answered item can be (#61)."""
     from camoreasoning import registry
     from camoreasoning.pipeline import make_context
 
@@ -176,7 +180,7 @@ def oracle(gold: Sequence[GoldItem], settings: Settings) -> dict:
         frame = Frame(ParsedQuestion(q, None, None, True), Side(None), Side(None), "none", 0.0)
         cands = Candidates(frame, {}, {}, forward=tuple(e for e, _ in g.edge_effects))
         votes = tuple(
-            EdgeVote(e, ctx.graph.edges[e].get("source_document", ""), eff, eff is not None, "gold",
+            EdgeVote(e, ctx.graph.edges[e].get("source_document", ""), eff, True, "gold",
                      ctx.graph.edges[e].get("certainty_grade"), ctx.graph.edges[e].get("causal_language"))
             for e, eff in g.edge_effects if e in ctx.graph.edges
         )  # fmt: skip
