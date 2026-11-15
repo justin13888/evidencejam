@@ -7,6 +7,7 @@ python experiments/showcase/build.py            # ~1 s, 0 LLM calls
 python experiments/showcase/build.py --shots    # + headless Firefox PNGs: light/dark x 1280/320 px (a few minutes)
 python experiments/showcase/build.py --update   # accept the current answers as the new snapshot
 python experiments/showcase/build.py --ask "How do I control garlic mustard?"   # + the ask.sh page (1 LLM call)
+python experiments/showcase/build.py --readme   # regenerate the committed README screenshots in docs/img/
 ```
 
 How it works:
@@ -23,3 +24,5 @@ The run writes the following under `outputs/showcase/`:
 Each run prints a field-level diff against [`snapshot.json`](snapshot.json): status, direction, certainty, confidence, edge_ids, answer and searched_for. An empty diff means the change didn't move any visible answer. When the picks change (for example, a fix makes a "wrong" example right), the diff shows it as an id removed and an id added.
 
 After a UI change, the loop is: run `build.py --shots`, read the diff, look at the pages or shots, then run `python scripts/a11y_audit.py outputs/showcase/outputs` and `mise run check`.
+
+The README screenshots (`docs/img/*.png`) are committed so they render on GitHub with no network fetch. `--readme` regenerates them from a fresh run at the current defaults: the light scheme at 1280 x 1400 px, with `evidence.png` showing the page for `C-C0004`. Re-run it after any change to the UI or the answer text, then commit the PNGs.

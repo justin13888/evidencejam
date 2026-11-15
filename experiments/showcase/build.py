@@ -10,6 +10,7 @@ Firefox screenshots (1280 and 320 px, light and dark) under outputs/showcase/sho
 of the examples against the committed snapshot.json (--update rewrites it). 0 LLM calls unless --ask.
 
     python experiments/showcase/build.py [--shots] [--update] [--ask "What effect does X have on Y?"]
+    python experiments/showcase/build.py --readme   # regenerate the committed README screenshots in docs/img/
 """
 
 from __future__ import annotations
@@ -34,6 +35,8 @@ from camoreasoning.strategies.grader.rubric import is_associational
 
 HERE = Path(__file__).parent
 SNAPSHOT = HERE / "snapshot.json"
+IMG = ROOT / "docs" / "img"  # README screenshots, committed
+README_EVIDENCE_ID = "C-C0004"
 SHOW = OUTPUTS_DIR / "showcase"
 FIELDS = ("status", "direction", "certainty", "confidence", "edge_ids", "answer", "searched_for")
 DIRECTIONS = ("increase", "decrease", "mixed", "no_effect", "unclear")
@@ -134,24 +137,60 @@ def pick(rows, ctx):
     return picks
 
 
+def _profile(prof: str, dark: bool) -> None:
+    Path(prof, "user.js").write_text(
+        f'user_pref("ui.systemUsesDarkTheme", {int(dark)});\n'
+        f'user_pref("layout.css.prefers-color-scheme.content-override", {0 if dark else 1});\n'
+    )
+
+
+def _shoot(ff: str, prof: str, page: Path, out: Path, width: int, height: int) -> None:
+    cmd = [ff, "--headless", "--profile", prof, "--no-remote", f"--window-size={width},{height}"]
+    cmd += ["--screenshot", str(out), page.resolve().as_uri()]
+    subprocess.run(cmd, capture_output=True, timeout=60, check=False)
+
+
 def screenshot(pages: list[Path], shots: Path) -> None:
     ff = shutil.which("firefox")
     if not ff:
         print("firefox not found; skipping --shots", file=sys.stderr)
         return
     shots.mkdir(parents=True, exist_ok=True)
-    for scheme, dark in (("light", 0), ("dark", 1)):
+    for scheme, dark in (("light", False), ("dark", True)):
         with tempfile.TemporaryDirectory() as prof:
-            Path(prof, "user.js").write_text(f'user_pref("ui.systemUsesDarkTheme", {dark});\n'
-                                             'user_pref("layout.css.prefers-color-scheme.content-override", '
-                                             f"{0 if dark else 1});\n")  # fmt: skip
+            _profile(prof, dark)
             for page in pages:
                 for width in (1280, 320):
-                    out = shots / f"{page.stem}.{scheme}.{width}.png"
-                    cmd = [ff, "--headless", "--profile", prof, "--no-remote", f"--window-size={width},2400"]
-                    cmd += ["--screenshot", str(out), page.resolve().as_uri()]
-                    subprocess.run(cmd, capture_output=True, timeout=60, check=False)
+                    _shoot(ff, prof, page, shots / f"{page.stem}.{scheme}.{width}.png", width, 2400)
     print(f"shots: {len(list(shots.glob('*.png')))} png in {shots.relative_to(ROOT)}")
+
+
+def readme_shots() -> int:
+    """Regenerate the README screenshots in docs/img/ (committed) from a fresh run at HEAD's defaults.
+
+    Light scheme, 1280 x 1400, the top of each page: evidence.png is the page of README_EVIDENCE_ID (a mixed,
+    two-study class question), gapmap.png and limits.png come from the same run. 0 LLM calls."""
+    ff = shutil.which("firefox")
+    if not ff:
+        print("firefox not found; cannot regenerate docs/img", file=sys.stderr)
+        return 1
+    gold = {g.id: g for g in load_devsets([ROOT / "experiments/devsets/class_gold.yaml"], split="dev")}
+    run = OUTPUTS_DIR / "readme"
+    if run.exists():
+        shutil.rmtree(run)
+    run.mkdir(parents=True)
+    qfile = run / "questions.yaml"
+    q = gold[README_EVIDENCE_ID]
+    qfile.write_text(yaml.safe_dump({"questions": [{"id": q.id, "question": q.question}]}, sort_keys=False))
+    summary = run_file(qfile, run / "answers.json")
+    pages = run / "outputs"
+    targets = {"evidence": pages / f"{q.id}.html", "gapmap": pages / "gapmap.html", "limits": pages / "limits.html"}
+    with tempfile.TemporaryDirectory() as prof:
+        _profile(prof, dark=False)
+        for name, page in targets.items():
+            _shoot(ff, prof, page, IMG / f"{name}.png", 1280, 1400)
+    print(f"docs/img: {', '.join(f'{n}.png' for n in targets)} from {q.id} ({summary.get('calls', 0)} LLM calls)")
+    return 0
 
 
 def diff(current: dict, update: bool) -> int:
@@ -177,7 +216,10 @@ def main() -> int:
     ap.add_argument("--shots", action="store_true", help="headless Firefox screenshots, light/dark x 1280/320")
     ap.add_argument("--update", action="store_true", help="rewrite snapshot.json from this run")
     ap.add_argument("--ask", metavar="QUESTION", help="also run ./ask.sh on QUESTION (1 LLM call)")
+    ap.add_argument("--readme", action="store_true", help="only regenerate the README screenshots in docs/img/")
     args = ap.parse_args()
+    if args.readme:
+        return readme_shots()
 
     rows, ctx, pool_calls = pool()
     picks = pick(rows, ctx)

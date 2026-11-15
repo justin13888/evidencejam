@@ -1,3 +1,19 @@
 # Large source data from the challenge organizers. Not code: hide from code views and collapse in GitHub diffs.
 causal_graph.json linguist-generated=true
 causal_graph.yaml linguist-generated=true
+
+# Binary assets (README screenshots, slide fonts and PDF): never diffed, merged or line-ending converted as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.pdf binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+
+# Third-party code and assets vendored for the slides: not ours, kept out of GitHub's language stats.
+slides/vendor/** linguist-vendored
+slides/fonts/** linguist-vendored
